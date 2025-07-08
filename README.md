@@ -92,16 +92,20 @@ Right-click the system tray icon to access:
 - **Audio Device**: Select your preferred audio output
 - **Volume**: Adjust announcement volume
 - **Settings**: Configure sound paths and announcement types
-- **About**: Version information and debug mode
+- **About**: Version information and pretty picture
 
 ### Automatic Operation
 
-The app automatically detects your flight phase based on:
+The app automatically detects your flight phase based on things like:
 - **Ground status** (on ground, parking, runway)
 - **Engine status** (running, combustion)
 - **Light status** (beacon, logo, landing lights)
 - **Altitude and speed**
 - **Spoiler deployment**
+
+Note: I may add GSX Pro support if there is demand, but until then..
+
+ **IMPORTANT** Use the Logo Light to on to indicate passengers are now boarding and get things rolling. **IMPORTANT**
 
 ### Manual Override
 
@@ -135,6 +139,7 @@ Enable/disable specific announcements:
 2. **Wrong airline**: Set your MSFS Callsign to the correct airline code
 3. **Announcements not triggering**: Try the manual flight state override
 4. **Audio device issues**: Select your correct audio device in Settings
+5. **Boarding but no musac!**: Use the Logo On light to trigger the boarding manually
 
 ### Debug Mode
 
