@@ -4,7 +4,7 @@
 
 **Plays Fenix A320 compatible Cabin Announcements on any aircraft in Microsoft Flight Simulator.**
 
-Universal Announcer automatically detects your flight state and plays realistic cabin announcements based on your aircraft's conditions - boarding music, safety briefings, takeoff announcements, and more. Originally designed for Fenix A320 sound files, it works with any aircraft in MSFS.
+Universal Announcer automatically detects your flight state and plays realistic cabin announcements based on your aircraft's conditions - boarding music, safety briefings, takeoff announcements, and more. Originally designed around the Fenix A320 sound files, it works with any aircraft in MSFS.
 
 ## ✈️ Features
 
@@ -12,7 +12,6 @@ Universal Announcer automatically detects your flight state and plays realistic 
 - **Airline-Specific Announcements**: Supports airline folders (UAL, ACA, BAW, DAL, etc.)
 - **Aircraft Type Variants**: Plays different announcements for A319, A320, A321, 737, etc.
 - **Time-Based Variants**: Morning, afternoon, evening, and night announcements
-- **Situational Awareness**: Special announcements for refueling, turbulence, and more
 - **System Tray Integration**: Minimal interface with volume control and flight state override
 - **Test Mode**: Built-in test harness for development and troubleshooting
 
@@ -47,16 +46,20 @@ The application will appear in your system tray and automatically try to locate 
 ### First Launch
 
 1. **Run the application** - It will appear in your system tray
-2. **Configure sound files path** - The app will try to auto-detect your Fenix installation, or you can browse to your sound files folder
+2. **Configure sound files path** - The app will try to auto-detect your Fenix installation location, or you can browse to your sound files folder
 3. **Set up MSFS** - Configure your aircraft callsign (see below)
+
+You can probably include this in your `exe.xml` eventually for automatic use although I haven't tried that yet. There are still bugs in start-up detections, so use Flight Status / Stop if annoying (you can Resume when ready).
 
 ### MSFS Configuration
 
+This step is **temporary** while I add Navigraph simbrief support, but depends on demand:
+
 For airline-specific announcements, set your **Callsign** in MSFS:
 
-1. In MSFS, go to **Options → General → Customization**
-2. Set **Callsign** to your airline code (e.g., `UAL`, `ACA`, `BAW`, `DAL`). Do not put 'UAL123' or it won't match the sound file directory!
-3. The app will automatically detect your aircraft type (737, A320, etc.)
+1. In MSFS, go to **World Map → Aircraft Selection → Customization (tab)**
+2. Set **Callsign** to your airline code (e.g., `UAL`, `ACA`, `BAW`, `DAL` just the letters alone, no flight #)
+3. The app will automatically detect your aircraft type (737, CRJ900, A320, etc.)
 
 ### Sound File Structure
 
@@ -72,11 +75,11 @@ Announcements/
 
 Each folder contains files like:
 - `BoardingWelcome.ogg`
-- `BoardingWelcome[A320].ogg` (aircraft-specific)
-- `BoardingWelcome[Morning].ogg` (time-specific)
+- `BoardingWelcome[CRJ900].ogg` (aircraft-specific)
+- `BoardingWelcome[Morning][737].ogg` (time-specific)
 - `SafetyBriefing.ogg`
 - `AfterTakeoff.ogg`
-- And many more...
+- And many more as per Fenix structure...
 
 ## 🎮 Usage
 
@@ -141,9 +144,7 @@ Enable/disable specific announcements:
 
 ### Log Files
 
-You can find your `config.json` settings in `%APPDATA%\UniversalAnnouncer` if you need to reset things.
-
-Debug logs are saved to: `%APPDATA%\UniversalAnnouncer\debug.log` but needs to be enabled
+Debug logs are saved to: `%APPDATA%\UniversalAnnouncer\debug.log`
 
 ## 🤝 Support & Feedback
 
@@ -161,6 +162,8 @@ This is an initial release that I use myself. While there's no formal support, I
 This application is provided free of charge. The software does not include any copyrighted sound files - users must obtain compatible sound files separately.
 
 If you paid for this application, I'm sorry - especially as it's a bit fugly.
+
+(c) 2025 fearlessfrog
 
 ---
 
