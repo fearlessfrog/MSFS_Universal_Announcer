@@ -55,7 +55,7 @@ The application will appear in your system tray and automatically try to locate 
 For airline-specific announcements, set your **Callsign** in MSFS:
 
 1. In MSFS, go to **Options → General → Customization**
-2. Set **Callsign** to your airline code (e.g., `UAL`, `ACA`, `BAW`, `DAL`)
+2. Set **Callsign** to your airline code (e.g., `UAL`, `ACA`, `BAW`, `DAL`). Do not put 'UAL123' or it won't match the sound file directory!
 3. The app will automatically detect your aircraft type (737, A320, etc.)
 
 ### Sound File Structure
@@ -140,6 +140,8 @@ Enable/disable specific announcements:
 3. Use the test harness to simulate flight conditions
 
 ### Log Files
+
+You can find your `config.json` settings in `%APPDATA%\UniversalAnnouncer` if you need to reset things.
 
 Debug logs are saved to: `%APPDATA%\UniversalAnnouncer\debug.log` but needs to be enabled
 
