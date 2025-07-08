@@ -105,7 +105,7 @@ The app automatically detects your flight phase based on things like:
 
 Note: I may add GSX Pro support if there is demand, but until then..
 
- **IMPORTANT** Use the Logo Light to on to indicate passengers are now boarding and get things rolling. **IMPORTANT**
+ **IMPORTANT** ⚠️ Use the Logo Light to on to indicate passengers are now boarding and get things rolling. ⚠️ **IMPORTANT**
 
 ### Manual Override
 
