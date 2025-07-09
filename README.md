@@ -32,7 +32,7 @@ You can obtain compatible sound files from:
 
 If you don't own the Fenix then it is worth considering taking one of the Cabin Announcement packs from Discord and dropping them in a folder `Announcements\Default`, so they can be used with or without any airline code as a fallback.
 
-## ✈️ Flight Stage Dectection
+## ✈️ Flight Stage Detection
 
 A work in progress, but you can see the details here: [crazy state machine example](statemachine.md).
 
@@ -56,7 +56,7 @@ The application will appear in your system tray and automatically try to locate 
 ### First Launch
 
 1. **Run the application** - It will appear in your system tray
-2. **Configure sound files path** - The app will try to auto-detect your Fenix installation location, or you can browse to your sound files folder. If you don't have that, just create an `Announcments` folder somewhere, put a `Default` folder in it, and in that put a .ogg sound file.
+2. **Configure sound files path** - The app will try to auto-detect your Fenix installation location, or you can browse to your sound files folder. If you don't have that, just create an `Announcements` folder somewhere, put a `Default` folder in it, and in that put a .ogg sound file.
 3. **Set up MSFS** - Configure your aircraft call sign (see below)
 
 You can also probably include this in your MSFS `exe.xml` eventually for automatic startup, although I haven't tried that yet. There are still bugs in start-up detections, so use Flight Status / Stop if annoying (you can Resume when ready).
