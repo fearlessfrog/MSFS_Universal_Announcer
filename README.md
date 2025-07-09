@@ -196,4 +196,10 @@ If you paid for this application, I'm sorry - especially as it's a bit fugly.
 
 ---
 
+## You're Amazing!
+
+No, you are.
+
+[!["Buy Me A Coffee"](https://www.buymeacoffee.com/assets/img/custom_images/orange_img.png)](https://www.buymeacoffee.com/fearlessfrog)
+
 **Happy Flying!** ✈️
