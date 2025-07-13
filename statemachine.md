@@ -1,12 +1,12 @@
 # How Detection of Flight State Works
 
-This is a snapshot of v0.0.1 transition so might evolve. It should answer most questions on 'what fires when'.
+This is a snapshot of v0.0.7 transition so might evolve. It should answer most questions on 'what fires when'.
 
 ## State Transition Table
 
 | File to Play | Flight State | SimVars to Check | Timing Logic |
 |--------------|--------------|------------------|--------------|
-| BoardingWelcome | Ground Pre-boarding | `IsOnGround=True` AND `IsLogoLightOn=True` AND `IsBeaconOn=False` | Play once when logo light first turns on, then repeat every 5 minutes until BoardingComplete |
+| BoardingWelcome | Ground Pre-boarding | **GSX Mode**: `IsOnGround=True` AND `IsGSXBoardingInProgress=True` AND `IsBeaconOn=False` <br>**Traditional Mode**: `IsOnGround=True` AND `IsLogoLightOn=True` AND `IsBeaconOn=False` | Play once when GSX boarding starts OR logo light first turns on, then repeat every 5 minutes until BoardingComplete |
 | BoardingMusic | Boarding Active | `BoardingWelcome` played AND `BoardingComplete` not played | Loop continuously until BoardingComplete or next BoardingWelcome |
 | BoardingComplete | Boarding Complete | `IsBeaconOn=True` AND `IsOnGround=True` | Play once when beacon first turned on |
 | ArmDoors | Departure Preparation | `IsOnGround=True` AND (`IsEngineRunning=True` OR `GroundSpeed > 1`) | Play once when engines start or aircraft begins moving |
@@ -23,7 +23,39 @@ This is a snapshot of v0.0.1 transition so might evolve. It should answer most q
 | DisarmDoors | Arrival at Gate | `AreEnginesOff=True` AND `AfterLanding` played | **Wait for AfterLanding to finish playing** |
 | DisembarkStarted | Disembarkation | `DisarmDoors` played AND `IsBeaconOn=False` | **Wait for DisarmDoors to finish playing** |
 
-### Light-Based State Detection Logic
+## GSX Integration
+
+The Universal Announcer now supports GSX (Ground Services eXtended) integration for more realistic boarding announcements. This feature must be enabled in the Settings → Integrations tab.
+
+### GSX SimVar Integration
+
+When GSX integration is enabled, the system monitors two GSX simvars:
+
+**GSX Boarding State** - `L:FSDT_GSX_BOARDING_STATE`:
+- **State 1**: Service can be called
+- **State 2**: Service is not available
+- **State 3**: Service has been bypassed
+- **State 4**: Service has been requested
+- **State 5**: Service is being performed ⭐ **ACTIVE BOARDING**
+- **State 6**: Service has been completed
+
+**GSX Refueling State** - `L:FSDT_GSX_REFUELING_STATE`:
+- **State 1**: Service can be called
+- **State 2**: Service is not available
+- **State 3**: Service has been bypassed
+- **State 4**: Service has been requested ⭐ **REFUELING REQUESTED**
+- **State 5**: Service is being performed ⭐ **ACTIVE REFUELING**
+- **State 6**: Service has been completed
+
+### GSX Boarding Logic
+
+When GSX integration is **enabled**:
+- BoardingWelcome is triggered when `L:FSDT_GSX_BOARDING_STATE = 5` (service being performed)
+- The traditional logo light trigger is **overridden** by GSX state
+- Boarding announcements will only play when GSX boarding is actually active
+- **Refueling variants**: When `L:FSDT_GSX_REFUELING_STATE = 4 or 5` (requested or being performed), sound files with [Refueling] tags are preferred over standard variants
+- Provides more realistic timing aligned with actual ground service operations
+### Non GSX Light-Based State Detection Logic
 
 Without GSX (so far) here's how the lights are used.
 

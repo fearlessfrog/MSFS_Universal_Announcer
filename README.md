@@ -15,6 +15,8 @@ You do not need the Fenix A320 for this to work (although you should have it, it
 - **Aircraft Type Variants**: Plays different announcements for A319, A320, A321, 737, etc.
 - **Time-Based Variants**: Morning, afternoon, evening, and night announcements
 - **System Tray Integration**: Minimal interface with volume control and flight state override
+- **(NEW!) Navigraph simbrief integration**: Uses your last plan's Airline and Aircraft type (ICAO code is used).
+- **(NEW!) GSX Pro integration**: Uses the Boarding and Refueling states automatically.
 
 ![Menu Screenshot](images/screenshot_menu.jpg)
 
@@ -57,13 +59,15 @@ The application will appear in your system tray and automatically try to locate 
 
 1. **Run the application** - It will appear in your system tray
 2. **Configure sound files path** - The app will try to auto-detect your Fenix installation location, or you can browse to your sound files folder. If you don't have that, just create an `Announcements` folder somewhere, put a `Default` folder in it, and in that put a .ogg sound file.
-3. **Set up MSFS** - Configure your aircraft call sign (see below)
+3. **Set up you Simbrief** username in the Settings / Integrations tab and fetch a plan.
 
 You can also probably include this in your MSFS `exe.xml` eventually for automatic startup, although I haven't tried that yet. There are still bugs in start-up detections, so use Flight Status / Stop if annoying (you can Resume when ready).
 
-### MSFS Configuration
+### Configuration
 
-This step is (probably) **temporary** while I add Navigraph simbrief plan support, but depends on demand:
+Set up your Simbrief username in the Settings / Integrations tab to fetch your last plan automatically.
+
+This step is an alternative to using the Navigraph simbrief plan support:
 
 For airline-specific announcements, set your **Call sign** in MSFS:
 
@@ -109,6 +113,8 @@ Experiment and let me know, I'll add to this list.
 
 ## 🎮 Usage
 
+**⚠️ IMPORTANT: If you are NOT using GSX, to start the sequence use the Logo Light to on to indicate passengers are now boarding.**
+
 ### System Tray Menu
 
 Right-click the system tray icon to access:
@@ -151,7 +157,6 @@ Enable/disable specific announcements:
 - Landing Announcements
 - And more...
 
-![Settings Screenshot](images/screenshot_settings.jpg)
 
 ### Audio Settings
 
@@ -188,9 +193,7 @@ This is an initial release that I use myself. While there's no formal support, I
 
 This application is provided free of charge. The software does not include any copyrighted sound files - users must obtain compatible sound files separately.
 
-This app is in no way associated, approved or condoned by FenixSim Ltd.
-
-If you paid for this application, I'm sorry - especially as it's a bit fugly.
+This app is in no way associated, approved or condoned by FenixSim Ltd, Navigraph or FSDreamTeam.
 
 (c) 2025 fearlessfrog
 
