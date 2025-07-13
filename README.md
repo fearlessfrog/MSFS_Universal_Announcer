@@ -58,7 +58,7 @@ The application will appear in your system tray and automatically try to locate 
 ### First Launch
 
 1. **Run the application** - It will appear in your system tray
-2. **Configure sound files path** - The app will try to auto-detect your Fenix installation location, or you can browse to your sound files folder. If you don't have that, just create an `Announcements` folder somewhere, put a `Default` folder in it, and in that put a .ogg sound file.
+2. **Configure sound files path** - The app will try to auto-detect your Fenix installation location, or you can browse to your sound files folder. If you don't have that, just create an `Announcements` folder somewhere, put a `Default` folder in it, and in that put a .ogg sound file. It is looking for the top level `Announcements` folder.
 3. **Set up you Simbrief** username in the Settings / Integrations tab and fetch a plan.
 
 You can also probably include this in your MSFS `exe.xml` eventually for automatic startup, although I haven't tried that yet. There are still bugs in start-up detections, so use Flight Status / Stop if annoying (you can Resume when ready).
@@ -67,9 +67,9 @@ You can also probably include this in your MSFS `exe.xml` eventually for automat
 
 Set up your Simbrief username in the Settings / Integrations tab to fetch your last plan automatically.
 
-This step is an alternative to using the Navigraph simbrief plan support:
+The following step is an alternative to using the Navigraph simbrief plan support:
 
-For airline-specific announcements, set your **Call sign** in MSFS:
+For airline-specific announcements and no simbrief, set your **Call sign** in MSFS:
 
 1. In MSFS, go to **World Map → Aircraft Selection → Customization (tab)**
 2. Set **Call sign** to your airline code (e.g., `UAL`, `ACA`, `BAW`, `DAL` just the letters alone, no flight #)
@@ -191,7 +191,7 @@ This is an initial release that I use myself. While there's no formal support, I
 
 ## ⚖️ License & Disclaimer
 
-This application is provided free of charge. The software does not include any copyrighted sound files - users must obtain compatible sound files separately.
+This free software is provided "as is" without warranty. No copyrighted sound files included - users must obtain compatible files separately. For educational/entertainment purposes only. Users are responsible for compliance and assume all risks.
 
 This app is in no way associated, approved or condoned by FenixSim Ltd, Navigraph or FSDreamTeam.
 
