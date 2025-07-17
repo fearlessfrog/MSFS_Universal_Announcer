@@ -30,7 +30,7 @@ https://support.fenixsim.com/hc/en-us/articles/12374580682383-Cabin-Announcement
 You can obtain compatible sound files from:
 
 1. Fenix A320 Installation: If you own the Fenix A320, the sound files are already installed
-2. Cabin Announcements Discord: oin the [Cabin Announcements for Fenix](https://discord.com/invite/P8ZYJgH3ZF) Discord server for community-created sound files
+2. Cabin Announcements Discord: join the [Cabin Announcements for Fenix](https://discord.com/invite/P8ZYJgH3ZF) Discord server for community-created sound files
 3. Make You Own: Get your tray tables in an upright position and get recording, it's just plain sound files (see [here](https://support.fenixsim.com/hc/en-us/articles/12374580682383-Cabin-Announcements-Guide) for specs)
 
 If you don't own the Fenix then it is worth considering taking one of the Cabin Announcement packs from Discord and dropping them in a folder Announcements\Default, so they can be used with or without any airline code as a fallback.
