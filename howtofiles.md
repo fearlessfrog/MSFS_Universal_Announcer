@@ -8,10 +8,9 @@ If you want to set up your own sounds files directories, then just two steps:
 
 Create the folders and put the files in there. You can see I also add an airline 'UAL' folder for when United Airlines is detected:
 
-<video width="100%" controls>
-  <source src="images/1-CreateFolders.mp4" type="video/mp4">
-  Your browser does not support the video tag.
-</video>
+<img src="images/1.CreateFolders.gif" alt="Creat Folders">
+
+(or see video here - https://i.imgur.com/OVZVjiY.mp4)
 
 ## Step 2
 
