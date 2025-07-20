@@ -1,0 +1,22 @@
+# Setting Up Sound Files
+
+If you own the FenixSim A320 it should be detected automatically and you can point at the `Announcements` folder.
+
+If you want to set up your own sounds files directories, then just two steps:
+
+## Step 1
+
+Create the folders and put the files in there. You can see I also add an airline 'UAL' folder for when United Airlines is detected:
+
+<video width="100%" controls>
+  <source src="images/1-CreateFolders.mp4" type="video/mp4">
+  Your browser does not support the video tag.
+</video>
+
+## Step 2
+
+Then once you have the folders and files you can point Universal Announcer at them like this:
+
+<img src="images/2-picked.jpg" alt="Picked Files" width="600">
+
+Done!
