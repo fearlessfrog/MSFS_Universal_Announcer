@@ -160,8 +160,16 @@ Thank you to those that bought me a coffee and to keep all this free - I'm now h
 - Other Addons: Compatible with most aircraft addons
 - SimConnect: Uses standard MSFS SimConnect interface
 
+## Next Feature Ideas
+
+Put a .plan file here, so feel free to comment on in issues:
+
+https://github.com/fearlessfrog/MSFS_Universal_Announcer/blob/main/plan.md
+
 ## ⚖️ License & Disclaimer
 
 This free software is provided "as is" without warranty. No copyrighted sound files included - users must obtain compatible files separately. For educational/entertainment purposes only. Users are responsible for compliance and assume all risks.
+
+This software uses "SimConnect" © Microsoft Corp. All rights reserved.
 
 This app is in no way associated, approved or condoned by FenixSim Ltd, Navigraph or FSDreamTeam.
