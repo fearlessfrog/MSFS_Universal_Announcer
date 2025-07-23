@@ -1,6 +1,6 @@
 # How Detection of Flight State Works
 
-This is a snapshot of v0.1.0 transition so might evolve. It should answer most questions on 'what fires when'.
+This is a snapshot of v0.2.3 transition so might evolve. It should answer most questions on 'what fires when'.
 
 ## State Transition Table
 | File to Play | Flight State | SimVars to Check | Timing Logic |
