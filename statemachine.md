@@ -1,6 +1,6 @@
 # How Detection of Flight State Works
 
-This is a snapshot of v0.2.3 transitions, so it might evolve. It should answer most questions on 'what fires when'.
+This is a snapshot of v0.2.4 transitions, so it might evolve. It should answer most questions on 'what fires when'.
 
 ## State Transition Table
 
