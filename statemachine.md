@@ -1,6 +1,6 @@
 # How Detection of Flight State Works
 
-This is a snapshot of v0.2.4 transitions, so it might evolve. It should answer most questions on 'what fires when'.
+This is a snapshot of v0.2.5 transitions, so it might evolve. It should answer most questions on 'what fires when'.
 
 ## State Transition Table
 
@@ -17,7 +17,7 @@ This is a snapshot of v0.2.4 transitions, so it might evolve. It should answer m
 | CallCabinSecureTakeoff | Takeoff Imminent | `CrewSeatsTakeoff` played AND `IsOnGround=True` | **Wait for CrewSeatsTakeoff to finish playing + 5 seconds** |
 | AfterTakeoff | Post-takeoff | `AltitudeAGL > TakeoffDetectionAltitudeAGL` (3,000 ft) AND `IsOnGround=False` | **Wait 2 minutes after takeoff detected (independent timing)** |
 | FastenSeatbelt | In-flight Seatbelt Reminder | `Climb/Cruise Phase` AND `AfterTakeoff` played AND `Seatbelt Sign OFF→ON transition` (CABIN SEATBELTS ALERT SWITCH or ANNUNCIATOR SWITCH binding) | **2 Minute Cooldown (Repeatable)** |
-| DescentSeatbelts | Descent Preparation | `AltitudeAGL < DescentDetectionAGL` (10,000 ft) AND `VerticalSpeed < -500` AND `IsLandingLightOn=True` | When descending below configurable altitude with landing lights on |
+| DescentSeatbelts | Descent Preparation | (`AltitudeAGL < DescentDetectionAGL` (10,000 ft) AND `VerticalSpeed < -500`) OR `LandingLightJustTurnedOn=True` | When descending below configurable altitude OR when landing lights just turned on |
 | CrewSeatsLanding | Landing Preparation | `AltitudeAGL < CrewSeatsLandingAGL` (3,000 ft) AND `VerticalSpeed < -300` AND `IsLandingLightOn=True` | During final approach phase with landing lights on (configurable altitude threshold) |
 | CallCabinSecureLanding | Final Landing Prep | `CrewSeatsLanding` played AND `AltitudeAGL < CrewSeatsLandingAGL + 2000` (5,000 ft) | **Wait for CrewSeatsLanding to finish playing + 10 seconds** (uses CrewSeatsLandingAGL + 2000ft) |
 | AfterLanding | Post-landing | `IsOnGround=True` AND (`SpoilersDeployed=False` OR `GroundSpeed < 25`) AND (previous phase was descent/approach OR descent announcements played) | After landing and spoilers retracted OR ground speed below 25 knots |
@@ -101,7 +101,7 @@ Right-click the system tray icon → **Flight State** submenu
 | **Takeoff** | `Takeoff` | BoardingWelcome, BoardingMusic, BoardingComplete, ArmDoors, PreSafetyBriefing, SafetyBriefing, CabinDimTakeoff | CrewSeatsTakeoff when landing/strobe lights turn on |
 | **Climb** | `Climb` | BoardingWelcome, BoardingMusic, BoardingComplete, ArmDoors, PreSafetyBriefing, SafetyBriefing, CabinDimTakeoff, CrewSeatsTakeoff, CallCabinSecureTakeoff | AfterTakeoff after 2 minutes at altitude > TakeoffDetectionAltitudeAGL (3,000 ft) |
 | **Cruise** | `Cruise` | All pre-cruise announcements (boarding through AfterTakeoff) | FastenSeatbelt when seatbelt sign turns on, DescentSeatbelts when descending |
-| **Descent** | `Descent` | All pre-descent announcements (boarding through AfterTakeoff) | DescentSeatbelts when below DescentDetectionAGL (10,000 ft) with landing lights |
+| **Descent** | `Descent` | All pre-descent announcements (boarding through AfterTakeoff) | DescentSeatbelts when below DescentDetectionAGL (10,000 ft) OR when landing lights just turned on |
 | **Approach** | `Approach` | All pre-approach announcements (boarding through AfterTakeoff) | CrewSeatsLanding when below CrewSeatsLandingAGL (3,000 ft) with landing lights |
 | **Landing** | `Landing` | All pre-landing announcements (boarding through CallCabinSecureLanding) | AfterLanding when on ground with spoilers retracted |
 | **Done** | `Done` | All announcements | No further announcements (flight complete) |
