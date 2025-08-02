@@ -103,7 +103,7 @@ And many more as per Fenix structure in the link above...
 
 If you're curious on what does what when, check out these rules, although these will get updated based on user feedback over time:
 
-[State Machine Rules & Triggers](https://github.com/fearlessfrog/MSFS_Universal_Announcer/blob/main/statemachine.md)
+[State Machine Rules & Triggers](https://fearlessfrog.github.io/MSFS_Universal_Announcer/statemachine.html)
 
 (updated above link for new simbrief and GSX integration info)
 
@@ -171,7 +171,7 @@ Thank you to those that bought me a coffee and to keep all this free - I'm now h
 
 Put a .plan file here, so feel free to comment on in issues:
 
-[Future Plans](https://github.com/fearlessfrog/MSFS_Universal_Announcer/blob/main/plan.md)
+[Future Plans](https://fearlessfrog.github.io/MSFS_Universal_Announcer/plan.html)
 
 ## ⚖️ License & Disclaimer
 
