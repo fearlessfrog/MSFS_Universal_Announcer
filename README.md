@@ -58,7 +58,9 @@ Run the application - It will appear in your system tray
 Configure sound files path - The app will try to auto-detect your Fenix installation location, or you can browse to your sound files folder. If you don't have that, just create an Announcements folder somewhere, put a Default folder in it, and in that put a .ogg sound file.
 Set up you simbrief username in the Settings / Integrations tab and fetch a plan.
 
-You can also probably include this in your MSFS exe.xml eventually for automatic startup, although I haven't tried that yet. There are still bugs in start-up detections, so use Flight Status / Stop if annoying (you can Resume when ready).
+You can also probably include this in your MSFS exe.xml eventually for automatic startup.
+
+If not sure how to set up the folders, take a look [HERE](https://github.com/fearlessfrog/MSFS_Universal_Announcer/blob/main/howtofiles.md)
 
 ## 🔧 Configuration
 
@@ -101,7 +103,7 @@ And many more as per Fenix structure in the link above...
 
 If you're curious on what does what when, check out these rules, although these will get updated based on user feedback over time:
 
-https://github.com/fearlessfrog/MSFS_Universal_Announcer/blob/main/statemachine.md
+[State Machine Rules & Triggers](https://github.com/fearlessfrog/MSFS_Universal_Announcer/blob/main/statemachine.md)
 
 (updated above link for new simbrief and GSX integration info)
 
@@ -169,7 +171,7 @@ Thank you to those that bought me a coffee and to keep all this free - I'm now h
 
 Put a .plan file here, so feel free to comment on in issues:
 
-https://github.com/fearlessfrog/MSFS_Universal_Announcer/blob/main/plan.md
+[Future Plans](https://github.com/fearlessfrog/MSFS_Universal_Announcer/blob/main/plan.md)
 
 ## ⚖️ License & Disclaimer
 
