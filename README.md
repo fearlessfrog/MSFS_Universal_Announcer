@@ -80,7 +80,7 @@ Your sound files should be organized like this:
 
 ```
 Announcements/
-├── Default/           # Fallback announcements
+├── Default/          # Fallback announcements
 ├── UAL/              # United Airlines
 ├── ACA/              # Air Canada
 ├── BAW/              # British Airways
