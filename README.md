@@ -21,7 +21,7 @@ You do not need the Fenix A320 for this to work (although you should have it, it
 
 This app follows the announcements detailed here:
 
-https://support.fenixsim.com/hc/en-us/articles/12374580682383-Cabin-Announcements-Guide
+[https://support.fenixsim.com/hc/en-us/articles/12374580682383-Cabin-Announcements-Guide](https://support.fenixsim.com/hc/en-us/articles/12374580682383-Cabin-Announcements-Guide)
 
 ## 🎵 Sound Files
 
@@ -45,6 +45,11 @@ Sound Files: Compatible announcement files (see above)
 Extract: Unzip the downloaded file to any directory (e.g., D:\FunStuff\Universal Announcer\)
 Run: Double-click UniversalAnnouncer.exe to start the application
 The application will appear in your system tray and automatically try to locate your sound files.
+
+You can find the current releases [HERE](https://github.com/fearlessfrog/MSFS_Universal_Announcer/releases)
+
+**Note: under 'Assets' you see the file to download and unzip e.g. 'UniversalAnnouncer-v0-3-3.zip' etc.**
+
 
 ## 🔧 Setup
 First Launch
