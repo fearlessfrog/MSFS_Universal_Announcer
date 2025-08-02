@@ -3,4 +3,27 @@ layout: default
 title: State Machine Rules
 ---
 
+<style>
+/* Override table styling with !important to ensure it takes precedence */
+td {
+    border: 1px solid #666666 !important;
+    border-color: #666666 !important;
+}
+
+/* Also target table cells specifically for extra specificity */
+table td {
+    border: 1px solid #666666 !important;
+    border-color: #666666 !important;
+}
+
+/* Ensure table borders are also consistent */
+table {
+    border-collapse: collapse !important;
+}
+
+table, th, td {
+    border: 1px solid #666666 !important;
+}
+</style>
+
 {% raw %}{% include_relative statemachine.md %}{% endraw %}
