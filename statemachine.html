@@ -3,6 +3,7 @@ layout: default
 title: State Machine Rules
 ---
 
+{% raw %}
 <style>
 /* Override table styling with !important to ensure it takes precedence */
 td {
@@ -25,5 +26,9 @@ table, th, td {
     border: 1px solid #666666 !important;
 }
 </style>
+{% endraw %}
+
+<!-- Alternative approach using external CSS file -->
+<!-- <link rel="stylesheet" href="{{ '/assets/css/table-override.css' | relative_url }}"> -->
 
 {% raw %}{% include_relative statemachine.md %}{% endraw %}
