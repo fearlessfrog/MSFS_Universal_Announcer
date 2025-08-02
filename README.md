@@ -60,7 +60,7 @@ Set up you simbrief username in the Settings / Integrations tab and fetch a plan
 
 You can also probably include this in your MSFS exe.xml eventually for automatic startup.
 
-If not sure how to set up the folders, take a look [HERE](https://github.com/fearlessfrog/MSFS_Universal_Announcer/blob/main/howtofiles.md)
+If not sure how to set up the folders, take a look [HERE](https://fearlessfrog.github.io/MSFS_Universal_Announcer/howtofiles.html)
 
 ## 🔧 Configuration
 
