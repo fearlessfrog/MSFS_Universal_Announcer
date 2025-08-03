@@ -1,7 +1,6 @@
-/* Custom table overrides for tactile theme */
+/* Custom table overrides for tactile theme - TABLES ONLY */
 
-/* Override all table elements with maximum specificity */
-.wrapper table,
+/* Override table elements with maximum specificity but ONLY tables */
 .wrapper table td,
 .wrapper table th {
     border: 1px solid #666666 !important;
@@ -11,20 +10,21 @@
 /* Ensure table collapse for clean borders */
 .wrapper table {
     border-collapse: collapse !important;
-}
-
-/* Additional selectors for different table contexts */
-table td,
-table th,
-table {
     border: 1px solid #666666 !important;
-    border-color: #666666 !important;
 }
 
 /* Target markdown-generated tables specifically */
 .markdown-body table td,
 .markdown-body table th,
 .markdown-body table {
+    border: 1px solid #666666 !important;
+    border-color: #666666 !important;
+}
+
+/* Additional table-specific selectors */
+table td,
+table th,
+table {
     border: 1px solid #666666 !important;
     border-color: #666666 !important;
 }

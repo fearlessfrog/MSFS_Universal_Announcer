@@ -10,8 +10,5 @@ include:
   - howtofiles.md
   - plan.md
 
-# Custom CSS overrides
-sass:
-  load_paths:
-    - _sass
-    - assets/css
+# Ensure theme loads properly
+theme: pages-themes/tactile@v0.2.0
