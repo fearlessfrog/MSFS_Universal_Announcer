@@ -1,0 +1,28 @@
+---
+---
+
+/* Override tactile theme table styles */
+td {
+    border: 1px solid #666666 !important;
+    border-color: #666666 !important;
+}
+
+table td {
+    border: 1px solid #666666 !important;
+    border-color: #666666 !important;
+}
+
+table {
+    border-collapse: collapse !important;
+}
+
+table, th, td {
+    border: 1px solid #666666 !important;
+}
+
+/* Additional specificity to override theme */
+.wrapper table td,
+.wrapper table th,
+.wrapper table {
+    border: 1px solid #666666 !important;
+}

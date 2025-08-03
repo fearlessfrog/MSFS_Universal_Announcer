@@ -9,3 +9,9 @@ include:
   - statemachine.md
   - howtofiles.md
   - plan.md
+
+# Custom CSS overrides
+sass:
+  load_paths:
+    - _sass
+    - assets/css
