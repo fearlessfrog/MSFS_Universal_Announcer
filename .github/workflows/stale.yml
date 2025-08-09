@@ -1,0 +1,46 @@
+name: Close stale issues and PRs
+
+on:
+  schedule:
+    # Runs every day at 02:30 UTC — adjust as you like
+    - cron: "30 2 * * *"
+  workflow_dispatch: {}  # lets you run it on demand from the Actions tab
+
+permissions:
+  issues: write
+  pull-requests: write
+
+jobs:
+  stale:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/stale@v9   # check the Marketplace for the latest major version
+        with:
+          repo-token: ${{ secrets.GITHUB_TOKEN }}
+
+          # Timings
+          days-before-stale: 30    # mark as stale after 30 days of no activity
+          days-before-close: 7     # close 7 days after being marked stale (if still inactive)
+
+          # Messages
+          stale-issue-message: >
+            This issue has been automatically marked as stale due to 30 days of inactivity.
+            It will be closed if no further activity occurs within 7 days.
+          close-issue-message: >
+            Closing this issue due to prolonged inactivity. Feel free to reopen with new info.
+          stale-pr-message: >
+            This PR has been marked as stale due to inactivity. It will close in 7 days without updates.
+          close-pr-message: >
+            Closing this PR due to inactivity. Please open a new one when ready.
+
+          # Labels
+          stale-issue-label: stale
+          stale-pr-label: stale
+          exempt-issue-labels: pinned,security,"help wanted"   # never stale/close if these are present
+          exempt-pr-labels: pinned,security
+
+          # Behavior
+          remove-stale-when-updated: true   # un-stale if someone comments, labels, commits, etc.
+          exempt-all-assignees: true        # don’t stale if it has any assignee
+          operations-per-run: 200           # safety limit per execution
+          enable-statistics: true
