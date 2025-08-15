@@ -12,6 +12,12 @@
 
 🎯 **Use free Azure TTS to generate fully compatible sound files for this app using your flight info**
 
+## Important Note
+
+> 💡 **Continue to use existing sound packs like normal - reality is best, but...**
+>
+> This feature doesn't replace your existing high-quality sound packs. It's designed to fill in the gaps when you don't have custom audio for specific announcements or airlines. Use real recordings when available, and let TTS handle the rest!
+
 ## Why This Feature is Amazing
 
 The Generated TTS feature is pretty next because:
