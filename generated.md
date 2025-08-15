@@ -64,10 +64,11 @@ Let's walk through setting up a virtual airline that doesn't have a sound pack y
 ### Step-by-Step Setup
 
 1. **Create Airline Folder**: Create an `XYZ` folder in your sound packs directory for your virtual 'XYZ Airlines'
-2. **Set Up Flight**: File a SimBrief plan or set a callsign in MSFS with `XYZ 123` as your flight id
-3. **Automatic Generation**: The default announcements will be generated with your flight info, automatically saving `.ogg` sound files as it goes
-4. **Add Music**: You'll still need your own `BoardingMusic.ogg` - go hunt for some disco or something classy to use! 🕺
-5. **Customize Your Airline**:
+2. **Pick a Voice**: Choose the nationality and accent that works best for the airline, over 100 to choose from. Remember the 'Test Voice' uses your free credits, but you can select an existing announcement and try it out first.
+3. **Set Up Flight**: File a SimBrief plan or set a callsign in MSFS with `XYZ 123` as your flight id
+43. **Automatic Generation**: The default announcements will be generated with your flight info, automatically saving `.ogg` sound files as it goes
+5. **Add Music**: You'll still need your own `BoardingMusic.ogg` - go hunt for some disco or something classy to use! 🕺
+6. **Customize Your Airline**:
    - Rename the generated files to match your preferences, e.g. `AfterTakeoff[1].ogg` to keep 'sets' of numbered files together.
    - Create airline-specific text files like `BoardingWelcome.txt` in your airline folder - remember it **doesn't have to be in English anymore** or use an English accent voice. The TTS works great across accents and languages.
    - **Pro tip**: If you only have the `.txt` file (and no `.ogg`), the system will read it and generate the audio on demand
