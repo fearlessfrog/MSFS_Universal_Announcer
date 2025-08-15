@@ -69,7 +69,7 @@ Let's walk through setting up a virtual airline that doesn't have a sound pack y
 4. **Add Music**: You'll still need your own `BoardingMusic.ogg` - go hunt for some disco! 🕺
 5. **Customize Your Airline**:
    - Rename the generated files to match your preferences
-   - Create airline-specific text files like `BoardingWelcome.txt` in your airline folder
+   - Create airline-specific text files like `BoardingWelcome.txt` in your airline folder - remember it doesn't have to be in English or use an English accent voice.
    - **Pro tip**: If you only have the `.txt` file (and no `.ogg`), the system will read it and generate the audio on demand
 
 ### What Happens Next
@@ -117,6 +117,8 @@ Enhance your announcements with dynamic content using these placeholders, so you
 | `{TIME_OF_DAY}` | Contextual time greeting, Morning, Afternoon, or Evening based on sim time |
 
 Note: the plan is some sort of lookup table or service is going to allow for nicer naming e.g. AIRLINE rather than AIRLINE_CODE
+
+> Example: "Ladies and gentlemen, good {TIME_OF_DAY}. Welcome on board our {AIRLINE_CODE} flight to {DESTINATION_CODE} on this {AIRCRAFT_CODE} aircraft. "
 
 ### Data Sources
 Placeholder values are populated from SimBrief when available, with automatic fallback to current simulator data.
