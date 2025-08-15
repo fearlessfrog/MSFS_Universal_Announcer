@@ -10,13 +10,13 @@
 
 ## TL;DR Summary
 
-🎯 **Use free Azure TTS to generate fully compatible sound files on the fly using your dynamic flight info**
+🎯 **Use free Azure Text To Speech (TTS) to generate fully compatible sound files on the fly using your dynamic flight info**
 
 ## Important Note
 
 > 💡 **Continue to use existing sound packs like normal - reality is best, but...**
 >
-> This feature doesn't replace your existing high-quality sound packs. It's designed to fill in the gaps when you don't have custom audio for specific announcements or airlines. Maybe you don't want to use English files etc? Use real recordings when available, and let TTS handle the rest!
+> This feature doesn't replace your existing high-quality airline sound packs. It's designed to fill in the gaps when you don't have custom audio for specific announcements or airlines. Maybe you don't want to use English files all the time etc. Use real recordings when available, but let this TTS handle the rest!
 
 ## Why This Feature is Amazing
 
@@ -43,8 +43,8 @@ The Generated TTS feature automatically synthesizes missing airline announcement
 
 ### Source Text Priority
 The system follows this lookup order to find announcement text to say:
-1. **Airline-specific**: example: `Airline/BoardingWelcome.txt` (highest priority, an override used per airline)
-2. **Global default**: example: `Default/SafetyBriefing.txt` (you can edit this in the app and save your version)
+1. **Airline-specific**: example: `Airline/BoardingWelcome.txt` (highest priority, an override used per airline, manually edit)
+2. **Global default**: example: `Default/SafetyBriefing.txt` next priority if no airline one found (you can edit this in the app and it'll save your version in your `Default` folder)
 3. **Built-in template**: Automatically copied to the airline folder on first use
 
 ### Output and Storage
@@ -64,7 +64,7 @@ Let's walk through setting up a virtual airline that doesn't have a sound pack y
 ### Step-by-Step Setup
 
 1. **Create Airline Folder**: Create an `XYZ` folder in your sound packs directory for your virtual 'XYZ Airlines'
-2. **Pick a Voice**: In the new Settings / Generated tab choose the nationality and accent that works best for the airline, over 100 to choose from. Remember the 'Test Voice' uses your free credits, but you can select an existing announcement and try it out first.
+2. **Pick a Voice**: In the new `Settings / Generated` tab choose the nationality and accent that works best for the airline, over 100 to choose from. Remember the 'Test Voice' uses your free credits, but you can select an existing announcement and try it out first. The generation uses the last one selected.
 3. **Set Up Flight**: File a SimBrief plan or set a callsign in MSFS with `XYZ 123` as your flight id
 43. **Automatic Generation**: The new announcements will be generated and play with your flight info, automatically saving `.ogg` sound files as it goes
 5. **Add Music**: You'll still need your own `BoardingMusic.ogg` - go hunt for some disco or something classy to use! 🕺
@@ -88,9 +88,9 @@ Go crazy with customization! 🎉
 
 Access the Generated TTS settings in **Settings → Generated**:
 - **Enable/Disable**: Toggle the feature on or off. Default off.
-- **Azure Region**: Select your preferred Azure service region e.g.'westus' or 'westeurope'.
+- **Azure Region**: Select your preferred Azure service region e.g.'westus' or 'westeurope' as you set up in Azure earlier.
 - **API Key**: Enter your Azure Text-to-Speech API key
-- **Voice**: Choose from available Azure TTS voices
+- **Voice**: Choose from available Azure TTS voices. Pick an accent appropriate for the airline or region.
 
 ### Testing Your Setup
 Use the **"Test Voice"** button to verify your configuration:
