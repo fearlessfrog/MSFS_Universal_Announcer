@@ -2,13 +2,13 @@
 
 - Improve use of Boarding Music.
 
-    - Pause it rather than restart when interrupted
-
     - Use other variants e.g. BoardingMusic[1].ogg, BoardingMusic[2].ogg in the play loop, which sort of bends the rules a bit of the set numbers used (they are meant for consistent voices, as when randomized per flight they stick during the flight).
 
     - Maybe resume music after BoardingComplete and Arm Doors, so basically keep it around until ready for PreSafetyBriefing.
 
 - In simulator MSFS 2020 Toolbar and MSFS 2024 EFB controls, basically duplicate what you can press in the windows app as needed. Useful in VR.
+
+- AI Slop! Everyone hates AI but wondering if perhaps some sort of text to speech free tier service could be used to generate dynamic announcements (when real ones missing). The concept would be the app finds a missing announcement and then generates it on the fly using an AI voice (with PA noise mix overlaid). This would allow full flight info to be incorporated, e.g. arrival/departure from simbrief, the current time and ETA etc. Anything generated with the users API key would be saved as a ogg file with tags, so the same flight would not call the API again.
 
 - 3D Positional Audio. Work out the likely output in the camera position per aircraft type and play the announcements with 3d channel balance.
 
