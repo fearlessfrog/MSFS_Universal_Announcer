@@ -20,7 +20,7 @@
 
 ## Why This Feature is Amazing
 
-The Generated TTS feature is pretty next because:
+The Generated TTS feature is pretty interesting because:
 
 - **Always Tailored**: You get announcements specifically tailored to your airline, no matter what aircraft or route you're flying
 - **Local Language Support**: Announcements can be in your local language, just like real-life airline operations
