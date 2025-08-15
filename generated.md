@@ -1,13 +1,25 @@
 # Generated Announcements
 
+> ⚠️ **EXPERIMENTAL FEATURE** ⚠️
+>
+> 🧪 This is an **advanced, experimental feature** that I'm releasing early for feedback and ideas.
+>
+> 🔬 While fully functional, it may have unexpected behaviors or limitations. Your feedback will help shape its development!
+>
+> 💡 **Pro tip**: If you're new to the app, consider getting familiar with the basic features first.
+
+## TL;DR Summary
+
+🎯 **Use free Azure TTS to generate fully compatible sound files for this app using your flight info**
+
 ## Why This Feature is Amazing
 
-The Generated TTS feature revolutionizes your flight simulation experience by providing:
+The Generated TTS feature is pretty next because:
 
 - **Always Tailored**: You get announcements specifically tailored to your airline, no matter what aircraft or route you're flying
 - **Local Language Support**: Announcements can be in your local language, just like real-life airline operations
 - **Fully Customizable**: Edit announcements to say exactly what you want, incorporating real flight context and details
-- **Cost-Effective**: Azure's free tier provides 8 hours of audio generation a month, and since clips are saved as reusable .ogg files in proper sound pack format, you only pay for what you actually need
+- **Cost-Effective**: Azure's free tier provides 8 hours of audio generation a month, and since these short clips are saved as reusable .ogg files in proper sound pack format, it's unlikely you'll need to pay for anything.
 
 ### Getting Started with Azure
 To use this feature, you'll need to set up an Azure Text-to-Speech API key. I've found two excellent step-by-step guides that walk you through the entire process:
@@ -38,6 +50,31 @@ Generated announcements are saved as `.ogg` files alongside their corresponding 
 - **Generation timeout**: 20 seconds maximum, so generated on demand without you noticing
 - **Fallback behavior**: If generation fails or times out, the normal audio fallback system takes over
 - **Efficient caching**: Prevents unnecessary API usage for repeated announcements
+
+## Example Use Case: Virtual Airline Setup
+
+Let's walk through setting up a virtual airline that doesn't have a sound pack yet:
+
+### Step-by-Step Setup
+
+1. **Create Airline Folder**: Create an `XYZ` folder in your sound packs directory for XYZ Airlines
+2. **Set Up Flight**: File a SimBrief plan or set a callsign in MSFS with `XYZ123` as your flight
+3. **Automatic Generation**: The default announcements will be generated with your flight info, automatically saving `.ogg` sound files as it goes
+4. **Add Music**: You'll still need your own `BoardingMusic.ogg` - go hunt for some disco! 🕺
+5. **Customize Your Airline**:
+   - Rename the generated files to match your preferences
+   - Create airline-specific text files like `BoardingWelcome.txt` in your airline folder
+   - **Pro tip**: If you only have the `.txt` file (and no `.ogg`), the system will read it and generate the audio on demand
+
+### What Happens Next
+
+Once set up, every time you fly with XYZ Airlines, the system will:
+- Use your custom text files to generate announcements
+- Incorporate real flight data (origin, destination, aircraft type)
+- Save the generated audio for reuse
+- Fall back to defaults if anything is missing
+
+Go crazy with customization! 🎉
 
 ## Configuration
 
