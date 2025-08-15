@@ -57,9 +57,9 @@ Generated announcements are saved as `.ogg` files alongside their corresponding 
 - **Fallback behavior**: If generation fails or times out, the normal audio fallback system takes over
 - **Efficient caching**: Prevents unnecessary API usage for repeated announcements
 
-## Example Use Case: Virtual Airline Setup
+## Example Use Case 1: Virtual Airline Setup - On the Fly Generated
 
-Let's walk through setting up a virtual airline that doesn't have a sound pack yet:
+Let's walk through setting up a virtual airline that doesn't have a sound pack yet and you want to generate the sound files as you go on a flight:
 
 ### Step-by-Step Setup
 
@@ -74,15 +74,44 @@ Let's walk through setting up a virtual airline that doesn't have a sound pack y
 
 > **Pro tip**: If you only have the `.txt` file (and no `.ogg`), the system will read it and generate the audio on demand
 
-### What Happens Next
 
-Once set up, every time you fly with XYZ Airlines, the system will:
-- Use your custom text files to generate announcements if there's no sound file found
-- Incorporate real flight data (origin, destination, aircraft type), (this we'll be improved with options over time)
-- Save the generated audio for reuse
-- Fall back to defaults if anything is missing
+## Example Use Case 2: Virtual Airline Setup - Pregenerated
 
-Go crazy with customization! 🎉
+Here's the steps for setting up a series of announcements up front before you fly:
+
+### Step-by-Step Setup
+
+1. Create the airline folder
+   - In your sound packs, create `XYZ` (e.g., `...\Announcements\XYZ`).
+
+2. Open Settings → Generated
+   - Pick your TTS voice (you can use Test Voice to hear it first).
+
+3. Select the target airline
+   - Set the Airline dropdown to `XYZ` (not Default). The Generate buttons will enable.
+
+4. Pick a template
+   - In the left template list, choose (for example) `BoardingWelcome`. Items in bold/green already have a matching `.ogg` in the selected airline.
+
+5. Edit the text (optional)
+   - Use the right editor to customize. You can use placeholders like `{AIRLINE_NAME}`, `{ORIGIN_CODE}`, `{DESTINATION_NAME}`, `{AIRCRAFT_NAME}`, `{TIME_OF_DAY}`.
+
+6. Save the text to the airline folder
+   - Click “Save txt”. This writes `XYZ\BoardingWelcome.txt` (you’ll be asked to overwrite if it already exists).
+
+7. Generate the audio
+   - Click “Generate” to create `XYZ\BoardingWelcome.ogg`, or
+   - Click “Generate As..” to enter a different filename (e.g., `BoardingWelcome[1].ogg`) before saving.
+   - Success is confirmed; the template list will refresh highlighting for files that now exist.
+
+8. Preview and use
+   - Switch to Sound Files to preview; the new `.ogg` appears under `XYZ`.
+   - At runtime, the app will just play your pre‑generated `.ogg` (no TTS call needed).
+
+Tips
+- To build a set (e.g., multiple versions), repeat “Generate As..” with names like `AfterTakeoff[1].ogg`, `AfterTakeoff[2].ogg`.
+- You can do the same flow with `Default` selected to pre‑generate fallback audio.
+
 
 ## Configuration
 
@@ -112,18 +141,25 @@ Enhance your announcements with dynamic content using these placeholders, so you
 
 | Placeholder | Description |
 |-------------|-------------|
-| `{AIRLINE_CODE}` | Spoken airline ICAO code |
-| `{ORIGIN_CODE}` | Spoken origin airport ICAO code |
-| `{DESTINATION_CODE}` | Spoken destination airport ICAO code |
-| `{AIRCRAFT_CODE}` | Aircraft type ICAO code |
-| `{TIME_OF_DAY}` | Contextual time greeting, Morning, Afternoon, or Evening based on sim time |
+| `{AIRLINE_CODE}` | Airline ICAO code (e.g., DAL) |
+| `{AIRLINE_NAME}` | Airline name (e.g., Delta Air Lines) |
+| `{ORIGIN_CODE}` | Origin airport ICAO code (e.g., KLAS) |
+| `{ORIGIN_NAME}` | Origin airport name (e.g., Harry Reid International) |
+| `{ORIGIN_CITY}` | Origin city/municipality (e.g., Las Vegas) |
+| `{ORIGIN_FULLNAME}` | Origin full name (e.g., Harry Reid International, Las Vegas) |
+| `{DESTINATION_CODE}` | Destination airport ICAO code (e.g., KJFK) |
+| `{DESTINATION_NAME}` | Destination airport name (e.g., John F. Kennedy International) |
+| `{DESTINATION_CITY}` | Destination city/municipality (e.g., New York) |
+| `{DESTINATION_FULLNAME}` | Destination full name (e.g., John F. Kennedy International, New York) |
+| `{AIRCRAFT_CODE}` | Aircraft type ICAO code (e.g., A320) |
+| `{AIRCRAFT_NAME}` | Aircraft type name (e.g., Airbus A320) |
+| `{TIME_OF_DAY}` | Morning, Afternoon, or Evening (based on local sim time) |
 
-Note: the plan is some sort of lookup table or service is going to allow for nicer naming than the ICAO codes e.g. AIRLINE ('Alaska Airlines' vs 'ASA') rather than AIRLINE_CODE, ORIGIN rather than ORIGIN_CODE ('Heathrow London' vs 'EGLL')
+Notes:
+- If a lookup isn’t found, the placeholder resolves to empty.
+- Name/city data is loaded from Tools JSON datasets shipped with the app. Feel free to edit it.
 
-> Example valid txt entry: "Ladies and gentlemen, good {TIME_OF_DAY}. Welcome on board our {AIRLINE_CODE} flight to {DESTINATION_CODE} on this {AIRCRAFT_CODE} aircraft. "
-
-### Data Sources
-Placeholder values are populated from SimBrief when available, with automatic fallback to current simulator data.
+> Example valid txt entry: "Ladies and gentlemen, good {TIME_OF_DAY}. Welcome on board our {AIRLINE_NAME} flight to {DESTINATION_FULLNAME}, on this {AIRCRAFT_NAME} aircraft. Our {ORIGIN_CITY} based crew is pleased to be with you."
 
 ## Best Practices
 
