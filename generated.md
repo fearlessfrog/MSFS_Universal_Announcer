@@ -16,7 +16,7 @@
 
 > 💡 **Continue to use existing sound packs like normal - reality is best, but...**
 >
-> This feature doesn't replace your existing high-quality sound packs. It's designed to fill in the gaps when you don't have custom audio for specific announcements or airlines. Use real recordings when available, and let TTS handle the rest!
+> This feature doesn't replace your existing high-quality sound packs. It's designed to fill in the gaps when you don't have custom audio for specific announcements or airlines. Maybe you don't want to use English files etc? Use real recordings when available, and let TTS handle the rest!
 
 ## Why This Feature is Amazing
 
@@ -43,17 +43,17 @@ The Generated TTS feature automatically synthesizes missing airline announcement
 
 ### Source Text Priority
 The system follows this lookup order to find announcement text to say:
-1. **Airline-specific**: `Airline/BoardingWelcome.txt` (highest priority, an override used per airline)
-2. **Global default**: `Default/BoardingWecome.txt` (you can edit this in the app and save it)
+1. **Airline-specific**: example: `Airline/BoardingWelcome.txt` (highest priority, an override used per airline)
+2. **Global default**: example: `Default/SafetyBriefing.txt` (you can edit this in the app and save your version)
 3. **Built-in template**: Automatically copied to the airline folder on first use
 
 ### Output and Storage
 Generated announcements are saved as `.ogg` files alongside their corresponding `.txt` files in the airline folder. Once created, these files are reused automatically on subsequent flights, eliminating the need for repeated API calls.
 
-**To regenerate an announcement**: Simply edit the `.txt` file and delete or rename the associated `.ogg` file.
+**To regenerate an announcement**: Simply edit the `.txt` file and **delete or rename** the associated `.ogg` file.
 
 ### Performance and Reliability
-- **Generation timeout**: 20 seconds maximum, so generated on demand without you noticing
+- **Generation timeout**: 5 seconds maximum, so generated on demand without you noticing
 - **Fallback behavior**: If generation fails or times out, the normal audio fallback system takes over
 - **Efficient caching**: Prevents unnecessary API usage for repeated announcements
 
@@ -63,13 +63,13 @@ Let's walk through setting up a virtual airline that doesn't have a sound pack y
 
 ### Step-by-Step Setup
 
-1. **Create Airline Folder**: Create an `XYZ` folder in your sound packs directory for XYZ Airlines
-2. **Set Up Flight**: File a SimBrief plan or set a callsign in MSFS with `XYZ123` as your flight
+1. **Create Airline Folder**: Create an `XYZ` folder in your sound packs directory for your virtual 'XYZ Airlines'
+2. **Set Up Flight**: File a SimBrief plan or set a callsign in MSFS with `XYZ 123` as your flight id
 3. **Automatic Generation**: The default announcements will be generated with your flight info, automatically saving `.ogg` sound files as it goes
-4. **Add Music**: You'll still need your own `BoardingMusic.ogg` - go hunt for some disco! 🕺
+4. **Add Music**: You'll still need your own `BoardingMusic.ogg` - go hunt for some disco or something classy to use! 🕺
 5. **Customize Your Airline**:
-   - Rename the generated files to match your preferences
-   - Create airline-specific text files like `BoardingWelcome.txt` in your airline folder - remember it doesn't have to be in English or use an English accent voice.
+   - Rename the generated files to match your preferences, e.g. `AfterTakeoff[1].ogg` to keep 'sets' of numbered files together.
+   - Create airline-specific text files like `BoardingWelcome.txt` in your airline folder - remember it **doesn't have to be in English anymore** or use an English accent voice. The TTS works great across accents and languages.
    - **Pro tip**: If you only have the `.txt` file (and no `.ogg`), the system will read it and generate the audio on demand
 
 ### What Happens Next
@@ -85,8 +85,8 @@ Go crazy with customization! 🎉
 ## Configuration
 
 Access the Generated TTS settings in **Settings → Generated**:
-- **Enable/Disable**: Toggle the feature on or off
-- **Azure Region**: Select your preferred Azure service region
+- **Enable/Disable**: Toggle the feature on or off. Default off.
+- **Azure Region**: Select your preferred Azure service region e.g.'westus' or 'westeurope'.
 - **API Key**: Enter your Azure Text-to-Speech API key
 - **Voice**: Choose from available Azure TTS voices
 
@@ -101,7 +101,7 @@ Use the **"Test Voice"** button to verify your configuration:
 The template editor displays all available built-in announcement templates. Select any template to load its content for editing.
 
 ### Template Actions
-- **Save**: Writes your customizations to `Default/Name.txt` (creates a global override)
+- **Save**: Writes your customizations to `Default/Name.txt` (creates a global override if no txt found in the airline)
 - **Revert**: Removes the override, restoring the original built-in template
 
 ## Available Placeholders
@@ -110,15 +110,15 @@ Enhance your announcements with dynamic content using these placeholders, so you
 
 | Placeholder | Description |
 |-------------|-------------|
-| `{AIRLINE_CODE}` | Spoken airline  ICAO code |
+| `{AIRLINE_CODE}` | Spoken airline ICAO code |
 | `{ORIGIN_CODE}` | Spoken origin airport ICAO code |
 | `{DESTINATION_CODE}` | Spoken destination airport ICAO code |
 | `{AIRCRAFT_CODE}` | Aircraft type ICAO code |
 | `{TIME_OF_DAY}` | Contextual time greeting, Morning, Afternoon, or Evening based on sim time |
 
-Note: the plan is some sort of lookup table or service is going to allow for nicer naming e.g. AIRLINE rather than AIRLINE_CODE
+Note: the plan is some sort of lookup table or service is going to allow for nicer naming than the ICAO codes e.g. AIRLINE ('Alaska Airlines' vs 'ASA') rather than AIRLINE_CODE, ORIGIN rather than ORIGIN_CODE ('Heathrow London' vs 'EGLL')
 
-> Example: "Ladies and gentlemen, good {TIME_OF_DAY}. Welcome on board our {AIRLINE_CODE} flight to {DESTINATION_CODE} on this {AIRCRAFT_CODE} aircraft. "
+> Example valid txt entry: "Ladies and gentlemen, good {TIME_OF_DAY}. Welcome on board our {AIRLINE_CODE} flight to {DESTINATION_CODE} on this {AIRCRAFT_CODE} aircraft. "
 
 ### Data Sources
 Placeholder values are populated from SimBrief when available, with automatic fallback to current simulator data.
@@ -126,7 +126,7 @@ Placeholder values are populated from SimBrief when available, with automatic fa
 ## Best Practices
 
 - **Keep text natural**: Write announcements as you would speak them naturally
-- **Avoid complex formatting**: SSML and tag variants are not yet supported, but looking at it
+- **Avoid complex formatting**: SSML and tag variants are not yet supported, but looking at it, e.g. pitch, speed
 - **Test thoroughly**: Use the Test Voice feature to ensure your templates sound correct
 - **Plan for fallbacks**: Design templates that work well even when some data is unavailable
 - **Audio Mix**: I'll add some sort of 'PA mix overlay' to make the voice sound more PA ish, coming soon.
