@@ -10,7 +10,7 @@
 
 ## TL;DR Summary
 
-🎯 **Use free Azure TTS to generate fully compatible sound files for this app using your flight info**
+🎯 **Use free Azure TTS to generate fully compatible sound files on the fly using your dynamic flight info**
 
 ## Important Note
 
