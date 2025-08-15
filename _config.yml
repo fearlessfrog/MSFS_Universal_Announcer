@@ -3,9 +3,10 @@ plugins:
 relative_links:
   enabled: true
   collections: true
-remote_theme: pages-themes/tactile@v0.2.0
+remote_theme: pages-themes/cayman@v0.2.0
 include:
   - README.md
   - statemachine.md
   - howtofiles.md
   - plan.md
+  - generated.md
