@@ -75,8 +75,8 @@ Let's walk through setting up a virtual airline that doesn't have a sound pack y
 ### What Happens Next
 
 Once set up, every time you fly with XYZ Airlines, the system will:
-- Use your custom text files to generate announcements
-- Incorporate real flight data (origin, destination, aircraft type)
+- Use your custom text files to generate announcements if there's no sound file found
+- Incorporate real flight data (origin, destination, aircraft type), (this we'll be improved with options over time)
 - Save the generated audio for reuse
 - Fall back to defaults if anything is missing
 
@@ -108,13 +108,15 @@ The template editor displays all available built-in announcement templates. Sele
 
 Enhance your announcements with dynamic content using these placeholders, so you can place these in the text:
 
-| Placeholder | Description | Fallback |
-|-------------|-------------|----------|
-| `{AIRLINE}` | Spoken airline name from ICAO code | Raw ICAO code if unknown |
-| `{ORIGIN}` | Spoken origin airport name | ICAO code (e.g., "KLAS") |
-| `{DESTINATION}` | Spoken destination airport name | ICAO code |
-| `{AIRCRAFT}` | Simple aircraft type description | "aircraft" |
-| `{TIME_OF_DAY}` | Contextual time greeting | Morning, Afternoon, or Evening based on sim time |
+| Placeholder | Description |
+|-------------|-------------|
+| `{AIRLINE_CODE}` | Spoken airline  ICAO code |
+| `{ORIGIN_CODE}` | Spoken origin airport ICAO code |
+| `{DESTINATION_CODE}` | Spoken destination airport ICAO code |
+| `{AIRCRAFT_CODE}` | Aircraft type ICAO code |
+| `{TIME_OF_DAY}` | Contextual time greeting, Morning, Afternoon, or Evening based on sim time |
+
+Note: the plan is some sort of lookup table or service is going to allow for nicer naming e.g. AIRLINE rather than AIRLINE_CODE
 
 ### Data Sources
 Placeholder values are populated from SimBrief when available, with automatic fallback to current simulator data.
