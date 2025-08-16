@@ -25,7 +25,7 @@ The Generated TTS feature is pretty interesting because:
 - **Always Tailored**: You get announcements specifically tailored to your airline, no matter what aircraft or route you're flying
 - **Local Language Support**: Announcements can be in your local language, just like real-life airline operations
 - **Fully Customizable**: Edit announcements to say exactly what you want, incorporating real flight context and details
-- **Cost-Effective**: Azure's free tier provides 8 hours of audio generation a month, and since these short clips are saved as reusable .ogg files in proper sound pack format, it's unlikely you'll need to pay for anything. You can use the nicer Elevenlabs as well, which has a great 'Clone Voice' feature.
+- **Cost-Effective**: Azure's free tier provides 8 hours of audio generation a month, and since these short clips are saved as reusable .ogg files in proper sound pack format, it's unlikely you'll need to pay for anything. You can use the nicer ElevenLabs as well, which has a great 'Clone Voice' feature.
 
 ## Overview
 
@@ -141,10 +141,11 @@ It is fine to put two or more languages in a single announcement, but on Azure t
 Access the Generated TTS settings in **Settings → Generated**:
 - **Enable/Disable**: Toggle the feature on or off. Default off.
 - **Azure Region**: Select your preferred Azure service region e.g.'westus' or 'westeurope' as you set up in Azure earlier.
-- **API Key**: Enter your Azure Text-to-Speech API key
-- **Voice**: Choose from available Azure TTS voices. Pick an accent appropriate for the airline or region.
+- **Model**: Select your preferred ElevenLabs model, fast/turbo is fine usually and less credits.
+- **API Key**: Enter your Azure or Elevenlabs Text-to-Speech API key
+- **Voice**: Choose from available Azure or ElevenLabs TTS voices. Pick an accent appropriate for the airline or region.
 
-> 💡 **If the voices seem to 'clean' you can use the new 'Audio' tab 'PA Audio Mix' setting**
+> 💡 **If the voices seem too 'clean' you can use the new 'Audio' tab 'PA Audio Mix' setting**
 >
 > This feature simulates the audio pattern of a PA system, with a few presets on how light or heavy. The generated voices will use this if this option is turned on (it is off by default)
 
