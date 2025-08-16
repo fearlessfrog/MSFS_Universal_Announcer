@@ -112,6 +112,11 @@ Tips
 - To build a set (e.g., multiple versions), repeat “Generate As..” with names like `AfterTakeoff[1].ogg`, `AfterTakeoff[2].ogg`.
 - You can do the same flow with `Default` selected to pre‑generate fallback audio.
 
+## Multi-Lingual Announcements
+
+It is fine to put two or more languages in a single announcement, but on Azure they will work better if you use a 'Multilingual' type voice. This example shows such a voice (language-Country-Name+MultilingualNeural) in use with English and Cantonese:
+
+<img src="images/multiling.jpg" alt="Picked Files" width="600">
 
 ## Configuration
 
