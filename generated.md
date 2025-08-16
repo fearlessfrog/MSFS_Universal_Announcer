@@ -46,16 +46,16 @@ To use this feature, you'll need to set up an Azure Text-to-Speech API key. I've
 ### Getting Started with ElevenLabs TTS
 You can sign up for a free key and try out these voices. A paid plan allows you to clone your voice and do all sorts of weird and wonderful things. There are free voices to use as well but limited compared to Azure.
 
-Here's a short guide on how to get your API key: https://docs.aicontentlabs.com/articles/elevenlabs-api-key/
+Here's a short guide on how to get your API key: [ElevenLabs API Key](https://docs.aicontentlabs.com/articles/elevenlabs-api-key/)
 
-..or to create an API key you can go here once you have an account: https://elevenlabs.io/app/settings/api-keys
+..or to create an API key you can go here once you have an account: [https://elevenlabs.io/app/settings/api-keys](https://elevenlabs.io/app/settings/api-keys)
 
 **IMPORTANT** If you restrict the API key you'll need the follow permissions on it for this to work:
 - Text to Speech = Has Access
 - Voices = Read Only (so we can list the voices in the app)
 - Models = Read Only (so we can list the models in the app, the default one is usually fine)
 
-**Model** See the ElevenLabs documentation on the best model to use. Flash is cheaper than MultiLang for example but reduced quality. In this apps case it doesn't really matter about super low latency.
+**Models** See the ElevenLabs documentation on the best model to use. Flash is cheaper than MultiLang for example but reduced quality. In this app's case it doesn't really matter about super low latency.
 
 ## How It All Works
 
