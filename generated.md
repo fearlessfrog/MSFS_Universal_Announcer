@@ -10,7 +10,7 @@
 
 ## TL;DR Summary
 
-🎯 **Use free Azure Text To Speech (TTS) to generate fully compatible sound files on the fly using your dynamic flight info**
+🎯 **Use free Azure or ElevenLabs Text To Speech (TTS) to generate fully compatible sound files on the fly using your dynamic flight info**
 
 ## Important Note
 
@@ -25,11 +25,11 @@ The Generated TTS feature is pretty interesting because:
 - **Always Tailored**: You get announcements specifically tailored to your airline, no matter what aircraft or route you're flying
 - **Local Language Support**: Announcements can be in your local language, just like real-life airline operations
 - **Fully Customizable**: Edit announcements to say exactly what you want, incorporating real flight context and details
-- **Cost-Effective**: Azure's free tier provides 8 hours of audio generation a month, and since these short clips are saved as reusable .ogg files in proper sound pack format, it's unlikely you'll need to pay for anything.
+- **Cost-Effective**: Azure's free tier provides 8 hours of audio generation a month, and since these short clips are saved as reusable .ogg files in proper sound pack format, it's unlikely you'll need to pay for anything. You can use the nicer Elevenlabs as well, which has a great 'Clone Voice' feature.
 
 ## Overview
 
-The Generated TTS feature automatically synthesizes missing airline announcements using Azure (will add more providers next) Text-to-Speech, providing a seamless fallback before default audio is used. This ensures your passengers always hear appropriate announcements, even when custom audio files are missing.
+The Generated TTS feature automatically synthesizes missing airline announcements using Azure or ElevenLabs (will add more providers next) Text-to-Speech, providing a seamless fallback before default audio is used. This ensures your passengers always hear appropriate announcements, even when custom audio files are missing.
 
 ## Setting up a TTS Provider
 
