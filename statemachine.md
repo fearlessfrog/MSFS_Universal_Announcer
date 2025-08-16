@@ -4,25 +4,25 @@ This is a snapshot of v0.3.3 transitions, so it might evolve. It should answer m
 
 ## State Transition Table
 
-| File to Play | Flight State | SimVars to Check | Timing Logic |
-|--------------|--------------|------------------|--------------|
-| BoardingWelcome | Ground Pre-boarding | **GSX Mode**: `IsOnGround=True` AND `IsGSXBoardingInProgress=True` AND `IsBeaconOn=False` <br>**Traditional Mode**: `IsOnGround=True` AND `IsLogoLightOn=True` AND `IsBeaconOn=False` | Play once when GSX boarding starts OR logo light first turns on, then repeat every X minutes (configurable, default 5) until BoardingComplete |
-| BoardingMusic | Boarding Active | `BoardingWelcome` played AND `BoardingComplete` not played | Loop continuously until BoardingComplete or next BoardingWelcome |
-| BoardingComplete | Boarding Complete | `IsBeaconOn=True` AND `IsOnGround=True` **OR** `GSX Boarding complete` (when GSX enabled) | Play once when beacon first turned on **OR** GSX boarding completed (whichever happens first) |
-| ArmDoors | Departure Preparation | `IsOnGround=True` AND (`IsEngineRunning=True` OR `GroundSpeed > 1`) | Play once when engines start or aircraft begins moving |
-| PreSafetyBriefing | Pre-departure Briefing | `ArmDoors` played AND `IsEngineRunning=True` | **Wait for ArmDoors to finish playing** |
-| SafetyBriefing | Safety Briefing | `PreSafetyBriefing` played | **Wait for PreSafetyBriefing to finish playing** |
-| CabinDimTakeoff | Cabin Preparation | `SafetyBriefing` played AND `IsDaylight=False` | **Wait for SafetyBriefing to finish playing + 10 seconds** |
-| CrewSeatsTakeoff | Final Takeoff Prep | `IsOnGround=True` AND (`IsLandingLightOn=True` OR `IsStrobeLightOn=True`) AND `IsEngineRunning=True` | When landing lights (default) or strobe lights are turned on (takeoff imminent) |
-| CallCabinSecureTakeoff | Takeoff Imminent | `CrewSeatsTakeoff` played AND `IsOnGround=True` | **Wait for CrewSeatsTakeoff to finish playing + 5 seconds** |
-| AfterTakeoff | Post-takeoff | `AltitudeAGL > TakeoffDetectionAltitudeAGL` (3,000 ft) AND `IsOnGround=False` | **Wait 2 minutes after takeoff detected (independent timing)** |
-| FastenSeatbelt | In-flight Seatbelt Reminder | `Climb/Cruise Phase` AND `AfterTakeoff` played AND `Seatbelt Sign OFF→ON transition` (CABIN SEATBELTS ALERT SWITCH or ANNUNCIATOR SWITCH binding) | **2 Minute Cooldown (Repeatable)** |
-| DescentSeatbelts | Descent Preparation | (`AltitudeAGL < DescentDetectionAGL` (10,000 ft) AND `VerticalSpeed < -500`) OR `LandingLightJustTurnedOn=True` | When descending below configurable altitude OR when landing lights just turned on |
-| CrewSeatsLanding | Landing Preparation | `AltitudeAGL < CrewSeatsLandingAGL` (3,000 ft) AND `VerticalSpeed < -300` AND `IsLandingLightOn=True` | During final approach phase with landing lights on (configurable altitude threshold) |
-| CallCabinSecureLanding | Final Landing Prep | `CrewSeatsLanding` played AND `AltitudeAGL < CrewSeatsLandingAGL + 2000` (5,000 ft) | **Wait for CrewSeatsLanding to finish playing + 10 seconds** (uses CrewSeatsLandingAGL + 2000ft) |
-| AfterLanding | Post-landing | `IsOnGround=True` AND (`SpoilersDeployed=False` OR `GroundSpeed < 15`) AND (previous phase was descent/approach OR descent announcements played) | After landing and spoilers retracted OR ground speed below 15 knots |
-| DisarmDoors | Arrival at Gate | `AreEnginesOff=True` AND `IsParkingBrakeOn=True` AND `AfterLanding` played | **Wait for AfterLanding to finish playing** |
-| DisembarkStarted | Disembarkation | `DisarmDoors` played AND (`IsBeaconOn=False` OR `IsGSXDeboardingInProgress=True`) | **Wait for DisarmDoors to finish playing** |
+| File to Play | Things to Check | Timing Logic |
+|--------------|------------------|--------------|
+| BoardingWelcome | **GSX Mode**: `IsOnGround=True` AND `IsGSXBoardingInProgress=True` AND `IsBeaconOn=False` <br>**Traditional Mode**: `IsOnGround=True` AND `IsLogoLightOn=True` AND `IsBeaconOn=False` | Play once when GSX boarding starts OR logo light first turns on, then repeat every X minutes (configurable, default 5) until BoardingComplete |
+| BoardingMusic | `BoardingWelcome` played AND `BoardingComplete` not played | Loop continuously until BoardingComplete or next BoardingWelcome |
+| BoardingComplete | `IsBeaconOn=True` AND `IsOnGround=True` **OR** `GSX Boarding complete` (when GSX enabled) | Play once when beacon first turned on **OR** GSX boarding completed (whichever happens first) |
+| ArmDoors | `IsOnGround=True` AND (`IsEngineRunning=True` OR `GroundSpeed > 1`) | Play once when engines start or aircraft begins moving |
+| PreSafetyBriefing | `ArmDoors` played AND `IsEngineRunning=True` | **Wait for ArmDoors to finish playing** |
+| SafetyBriefing | `PreSafetyBriefing` played | **Wait for PreSafetyBriefing to finish playing** |
+| CabinDimTakeoff | `SafetyBriefing` played AND `IsDaylight=False` | **Wait for SafetyBriefing to finish playing + 10 seconds** |
+| CrewSeatsTakeoff | `IsOnGround=True` AND (`IsLandingLightOn=True` OR `IsStrobeLightOn=True`) AND `IsEngineRunning=True` | When landing lights (default) or strobe lights are turned on (takeoff imminent) |
+| CallCabinSecureTakeoff | `CrewSeatsTakeoff` played AND `IsOnGround=True` | **Wait for CrewSeatsTakeoff to finish playing + 5 seconds** |
+| AfterTakeoff | `AltitudeAGL > TakeoffDetectionAltitudeAGL` (3,000 ft) AND `IsOnGround=False` | **Wait 2 minutes after takeoff detected (independent timing), configurable altitude** |
+| FastenSeatbelt | `Climb/Cruise Phase` AND `AfterTakeoff` played AND `Seatbelt Sign OFF→ON transition` (CABIN SEATBELTS ALERT SWITCH or ANNUNCIATOR SWITCH binding) | **2 Minute Cooldown (Repeatable)** |
+| DescentSeatbelts | (`AltitudeAGL < DescentDetectionAGL` (10,000 ft) AND `VerticalSpeed < -500`) OR `LandingLightJustTurnedOn=True` | When descending below configurable altitude OR when landing lights just turned on |
+| CrewSeatsLanding | `AltitudeAGL < CrewSeatsLandingAGL` (3,000 ft) AND `VerticalSpeed < -300` AND `IsLandingLightOn=True` | During final approach phase with landing lights on (configurable altitude threshold) |
+| CallCabinSecureLanding | `CrewSeatsLanding` played AND `AltitudeAGL < CrewSeatsLandingAGL + 2000` (5,000 ft) | **Wait for CrewSeatsLanding to finish playing + 10 seconds** (uses CrewSeatsLandingAGL + 2000ft) |
+| AfterLanding | `IsOnGround=True` AND (`SpoilersDeployed=False` OR `GroundSpeed < 15`) AND (previous phase was descent/approach OR descent announcements played) | After landing and spoilers retracted OR ground speed below 15 knots |
+| DisarmDoors | `AreEnginesOff=True` AND `IsParkingBrakeOn=True` AND `AfterLanding` played | **Wait for AfterLanding to finish playing** |
+| DisembarkStarted | `DisarmDoors` played AND (`IsBeaconOn=False` OR `IsGSXDeboardingInProgress=True`) | **Wait for DisarmDoors to finish playing** |
 
 ## GSX Integration
 
