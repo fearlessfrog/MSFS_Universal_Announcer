@@ -27,7 +27,15 @@ The Generated TTS feature is pretty interesting because:
 - **Fully Customizable**: Edit announcements to say exactly what you want, incorporating real flight context and details
 - **Cost-Effective**: Azure's free tier provides 8 hours of audio generation a month, and since these short clips are saved as reusable .ogg files in proper sound pack format, it's unlikely you'll need to pay for anything.
 
-### Getting Started with Azure
+## Overview
+
+The Generated TTS feature automatically synthesizes missing airline announcements using Azure (will add more providers next) Text-to-Speech, providing a seamless fallback before default audio is used. This ensures your passengers always hear appropriate announcements, even when custom audio files are missing.
+
+## Setting up a TTS Provider
+
+So far we have Azure (free for 8 hours) or ElevenLabs (a limited free plan, 20 mins on Flash, although paid for voice clone/customization). Here's how to set up, as you'll need one of them work to use this feature:
+
+### Getting Started with Azure TTS
 To use this feature, you'll need to set up an Azure Text-to-Speech API key. I've found two excellent step-by-step guides that walk you through the entire process:
 
 - **[docs.merkulov.design](https://docs.merkulov.design/how-to-get-microsoft-azure-tts-api-key/)** - Comprehensive guide from account creation to API key generation
@@ -35,11 +43,21 @@ To use this feature, you'll need to set up an Azure Text-to-Speech API key. I've
 
 **Important**: You'll need **both** your API Key and your Azure Region/Location for the app to work properly. Make sure to note both values when setting up your Azure Speech service.
 
-## Overview
+### Getting Started with ElevenLabs TTS
+You can sign up for a free key and try out these voices. A paid plan allows you to clone your voice and do all sorts of weird and wonderful things. There are free voices to use as well but limited compared to Azure.
 
-The Generated TTS feature automatically synthesizes missing airline announcements using Azure (will add more providers next) Text-to-Speech, providing a seamless fallback before default audio is used. This ensures your passengers always hear appropriate announcements, even when custom audio files are missing.
+Here's a short guide on how to get your API key: https://docs.aicontentlabs.com/articles/elevenlabs-api-key/
 
-## How It Works
+..or to create an API key you can go here once you have an account: https://elevenlabs.io/app/settings/api-keys
+
+**IMPORTANT** If you restrict the API key you'll need the follow permissions on it for this to work:
+- Text to Speech = Has Access
+- Voices = Read Only (so we can list the voices in the app)
+- Models = Read Only (so we can list the models in the app, the default one is usually fine)
+
+**Model** See the ElevenLabs documentation on the best model to use. Flash is cheaper than MultiLang for example but reduced quality. In this apps case it doesn't really matter about super low latency.
+
+## How It All Works
 
 ### Source Text Priority
 The system follows this lookup order to find announcement text to say:
