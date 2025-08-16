@@ -126,6 +126,10 @@ Access the Generated TTS settings in **Settings → Generated**:
 - **API Key**: Enter your Azure Text-to-Speech API key
 - **Voice**: Choose from available Azure TTS voices. Pick an accent appropriate for the airline or region.
 
+> 💡 **If the voices seem to 'clean' you can use the new 'Audio' tab 'PA Audio Mix' setting**
+>
+> This feature simulates the audio pattern of a PA system, with a few presets on how light or heavy. The generated voices will use this if this option is turned on (it is off by default)
+
 ### Testing Your Setup
 Use the **"Test Voice"** button to verify your configuration:
 - **First click**: Reads the selected template's editor text (if available) or a default test message
