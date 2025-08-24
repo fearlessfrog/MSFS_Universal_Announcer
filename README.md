@@ -74,10 +74,10 @@ Set up your Simbrief username in the Settings / Integrations tab to fetch your l
 
 The following step is an alternative to using the Navigraph simbrief plan support:
 
-For airline-specific announcements, set your Call sign in MSFS:
+For airline-specific announcements, set your Tail number in MSFS:
 
 In MSFS 2020 (similar names in MSFS 2024), go to World Map → Aircraft Selection → Customization (tab)
-Set Call sign to your airline code (e.g., UAL, ACA, BAW, DAL just the letters alone are used, so ok to put UAL123)
+Set Tail number to your airline code (e.g., UAL, ACA, BAW, DAL just the letters alone are used, so ok to put UAL123)
 The app will automatically detect your aircraft type (737, CRJ900, A320, etc.)
 Remember to do it when setting a Livery!
 
