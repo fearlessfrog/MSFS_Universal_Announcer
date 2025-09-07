@@ -189,6 +189,18 @@ Notes:
 
 > Example valid txt entry: "Ladies and gentlemen, good {TIME_OF_DAY}. Welcome on board our {AIRLINE_NAME} flight to {DESTINATION_FULLNAME}, on this {AIRCRAFT_NAME} aircraft. Our {ORIGIN_CITY} based crew is pleased to be with you."
 
+### XML Placeholders
+
+As of 0.4.5 you can also now directly address simbrief info from XML elements of the generated OFP.
+
+What you do is check your simbrief generated OFP data in a web browser (e.g. https://www.simbrief.com/api/xml.fetcher.php?username=fearlessfrog) and then grab the elements you need and want to use in the announcement, e.g. these all work:
+
+"Our captain today is ```{xml<api_params><cpt>}```."
+"Flight number is ```{xml_digits<general><flight_number>}```."
+"Distance today will be ```{xml_number<general><air_distance>}``` miles."
+
+So 'xml' will just say it verbatim, 'xml_digits' will read each digit (good for a flight numbers etc) and 'xml_number' will use more human sounding number formats, e.g. '1024' is then said as 'one thousand and twenty four'.
+
 ## Best Practices
 
 - **Keep text natural**: Write announcements as you would speak them naturally
