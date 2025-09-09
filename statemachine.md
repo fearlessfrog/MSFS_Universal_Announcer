@@ -1,6 +1,6 @@
 # How Detection of Flight State Works
 
-This is a snapshot of v0.3.3 transitions, so it might evolve. It should answer most questions on 'what fires when'.
+This is a snapshot of v0.5.0 transitions, so it might evolve. It should answer most questions on 'what fires when'.
 
 ## State Transition Table
 
@@ -17,6 +17,7 @@ This is a snapshot of v0.3.3 transitions, so it might evolve. It should answer m
 | CallCabinSecureTakeoff | `CrewSeatsTakeoff` played AND `IsOnGround=True` | **Wait for CrewSeatsTakeoff to finish playing + 5 seconds** |
 | AfterTakeoff | `AltitudeAGL > TakeoffDetectionAltitudeAGL` (3,000 ft) AND `IsOnGround=False` | **Wait 2 minutes after takeoff detected (independent timing), configurable altitude** |
 | FastenSeatbelt | `Climb/Cruise Phase` AND `AfterTakeoff` played AND `Seatbelt Sign OFF→ON transition` (CABIN SEATBELTS ALERT SWITCH or ANNUNCIATOR SWITCH binding) | **2 Minute Cooldown (Repeatable)** |
+| Cruise | `Climb/Cruise/Descent Phases` AND only plays the once per file | Use the file naming convention of 'CruiseElapsedXXPercent' where XX represents the number % through the flight e.g. CruiseElapsed33Percent is 1/3rd through the flight time |
 | DescentSeatbelts | (`AltitudeAGL < DescentDetectionAGL` (10,000 ft) AND `VerticalSpeed < -500`) OR `LandingLightJustTurnedOn=True` | When descending below configurable altitude OR when landing lights just turned on |
 | CrewSeatsLanding | `AltitudeAGL < CrewSeatsLandingAGL` (3,000 ft) AND `VerticalSpeed < -300` AND `IsLandingLightOn=True` | During final approach phase with landing lights on (configurable altitude threshold) |
 | CallCabinSecureLanding | `CrewSeatsLanding` played AND `AltitudeAGL < CrewSeatsLandingAGL + 2000` (5,000 ft) | **Wait for CrewSeatsLanding to finish playing + 10 seconds** (uses CrewSeatsLandingAGL + 2000ft) |

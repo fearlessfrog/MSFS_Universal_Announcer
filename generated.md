@@ -33,7 +33,7 @@ The Generated TTS feature automatically synthesizes missing airline announcement
 
 ## Setting up a TTS Provider
 
-So far we have Azure (free for 8 hours) or ElevenLabs (a limited free plan, 20 mins on Flash, although paid for voice clone/customization). Here's how to set up, as you'll need one of them work to use this feature:
+So far we have Azure (free for 8 hours) or ElevenLabs (a limited free plan, 20 mins on Flash, although paid for voice clone/customization) and local Windows SAPI v5. Here's how to set up, as you'll need one of them work to use this feature:
 
 ### Getting Started with Azure TTS
 To use this feature, you'll need to set up an Azure Text-to-Speech API key. I've found two excellent step-by-step guides that walk you through the entire process:
@@ -56,6 +56,10 @@ Here's a short guide on how to get your API key: [ElevenLabs API Key](https://do
 - Models = Read Only (so we can list the models in the app, the default one is usually fine)
 
 **Models** See the ElevenLabs documentation on the best model to use. Flash is cheaper than MultiLang for example but reduced quality. In this app's case it doesn't really matter about super low latency.
+
+### Getting Started with Windows SAPI v5
+Use the locally installed voices to generate. Can be either from Windows language packs, the Windows Speech SDK or commercial voices. This feature is free to use and simple and can also be set up with AWS Polly as needed.
+
 
 ## How It All Works
 
@@ -182,10 +186,15 @@ Enhance your announcements with dynamic content using these placeholders, so you
 | `{AIRCRAFT_CODE}` | Aircraft type ICAO code (e.g., A320) |
 | `{AIRCRAFT_NAME}` | Aircraft type name (e.g., Airbus A320) |
 | `{TIME_OF_DAY}` | Morning, Afternoon, or Evening (based on local sim time) |
+| `{LOCAL_TIME}` | The sim's local time spoken naturally, e.g. great to use in the 'AfterLanding' for telling people what to set their watches to (do people still have watches?) 'The time here in {DESTINATION_CITY} is {LOCAL_TIME}.' == 'The time here in Chicago is 5:14pm'.|
+| `{DESTINATION_WEATHER}` | Summary of the conditions from the METAR in simbrief of the destination airport. For example, if it's IFR and raining then it'll be something like 'the weather is ''not so good, with heavy rain'''. So it says a friendly general weather statement from the technical METAR it has. |
+| `{DESTINATION_TEMPERATURE}` | Destination temperature in Celsius (included in phrase spoken) |
+| `{DESTINATION_TEMPARTURE_F}` | As above but spoken as Fahrenheit |
 
 Notes:
 - If a lookup isn’t found, the placeholder resolves to empty.
 - Name/city data is loaded from Tools JSON datasets shipped with the app. Feel free to edit it.
+- If you are missing something from above, check out the XML Placeholders for simbrief data spelunking below.
 
 > Example valid txt entry: "Ladies and gentlemen, good {TIME_OF_DAY}. Welcome on board our {AIRLINE_NAME} flight to {DESTINATION_FULLNAME}, on this {AIRCRAFT_NAME} aircraft. Our {ORIGIN_CITY} based crew is pleased to be with you."
 
