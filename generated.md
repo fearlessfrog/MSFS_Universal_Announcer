@@ -189,7 +189,7 @@ Enhance your announcements with dynamic content using these placeholders, so you
 | `{LOCAL_TIME}` | The sim's local time spoken naturally, e.g. great to use in the 'AfterLanding' for telling people what to set their watches to (do people still have watches?) 'The time here in {DESTINATION_CITY} is {LOCAL_TIME}.' == 'The time here in Chicago is 5:14pm'.|
 | `{DESTINATION_WEATHER}` | Summary of the conditions from the METAR in simbrief of the destination airport. For example, if it's IFR and raining then it'll be something like 'the weather is ''not so good, with heavy rain'''. So it says a friendly general weather statement from the technical METAR it has. |
 | `{DESTINATION_TEMPERATURE}` | Destination temperature in Celsius (included in phrase spoken) |
-| `{DESTINATION_TEMPARTURE_F}` | As above but spoken as Fahrenheit |
+| `{DESTINATION_TEMPERATURE_F}` | As above but spoken as Fahrenheit |
 
 Notes:
 - If a lookup isn’t found, the placeholder resolves to empty.
