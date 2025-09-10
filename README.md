@@ -20,7 +20,7 @@ You do not need the Fenix A320 for this to work (although you should have it, it
 - Navigraph simbrief integration: Uses your last plan's Airline and Aircraft type (ICAO code is used).
 - GSX Pro integration: Uses the Boarding, Deboarding and Refueling states automatically.
 - Sound volume based on camera.
-- Basic Seat Belt support (WIP).
+- Basic Seat Belt support (WIP). If your add-on doesn't give out data for Selt Belt switches (most don't) you can use the MSFS control binding for 'AnnunciatorOn' (and same key/control for 'Annunciator Off' to trigger it.
 
 This app follows the announcements detailed here:
 
