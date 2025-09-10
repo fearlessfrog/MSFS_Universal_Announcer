@@ -67,12 +67,12 @@ This option is free and simple to use. If a voice doesn't appear, ensure it is a
 
 ### Source Text Priority
 The system follows this lookup order to find announcement text to say:
-1. **Airline-specific**: example: `Airline/BoardingWelcome.txt` (highest priority, an override used per airline, manually edit)
+1. **Airline-specific**: example: `Airline/BoardingWelcome.txt` (highest priority, an override used per airline, edit in the Generated tab with the airline selected and hit 'Save txt')
 2. **Global default**: example: `Default/SafetyBriefing.txt` next priority if no airline one found (you can edit this in the app and it'll save your version in your `Default` folder)
-3. **Built-in template**: Automatically copied to the airline folder on first use
+3. **Built-in template**: Automatically copied to the airline folder on first use, of which you can always revert back to.
 
 ### Output and Storage
-Generated announcements are saved as `.ogg` files alongside their corresponding `.txt` files in the airline folder. Once created, these files are reused automatically on subsequent flights, eliminating the need for repeated API calls.
+Generated announcements are saved as `.ogg` files alongside their corresponding `.txt` files in the airline folder. Once created, these files are reused automatically on subsequent flights (unless set to overwrite), eliminating the need for repeated API calls.
 
 **To regenerate an announcement**: Simply edit the `.txt` file and **delete or rename** the associated `.ogg` file.
 
@@ -88,18 +88,18 @@ Let's walk through setting up a virtual airline that doesn't have a sound pack y
 ### Step-by-Step Setup
 
 1. **Create Airline Folder**: Create an `XYZ` folder in your sound packs directory for your virtual 'XYZ Airlines' (or enable Airline Folder Auto Creation below)
-2. **Pick a Voice**: In the new `Settings / Generated` tab choose the nationality and accent that works best for the airline, over 100 to choose from. Remember the 'Test Voice' uses your free credits, but you can select an existing announcement and try it out first. The generation uses the last one selected.
+2. **Pick a Voice**: In the new `Settings / Generated` tab choose the nationality and accent that works best for the airline, over 100 to choose from. Remember the 'Test Voice' uses your free credits, but you can select an existing announcement and try it out first. The generation uses the last one selected or use the 'Insert Voice' to put in a hint on what you want to use for this announcement.
 3. **Set Up Flight**: File a SimBrief plan or set a callsign in MSFS with `XYZ 123` as your flight id
-43. **Automatic Generation**: The new announcements will be generated and play with your flight info, automatically saving `.ogg` sound files as it goes
+43. **Automatic Generation**: The new announcements will be generated and play with your flight info, automatically saving `.ogg` sound files as it goes, filling placeholders with real data.
 5. **Add Music**: You'll still need your own `BoardingMusic.ogg` - go hunt for some disco or something classy to use! 🕺
 6. **Customize Your Airline**:
-   - Rename the generated files to match your preferences, e.g. `AfterTakeoff[1].ogg` to keep 'sets' of numbered files together.
+   - Rename the generated files to match your preferences, e.g. `AfterTakeoff[1].ogg` to keep 'sets' of numbered files together. So either hand curate the files or let it regenerate on the fly using the placeholders.
    - Create airline-specific text files like `BoardingWelcome.txt` in your airline folder - remember it **doesn't have to be in English anymore** or use an English accent voice. The TTS works great across accents and languages.
 
-> **Pro tip**: If you only have the `.txt` file (and no `.ogg`), the system will read it and generate the audio on demand
+> **Pro tip**: If you only have the `.txt` file (and no `.ogg`), the system will read it and generate the audio on demand - it's where the 'Save txt' gets saved to.
 
 
-## Example Use Case 2: Virtual Airline Setup - Pregenerated
+## Example Use Case 2: Virtual Airline Setup - Pregenerated Audio
 
 Here's the steps for setting up a series of announcements up front before you fly:
 
@@ -138,7 +138,7 @@ Tips
 
 ## Multi-Lingual Announcements
 
-It is fine to put two or more languages in a single announcement, but on Azure they will work better if you use a 'Multilingual' type voice. This example shows such a voice (language-Country-Name+MultilingualNeural) in use with English and Cantonese:
+It is fine to put two or more languages in an announcement, but on Azure they will work better if you use a 'Multilingual' type voice. This example shows such a voice (language-Country-Name+MultilingualNeural) in use with English and Cantonese:
 
 <img src="images/multiling.jpg" alt="Picked Files" width="600">
 
@@ -150,7 +150,7 @@ Access the Generated TTS settings in **Settings → Generated**:
 - **Model**: Select your preferred ElevenLabs model, fast/turbo is fine usually and less credits.
 - **API Key**: Enter your Azure or Elevenlabs Text-to-Speech API key
 - **Voice**: Choose from available Azure or ElevenLabs TTS voices. Pick an accent appropriate for the airline or region.
- - **Windows Voices**: Choose from local Windows SAPI v5 and WinRT/Core voices (0.5.1 adds more voices).
+ - **Windows Voices**: Choose from local Windows SAPI v5 and WinRT/Core voices.
  - **Airline Folder Auto Creation**: When enabled, the app will create the target airline folder automatically during generation/playback based on SimBrief or your MSFS callsign/airline selection.
  - **Automatic Generated Mode**: Optionally overwrite existing `.ogg` files automatically; optionally only when text is dynamic.
 
@@ -172,18 +172,18 @@ The template editor displays all available built-in announcement templates. Sele
 - **Save**: Writes your customizations to `Default/Name.txt` (creates a global override if no txt found in the airline)
 - **Revert**: Removes the override, restoring the original built-in template
 
-### Per‑Announcement Voice Overrides (0.5.1)
-You can specify a different voice for each generated announcement. Use the **Insert Voice** button in the template editor to add a voice hint on the first line of the template. Overrides can be set per Default or per‑Airline template so, for example, a pilot and an attendant can use different voices.
+### Per‑Announcement Voice Overrides
+You can specify a different voice for each generated announcement. Use the **Insert Voice** button in the template editor to add a voice hint on the first line of the template. Overrides can be set per Default or per‑Airline template so, for example, a pilot and an attendant can use different voices and in different accents.
 
-Over time, more first‑line hints will be added for voice connotation, speed, and emphasis. If no override is present, the global voice selection is used.
+Over time, more first‑line hints will be added for voice SSML, e.g. speed, and emphasis. If no override is present, the global voice selection is used (the one you last set).
 
-## Automatic Generated Mode (0.5.1)
+## 'Replace existing .ogg' Automatic Generated Mode
 
 When generating announcements, you can allow the app to automatically overwrite existing `.ogg` files.
 
 Options in the `Generated` tab:
-- **Allow overwrite**: If enabled, generation will replace an existing sound file automatically.
-- **Only overwrite when text is dynamic**: Restricts overwrites to templates that include dynamic placeholders (e.g., time, weather, SimBrief values), avoiding unnecessary updates when the text is static.
+- 'Replace existing .ogg' **Allow overwrite**: If enabled, generation will replace an existing sound file automatically.
+- 'Regenerate only if dynamic' **Only overwrite when text is dynamic**: Restricts overwrites to templates that include dynamic placeholders (e.g., time, weather, SimBrief values), avoiding unnecessary updates when the text is static.
 
 This is ideal for "hands‑off" workflows where your templates include dynamic placeholders and you want fresh, context‑accurate audio each flight without manual cleanup.
 
@@ -220,11 +220,11 @@ Notes:
 
 ## Cruise Announcements (Experimental)
 
-Use the flight's elapsed air time to trigger cruise announcements. Enable this stage in the **Announcements** tab by turning on `CruiseElapsed`.
+Use the flight's elapsed air time to trigger cruise announcements. Enable this stage in the **Announcements** tab by turning on `CruiseElapsed`. IT IS OFF BY DEFAULT!
 
 ### How triggers work
-- Create files named like `Cruise.ogg` to trigger at 50% elapsed air time.
-- Or use percentage‑based names like `CruiseElapsed25Percent.ogg`, `CruiseElapsed66Percent.ogg`, `CruiseElapsed70Percent.ogg` to trigger at those points.
+- Create files named like `Cruise.ogg` to trigger at 50% elapsed air time. It's basically an alias for 50% through.
+- Or use percentage‑based names like `CruiseElapsed25Percent.ogg`, `CruiseElapsed66Percent.ogg`, `CruiseElapsed70Percent.ogg` to trigger at those points. You can have many per cruise e.g. a drinks service, breakfast before you arrive etc.
 - Works from SimBrief planned en‑route time (air time). The sim's elapsed flight time is used for progress, not real time, so pausing or time acceleration is respected.
 - Short flights (< ~1 hour) will compress timing slightly so mid‑cruise announcements still occur before descent.
 
@@ -236,10 +236,10 @@ You can provide `.ogg` files, or `.txt` files that will be generated on the fly 
 - `{DESTINATION_TEMPERATURE}` / `{DESTINATION_TEMPERATURE_F}` — temperature in C/F
 - XML lookups like `{xml_number<general><route_distance>}`, `{xml_number<general><initial_altitude>}`, `{xml_digits<general><flight_number>}` for rich SimBrief data
 
-> Tip: The Status and system tray now show a hint of the Cruise elapsed % the app thinks you're at, to help you tune when to say things (0.5.1).
+> Tip: The Status and system tray now show a hint of the Cruise elapsed % the app thinks you're at, to help you tune when to say thing.
 
 Note:
-- Previously, generated files had to be manually removed to regenerate. See Automatic Generated Mode below for new options to overwrite automatically (0.5.1).
+- Previously, generated files had to be manually removed to regenerate. See Automatic Generated Mode below for new options to overwrite automatically.
 
 ### XML Placeholders
 
