@@ -11,18 +11,17 @@ You do not need the Fenix A320 for this to work (although you should have it, it
 ## ✈️ Features
 - Automatic Flight State Detection: Monitors aircraft lights, engines, altitude, and ground status
 - Airline-Specific Announcements: Supports airline folders (UAL, ACA, BAW, DAL, etc.)
-
-NEW: Huge experimental new feature, Generated Announcements! Use a free online TTS service to make up dynamic multi-language cabin announcements that you can fully customize and are current flight info aware. Complements real life sound packs.
-
-Lots to say, check it out [HERE](https://fearlessfrog.github.io/MSFS_Universal_Announcer/generated.html)
+- Generated Announcements: Create dynamic, multi‑language cabin announcements using Windows (offline), Azure, or ElevenLabs TTS; fully customizable and flight‑aware. [Learn more](https://fearlessfrog.github.io/MSFS_Universal_Announcer/generated.html)
+- Cruise Announcements: Trigger announcements during cruise by elapsed flight time (e.g., 25%, 50%, 70%). Enable in the Announcements tab.
+- Per‑Announcement Voices: Choose different voices per announcement (e.g., pilot vs attendant) in templates.
 
 - Aircraft Type Variants: Plays different announcements for A319, A320, A321, 737, etc.
 - Time-Based Variants: Morning, afternoon, evening, and night announcements
 - System Tray Integration: Minimal interface with volume control and flight state override
 - Navigraph simbrief integration: Uses your last plan's Airline and Aircraft type (ICAO code is used).
 - GSX Pro integration: Uses the Boarding, Deboarding and Refueling states automatically.
-- (NEW!) Sound volume based on camera (WIP).
-- (NEW!) Basic Seat Belt support (WIP).
+- Sound volume based on camera.
+- Basic Seat Belt support (WIP).
 
 This app follows the announcements detailed here:
 
@@ -38,6 +37,7 @@ You can obtain compatible sound files from:
 2. Cabin Announcements Discord: join the [Cabin Announcements for Fenix](https://discord.com/invite/P8ZYJgH3ZF) Discord server for community-created sound files
 3. Make You Own: Get your tray tables in an upright position and get recording, it's just plain sound files (see [here](https://support.fenixsim.com/hc/en-us/articles/12374580682383-Cabin-Announcements-Guide) for specs)
 4. Use a Text to Speech service within the app and generate your own on the fly or pregenerated! More details [here](https://fearlessfrog.github.io/MSFS_Universal_Announcer/generated.html).
+   - Supports Windows (local offline), Azure, and ElevenLabs voice providers.
 
 If you don't own the Fenix then it is worth considering taking one of the Cabin Announcement packs from Discord and dropping them in a folder Announcements\Default, so they can be used with or without any airline code as a fallback.
 
@@ -64,7 +64,8 @@ Run the application - It will appear in your system tray
 Configure sound files path - The app will try to auto-detect your Fenix installation location, or you can browse to your sound files folder. If you don't have that, just create an Announcements folder somewhere, put a Default folder in it, and in that put a .ogg sound file.
 Set up you simbrief username in the Settings / Integrations tab and fetch a plan.
 
-You can also probably include this in your MSFS exe.xml eventually for automatic startup.
+
+You can also enable "Start with MSFS" in the Status tab to have the sim launch the app automatically.
 
 If not sure how to set up the folders, take a look [HERE](https://fearlessfrog.github.io/MSFS_Universal_Announcer/howtofiles.html)
 
@@ -80,6 +81,14 @@ In MSFS 2020 (similar names in MSFS 2024), go to World Map → Aircraft Selectio
 Set Tail number to your airline code (e.g., UAL, ACA, BAW, DAL just the letters alone are used, so ok to put UAL123)
 The app will automatically detect your aircraft type (737, CRJ900, A320, etc.)
 Remember to do it when setting a Livery!
+
+### Generated Announcements (optional)
+
+- Providers: Use Windows (local SAPI v5 and WinRT/Core), Azure, or ElevenLabs voices.
+- Per‑announcement voice overrides: Insert a voice hint on the first line of a template to use different voices per announcement/role.
+- Automatic Generated Mode: Optionally overwrite existing .ogg files automatically; optionally limit overwrites to templates with dynamic placeholders.
+- Airline Folder Auto Creation: Let the app create the airline folder automatically based on SimBrief or your MSFS callsign.
+- Full guide and placeholders: [Generated Announcements](https://fearlessfrog.github.io/MSFS_Universal_Announcer/generated.html)
 
 Sound File Structure
 Your sound files should be organized like this:
@@ -133,6 +142,7 @@ Enable/disable specific announcements:
 Boarding Welcome & Music
 Safety Briefing
 Takeoff Announcements
+Cruise Announcements (elapsed‑time based)
 Landing Announcements
 And more...
 
@@ -141,6 +151,7 @@ Audio Settings
 Device Selection: Choose your preferred audio output
 Volume Control: Adjust from 10% to 100%
 Fallback Options: Use Default folder if airline-specific files are missing
+PA Audio Mix: Simulate a PA system sound on generated audio
 
 ## 🐛 Troubleshooting
 FAQ and Common Issues:
