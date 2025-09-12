@@ -210,11 +210,15 @@ Enhance your announcements with dynamic content using these placeholders, so you
 | `{DESTINATION_WEATHER}` | Summary of the conditions from the METAR in simbrief of the destination airport. For example, if it's IFR and raining then it'll be something like 'the weather is ''not so good, with heavy rain'''. So it says a friendly general weather statement from the technical METAR it has. |
 | `{DESTINATION_TEMPERATURE}` | Destination temperature in Celsius (included in phrase spoken) |
 | `{DESTINATION_TEMPERATURE_F}` | As above but spoken as Fahrenheit |
+| `{LOCAL_TIME_24H}` | Local time as 24‑hour HH:MM numeric (e.g., 18:05) for multilingual TTS |
+| `{FLIGHT_TIME_HHMM}` | Flight time in HH:MM numeric for multilingual TTS |
+| `{DESTINATION_TEMPERATURE_C_NUM}` | Destination temperature as a numeric Celsius value |
 
 Notes:
 - If a lookup isn’t found, the placeholder resolves to empty.
 - Name/city data is loaded from Tools JSON datasets shipped with the app. Feel free to edit it.
 - If you are missing something from above, check out the XML Placeholders for simbrief data spelunking below.
+ - Numeric placeholders above are returned as numbers so they read correctly in non‑English voices.
 
 > Example valid txt entry: "Ladies and gentlemen, good {TIME_OF_DAY}. Welcome on board our {AIRLINE_NAME} flight to {DESTINATION_FULLNAME}, on this {AIRCRAFT_NAME} aircraft. Our {ORIGIN_CITY} based crew is pleased to be with you."
 
