@@ -7,6 +7,7 @@ This is a snapshot of v0.5.0 transitions, so it might evolve. It should answer m
 | File to Play | Things to Check | Timing Logic |
 |--------------|------------------|--------------|
 | BoardingWelcome | **GSX Mode**: `IsOnGround=True` AND `IsGSXBoardingInProgress=True` AND `IsBeaconOn=False` <br>**Traditional Mode**: `IsOnGround=True` AND `IsLogoLightOn=True` AND `IsBeaconOn=False` | Play once when GSX boarding starts OR logo light first turns on, then repeat every X minutes (configurable, default 5) until BoardingComplete |
+| BoardingWelcomePilot | `Settings: BoardingWelcomePilot enabled` AND `BoardingWelcome` played AND `IsOnGround=True` AND `IsBeaconOn=False` | Play once after the initial BoardingWelcome during boarding (off by default) |
 | BoardingMusic | `BoardingWelcome` played AND `BoardingComplete` not played | Loop continuously until BoardingComplete or next BoardingWelcome |
 | BoardingComplete | `IsBeaconOn=True` AND `IsOnGround=True` **OR** `GSX Boarding complete` (when GSX enabled) | Play once when beacon first turned on **OR** GSX boarding completed (whichever happens first) |
 | ArmDoors | `IsOnGround=True` AND (`IsEngineRunning=True` OR `GroundSpeed > 1`) | Play once when engines start or aircraft begins moving |

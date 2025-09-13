@@ -14,6 +14,7 @@ You do not need the Fenix A320 for this to work (although you should have it, it
 - Generated Announcements: Create dynamic, multi‑language cabin announcements using Windows (offline), Azure, or ElevenLabs TTS; fully customizable and flight‑aware. [Learn more](https://fearlessfrog.github.io/MSFS_Universal_Announcer/generated.html)
 - Cruise Announcements: Trigger announcements during cruise by elapsed flight time (e.g., 25%, 50%, 70%). Enable in the Announcements tab.
 - Per‑Announcement Voices: Choose different voices per announcement (e.g., pilot vs attendant) in templates.
+- Default Sound Pack: One‑click setup downloads a public‑domain starter pack (or use your Fenix files).
 - Aircraft Type Variants: Plays different announcements for A319, A320, A321, 737, etc.
 - Time-Based Variants: Morning, afternoon, evening, and night announcements
 - System Tray Integration: Minimal interface with volume control and flight state override
@@ -32,10 +33,11 @@ This app follows the announcements detailed here:
 
 You can obtain compatible sound files from:
 
-1. Fenix A320 Installation: If you own the Fenix A320, the sound files are already installed
-2. Cabin Announcements Discord: join the [Cabin Announcements for Fenix](https://discord.com/invite/P8ZYJgH3ZF) Discord server for community-created sound files
-3. Make You Own: Get your tray tables in an upright position and get recording, it's just plain sound files (see [here](https://support.fenixsim.com/hc/en-us/articles/12374580682383-Cabin-Announcements-Guide) for specs)
-4. Use a Text to Speech service within the app and generate your own on the fly or pregenerated! Allows for in-flight context to be used in what it says. More details [here](https://fearlessfrog.github.io/MSFS_Universal_Announcer/generated.html).
+1. Default Sound Pack: Use the in‑app installer to download and install a public‑domain starter pack automatically (includes boarding music you can replace later)
+2. Fenix A320 Installation: If you own the Fenix A320, the sound files are already installed
+3. Cabin Announcements Discord: join the [Cabin Announcements for Fenix](https://discord.com/invite/P8ZYJgH3ZF) Discord server for community-created sound files
+4. Make You Own: Get your tray tables in an upright position and get recording, it's just plain sound files (see [here](https://support.fenixsim.com/hc/en-us/articles/12374580682383-Cabin-Announcements-Guide) for specs)
+5. Use a Text to Speech service within the app and generate your own on the fly or pregenerated! Allows for in-flight context to be used in what it says. More details [here](https://fearlessfrog.github.io/MSFS_Universal_Announcer/generated.html).
    - Supports Windows (local offline), Azure, and ElevenLabs voice providers.
 
 If you don't own the Fenix then it is worth considering taking one of the Cabin Announcement packs from Discord and dropping them in a folder Announcements\Default, so they can be used with or without any airline code as a fallback.
@@ -63,6 +65,7 @@ Run the application - It will appear in your system tray
 Configure sound files path - The app will try to auto-detect your Fenix installation location, or you can browse to your sound files folder. If you don't have that, just create an Announcements folder somewhere, put a Default folder in it, and in that put a .ogg sound file.
 Set up you simbrief username in the Settings / Integrations tab and fetch a plan.
 
+If you're starting from scratch, open the Sound Files tab and click "Run setup…" to install the Default Sound Pack automatically (or choose to use your Fenix A320 files instead).
 
 You can also enable "Start with MSFS" in the Status tab to have the sim launch the app automatically.
 

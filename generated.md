@@ -126,6 +126,7 @@ Here's the steps for setting up a series of announcements up front before you fl
 7. Generate the audio
    - Click “Generate” to create `XYZ\BoardingWelcome.ogg`, or
    - Click “Generate As..” to enter a different filename (e.g., `BoardingWelcome[1].ogg`) before saving.
+   - Click “Generate All” to generate a complete set for the current flight from your selections; ideal for batch pre‑generation and respects per‑announcement Insert Voice hints.
    - Success is confirmed; the template list will refresh highlighting for files that now exist.
 
 8. Preview and use
@@ -171,6 +172,9 @@ The template editor displays all available built-in announcement templates. Sele
 ### Template Actions
 - **Save**: Writes your customizations to `Default/Name.txt` (creates a global override if no txt found in the airline)
 - **Revert**: Removes the override, restoring the original built-in template
+ - **Generate**: Creates the `.ogg` for the currently selected template
+ - **Generate As..**: Creates the `.ogg` with a custom filename
+ - **Generate All**: Generates a complete set in one click based on current Airline/voice selections; useful if you prefer manual generation without clicking each item. Respects per‑announcement Insert Voice hints.
 
 ### Per‑Announcement Voice Overrides
 You can specify a different voice for each generated announcement. Use the **Insert Voice** button in the template editor to add a voice hint on the first line of the template. Overrides can be set per Default or per‑Airline template so, for example, a pilot and an attendant can use different voices and in different accents.
