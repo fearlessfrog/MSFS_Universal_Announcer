@@ -1,0 +1,24 @@
+﻿{
+    "language":  "en-us",
+    "baseUrl":  "https://raw.githubusercontent.com/fearlessfrog/MSFS_Universal_Announcer/main/DefaultSounds/en-us/",
+    "files":  [
+                  "AfterLanding.ogg",
+                  "AfterTakeoff.ogg",
+                  "ArmDoors.ogg",
+                  "BoardingComplete.ogg",
+                  "BoardingWelcome.ogg",
+                  "BoardingWelcomePilot.ogg",
+                  "CabinDim.ogg",
+                  "CabinDimTakeoff.ogg",
+                  "CallCabinSecureLanding.ogg",
+                  "CallCabinSecureTakeoff.ogg",
+                  "CrewSeatsLanding.ogg",
+                  "CrewSeatsTakeoff.ogg",
+                  "DescentSeatbelts.ogg",
+                  "DisarmDoors.ogg",
+                  "DisembarkStarted.ogg",
+                  "FastenSeatbelt.ogg",
+                  "PreSafetyBriefing.ogg",
+                  "SafetyBriefing.ogg"
+              ]
+}
