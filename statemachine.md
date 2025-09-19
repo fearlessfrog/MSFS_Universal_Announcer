@@ -23,7 +23,7 @@ This is a snapshot of v0.5.0 transitions, so it might evolve. It should answer m
 | CrewSeatsLanding | `AltitudeAGL < CrewSeatsLandingAGL` (3,000 ft) AND `VerticalSpeed < -300` AND `IsLandingLightOn=True` | During final approach phase with landing lights on (configurable altitude threshold) |
 | CallCabinSecureLanding | `CrewSeatsLanding` played AND `AltitudeAGL < CrewSeatsLandingAGL + 2000` (5,000 ft) | **Wait for CrewSeatsLanding to finish playing + 10 seconds** (uses CrewSeatsLandingAGL + 2000ft) |
 | AfterLanding | `IsOnGround=True` AND (`SpoilersDeployed=False` OR `GroundSpeed < 15`) AND (previous phase was descent/approach OR descent announcements played) | After landing and spoilers retracted OR ground speed below 15 knots |
-| AfterLandingMusic | Post-landing ambient | `AfterLanding` completed AND `DisembarkStarted` not yet played | Loops continuously after AfterLanding completes. May be interrupted by DisarmDoors and then resumes (from offset if resume enabled). Stops when DisembarkStarted plays. |
+| AfterLandingMusic | `AfterLanding` completed AND `DisembarkStarted` not yet played. | Loops continuously after AfterLanding completes. May be interrupted by DisarmDoors and then resumes (from offset if resume enabled). Stops when DisembarkStarted plays. |
 | DisarmDoors | `AreEnginesOff=True` AND `IsParkingBrakeOn=True` AND `AfterLanding` played | **Wait for AfterLanding to finish playing** |
 | DisembarkStarted | `DisarmDoors` played AND (`IsBeaconOn=False` OR `IsGSXDeboardingInProgress=True`) | **Wait for DisarmDoors to finish playing** |
 
