@@ -1,14 +1,15 @@
 # How Detection of Flight State Works
 
-This is a snapshot of v0.5.0 transitions, so it might evolve. It should answer most questions on 'what fires when'.
+This is a snapshot of v0.7.0 transitions, so it might evolve. It should answer most questions on 'what fires when'.
 
-## State Transition Table
+## Flight State Transition Table
 
 | File to Play | Things to Check | Timing Logic |
 |--------------|------------------|--------------|
 | BoardingWelcome | **GSX Mode**: `IsOnGround=True` AND `IsGSXBoardingInProgress=True` AND `IsBeaconOn=False` <br>**Traditional Mode**: `IsOnGround=True` AND `IsLogoLightOn=True` AND `IsBeaconOn=False` | Play once when GSX boarding starts OR logo light first turns on, then repeat every X minutes (configurable, default 5) until BoardingComplete |
 | BoardingWelcomePilot | `Settings: BoardingWelcomePilot enabled` AND `BoardingWelcome` played AND `IsOnGround=True` AND `IsBeaconOn=False` | Play once after the initial BoardingWelcome during boarding (off by default) |
 | BoardingMusic | `BoardingWelcome` played AND `BoardingComplete` not played | Loop continuously until BoardingComplete or next BoardingWelcome |
+| DepartureDelayed | Boarding Active | SimBrief scheduled pushback overdue by ≥ configured minutes AND `BoardingWelcome` played AND `BoardingComplete` not played | Interrupts BoardingMusic immediately; plays once per boarding session; respects global spacing; BoardingMusic resumes (from offset if resume is enabled) |
 | BoardingComplete | `IsBeaconOn=True` AND `IsOnGround=True` **OR** `GSX Boarding complete` (when GSX enabled) | Play once when beacon first turned on **OR** GSX boarding completed (whichever happens first) |
 | ArmDoors | `IsOnGround=True` AND (`IsEngineRunning=True` OR `GroundSpeed > 1`) | Play once when engines start or aircraft begins moving |
 | PreSafetyBriefing | `ArmDoors` played AND `IsEngineRunning=True` | **Wait for ArmDoors to finish playing** |
@@ -26,6 +27,82 @@ This is a snapshot of v0.5.0 transitions, so it might evolve. It should answer m
 | AfterLandingMusic | `AfterLanding` completed AND `DisembarkStarted` not yet played. | Loops continuously after AfterLanding completes. May be interrupted by DisarmDoors and then resumes (from offset if resume enabled). Stops when DisembarkStarted plays. |
 | DisarmDoors | `AreEnginesOff=True` AND `IsParkingBrakeOn=True` AND `AfterLanding` played | **Wait for AfterLanding to finish playing** |
 | DisembarkStarted | `DisarmDoors` played AND (`IsBeaconOn=False` OR `IsGSXDeboardingInProgress=True`) | **Wait for DisarmDoors to finish playing** |
+
+# Airline Detection
+
+Airline folder selection is determined using a priority order so the most reliable source wins, with graceful fallbacks:
+
+1) SimBrief (preferred)
+- If SimBrief data is available, we first use `<general><icao_airline>` (e.g., `UAL`, `ACA`, `DAL`).
+- If a callsign-derived ICAO prefix from `<atc><callsign>` exists and differs from `<icao_airline>`, we prefer the callsign-derived value.
+
+2) Tail number in MSFS
+- If SimBrief is unavailable, we try the simulator’s Tail number and look for an ICAO airline code e.g. UAL123 would give us UAL to use.
+
+Folder selection
+- The resolved airline code selects the corresponding folder under your announcements root (e.g., `UAL/`, `ACA/`).
+- If a matching file is not found and "Use Default folder announcements if airline-specific files are missing" is enabled in Settings, the `Default/` folder is used as fallback.
+
+# Sound Files and Tagging
+
+The system supports various tagging options using square brackets in filenames:
+
+### Aircraft-Specific Tags
+- `SafetyBriefing[737].ogg` - Specific to Boeing 737 aircraft
+- `SafetyBriefing[A320].ogg` - Specific to Airbus A320 aircraft
+- `BoardingWelcome[A321].ogg` - Specific to Airbus A321 aircraft
+
+The system uses the `ATC MODEL` simvar (e.g., "737", "A320") for enhanced aircraft detection. If this simvar is not available, it falls back to parsing the aircraft title from the `TITLE` simvar.
+
+### Time-Based Tags
+- `BoardingWelcome[Morning].ogg` - For morning flights (6 AM - 12 PM)
+- `BoardingWelcome[Afternoon].ogg` - For afternoon flights (12 PM - 6 PM)
+- `BoardingWelcome[Evening].ogg` - For evening flights (6 PM - 12 AM)
+- `BoardingWelcome[Night].ogg` - For night flights (12 AM - 6 AM)
+
+### Situational Tags
+- `BoardingWelcome[Refueling].ogg` - Played when aircraft is on ground with engines off
+
+### Special Tags
+- `[mute]` - Selects the file normally but skips playback. Counts as played for
+  state tracking and applies to all announcement types.
+  - Preference: When multiple candidates tie on score, non-muted files are
+    preferred. If only muted files match, the muted one is selected but not
+    played.
+  - Works with other tags: e.g., `AfterLanding[WSSS][mute].ogg` mutes only at
+    WSSS, and `AfterLanding[mute].ogg` mutes globally for that airline or in
+    `Default`.
+  - TTS override: If a matching airline file with `[mute]` exists, Text-to-Speech
+    is not generated and the muted file is selected to intentionally skip audio.
+
+### Location (ICAO) Tags
+- You can target a specific origin or destination airport by ICAO code. The
+  state machine automatically applies origin tags for pre-departure phases and
+  destination tags for arrival/post-flight phases.
+  - Examples:
+    - `BoardingWelcome[KSFO].ogg` → used when the SimBrief origin is KSFO
+    - `AfterLanding[KSAN].ogg` → used when the SimBrief destination is KSAN
+  - Origin-based announcements (up to and including `AfterTakeoff`) use origin ICAO tags
+  - All later announcements use destination ICAO tags
+
+### Numbered Variants
+You can create multiple versions of the same announcement:
+- `BoardingWelcome[1].ogg`
+- `BoardingWelcome[2].ogg`
+- `BoardingWelcome[3].ogg`
+
+The system will randomly select one variant per flight and maintain consistency throughout the flight.
+
+### Tag Priority and Matching
+- Multiple tags may be combined on the same file, e.g., `SafetyBriefing[A320][Morning][KSFO].ogg`
+- Matching priority (highest → lowest):
+  1. Situational tags (e.g., `Refueling`) when active – required to match when present
+  2. Aircraft-specific tags (exact type match, e.g., `A320`, `B738`, `CRJ900`)
+  3. Location ICAO tags (origin/destination as described above)
+  4. Time-of-day tags (`Morning`, `Afternoon`, `Evening`, `Night`)
+  5. Numbered variants (`[1]`, `[2]`, ...)
+- If multiple candidates tie, a deterministic selection is made; numbered variants
+  maintain consistency per flight.
 
 ## GSX Integration
 

@@ -1,11 +1,6 @@
 # Generated Announcements
 
-> ⚠️ **EXPERIMENTAL FEATURE** ⚠️
->
-> 🧪 This is an **advanced, experimental feature** that I'm releasing early for feedback and ideas.
->
-> 🔬 While fully functional, it may have unexpected behaviors or limitations. Your feedback will help shape its development!
->
+
 > 💡 **Pro tip**: If you're new to the app, consider getting familiar with the basic features first.
 
 ## TL;DR Summary
@@ -191,6 +186,7 @@ Options in the `Generated` tab:
 
 This is ideal for "hands‑off" workflows where your templates include dynamic placeholders and you want fresh, context‑accurate audio each flight without manual cleanup.
 
+<a id="available-placeholders"></a>
 ## Available Placeholders
 
 Enhance your announcements with dynamic content using these placeholders, so you can place these in the text:
@@ -217,16 +213,52 @@ Enhance your announcements with dynamic content using these placeholders, so you
 | `{LOCAL_TIME_24H}` | Local time as 24‑hour HH:MM numeric (e.g., 18:05) for multilingual TTS |
 | `{FLIGHT_TIME_HHMM}` | Flight time in HH:MM numeric for multilingual TTS |
 | `{DESTINATION_TEMPERATURE_C_NUM}` | Destination temperature as a numeric Celsius value |
+| `{SCHED_DEP_LOCAL_24H}` | Scheduled departure in local time (origin) HH:MM |
+| `{SCHED_DEP_UTC_24H}` | Scheduled departure in UTC time HH:MM |
+| `{SCHED_ARR_LOCAL_24H}` | Scheduled arrival in local time (destination) HH:MM |
+| `{SCHED_ARR_UTC_24H}` | Scheduled arrival in UTC time HH:MM |
+| `{DEP_STATUS}` | Example outputs: 'We expect to depart on time.' / 'We are departing late.' / 'We expect to depart early.' |
+| `{ARR_STATUS}` | Example outputs: 'We have arrived on time.' / 'We have arrived late.' / 'We have arrived early.' |
+| `{DEP_LATE}` | Human duration, e.g., '2 hours 5 minutes' |
+| `{DEP_EARLY}` | Human duration, e.g., '5 minutes' |
+| `{ARR_LATE}` | Human duration, e.g., '4 hours' |
+| `{ARR_EARLY}` | Human duration, e.g., '4 hours 15 minutes' |
+| `{DEP_LATE_MINUTES}` | Integer minutes late (number only), e.g., 125 |
+| `{DEP_EARLY_MINUTES}` | Integer minutes early (number only), e.g., 5 |
+| `{ARR_LATE_MINUTES}` | Integer minutes late (number only) |
+| `{ARR_EARLY_MINUTES}` | Integer minutes early (number only) |
 
 Notes:
 - If a lookup isn’t found, the placeholder resolves to empty.
 - Name/city data is loaded from Tools JSON datasets shipped with the app. Feel free to edit it.
 - If you are missing something from above, check out the XML Placeholders for simbrief data spelunking below.
  - Numeric placeholders above are returned as numbers so they read correctly in non‑English voices.
+ - The *_MINUTES placeholders return numbers only; useful for non‑English voices/locales.
 
 > Example valid txt entry: "Ladies and gentlemen, good {TIME_OF_DAY}. Welcome on board our {AIRLINE_NAME} flight to {DESTINATION_FULLNAME}, on this {AIRCRAFT_NAME} aircraft. Our {ORIGIN_CITY} based crew is pleased to be with you."
 
-## Cruise Announcements (Experimental)
+### Conditional Placeholder 'IF'
+
+Use `{IF ...}` to conditionally include text based on placeholder presence or a non‑zero numeric value. The content after `{IF ...}` up to the next newline is spoken when the condition is true. Use `{END}` to wrap multi‑line conditional blocks. Blocks can be nested.
+
+Single‑line examples:
+
+```text
+{IF ARR_LATE} We’re arriving {ARR_LATE} late today.
+{IF ARR_EARLY} Good news, we’re arriving {ARR_EARLY} early.
+{IF ARR_LATE_MINUTES} Numeric late minutes: {ARR_LATE_MINUTES}
+```
+
+Multiline example:
+
+```text
+{IF ARR_EARLY}
+Good news, we've caught up some time and we’re arriving {ARR_EARLY} early today.
+Thank you for your patience.
+{END}
+```
+
+## Cruise Announcements
 
 Use the flight's elapsed air time to trigger cruise announcements. Enable this stage in the **Announcements** tab by turning on `CruiseElapsed`. IT IS OFF BY DEFAULT!
 
