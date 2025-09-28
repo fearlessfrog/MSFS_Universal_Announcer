@@ -1,0 +1,388 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- French resource placeholder using English fallback. Fill translations incrementally. -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="Settings_DefaultLanguage" xml:space="preserve"><value>Langue par défaut :</value></data>
+  <data name="Settings_DefaultLanguage_System" xml:space="preserve"><value>Valeur par défaut du système</value></data>
+  <data name="Settings_RestartRequired" xml:space="preserve"><value>Le changement de langue prendra effet après redémarrage.</value></data>
+  <data name="Settings_Restart_Title" xml:space="preserve"><value>Redémarrage requis</value></data>
+  <data name="Settings_Title" xml:space="preserve"><value>Paramètres d’Universal Announcer</value></data>
+
+  <!-- Status dynamic templates -->
+  <data name="Status_Connection" xml:space="preserve"><value>Connexion : {0}</value></data>
+  <data name="Status_CurrentState" xml:space="preserve"><value>État actuel : {0}</value></data>
+  <data name="Status_Aircraft" xml:space="preserve"><value>Appareil : {0}</value></data>
+  <data name="Status_CurrentlyPlaying" xml:space="preserve"><value>Lecture en cours : {0}</value></data>
+  <data name="Status_MSFS" xml:space="preserve"><value>MSFS : {0}</value></data>
+  <data name="None" xml:space="preserve"><value>Aucun</value></data>
+  <data name="Status_Disconnected" xml:space="preserve"><value>Déconnecté</value></data>
+  <data name="Status_Connected" xml:space="preserve"><value>Connecté</value></data>
+
+  <data name="Tab_Status" xml:space="preserve"><value>Statut</value></data>
+  <data name="Tab_Audio" xml:space="preserve"><value>Audio</value></data>
+  <data name="Tab_SoundFiles" xml:space="preserve"><value>Fichiers audio</value></data>
+  <data name="Tab_Announcements" xml:space="preserve"><value>Annonces</value></data>
+  <data name="Tab_Tweaks" xml:space="preserve"><value>Ajustements</value></data>
+  <data name="Tab_Integrations" xml:space="preserve"><value>Intégrations</value></data>
+  <data name="Tab_Generated" xml:space="preserve"><value>Généré</value></data>
+  <data name="Tab_HelpAbout" xml:space="preserve"><value>Aide &amp; À propos</value></data>
+  <!-- Tweaks -->
+  <data name="Tweaks_BoardingInterval" xml:space="preserve"><value>Intervalle de répétition de Boarding Welcome (min) :</value></data>
+  <data name="Tweaks_Minutes" xml:space="preserve"><value>minutes</value></data>
+  <data name="Tweaks_TakeoffAltitude" xml:space="preserve"><value>Altitude AGL pour détection du décollage (ft) :</value></data>
+  <data name="Tweaks_FeetAbove" xml:space="preserve"><value>pieds (ou plus)</value></data>
+  <data name="Tweaks_DescentAltitude" xml:space="preserve"><value>Altitude AGL pour détection de descente (ft) :</value></data>
+  <data name="Tweaks_FeetBelow" xml:space="preserve"><value>pieds (ou moins)</value></data>
+  <data name="Tweaks_UseLandingLights" xml:space="preserve"><value>Utiliser les phares d’atterrissage pour CrewSeatsTakeoff (au lieu des strobes)</value></data>
+  <data name="Tweaks_EnableMusicResume" xml:space="preserve"><value>Activer la reprise de la musique (Boarding et AfterLanding) en cas d’interruption</value></data>
+  <data name="Tweaks_CrewSeatsLanding" xml:space="preserve"><value>Seuil équipage assis (AGL) :</value></data>
+  <data name="Tweaks_UseBoardingMusicFallback" xml:space="preserve"><value>Utiliser BoardingMusic si AfterLandingMusic est manquant</value></data>
+  <data name="Tweaks_SkipFirstBoardingWelcome" xml:space="preserve"><value>Ignorer le premier BoardingWelcome</value></data>
+  <data name="Tweaks_DepartureDelayThreshold" xml:space="preserve"><value>Seuil de retard au départ (min) :</value></data>
+
+  <data name="Group_Status" xml:space="preserve"><value>Statut</value></data>
+  <data name="Group_FlightStateControls" xml:space="preserve"><value>Contrôles d’état de vol</value></data>
+
+  <data name="Common_Cancel" xml:space="preserve"><value>Annuler</value></data>
+  <data name="Common_OK" xml:space="preserve"><value>OK</value></data>
+  <data name="Common_Apply" xml:space="preserve"><value>Appliquer</value></data>
+
+  <data name="Btn_Stop" xml:space="preserve"><value>Arrêter</value></data>
+  <data name="Btn_Resume" xml:space="preserve"><value>Reprendre</value></data>
+  <data name="Btn_Auto" xml:space="preserve"><value>Auto</value></data>
+  <data name="Btn_Restart" xml:space="preserve"><value>Redémarrer</value></data>
+  <data name="Btn_Seatbelt" xml:space="preserve"><value>Ceinture</value></data>
+
+  <data name="Cbx_StartWithMsfs" xml:space="preserve"><value>Démarrer avec MSFS</value></data>
+  <data name="Cbx_AlwaysShowWindow" xml:space="preserve"><value>Toujours afficher en fenêtre au démarrage</value></data>
+
+  <data name="SoundFiles_LocationGroup" xml:space="preserve"><value>Emplacement des fichiers audio</value></data>
+  <data name="SoundFiles_CurrentLocation" xml:space="preserve"><value>Emplacement actuel :</value></data>
+  <data name="SoundFiles_NotConfigured" xml:space="preserve"><value>Non configuré</value></data>
+  <data name="SoundFiles_ChangeFolder" xml:space="preserve"><value>Changer de dossier…</value></data>
+  <data name="SoundFiles_RunSetup" xml:space="preserve"><value>Lancer la configuration…</value></data>
+  <data name="SoundFiles_OpenFolder" xml:space="preserve"><value>Ouvrir le dossier</value></data>
+  <data name="SoundFiles_PreviewGroup" xml:space="preserve"><value>Aperçu des fichiers audio</value></data>
+  <data name="SoundFiles_Refresh" xml:space="preserve"><value>Actualiser</value></data>
+  <data name="SoundFiles_Airline" xml:space="preserve"><value>Compagnie :</value></data>
+  <data name="SoundFiles_Label" xml:space="preserve"><value>Fichiers audio :</value></data>
+  <data name="Common_Preview" xml:space="preserve"><value>Aperçu</value></data>
+  <data name="Common_Stop" xml:space="preserve"><value>Arrêter</value></data>
+  <data name="Common_Fetching" xml:space="preserve"><value>Récupération…</value></data>
+
+  <!-- App / Tray / Notifications -->
+  <data name="App_Title" xml:space="preserve"><value>Universal Announcer</value></data>
+  <data name="Tray_Connection" xml:space="preserve"><value>Connexion</value></data>
+  <data name="Tray_RealSimConnect" xml:space="preserve"><value>SimConnect réel</value></data>
+  <data name="Tray_TestMode" xml:space="preserve"><value>Mode test</value></data>
+  <data name="Tray_CurrentState" xml:space="preserve"><value>État actuel</value></data>
+  <data name="Tray_FlightState" xml:space="preserve"><value>État de vol</value></data>
+  <data name="Tray_AudioDevice" xml:space="preserve"><value>Périphérique audio</value></data>
+  <data name="Tray_Volume" xml:space="preserve"><value>Volume</value></data>
+  <data name="Tray_Settings" xml:space="preserve"><value>Paramètres…</value></data>
+  <data name="Tray_About" xml:space="preserve"><value>À propos…</value></data>
+  <data name="Tray_StatusPrefix" xml:space="preserve"><value>Statut :</value></data>
+  <data name="Tray_ViewDebugLog" xml:space="preserve"><value>Afficher le journal de débogage</value></data>
+  <data name="Tray_LightTest" xml:space="preserve"><value>Test des lumières</value></data>
+  <data name="Tray_Exit" xml:space="preserve"><value>Quitter</value></data>
+  <data name="Tray_CurrentStateAutoDetecting" xml:space="preserve"><value>Détection automatique…</value></data>
+  <data name="Tray_PlayingPrefix" xml:space="preserve"><value>Lecture :</value></data>
+  <data name="Tray_ManualTag" xml:space="preserve"><value>Manuel</value></data>
+  <data name="Tray_AutoTag" xml:space="preserve"><value>Auto</value></data>
+  <data name="Balloon_UpdateAvailableTitle" xml:space="preserve"><value>Universal Announcer - Mise à jour disponible</value></data>
+  <data name="Balloon_UpdateWarning" xml:space="preserve"><value>AVERTISSEMENT : cette version n’est pas à jour (actuelle : {0}, dernière : {1}).
+Cliquez ici pour ouvrir GitHub et télécharger la dernière version.</value></data>
+  <data name="Balloon_ReadyTitle" xml:space="preserve"><value>Universal Announcer</value></data>
+  <data name="Balloon_ReadyMessage" xml:space="preserve"><value>Universal Announcer est prêt !
+{0}
+
+💡 L’application s’exécute dans la zone de notification (coin inférieur droit). Clic droit sur l’icône pour les contrôles.</value></data>
+  <data name="Balloon_IssueMessage" xml:space="preserve"><value>Universal Announcer est actif mais des problèmes de fichiers audio ont été détectés.
+{0}
+
+💡 Clic droit sur l’icône de la zone de notification → Paramètres pour configurer.</value></data>
+  <data name="Balloon_GenericMessage" xml:space="preserve"><value>Universal Announcer est actif et prêt pour les annonces de vol.
+
+💡 L’application s’exécute dans la zone de notification (coin inférieur droit).</value></data>
+  <!-- duplicates removed: these keys already exist below -->
+
+  <!-- Help & About tab -->
+  <data name="About_DefaultLanguageLabel" xml:space="preserve"><value>Langue par défaut :</value></data>
+  <data name="About_Title" xml:space="preserve"><value>Universal Announcer</value></data>
+  <data name="About_Version" xml:space="preserve"><value>Version</value></data>
+  <data name="About_Description" xml:space="preserve"><value>Système universel d’annonces cabine pour Microsoft Flight Simulator</value></data>
+  <data name="About_Author" xml:space="preserve"><value>Créé par fearlessfrog pour la communauté MSFS</value></data>
+  <data name="About_GitHub" xml:space="preserve"><value>GitHub : MSFS Universal Announcer</value></data>
+  <data name="About_BuyCoffee" xml:space="preserve"><value>Offrez‑moi un café ☕</value></data>
+  <data name="About_HelpGroup" xml:space="preserve"><value>Aide et support</value></data>
+  <data name="About_HowToSetup" xml:space="preserve"><value>Comment configurer les fichiers audio</value></data>
+  <data name="About_WhatTriggers" xml:space="preserve"><value>Ce qui déclenche quoi et quand</value></data>
+  <data name="About_SuggestionBug" xml:space="preserve"><value>Faire une suggestion ou signaler un bug</value></data>
+  <data name="About_DebugMode" xml:space="preserve"><value>Mode débogage actif</value></data>
+
+  <!-- Messages/erreurs manquants -->
+  <data name="Error_AlreadyRunningTitle" xml:space="preserve"><value>Déjà en cours d’exécution</value></data>
+  <data name="Error_AlreadyRunningMessage" xml:space="preserve"><value>Universal Announcer est déjà en cours d’exécution.</value></data>
+  <data name="Error_StartupTitle" xml:space="preserve"><value>Erreur de démarrage</value></data>
+  <data name="Error_CriticalAppTitle" xml:space="preserve"><value>Erreur d’application</value></data>
+  <data name="Error_CriticalAppFormat" xml:space="preserve"><value>Erreur critique d’application : {0}
+
+Journal : {1}</value></data>
+  <data name="Error_UIThreadTitle" xml:space="preserve"><value>Erreur du thread UI</value></data>
+  <data name="Error_UIThreadFormat" xml:space="preserve"><value>Erreur du thread UI : {0}
+
+Journal : {1}</value></data>
+  <data name="Error_DomainTitle" xml:space="preserve"><value>Erreur de domaine</value></data>
+  <data name="Error_DomainFormat" xml:space="preserve"><value>Erreur de domaine : {0}
+
+Journal : {1}</value></data>
+
+  <data name="InitialSetup_Status_AutoDetectedValid" xml:space="preserve"><value>✓ Dossier d’annonces valide détecté automatiquement depuis MSFS.</value></data>
+  <data name="InitialSetup_Status_FoundPleaseBrowse" xml:space="preserve"><value>📁 Installation MSFS trouvée. Veuillez choisir votre dossier d’annonces.</value></data>
+  <data name="InitialSetup_Status_NotFoundAnnouncements" xml:space="preserve"><value>⚠️ Installation MSFS trouvée mais dossier d’annonces introuvable. Sélection manuelle requise.</value></data>
+  <data name="InitialSetup_Status_CouldNotAutoDetect" xml:space="preserve"><value>⚠️ Détection automatique impossible. Sélectionnez le dossier manuellement.</value></data>
+  <data name="InitialSetup_Status_AutoDetectFailed" xml:space="preserve"><value>⚠️ Échec de la détection automatique. Sélectionnez un dossier contenant des fichiers d’annonces.</value></data>
+  <data name="InitialSetup_Status_DefaultPackInstalledSelected" xml:space="preserve"><value>✓ Pack par défaut installé et sélectionné.</value></data>
+
+  <data name="Integrations_AircraftError" xml:space="preserve"><value>Appareil : Erreur</value></data>
+  <data name="Integrations_AirlineError" xml:space="preserve"><value>Compagnie : Erreur</value></data>
+  <data name="Integrations_OriginError" xml:space="preserve"><value>Origine : Erreur</value></data>
+  <data name="Integrations_DestinationError" xml:space="preserve"><value>Destination : Erreur</value></data>
+  <data name="Integrations_ErrorOccurred" xml:space="preserve"><value>Une erreur s’est produite</value></data>
+  <data name="Integrations_AircraftNotRetrieved" xml:space="preserve"><value>Appareil : Non récupéré</value></data>
+  <data name="Integrations_AirlineNotRetrieved" xml:space="preserve"><value>Compagnie : Non récupérée</value></data>
+  <data name="Integrations_OriginNotRetrieved" xml:space="preserve"><value>Origine : Non récupérée</value></data>
+  <data name="Integrations_DestinationNotRetrieved" xml:space="preserve"><value>Destination : Non récupérée</value></data>
+  <data name="Integrations_NeverFetched" xml:space="preserve"><value>Jamais récupéré</value></data>
+  <data name="Integrations_GsxStatusDisabledDetail" xml:space="preserve"><value>Statut : Désactivé – Le déclencheur lumière logo sera utilisé</value></data>
+  <data name="Integrations_SimBrief_EnterUsername" xml:space="preserve"><value>Veuillez entrer un nom d’utilisateur SimBrief</value></data>
+  <data name="Integrations_SimBrief_Error" xml:space="preserve"><value>Erreur</value></data>
+  <data name="Integrations_SimBrief_UsernameChanged" xml:space="preserve"><value>Nom d’utilisateur modifié – cliquez sur « Récupérer le dernier plan » pour mettre à jour</value></data>
+
+  <!-- Messages communs -->
+  <data name="Msg_CantReachGitHub_Format" xml:space="preserve"><value>Impossible d’atteindre GitHub ou manifeste introuvable. Vous êtes peut‑être hors ligne.
+
+Ouvrir : {0}</value></data>
+  <data name="Msg_CriticalStartup_Format" xml:space="preserve"><value>Erreur critique au démarrage : {0}
+
+Emplacement du journal : {1}</value></data>
+  <data name="Msg_DefaultAnnouncementsInstalled" xml:space="preserve"><value>Annonces par défaut installées avec succès !</value></data>
+  <data name="Msg_DefaultPackExistsOverwrite" xml:space="preserve"><value>Un pack par défaut existe déjà. Écraser les fichiers existants ?</value></data>
+  <data name="Msg_EncodingFailed_Format" xml:space="preserve"><value>Échec d’encodage : {0}</value></data>
+  <data name="Msg_ErrorOpeningAbout_Format" xml:space="preserve"><value>Erreur lors de l’ouverture de À propos : {0}</value></data>
+  <data name="Msg_ErrorOpeningLightTest_Format" xml:space="preserve"><value>Erreur lors de l’ouverture du test de lumière : {0}</value></data>
+  <data name="Msg_ErrorOpeningSettings_Format" xml:space="preserve"><value>Erreur lors de l’ouverture des paramètres : {0}</value></data>
+  <data name="Msg_FileExists_OverwriteFormat" xml:space="preserve"><value>Le fichier existe :
+{0}
+Écraser ?</value></data>
+  <data name="Msg_GenerateAllConfigFirst" xml:space="preserve"><value>Veuillez d’abord configurer le dossier des fichiers audio (onglet Fichiers audio)</value></data>
+  <data name="Msg_GenerateAllConfirm_Format" xml:space="preserve"><value>Installer {0} annonces par défaut dans :
+{1}
+
+Un court téléchargement va commencer.</value></data>
+  <data name="Msg_GenerateAllFailed_Format" xml:space="preserve"><value>Échec de « Tout générer » : {0}</value></data>
+  <data name="Msg_GenerateAllSelectAirline" xml:space="preserve"><value>Sélectionnez une compagnie pour générer (Default non autorisé).</value></data>
+  <data name="Msg_Generated_Format" xml:space="preserve"><value>Généré : {0}</value></data>
+  <data name="Msg_GenerateThereIsNoText" xml:space="preserve"><value>Aucun texte d’annonce à générer.</value></data>
+  <data name="Msg_GenerationFailed_Format" xml:space="preserve"><value>Génération échouée : {0}</value></data>
+  <data name="Msg_GenericInfo_Format" xml:space="preserve"><value>{0}</value></data>
+  <data name="Msg_InstallDefaultPackConfirm_Format" xml:space="preserve"><value>Installer {0} annonces par défaut dans :
+{1}
+
+Un court téléchargement va commencer.</value></data>
+  <data name="Msg_InstallError_Format" xml:space="preserve"><value>Erreur d’installation : {0}</value></data>
+  <data name="Msg_InstallFailed_Format" xml:space="preserve"><value>Installation échouée : {0}</value></data>
+  <data name="Msg_LogFileNotFound_Format" xml:space="preserve"><value>Fichier journal introuvable à : {0}</value></data>
+  <data name="Msg_NoOverrideFound" xml:space="preserve"><value>Aucun override à annuler.</value></data>
+  <data name="Msg_OpenFolderFailed_Format" xml:space="preserve"><value>Échec d’ouverture du dossier : {0}</value></data>
+  <data name="Msg_OpenFolderNotSet" xml:space="preserve"><value>L’emplacement des fichiers audio n’est pas défini ou n’existe pas.</value></data>
+  <data name="Msg_OpenLinkError_Format" xml:space="preserve"><value>Erreur à l’ouverture du lien : {0}</value></data>
+  <data name="Msg_OpenLogError_Format" xml:space="preserve"><value>Erreur à l’ouverture du fichier journal : {0}</value></data>
+  <data name="Msg_RevertedAirline_Format" xml:space="preserve"><value>Override {0} restauré pour {1}.txt</value></data>
+  <data name="Msg_RevertedDefault_Format" xml:space="preserve"><value>Override « Default » restauré pour {0}.txt</value></data>
+  <data name="Msg_RevertFailed_Format" xml:space="preserve"><value>La restauration a échoué : {0}</value></data>
+  <data name="Msg_SavedTo_Format" xml:space="preserve"><value>Enregistré dans {0} : {1}.txt</value></data>
+  <data name="Msg_SaveFailed_Format" xml:space="preserve"><value>Échec de l’enregistrement : {0}</value></data>
+  <data name="Msg_SelectAirlineGenerate" xml:space="preserve"><value>Sélectionnez une compagnie pour générer (Default non autorisé).</value></data>
+  <data name="Msg_SelectTemplateFirst" xml:space="preserve"><value>Sélectionnez d’abord un nom de modèle.</value></data>
+  <data name="Msg_SetAnnouncementsFolderFailed" xml:space="preserve"><value>Échec du paramétrage du dossier d’annonces. Réessayez ou continuez sans fichiers audio.</value></data>
+  <data name="Msg_SoundFileNotFound_Format" xml:space="preserve"><value>Fichier audio introuvable : {0}</value></data>
+  <data name="Msg_SoundFilesConfigFirst" xml:space="preserve"><value>Veuillez d’abord configurer votre dossier de fichiers audio (onglet Fichiers audio)</value></data>
+  <data name="Msg_SoundFilesLocationUpdated" xml:space="preserve"><value>Emplacement des fichiers audio mis à jour avec succès !</value></data>
+  <data name="Msg_TTSTestFailed_Format" xml:space="preserve"><value>Échec du test TTS : {0}</value></data>
+  <data name="Msg_UseNewDefaultPackAsLocationConfirm_Format" xml:space="preserve"><value>Utiliser le nouveau pack Default installé comme emplacement des fichiers audio ?
+
+{0}</value></data>
+  <data name="Progress_Downloading_Format" xml:space="preserve"><value>[{0}/{1}] Téléchargement : {2}</value></data>
+
+  <data name="Title_Error" xml:space="preserve"><value>Erreur</value></data>
+  <data name="Title_Generate" xml:space="preserve"><value>Générer</value></data>
+  <data name="Title_GenerateAll" xml:space="preserve"><value>Tout générer</value></data>
+  <data name="Title_InstallDefaultPack" xml:space="preserve"><value>Installer le pack par défaut</value></data>
+  <data name="Title_LogFile" xml:space="preserve"><value>Fichier journal</value></data>
+  <data name="Title_LogFileLocation" xml:space="preserve"><value>Emplacement du fichier journal</value></data>
+  <data name="Title_OpenFolder" xml:space="preserve"><value>Ouvrir le dossier</value></data>
+  <data name="Title_RevertTemplate" xml:space="preserve"><value>Restaurer le modèle</value></data>
+  <data name="Title_SaveTemplate" xml:space="preserve"><value>Enregistrer le modèle</value></data>
+  <data name="Title_StartupError" xml:space="preserve"><value>Erreur de démarrage</value></data>
+  <data name="Title_StartWithMsfs" xml:space="preserve"><value>Démarrer avec MSFS</value></data>
+  <data name="Title_Success" xml:space="preserve"><value>Succès</value></data>
+
+  <data name="Integrations_SimBriefGroup" xml:space="preserve"><value>Intégration SimBrief</value></data>
+  <data name="Integrations_SimBriefUsername" xml:space="preserve"><value>Nom d’utilisateur SimBrief :</value></data>
+  <data name="Integrations_SimBriefLastData" xml:space="preserve"><value>Dernières données récupérées :</value></data>
+  <data name="Integrations_FetchLatestPlan" xml:space="preserve"><value>Récupérer le dernier plan</value></data>
+  <data name="Integrations_RefreshBeforeBoarding" xml:space="preserve"><value>Actualiser avant l’annonce d’embarquement</value></data>
+  <data name="Integrations_GsxGroup" xml:space="preserve"><value>Intégration GSX</value></data>
+  <data name="Integrations_EnableGsx" xml:space="preserve"><value>Activer l’intégration GSX</value></data>
+  <data name="Integrations_GsxStatusDisabled" xml:space="preserve"><value>Statut : Désactivé</value></data>
+  <data name="Integrations_GsxDescription" xml:space="preserve"><value>Une fois activé, les annonces sont déclenchées par l’état d’embarquement GSX. Le ravitaillement et le débarquement GSX sont aussi pris en charge. Sans GSX, désactivez cette option et utilisez la lumière logo.</value></data>
+  <data name="Integrations_GsxStatusEnabledDetail" xml:space="preserve"><value>Statut : Activé – l’état d’embarquement GSX remplace le déclencheur lumière logo</value></data>
+  <data name="Integrations_SimBrief_RetrievedAt" xml:space="preserve"><value>Récupéré : {0}</value></data>
+  <data name="Integrations_SimBrief_AircraftFormat" xml:space="preserve"><value>Appareil : {0}</value></data>
+  <data name="Integrations_SimBrief_AirlineFormat" xml:space="preserve"><value>Compagnie : {0}</value></data>
+  <data name="Integrations_SimBrief_OriginFormat" xml:space="preserve"><value>Origine : {0}</value></data>
+  <data name="Integrations_SimBrief_DestinationFormat" xml:space="preserve"><value>Destination : {0}</value></data>
+  <data name="Integrations_SimBrief_NotAvailable" xml:space="preserve"><value>Non disponible</value></data>
+
+  <data name="Balloon_SoundStatus_Format" xml:space="preserve"><value>{0} fichiers audio de {1} compagnies</value></data>
+  <data name="Balloon_SoundStatus_NotConfigured" xml:space="preserve"><value>Aucun dossier d’annonces configuré</value></data>
+  <data name="Balloon_SoundStatus_NotFound_Format" xml:space="preserve"><value>Dossier d’annonces introuvable : {0}</value></data>
+  <data name="Balloon_SoundStatus_None" xml:space="preserve"><value>Aucun fichier audio trouvé dans le dossier d’annonces</value></data>
+
+  <data name="InitialSetup_Title" xml:space="preserve"><value>Universal Announcer - Configuration initiale</value></data>
+  <data name="InitialSetup_Welcome" xml:space="preserve"><value>Bienvenue dans Universal Announcer !</value></data>
+  <data name="InitialSetup_Instructions" xml:space="preserve"><value>Cette application peut utiliser un dossier d’annonces existant (ex. Fenix) ou installer un petit pack par défaut pour vous.
+Si la détection automatique échoue, sélectionnez un dossier contenant un sous-dossier « Default » avec au moins un fichier .ogg.
+Vous pouvez aussi cliquer sur « Installer le pack par défaut… » pour télécharger des sons prêts à l’emploi depuis GitHub.
+Vous pouvez cliquer sur « Annuler » pour continuer sans fichiers audio et les configurer plus tard.</value></data>
+  <data name="InitialSetup_FolderLabel" xml:space="preserve"><value>Dossier d’annonces :</value></data>
+  <data name="InitialSetup_Browse" xml:space="preserve"><value>Parcourir…</value></data>
+  <data name="InitialSetup_InstallDefault" xml:space="preserve"><value>Installer le pack par défaut…</value></data>
+  <data name="InitialSetup_BrowseDescription" xml:space="preserve"><value>Sélectionnez le dossier contenant vos annonces cabine (avec des sous-dossiers comme « Default », « AAL », « UAL », etc.)</value></data>
+  <data name="InitialSetup_Status_Checking" xml:space="preserve"><value>Vérification de l’installation MSFS…</value></data>
+  <data name="InitialSetup_Status_Searching" xml:space="preserve"><value>Recherche de l’installation MSFS…</value></data>
+  <data name="InitialSetup_Status_Valid" xml:space="preserve"><value>✓ Dossier d’annonces valide sélectionné.</value></data>
+  <data name="InitialSetup_ContinueWithout_Title" xml:space="preserve"><value>Continuer sans fichiers audio ?</value></data>
+  <data name="InitialSetup_ContinueWithout_Message" xml:space="preserve"><value>Continuer sans configurer les fichiers audio ? Vous pourrez le faire plus tard dans les Paramètres.</value></data>
+  <data name="InitialSetup_InstallingTitle" xml:space="preserve"><value>Installation du pack par défaut</value></data>
+  <data name="InitialSetup_ProgressStarting" xml:space="preserve"><value>Démarrage…</value></data>
+
+  <data name="FirstTime_Title" xml:space="preserve"><value>Bienvenue dans Universal Announcer</value></data>
+  <data name="FirstTime_WelcomeTitle" xml:space="preserve"><value>Bienvenue – Où est-il passé ?</value></data>
+  <data name="FirstTime_Message" xml:space="preserve"><value>Universal Announcer s’exécute maintenant en arrière-plan et lira automatiquement les annonces cabine lorsque vous volez dans Microsoft Flight Simulator.
+
+L’application est réduite dans la zone de notification (à côté de l’horloge en bas à droite).
+
+Pour ouvrir les paramètres ou contrôler l’application :
+• Clic droit sur l’icône Universal Announcer dans la zone de notification
+• Double-clic sur l’icône pour ouvrir les paramètres
+• Utilisez le menu contextuel pour contrôler l’état de vol, le volume et plus encore</value></data>
+  <data name="FirstTime_Ok" xml:space="preserve"><value>Compris !</value></data>
+  <data name="Announcements_Enabled" xml:space="preserve"><value>Annonces activées :</value></data>
+  <data name="Announcements_UseDefaultIfMissing" xml:space="preserve"><value>Utiliser le dossier Default si les fichiers spécifiques à la compagnie manquent</value></data>
+  <data name="Audio_AssumeQuickViewsAsCabin" xml:space="preserve"><value>Considérer les QuickViews cockpit comme cabine</value></data>
+  <data name="Audio_CabinLabel" xml:space="preserve"><value>Cabine (approx.) :</value></data>
+  <data name="Audio_CameraDesc" xml:space="preserve"><value>Pas de moyen simple pour détecter la cabine — estimation. Peut aussi être des QuickViews cockpit.</value></data>
+  <data name="Audio_CameraGroup" xml:space="preserve"><value>Multiplicateurs de volume selon l’état de la caméra (sur le volume maître)</value></data>
+  <data name="Audio_CameraStateEnabled" xml:space="preserve"><value>Activer le volume basé sur la caméra</value></data>
+  <data name="Audio_CockpitLabel" xml:space="preserve"><value>Cockpit (vue principale) :</value></data>
+  <data name="Audio_DeviceLabel" xml:space="preserve"><value>Périphérique audio :</value></data>
+  <data name="Audio_ExternalLabel" xml:space="preserve"><value>Vues externes :</value></data>
+  <data name="Audio_PaAudioMix" xml:space="preserve"><value>Mélange PA (simule le haut‑parleur cabine)</value></data>
+  <data name="Audio_Percent" xml:space="preserve"><value>%</value></data>
+  <data name="Audio_PresetLabel" xml:space="preserve"><value>Préréglage :</value></data>
+  <data name="Audio_UseCabinIfDoorOpen" xml:space="preserve"><value>Utiliser le volume cabine si la porte est ouverte (nécessite GSX)</value></data>
+  <data name="Audio_VolumeLabel" xml:space="preserve"><value>Volume (0‑100) :</value></data>
+  <data name="Btn_Preflight" xml:space="preserve"><value>Pré‑vol</value></data>
+  <data name="Btn_Taxi" xml:space="preserve"><value>Roulage</value></data>
+  <data name="Btn_Takeoff" xml:space="preserve"><value>Décollage</value></data>
+  <data name="Btn_Climb" xml:space="preserve"><value>Montée</value></data>
+  <data name="Btn_Cruise" xml:space="preserve"><value>Croisière</value></data>
+  <data name="Btn_Descent" xml:space="preserve"><value>Descente</value></data>
+  <data name="Btn_Approach" xml:space="preserve"><value>Approche</value></data>
+  <data name="Btn_Landing" xml:space="preserve"><value>Atterrissage</value></data>
+  <data name="Btn_Postflight" xml:space="preserve"><value>Après‑vol</value></data>
+  <data name="Btn_CloseApp" xml:space="preserve"><value>Fermer l’appli</value></data>
+  <data name="Generated_AirlineLabel" xml:space="preserve"><value>Compagnie :</value></data>
+  <data name="Generated_AutoCreateFolder" xml:space="preserve"><value>Créer auto. dossier compagnie manquant</value></data>
+  <data name="Generated_AzureApiKey" xml:space="preserve"><value>Clé API Azure :</value></data>
+  <data name="Generated_AzureRegion" xml:space="preserve"><value>Région Azure :</value></data>
+  <data name="Generated_ElevenModelLabel" xml:space="preserve"><value>Modèle Eleven :</value></data>
+  <data name="Generated_EnableTts" xml:space="preserve"><value>Activer le TTS généré en secours</value></data>
+  <data name="Generated_Generate" xml:space="preserve"><value>Générer</value></data>
+  <data name="Generated_GenerateAll" xml:space="preserve"><value>Tout générer</value></data>
+  <data name="Generated_GenerateAs" xml:space="preserve"><value>Générer sous..</value></data>
+  <data name="Generated_HelpSetup" xml:space="preserve"><value>Aide &amp; Configuration (à lire d’abord)</value></data>
+  <data name="Generated_InsertVoice" xml:space="preserve"><value>Insérer la voix</value></data>
+  <data name="Generated_OnlyDynamic" xml:space="preserve"><value>Régénérer seulement si dynamique</value></data>
+  <data name="Generated_ProviderLabel" xml:space="preserve"><value>Fournisseur :</value></data>
+  <data name="Generated_ReplaceExistingOgg" xml:space="preserve"><value>Remplacer le .ogg existant</value></data>
+  <data name="Generated_RevertTxt" xml:space="preserve"><value>Rétablir TXT</value></data>
+  <data name="Generated_SaveTxt" xml:space="preserve"><value>Enregistrer TXT</value></data>
+  <data name="Generated_TestVoice" xml:space="preserve"><value>Tester la voix</value></data>
+  <data name="Generated_VoiceLabel" xml:space="preserve"><value>Voix :</value></data>
+  <data name="Integrations_SimBriefDescription" xml:space="preserve"><value>Entrez votre nom d’utilisateur SimBrief (le nom, pas les chiffres) pour récupérer automatiquement les codes ICAO appareil depuis votre dernier plan de vol. Utilisé pour les annonces spécifiques à l’appareil. Si vide ou indisponible, repli sur les données appareil MSFS.</value></data>
+  <data name="Generated_TestVoiceSample" xml:space="preserve"><value>Ceci est un test de la voix générée d’Universal Announcer.</value></data>
+  <data name="Generated_StopTest" xml:space="preserve"><value>Arrêter le test</value></data>
+  <data name="Title_TTSTest" xml:space="preserve"><value>Test TTS</value></data>
+</root>
+
+

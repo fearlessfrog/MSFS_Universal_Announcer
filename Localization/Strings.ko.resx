@@ -1,0 +1,397 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+
+  <data name="Settings_DefaultLanguage" xml:space="preserve"><value>기본 언어:</value></data>
+  <data name="Settings_DefaultLanguage_System" xml:space="preserve"><value>시스템 기본값</value></data>
+  <data name="Settings_RestartRequired" xml:space="preserve"><value>언어 변경은 다시 시작한 후에 적용됩니다.</value></data>
+  <data name="Settings_Restart_Title" xml:space="preserve"><value>다시 시작 필요</value></data>
+
+  <data name="Tab_Status" xml:space="preserve"><value>상태</value></data>
+  <data name="Tab_Audio" xml:space="preserve"><value>오디오</value></data>
+  <data name="Tab_SoundFiles" xml:space="preserve"><value>사운드 파일</value></data>
+  <data name="Tab_Announcements" xml:space="preserve"><value>방송</value></data>
+  <data name="Tab_Tweaks" xml:space="preserve"><value>조정</value></data>
+  <data name="Tab_Integrations" xml:space="preserve"><value>연동</value></data>
+  <data name="Tab_Generated" xml:space="preserve"><value>생성됨</value></data>
+  <data name="Tab_HelpAbout" xml:space="preserve"><value>도움말 &amp; 정보</value></data>
+
+  <data name="Group_Status" xml:space="preserve"><value>상태</value></data>
+  <data name="Group_FlightStateControls" xml:space="preserve"><value>비행 상태 제어</value></data>
+
+  <data name="Common_Cancel" xml:space="preserve"><value>취소</value></data>
+  <data name="Common_OK" xml:space="preserve"><value>확인</value></data>
+  <data name="Common_Apply" xml:space="preserve"><value>적용</value></data>
+
+  <data name="Btn_Stop" xml:space="preserve"><value>중지</value></data>
+  <data name="Btn_Resume" xml:space="preserve"><value>재개</value></data>
+  <data name="Btn_Auto" xml:space="preserve"><value>자동</value></data>
+  <data name="Btn_Restart" xml:space="preserve"><value>재시작</value></data>
+  <data name="Btn_Seatbelt" xml:space="preserve"><value>안전벨트</value></data>
+
+  <data name="Cbx_StartWithMsfs" xml:space="preserve"><value>MSFS와 함께 시작</value></data>
+  <data name="Cbx_AlwaysShowWindow" xml:space="preserve"><value>시작 시 항상 창으로 표시</value></data>
+
+  <data name="SoundFiles_LocationGroup" xml:space="preserve"><value>사운드 파일 위치</value></data>
+  <data name="SoundFiles_CurrentLocation" xml:space="preserve"><value>현재 위치:</value></data>
+  <data name="SoundFiles_NotConfigured" xml:space="preserve"><value>구성되지 않음</value></data>
+  <data name="SoundFiles_ChangeFolder" xml:space="preserve"><value>폴더 변경...</value></data>
+  <data name="SoundFiles_RunSetup" xml:space="preserve"><value>설정 실행...</value></data>
+  <data name="SoundFiles_OpenFolder" xml:space="preserve"><value>폴더 열기</value></data>
+  <data name="SoundFiles_PreviewGroup" xml:space="preserve"><value>사운드 파일 미리 듣기</value></data>
+  <data name="SoundFiles_Refresh" xml:space="preserve"><value>새로 고침</value></data>
+  <data name="SoundFiles_Airline" xml:space="preserve"><value>항공사:</value></data>
+  <data name="SoundFiles_Label" xml:space="preserve"><value>사운드 파일:</value></data>
+  <data name="Common_Preview" xml:space="preserve"><value>미리 듣기</value></data>
+  <data name="Common_Stop" xml:space="preserve"><value>중지</value></data>
+  <data name="Settings_Title" xml:space="preserve"><value>Universal Announcer 설정</value></data>
+
+  <!-- 동적 상태 템플릿 -->
+  <data name="Status_Connection" xml:space="preserve"><value>연결: {0}</value></data>
+  <data name="Status_CurrentState" xml:space="preserve"><value>현재 상태: {0}</value></data>
+  <data name="Status_Aircraft" xml:space="preserve"><value>기종: {0}</value></data>
+  <data name="Status_CurrentlyPlaying" xml:space="preserve"><value>재생 중: {0}</value></data>
+  <data name="Status_MSFS" xml:space="preserve"><value>MSFS: {0}</value></data>
+  <data name="None" xml:space="preserve"><value>없음</value></data>
+  <data name="Status_Disconnected" xml:space="preserve"><value>미연결</value></data>
+  <data name="Status_Connected" xml:space="preserve"><value>연결됨</value></data>
+
+  <!-- 알림/트레이 -->
+  <data name="App_Title" xml:space="preserve"><value>Universal Announcer</value></data>
+  <data name="Tray_Connection" xml:space="preserve"><value>연결</value></data>
+  <data name="Tray_RealSimConnect" xml:space="preserve"><value>실제 SimConnect</value></data>
+  <data name="Tray_TestMode" xml:space="preserve"><value>테스트 모드</value></data>
+  <data name="Tray_CurrentState" xml:space="preserve"><value>현재 상태</value></data>
+  <data name="Tray_FlightState" xml:space="preserve"><value>비행 상태</value></data>
+  <data name="Tray_AudioDevice" xml:space="preserve"><value>오디오 장치</value></data>
+  <data name="Tray_Volume" xml:space="preserve"><value>볼륨</value></data>
+  <data name="Tray_Settings" xml:space="preserve"><value>설정...</value></data>
+  <data name="Tray_About" xml:space="preserve"><value>정보...</value></data>
+  <data name="Tray_StatusPrefix" xml:space="preserve"><value>상태:</value></data>
+  <data name="Tray_ViewDebugLog" xml:space="preserve"><value>디버그 로그 보기</value></data>
+  <data name="Tray_LightTest" xml:space="preserve"><value>조명 테스트</value></data>
+  <data name="Tray_Exit" xml:space="preserve"><value>종료</value></data>
+  <data name="Tray_CurrentStateAutoDetecting" xml:space="preserve"><value>자동 감지...</value></data>
+  <data name="Tray_PlayingPrefix" xml:space="preserve"><value>재생 중:</value></data>
+  <data name="Tray_ManualTag" xml:space="preserve"><value>수동</value></data>
+  <data name="Tray_AutoTag" xml:space="preserve"><value>자동</value></data>
+  <data name="Balloon_UpdateAvailableTitle" xml:space="preserve"><value>Universal Announcer - 업데이트 사용 가능</value></data>
+  <data name="Balloon_UpdateWarning" xml:space="preserve"><value>경고: 현재 버전이 오래되었습니다(현재: {0}, 최신: {1}).
+GitHub를 열어 최신 버전을 다운로드하세요.</value></data>
+  <data name="Balloon_ReadyTitle" xml:space="preserve"><value>Universal Announcer</value></data>
+  <data name="Balloon_ReadyMessage" xml:space="preserve"><value>Universal Announcer가 준비되었습니다.
+{0}
+
+💡 앱은 시스템 트레이에서 실행됩니다(오른쪽 아래). 아이콘을 마우스 오른쪽 버튼으로 클릭하여 제어하세요.</value></data>
+  <data name="Balloon_IssueMessage" xml:space="preserve"><value>Universal Announcer가 실행 중이지만 사운드 파일에 문제가 있습니다.
+{0}
+
+💡 시스템 트레이 아이콘 → 설정 에서 구성하세요.</value></data>
+  <data name="Balloon_GenericMessage" xml:space="preserve"><value>Universal Announcer가 활성화되어 기내 방송 재생 준비가 되어 있습니다.
+
+💡 앱은 시스템 트레이에서 실행됩니다.</value></data>
+
+  <!-- 도와주기 & 정보 -->
+  <data name="About_DefaultLanguageLabel" xml:space="preserve"><value>기본 언어:</value></data>
+  <data name="About_Title" xml:space="preserve"><value>Universal Announcer</value></data>
+  <data name="About_Version" xml:space="preserve"><value>버전</value></data>
+  <data name="About_Description" xml:space="preserve"><value>Microsoft Flight Simulator용 범용 기내 방송 시스템</value></data>
+  <data name="About_Author" xml:space="preserve"><value>MSFS 커뮤니티를 위해 fearlessfrog 제작</value></data>
+  <data name="About_GitHub" xml:space="preserve"><value>GitHub: MSFS Universal Announcer</value></data>
+  <data name="About_BuyCoffee" xml:space="preserve"><value>커피 사주기 ☕</value></data>
+  <data name="About_HelpGroup" xml:space="preserve"><value>도움말 및 지원</value></data>
+  <data name="About_HowToSetup" xml:space="preserve"><value>사운드 파일 설정 방법</value></data>
+  <data name="About_WhatTriggers" xml:space="preserve"><value>무엇이 언제 트리거되는지</value></data>
+  <data name="About_SuggestionBug" xml:space="preserve"><value>제안하기 / 버그 신고</value></data>
+  <data name="About_DebugMode" xml:space="preserve"><value>디버그 모드 활성</value></data>
+
+  <!-- 생성 탭 라벨들 -->
+  <data name="Generated_ElevenModelLabel" xml:space="preserve"><value>Eleven 모델:</value></data>
+  <data name="Generated_Generate" xml:space="preserve"><value>생성</value></data>
+  <data name="Generated_GenerateAll" xml:space="preserve"><value>모두 생성</value></data>
+  <data name="Generated_GenerateAs" xml:space="preserve"><value>다른 이름으로 생성..</value></data>
+  <data name="Generated_SaveTxt" xml:space="preserve"><value>TXT 저장</value></data>
+  <data name="Generated_RevertTxt" xml:space="preserve"><value>TXT 되돌리기</value></data>
+  <data name="Generated_ReplaceExistingOgg" xml:space="preserve"><value>기존 .ogg 교체</value></data>
+  <data name="Generated_OnlyDynamic" xml:space="preserve"><value>동적인 경우에만 재생성</value></data>
+  <data name="Generated_AutoCreateFolder" xml:space="preserve"><value>누락된 항공사 폴더 자동 생성</value></data>
+  <data name="Generated_HelpSetup" xml:space="preserve"><value>도움말 &amp; 설정(먼저 읽기)</value></data>
+  <data name="Generated_AirlineLabel" xml:space="preserve"><value>항공사:</value></data>
+  <data name="Generated_InsertVoice" xml:space="preserve"><value>음성 삽입</value></data>
+  <data name="Generated_TestVoice" xml:space="preserve"><value>음성 테스트</value></data>
+  <data name="Generated_VoiceLabel" xml:space="preserve"><value>음성:</value></data>
+  <data name="Generated_AzureApiKey" xml:space="preserve"><value>Azure API 키:</value></data>
+  <data name="Generated_AzureRegion" xml:space="preserve"><value>Azure 지역:</value></data>
+  <data name="Generated_ProviderLabel" xml:space="preserve"><value>제공자:</value></data>
+  <data name="Generated_EnableTts" xml:space="preserve"><value>생성된 TTS 백업 사용</value></data>
+  <data name="Generated_TestVoiceSample" xml:space="preserve"><value>Universal Announcer 생성 음성의 테스트입니다.</value></data>
+  <data name="Generated_StopTest" xml:space="preserve"><value>테스트 중지</value></data>
+  <data name="Title_TTSTest" xml:space="preserve"><value>TTS 테스트</value></data>
+
+  <!-- 진행 -->
+  <data name="Progress_Downloading_Format" xml:space="preserve"><value>[{0}/{1}] 다운로드 중: {2}</value></data>
+
+  <!-- 공통 제목 -->
+  <data name="Title_Error" xml:space="preserve"><value>오류</value></data>
+  <data name="Title_Generate" xml:space="preserve"><value>생성</value></data>
+  <data name="Title_GenerateAll" xml:space="preserve"><value>모두 생성</value></data>
+  <data name="Title_InstallDefaultPack" xml:space="preserve"><value>기본 팩 설치</value></data>
+  <data name="Title_LogFile" xml:space="preserve"><value>로그 파일</value></data>
+  <data name="Title_LogFileLocation" xml:space="preserve"><value>로그 파일 위치</value></data>
+  <data name="Title_OpenFolder" xml:space="preserve"><value>폴더 열기</value></data>
+  <data name="Title_RevertTemplate" xml:space="preserve"><value>템플릿 되돌리기</value></data>
+  <data name="Title_SaveTemplate" xml:space="preserve"><value>템플릿 저장</value></data>
+  <data name="Title_StartupError" xml:space="preserve"><value>시작 오류</value></data>
+  <data name="Title_StartWithMsfs" xml:space="preserve"><value>MSFS와 함께 시작</value></data>
+  <data name="Title_Success" xml:space="preserve"><value>성공</value></data>
+
+  <data name="Integrations_SimBriefGroup" xml:space="preserve"><value>SimBrief 연동</value></data>
+  <data name="Integrations_SimBriefUsername" xml:space="preserve"><value>SimBrief 사용자 이름:</value></data>
+  <data name="Integrations_SimBriefLastData" xml:space="preserve"><value>마지막으로 가져온 데이터:</value></data>
+  <data name="Integrations_FetchLatestPlan" xml:space="preserve"><value>최신 계획 가져오기</value></data>
+  <data name="Integrations_RefreshBeforeBoarding" xml:space="preserve"><value>탑승 안내 전 계획 새로 고침</value></data>
+  <data name="Integrations_GsxGroup" xml:space="preserve"><value>GSX 연동</value></data>
+  <data name="Integrations_EnableGsx" xml:space="preserve"><value>GSX 연동 사용</value></data>
+  <data name="Integrations_GsxStatusDisabled" xml:space="preserve"><value>상태: 비활성화됨</value></data>
+  <data name="Integrations_GsxDescription" xml:space="preserve"><value>사용 시 GSX 탑승 상태로 방송이 트리거됩니다. GSX 급유 및 하기도 지원됩니다. GSX가 없으면 이 옵션을 끄고 로고 라이트를 사용하세요.</value></data>
+  <data name="Integrations_GsxStatusEnabledDetail" xml:space="preserve"><value>상태: 활성화됨 - GSX 탑승 상태가 로고 라이트 트리거를 대체함</value></data>
+  <data name="Integrations_SimBrief_RetrievedAt" xml:space="preserve"><value>가져온 시각: {0}</value></data>
+  <data name="Integrations_SimBrief_AircraftFormat" xml:space="preserve"><value>기종: {0}</value></data>
+  <data name="Integrations_SimBrief_AirlineFormat" xml:space="preserve"><value>항공사: {0}</value></data>
+  <data name="Integrations_SimBrief_OriginFormat" xml:space="preserve"><value>출발지: {0}</value></data>
+  <data name="Integrations_SimBrief_DestinationFormat" xml:space="preserve"><value>도착지: {0}</value></data>
+  <data name="Integrations_SimBrief_NotAvailable" xml:space="preserve"><value>사용 불가</value></data>
+
+  <data name="Balloon_SoundStatus_Format" xml:space="preserve"><value>{1}개 항공사에서 {0}개 사운드 파일을 찾았습니다</value></data>
+  <data name="Balloon_SoundStatus_NotConfigured" xml:space="preserve"><value>공지 폴더가 구성되지 않았습니다</value></data>
+  <data name="Balloon_SoundStatus_NotFound_Format" xml:space="preserve"><value>공지 폴더를 찾을 수 없음: {0}</value></data>
+  <data name="Balloon_SoundStatus_None" xml:space="preserve"><value>공지 폴더에서 사운드 파일을 찾을 수 없습니다</value></data>
+
+  <data name="InitialSetup_Title" xml:space="preserve"><value>Universal Announcer - 초기 설정</value></data>
+  <data name="InitialSetup_Welcome" xml:space="preserve"><value>Universal Announcer에 오신 것을 환영합니다!</value></data>
+  <data name="InitialSetup_Instructions" xml:space="preserve"><value>이 앱은 기존의 공지 폴더(예: Fenix)를 사용할 수 있으며, 또는 작은 기본 패키지를 설치할 수 있습니다.
+자동 감지가 실패하면, 'Default' 하위 폴더에 최소 하나의 .ogg 파일이 있는 폴더를 선택하세요.
+또는 '기본 패키지 설치…'를 클릭하여 GitHub에서 준비된 사운드를 다운로드하세요.
+나중에 설정에서 구성할 수 있도록 '취소'를 눌러 사운드 없이 계속할 수도 있습니다.</value></data>
+  <data name="InitialSetup_FolderLabel" xml:space="preserve"><value>공지 폴더:</value></data>
+  <data name="InitialSetup_Browse" xml:space="preserve"><value>찾아보기...</value></data>
+  <data name="InitialSetup_InstallDefault" xml:space="preserve"><value>기본 패키지 설치…</value></data>
+  <data name="InitialSetup_BrowseDescription" xml:space="preserve"><value>기내 방송 파일이 있는 폴더를 선택하세요("Default", "AAL", "UAL" 등 하위 폴더 포함)</value></data>
+  <data name="InitialSetup_Status_Checking" xml:space="preserve"><value>MSFS 설치 확인 중...</value></data>
+  <data name="InitialSetup_Status_Searching" xml:space="preserve"><value>MSFS 설치 검색 중...</value></data>
+  <data name="InitialSetup_Status_Valid" xml:space="preserve"><value>✓ 유효한 공지 폴더가 선택되었습니다.</value></data>
+  <data name="InitialSetup_ContinueWithout_Title" xml:space="preserve"><value>사운드 파일 없이 계속하시겠습니까?</value></data>
+  <data name="InitialSetup_ContinueWithout_Message" xml:space="preserve"><value>사운드 파일을 구성하지 않고 계속하시겠습니까? 나중에 설정에서 구성할 수 있습니다.</value></data>
+  <data name="InitialSetup_InstallingTitle" xml:space="preserve"><value>기본 패키지 설치 중</value></data>
+  <data name="InitialSetup_ProgressStarting" xml:space="preserve"><value>시작 중...</value></data>
+
+  <data name="FirstTime_Title" xml:space="preserve"><value>Universal Announcer 시작</value></data>
+  <data name="FirstTime_WelcomeTitle" xml:space="preserve"><value>환영합니다 – 어디로 갔죠?</value></data>
+  <data name="FirstTime_Message" xml:space="preserve"><value>Universal Announcer가 이제 백그라운드에서 실행되며, Microsoft Flight Simulator에서 비행할 때 자동으로 기내 방송을 재생합니다.
+
+애플리케이션은 시스템 트레이(오른쪽 아래 시계 근처 영역)로 최소화됩니다.
+
+설정을 열거나 앱을 제어하려면:
+• 시스템 트레이의 Universal Announcer 아이콘을 마우스 오른쪽 버튼으로 클릭
+• 아이콘을 두 번 클릭하여 설정 열기
+• 컨텍스트 메뉴로 비행 상태, 볼륨 등을 제어</value></data>
+  <data name="FirstTime_Ok" xml:space="preserve"><value>알겠어요!</value></data>
+
+  <data name="Announcements_Enabled" xml:space="preserve"><value>방송 사용:</value></data>
+  <data name="Announcements_UseDefaultIfMissing" xml:space="preserve"><value>항공사별이 없으면 Default 폴더 사용</value></data>
+
+  <!-- 초기 설정 상태 메시지 (누락분) -->
+  <data name="InitialSetup_Status_AutoDetectedValid" xml:space="preserve"><value>✓ MSFS에서 유효한 공지 폴더를 자동으로 감지했습니다.</value></data>
+  <data name="InitialSetup_Status_FoundPleaseBrowse" xml:space="preserve"><value>📁 MSFS 설치를 찾았습니다. 공지 폴더를 선택하세요.</value></data>
+  <data name="InitialSetup_Status_NotFoundAnnouncements" xml:space="preserve"><value>⚠️ MSFS는 찾았지만 공지 폴더가 없습니다. 수동으로 선택하세요.</value></data>
+  <data name="InitialSetup_Status_CouldNotAutoDetect" xml:space="preserve"><value>⚠️ MSFS를 자동으로 감지할 수 없습니다. 폴더를 수동으로 선택하세요.</value></data>
+  <data name="InitialSetup_Status_AutoDetectFailed" xml:space="preserve"><value>⚠️ 자동 감지에 실패했습니다. 공지 파일이 포함된 폴더를 수동으로 선택하세요.</value></data>
+  <data name="InitialSetup_Status_DefaultPackInstalledSelected" xml:space="preserve"><value>✓ 기본 팩을 설치하고 선택했습니다.</value></data>
+
+  <data name="Integrations_SimBriefDescription" xml:space="preserve"><value>SimBrief 사용자 이름(숫자가 아닌 이름)을 입력하면 최근 비행 계획에서 항공기 ICAO 코드를 자동으로 가져옵니다. 항공기별 방송에 사용됩니다. 비어 있거나 사용할 수 없는 경우 MSFS 항공기 데이터로 대체됩니다.</value></data>
+
+  <!-- Tweaks -->
+  <data name="Tweaks_BoardingInterval" xml:space="preserve"><value>Boarding Welcome 반복 간격(분):</value></data>
+  <data name="Tweaks_Minutes" xml:space="preserve"><value>분</value></data>
+  <data name="Tweaks_TakeoffAltitude" xml:space="preserve"><value>이륙 감지 AGL 고도(ft):</value></data>
+  <data name="Tweaks_FeetAbove" xml:space="preserve"><value>피트(이상)</value></data>
+  <data name="Tweaks_DescentAltitude" xml:space="preserve"><value>하강 감지 AGL 고도(ft):</value></data>
+  <data name="Tweaks_FeetBelow" xml:space="preserve"><value>피트(이하)</value></data>
+  <data name="Tweaks_UseLandingLights" xml:space="preserve"><value>CrewSeatsTakeoff에 착륙등 사용(스트로브 대신)</value></data>
+  <data name="Tweaks_EnableMusicResume" xml:space="preserve"><value>중단 시 음악 재개(Boarding/AfterLanding)</value></data>
+  <data name="Tweaks_CrewSeatsLanding" xml:space="preserve"><value>AGL 고도 — "착륙 시 착석":</value></data>
+  <data name="Tweaks_UseBoardingMusicFallback" xml:space="preserve"><value>AfterLandingMusic 없으면 BoardingMusic 사용</value></data>
+  <data name="Tweaks_SkipFirstBoardingWelcome" xml:space="preserve"><value>첫 번째 BoardingWelcome 건너뛰기</value></data>
+  <data name="Tweaks_DepartureDelayThreshold" xml:space="preserve"><value>출발 지연 임계값(분):</value></data>
+
+  <data name="Audio_AssumeQuickViewsAsCabin" xml:space="preserve"><value>콕핏 퀵뷰를 객실로 간주</value></data>
+  <data name="Audio_CabinLabel" xml:space="preserve"><value>객실(추정):</value></data>
+  <data name="Audio_CameraDesc" xml:space="preserve"><value>객실 여부를 쉽게 알 수 없어 추정합니다. 콕핏 퀵뷰일 수도 있습니다.</value></data>
+  <data name="Audio_CameraGroup" xml:space="preserve"><value>카메라 상태별 볼륨 배수(마스터 위에 적용)</value></data>
+  <data name="Audio_CameraStateEnabled" xml:space="preserve"><value>카메라 기반 볼륨 사용</value></data>
+  <data name="Audio_CockpitLabel" xml:space="preserve"><value>콕핏(메인 보기):</value></data>
+  <data name="Audio_DeviceLabel" xml:space="preserve"><value>오디오 장치:</value></data>
+  <data name="Audio_ExternalLabel" xml:space="preserve"><value>외부 보기:</value></data>
+  <data name="Audio_PaAudioMix" xml:space="preserve"><value>PA 오디오 믹스(객실 스피커 노이즈 모사)</value></data>
+  <data name="Audio_Percent" xml:space="preserve"><value>%</value></data>
+  <data name="Audio_PresetLabel" xml:space="preserve"><value>프리셋:</value></data>
+  <data name="Audio_UseCabinIfDoorOpen" xml:space="preserve"><value>도어가 열리면 객실 볼륨 사용(GSX 필요)</value></data>
+  <data name="Audio_VolumeLabel" xml:space="preserve"><value>볼륨(0-100):</value></data>
+
+  <data name="Btn_Preflight" xml:space="preserve"><value>출발 전</value></data>
+  <data name="Btn_Taxi" xml:space="preserve"><value>택시</value></data>
+  <data name="Btn_Takeoff" xml:space="preserve"><value>이륙</value></data>
+  <data name="Btn_Climb" xml:space="preserve"><value>상승</value></data>
+  <data name="Btn_Cruise" xml:space="preserve"><value>순항</value></data>
+  <data name="Btn_Descent" xml:space="preserve"><value>하강</value></data>
+  <data name="Btn_Approach" xml:space="preserve"><value>접근</value></data>
+  <data name="Btn_Landing" xml:space="preserve"><value>착륙</value></data>
+  <data name="Btn_Postflight" xml:space="preserve"><value>도착 후</value></data>
+  <data name="Btn_CloseApp" xml:space="preserve"><value>앱 닫기</value></data>
+
+  <data name="Common_Fetching" xml:space="preserve"><value>가져오는 중…</value></data>
+
+  <data name="Integrations_AircraftError" xml:space="preserve"><value>기종 가져오기 오류</value></data>
+  <data name="Integrations_AircraftNotRetrieved" xml:space="preserve"><value>기종: 가져오지 못함</value></data>
+  <data name="Integrations_AirlineError" xml:space="preserve"><value>항공사 가져오기 오류</value></data>
+  <data name="Integrations_AirlineNotRetrieved" xml:space="preserve"><value>항공사: 가져오지 못함</value></data>
+  <data name="Integrations_DestinationError" xml:space="preserve"><value>도착지 가져오기 오류</value></data>
+  <data name="Integrations_DestinationNotRetrieved" xml:space="preserve"><value>도착지: 가져오지 못함</value></data>
+  <data name="Integrations_ErrorOccurred" xml:space="preserve"><value>오류가 발생했습니다</value></data>
+  <data name="Integrations_GsxStatusDisabledDetail" xml:space="preserve"><value>비활성화됨 - GSX 탑승 상태를 사용하지 않음(로고 라이트 사용)</value></data>
+  <data name="Integrations_NeverFetched" xml:space="preserve"><value>가져온 적 없음</value></data>
+  <data name="Integrations_OriginError" xml:space="preserve"><value>출발지 가져오기 오류</value></data>
+  <data name="Integrations_OriginNotRetrieved" xml:space="preserve"><value>출발지: 가져오지 못함</value></data>
+  <data name="Integrations_SimBrief_EnterUsername" xml:space="preserve"><value>SimBrief 사용자 이름 입력</value></data>
+  <data name="Integrations_SimBrief_Error" xml:space="preserve"><value>SimBrief 오류</value></data>
+  <data name="Integrations_SimBrief_UsernameChanged" xml:space="preserve"><value>사용자 이름이 변경됨</value></data>
+
+  <data name="Error_AlreadyRunningMessage" xml:space="preserve"><value>다른 인스턴스가 이미 실행 중입니다.</value></data>
+  <data name="Error_AlreadyRunningTitle" xml:space="preserve"><value>이미 실행 중</value></data>
+  <data name="Error_CriticalAppFormat" xml:space="preserve"><value>치명적 앱 오류: {0}
+
+로그 위치: {1}</value></data>
+  <data name="Error_CriticalAppTitle" xml:space="preserve"><value>치명적 오류</value></data>
+  <data name="Error_DomainFormat" xml:space="preserve"><value>처리되지 않은 도메인 예외: {0}
+
+로그: {1}</value></data>
+  <data name="Error_DomainTitle" xml:space="preserve"><value>애플리케이션 오류</value></data>
+  <data name="Error_StartupTitle" xml:space="preserve"><value>시작 오류</value></data>
+  <data name="Error_UIThreadFormat" xml:space="preserve"><value>처리되지 않은 UI 스레드 예외: {0}
+
+로그: {1}</value></data>
+  <data name="Error_UIThreadTitle" xml:space="preserve"><value>UI 오류</value></data>
+
+  <data name="Msg_CantReachGitHub_Format" xml:space="preserve"><value>GitHub에 접속할 수 없거나 매니페스트를 찾지 못했습니다. 오프라인일 수 있습니다.
+
+열기: {0}</value></data>
+  <data name="Msg_CriticalStartup_Format" xml:space="preserve"><value>시작 중 치명적 오류: {0}
+
+로그 위치: {1}</value></data>
+  <data name="Msg_DefaultAnnouncementsInstalled" xml:space="preserve"><value>기본 안내가 성공적으로 설치되었습니다!</value></data>
+  <data name="Msg_DefaultPackExistsOverwrite" xml:space="preserve"><value>기본 팩이 이미 존재합니다. 기존 파일을 덮어쓸까요?</value></data>
+  <data name="Msg_EncodingFailed_Format" xml:space="preserve"><value>인코딩 실패: {0}</value></data>
+  <data name="Msg_ErrorOpeningAbout_Format" xml:space="preserve"><value>정보 창을 여는 중 오류: {0}</value></data>
+  <data name="Msg_ErrorOpeningLightTest_Format" xml:space="preserve"><value>라이트 테스트를 여는 중 오류: {0}</value></data>
+  <data name="Msg_ErrorOpeningSettings_Format" xml:space="preserve"><value>설정을 여는 중 오류: {0}</value></data>
+  <data name="Msg_FileExists_OverwriteFormat" xml:space="preserve"><value>파일이 이미 존재합니다:
+{0}
+덮어쓸까요?</value></data>
+  <data name="Msg_GenerateAllConfigFirst" xml:space="preserve"><value>먼저 [사운드 파일] 탭에서 폴더를 구성하세요</value></data>
+  <data name="Msg_GenerateAllConfirm_Format" xml:space="preserve"><value>{0}개의 기본 안내를 다음에 설치:
+{1}
+
+짧은 다운로드가 시작됩니다.</value></data>
+  <data name="Msg_GenerateAllFailed_Format" xml:space="preserve"><value>전체 생성 실패: {0}</value></data>
+  <data name="Msg_GenerateAllSelectAirline" xml:space="preserve"><value>생성할 항공사를 선택하세요(Default는 불가).</value></data>
+  <data name="Msg_Generated_Format" xml:space="preserve"><value>생성됨: {0}</value></data>
+  <data name="Msg_GenerateThereIsNoText" xml:space="preserve"><value>생성할 안내 텍스트가 없습니다.</value></data>
+  <data name="Msg_GenerationFailed_Format" xml:space="preserve"><value>생성 실패: {0}</value></data>
+  <data name="Msg_GenericInfo_Format" xml:space="preserve"><value>{0}</value></data>
+  <data name="Msg_InstallDefaultPackConfirm_Format" xml:space="preserve"><value>{0}개의 기본 안내를 다음에 설치:
+{1}
+
+짧은 다운로드가 시작됩니다.</value></data>
+  <data name="Msg_InstallError_Format" xml:space="preserve"><value>설치 오류: {0}</value></data>
+  <data name="Msg_InstallFailed_Format" xml:space="preserve"><value>설치 실패: {0}</value></data>
+  <data name="Msg_LogFileNotFound_Format" xml:space="preserve"><value>다음 위치에서 로그 파일을 찾지 못했습니다: {0}</value></data>
+  <data name="Msg_NoOverrideFound" xml:space="preserve"><value>되돌릴 오버라이드를 찾지 못했습니다.</value></data>
+  <data name="Msg_OpenFolderFailed_Format" xml:space="preserve"><value>폴더를 열 수 없습니다: {0}</value></data>
+  <data name="Msg_OpenFolderNotSet" xml:space="preserve"><value>사운드 파일 위치가 설정되지 않았거나 존재하지 않습니다.</value></data>
+  <data name="Msg_OpenLinkError_Format" xml:space="preserve"><value>링크를 여는 중 오류: {0}</value></data>
+  <data name="Msg_OpenLogError_Format" xml:space="preserve"><value>로그 파일을 여는 중 오류: {0}</value></data>
+  <data name="Msg_RevertedAirline_Format" xml:space="preserve"><value>{0} 오버라이드를 {1}.txt로 되돌렸습니다</value></data>
+  <data name="Msg_RevertedDefault_Format" xml:space="preserve"><value>Default 오버라이드를 {0}.txt로 되돌렸습니다</value></data>
+  <data name="Msg_RevertFailed_Format" xml:space="preserve"><value>되돌리기 실패: {0}</value></data>
+  <data name="Msg_SavedTo_Format" xml:space="preserve"><value>{0}에 저장됨: {1}.txt</value></data>
+  <data name="Msg_SaveFailed_Format" xml:space="preserve"><value>저장 실패: {0}</value></data>
+  <data name="Msg_SelectAirlineGenerate" xml:space="preserve"><value>생성할 항공사를 선택하세요(Default는 불가).</value></data>
+  <data name="Msg_SelectTemplateFirst" xml:space="preserve"><value>먼저 템플릿 이름을 선택하세요.</value></data>
+  <data name="Msg_SetAnnouncementsFolderFailed" xml:space="preserve"><value>공지 폴더를 설정하지 못했습니다. 다시 시도하거나 사운드 없이 계속하세요.</value></data>
+  <data name="Msg_SoundFileNotFound_Format" xml:space="preserve"><value>사운드 파일을 찾지 못했습니다: {0}</value></data>
+  <data name="Msg_SoundFilesConfigFirst" xml:space="preserve"><value>먼저 [사운드 파일] 탭에서 폴더를 구성하세요</value></data>
+  <data name="Msg_SoundFilesLocationUpdated" xml:space="preserve"><value>사운드 파일 위치가 성공적으로 업데이트되었습니다!</value></data>
+  <data name="Msg_TTSTestFailed_Format" xml:space="preserve"><value>TTS 테스트 실패: {0}</value></data>
+  <data name="Msg_UseNewDefaultPackAsLocationConfirm_Format" xml:space="preserve"><value>새로 설치한 Default 팩을 사운드 파일 위치로 사용할까요?
+
+{0}</value></data>
+</root>
+
+

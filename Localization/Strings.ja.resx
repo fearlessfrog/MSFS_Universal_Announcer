@@ -1,0 +1,394 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!--
+    Japanese resource placeholder.
+    Intentionally left without <data> entries so all keys fall back to neutral English from Strings.resx.
+    Contributors can add translations here by copying keys from Strings.resx.
+  -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="Settings_DefaultLanguage" xml:space="preserve"><value>既定の言語:</value></data>
+  <data name="Settings_DefaultLanguage_System" xml:space="preserve"><value>システム既定</value></data>
+  <data name="Settings_RestartRequired" xml:space="preserve"><value>言語の変更は再起動後に適用されます。</value></data>
+  <data name="Settings_Restart_Title" xml:space="preserve"><value>再起動が必要</value></data>
+
+  <data name="Tab_Status" xml:space="preserve"><value>状態</value></data>
+  <data name="Tab_Audio" xml:space="preserve"><value>オーディオ</value></data>
+  <data name="Tab_SoundFiles" xml:space="preserve"><value>サウンドファイル</value></data>
+  <data name="Tab_Announcements" xml:space="preserve"><value>アナウンス</value></data>
+  <data name="Tab_Tweaks" xml:space="preserve"><value>調整</value></data>
+  <data name="Tab_Integrations" xml:space="preserve"><value>連携</value></data>
+  <data name="Tab_Generated" xml:space="preserve"><value>生成</value></data>
+  <data name="Tab_HelpAbout" xml:space="preserve"><value>ヘルプ &amp; 情報</value></data>
+
+  <data name="Group_Status" xml:space="preserve"><value>状態</value></data>
+  <data name="Group_FlightStateControls" xml:space="preserve"><value>フライト状態の操作</value></data>
+
+  <data name="Common_Cancel" xml:space="preserve"><value>キャンセル</value></data>
+  <data name="Common_OK" xml:space="preserve"><value>OK</value></data>
+  <data name="Common_Apply" xml:space="preserve"><value>適用</value></data>
+
+  <data name="Btn_Stop" xml:space="preserve"><value>停止</value></data>
+  <data name="Btn_Resume" xml:space="preserve"><value>再開</value></data>
+  <data name="Btn_Auto" xml:space="preserve"><value>自動</value></data>
+  <data name="Btn_Restart" xml:space="preserve"><value>再起動</value></data>
+  <data name="Btn_Seatbelt" xml:space="preserve"><value>シートベルト</value></data>
+
+  <data name="Cbx_StartWithMsfs" xml:space="preserve"><value>MSFS と一緒に起動</value></data>
+  <data name="Cbx_AlwaysShowWindow" xml:space="preserve"><value>起動時に常にウィンドウ表示</value></data>
+
+  <data name="SoundFiles_LocationGroup" xml:space="preserve"><value>サウンドファイルの場所</value></data>
+  <data name="SoundFiles_CurrentLocation" xml:space="preserve"><value>現在の場所:</value></data>
+  <data name="SoundFiles_NotConfigured" xml:space="preserve"><value>未設定</value></data>
+  <data name="SoundFiles_ChangeFolder" xml:space="preserve"><value>フォルダーを変更...</value></data>
+  <data name="SoundFiles_RunSetup" xml:space="preserve"><value>セットアップを実行...</value></data>
+  <data name="SoundFiles_OpenFolder" xml:space="preserve"><value>フォルダーを開く</value></data>
+  <data name="SoundFiles_PreviewGroup" xml:space="preserve"><value>サウンドファイルをプレビュー</value></data>
+  <data name="SoundFiles_Refresh" xml:space="preserve"><value>更新</value></data>
+  <data name="SoundFiles_Airline" xml:space="preserve"><value>航空会社:</value></data>
+  <data name="SoundFiles_Label" xml:space="preserve"><value>サウンドファイル:</value></data>
+  <data name="Common_Preview" xml:space="preserve"><value>プレビュー</value></data>
+  <data name="Common_Stop" xml:space="preserve"><value>停止</value></data>
+
+  <data name="Integrations_SimBriefGroup" xml:space="preserve"><value>SimBrief 連携</value></data>
+  <data name="Integrations_SimBriefUsername" xml:space="preserve"><value>SimBrief ユーザー名:</value></data>
+  <data name="Integrations_SimBriefLastData" xml:space="preserve"><value>最終取得データ:</value></data>
+  <data name="Integrations_FetchLatestPlan" xml:space="preserve"><value>最新計画を取得</value></data>
+  <data name="Integrations_RefreshBeforeBoarding" xml:space="preserve"><value>Boarding Welcome の前に計画を更新</value></data>
+  <data name="Integrations_GsxGroup" xml:space="preserve"><value>GSX 連携</value></data>
+  <data name="Integrations_EnableGsx" xml:space="preserve"><value>GSX 連携を有効化</value></data>
+  <data name="Integrations_GsxStatusDisabled" xml:space="preserve"><value>状態: 無効</value></data>
+  <data name="Integrations_GsxDescription" xml:space="preserve"><value>有効にすると、GSX の搭乗状態でアナウンスがトリガーされます。GSX の給油や降機もサポートされます。GSX がない場合はこのオプションを無効にしてロゴライトを使用してください。</value></data>
+  <data name="Integrations_GsxStatusEnabledDetail" xml:space="preserve"><value>状態: 有効 - GSX 搭乗状態がロゴライトのトリガーを上書きします</value></data>
+  <data name="Integrations_SimBrief_RetrievedAt" xml:space="preserve"><value>取得時刻: {0}</value></data>
+  <data name="Integrations_SimBrief_AircraftFormat" xml:space="preserve"><value>機種: {0}</value></data>
+  <data name="Integrations_SimBrief_AirlineFormat" xml:space="preserve"><value>航空会社: {0}</value></data>
+  <data name="Integrations_SimBrief_OriginFormat" xml:space="preserve"><value>出発地: {0}</value></data>
+  <data name="Integrations_SimBrief_DestinationFormat" xml:space="preserve"><value>到着地: {0}</value></data>
+  <data name="Integrations_SimBrief_NotAvailable" xml:space="preserve"><value>利用不可</value></data>
+
+  <data name="Balloon_SoundStatus_Format" xml:space="preserve"><value>{1} 社から {0} 件のサウンドファイルを検出</value></data>
+  <data name="Balloon_SoundStatus_NotConfigured" xml:space="preserve"><value>アナウンス フォルダーが設定されていません</value></data>
+  <data name="Balloon_SoundStatus_NotFound_Format" xml:space="preserve"><value>アナウンス フォルダーが見つかりません: {0}</value></data>
+  <data name="Balloon_SoundStatus_None" xml:space="preserve"><value>アナウンス フォルダーにサウンドファイルが見つかりません</value></data>
+
+  <data name="InitialSetup_Title" xml:space="preserve"><value>Universal Announcer - 初期設定</value></data>
+  <data name="InitialSetup_Welcome" xml:space="preserve"><value>Universal Announcer へようこそ！</value></data>
+  <data name="InitialSetup_Instructions" xml:space="preserve"><value>このアプリは既存のアナウンス フォルダー（例: Fenix）を使用するか、小さなデフォルト パックをインストールできます。
+自動検出に失敗した場合は、少なくとも 1 つの .ogg を含む「Default」サブフォルダーがあるフォルダーを選択してください。
+または「デフォルトパックをインストール…」をクリックして GitHub から音声をダウンロードできます。
+「キャンセル」を押してサウンドなしで続行し、後で設定から構成することもできます。</value></data>
+  <data name="InitialSetup_FolderLabel" xml:space="preserve"><value>アナウンス フォルダー:</value></data>
+  <data name="InitialSetup_Browse" xml:space="preserve"><value>参照...</value></data>
+  <data name="InitialSetup_InstallDefault" xml:space="preserve"><value>デフォルトパックをインストール…</value></data>
+  <data name="InitialSetup_BrowseDescription" xml:space="preserve"><value>機内アナウンスが含まれるフォルダーを選択してください（"Default"、"AAL"、"UAL" などのサブフォルダー）</value></data>
+  <data name="InitialSetup_Status_Checking" xml:space="preserve"><value>MSFS のインストールを確認中...</value></data>
+  <data name="InitialSetup_Status_Searching" xml:space="preserve"><value>MSFS のインストールを検索中...</value></data>
+  <data name="InitialSetup_Status_Valid" xml:space="preserve"><value>✓ 有効なアナウンス フォルダーが選択されました。</value></data>
+  <data name="InitialSetup_ContinueWithout_Title" xml:space="preserve"><value>サウンドファイルなしで続行しますか？</value></data>
+  <data name="InitialSetup_ContinueWithout_Message" xml:space="preserve"><value>サウンドファイルを構成せずに続行しますか？後で設定から構成できます。</value></data>
+  <data name="InitialSetup_InstallingTitle" xml:space="preserve"><value>デフォルトパックをインストール中</value></data>
+  <data name="InitialSetup_ProgressStarting" xml:space="preserve"><value>開始中...</value></data>
+
+  <data name="FirstTime_Title" xml:space="preserve"><value>Universal Announcer へようこそ</value></data>
+  <data name="FirstTime_WelcomeTitle" xml:space="preserve"><value>ようこそ — どこへ行ったの？</value></data>
+  <data name="FirstTime_Message" xml:space="preserve"><value>Universal Announcer はバックグラウンドで動作し、Microsoft Flight Simulator でのフライト中に自動で機内アナウンスを再生します。
+
+アプリはシステムトレイ（画面右下の時計付近）に最小化されます。
+
+設定の表示やアプリの操作方法:
+• システムトレイの Universal Announcer アイコンを右クリック
+• アイコンをダブルクリックして設定を開く
+• コンテキストメニューでフライト状態、音量などを操作</value></data>
+  <data name="FirstTime_Ok" xml:space="preserve"><value>わかりました！</value></data>
+
+  <data name="App_Title" xml:space="preserve"><value>Universal Announcer</value></data>
+  <data name="Common_Fetching" xml:space="preserve"><value>取得中…</value></data>
+  <data name="Audio_Percent" xml:space="preserve"><value>%</value></data>
+  <data name="Audio_DeviceLabel" xml:space="preserve"><value>オーディオデバイス:</value></data>
+  <data name="Audio_PresetLabel" xml:space="preserve"><value>プリセット:</value></data>
+  <data name="Audio_VolumeLabel" xml:space="preserve"><value>音量 (0-100):</value></data>
+  <data name="Audio_PaAudioMix" xml:space="preserve"><value>PA オーディオミックス (客室スピーカーのノイズを再現)</value></data>
+  <data name="Audio_UseCabinIfDoorOpen" xml:space="preserve"><value>ドア開放時は客室音量を使用 (GSX が必要)</value></data>
+  <data name="Audio_AssumeQuickViewsAsCabin" xml:space="preserve"><value>コックピットのクイックビューを客室として扱う</value></data>
+  <data name="Audio_CockpitLabel" xml:space="preserve"><value>コックピット (メインビュー):</value></data>
+  <data name="Audio_CabinLabel" xml:space="preserve"><value>客室 (推定):</value></data>
+  <data name="Audio_ExternalLabel" xml:space="preserve"><value>外部ビュー:</value></data>
+
+  <data name="Balloon_UpdateAvailableTitle" xml:space="preserve"><value>Universal Announcer - 更新あり</value></data>
+  <data name="Balloon_UpdateWarning" xml:space="preserve"><value>警告: このバージョンは古いです (現在: {0}, 最新: {1}).
+クリックして GitHub を開き、最新版をダウンロードしてください。</value></data>
+  <data name="Balloon_ReadyTitle" xml:space="preserve"><value>Universal Announcer</value></data>
+  <data name="Balloon_ReadyMessage" xml:space="preserve"><value>Universal Announcer の準備ができました。
+{0}
+
+💡 アプリはシステムトレイで実行中です (右下)。アイコンを右クリックして操作します。</value></data>
+  <data name="Balloon_IssueMessage" xml:space="preserve"><value>Universal Announcer は動作中ですが、サウンドファイルに問題があります。
+{0}
+
+💡 システムトレイのアイコン → 設定 で構成してください。</value></data>
+  <data name="Balloon_GenericMessage" xml:space="preserve"><value>Universal Announcer は有効で、機内アナウンスの再生準備ができています。
+
+💡 アプリはシステムトレイで実行中です。</value></data>
+
+  <data name="Btn_Preflight" xml:space="preserve"><value>出発前</value></data>
+  <data name="Btn_Taxi" xml:space="preserve"><value>タキシー</value></data>
+  <data name="Btn_Takeoff" xml:space="preserve"><value>離陸</value></data>
+  <data name="Btn_Climb" xml:space="preserve"><value>上昇</value></data>
+  <data name="Btn_Cruise" xml:space="preserve"><value>巡航</value></data>
+  <data name="Btn_Descent" xml:space="preserve"><value>降下</value></data>
+  <data name="Btn_Approach" xml:space="preserve"><value>進入</value></data>
+  <data name="Btn_Landing" xml:space="preserve"><value>着陸</value></data>
+  <data name="Btn_Postflight" xml:space="preserve"><value>到着後</value></data>
+  <data name="Btn_CloseApp" xml:space="preserve"><value>アプリを閉じる</value></data>
+
+  <data name="Generated_AirlineLabel" xml:space="preserve"><value>航空会社:</value></data>
+  <data name="Generated_AutoCreateFolder" xml:space="preserve"><value>不足しているエアライン フォルダーを自動作成</value></data>
+  <data name="Generated_AzureApiKey" xml:space="preserve"><value>Azure API キー:</value></data>
+  <data name="Generated_AzureRegion" xml:space="preserve"><value>Azure リージョン:</value></data>
+  <data name="Generated_ElevenModelLabel" xml:space="preserve"><value>Eleven モデル:</value></data>
+  <data name="Generated_EnableTts" xml:space="preserve"><value>生成 TTS フォールバックを有効化</value></data>
+  <data name="Generated_Generate" xml:space="preserve"><value>生成</value></data>
+  <data name="Generated_GenerateAll" xml:space="preserve"><value>すべて生成</value></data>
+  <data name="Generated_GenerateAs" xml:space="preserve"><value>別名で生成..</value></data>
+  <data name="Generated_HelpSetup" xml:space="preserve"><value>ヘルプ &amp; セットアップ (最初に読む)</value></data>
+  <data name="Generated_InsertVoice" xml:space="preserve"><value>音声を挿入</value></data>
+  <data name="Generated_OnlyDynamic" xml:space="preserve"><value>動的な場合のみ再生成</value></data>
+  <data name="Generated_ProviderLabel" xml:space="preserve"><value>プロバイダー:</value></data>
+  <data name="Generated_ReplaceExistingOgg" xml:space="preserve"><value>既存の .ogg を置換</value></data>
+  <data name="Generated_RevertTxt" xml:space="preserve"><value>TXT を元に戻す</value></data>
+  <data name="Generated_SaveTxt" xml:space="preserve"><value>TXT を保存</value></data>
+  <data name="Generated_TestVoice" xml:space="preserve"><value>音声テスト</value></data>
+  <data name="Generated_VoiceLabel" xml:space="preserve"><value>音声:</value></data>
+  <data name="Generated_TestVoiceSample" xml:space="preserve"><value>これは Universal Announcer の生成音声のテストです。</value></data>
+  <data name="Generated_StopTest" xml:space="preserve"><value>テストを停止</value></data>
+  <data name="Title_TTSTest" xml:space="preserve"><value>TTS テスト</value></data>
+
+  <data name="Integrations_SimBriefDescription" xml:space="preserve"><value>SimBrief のユーザー名（数字ではなく名前）を入力すると、最新のフライトプランから機体 ICAO コードを自動取得します。機体別アナウンスに使用されます。空欄または取得不可の場合は MSFS の機体データにフォールバックします。</value></data>
+
+  <data name="InitialSetup_Status_AutoDetectedValid" xml:space="preserve"><value>✓ MSFS から有効なアナウンス フォルダーを自動検出しました。</value></data>
+  <data name="InitialSetup_Status_FoundPleaseBrowse" xml:space="preserve"><value>📁 MSFS を検出しました。アナウンス フォルダーを選択してください。</value></data>
+  <data name="InitialSetup_Status_NotFoundAnnouncements" xml:space="preserve"><value>⚠️ MSFS は見つかりましたが、アナウンス フォルダーがありません。手動で選択してください。</value></data>
+  <data name="InitialSetup_Status_CouldNotAutoDetect" xml:space="preserve"><value>⚠️ MSFS を自動検出できませんでした。フォルダーを手動で選択してください。</value></data>
+  <data name="InitialSetup_Status_AutoDetectFailed" xml:space="preserve"><value>⚠️ 自動検出に失敗しました。アナウンス ファイルを含むフォルダーを手動で選択してください。</value></data>
+  <data name="InitialSetup_Status_DefaultPackInstalledSelected" xml:space="preserve"><value>✓ デフォルトパックをインストールし、選択しました。</value></data>
+
+  <data name="Msg_CantReachGitHub_Format" xml:space="preserve"><value>GitHub に到達できないか、マニフェストが見つかりません。オフラインの可能性があります。
+
+開く: {0}</value></data>
+  <data name="Msg_CriticalStartup_Format" xml:space="preserve"><value>起動時の致命的なエラー: {0}
+
+ログ場所: {1}</value></data>
+  <data name="Msg_DefaultAnnouncementsInstalled" xml:space="preserve"><value>デフォルトのアナウンスを正常にインストールしました！</value></data>
+  <data name="Msg_DefaultPackExistsOverwrite" xml:space="preserve"><value>既にデフォルトパックが存在します。既存のファイルを上書きしますか？</value></data>
+  <data name="Msg_EncodingFailed_Format" xml:space="preserve"><value>エンコードに失敗しました: {0}</value></data>
+  <data name="Msg_ErrorOpeningAbout_Format" xml:space="preserve"><value>「バージョン情報」を開く際にエラー: {0}</value></data>
+  <data name="Msg_ErrorOpeningLightTest_Format" xml:space="preserve"><value>ライトテストを開く際にエラー: {0}</value></data>
+  <data name="Msg_ErrorOpeningSettings_Format" xml:space="preserve"><value>設定を開く際にエラー: {0}</value></data>
+  <data name="Msg_FileExists_OverwriteFormat" xml:space="preserve"><value>ファイルは既に存在します:
+{0}
+上書きしますか？</value></data>
+  <data name="Msg_GenerateAllConfigFirst" xml:space="preserve"><value>まず「サウンドファイル」タブでフォルダーを設定してください</value></data>
+  <data name="Msg_GenerateAllConfirm_Format" xml:space="preserve"><value>{0} 件のデフォルトアナウンスをインストール:
+{1}
+
+短いダウンロードが開始されます。</value></data>
+  <data name="Msg_GenerateAllFailed_Format" xml:space="preserve"><value>「すべて生成」に失敗しました: {0}</value></data>
+  <data name="Msg_GenerateAllSelectAirline" xml:space="preserve"><value>生成先の航空会社を選択してください (Default は不可)。</value></data>
+  <data name="Msg_Generated_Format" xml:space="preserve"><value>生成: {0}</value></data>
+  <data name="Msg_GenerateThereIsNoText" xml:space="preserve"><value>生成するアナウンステキストがありません。</value></data>
+  <data name="Msg_GenerationFailed_Format" xml:space="preserve"><value>生成に失敗しました: {0}</value></data>
+  <data name="Msg_GenericInfo_Format" xml:space="preserve"><value>{0}</value></data>
+  <data name="Msg_InstallDefaultPackConfirm_Format" xml:space="preserve"><value>{0} 件のデフォルトアナウンスをインストール:
+{1}
+
+短いダウンロードが開始されます。</value></data>
+  <data name="Msg_InstallError_Format" xml:space="preserve"><value>インストール エラー: {0}</value></data>
+  <data name="Msg_InstallFailed_Format" xml:space="preserve"><value>インストール失敗: {0}</value></data>
+  <data name="Msg_LogFileNotFound_Format" xml:space="preserve"><value>ログファイルが見つかりません: {0}</value></data>
+  <data name="Msg_NoOverrideFound" xml:space="preserve"><value>元に戻すべき上書きが見つかりません。</value></data>
+  <data name="Msg_OpenFolderFailed_Format" xml:space="preserve"><value>フォルダーを開けません: {0}</value></data>
+  <data name="Msg_OpenFolderNotSet" xml:space="preserve"><value>サウンドファイルの場所が未設定か存在しません。</value></data>
+  <data name="Msg_OpenLinkError_Format" xml:space="preserve"><value>リンクを開く際のエラー: {0}</value></data>
+  <data name="Msg_OpenLogError_Format" xml:space="preserve"><value>ログファイルを開く際のエラー: {0}</value></data>
+  <data name="Msg_RevertedAirline_Format" xml:space="preserve"><value>{1}.txt の {0} 上書きを元に戻しました</value></data>
+  <data name="Msg_RevertedDefault_Format" xml:space="preserve"><value>{0}.txt の Default 上書きを元に戻しました</value></data>
+  <data name="Msg_RevertFailed_Format" xml:space="preserve"><value>元に戻しに失敗しました: {0}</value></data>
+  <data name="Msg_SavedTo_Format" xml:space="preserve"><value>{0} に保存しました: {1}.txt</value></data>
+  <data name="Msg_SaveFailed_Format" xml:space="preserve"><value>保存に失敗しました: {0}</value></data>
+  <data name="Msg_SelectAirlineGenerate" xml:space="preserve"><value>生成先の航空会社を選択してください (Default は不可)。</value></data>
+  <data name="Msg_SelectTemplateFirst" xml:space="preserve"><value>まずテンプレート名を選択してください。</value></data>
+  <data name="Msg_SetAnnouncementsFolderFailed" xml:space="preserve"><value>アナウンス フォルダーを設定できませんでした。再試行するか、サウンドなしで続行してください。</value></data>
+  <data name="Msg_SoundFileNotFound_Format" xml:space="preserve"><value>サウンドファイルが見つかりません: {0}</value></data>
+  <data name="Msg_SoundFilesConfigFirst" xml:space="preserve"><value>まず「サウンドファイル」タブでフォルダーを設定してください</value></data>
+  <data name="Msg_SoundFilesLocationUpdated" xml:space="preserve"><value>サウンドファイルの場所が正常に更新されました！</value></data>
+  <data name="Msg_TTSTestFailed_Format" xml:space="preserve"><value>TTS テストに失敗しました: {0}</value></data>
+  <data name="Msg_UseNewDefaultPackAsLocationConfirm_Format" xml:space="preserve"><value>新しくインストールした Default パックをサウンドファイルの場所として使用しますか？
+
+{0}</value></data>
+
+  <data name="Tray_About" xml:space="preserve"><value>情報...</value></data>
+  <data name="Tray_AudioDevice" xml:space="preserve"><value>オーディオデバイス</value></data>
+  <data name="Tray_AutoTag" xml:space="preserve"><value>自動</value></data>
+  <data name="Tray_Connection" xml:space="preserve"><value>接続</value></data>
+  <data name="Tray_CurrentState" xml:space="preserve"><value>現在の状態</value></data>
+  <data name="Tray_CurrentStateAutoDetecting" xml:space="preserve"><value>自動検出中...</value></data>
+  <data name="Tray_Exit" xml:space="preserve"><value>終了</value></data>
+  <data name="Tray_FlightState" xml:space="preserve"><value>フライト状態</value></data>
+  <data name="Tray_LightTest" xml:space="preserve"><value>ライトテスト</value></data>
+  <data name="Tray_ManualTag" xml:space="preserve"><value>手動</value></data>
+  <data name="Tray_PlayingPrefix" xml:space="preserve"><value>再生中:</value></data>
+  <data name="Tray_RealSimConnect" xml:space="preserve"><value>実 SimConnect</value></data>
+  <data name="Tray_Settings" xml:space="preserve"><value>設定...</value></data>
+  <data name="Tray_StatusPrefix" xml:space="preserve"><value>ステータス:</value></data>
+  <data name="Tray_TestMode" xml:space="preserve"><value>テストモード</value></data>
+  <data name="Tray_ViewDebugLog" xml:space="preserve"><value>デバッグログを表示</value></data>
+  <data name="Tray_Volume" xml:space="preserve"><value>音量</value></data>
+
+  <data name="Announcements_Enabled" xml:space="preserve"><value>有効なアナウンス:</value></data>
+  <data name="Announcements_UseDefaultIfMissing" xml:space="preserve"><value>航空会社別がない場合は Default のアナウンスを使用</value></data>
+
+  <data name="About_Author" xml:space="preserve"><value>MSFS コミュニティのために fearlessfrog が作成</value></data>
+  <data name="About_BuyCoffee" xml:space="preserve"><value>コーヒーをご馳走して ☕</value></data>
+  <data name="About_DebugMode" xml:space="preserve"><value>デバッグモード有効</value></data>
+  <data name="About_DefaultLanguageLabel" xml:space="preserve"><value>既定の言語:</value></data>
+  <data name="About_Description" xml:space="preserve"><value>Microsoft Flight Simulator 用の汎用機内アナウンス システム</value></data>
+  <data name="About_GitHub" xml:space="preserve"><value>GitHub: MSFS Universal Announcer</value></data>
+  <data name="About_HelpGroup" xml:space="preserve"><value>ヘルプとサポート</value></data>
+  <data name="About_HowToSetup" xml:space="preserve"><value>サウンドファイルの設定方法</value></data>
+  <data name="About_SuggestionBug" xml:space="preserve"><value>提案またはバグの報告</value></data>
+  <data name="About_Title" xml:space="preserve"><value>Universal Announcer</value></data>
+  <data name="About_Version" xml:space="preserve"><value>バージョン</value></data>
+  <data name="About_WhatTriggers" xml:space="preserve"><value>何がいつトリガーされるか</value></data>
+
+  <data name="Audio_CameraDesc" xml:space="preserve"><value>客室かどうかを簡単に検出できないため推定します。コックピットのクイックビューの場合もあります。</value></data>
+  <data name="Audio_CameraGroup" xml:space="preserve"><value>カメラ状態別の音量倍率 (マスターボリュームに対して)</value></data>
+  <data name="Audio_CameraStateEnabled" xml:space="preserve"><value>カメラに基づく音量を有効化</value></data>
+
+  <data name="Error_AlreadyRunningMessage" xml:space="preserve"><value>別のインスタンスが既に実行中です。</value></data>
+  <data name="Error_AlreadyRunningTitle" xml:space="preserve"><value>既に実行中</value></data>
+  <data name="Error_CriticalAppFormat" xml:space="preserve"><value>致命的なアプリのエラー: {0}
+
+ログの場所: {1}</value></data>
+  <data name="Error_CriticalAppTitle" xml:space="preserve"><value>致命的なエラー</value></data>
+  <data name="Error_DomainFormat" xml:space="preserve"><value>未処理のドメイン例外: {0}
+
+ログ: {1}</value></data>
+  <data name="Error_DomainTitle" xml:space="preserve"><value>アプリケーション エラー</value></data>
+  <data name="Error_StartupTitle" xml:space="preserve"><value>起動エラー</value></data>
+  <data name="Error_UIThreadFormat" xml:space="preserve"><value>未処理の UI スレッド例外: {0}
+
+ログ: {1}</value></data>
+  <data name="Error_UIThreadTitle" xml:space="preserve"><value>UI エラー</value></data>
+
+  <data name="Integrations_AircraftError" xml:space="preserve"><value>機種の取得エラー</value></data>
+  <data name="Integrations_AircraftNotRetrieved" xml:space="preserve"><value>機種: 取得できませんでした</value></data>
+  <data name="Integrations_AirlineError" xml:space="preserve"><value>航空会社の取得エラー</value></data>
+  <data name="Integrations_AirlineNotRetrieved" xml:space="preserve"><value>航空会社: 取得できませんでした</value></data>
+  <data name="Integrations_DestinationError" xml:space="preserve"><value>到着地の取得エラー</value></data>
+  <data name="Integrations_DestinationNotRetrieved" xml:space="preserve"><value>到着地: 取得できませんでした</value></data>
+  <data name="Integrations_ErrorOccurred" xml:space="preserve"><value>エラーが発生しました</value></data>
+  <data name="Integrations_GsxStatusDisabledDetail" xml:space="preserve"><value>無効 - GSX 搭乗状態は使用しません（ロゴライトで代用）</value></data>
+  <data name="Integrations_NeverFetched" xml:space="preserve"><value>未取得</value></data>
+  <data name="Integrations_OriginError" xml:space="preserve"><value>出発地の取得エラー</value></data>
+  <data name="Integrations_OriginNotRetrieved" xml:space="preserve"><value>出発地: 取得できませんでした</value></data>
+  <data name="Integrations_SimBrief_EnterUsername" xml:space="preserve"><value>SimBrief のユーザー名を入力</value></data>
+  <data name="Integrations_SimBrief_Error" xml:space="preserve"><value>SimBrief 取得エラー</value></data>
+  <data name="Integrations_SimBrief_UsernameChanged" xml:space="preserve"><value>ユーザー名が変更されました</value></data>
+
+  <data name="None" xml:space="preserve"><value>なし</value></data>
+  <data name="Progress_Downloading_Format" xml:space="preserve"><value>[{0}/{1}] ダウンロード中: {2}</value></data>
+  <data name="Settings_Title" xml:space="preserve"><value>Universal Announcer 設定</value></data>
+
+  <data name="Status_Aircraft" xml:space="preserve"><value>機種: {0}</value></data>
+  <data name="Status_Connected" xml:space="preserve"><value>接続済み</value></data>
+  <data name="Status_Connection" xml:space="preserve"><value>接続: {0}</value></data>
+  <data name="Status_CurrentlyPlaying" xml:space="preserve"><value>再生中: {0}</value></data>
+  <data name="Status_CurrentState" xml:space="preserve"><value>現在の状態: {0}</value></data>
+  <data name="Status_Disconnected" xml:space="preserve"><value>未接続</value></data>
+  <data name="Status_MSFS" xml:space="preserve"><value>MSFS: {0}</value></data>
+
+  <data name="Title_Error" xml:space="preserve"><value>エラー</value></data>
+  <data name="Title_Generate" xml:space="preserve"><value>生成</value></data>
+  <data name="Title_GenerateAll" xml:space="preserve"><value>すべて生成</value></data>
+  <data name="Title_InstallDefaultPack" xml:space="preserve"><value>デフォルトパックをインストール</value></data>
+  <data name="Title_LogFile" xml:space="preserve"><value>ログファイル</value></data>
+  <data name="Title_LogFileLocation" xml:space="preserve"><value>ログファイルの場所</value></data>
+  <data name="Title_OpenFolder" xml:space="preserve"><value>フォルダーを開く</value></data>
+  <data name="Title_RevertTemplate" xml:space="preserve"><value>テンプレートを元に戻す</value></data>
+  <data name="Title_SaveTemplate" xml:space="preserve"><value>テンプレートを保存</value></data>
+  <data name="Title_StartupError" xml:space="preserve"><value>起動エラー</value></data>
+  <data name="Title_StartWithMsfs" xml:space="preserve"><value>MSFS と一緒に開始</value></data>
+  <data name="Title_Success" xml:space="preserve"><value>成功</value></data>
+
+  <data name="Tweaks_BoardingInterval" xml:space="preserve"><value>Boarding Welcome 繰り返し間隔 (分):</value></data>
+  <data name="Tweaks_CrewSeatsLanding" xml:space="preserve"><value>AGL 高度 —「着陸で着席」:</value></data>
+  <data name="Tweaks_DepartureDelayThreshold" xml:space="preserve"><value>出発遅延しきい値 (分):</value></data>
+  <data name="Tweaks_DescentAltitude" xml:space="preserve"><value>降下検出の AGL 高度 (ft):</value></data>
+  <data name="Tweaks_EnableMusicResume" xml:space="preserve"><value>中断時に音楽を再開 (Boarding/AfterLanding)</value></data>
+  <data name="Tweaks_FeetAbove" xml:space="preserve"><value>ft（以上）</value></data>
+  <data name="Tweaks_FeetBelow" xml:space="preserve"><value>ft（以下）</value></data>
+  <data name="Tweaks_Minutes" xml:space="preserve"><value>分</value></data>
+  <data name="Tweaks_SkipFirstBoardingWelcome" xml:space="preserve"><value>最初の BoardingWelcome をスキップ</value></data>
+  <data name="Tweaks_TakeoffAltitude" xml:space="preserve"><value>離陸検出の AGL 高度 (ft):</value></data>
+  <data name="Tweaks_UseBoardingMusicFallback" xml:space="preserve"><value>AfterLandingMusic がない場合は BoardingMusic を使用</value></data>
+  <data name="Tweaks_UseLandingLights" xml:space="preserve"><value>CrewSeatsTakeoff に着陸灯を使用（ストロボの代わり）</value></data>
+</root>
+
+

@@ -1,0 +1,341 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <resheader name="resmimetype"><value>text/microsoft-resx</value></resheader>
+  <resheader name="version"><value>2.0</value></resheader>
+  <resheader name="reader"><value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value></resheader>
+  <resheader name="writer"><value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value></resheader>
+
+  <data name="Status_Connection" xml:space="preserve"><value>连接：{0}</value></data>
+  <data name="Status_CurrentState" xml:space="preserve"><value>当前状态：{0}</value></data>
+  <data name="Status_Aircraft" xml:space="preserve"><value>机型：{0}</value></data>
+  <data name="Status_CurrentlyPlaying" xml:space="preserve"><value>当前播放：{0}</value></data>
+  <data name="Status_MSFS" xml:space="preserve"><value>MSFS：{0}</value></data>
+  <data name="None" xml:space="preserve"><value>无</value></data>
+  <data name="Status_Disconnected" xml:space="preserve"><value>未连接</value></data>
+  <data name="Status_Connected" xml:space="preserve"><value>已连接</value></data>
+
+  <data name="Settings_Title" xml:space="preserve"><value>Universal Announcer 设置</value></data>
+  <data name="Settings_DefaultLanguage" xml:space="preserve"><value>默认语言：</value></data>
+  <data name="Settings_DefaultLanguage_System" xml:space="preserve"><value>系统默认</value></data>
+  <data name="Settings_RestartRequired" xml:space="preserve"><value>切换语言将在重启后生效。</value></data>
+  <data name="Settings_Restart_Title" xml:space="preserve"><value>需要重启</value></data>
+
+  <!-- Status Tab - static texts -->
+  <data name="Tab_Status" xml:space="preserve"><value>状态</value></data>
+  <data name="Group_Status" xml:space="preserve"><value>状态</value></data>
+  <data name="Group_FlightStateControls" xml:space="preserve"><value>飞行阶段控制</value></data>
+  <data name="Btn_Stop" xml:space="preserve"><value>停止</value></data>
+  <data name="Btn_Resume" xml:space="preserve"><value>继续</value></data>
+  <data name="Btn_Auto" xml:space="preserve"><value>自动</value></data>
+  <data name="Btn_Restart" xml:space="preserve"><value>重置</value></data>
+  <data name="Btn_Seatbelt" xml:space="preserve"><value>安全带</value></data>
+  <data name="Btn_Preflight" xml:space="preserve"><value>起飞前</value></data>
+  <data name="Btn_Taxi" xml:space="preserve"><value>滑行</value></data>
+  <data name="Btn_Takeoff" xml:space="preserve"><value>起飞</value></data>
+  <data name="Btn_Climb" xml:space="preserve"><value>爬升</value></data>
+  <data name="Btn_Cruise" xml:space="preserve"><value>巡航</value></data>
+  <data name="Btn_Descent" xml:space="preserve"><value>下降</value></data>
+  <data name="Btn_Approach" xml:space="preserve"><value>进近</value></data>
+  <data name="Btn_Landing" xml:space="preserve"><value>着陆</value></data>
+  <data name="Btn_Postflight" xml:space="preserve"><value>落地后</value></data>
+  <data name="Btn_CloseApp" xml:space="preserve"><value>关闭应用</value></data>
+  <data name="Cbx_StartWithMsfs" xml:space="preserve"><value>随 MSFS 启动</value></data>
+  <data name="Cbx_AlwaysShowWindow" xml:space="preserve"><value>启动时始终显示为窗口</value></data>
+
+  <!-- Tabs -->
+  <data name="Tab_Audio" xml:space="preserve"><value>音频</value></data>
+  <data name="Tab_SoundFiles" xml:space="preserve"><value>音频文件</value></data>
+  <data name="Tab_Announcements" xml:space="preserve"><value>广播</value></data>
+  <data name="Tab_Tweaks" xml:space="preserve"><value>调整</value></data>
+  <data name="Tab_Integrations" xml:space="preserve"><value>集成</value></data>
+  <data name="Tab_Generated" xml:space="preserve"><value>生成</value></data>
+  <data name="Tab_HelpAbout" xml:space="preserve"><value>帮助与关于</value></data>
+
+  <!-- Audio tab -->
+  <data name="Audio_DeviceLabel" xml:space="preserve"><value>音频设备：</value></data>
+  <data name="Audio_VolumeLabel" xml:space="preserve"><value>音量 (0-100)：</value></data>
+  <data name="Audio_Percent" xml:space="preserve"><value>%</value></data>
+  <data name="Audio_PresetLabel" xml:space="preserve"><value>预设：</value></data>
+  <data name="Audio_PaAudioMix" xml:space="preserve"><value>PA 音频混合（模拟客舱扬声器）</value></data>
+  <data name="Audio_CameraStateEnabled" xml:space="preserve"><value>启用基于视角的音量</value></data>
+  <data name="Audio_UseCabinIfDoorOpen" xml:space="preserve"><value>舱门打开时使用客舱音量（需要 GSX）</value></data>
+  <data name="Audio_CameraGroup" xml:space="preserve"><value>视角音量（总音量倍数）</value></data>
+  <data name="Audio_CockpitLabel" xml:space="preserve"><value>座舱（主视角）：</value></data>
+  <data name="Audio_CabinLabel" xml:space="preserve"><value>客舱（可能）：</value></data>
+  <data name="Audio_ExternalLabel" xml:space="preserve"><value>外部视角：</value></data>
+  <data name="Audio_CameraDesc" xml:space="preserve"><value>无法可靠识别客舱，仅作近似判断；也可能是座舱快速视角。</value></data>
+  <data name="Audio_AssumeQuickViewsAsCabin" xml:space="preserve"><value>将座舱快速视角视为客舱</value></data>
+
+  <!-- Sound Files tab -->
+  <data name="SoundFiles_LocationGroup" xml:space="preserve"><value>音频文件位置</value></data>
+  <data name="SoundFiles_CurrentLocation" xml:space="preserve"><value>当前位置：</value></data>
+  <data name="SoundFiles_NotConfigured" xml:space="preserve"><value>未配置</value></data>
+  <data name="SoundFiles_ChangeFolder" xml:space="preserve"><value>更改文件夹...</value></data>
+  <data name="SoundFiles_RunSetup" xml:space="preserve"><value>运行设置...</value></data>
+  <data name="SoundFiles_OpenFolder" xml:space="preserve"><value>打开文件夹</value></data>
+  <data name="SoundFiles_PreviewGroup" xml:space="preserve"><value>预览音频文件</value></data>
+  <data name="SoundFiles_Refresh" xml:space="preserve"><value>刷新</value></data>
+  <data name="SoundFiles_Airline" xml:space="preserve"><value>航司：</value></data>
+  <data name="SoundFiles_Label" xml:space="preserve"><value>音频文件：</value></data>
+  <data name="Common_Preview" xml:space="preserve"><value>预览</value></data>
+  <data name="Common_Stop" xml:space="preserve"><value>停止</value></data>
+
+  <!-- Announcements tab -->
+  <data name="Announcements_Enabled" xml:space="preserve"><value>启用的广播：</value></data>
+  <data name="Announcements_UseDefaultIfMissing" xml:space="preserve"><value>若缺少航司专用文件则使用默认文件夹</value></data>
+
+  <!-- Tweaks tab -->
+  <data name="Tweaks_BoardingInterval" xml:space="preserve"><value>登机欢迎重复间隔（分钟）：</value></data>
+  <data name="Tweaks_Minutes" xml:space="preserve"><value>分钟</value></data>
+  <data name="Tweaks_TakeoffAltitude" xml:space="preserve"><value>起飞判定 AGL 高度（英尺）：</value></data>
+  <data name="Tweaks_FeetAbove" xml:space="preserve"><value>英尺（或以上）</value></data>
+  <data name="Tweaks_DescentAltitude" xml:space="preserve"><value>下降判定 AGL 高度（英尺）：</value></data>
+  <data name="Tweaks_FeetBelow" xml:space="preserve"><value>英尺（或以下）</value></data>
+  <data name="Tweaks_UseLandingLights" xml:space="preserve"><value>使用着陆灯作为起飞座舱提示（替代频闪灯）</value></data>
+  <data name="Tweaks_EnableMusicResume" xml:space="preserve"><value>启用音乐恢复（登机与落地后）</value></data>
+  <data name="Tweaks_CrewSeatsLanding" xml:space="preserve"><value>“落地就座” 触发高度 (AGL)：</value></data>
+  <data name="Tweaks_UseBoardingMusicFallback" xml:space="preserve"><value>缺少落地后音乐时使用登机音乐</value></data>
+  <data name="Tweaks_SkipFirstBoardingWelcome" xml:space="preserve"><value>跳过首次登机欢迎</value></data>
+  <data name="Tweaks_DepartureDelayThreshold" xml:space="preserve"><value>起飞延误阈值（分钟）：</value></data>
+
+  <!-- Integrations tab -->
+  <data name="Integrations_SimBriefGroup" xml:space="preserve"><value>SimBrief 集成</value></data>
+  <data name="Integrations_SimBriefUsername" xml:space="preserve"><value>SimBrief 用户名：</value></data>
+  <data name="Integrations_SimBriefLastData" xml:space="preserve"><value>上次获取的数据：</value></data>
+  <data name="Integrations_SimBriefDescription" xml:space="preserve"><value>输入你的 SimBrief 用户名（名称而非数字），以自动从最新飞行计划获取机型 ICAO 代码。用于机型相关的广播。若为空或不可用，将回退至 MSFS 的机型数据。</value></data>
+  <data name="Integrations_AircraftNotRetrieved" xml:space="preserve"><value>机型：未获取</value></data>
+  <data name="Integrations_AirlineNotRetrieved" xml:space="preserve"><value>航司：未获取</value></data>
+  <data name="Integrations_OriginNotRetrieved" xml:space="preserve"><value>始发：未获取</value></data>
+  <data name="Integrations_DestinationNotRetrieved" xml:space="preserve"><value>目的地：未获取</value></data>
+  <data name="Integrations_NeverFetched" xml:space="preserve"><value>从未获取</value></data>
+  <data name="Integrations_FetchLatestPlan" xml:space="preserve"><value>获取最新计划</value></data>
+  <data name="Integrations_RefreshBeforeBoarding" xml:space="preserve"><value>登机欢迎前刷新计划</value></data>
+  <data name="Integrations_GsxGroup" xml:space="preserve"><value>GSX 集成</value></data>
+  <data name="Integrations_EnableGsx" xml:space="preserve"><value>启用 GSX 集成</value></data>
+  <data name="Integrations_GsxStatusDisabled" xml:space="preserve"><value>状态：已禁用</value></data>
+  <data name="Integrations_GsxDescription" xml:space="preserve"><value>启用后，广播将由 GSX 登机状态触发；同时支持 GSX 加油和下机。如果没有 GSX，请关闭此选项并使用 Logo 灯。</value></data>
+  <data name="Integrations_GsxStatusEnabledDetail" xml:space="preserve"><value>状态：已启用 - GSX 登机状态将覆盖 Logo 灯触发</value></data>
+  <data name="Integrations_GsxStatusDisabledDetail" xml:space="preserve"><value>状态：已禁用 - 将使用 Logo 灯触发</value></data>
+  <data name="Integrations_SimBrief_RetrievedAt" xml:space="preserve"><value>已获取：{0}</value></data>
+  <data name="Integrations_SimBrief_AircraftFormat" xml:space="preserve"><value>机型：{0}</value></data>
+  <data name="Integrations_SimBrief_AirlineFormat" xml:space="preserve"><value>航司：{0}</value></data>
+  <data name="Integrations_SimBrief_OriginFormat" xml:space="preserve"><value>始发：{0}</value></data>
+  <data name="Integrations_SimBrief_DestinationFormat" xml:space="preserve"><value>目的地：{0}</value></data>
+  <data name="Integrations_SimBrief_NotAvailable" xml:space="preserve"><value>不可用</value></data>
+  <data name="Integrations_SimBrief_Error" xml:space="preserve"><value>错误</value></data>
+  <data name="Integrations_SimBrief_EnterUsername" xml:space="preserve"><value>请输入 SimBrief 用户名</value></data>
+  <data name="Integrations_SimBrief_UsernameChanged" xml:space="preserve"><value>用户名已更改 —— 点击“获取最新计划”更新</value></data>
+  <data name="Common_Fetching" xml:space="preserve"><value>正在获取…</value></data>
+  <data name="Integrations_AircraftError" xml:space="preserve"><value>机型：错误</value></data>
+  <data name="Integrations_AirlineError" xml:space="preserve"><value>航司：错误</value></data>
+  <data name="Integrations_OriginError" xml:space="preserve"><value>始发：错误</value></data>
+  <data name="Integrations_DestinationError" xml:space="preserve"><value>目的地：错误</value></data>
+  <data name="Integrations_ErrorOccurred" xml:space="preserve"><value>发生错误</value></data>
+
+  <!-- Generated tab -->
+  <data name="Generated_ElevenModelLabel" xml:space="preserve"><value>Eleven 模型：</value></data>
+  <data name="Generated_Generate" xml:space="preserve"><value>生成</value></data>
+  <data name="Generated_GenerateAs" xml:space="preserve"><value>另存为生成..</value></data>
+  <data name="Generated_GenerateAll" xml:space="preserve"><value>全部生成</value></data>
+  <data name="Generated_SaveTxt" xml:space="preserve"><value>保存 txt</value></data>
+  <data name="Generated_RevertTxt" xml:space="preserve"><value>还原 txt</value></data>
+  <data name="Generated_ReplaceExistingOgg" xml:space="preserve"><value>替换已存在 .ogg</value></data>
+  <data name="Generated_OnlyDynamic" xml:space="preserve"><value>仅在动态时重新生成</value></data>
+  <data name="Generated_AutoCreateFolder" xml:space="preserve"><value>自动创建缺少的航司文件夹</value></data>
+  <data name="Generated_HelpSetup" xml:space="preserve"><value>帮助与设置（请先阅读）</value></data>
+  <data name="Generated_AirlineLabel" xml:space="preserve"><value>航司：</value></data>
+  <data name="Generated_InsertVoice" xml:space="preserve"><value>插入语音</value></data>
+  <data name="Generated_TestVoice" xml:space="preserve"><value>测试语音</value></data>
+  <data name="Generated_VoiceLabel" xml:space="preserve"><value>语音：</value></data>
+  <data name="Generated_AzureApiKey" xml:space="preserve"><value>Azure API 密钥：</value></data>
+  <data name="Generated_AzureRegion" xml:space="preserve"><value>Azure 区域：</value></data>
+  <data name="Generated_ProviderLabel" xml:space="preserve"><value>提供商：</value></data>
+  <data name="Generated_EnableTts" xml:space="preserve"><value>启用生成的 TTS 备用</value></data>
+  <data name="Generated_TestVoiceSample" xml:space="preserve"><value>这是对 Universal Announcer 生成语音的测试。</value></data>
+  <data name="Generated_StopTest" xml:space="preserve"><value>停止测试</value></data>
+  <data name="Title_TTSTest" xml:space="preserve"><value>TTS 测试</value></data>
+
+  <!-- Help & About tab -->
+  <data name="About_DefaultLanguageLabel" xml:space="preserve"><value>默认语言：</value></data>
+  <data name="About_Title" xml:space="preserve"><value>Universal Announcer</value></data>
+  <data name="About_Version" xml:space="preserve"><value>版本</value></data>
+  <data name="About_Description" xml:space="preserve"><value>适用于 Microsoft Flight Simulator 的通用客舱广播系统</value></data>
+  <data name="About_Author" xml:space="preserve"><value>由 fearlessfrog 为 MSFS 社区创建</value></data>
+  <data name="About_GitHub" xml:space="preserve"><value>GitHub：MSFS Universal Announcer</value></data>
+  <data name="About_BuyCoffee" xml:space="preserve"><value>请我喝咖啡 ☕</value></data>
+  <data name="About_HelpGroup" xml:space="preserve"><value>帮助与支持</value></data>
+  <data name="About_HowToSetup" xml:space="preserve"><value>如何设置音频文件</value></data>
+  <data name="About_WhatTriggers" xml:space="preserve"><value>触发条件与时机</value></data>
+  <data name="About_SuggestionBug" xml:space="preserve"><value>提交建议或报告问题</value></data>
+  <data name="About_DebugMode" xml:space="preserve"><value>调试模式已启用</value></data>
+
+  <!-- Common buttons -->
+  <data name="Common_Cancel" xml:space="preserve"><value>取消</value></data>
+  <data name="Common_OK" xml:space="preserve"><value>确定</value></data>
+  <data name="Common_Apply" xml:space="preserve"><value>应用</value></data>
+
+  <!-- App / Tray / Notifications -->
+  <data name="App_Title" xml:space="preserve"><value>Universal Announcer</value></data>
+  <data name="Tray_Connection" xml:space="preserve"><value>连接</value></data>
+  <data name="Tray_RealSimConnect" xml:space="preserve"><value>真实 SimConnect</value></data>
+  <data name="Tray_TestMode" xml:space="preserve"><value>测试模式</value></data>
+  <data name="Tray_CurrentState" xml:space="preserve"><value>当前状态</value></data>
+  <data name="Tray_FlightState" xml:space="preserve"><value>飞行阶段</value></data>
+  <data name="Tray_AudioDevice" xml:space="preserve"><value>音频设备</value></data>
+  <data name="Tray_Volume" xml:space="preserve"><value>音量</value></data>
+  <data name="Tray_Settings" xml:space="preserve"><value>设置...</value></data>
+  <data name="Tray_About" xml:space="preserve"><value>关于...</value></data>
+  <data name="Tray_StatusPrefix" xml:space="preserve"><value>状态：</value></data>
+  <data name="Tray_ViewDebugLog" xml:space="preserve"><value>查看调试日志</value></data>
+  <data name="Progress_Downloading_Format" xml:space="preserve"><value>[{0}/{1}] 正在下载：{2}</value></data>
+  <!-- Initial Setup (AnnouncementsFolderSetupDialog) -->
+  <data name="InitialSetup_Title" xml:space="preserve"><value>Universal Announcer - 初始设置</value></data>
+  <data name="InitialSetup_Welcome" xml:space="preserve"><value>欢迎使用 Universal Announcer！</value></data>
+  <data name="InitialSetup_Instructions" xml:space="preserve"><value>本应用可使用现有的广播文件夹（如 Fenix），或为你安装一个小型“默认包”。
+若自动检测失败，请浏览到包含“Default”子文件夹且至少有一个 .ogg 文件的目录。
+或者点击“安装默认包…”，从 GitHub 下载现成的声音文件。
+你也可以点击“取消”，稍后在“设置”中完成声音文件的配置。</value></data>
+  <data name="InitialSetup_FolderLabel" xml:space="preserve"><value>广播文件夹：</value></data>
+  <data name="InitialSetup_Browse" xml:space="preserve"><value>浏览...</value></data>
+  <data name="InitialSetup_InstallDefault" xml:space="preserve"><value>安装默认包…</value></data>
+  <data name="InitialSetup_BrowseDescription" xml:space="preserve"><value>选择包含客舱广播的文件夹（含“Default”、“AAL”、“UAL”等子文件夹）</value></data>
+  <data name="InitialSetup_Status_Checking" xml:space="preserve"><value>正在检查 MSFS 安装...</value></data>
+  <data name="InitialSetup_Status_Searching" xml:space="preserve"><value>正在搜索 MSFS 安装...</value></data>
+  <data name="InitialSetup_Status_Valid" xml:space="preserve"><value>✓ 已选择有效的广播文件夹。</value></data>
+  <data name="InitialSetup_Status_AutoDetectedValid" xml:space="preserve"><value>✓ 从 MSFS 安装自动检测到有效的广播文件夹。</value></data>
+  <data name="InitialSetup_Status_FoundPleaseBrowse" xml:space="preserve"><value>📁 已找到 MSFS 安装。请浏览到你的广播文件夹。</value></data>
+  <data name="InitialSetup_Status_NotFoundAnnouncements" xml:space="preserve"><value>⚠️ 已找到 MSFS 安装，但未找到广播文件夹。请手动选择。</value></data>
+  <data name="InitialSetup_Status_CouldNotAutoDetect" xml:space="preserve"><value>⚠️ 无法自动检测 MSFS 安装。请手动选择广播文件夹。</value></data>
+  <data name="InitialSetup_Status_AutoDetectFailed" xml:space="preserve"><value>⚠️ 自动检测失败。请手动选择包含广播文件的文件夹。</value></data>
+  <data name="InitialSetup_Status_DefaultPackInstalledSelected" xml:space="preserve"><value>✓ 已安装并选中了默认包。</value></data>
+  <data name="InitialSetup_ContinueWithout_Title" xml:space="preserve"><value>不使用声音文件继续？</value></data>
+  <data name="InitialSetup_ContinueWithout_Message" xml:space="preserve"><value>要在未配置声音文件的情况下继续吗？你可以稍后在设置中完成。</value></data>
+  <data name="InitialSetup_InstallingTitle" xml:space="preserve"><value>正在安装默认包</value></data>
+  <data name="InitialSetup_ProgressStarting" xml:space="preserve"><value>开始...</value></data>
+
+  <!-- Common Titles/messages used by setup/install -->
+  <data name="Title_InstallDefaultPack" xml:space="preserve"><value>安装默认包</value></data>
+  <data name="Title_Error" xml:space="preserve"><value>错误</value></data>
+  <data name="Title_Success" xml:space="preserve"><value>成功</value></data>
+  <data name="Msg_SoundFilesLocationUpdated" xml:space="preserve"><value>声音文件位置已成功更新！</value></data>
+  <data name="Msg_DefaultPackExistsOverwrite" xml:space="preserve"><value>已存在默认包。要覆盖现有文件吗？</value></data>
+  <data name="Msg_CantReachGitHub_Format" xml:space="preserve"><value>无法访问 GitHub 或未找到清单。你可能处于离线状态。
+
+打开：{0}</value></data>
+
+  <data name="Msg_InstallFailed_Format" xml:space="preserve"><value>安装失败：{0}</value></data>
+  <data name="Msg_DefaultAnnouncementsInstalled" xml:space="preserve"><value>默认广播已成功安装！</value></data>
+  <data name="Msg_InstallError_Format" xml:space="preserve"><value>安装错误：{0}</value></data>
+  <data name="Tray_LightTest" xml:space="preserve"><value>灯光测试</value></data>
+  <data name="Tray_Exit" xml:space="preserve"><value>退出</value></data>
+  <data name="Tray_CurrentStateAutoDetecting" xml:space="preserve"><value>自动检测...</value></data>
+  <data name="Tray_PlayingPrefix" xml:space="preserve"><value>正在播放：</value></data>
+  <data name="Tray_ManualTag" xml:space="preserve"><value>手动</value></data>
+  <data name="Tray_AutoTag" xml:space="preserve"><value>自动</value></data>
+  <data name="Balloon_UpdateAvailableTitle" xml:space="preserve"><value>Universal Announcer - 发现更新</value></data>
+  <data name="Balloon_UpdateWarning" xml:space="preserve"><value>警告：当前版本已过期（当前：{0}，最新：{1}）。
+点击此处打开 GitHub 下载最新版本。</value></data>
+  <data name="Balloon_ReadyTitle" xml:space="preserve"><value>Universal Announcer</value></data>
+  <data name="Balloon_ReadyMessage" xml:space="preserve"><value>Universal Announcer 已准备就绪！
+{0}
+
+💡 应用在系统托盘运行（右下角）。右键图标打开控制项。</value></data>
+  <data name="Balloon_IssueMessage" xml:space="preserve"><value>Universal Announcer 已运行，但音频文件存在问题。
+{0}
+
+💡 右键托盘图标 → 设置 进行配置。</value></data>
+  <data name="Balloon_GenericMessage" xml:space="preserve"><value>Universal Announcer 已运行并准备好进行广播。
+
+💡 应用在系统托盘（右下角）。</value></data>
+  <data name="Balloon_SoundStatus_Format" xml:space="preserve"><value>找到 {0} 个音频文件，来自 {1} 家航司</value></data>
+  <data name="Balloon_SoundStatus_NotConfigured" xml:space="preserve"><value>未配置广播文件夹</value></data>
+  <data name="Balloon_SoundStatus_NotFound_Format" xml:space="preserve"><value>未找到广播文件夹：{0}</value></data>
+  <data name="Balloon_SoundStatus_None" xml:space="preserve"><value>广播文件夹内未找到音频文件</value></data>
+
+  <!-- Error/MessageBox titles and messages -->
+  <data name="Error_AlreadyRunningTitle" xml:space="preserve"><value>已在运行</value></data>
+  <data name="Error_AlreadyRunningMessage" xml:space="preserve"><value>Universal Announcer 已在运行。</value></data>
+  <data name="Error_StartupTitle" xml:space="preserve"><value>启动错误</value></data>
+  <data name="Error_CriticalAppTitle" xml:space="preserve"><value>应用程序错误</value></data>
+  <data name="Error_CriticalAppFormat" xml:space="preserve"><value>严重应用错误：{0}
+
+日志：{1}</value></data>
+  <data name="Error_UIThreadTitle" xml:space="preserve"><value>UI 线程错误</value></data>
+  <data name="Error_UIThreadFormat" xml:space="preserve"><value>UI 线程错误：{0}
+
+日志：{1}</value></data>
+  <data name="Error_DomainTitle" xml:space="preserve"><value>域错误</value></data>
+  <data name="Error_DomainFormat" xml:space="preserve"><value>域错误：{0}
+
+日志：{1}</value></data>
+  <data name="Title_Generate" xml:space="preserve"><value>生成</value></data>
+  <data name="Title_GenerateAll" xml:space="preserve"><value>全部生成</value></data>
+  <data name="Title_LogFile" xml:space="preserve"><value>日志文件</value></data>
+  <data name="Title_LogFileLocation" xml:space="preserve"><value>日志文件位置</value></data>
+  <data name="Title_OpenFolder" xml:space="preserve"><value>打开文件夹</value></data>
+  <data name="Title_RevertTemplate" xml:space="preserve"><value>还原模板</value></data>
+  <data name="Title_SaveTemplate" xml:space="preserve"><value>保存模板</value></data>
+  <data name="Title_StartupError" xml:space="preserve"><value>启动错误</value></data>
+  <data name="Title_StartWithMsfs" xml:space="preserve"><value>随 MSFS 启动</value></data>
+
+  <!-- 缺失的消息补齐 -->
+  <data name="Msg_CriticalStartup_Format" xml:space="preserve"><value>启动期间发生严重错误：{0}
+
+日志位置：{1}</value></data>
+  <data name="Msg_EncodingFailed_Format" xml:space="preserve"><value>编码失败：{0}</value></data>
+  <data name="Msg_ErrorOpeningAbout_Format" xml:space="preserve"><value>打开关于对话框出错：{0}</value></data>
+  <data name="Msg_ErrorOpeningLightTest_Format" xml:space="preserve"><value>打开灯光测试出错：{0}</value></data>
+  <data name="Msg_ErrorOpeningSettings_Format" xml:space="preserve"><value>打开设置出错：{0}</value></data>
+  <data name="Msg_FileExists_OverwriteFormat" xml:space="preserve"><value>文件已存在：
+{0}
+是否覆盖？</value></data>
+  <data name="Msg_GenerateAllConfigFirst" xml:space="preserve"><value>请先配置“声音文件”文件夹（“声音文件”选项卡）</value></data>
+  <data name="Msg_GenerateAllConfirm_Format" xml:space="preserve"><value>安装 {0} 个默认公告到：
+{1}
+
+将开始一个短暂的下载。</value></data>
+  <data name="Msg_GenerateAllFailed_Format" xml:space="preserve"><value>“全部生成”失败：{0}</value></data>
+  <data name="Msg_GenerateAllSelectAirline" xml:space="preserve"><value>请选择要生成到的航空公司（不允许 Default）。</value></data>
+  <data name="Msg_Generated_Format" xml:space="preserve"><value>已生成：{0}</value></data>
+  <data name="Msg_GenerateThereIsNoText" xml:space="preserve"><value>没有可生成的公告文本。</value></data>
+  <data name="Msg_GenerationFailed_Format" xml:space="preserve"><value>生成失败：{0}</value></data>
+  <data name="Msg_GenericInfo_Format" xml:space="preserve"><value>{0}</value></data>
+  <data name="Msg_InstallDefaultPackConfirm_Format" xml:space="preserve"><value>安装 {0} 个默认公告到：
+{1}
+
+将开始一个短暂的下载。</value></data>
+  <data name="Msg_LogFileNotFound_Format" xml:space="preserve"><value>未在以下位置找到日志文件：{0}</value></data>
+  <data name="Msg_NoOverrideFound" xml:space="preserve"><value>未找到可还原的覆盖文件。</value></data>
+  <data name="Msg_OpenFolderFailed_Format" xml:space="preserve"><value>打开文件夹失败：{0}</value></data>
+  <data name="Msg_OpenFolderNotSet" xml:space="preserve"><value>“声音文件”位置未设置或不存在。</value></data>
+  <data name="Msg_OpenLinkError_Format" xml:space="preserve"><value>打开链接出错：{0}</value></data>
+  <data name="Msg_OpenLogError_Format" xml:space="preserve"><value>打开日志文件出错：{0}</value></data>
+  <data name="Msg_RevertedAirline_Format" xml:space="preserve"><value>已还原 {1}.txt 的 {0} 覆盖</value></data>
+  <data name="Msg_RevertedDefault_Format" xml:space="preserve"><value>已还原 {0}.txt 的 Default 覆盖</value></data>
+  <data name="Msg_RevertFailed_Format" xml:space="preserve"><value>还原失败：{0}</value></data>
+  <data name="Msg_SavedTo_Format" xml:space="preserve"><value>已保存到 {0}: {1}.txt</value></data>
+  <data name="Msg_SaveFailed_Format" xml:space="preserve"><value>保存失败：{0}</value></data>
+  <data name="Msg_SelectAirlineGenerate" xml:space="preserve"><value>请选择要生成到的航空公司（不允许 Default）。</value></data>
+  <data name="Msg_SelectTemplateFirst" xml:space="preserve"><value>请先选择一个模板名称。</value></data>
+  <data name="Msg_SetAnnouncementsFolderFailed" xml:space="preserve"><value>无法设置公告文件夹。请重试，或在无声音文件的情况下继续。</value></data>
+  <data name="Msg_SoundFileNotFound_Format" xml:space="preserve"><value>未找到声音文件：{0}</value></data>
+  <data name="Msg_SoundFilesConfigFirst" xml:space="preserve"><value>请先配置声音文件文件夹（“声音文件”选项卡）</value></data>
+  <data name="Msg_TTSTestFailed_Format" xml:space="preserve"><value>TTS 测试失败：{0}</value></data>
+  <data name="Msg_UseNewDefaultPackAsLocationConfirm_Format" xml:space="preserve"><value>是否将新安装的 Default 包作为声音文件位置？
+
+{0}</value></data>
+
+  <!-- First Time Dialog -->
+  <data name="FirstTime_Title" xml:space="preserve"><value>欢迎使用 Universal Announcer</value></data>
+  <data name="FirstTime_WelcomeTitle" xml:space="preserve"><value>欢迎——它去哪了？</value></data>
+  <data name="FirstTime_Message" xml:space="preserve"><value>Universal Announcer 现在在后台运行，并会在你使用 Microsoft Flight Simulator 飞行时自动播放客舱广播。
+
+应用会最小化到系统托盘（屏幕右下角靠近时钟的区域）。
+
+如何打开设置或控制应用：
+• 右键单击系统托盘中的 Universal Announcer 图标
+• 双击图标以打开设置
+• 使用上下文菜单控制飞行状态、音量等</value></data>
+  <data name="FirstTime_Ok" xml:space="preserve"><value>知道了！</value></data>
+</root>
+
