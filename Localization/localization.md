@@ -14,8 +14,9 @@ We recommend the free **ResX Resource Manager (RRM)** app:
 
 ---
 
-## 2. Get the Files
-- Go to our GitHub repo and locate the `Strings.resx` files here.
+## 2. Get the Files (Fork first)
+- If you plan to contribute back, first click **Fork** on GitHub. Then clone your fork locally or use the GitHub web editor.
+- The `.resx` files live in `Localization/` here: [Localization folder](https://github.com/fearlessfrog/MSFS_Universal_Announcer/tree/main/Localization).
 - Files you’ll see:
 
   - `Strings.resx` → base English (**do not edit, will be added to over time**)
@@ -45,10 +46,9 @@ If your language is missing, copy `Strings.resx` → `Strings.xx.resx`, where `x
 ---
 
 ## 4. Submit Your Contribution
-1. **Fork** the repository on GitHub.
-2. **Commit** your updated `Strings.xx.resx` file(s).
-3. Use a clear message like `Update French translations` or `Add Portuguese (Brazil) translations`.
-4. Open a **Pull Request**.
+1. **Commit** your updated `Strings.xx.resx` file(s) to your fork (or use GitHub: Add file → Upload files).
+2. Use a clear message like `Update French translations` or `Add Portuguese (Brazil) translations`.
+3. Open a **Pull Request** to `main`.
 
 ---
 
