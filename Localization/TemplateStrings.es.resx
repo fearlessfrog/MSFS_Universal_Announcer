@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+
+  <data name="Template_AfterLanding" xml:space="preserve">
+    <value>Señoras y señores, la tripulación de cabina abandonará sus asientos en breve para realizar tareas relacionadas con la seguridad. Les rogamos que permanezcan sentados hasta que se apague la señal de abrocharse el cinturón. Ahora pueden utilizar dispositivos electrónicos portátiles para mensajería, llamadas o acceso a Internet. Asegúrense de llevar consigo todas sus pertenencias, comprobando la bolsa del asiento, debajo del asiento y los compartimentos superiores. Tengan cuidado al abrir los compartimentos, ya que los objetos pueden haberse desplazado durante el vuelo. No está permitido fumar hasta llegar a una zona designada. En nombre del comandante y la tripulación, ha sido un placer atenderles hoy. Nuestro personal en tierra les ayudará a completar su viaje.</value>
+  </data>
+
+  <data name="Template_ArmDoors" xml:space="preserve">
+    <value>Tripulación de cabina, armen las puertas y realicen verificación cruzada.</value>
+  </data>
+
+  <data name="Template_AfterTakeoff" xml:space="preserve">
+    <value>Señoras y señores, por favor mantengan abrochado el cinturón mientras la señal esté encendida. Recomendamos llevarlo abrochado siempre que estén sentados. Los baños se encuentran en ambos extremos de la cabina. Recuerden que está prohibido fumar en todo momento, incluidos los cigarrillos electrónicos. En unos instantes comenzaremos el servicio a bordo con una selección del día. Los detalles están en la revista a bordo. También pueden comprar bebidas calientes, otras bebidas y aperitivos en el bar. Aceptamos las principales tarjetas de crédito y débito. Si necesitan algo más, avísennos cuando pasemos por la cabina.</value>
+  </data>
+
+  <data name="Template_BoardingComplete" xml:space="preserve">
+    <value>Tripulación de cabina, el embarque ha finalizado. El personal de tierra restante debe abandonar la aeronave.</value>
+  </data>
+
+  <data name="Template_BoardingWelcome" xml:space="preserve">
+    <value>Señoras y señores, bienvenidos a bordo. Coloquen los bultos grandes en los compartimentos superiores con las ruedas hacia dentro y mantengan los objetos pequeños bajo el asiento delantero. Esto incluye ordenadores portátiles, bolsos, compras duty-free y prendas sueltas. Si están sentados en una fila de salida de emergencia o en una fila delantera con mamparo, todos los objetos deben ir en los compartimentos superiores. Una vez guardado su equipaje de mano, tomen asiento. Para ayudarnos a salir a tiempo, les pedimos que mantengan el pasillo despejado para que el resto de clientes pueda embarcar. Pueden abrocharse el cinturón para el despegue. Este es un vuelo sin humo. Gracias por respetarlo.</value>
+  </data>
+
+  <data name="Template_BoardingWelcomePilot" xml:space="preserve">
+    <value>Saludos desde cabina de mando, les habla el comandante. Bienvenidos a bordo. Estamos finalizando el embarque y esperamos salir en breve. Durante el vuelo les mantendré informados. Mientras tanto, pónganse cómodos y gracias por volar con nosotros hoy.</value>
+  </data>
+
+  <data name="Template_CabinDimTakeoff" xml:space="preserve">
+    <value>Señoras y señores, en breve atenuaremos las luces de la cabina. Pueden encender una luz de lectura con los controles situados sobre sus cabezas o en el reposabrazos.</value>
+  </data>
+
+  <data name="Template_CallCabinSecureLanding" xml:space="preserve">
+    <value>Comandante, la cabina está asegurada para el aterrizaje.</value>
+  </data>
+
+  <data name="Template_CallCabinSecureTakeoff" xml:space="preserve">
+    <value>Comandante, la cabina está asegurada para el despegue.</value>
+  </data>
+
+  <data name="Template_CrewSeatsLanding" xml:space="preserve">
+    <value>Tripulación de cabina, por favor tomen asiento para el aterrizaje. Gracias.</value>
+  </data>
+
+  <data name="Template_CrewSeatsTakeoff" xml:space="preserve">
+    <value>Tripulación de cabina, asientos para el despegue.</value>
+  </data>
+
+  <data name="Template_CruiseElapsed50Percent" xml:space="preserve">
+    <value>Señoras y señores, les habla el comandante. Hemos alcanzado nuestra altitud de crucero de {xml_number&lt;general&gt;&lt;initial_altitude&gt;} pies en nuestro {AIRCRAFT_NAME} y las condiciones al frente son favorables. En este momento, estamos aproximadamente a la mitad de nuestra ruta hacia {DESTINATION_CITY}, a unos {xml_number&lt;general&gt;&lt;route_distance&gt;} millas de {ORIGIN_CITY}. El tiempo en {DESTINATION_CITY} es {DESTINATION_WEATHER} con {DESTINATION_TEMPERATURE}. Les mantendremos informados al acercarnos al destino. Mientras tanto, relájense y disfruten del servicio a bordo. En nombre de la tripulación, nos alegra tenerles con nosotros hoy. Gracias por elegir {AIRLINE_NAME}.</value>
+  </data>
+
+  <data name="Template_DepartureDelayed" xml:space="preserve">
+    <value>Señoras y señores, les informamos desde cabina de mando: lamentablemente nuestra salida se retrasa. Les mantendremos informados e intentaremos partir lo antes posible. Gracias por su paciencia.</value>
+  </data>
+
+  <data name="Template_DescentSeatbelts" xml:space="preserve">
+    <value>Señoras y señores, aterrizaremos en breve. Asegúrense de que su equipaje de mano está correctamente guardado con el ordenador portátil en su interior. Guarden la mesa, bajen los reposabrazos y abran las persianas. Deben estar sentados con el cinturón abrochado para el aterrizaje. Ayúdennos entregando a la tripulación cualquier basura, periódicos o revistas que no deseen conservar. Los baños ya no están disponibles. Gracias.</value>
+  </data>
+
+  <data name="Template_DisarmDoors" xml:space="preserve">
+    <value>Tripulación de cabina, desarmen las puertas.</value>
+  </data>
+
+  <data name="Template_DisembarkStarted" xml:space="preserve">
+    <value>Señoras y señores, al desembarcar, tengan cuidado y sujeten la barandilla al bajar las escaleras. Vigilen a sus niños y, por su seguridad, no caminen bajo el ala.</value>
+  </data>
+
+  <data name="Template_FastenSeatbelt" xml:space="preserve">
+    <value>Señoras y señores, la señal de abrocharse el cinturón está encendida. Regresen a sus asientos y abróchense el cinturón.</value>
+  </data>
+
+  <data name="Template_PreSafetyBriefing" xml:space="preserve">
+    <value>Señoras y señores, por favor presten atención al miembro de la tripulación más cercano, ya que vamos a demostrar las características de seguridad de esta aeronave. Gracias.</value>
+  </data>
+
+  <data name="Template_SafetyBriefing" xml:space="preserve">
+    <value>Señoras y señores, bienvenidos a bordo. Por favor, presten atención a las señales iluminadas y a las instrucciones de la tripulación, incluidas las siguientes medidas de seguridad. La tarjeta de seguridad en el bolsillo del asiento contiene información importante sobre las salidas de emergencia, las máscaras de oxígeno, los chalecos salvavidas y la posición de seguridad que deben adoptar si escuchan «brace, brace». Este avión cuenta con ocho salidas de emergencia. La tripulación les mostrará ahora las salidas más cercanas; su salida más cercana puede estar detrás de ustedes. La iluminación de emergencia les guiará hacia una salida. En caso de emergencia, dejen todo el equipaje a bordo. El cinturón se abrocha, ajusta y desabrocha como se muestra. Debe estar abrochado siempre que las señales estén encendidas y recomendamos mantenerlo abrochado en todo momento cuando estén sentados. Si falla el suministro de aire, caerán máscaras desde arriba. Tire de una máscara hacia usted para iniciar el flujo de oxígeno. Colóquela sobre la nariz y la boca y respire con normalidad. Sujétela con la cinta, ajuste tirando de ambos lados y póngase la suya antes de ayudar a otros. En caso de amerizaje, tome un chaleco de debajo de su asiento. Sáquelo de la bolsa y póngaselo por la cabeza. Pase las correas alrededor de la cintura y abróchelas. Ajuste tirando de la cinta. No infle el chaleco dentro del avión. Fuera, inflarlo tirando de la anilla. Si no se infla o necesita más aire, sople por el tubo. Hay una luz y un silbato para llamar la atención. La tripulación puede ayudar con chalecos para niños. Guarden la mesa, bajen los reposabrazos, abran las persianas y abrochen sus cinturones. Más información sobre su seguridad a bordo se encuentra en la revista de a bordo. Les deseamos un buen vuelo.</value>
+  </data>
+
+</root>
+

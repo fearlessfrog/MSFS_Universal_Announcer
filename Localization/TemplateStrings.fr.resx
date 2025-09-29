@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+
+  <data name="Template_AfterLanding" xml:space="preserve">
+    <value>Mesdames et messieurs, les membres d’équipage vont bientôt quitter leurs sièges pour effectuer des tâches liées à la sécurité. Nous vous prions toutefois de rester assis jusqu’à l’extinction du signal « attachez vos ceintures ». Vous pouvez désormais utiliser vos appareils électroniques portables pour la messagerie, les appels ou l’accès à Internet. Merci de vérifier que vous n’oubliez aucun effet personnel, y compris dans la pochette de siège, sous votre siège et dans les coffres de rangement. Prenez garde en ouvrant les coffres, des objets ont pu se déplacer pendant le vol. Il est interdit de fumer jusqu’à ce que vous atteigniez une zone fumeurs désignée. Au nom du commandant de bord et de l’équipage, nous avons été ravis de nous occuper de vous aujourd’hui. Notre équipe au sol vous aidera à poursuivre votre voyage.</value>
+  </data>
+
+  <data name="Template_ArmDoors" xml:space="preserve">
+    <value>Équipage cabine, armez les portes et effectuez la vérification croisée.</value>
+  </data>
+
+  <data name="Template_AfterTakeoff" xml:space="preserve">
+    <value>Mesdames et messieurs, veuillez garder votre ceinture attachée tant que le signal est allumé. Nous recommandons de la garder attachée à tout moment lorsque vous êtes assis. Les toilettes se trouvent à chaque extrémité de la cabine. Nous vous rappelons qu’il est interdit de fumer à tout moment, y compris les cigarettes électroniques. Dans quelques instants, nous commencerons le service à bord et vous proposerons une sélection de produits du jour. Vous trouverez tous les détails dans le magazine de bord. Vous pouvez également acheter des boissons chaudes ainsi que des boissons et des en-cas au bar. Nous acceptons la plupart des cartes de crédit et de débit. Si nous pouvons faire quoi que ce soit de plus pour vous, n’hésitez pas à nous le demander lorsque nous passerons en cabine.</value>
+  </data>
+
+  <data name="Template_BoardingComplete" xml:space="preserve">
+    <value>Équipage cabine, l’embarquement est maintenant terminé. Le personnel au sol restant est prié de quitter l’appareil.</value>
+  </data>
+
+  <data name="Template_BoardingWelcome" xml:space="preserve">
+    <value>Mesdames et messieurs, bienvenue à bord de notre vol. Veuillez placer vos grands bagages dans les coffres à bagages, roues vers l’intérieur, et garder vos petits objets sous le siège devant vous, notamment les ordinateurs portables, sacs à main, achats duty free et vêtements. Si vous êtes assis à une issue de secours ou à une rangée avant avec cloison, tous vos effets doivent être rangés dans les coffres. Une fois votre bagage cabine rangé, veuillez prendre place. Afin d’assurer un départ à l’heure, merci de garder l’allée dégagée pour permettre aux autres passagers de s’installer. Vous pouvez maintenant attacher votre ceinture en vue du décollage. Ce vol est entièrement non-fumeur. Merci de respecter cette consigne.</value>
+  </data>
+
+  <data name="Template_BoardingWelcomePilot" xml:space="preserve">
+    <value>Bonjour depuis le poste de pilotage, ici votre commandant de bord. Bienvenue à bord. Nous terminons l’embarquement et prévoyons un départ prochainement. Je reviendrai vers vous pendant le vol pour vous informer de notre progression. En attendant, installez-vous confortablement et merci d’avoir choisi de voyager avec nous aujourd’hui.</value>
+  </data>
+
+  <data name="Template_CabinDimTakeoff" xml:space="preserve">
+    <value>Mesdames et messieurs, nous allons bientôt réduire l’éclairage de la cabine. Vous pouvez allumer une liseuse à l’aide des commandes situées au-dessus de votre tête ou dans votre accoudoir.</value>
+  </data>
+
+  <data name="Template_CallCabinSecureLanding" xml:space="preserve">
+    <value>Commandant, la cabine est sécurisée pour l’atterrissage.</value>
+  </data>
+
+  <data name="Template_CallCabinSecureTakeoff" xml:space="preserve">
+    <value>Commandant, la cabine est sécurisée pour le décollage.</value>
+  </data>
+
+  <data name="Template_CrewSeatsLanding" xml:space="preserve">
+    <value>Équipage cabine, veuillez vous asseoir pour l’atterrissage. Merci.</value>
+  </data>
+
+  <data name="Template_CrewSeatsTakeoff" xml:space="preserve">
+    <value>Équipage cabine, assis pour le décollage.</value>
+  </data>
+
+  <data name="Template_CruiseElapsed50Percent" xml:space="preserve">
+    <value>Mesdames et messieurs, ici le commandant de bord. Nous avons atteint notre altitude de croisière de {xml_number&lt;general&gt;&lt;initial_altitude&gt;} pieds à bord de notre {AIRCRAFT_NAME}. Les conditions sont favorables devant nous. Nous en sommes actuellement à environ la moitié de notre route vers {DESTINATION_CITY}, soit à peu près {xml_number&lt;general&gt;&lt;route_distance&gt;} miles depuis {ORIGIN_CITY}. La météo à {DESTINATION_CITY} est actuellement {DESTINATION_WEATHER} avec une température de {DESTINATION_TEMPERATURE}. Nous vous tiendrons informés à l’approche de la destination. En attendant, détendez-vous et profitez du service à bord. Au nom de l’équipage, nous sommes ravis de vous compter parmi nous aujourd’hui. Merci d’avoir choisi {AIRLINE_NAME}.</value>
+  </data>
+
+  <data name="Template_DepartureDelayed" xml:space="preserve">
+    <value>Mesdames et messieurs, une information depuis le poste de pilotage : notre départ est malheureusement retardé. Nous vous tiendrons informés et ferons le nécessaire pour partir dès que possible. Merci de votre patience.</value>
+  </data>
+
+  <data name="Template_DescentSeatbelts" xml:space="preserve">
+    <value>Mesdames et messieurs, nous allons bientôt atterrir. Veuillez vous assurer que votre bagage cabine est correctement rangé, ordinateur portable à l’intérieur. Votre tablette doit être relevée, les accoudoirs abaissés et les pare-soleil ouverts. Vous devez maintenant être assis avec votre ceinture attachée en vue de l’atterrissage. Merci de nous aider en remettant à l’équipage vos déchets, journaux ou magazines dont vous ne souhaitez pas vous servir. Les toilettes ne sont plus disponibles. Merci.</value>
+  </data>
+
+  <data name="Template_DisarmDoors" xml:space="preserve">
+    <value>Équipage cabine, désarmez les portes.</value>
+  </data>
+
+  <data name="Template_DisembarkStarted" xml:space="preserve">
+    <value>Mesdames et messieurs, lors du débarquement, tenez la rampe et faites attention aux marches. Veillez à surveiller vos enfants et, pour votre sécurité, ne passez pas sous l’aile.</value>
+  </data>
+
+  <data name="Template_FastenSeatbelt" xml:space="preserve">
+    <value>Mesdames et messieurs, le signal « attachez vos ceintures » est maintenant allumé. Veuillez regagner votre siège et attacher votre ceinture.</value>
+  </data>
+
+  <data name="Template_PreSafetyBriefing" xml:space="preserve">
+    <value>Mesdames et messieurs, veuillez prêter attention au membre d’équipage le plus proche, nous allons vous présenter les consignes de sécurité de l’appareil. Merci.</value>
+  </data>
+
+  <data name="Template_SafetyBriefing" xml:space="preserve">
+    <value>Mesdames et messieurs, bienvenue à bord. Merci de prêter attention aux signaux lumineux et aux consignes de l’équipage, y compris les procédures de sécurité suivantes. La fiche de sécurité dans la pochette de votre siège contient des informations importantes sur les issues de secours, les masques à oxygène, les gilets de sauvetage et la position de sécurité (brace) à adopter si vous entendez « brace, brace ». Cet appareil comporte huit issues de secours. L’équipage va vous indiquer les sorties les plus proches ; votre issue la plus proche peut se trouver derrière vous. Un balisage lumineux vous guidera vers une sortie. En cas d’urgence, laissez tous vos bagages à bord. Attachez, ajustez et détachez votre ceinture comme indiqué. Elle doit être attachée lorsque le signal est allumé et nous vous recommandons de la garder attachée en permanence lorsque vous êtes assis. En cas de dépressurisation, des masques tomberont au-dessus de vous. Tirez un masque vers vous pour démarrer l’oxygène. Placez-le sur le nez et la bouche, respirez normalement et ajustez-le à l’aide de la sangle. Mettez d’abord votre propre masque avant d’aider les autres. En cas d’amerrissage, prenez un gilet sous votre siège. Sortez-le de sa pochette et passez-le par la tête. Passez les sangles autour de la taille et clipsez-les, puis ajustez en tirant. Ne gonflez pas le gilet à l’intérieur de l’appareil. À l’extérieur, tirez sur la poignée pour le gonfler. S’il ne se gonfle pas suffisamment, utilisez le tube pour le compléter. Un voyant et un sifflet servent à attirer l’attention. L’équipage peut fournir des gilets pour enfants. Votre tablette doit être relevée, les accoudoirs abaissés, les pare-soleil ouverts et votre ceinture attachée. De plus amples informations relatives à votre sécurité se trouvent dans le magazine de bord. Nous vous souhaitons un excellent vol.</value>
+  </data>
+
+</root>
+

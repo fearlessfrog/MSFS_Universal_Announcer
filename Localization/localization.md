@@ -19,6 +19,7 @@ We recommend the free **ResX Resource Manager (RRM)** app:
 - The `.resx` files live in `Localization/` here: [Localization folder](https://github.com/fearlessfrog/MSFS_Universal_Announcer/tree/main/Localization).
 - Files you’ll see:
 
+User Interface language files:
   - `Strings.resx` → base English (**do not edit, will be added to over time**)
   - `Strings.de.resx` → German
   - `Strings.fr.resx` → French
@@ -27,6 +28,16 @@ We recommend the free **ResX Resource Manager (RRM)** app:
   - `Strings.ja.resx` → Japanese
   - `Strings.zh-Hans.resx` → Chinese (Simplified)
   - `Strings.ko.resx` → Korean
+
+Generated TTS Templates language files:
+  - `TemplateStrings.resx` → base English (**do not edit, will be added to over time**)
+  - `TemplateStrings.de.resx` → German
+  - `TemplateStrings.fr.resx` → French
+  - `TemplateStrings.es.resx` → Spanish
+  - `TemplateStrings.pt-BR.resx` → Portuguese (Brazil)
+  - `TemplateStrings.ja.resx` → Japanese
+  - `TemplateStrings.zh-Hans.resx` → Chinese (Simplified)
+  - `TemplateStrings.ko.resx` → Korean
 
 If your language is missing, copy `Strings.resx` → `Strings.xx.resx`, where `xx` is the [culture code](https://learn.microsoft.com/dotnet/api/system.globalization.cultureinfo?utm_source=chatgpt.com) (e.g. `it` for Italian).
 

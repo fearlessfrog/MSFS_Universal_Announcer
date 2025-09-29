@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+
+  <data name="Template_AfterLanding" xml:space="preserve">
+    <value>各位旅客，客舱乘务员将很快离开座位执行与安全相关的工作。请您继续保持就座，直到系好安全带指示灯熄灭。现在可以使用用于信息、通话或上网的便携式电子设备。请确认随身物品已随身携带，包括检查座椅背袋、座位下方以及头顶行李架。打开行李架时请注意安全，物品在飞行中可能会移动。到达指定的吸烟区前请不要吸烟。谨代表机长和全体机组，感谢各位今天与我们同行。我们的地面团队将协助您顺利完成行程。</value>
+  </data>
+
+  <data name="Template_ArmDoors" xml:space="preserve">
+    <value>客舱乘务员，请武装舱门并交叉检查。</value>
+  </data>
+
+  <data name="Template_AfterTakeoff" xml:space="preserve">
+    <value>各位旅客，在系好安全带指示灯亮起时请系好安全带。我们建议您在就座时始终系好安全带。洗手间位于客舱两端。请注意，任何时候都禁止吸烟，包括电子烟。稍后我们将开始机上服务，为您提供今日的餐饮选择，详情请参阅机上手册。您也可以选购热饮、酒水及小食，我们接受主要的信用卡与借记卡。如需任何帮助，请随时告知，我们即将开始客舱服务。</value>
+  </data>
+
+  <data name="Template_BoardingComplete" xml:space="preserve">
+    <value>客舱乘务员，登机已完成。剩余地面人员请离机。</value>
+  </data>
+
+  <data name="Template_BoardingWelcome" xml:space="preserve">
+    <value>各位旅客，欢迎登机。请将较大的随身行李轮子朝内放入头顶行李架，将小件物品放在前方座位下方，包括笔记本电脑、手提包、免税品及衣物等。如您坐在紧急出口或前排隔板座位，所有物品均须放入头顶行李架。请在妥善安置行李后尽快就座。为确保准时出发，请保持通道畅通，以便其他旅客迅速入座。您现在可以系好安全带，准备起飞。本航班全程禁烟，感谢您的配合。</value>
+  </data>
+
+  <data name="Template_BoardingWelcomePilot" xml:space="preserve">
+    <value>各位旅客，大家好，这里是驾驶舱。欢迎登机。我们正在完成最后的登机工作，预计很快即可出发。飞行途中我会再向您通报进展。在此期间请放松心情，感谢您今日选择与我们同行。</value>
+  </data>
+
+  <data name="Template_CabinDimTakeoff" xml:space="preserve">
+    <value>各位旅客，我们将于稍后调暗客舱照明。您可通过头顶或扶手处的控制按钮开启阅读灯。</value>
+  </data>
+
+  <data name="Template_CallCabinSecureLanding" xml:space="preserve">
+    <value>机长，客舱已准备就绪，准备着陆。</value>
+  </data>
+
+  <data name="Template_CallCabinSecureTakeoff" xml:space="preserve">
+    <value>机长，客舱已准备就绪，准备起飞。</value>
+  </data>
+
+  <data name="Template_CrewSeatsLanding" xml:space="preserve">
+    <value>客舱乘务员，请就坐准备着陆。谢谢。</value>
+  </data>
+
+  <data name="Template_CrewSeatsTakeoff" xml:space="preserve">
+    <value>客舱乘务员，请就坐，准备起飞。</value>
+  </data>
+
+  <data name="Template_CruiseElapsed50Percent" xml:space="preserve">
+    <value>各位旅客，这里是驾驶舱。我们已爬升至巡航高度 {xml_number&lt;general&gt;&lt;initial_altitude&gt;} 英尺，当前乘坐机型为 {AIRCRAFT_NAME}，前方天气情况良好。目前我们已飞行至前往 {DESTINATION_CITY} 航线的大约一半，距离 {ORIGIN_CITY} 约 {xml_number&lt;general&gt;&lt;route_distance&gt;} 英里。目的地 {DESTINATION_CITY} 天气为 {DESTINATION_WEATHER}，气温 {DESTINATION_TEMPERATURE}。接近目的地时我们会继续向您通报。现在请放松心情，享受机上服务。谨代表全体机组，感谢您选择 {AIRLINE_NAME}。</value>
+  </data>
+
+  <data name="Template_DepartureDelayed" xml:space="preserve">
+    <value>各位旅客，这里是驾驶舱通知。很抱歉，我们的出发有所延误。我们会及时向您通报最新情况，并尽快出发。感谢您的耐心等待。</value>
+  </data>
+
+  <data name="Template_DescentSeatbelts" xml:space="preserve">
+    <value>各位旅客，我们即将着陆。请将手提行李妥善安置，笔记本电脑须收入其中。请收起小桌板，放下扶手并打开遮光板。请就座并系好安全带，准备着陆。若有不需要的报纸杂志或垃圾，请交给乘务员。洗手间现在停止使用。谢谢。</value>
+  </data>
+
+  <data name="Template_DisarmDoors" xml:space="preserve">
+    <value>客舱乘务员，请解除舱门武装。</value>
+  </data>
+
+  <data name="Template_DisembarkStarted" xml:space="preserve">
+    <value>各位旅客，下机时请注意安全，握好扶手并小心台阶。请照看好您的儿童，为了安全，请勿从机翼下方通行。</value>
+  </data>
+
+  <data name="Template_FastenSeatbelt" xml:space="preserve">
+    <value>各位旅客，系好安全带指示灯已打开。请返回座位并系好安全带。</value>
+  </data>
+
+  <data name="Template_PreSafetyBriefing" xml:space="preserve">
+    <value>各位旅客，请关注您附近的客舱乘务员。我们即将为您演示本机型的安全须知。谢谢。</value>
+  </data>
+
+  <data name="Template_SafetyBriefing" xml:space="preserve">
+    <value>各位旅客，欢迎登机。请留意客舱内的提示标志及机组人员的指示，并了解以下安全事项。座椅背袋中的安全须知卡包含关于紧急出口、氧气面罩、救生衣以及紧急防护姿势（听到“准备、准备”口令时请立即采取）的重要信息。本机共有八个紧急出口。客舱乘务员现在将为您指示距离您最近的出口，请注意最近可用出口可能在您的身后。紧急情况下，地面或舱内照明将引导您前往出口。遇到紧急情况，请将所有行李留在机上。安全带的系紧、调整及解开方式如图示，安全带指示灯亮起时必须系好，我们建议全程系好。若客舱压力异常，氧气面罩将从上方脱落。拉下面罩以开始供氧，将其罩在口鼻处并正常呼吸，用头带固定并左右拉紧调节，请先为自己佩戴再协助他人。如需水上迫降，请取出座椅下的救生衣，从袋中取出后套在头上，将带子绕过腰部扣好并拉紧。请勿在机舱内给救生衣充气。到达舱外后，拉动充气把手充气；如未完全充气或需要补气，可通过吹气管充气。救生衣配有指示灯与口哨以便引起注意。机组人员可为儿童提供救生衣协助。现在请收起小桌板，放下扶手，打开遮光板并系好安全带。更多安全信息可参见机上杂志。祝您旅途愉快。</value>
+  </data>
+
+</root>
+

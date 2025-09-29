@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+
+  <data name="Template_AfterLanding" xml:space="preserve">
+    <value>皆さま、まもなく客室乗務員は安全に関わる業務のため席を離れます。シートベルトサインが消えるまで、引き続きお座りのままでお待ちください。メッセージ、通話、インターネット接続のための携帯電子機器は、現在ご使用いただけます。座席ポケット、座席下、頭上の手荷物入れをご確認のうえ、お手回り品のお忘れ物がないようご注意ください。手荷物入れを開ける際は、飛行中に荷物が移動している場合がありますのでご注意ください。指定の喫煙エリアに到着するまで、機内ならびに周辺での喫煙はご遠慮ください。機長ならびに乗務員一同、本日はご搭乗いただき誠にありがとうございました。地上係員が皆さまのご移動を引き続きお手伝いいたします。</value>
+  </data>
+
+  <data name="Template_ArmDoors" xml:space="preserve">
+    <value>客室乗務員、ドアをアームし、クロスチェックをお願いします。</value>
+  </data>
+
+  <data name="Template_AfterTakeoff" xml:space="preserve">
+    <value>皆さま、シートベルトサインが点灯している間は、シートベルトを着用ください。着席中は常にシートベルトの着用をおすすめします。化粧室は客室前方および後方にございます。電子タバコを含め、機内は全席禁煙です。間もなく機内サービスを開始いたします。本日のメニューは機内誌をご覧ください。温かいお飲み物、各種ドリンクやスナックも購入いただけます。主要なクレジットカードとデビットカードをご利用いただけます。何かお手伝いが必要な際は、客室を巡回する乗務員までお声がけください。</value>
+  </data>
+
+  <data name="Template_BoardingComplete" xml:space="preserve">
+    <value>客室乗務員、搭乗は完了しました。地上係員は機外へお戻りください。</value>
+  </data>
+
+  <data name="Template_BoardingWelcome" xml:space="preserve">
+    <value>皆さま、本日はご搭乗ありがとうございます。大きなお手荷物は車輪を奥に向けて頭上の手荷物入れへ、小さなお手荷物は前の座席下へお入れください。ノートパソコン、ハンドバッグ、免税品、上着などが含まれます。非常口座席や最前列の席にお座りの方は、すべてのお手荷物を頭上の手荷物入れへお入れください。手荷物収納後は、速やかにご着席ください。定刻出発のため、通路はできるだけお開けください。シートベルトは離陸の準備のため、いまのうちにお締めください。機内は全席禁煙です。ご協力をありがとうございます。</value>
+  </data>
+
+  <data name="Template_BoardingWelcomePilot" xml:space="preserve">
+    <value>皆さま、コックピットより機長がご案内いたします。ご搭乗ありがとうございます。まもなく搭乗を終え、すぐに出発できる見込みです。飛行中も随時ご案内いたしますので、どうぞごゆっくりおくつろぎください。本日は当社便をご利用いただき、誠にありがとうございます。</value>
+  </data>
+
+  <data name="Template_CabinDimTakeoff" xml:space="preserve">
+    <value>皆さま、まもなく客室の照明を暗くいたします。読書灯は頭上または肘掛けのスイッチで点灯いただけます。</value>
+  </data>
+
+  <data name="Template_CallCabinSecureLanding" xml:space="preserve">
+    <value>キャプテン、キャビンは着陸準備が整っております。</value>
+  </data>
+
+  <data name="Template_CallCabinSecureTakeoff" xml:space="preserve">
+    <value>キャプテン、キャビンは離陸準備が整っております。</value>
+  </data>
+
+  <data name="Template_CrewSeatsLanding" xml:space="preserve">
+    <value>客室乗務員は着陸のため着席してください。ありがとうございます。</value>
+  </data>
+
+  <data name="Template_CrewSeatsTakeoff" xml:space="preserve">
+    <value>客室乗務員、離陸のため着席ください。</value>
+  </data>
+
+  <data name="Template_CruiseElapsed50Percent" xml:space="preserve">
+    <value>皆さま、こちらは機長です。ただいま巡航高度 {xml_number&lt;general&gt;&lt;initial_altitude&gt;} フィートに達しました。本機は {AIRCRAFT_NAME} 型機で、前方の気象状況は良好です。現在、{ORIGIN_CITY} から {DESTINATION_CITY} への航路のおよそ半分まで進んでおり、距離にして約 {xml_number&lt;general&gt;&lt;route_distance&gt;} マイルです。目的地 {DESTINATION_CITY} の天候は {DESTINATION_WEATHER}、気温は {DESTINATION_TEMPERATURE} との予報です。到着が近づきましたら、改めてご案内いたします。どうぞごゆっくり機内サービスをお楽しみください。乗務員一同、本日皆さまとご一緒できたことを嬉しく思います。{AIRLINE_NAME} をご利用いただきありがとうございます。</value>
+  </data>
+
+  <data name="Template_DepartureDelayed" xml:space="preserve">
+    <value>皆さま、コックピットよりご案内します。出発が遅れております。最新の状況は随時お知らせし、できるだけ早く出発できるよう努めます。ご理解のほど、ありがとうございます。</value>
+  </data>
+
+  <data name="Template_DescentSeatbelts" xml:space="preserve">
+    <value>皆さま、まもなく着陸いたします。手荷物はノートパソコンを含め、しっかりと収納してください。テーブルはお戻しになり、肘掛けを下げ、窓のシェードを開けてください。着陸に向けて、シートベルトを着用のうえ着席ください。不要な新聞や雑誌、ゴミは客室乗務員にお渡しください。化粧室はただいまよりご利用いただけません。ありがとうございます。</value>
+  </data>
+
+  <data name="Template_DisarmDoors" xml:space="preserve">
+    <value>客室乗務員、ドアのアームを解除してください。</value>
+  </data>
+
+  <data name="Template_DisembarkStarted" xml:space="preserve">
+    <value>皆さま、降機の際は足元にご注意のうえ、手すりをお持ちください。お子さまから目を離さないようお願いいたします。また、安全のため、主翼の下を通行しないでください。</value>
+  </data>
+
+  <data name="Template_FastenSeatbelt" xml:space="preserve">
+    <value>皆さま、シートベルトサインが点灯しています。お席にお戻りになり、シートベルトをお締めください。</value>
+  </data>
+
+  <data name="Template_PreSafetyBriefing" xml:space="preserve">
+    <value>皆さま、まもなく安全のしおりのご案内をいたします。お近くの客室乗務員にご注目ください。ありがとうございます。</value>
+  </data>
+
+  <data name="Template_SafetyBriefing" xml:space="preserve">
+    <value>皆さま、ようこそお乗りくださいました。客室内の表示灯および乗務員の案内にご注意いただき、次の安全についてのご案内をご確認ください。座席ポケットの安全のしおりには、非常口、酸素マスク、救命胴衣および緊急時の姿勢（「ブレース、ブレース」の指示で実施）の重要な情報が記載されています。本機には非常口が8カ所あります。客室乗務員が最寄りの出口をご案内します。最寄りの出口は後方にある場合があります。非常時には照明が出口まで誘導します。緊急時には手荷物はお持ちにならないでください。シートベルトの締め方、調整方法、外し方は図の通りです。サイン点灯中は必ず着用し、着席中の常時着用をおすすめします。客室の気圧が低下した場合、上方からマスクが落下します。マスクを手前に引いて酸素の供給を開始し、口と鼻を覆って通常通り呼吸してください。バンドで固定し、左右から引いて調整します。まずご自身のマスクを装着し、その後周りの方をお手伝いください。水上不時着の際は、座席下の救命胴衣をご使用ください。袋から取り出して頭からかぶり、ベルトを腰に回してバックルを留めます。ストラップを引いて調整してください。機内では救命胴衣を膨らませないでください。機外でタブを引いて膨らませます。不十分な場合はチューブから空気を入れてください。ライトとホイッスルが備わっています。子ども用の救命胴衣については乗務員がお手伝いします。テーブルを収納し、肘掛けを下げ、シェードを開け、シートベルトを着用してください。機内安全に関する詳細は機内誌をご覧ください。よいご旅行を。</value>
+  </data>
+
+</root>
+

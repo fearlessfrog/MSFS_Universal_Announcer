@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="Template_AfterLanding" xml:space="preserve">
+    <value>Meine Damen und Herren, die Kabinenbesatzung wird in Kürze ihre Sitze verlassen, um sicherheitsrelevante Aufgaben durchzuführen. Wir bitten Sie dennoch, angeschnallt zu bleiben, bis das Anschnallzeichen ausgeschaltet wurde. Tragbare elektronische Geräte für Nachrichten, Anrufe oder Internetzugang dürfen jetzt verwendet werden. Bitte stellen Sie sicher, dass Sie alle Ihre persönlichen Gegenstände mitnehmen und überprüfen Sie die Sitztasche, unter dem Sitz und die Gepäckfächer über Ihnen. Seien Sie vorsichtig beim Öffnen der Gepäckfächer, da sich Gegenstände während des Fluges verschoben haben könnten. Rauchen ist erst in ausgewiesenen Bereichen gestattet. Im Namen des Kapitäns und der Besatzung war es uns eine Freude, Sie heute zu betreuen. Unser Bodenpersonal hilft Ihnen gerne, Ihre Weiterreise abzuschließen.</value>
+  </data>
+  <data name="Template_ArmDoors" xml:space="preserve">
+    <value>Kabinenbesatzung, Türen scharfschalten und gegenprüfen.</value>
+  </data>
+  <data name="Template_AfterTakeoff" xml:space="preserve">
+    <value>Meine Damen und Herren, bitte halten Sie Ihren Sicherheitsgurt geschlossen, solange das Anschnallzeichen eingeschaltet ist. Wir empfehlen, den Gurt jederzeit angelegt zu lassen, wenn Sie sitzen. Die Toiletten befinden sich an beiden Enden der Kabine. Bitte beachten Sie, dass das Rauchen zu keiner Zeit gestattet ist – dies gilt auch für E-Zigaretten. In wenigen Minuten beginnen wir mit dem Bordservice und bieten Ihnen eine Auswahl frischer Speisen und Getränke an. Details finden Sie in der Bordbroschüre. Zudem können Sie warme Getränke sowie weitere Getränke und Snacks aus der Bar erwerben. Wir akzeptieren alle gängigen Kredit- und Debitkarten. Wenn wir Ihnen weiterhelfen können, sprechen Sie uns bitte an – wir kommen gleich durch die Kabine.</value>
+  </data>
+  <data name="Template_BoardingComplete" xml:space="preserve">
+    <value>Kabinenbesatzung, das Boarding ist nun abgeschlossen. Verbleibendes Bodenpersonal bitte das Flugzeug verlassen.</value>
+  </data>
+  <data name="Template_BoardingWelcome" xml:space="preserve">
+    <value>Meine Damen und Herren, willkommen an Bord unseres Fluges. Bitte verstauen Sie größere Gepäckstücke in den Gepäckfächern über Ihnen (Rollen zuerst) und kleinere Gegenstände unter dem Vordersitz. Dazu zählen Laptops, Handtaschen, Duty-free-Artikel und lose Kleidungsstücke. Wenn Sie an einem Notausgang oder in einer vorderen Reihe mit Trennwand sitzen, müssen alle Gegenstände in den Gepäckfächern verstaut werden. Nachdem Sie Ihr Handgepäck sicher verstaut haben, nehmen Sie bitte Platz. Um einen pünktlichen Abflug zu unterstützen, halten Sie bitte den Gang frei, damit alle verbleibenden Gäste zügig einsteigen können. Sie können Ihren Sicherheitsgurt nun für den Start schließen. An Bord gilt ein striktes Rauchverbot. Vielen Dank für Ihr Verständnis.</value>
+  </data>
+  <data name="Template_BoardingWelcomePilot" xml:space="preserve">
+    <value>Guten Tag aus dem Cockpit, hier spricht Ihr Kapitän. Willkommen an Bord. Wir beenden gerade das Boarding und erwarten in Kürze unseren Abflug. Ich melde mich im Verlauf des Fluges mit weiteren Informationen. Machen Sie es sich bis dahin bitte bequem und vielen Dank, dass Sie heute mit uns fliegen.</value>
+  </data>
+  <data name="Template_CabinDimTakeoff" xml:space="preserve">
+    <value>Meine Damen und Herren, wir werden in Kürze die Kabinenbeleuchtung dimmen. Sie können die Leselampe mit den Bedienelementen über Ihrem Sitz oder in der Armlehne einschalten.</value>
+  </data>
+  <data name="Template_CallCabinSecureLanding" xml:space="preserve">
+    <value>Captain, die Kabine ist für die Landung gesichert.</value>
+  </data>
+  <data name="Template_CallCabinSecureTakeoff" xml:space="preserve">
+    <value>Captain, die Kabine ist für den Start gesichert.</value>
+  </data>
+  <data name="Template_CrewSeatsLanding" xml:space="preserve">
+    <value>Kabinenbesatzung, bitte jetzt für die Landung hinsetzen. Vielen Dank.</value>
+  </data>
+  <data name="Template_CrewSeatsTakeoff" xml:space="preserve">
+    <value>Kabinenbesatzung, Sitze für den Start einnehmen.</value>
+  </data>
+  <data name="Template_CruiseElapsed50Percent" xml:space="preserve">
+    <value>Meine Damen und Herren, hier spricht Ihr Kapitän aus dem Cockpit. Wir haben nun unsere Reiseflughöhe von {xml_number&lt;general&gt;&lt;initial_altitude&gt;} Fuß in unserer {AIRCRAFT_NAME} erreicht, und die Wetterlage vor uns ist ruhig. Wir befinden uns derzeit etwa auf halber Strecke nach {DESTINATION_CITY}, das sind ungefähr {xml_number&lt;general&gt;&lt;route_distance&gt;} Meilen von {ORIGIN_CITY}. Das Wetter in {DESTINATION_CITY} ist derzeit {DESTINATION_WEATHER} bei {DESTINATION_TEMPERATURE}. Wir halten Sie auf dem Laufenden, wenn wir uns dem Ziel nähern. Lehnen Sie sich bis dahin zurück und genießen Sie den Service an Bord. Im Namen der Besatzung freuen wir uns, Sie heute an Bord zu haben. Vielen Dank, dass Sie mit {AIRLINE_NAME} fliegen.</value>
+  </data>
+  <data name="Template_DepartureDelayed" xml:space="preserve">
+    <value>Meine Damen und Herren, eine kurze Information aus dem Cockpit: Leider verzögert sich unser Abflug. Wir halten Sie auf dem Laufenden und sind bemüht, so schnell wie möglich zu starten. Vielen Dank für Ihre Geduld.</value>
+  </data>
+  <data name="Template_DescentSeatbelts" xml:space="preserve">
+    <value>Meine Damen und Herren, wir landen in Kürze. Bitte verstauen Sie Ihr Handgepäck sicher, inklusive Laptops. Klappen Sie den Tisch ein, senken Sie die Armlehnen und öffnen Sie die Fensterblende. Setzen Sie sich jetzt bitte hin und schließen Sie Ihren Sicherheitsgurt. Helfen Sie uns, indem Sie nicht benötigte Zeitungen und Abfälle an die Crew übergeben. Die Toiletten stehen ab sofort nicht mehr zur Verfügung. Vielen Dank.</value>
+  </data>
+  <data name="Template_DisarmDoors" xml:space="preserve">
+    <value>Kabinenbesatzung, Türen entschärfen.</value>
+  </data>
+  <data name="Template_DisembarkStarted" xml:space="preserve">
+    <value>Meine Damen und Herren, beim Aussteigen halten Sie sich bitte am Handlauf fest und achten Sie auf die Stufen. Bitte beaufsichtigen Sie Ihre Kinder und gehen Sie aus Sicherheitsgründen nicht unter der Tragfläche hindurch.</value>
+  </data>
+  <data name="Template_FastenSeatbelt" xml:space="preserve">
+    <value>Meine Damen und Herren, das Anschnallzeichen ist nun eingeschaltet. Bitte kehren Sie zu Ihrem Platz zurück und schließen Sie Ihren Sicherheitsgurt.</value>
+  </data>
+  <data name="Template_PreSafetyBriefing" xml:space="preserve">
+    <value>Meine Damen und Herren, bitte achten Sie auf die Kabinenbesatzung in Ihrer Nähe. Wir demonstrieren gleich die Sicherheitsfunktionen unseres Flugzeugs. Vielen Dank.</value>
+  </data>
+  <data name="Template_SafetyBriefing" xml:space="preserve">
+    <value>Meine Damen und Herren, willkommen an Bord. Bitte beachten Sie die leuchtenden Hinweisschilder und die Anweisungen der Crew, einschließlich der folgenden Sicherheitsinformationen. Die Sicherheitskarte in Ihrer Sitztasche enthält wichtige Hinweise zu Notausgängen, Sauerstoffmasken, Schwimmwesten und der Brace-Position, die Sie bei der Anweisung „Brace, Brace“ einnehmen müssen. Dieses Flugzeug verfügt über acht Notausgänge. Die Kabinenbesatzung weist Ihnen nun die nächstgelegenen Ausgänge. Bitte beachten Sie, dass sich der nächste geeignete Ausgang auch hinter Ihnen befinden kann. Bodenmarkierungen und Beleuchtung führen Sie im Notfall zu einem Ausgang. Lassen Sie im Notfall sämtliches Gepäck zurück. Ihren Sicherheitsgurt schließen, anpassen und öffnen Sie wie gezeigt. Er muss immer geschlossen sein, wenn das Anschnallzeichen leuchtet; wir empfehlen, ihn während des gesamten Fluges geschlossen zu halten. Sollte die Luftversorgung ausfallen, fallen Masken aus der Decke. Ziehen Sie eine Maske zu sich, um den Sauerstofffluss zu starten. Setzen Sie die Maske über Mund und Nase und atmen Sie normal. Halten Sie die Maske mit dem Band fest, ziehen Sie an beiden Seiten, um sie anzupassen, und setzen Sie zuerst Ihre eigene Maske auf, bevor Sie anderen helfen. Bei einer Wasserlandung nehmen Sie eine Schwimmweste unter Ihrem Sitz hervor. Nehmen Sie sie aus der Hülle und ziehen Sie sie über den Kopf. Führen Sie die Bänder um die Taille und schließen Sie sie. Ziehen Sie am Gurt, um anzupassen. Blasen Sie die Weste nicht im Flugzeug auf. Draußen blasen Sie sie durch Ziehen an der Lasche auf. Falls erforderlich, blasen Sie über das Mundventil nach. Es gibt eine Lampe und eine Pfeife, um Aufmerksamkeit zu erregen. Die Crew hilft Ihnen bei Kinder-Schwimmwesten. Klappen Sie den Tisch ein, senken Sie die Armlehnen, öffnen Sie die Fensterblende und schließen Sie Ihren Sicherheitsgurt. Weitere Informationen zu Ihrer Sicherheit an Bord finden Sie in der Bordzeitung. Wir wünschen Ihnen einen angenehmen Flug.</value>
+  </data>
+</root>
+
