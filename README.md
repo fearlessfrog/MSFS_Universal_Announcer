@@ -71,6 +71,23 @@ You can also enable "Start with MSFS" in the Status tab to have the sim launch t
 
 If not sure how to set up the folders, take a look [HERE](https://fearlessfrog.github.io/MSFS_Universal_Announcer/howtofiles.html)
 
+### 🌐 Localization
+
+Help translate the app to a new language or update existing translations. Start here:
+
+- Guide: [Localization](https://fearlessfrog.github.io/MSFS_Universal_Announcer/localization.html)
+
+Current Languages:
+
+- English (base) — `Strings.resx`
+- German (de) — `Strings.de.resx`
+- French (fr) — `Strings.fr.resx`
+- Spanish (es) — `Strings.es.resx`
+- Portuguese (Brazil) (pt-BR) — `Strings.pt-BR.resx`
+- Japanese (ja) — `Strings.ja.resx`
+- Chinese (Simplified) (zh-Hans) — `Strings.zh-Hans.resx`
+- Korean (ko) — `Strings.ko.resx`
+
 ## 🔧 Configuration
 
 Set up your Simbrief username in the Settings / Integrations tab to fetch your last plan automatically.
