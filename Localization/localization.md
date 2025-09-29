@@ -5,7 +5,7 @@ Thanks for helping localize this project! We use standard `.resx` resource files
 ---
 
 ## 1. Install the Translation Tool
-We recommend the free **ResX Resource Manager (RRM)** app:
+To edit the files I recommend the free **ResX Resource Manager (RRM)** app. It's free and open source and you can use anything you like that edits resource files. Info on ResX here [ResX Github](https://github.com/dotnet/ResXResourceManager)
 
 - Download the **ClickOnce standalone app** here:
   👉 [ResX Resource Manager ClickOnce Standalone](https://clickonce-tom-englert.azurewebsites.net/ResXResourceManager/ResXManager.application)
