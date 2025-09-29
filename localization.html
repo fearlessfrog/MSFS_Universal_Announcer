@@ -3,6 +3,7 @@ layout: default
 title: Localization
 ---
 
-{% raw %}{% include_relative Localization/localization.md %}{% endraw %}
+{% capture md %}{% include_relative Localization/localization.md %}{% endcapture %}
+{{ md | markdownify }}
 
 
