@@ -8,6 +8,7 @@
   <data name="Status_Connection" xml:space="preserve"><value>Verbindung: {0}</value></data>
   <data name="Status_CurrentState" xml:space="preserve"><value>Aktueller Zustand: {0}</value></data>
   <data name="Status_Aircraft" xml:space="preserve"><value>Flugzeug: {0}</value></data>
+  <data name="Status_AircraftNone" xml:space="preserve"><value>Keine Flugzeug- oder Airline-Daten</value></data>
   <data name="Status_CurrentlyPlaying" xml:space="preserve"><value>Aktuell wiedergegeben: {0}</value></data>
   <data name="Status_MSFS" xml:space="preserve"><value>MSFS: {0}</value></data>
   <data name="None" xml:space="preserve"><value>Keine</value></data>
@@ -40,7 +41,10 @@
   <data name="Btn_Postflight" xml:space="preserve"><value>Nachflug</value></data>
   <data name="Btn_CloseApp" xml:space="preserve"><value>App schließen</value></data>
   <data name="Cbx_StartWithMsfs" xml:space="preserve"><value>Mit MSFS starten</value></data>
-  <data name="Cbx_AlwaysShowWindow" xml:space="preserve"><value>Beim Start immer als Fenster anzeigen</value></data>
+  <data name="Cbx_AlwaysShowWindow" xml:space="preserve"><value>Dieses Fenster beim Start der App anzeigen</value></data>
+  <data name="Status_WaitingFor" xml:space="preserve"><value>Warten auf: {0}</value></data>
+  <data name="Status_NextAnnouncement" xml:space="preserve"><value>Nächste Ansage: {0}</value></data>
+  <data name="Btn_PlayNext" xml:space="preserve"><value>Nächste abspielen</value></data>
 
   <!-- Tabs -->
   <data name="Tab_Audio" xml:space="preserve"><value>Audio</value></data>
@@ -65,6 +69,8 @@
   <data name="Audio_ExternalLabel" xml:space="preserve"><value>Außenansicht:</value></data>
   <data name="Audio_CameraDesc" xml:space="preserve"><value>Keine einfache Erkennung der Kabine — Näherung. Kann auch Cockpit-QuickViews sein.</value></data>
   <data name="Audio_AssumeQuickViewsAsCabin" xml:space="preserve"><value>Cockpit-QuickViews als Kabine annehmen</value></data>
+  <data name="Audio_ForegroundOnly" xml:space="preserve"><value>Nur abspielen, wenn MSFS oder diese App den Fokus hat</value></data>
+  <data name="Audio_ForegroundOnly_Tooltip" xml:space="preserve"><value>Wenn aktiviert, sind Ansagen nur hörbar, wenn Microsoft Flight Simulator oder dieses Einstellungsfenster den Fokus hat. Audio läuft im Hintergrund stumm weiter.</value></data>
 
   <!-- Sound Files tab -->
   <data name="SoundFiles_LocationGroup" xml:space="preserve"><value>Speicherort der Sounddateien</value></data>

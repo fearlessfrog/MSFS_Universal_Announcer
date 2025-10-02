@@ -8,6 +8,7 @@
   <data name="Status_Connection" xml:space="preserve"><value>连接：{0}</value></data>
   <data name="Status_CurrentState" xml:space="preserve"><value>当前状态：{0}</value></data>
   <data name="Status_Aircraft" xml:space="preserve"><value>机型：{0}</value></data>
+  <data name="Status_AircraftNone" xml:space="preserve"><value>无机型或航司数据</value></data>
   <data name="Status_CurrentlyPlaying" xml:space="preserve"><value>当前播放：{0}</value></data>
   <data name="Status_MSFS" xml:space="preserve"><value>MSFS：{0}</value></data>
   <data name="None" xml:space="preserve"><value>无</value></data>
@@ -40,7 +41,15 @@
   <data name="Btn_Postflight" xml:space="preserve"><value>落地后</value></data>
   <data name="Btn_CloseApp" xml:space="preserve"><value>关闭应用</value></data>
   <data name="Cbx_StartWithMsfs" xml:space="preserve"><value>随 MSFS 启动</value></data>
-  <data name="Cbx_AlwaysShowWindow" xml:space="preserve"><value>启动时始终显示为窗口</value></data>
+  <data name="Cbx_AlwaysShowWindow" xml:space="preserve"><value>应用启动时显示此窗口</value></data>
+  <data name="Status_WaitingFor" xml:space="preserve"><value>等待条件：{0}</value></data>
+  <data name="Status_NextAnnouncement" xml:space="preserve"><value>下一个公告：{0}</value></data>
+  <data name="Btn_PlayNext" xml:space="preserve"><value>播放下一个</value></data>
+  <data name="Tray_WaitingForPrefix" xml:space="preserve"><value>等待条件：</value></data>
+  <data name="Tray_NextAnnouncementPrefix" xml:space="preserve"><value>下一个公告：</value></data>
+  <data name="Tray_WaitingFor" xml:space="preserve"><value>等待条件：{0}</value></data>
+  <data name="Tray_NextAnnouncement" xml:space="preserve"><value>下一个公告：{0}</value></data>
+  <data name="Tray_PlayNext" xml:space="preserve"><value>播放下一个</value></data>
 
   <!-- Tabs -->
   <data name="Tab_Audio" xml:space="preserve"><value>音频</value></data>
@@ -65,6 +74,8 @@
   <data name="Audio_ExternalLabel" xml:space="preserve"><value>外部视角：</value></data>
   <data name="Audio_CameraDesc" xml:space="preserve"><value>无法可靠识别客舱，仅作近似判断；也可能是座舱快速视角。</value></data>
   <data name="Audio_AssumeQuickViewsAsCabin" xml:space="preserve"><value>将座舱快速视角视为客舱</value></data>
+  <data name="Audio_ForegroundOnly" xml:space="preserve"><value>仅在 MSFS 或本应用获得焦点时播放</value></data>
+  <data name="Audio_ForegroundOnly_Tooltip" xml:space="preserve"><value>启用后，仅当 Microsoft Flight Simulator 或此设置窗口获得焦点时才可听到广播。后台播放将静音继续。</value></data>
 
   <!-- Sound Files tab -->
   <data name="SoundFiles_LocationGroup" xml:space="preserve"><value>音频文件位置</value></data>

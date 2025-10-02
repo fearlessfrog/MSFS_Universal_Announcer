@@ -69,6 +69,7 @@
   <data name="Status_Connection" xml:space="preserve"><value>Connexion : {0}</value></data>
   <data name="Status_CurrentState" xml:space="preserve"><value>État actuel : {0}</value></data>
   <data name="Status_Aircraft" xml:space="preserve"><value>Appareil : {0}</value></data>
+  <data name="Status_AircraftNone" xml:space="preserve"><value>Aucune donnée d’appareil ou de compagnie</value></data>
   <data name="Status_CurrentlyPlaying" xml:space="preserve"><value>Lecture en cours : {0}</value></data>
   <data name="Status_MSFS" xml:space="preserve"><value>MSFS : {0}</value></data>
   <data name="None" xml:space="preserve"><value>Aucun</value></data>
@@ -111,7 +112,15 @@
   <data name="Btn_Seatbelt" xml:space="preserve"><value>Ceinture</value></data>
 
   <data name="Cbx_StartWithMsfs" xml:space="preserve"><value>Démarrer avec MSFS</value></data>
-  <data name="Cbx_AlwaysShowWindow" xml:space="preserve"><value>Toujours afficher en fenêtre au démarrage</value></data>
+  <data name="Cbx_AlwaysShowWindow" xml:space="preserve"><value>Afficher cette fenêtre au démarrage de l’application</value></data>
+  <data name="Status_WaitingFor" xml:space="preserve"><value>En attente de : {0}</value></data>
+  <data name="Status_NextAnnouncement" xml:space="preserve"><value>Prochaine annonce : {0}</value></data>
+  <data name="Btn_PlayNext" xml:space="preserve"><value>Lire la suivante</value></data>
+  <data name="Tray_WaitingForPrefix" xml:space="preserve"><value>En attente de :</value></data>
+  <data name="Tray_NextAnnouncementPrefix" xml:space="preserve"><value>Prochaine annonce :</value></data>
+  <data name="Tray_WaitingFor" xml:space="preserve"><value>En attente de : {0}</value></data>
+  <data name="Tray_NextAnnouncement" xml:space="preserve"><value>Prochaine annonce : {0}</value></data>
+  <data name="Tray_PlayNext" xml:space="preserve"><value>Lire la suivante</value></data>
 
   <data name="SoundFiles_LocationGroup" xml:space="preserve"><value>Emplacement des fichiers audio</value></data>
   <data name="SoundFiles_CurrentLocation" xml:space="preserve"><value>Emplacement actuel :</value></data>
@@ -351,6 +360,8 @@ Pour ouvrir les paramètres ou contrôler l’application :
   <data name="Audio_PresetLabel" xml:space="preserve"><value>Préréglage :</value></data>
   <data name="Audio_UseCabinIfDoorOpen" xml:space="preserve"><value>Utiliser le volume cabine si la porte est ouverte (nécessite GSX)</value></data>
   <data name="Audio_VolumeLabel" xml:space="preserve"><value>Volume (0‑100) :</value></data>
+  <data name="Audio_ForegroundOnly" xml:space="preserve"><value>Lire uniquement quand MSFS ou cette appli a le focus</value></data>
+  <data name="Audio_ForegroundOnly_Tooltip" xml:space="preserve"><value>Lorsqu’active, les annonces ne sont audibles que lorsque Microsoft Flight Simulator ou cette fenêtre de paramètres a le focus. L’audio continue en silence en arrière‑plan.</value></data>
   <data name="Btn_Preflight" xml:space="preserve"><value>Pré‑vol</value></data>
   <data name="Btn_Taxi" xml:space="preserve"><value>Roulage</value></data>
   <data name="Btn_Takeoff" xml:space="preserve"><value>Décollage</value></data>

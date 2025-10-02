@@ -91,7 +91,15 @@
   <data name="Btn_Seatbelt" xml:space="preserve"><value>シートベルト</value></data>
 
   <data name="Cbx_StartWithMsfs" xml:space="preserve"><value>MSFS と一緒に起動</value></data>
-  <data name="Cbx_AlwaysShowWindow" xml:space="preserve"><value>起動時に常にウィンドウ表示</value></data>
+  <data name="Cbx_AlwaysShowWindow" xml:space="preserve"><value>アプリ起動時にこのウィンドウを表示</value></data>
+  <data name="Status_WaitingFor" xml:space="preserve"><value>待機条件: {0}</value></data>
+  <data name="Status_NextAnnouncement" xml:space="preserve"><value>次のアナウンス: {0}</value></data>
+  <data name="Btn_PlayNext" xml:space="preserve"><value>次を再生</value></data>
+  <data name="Tray_WaitingForPrefix" xml:space="preserve"><value>待機条件:</value></data>
+  <data name="Tray_NextAnnouncementPrefix" xml:space="preserve"><value>次のアナウンス:</value></data>
+  <data name="Tray_WaitingFor" xml:space="preserve"><value>待機条件: {0}</value></data>
+  <data name="Tray_NextAnnouncement" xml:space="preserve"><value>次のアナウンス: {0}</value></data>
+  <data name="Tray_PlayNext" xml:space="preserve"><value>次を再生</value></data>
 
   <data name="SoundFiles_LocationGroup" xml:space="preserve"><value>サウンドファイルの場所</value></data>
   <data name="SoundFiles_CurrentLocation" xml:space="preserve"><value>現在の場所:</value></data>
@@ -170,6 +178,8 @@
   <data name="Audio_CockpitLabel" xml:space="preserve"><value>コックピット (メインビュー):</value></data>
   <data name="Audio_CabinLabel" xml:space="preserve"><value>客室 (推定):</value></data>
   <data name="Audio_ExternalLabel" xml:space="preserve"><value>外部ビュー:</value></data>
+  <data name="Audio_ForegroundOnly" xml:space="preserve"><value>MSFS またはこのアプリがフォーカス中のみ再生</value></data>
+  <data name="Audio_ForegroundOnly_Tooltip" xml:space="preserve"><value>有効にすると、Microsoft Flight Simulator またはこの設定ウィンドウにフォーカスがあるときだけアナウンスが聞こえます。バックグラウンドでは無音のまま再生は続行されます。</value></data>
 
   <data name="Balloon_UpdateAvailableTitle" xml:space="preserve"><value>Universal Announcer - 更新あり</value></data>
   <data name="Balloon_UpdateWarning" xml:space="preserve"><value>警告: このバージョンは古いです (現在: {0}, 最新: {1}).
@@ -357,6 +367,7 @@
   <data name="Settings_Title" xml:space="preserve"><value>Universal Announcer 設定</value></data>
 
   <data name="Status_Aircraft" xml:space="preserve"><value>機種: {0}</value></data>
+  <data name="Status_AircraftNone" xml:space="preserve"><value>機種または航空会社のデータなし</value></data>
   <data name="Status_Connected" xml:space="preserve"><value>接続済み</value></data>
   <data name="Status_Connection" xml:space="preserve"><value>接続: {0}</value></data>
   <data name="Status_CurrentlyPlaying" xml:space="preserve"><value>再生中: {0}</value></data>

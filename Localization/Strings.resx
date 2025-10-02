@@ -61,6 +61,7 @@
   <data name="Status_Aircraft" xml:space="preserve">
     <value>Aircraft: {0}</value>
   </data>
+  <data name="Status_AircraftNone" xml:space="preserve"><value>No aircraft or airline data</value></data>
   <data name="Status_CurrentlyPlaying" xml:space="preserve">
     <value>Currently Playing: {0}</value>
   </data>
@@ -110,7 +111,7 @@
   <data name="Btn_Postflight" xml:space="preserve"><value>Postflight</value></data>
   <data name="Btn_CloseApp" xml:space="preserve"><value>Close App</value></data>
   <data name="Cbx_StartWithMsfs" xml:space="preserve"><value>Start with MSFS</value></data>
-  <data name="Cbx_AlwaysShowWindow" xml:space="preserve"><value>Always show as window on start up</value></data>
+  <data name="Cbx_AlwaysShowWindow" xml:space="preserve"><value>Show this window when the app starts</value></data>
 
   <!-- Tabs -->
   <data name="Tab_Audio" xml:space="preserve"><value>Audio</value></data>
@@ -135,6 +136,8 @@
   <data name="Audio_ExternalLabel" xml:space="preserve"><value>External Views:</value></data>
   <data name="Audio_CameraDesc" xml:space="preserve"><value>No easy way to tell if Cabin so best guess. Could also be cockpit quick views. Work in progress.</value></data>
   <data name="Audio_AssumeQuickViewsAsCabin" xml:space="preserve"><value>Assume Cockpit QuickViews as Cabin</value></data>
+  <data name="Audio_ForegroundOnly" xml:space="preserve"><value>Only play when MSFS or this app is focused</value></data>
+  <data name="Audio_ForegroundOnly_Tooltip" xml:space="preserve"><value>When enabled, announcements are only audible when Microsoft Flight Simulator or this Settings window has focus. Audio continues silently in the background.</value></data>
 
   <!-- Sound Files tab -->
   <data name="SoundFiles_LocationGroup" xml:space="preserve"><value>Sound Files Location</value></data>
@@ -408,6 +411,35 @@ To access settings or control the application:
 • Double-click the icon to open settings
 • Use the context menu to control flight state, volume, and more</value></data>
   <data name="FirstTime_Ok" xml:space="preserve"><value>Got it - You Don't Need To Tell Me Twice!</value></data>
+
+  <!-- Next announcement feature: tray, status panel, and waiting phrases -->
+  <data name="Tray_WaitingForPrefix" xml:space="preserve"><value>Waiting for:</value></data>
+  <data name="Tray_NextAnnouncementPrefix" xml:space="preserve"><value>Next Announcement:</value></data>
+  <data name="Tray_WaitingFor" xml:space="preserve"><value>Waiting for: {0}</value></data>
+  <data name="Tray_NextAnnouncement" xml:space="preserve"><value>Next Announcement: {0}</value></data>
+  <data name="Tray_PlayNext" xml:space="preserve"><value>Play Next</value></data>
+
+  <data name="Status_WaitingFor" xml:space="preserve"><value>Waiting for: {0}</value></data>
+  <data name="Status_NextAnnouncement" xml:space="preserve"><value>Next Announcement: {0}</value></data>
+  <data name="Btn_PlayNext" xml:space="preserve"><value>Play Next</value></data>
+
+  <data name="Wait_BoardingStart_GSX" xml:space="preserve"><value>Logo light ON or GSX Boarding</value></data>
+  <data name="Wait_BoardingStart_LogoOnly" xml:space="preserve"><value>Logo light ON</value></data>
+  <data name="Wait_BoardingComplete" xml:space="preserve"><value>Beacon ON or GSX Boarding Complete</value></data>
+  <data name="Wait_ArmDoors" xml:space="preserve"><value>Engines running or Ground speed &gt; 1 kt</value></data>
+  <data name="Wait_PreSafetyBriefing" xml:space="preserve"><value>ArmDoors played and Engines running</value></data>
+  <data name="Wait_SafetyBriefing" xml:space="preserve"><value>PreSafetyBriefing played</value></data>
+  <data name="Wait_CabinDimTakeoff" xml:space="preserve"><value>SafetyBriefing played and Night</value></data>
+  <data name="Wait_CrewSeatsTakeoff" xml:space="preserve"><value>Landing lights ON and Engines running</value></data>
+  <data name="Wait_CallCabinSecureTakeoff" xml:space="preserve"><value>CrewSeatsTakeoff played and On ground</value></data>
+  <data name="Wait_AfterTakeoff" xml:space="preserve"><value>Airborne and Altitude AGL &gt; {0} ft (2 min after takeoff)</value></data>
+  <data name="Wait_DescentSeatbelts" xml:space="preserve"><value>AfterTakeoff played and &lt; {0} ft &amp; Descending or Landing lights ON</value></data>
+  <data name="Wait_CrewSeatsLanding" xml:space="preserve"><value>Below {0} ft and Descending and Landing lights ON</value></data>
+  <data name="Wait_CallCabinSecureLanding" xml:space="preserve"><value>CrewSeatsLanding played and &lt; {0} ft</value></data>
+  <data name="Wait_AfterLanding" xml:space="preserve"><value>On ground and GS &lt; 25 kt</value></data>
+  <data name="Wait_DisarmDoors" xml:space="preserve"><value>Engines OFF and Parking brake ON</value></data>
+  <data name="Wait_DisembarkStarted" xml:space="preserve"><value>Beacon OFF or GSX Deboarding active</value></data>
+
 
 </root>
 

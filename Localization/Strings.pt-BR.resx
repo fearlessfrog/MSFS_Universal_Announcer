@@ -77,6 +77,8 @@
   <data name="Audio_CockpitLabel" xml:space="preserve"><value>Cabine de comando (vista principal):</value></data>
   <data name="Audio_CabinLabel" xml:space="preserve"><value>Cabine (aprox.):</value></data>
   <data name="Audio_ExternalLabel" xml:space="preserve"><value>Vistas externas:</value></data>
+  <data name="Audio_ForegroundOnly" xml:space="preserve"><value>Reproduzir apenas quando o MSFS ou este app estiver em foco</value></data>
+  <data name="Audio_ForegroundOnly_Tooltip" xml:space="preserve"><value>Quando ativado, os anúncios só são audíveis quando o Microsoft Flight Simulator ou esta janela de configurações estiver em foco. O áudio continua em silêncio em segundo plano.</value></data>
 
   <data name="Balloon_UpdateAvailableTitle" xml:space="preserve"><value>Universal Announcer - Atualização disponível</value></data>
   <data name="Balloon_UpdateWarning" xml:space="preserve"><value>AVISO: esta versão está desatualizada (atual: {0}, mais recente: {1}).
@@ -117,7 +119,15 @@ Clique para abrir o GitHub e baixar a versão mais recente.</value></data>
   <data name="Btn_Seatbelt" xml:space="preserve"><value>Cinto</value></data>
 
   <data name="Cbx_StartWithMsfs" xml:space="preserve"><value>Iniciar com o MSFS</value></data>
-  <data name="Cbx_AlwaysShowWindow" xml:space="preserve"><value>Sempre mostrar como janela na inicialização</value></data>
+  <data name="Cbx_AlwaysShowWindow" xml:space="preserve"><value>Mostrar esta janela ao iniciar o aplicativo</value></data>
+  <data name="Status_WaitingFor" xml:space="preserve"><value>Aguardando: {0}</value></data>
+  <data name="Status_NextAnnouncement" xml:space="preserve"><value>Próximo anúncio: {0}</value></data>
+  <data name="Btn_PlayNext" xml:space="preserve"><value>Reproduzir próximo</value></data>
+  <data name="Tray_WaitingForPrefix" xml:space="preserve"><value>Aguardando:</value></data>
+  <data name="Tray_NextAnnouncementPrefix" xml:space="preserve"><value>Próximo anúncio:</value></data>
+  <data name="Tray_WaitingFor" xml:space="preserve"><value>Aguardando: {0}</value></data>
+  <data name="Tray_NextAnnouncement" xml:space="preserve"><value>Próximo anúncio: {0}</value></data>
+  <data name="Tray_PlayNext" xml:space="preserve"><value>Reproduzir próximo</value></data>
 
   <data name="SoundFiles_LocationGroup" xml:space="preserve"><value>Local dos arquivos de som</value></data>
   <data name="SoundFiles_CurrentLocation" xml:space="preserve"><value>Local atual:</value></data>
@@ -195,6 +205,7 @@ Para abrir as configurações ou controlar o aplicativo:
   <data name="Status_Connection" xml:space="preserve"><value>Conexão: {0}</value></data>
   <data name="Status_CurrentState" xml:space="preserve"><value>Estado atual: {0}</value></data>
   <data name="Status_Aircraft" xml:space="preserve"><value>Aeronave: {0}</value></data>
+  <data name="Status_AircraftNone" xml:space="preserve"><value>Sem dados de aeronave ou companhia</value></data>
   <data name="Status_CurrentlyPlaying" xml:space="preserve"><value>Reproduzindo: {0}</value></data>
   <data name="Status_MSFS" xml:space="preserve"><value>MSFS: {0}</value></data>
   <data name="None" xml:space="preserve"><value>Nenhum</value></data>
