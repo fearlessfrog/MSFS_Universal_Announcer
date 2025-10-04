@@ -211,6 +211,7 @@ Enhance your announcements with dynamic content using these placeholders, so you
 | `{DESTINATION_TEMPERATURE}` | Destination temperature in Celsius (included in phrase spoken) |
 | `{DESTINATION_TEMPERATURE_F}` | As above but spoken as Fahrenheit |
 | `{LOCAL_TIME_24H}` | Local time as 24‑hour HH:MM numeric (e.g., 18:05) for multilingual TTS |
+| `{FLIGHT_TIME}` | Flight time spoken as spoken duration (e.g., '2 hours 14 minutes'). |
 | `{FLIGHT_TIME_HHMM}` | Flight time in HH:MM numeric for multilingual TTS |
 | `{DESTINATION_TEMPERATURE_C_NUM}` | Destination temperature as a numeric Celsius value |
 | `{SCHED_DEP_LOCAL_24H}` | Scheduled departure in local time (origin) HH:MM |
