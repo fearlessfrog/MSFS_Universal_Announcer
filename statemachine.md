@@ -28,7 +28,7 @@ This is a snapshot of v0.7.0 transitions, so it might evolve. It should answer m
 | DisarmDoors | `AreEnginesOff=True` AND `IsParkingBrakeOn=True` AND `AfterLanding` played | **Wait for AfterLanding to finish playing** |
 | DisembarkStarted | `DisarmDoors` played AND (`IsBeaconOn=False` OR `IsGSXDeboardingInProgress=True`) | **Wait for DisarmDoors to finish playing** |
 
-# Airline Detection
+## Airline Detection
 
 Airline folder selection is determined using a priority order so the most reliable source wins, with graceful fallbacks:
 
@@ -43,7 +43,7 @@ Folder selection
 - The resolved airline code selects the corresponding folder under your announcements root (e.g., `UAL/`, `ACA/`).
 - If a matching file is not found and "Use Default folder announcements if airline-specific files are missing" is enabled in Settings, the `Default/` folder is used as fallback.
 
-# Sound Files and Tagging
+## Sound Files and Tagging
 
 The system supports various tagging options using square brackets in filenames:
 
@@ -103,6 +103,36 @@ The system will randomly select one variant per flight and maintain consistency 
   5. Numbered variants (`[1]`, `[2]`, ...)
 - If multiple candidates tie, a deterministic selection is made; numbered variants
   maintain consistency per flight.
+
+## PMDG SDK Integration <a id="pmdg-sdk-integration"></a>
+
+Some PMDG aircraft, such as the MSFS 2024 777 family don't export light values correctly, in that the logo, beacon and landing lights all show 'ON' regardless of their switch positions. Note: the MSFS2020 PMDG 777's are fine, this is just the MSFS 2024 version. This is reported to PMDG but it possible won't be changed for a while.
+
+To get around this the app uses the PMDG SDK data broadcast feature to read the internal values. Unfortunately this mean this data access has to be manually turned on. Here's how I did it for the 77l, and hopefully is applicable for others in the family:
+
+1. Locate the file `777_Options.ini` here:
+
+Store version:
+
+`%localappdata%\Packages\Microsoft.Limitless_8wekyb3d8bbwe\LocalState\WASM\MSFS2024\pmdg-aircraft-77l\work`
+
+Steam version:
+
+`%AppData%\Microsoft Flight Simulator 2024\WASM\MSFS2024\pmdg-aircraft-77l\work`
+
+(with the 'l' being the 200ER etc, as that changes per variant, so do each one you have)
+
+2. Add the following lines into the existing file (include an empty line as the last line if adding at end)
+
+```
+[SDK]
+EnableDataBroadcast=1
+```
+
+3. In the app Settings \ Tweaks tab enable the option `Enable PMDG SDK Data`.
+
+If these signals get updated to use the general simconnect values like other aircraft then hopefully we don't have to keep doing this.
+
 
 ## GSX Integration
 
