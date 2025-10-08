@@ -110,7 +110,7 @@ Some PMDG aircraft, such as the MSFS 2024 777 family don't export light values c
 
 To get around this the app uses the PMDG SDK data broadcast feature to read the internal values. Unfortunately this mean this data access has to be manually turned on. Here's how I did it for the 77l, and hopefully is applicable for others in the family:
 
-1. Locate the file `777_Options.ini` here:
+- Locate the file `777_Options.ini` here:
 
 Store version:
 
@@ -122,14 +122,14 @@ Steam version:
 
 (with the 'l' being the 200ER etc, as that changes per variant, so do each one you have)
 
-2. Add the following lines into the existing file (include an empty line as the last line if adding at end)
+- Add the following lines into the existing file (include an empty line as the last line if adding at end)
 
 ```
 [SDK]
 EnableDataBroadcast=1
 ```
 
-3. In the app Settings \ Tweaks tab enable the option `Enable PMDG SDK Data`.
+- In the app Settings \ Tweaks tab enable the option `Enable PMDG SDK Data`.
 
 If these signals get updated to use the general simconnect values like other aircraft then hopefully we don't have to keep doing this.
 
