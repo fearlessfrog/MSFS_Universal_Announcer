@@ -133,6 +133,21 @@ EnableDataBroadcast=1
 
 If these signals get updated to use the general simconnect values like other aircraft then hopefully we don't have to keep doing this.
 
+## App Custom light override L:Vars
+
+These optional L:Vars let external programs explicitly force specific exterior lights ON. When set to 1, they override default SimVars and PMDG data, and also bypass IgnoreIncompatibleAircraftLights. If they’re 0 or not present, they are ignored and normal detection applies.
+
+Note: It is recommended you also use the Settings / Tweak `Ignore incompatible aircraft lights` on with these custom lvars.
+
+| L:Var | Type | Value meaning |
+|---|---|---|
+| `L:UNI_ANNOUNCER_LIGHT_LOGO` | Bool (0/1) | 1 = force Logo light ON |
+| `L:UNI_ANNOUNCER_LIGHT_BEACON` | Bool (0/1) | 1 = force Beacon light ON |
+| `L:UNI_ANNOUNCER_LIGHT_LANDING` | Bool (0/1) | 1 = force Landing light ON |
+| `L:UNI_ANNOUNCER_LIGHT_STROBE` | Bool (0/1) | 1 = force Strobe light ON |
+
+One possible use of these LVARs is in reading internal WASM/IPC values with MobiFlight or FSUIPC (e.g. ProSim A320 etc) that don't currently export all simconnect values and then set these accordingly. So you'd script inputs/outputs in the external tool to set these values to bypass any restriction of external light data.
+
 
 ## GSX Integration
 
