@@ -138,6 +138,7 @@
   <data name="Audio_AssumeQuickViewsAsCabin" xml:space="preserve"><value>Assume Cockpit QuickViews as Cabin</value></data>
   <data name="Audio_ForegroundOnly" xml:space="preserve"><value>Only play when MSFS or this app is focused</value></data>
   <data name="Audio_ForegroundOnly_Tooltip" xml:space="preserve"><value>When enabled, announcements are only audible when Microsoft Flight Simulator or this Settings window has focus. Audio continues silently in the background.</value></data>
+  <data name="Audio_AssumeQuickViewsAsCabin_Tooltip" xml:space="preserve"><value>When enabled and camera is Cockpit (2) with Substate Quickview (3), treat as Cabin for volume.</value></data>
 
   <!-- Sound Files tab -->
   <data name="SoundFiles_LocationGroup" xml:space="preserve"><value>Sound Files Location</value></data>
@@ -170,6 +171,11 @@
   <data name="Tweaks_UseBoardingMusicFallback" xml:space="preserve"><value>Use BoardingMusic when AfterLandingMusic is missing</value></data>
   <data name="Tweaks_SkipFirstBoardingWelcome" xml:space="preserve"><value>Skip First BoardingWelcome</value></data>
   <data name="Tweaks_DepartureDelayThreshold" xml:space="preserve"><value>Departure delay threshold (min):</value></data>
+  <data name="Tweaks_EnablePmdgSdk" xml:space="preserve"><value>Enable PMDG SDK Data (MSFS24 777X)</value></data>
+  <data name="Tweaks_PmdgHowToLink" xml:space="preserve"><value>How to enable PMDG SDK Data</value></data>
+  <data name="Tweaks_PmdgSdk_Tooltip" xml:space="preserve"><value>Use PMDG client data for the 777 on MSFS 2024. Requires adding EnableDataBroadcast=1 to 777_Options.ini.</value></data>
+  <data name="Tweaks_IgnoreIncompatibleLights" xml:space="preserve"><value>Ignore incompatible aircraft lights</value></data>
+  <data name="Tweaks_IgnoreIncompatibleLights_Tooltip" xml:space="preserve"><value>Ignores Logo, Beacon, Landing and Strobe SimVars so you can use manual Play Next when some aircraft report incorrect light states.</value></data>
 
   <!-- Integrations tab -->
   <data name="Integrations_SimBriefGroup" xml:space="preserve"><value>SimBrief Integration</value></data>
@@ -212,9 +218,16 @@
   <data name="Generated_GenerateAll" xml:space="preserve"><value>Generate All</value></data>
   <data name="Generated_SaveTxt" xml:space="preserve"><value>Save txt</value></data>
   <data name="Generated_RevertTxt" xml:space="preserve"><value>Revert txt</value></data>
-  <data name="Generated_ReplaceExistingOgg" xml:space="preserve"><value>Replace existing .ogg</value></data>
+  <data name="Generated_ReplaceExistingOgg" xml:space="preserve"><value>Replace existing .ogg if Airline txt</value></data>
+  <data name="Generated_ReplaceExistingOggAlways" xml:space="preserve"><value>Replace existing .ogg Always</value></data>
   <data name="Generated_OnlyDynamic" xml:space="preserve"><value>Regenerate only if dynamic</value></data>
   <data name="Generated_AutoCreateFolder" xml:space="preserve"><value>Auto create missing airline folder</value></data>
+  <data name="Generated_Tooltip_ReplaceAirlineOnly" xml:space="preserve"><value>Overwrite existing airline .ogg only when an Airline folder .txt template exists. Use 'Always' to allow using Default txt.</value></data>
+  <data name="Generated_Tooltip_OnlyDynamic" xml:space="preserve"><value>Only regenerate if the template contains dynamic placeholders like { ... }.</value></data>
+  <data name="Generated_Tooltip_ReplaceAlways" xml:space="preserve"><value>If enabled, allows overwrite using Default template when airline txt is missing.</value></data>
+  <data name="Generated_Tooltip_AutoCreateFolder" xml:space="preserve"><value>If enabled, create the airline folder when missing and save generated .ogg there.</value></data>
+  <data name="Generated_ConfirmOverwrite_Title" xml:space="preserve"><value>Enable regenerate existing .ogg</value></data>
+  <data name="Generated_ConfirmOverwrite_Message" xml:space="preserve"><value>If enabled, the app may regenerate and replace existing .ogg files for the selected airline when announcements are played. Proceed?</value></data>
   <data name="Generated_HelpSetup" xml:space="preserve"><value>Help &amp; Setup (Read First)</value></data>
   <data name="Generated_AirlineLabel" xml:space="preserve"><value>Airline:</value></data>
   <data name="Generated_InsertVoice" xml:space="preserve"><value>Insert Voice</value></data>
@@ -439,6 +452,11 @@ To access settings or control the application:
   <data name="Wait_AfterLanding" xml:space="preserve"><value>On ground and GS &lt; 25 kt</value></data>
   <data name="Wait_DisarmDoors" xml:space="preserve"><value>Engines OFF and Parking brake ON</value></data>
   <data name="Wait_DisembarkStarted" xml:space="preserve"><value>Beacon OFF or GSX Deboarding active</value></data>
+
+  <!-- Play Next polish (waiting phrases use existing Wait_ prefix for consistency) -->
+  <data name="Wait_BoardingRepeat" xml:space="preserve"><value>Boarding repeat interval</value></data>
+  <data name="Wait_DepartureDelayed" xml:space="preserve"><value>Departure delay threshold</value></data>
+  <data name="PlayNext_CruiseElapsedFormat" xml:space="preserve"><value>Cruise {0}%</value></data>
 
 
 </root>

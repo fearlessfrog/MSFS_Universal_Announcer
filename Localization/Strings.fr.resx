@@ -97,6 +97,8 @@
   <data name="Tweaks_UseBoardingMusicFallback" xml:space="preserve"><value>Utiliser BoardingMusic si AfterLandingMusic est manquant</value></data>
   <data name="Tweaks_SkipFirstBoardingWelcome" xml:space="preserve"><value>Ignorer le premier BoardingWelcome</value></data>
   <data name="Tweaks_DepartureDelayThreshold" xml:space="preserve"><value>Seuil de retard au départ (min) :</value></data>
+  <data name="Tweaks_EnablePmdgSdk" xml:space="preserve"><value>Activer les données PMDG SDK (MSFS24 777X)</value></data>
+  <data name="Tweaks_PmdgHowToLink" xml:space="preserve"><value>Comment activer les données PMDG SDK</value></data>
 
   <data name="Group_Status" xml:space="preserve"><value>Statut</value></data>
   <data name="Group_FlightStateControls" xml:space="preserve"><value>Contrôles d’état de vol</value></data>
@@ -385,15 +387,46 @@ Pour ouvrir les paramètres ou contrôler l’application :
   <data name="Generated_InsertVoice" xml:space="preserve"><value>Insérer la voix</value></data>
   <data name="Generated_OnlyDynamic" xml:space="preserve"><value>Régénérer seulement si dynamique</value></data>
   <data name="Generated_ProviderLabel" xml:space="preserve"><value>Fournisseur :</value></data>
-  <data name="Generated_ReplaceExistingOgg" xml:space="preserve"><value>Remplacer le .ogg existant</value></data>
+  <data name="Generated_ReplaceExistingOgg" xml:space="preserve"><value>Remplacer .ogg (si txt Compagnie)</value></data>
+  <data name="Generated_ReplaceExistingOggAlways" xml:space="preserve"><value>Toujours remplacer .ogg</value></data>
   <data name="Generated_RevertTxt" xml:space="preserve"><value>Rétablir TXT</value></data>
   <data name="Generated_SaveTxt" xml:space="preserve"><value>Enregistrer TXT</value></data>
+  <data name="Generated_Tooltip_ReplaceAirlineOnly" xml:space="preserve"><value>Écraser le .ogg Compagnie uniquement si un modèle .txt existe dans le dossier Compagnie. « Toujours » permet d’utiliser le txt Default.</value></data>
+  <data name="Generated_Tooltip_OnlyDynamic" xml:space="preserve"><value>Régénérer uniquement si le modèle contient des espaces réservés dynamiques comme { ... }.</value></data>
+  <data name="Generated_Tooltip_ReplaceAlways" xml:space="preserve"><value>Si activé, autorise l’écrasement à l’aide du modèle Default lorsque le txt Compagnie est manquant.</value></data>
+  <data name="Generated_Tooltip_AutoCreateFolder" xml:space="preserve"><value>Si activé, créer le dossier Compagnie manquant et y enregistrer le .ogg généré.</value></data>
+  <data name="Generated_ConfirmOverwrite_Title" xml:space="preserve"><value>Activer la régénération des .ogg existants</value></data>
+  <data name="Generated_ConfirmOverwrite_Message" xml:space="preserve"><value>Si activé, l’application peut régénérer et remplacer les fichiers .ogg existants de la compagnie sélectionnée lors de la lecture des annonces. Continuer ?</value></data>
   <data name="Generated_TestVoice" xml:space="preserve"><value>Tester la voix</value></data>
+  <data name="Audio_AssumeQuickViewsAsCabin_Tooltip" xml:space="preserve"><value>Si activé et que la caméra est Cockpit (2) avec sous‑état Quickview (3), considérer comme Cabine pour le volume.</value></data>
   <data name="Generated_VoiceLabel" xml:space="preserve"><value>Voix :</value></data>
   <data name="Integrations_SimBriefDescription" xml:space="preserve"><value>Entrez votre nom d’utilisateur SimBrief (le nom, pas les chiffres) pour récupérer automatiquement les codes ICAO appareil depuis votre dernier plan de vol. Utilisé pour les annonces spécifiques à l’appareil. Si vide ou indisponible, repli sur les données appareil MSFS.</value></data>
   <data name="Generated_TestVoiceSample" xml:space="preserve"><value>Ceci est un test de la voix générée d’Universal Announcer.</value></data>
   <data name="Generated_StopTest" xml:space="preserve"><value>Arrêter le test</value></data>
   <data name="Title_TTSTest" xml:space="preserve"><value>Test TTS</value></data>
+  <!-- Tweaks: PMDG tooltip + ignore incompatible lights -->
+  <data name="Tweaks_PmdgSdk_Tooltip" xml:space="preserve"><value>Utiliser les données client PMDG pour le 777 sur MSFS 2024. Nécessite d’ajouter EnableDataBroadcast=1 dans 777_Options.ini.</value></data>
+  <data name="Tweaks_IgnoreIncompatibleLights" xml:space="preserve"><value>Ignorer les lumières d’appareil incompatibles</value></data>
+  <data name="Tweaks_IgnoreIncompatibleLights_Tooltip" xml:space="preserve"><value>Ignore les SimVars Logo, Beacon, Landing et Strobe afin de pouvoir utiliser « Lire la suivante » manuellement lorsque certains appareils rapportent des états de lumière incorrects.</value></data>
+
+  <!-- Waiting phrases for Play Next -->
+  <data name="Wait_BoardingStart_GSX" xml:space="preserve"><value>Lumière logo ALLUMÉE ou Embarquement GSX</value></data>
+  <data name="Wait_BoardingStart_LogoOnly" xml:space="preserve"><value>Lumière logo ALLUMÉE</value></data>
+  <data name="Wait_BoardingComplete" xml:space="preserve"><value>Beacon ALLUMÉ ou Embarquement GSX terminé</value></data>
+  <data name="Wait_ArmDoors" xml:space="preserve"><value>Moteurs en marche ou Vitesse sol &gt; 1 kt</value></data>
+  <data name="Wait_PreSafetyBriefing" xml:space="preserve"><value>ArmDoors joué et Moteurs en marche</value></data>
+  <data name="Wait_SafetyBriefing" xml:space="preserve"><value>PreSafetyBriefing joué</value></data>
+  <data name="Wait_CabinDimTakeoff" xml:space="preserve"><value>SafetyBriefing joué et Nuit</value></data>
+  <data name="Wait_CrewSeatsTakeoff" xml:space="preserve"><value>Phares d’atterrissage ALLUMÉS et Moteurs en marche</value></data>
+  <data name="Wait_CallCabinSecureTakeoff" xml:space="preserve"><value>CrewSeatsTakeoff joué et Au sol</value></data>
+  <data name="Wait_AfterTakeoff" xml:space="preserve"><value>En l’air et Altitude AGL &gt; {0} ft (2 min après décollage)</value></data>
+  <data name="Wait_DescentSeatbelts" xml:space="preserve"><value>AfterTakeoff joué et &lt; {0} ft &amp; En descente ou Phares d’atterrissage ALLUMÉS</value></data>
+  <data name="Wait_CrewSeatsLanding" xml:space="preserve"><value>En dessous de {0} ft et En descente et Phares d’atterrissage ALLUMÉS</value></data>
+  <data name="Wait_CallCabinSecureLanding" xml:space="preserve"><value>CrewSeatsLanding joué et &lt; {0} ft</value></data>
+  <data name="Wait_AfterLanding" xml:space="preserve"><value>Au sol et GS &lt; 25 kt</value></data>
+  <data name="Wait_DisarmDoors" xml:space="preserve"><value>Moteurs ARRÊTÉS et Frein de parc ACTIVÉ</value></data>
+  <data name="Wait_DisembarkStarted" xml:space="preserve"><value>Beacon ÉTEINT ou Débarquement GSX actif</value></data>
+  <data name="Wait_BoardingRepeat" xml:space="preserve"><value>Intervalle de répétition embarquement</value></data>
+  <data name="Wait_DepartureDelayed" xml:space="preserve"><value>Seuil de retard au départ</value></data>
+  <data name="PlayNext_CruiseElapsedFormat" xml:space="preserve"><value>Croisière {0}%</value></data>
 </root>
-
-

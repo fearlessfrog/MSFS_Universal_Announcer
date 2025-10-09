@@ -51,6 +51,29 @@
   <data name="Tray_NextAnnouncement" xml:space="preserve"><value>下一个公告：{0}</value></data>
   <data name="Tray_PlayNext" xml:space="preserve"><value>播放下一个</value></data>
 
+  <!-- Tweaks: PMDG tooltip + ignore incompatible lights -->
+  <data name="Tweaks_PmdgSdk_Tooltip" xml:space="preserve"><value>在 MSFS 2024 的 777 上使用 PMDG 客户端数据。需要在 777_Options.ini 中添加 EnableDataBroadcast=1。</value></data>
+  <data name="Tweaks_IgnoreIncompatibleLights" xml:space="preserve"><value>忽略不兼容的飞机灯光</value></data>
+  <data name="Tweaks_IgnoreIncompatibleLights_Tooltip" xml:space="preserve"><value>忽略 Logo、Beacon、Landing 和 Strobe 的 SimVar，这样当某些飞机上报错误的灯光状态时，你仍可使用手动“播放下一个”。</value></data>
+
+  <!-- Waiting phrases for Play Next -->
+  <data name="Wait_BoardingStart_GSX" xml:space="preserve"><value>Logo 灯 亮 或 GSX 登机</value></data>
+  <data name="Wait_BoardingStart_LogoOnly" xml:space="preserve"><value>Logo 灯 亮</value></data>
+  <data name="Wait_BoardingComplete" xml:space="preserve"><value>Beacon 亮 或 GSX 登机完成</value></data>
+  <data name="Wait_ArmDoors" xml:space="preserve"><value>发动机运转 或 地速 &gt; 1 kt</value></data>
+  <data name="Wait_PreSafetyBriefing" xml:space="preserve"><value>已播放 ArmDoors 且 发动机运转</value></data>
+  <data name="Wait_SafetyBriefing" xml:space="preserve"><value>已播放 PreSafetyBriefing</value></data>
+  <data name="Wait_CabinDimTakeoff" xml:space="preserve"><value>已播放 SafetyBriefing 且 夜间</value></data>
+  <data name="Wait_CrewSeatsTakeoff" xml:space="preserve"><value>着陆灯 亮 且 发动机运转</value></data>
+  <data name="Wait_CallCabinSecureTakeoff" xml:space="preserve"><value>已播放 CrewSeatsTakeoff 且 在地面</value></data>
+  <data name="Wait_AfterTakeoff" xml:space="preserve"><value>离地 且 AGL 高度 &gt; {0} 英尺（起飞后 2 分钟）</value></data>
+  <data name="Wait_DescentSeatbelts" xml:space="preserve"><value>已播放 AfterTakeoff 且 &lt; {0} 英尺 且 下降中 或 着陆灯 亮</value></data>
+  <data name="Wait_CrewSeatsLanding" xml:space="preserve"><value>低于 {0} 英尺 且 下降中 且 着陆灯 亮</value></data>
+  <data name="Wait_CallCabinSecureLanding" xml:space="preserve"><value>已播放 CrewSeatsLanding 且 &lt; {0} 英尺</value></data>
+  <data name="Wait_AfterLanding" xml:space="preserve"><value>在地面 且 GS &lt; 25 kt</value></data>
+  <data name="Wait_DisarmDoors" xml:space="preserve"><value>发动机 关 且 停车刹 设定</value></data>
+  <data name="Wait_DisembarkStarted" xml:space="preserve"><value>Beacon 关 或 GSX 下客 中</value></data>
+
   <!-- Tabs -->
   <data name="Tab_Audio" xml:space="preserve"><value>音频</value></data>
   <data name="Tab_SoundFiles" xml:space="preserve"><value>音频文件</value></data>
@@ -108,6 +131,8 @@
   <data name="Tweaks_UseBoardingMusicFallback" xml:space="preserve"><value>缺少落地后音乐时使用登机音乐</value></data>
   <data name="Tweaks_SkipFirstBoardingWelcome" xml:space="preserve"><value>跳过首次登机欢迎</value></data>
   <data name="Tweaks_DepartureDelayThreshold" xml:space="preserve"><value>起飞延误阈值（分钟）：</value></data>
+  <data name="Tweaks_EnablePmdgSdk" xml:space="preserve"><value>启用 PMDG SDK 数据（MSFS24 777X）</value></data>
+  <data name="Tweaks_PmdgHowToLink" xml:space="preserve"><value>如何启用 PMDG SDK 数据</value></data>
 
   <!-- Integrations tab -->
   <data name="Integrations_SimBriefGroup" xml:space="preserve"><value>SimBrief 集成</value></data>
@@ -150,13 +175,21 @@
   <data name="Generated_GenerateAll" xml:space="preserve"><value>全部生成</value></data>
   <data name="Generated_SaveTxt" xml:space="preserve"><value>保存 txt</value></data>
   <data name="Generated_RevertTxt" xml:space="preserve"><value>还原 txt</value></data>
-  <data name="Generated_ReplaceExistingOgg" xml:space="preserve"><value>替换已存在 .ogg</value></data>
+  <data name="Generated_ReplaceExistingOgg" xml:space="preserve"><value>替换 .ogg（有航司 txt 时）</value></data>
+  <data name="Generated_ReplaceExistingOggAlways" xml:space="preserve"><value>始终替换 .ogg</value></data>
   <data name="Generated_OnlyDynamic" xml:space="preserve"><value>仅在动态时重新生成</value></data>
   <data name="Generated_AutoCreateFolder" xml:space="preserve"><value>自动创建缺少的航司文件夹</value></data>
+  <data name="Generated_Tooltip_ReplaceAirlineOnly" xml:space="preserve"><value>仅在航司文件夹存在 .txt 模板时才覆盖现有航司 .ogg。“始终”允许使用 Default 目录下的 txt。</value></data>
+  <data name="Generated_Tooltip_OnlyDynamic" xml:space="preserve"><value>仅当模板包含 { ... } 等动态占位符时才重新生成。</value></data>
+  <data name="Generated_Tooltip_ReplaceAlways" xml:space="preserve"><value>启用后，当缺少航司 txt 时，允许使用 Default 模板进行覆盖。</value></data>
+  <data name="Generated_Tooltip_AutoCreateFolder" xml:space="preserve"><value>启用后，在缺少航司文件夹时自动创建，并将生成的 .ogg 保存在其中。</value></data>
+  <data name="Generated_ConfirmOverwrite_Title" xml:space="preserve"><value>启用重新生成现有 .ogg</value></data>
+  <data name="Generated_ConfirmOverwrite_Message" xml:space="preserve"><value>启用后，播放公告时，应用可能会重新生成并替换所选航司的现有 .ogg 文件。是否继续？</value></data>
   <data name="Generated_HelpSetup" xml:space="preserve"><value>帮助与设置（请先阅读）</value></data>
   <data name="Generated_AirlineLabel" xml:space="preserve"><value>航司：</value></data>
   <data name="Generated_InsertVoice" xml:space="preserve"><value>插入语音</value></data>
   <data name="Generated_TestVoice" xml:space="preserve"><value>测试语音</value></data>
+  <data name="Audio_AssumeQuickViewsAsCabin_Tooltip" xml:space="preserve"><value>启用且相机为 Cockpit（2）且子状态为 Quickview（3）时，将其视为客舱音量。</value></data>
   <data name="Generated_VoiceLabel" xml:space="preserve"><value>语音：</value></data>
   <data name="Generated_AzureApiKey" xml:space="preserve"><value>Azure API 密钥：</value></data>
   <data name="Generated_AzureRegion" xml:space="preserve"><value>Azure 区域：</value></data>
@@ -348,5 +381,8 @@
 • 双击图标以打开设置
 • 使用上下文菜单控制飞行状态、音量等</value></data>
   <data name="FirstTime_Ok" xml:space="preserve"><value>知道了！</value></data>
+  <data name="Wait_BoardingRepeat" xml:space="preserve"><value>登机重复间隔</value></data>
+  <data name="Wait_DepartureDelayed" xml:space="preserve"><value>起飞延误阈值</value></data>
+  <data name="PlayNext_CruiseElapsedFormat" xml:space="preserve"><value>巡航 {0}%</value></data>
 </root>
 

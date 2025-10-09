@@ -221,9 +221,17 @@
   <data name="Generated_InsertVoice" xml:space="preserve"><value>音声を挿入</value></data>
   <data name="Generated_OnlyDynamic" xml:space="preserve"><value>動的な場合のみ再生成</value></data>
   <data name="Generated_ProviderLabel" xml:space="preserve"><value>プロバイダー:</value></data>
-  <data name="Generated_ReplaceExistingOgg" xml:space="preserve"><value>既存の .ogg を置換</value></data>
+  <data name="Generated_ReplaceExistingOgg" xml:space="preserve"><value>.ogg を置換（航空会社 txt 時）</value></data>
+  <data name="Generated_ReplaceExistingOggAlways" xml:space="preserve"><value>.ogg を常に置換</value></data>
   <data name="Generated_RevertTxt" xml:space="preserve"><value>TXT を元に戻す</value></data>
   <data name="Generated_SaveTxt" xml:space="preserve"><value>TXT を保存</value></data>
+  <data name="Audio_AssumeQuickViewsAsCabin_Tooltip" xml:space="preserve"><value>有効で、カメラが Cockpit (2) かつサブステート Quickview (3) の場合、音量は客室として扱います。</value></data>
+  <data name="Generated_Tooltip_ReplaceAirlineOnly" xml:space="preserve"><value>航空会社フォルダーに .txt テンプレートがある場合のみ、既存の航空会社 .ogg を上書きします。「常に」は Default の txt を使用可能にします。</value></data>
+  <data name="Generated_Tooltip_OnlyDynamic" xml:space="preserve"><value>{ ... } のような動的プレースホルダーがある場合のみ再生成します。</value></data>
+  <data name="Generated_Tooltip_ReplaceAlways" xml:space="preserve"><value>有効にすると、航空会社の txt がない場合に Default のテンプレートで上書きできます。</value></data>
+  <data name="Generated_Tooltip_AutoCreateFolder" xml:space="preserve"><value>有効にすると、航空会社フォルダーが無い場合に作成し、生成した .ogg をそこに保存します。</value></data>
+  <data name="Generated_ConfirmOverwrite_Title" xml:space="preserve"><value>既存の .ogg の再生成を有効化</value></data>
+  <data name="Generated_ConfirmOverwrite_Message" xml:space="preserve"><value>有効にすると、選択した航空会社の既存の .ogg ファイルを、アナウンス再生時に再生成して置換する場合があります。続行しますか？</value></data>
   <data name="Generated_TestVoice" xml:space="preserve"><value>音声テスト</value></data>
   <data name="Generated_VoiceLabel" xml:space="preserve"><value>音声:</value></data>
   <data name="Generated_TestVoiceSample" xml:space="preserve"><value>これは Universal Announcer の生成音声のテストです。</value></data>
@@ -391,6 +399,8 @@
   <data name="Tweaks_BoardingInterval" xml:space="preserve"><value>Boarding Welcome 繰り返し間隔 (分):</value></data>
   <data name="Tweaks_CrewSeatsLanding" xml:space="preserve"><value>AGL 高度 —「着陸で着席」:</value></data>
   <data name="Tweaks_DepartureDelayThreshold" xml:space="preserve"><value>出発遅延しきい値 (分):</value></data>
+  <data name="Tweaks_EnablePmdgSdk" xml:space="preserve"><value>PMDG SDK データを有効化 (MSFS24 777X)</value></data>
+  <data name="Tweaks_PmdgHowToLink" xml:space="preserve"><value>PMDG SDK データの有効化方法</value></data>
   <data name="Tweaks_DescentAltitude" xml:space="preserve"><value>降下検出の AGL 高度 (ft):</value></data>
   <data name="Tweaks_EnableMusicResume" xml:space="preserve"><value>中断時に音楽を再開 (Boarding/AfterLanding)</value></data>
   <data name="Tweaks_FeetAbove" xml:space="preserve"><value>ft（以上）</value></data>
@@ -400,6 +410,30 @@
   <data name="Tweaks_TakeoffAltitude" xml:space="preserve"><value>離陸検出の AGL 高度 (ft):</value></data>
   <data name="Tweaks_UseBoardingMusicFallback" xml:space="preserve"><value>AfterLandingMusic がない場合は BoardingMusic を使用</value></data>
   <data name="Tweaks_UseLandingLights" xml:space="preserve"><value>CrewSeatsTakeoff に着陸灯を使用（ストロボの代わり）</value></data>
+
+  <!-- Tweaks: PMDG tooltip + ignore incompatible lights -->
+  <data name="Tweaks_PmdgSdk_Tooltip" xml:space="preserve"><value>MSFS 2024 の 777 用に PMDG クライアント データを使用します。777_Options.ini に EnableDataBroadcast=1 を追加する必要があります。</value></data>
+  <data name="Tweaks_IgnoreIncompatibleLights" xml:space="preserve"><value>互換性のない機体ライトを無視</value></data>
+  <data name="Tweaks_IgnoreIncompatibleLights_Tooltip" xml:space="preserve"><value>一部の機体が誤ったライト状態を報告する場合でも、手動の「次を再生」を使えるように、ロゴ／ビーコン／着陸灯／ストロボの各 SimVar を無視します。</value></data>
+
+  <!-- Waiting phrases for Play Next -->
+  <data name="Wait_BoardingStart_GSX" xml:space="preserve"><value>ロゴライト ON または GSX 搭乗</value></data>
+  <data name="Wait_BoardingStart_LogoOnly" xml:space="preserve"><value>ロゴライト ON</value></data>
+  <data name="Wait_BoardingComplete" xml:space="preserve"><value>ビーコン ON または GSX 搭乗完了</value></data>
+  <data name="Wait_ArmDoors" xml:space="preserve"><value>エンジン稼働中 または 地上速度 &gt; 1 kt</value></data>
+  <data name="Wait_PreSafetyBriefing" xml:space="preserve"><value>ArmDoors 再生済み かつ エンジン稼働中</value></data>
+  <data name="Wait_SafetyBriefing" xml:space="preserve"><value>PreSafetyBriefing 再生済み</value></data>
+  <data name="Wait_CabinDimTakeoff" xml:space="preserve"><value>SafetyBriefing 再生済み かつ 夜間</value></data>
+  <data name="Wait_CrewSeatsTakeoff" xml:space="preserve"><value>着陸灯 ON かつ エンジン稼働中</value></data>
+  <data name="Wait_CallCabinSecureTakeoff" xml:space="preserve"><value>CrewSeatsTakeoff 再生済み かつ 地上</value></data>
+  <data name="Wait_AfterTakeoff" xml:space="preserve"><value>空中 かつ AGL 高度 &gt; {0} ft（離陸 2 分後）</value></data>
+  <data name="Wait_DescentSeatbelts" xml:space="preserve"><value>AfterTakeoff 再生済み かつ &lt; {0} ft &amp; 降下中 または 着陸灯 ON</value></data>
+  <data name="Wait_CrewSeatsLanding" xml:space="preserve"><value>{0} ft 未満 かつ 降下中 かつ 着陸灯 ON</value></data>
+  <data name="Wait_CallCabinSecureLanding" xml:space="preserve"><value>CrewSeatsLanding 再生済み かつ &lt; {0} ft</value></data>
+  <data name="Wait_AfterLanding" xml:space="preserve"><value>地上 かつ GS &lt; 25 kt</value></data>
+  <data name="Wait_DisarmDoors" xml:space="preserve"><value>エンジン OFF かつ パーキングブレーキ ON</value></data>
+  <data name="Wait_DisembarkStarted" xml:space="preserve"><value>ビーコン OFF または GSX 降機中</value></data>
+  <data name="Wait_BoardingRepeat" xml:space="preserve"><value>搭乗リピート間隔</value></data>
+  <data name="Wait_DepartureDelayed" xml:space="preserve"><value>出発遅延しきい値</value></data>
+  <data name="PlayNext_CruiseElapsedFormat" xml:space="preserve"><value>巡航 {0}%</value></data>
 </root>
-
-

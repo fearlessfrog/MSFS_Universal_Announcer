@@ -141,6 +141,29 @@
   <data name="Tray_PlayingPrefix" xml:space="preserve"><value>재생 중:</value></data>
   <data name="Tray_ManualTag" xml:space="preserve"><value>수동</value></data>
   <data name="Tray_AutoTag" xml:space="preserve"><value>자동</value></data>
+
+  <!-- Tweaks: PMDG tooltip + ignore incompatible lights -->
+  <data name="Tweaks_PmdgSdk_Tooltip" xml:space="preserve"><value>MSFS 2024의 777에서 PMDG 클라이언트 데이터를 사용합니다. 777_Options.ini에 EnableDataBroadcast=1 추가가 필요합니다.</value></data>
+  <data name="Tweaks_IgnoreIncompatibleLights" xml:space="preserve"><value>호환되지 않는 항공기 조명 무시</value></data>
+  <data name="Tweaks_IgnoreIncompatibleLights_Tooltip" xml:space="preserve"><value>일부 항공기가 잘못된 조명 상태를 보고하는 경우에도 수동 "다음 재생"을 사용할 수 있도록 로고/비컨/랜딩/스트로브 SimVar 값을 무시합니다.</value></data>
+
+  <!-- Waiting phrases for Play Next -->
+  <data name="Wait_BoardingStart_GSX" xml:space="preserve"><value>로고 라이트 켜짐 또는 GSX 탑승</value></data>
+  <data name="Wait_BoardingStart_LogoOnly" xml:space="preserve"><value>로고 라이트 켜짐</value></data>
+  <data name="Wait_BoardingComplete" xml:space="preserve"><value>비컨 켜짐 또는 GSX 탑승 완료</value></data>
+  <data name="Wait_ArmDoors" xml:space="preserve"><value>엔진 가동 중 또는 지상 속도 &gt; 1 kt</value></data>
+  <data name="Wait_PreSafetyBriefing" xml:space="preserve"><value>ArmDoors 재생됨 그리고 엔진 가동 중</value></data>
+  <data name="Wait_SafetyBriefing" xml:space="preserve"><value>PreSafetyBriefing 재생됨</value></data>
+  <data name="Wait_CabinDimTakeoff" xml:space="preserve"><value>SafetyBriefing 재생됨 그리고 야간</value></data>
+  <data name="Wait_CrewSeatsTakeoff" xml:space="preserve"><value>랜딩 라이트 켜짐 그리고 엔진 가동 중</value></data>
+  <data name="Wait_CallCabinSecureTakeoff" xml:space="preserve"><value>CrewSeatsTakeoff 재생됨 그리고 지상</value></data>
+  <data name="Wait_AfterTakeoff" xml:space="preserve"><value>비행 중 그리고 AGL 고도 &gt; {0} ft (이륙 2분 후)</value></data>
+  <data name="Wait_DescentSeatbelts" xml:space="preserve"><value>AfterTakeoff 재생됨 그리고 &lt; {0} ft &amp; 하강 중 또는 랜딩 라이트 켜짐</value></data>
+  <data name="Wait_CrewSeatsLanding" xml:space="preserve"><value>{0} ft 미만 그리고 하강 중 그리고 랜딩 라이트 켜짐</value></data>
+  <data name="Wait_CallCabinSecureLanding" xml:space="preserve"><value>CrewSeatsLanding 재생됨 그리고 &lt; {0} ft</value></data>
+  <data name="Wait_AfterLanding" xml:space="preserve"><value>지상 그리고 GS &lt; 25 kt</value></data>
+  <data name="Wait_DisarmDoors" xml:space="preserve"><value>엔진 꺼짐 그리고 주차 브레이크 설정</value></data>
+  <data name="Wait_DisembarkStarted" xml:space="preserve"><value>비컨 꺼짐 또는 GSX 하기 시작</value></data>
   <data name="Balloon_UpdateAvailableTitle" xml:space="preserve"><value>Universal Announcer - 업데이트 사용 가능</value></data>
   <data name="Balloon_UpdateWarning" xml:space="preserve"><value>경고: 현재 버전이 오래되었습니다(현재: {0}, 최신: {1}).
 GitHub를 열어 최신 버전을 다운로드하세요.</value></data>
@@ -178,13 +201,21 @@ GitHub를 열어 최신 버전을 다운로드하세요.</value></data>
   <data name="Generated_GenerateAs" xml:space="preserve"><value>다른 이름으로 생성..</value></data>
   <data name="Generated_SaveTxt" xml:space="preserve"><value>TXT 저장</value></data>
   <data name="Generated_RevertTxt" xml:space="preserve"><value>TXT 되돌리기</value></data>
-  <data name="Generated_ReplaceExistingOgg" xml:space="preserve"><value>기존 .ogg 교체</value></data>
+  <data name="Generated_ReplaceExistingOgg" xml:space="preserve"><value>.ogg 교체(항공사 txt 시)</value></data>
+  <data name="Generated_ReplaceExistingOggAlways" xml:space="preserve"><value>.ogg 항상 교체</value></data>
   <data name="Generated_OnlyDynamic" xml:space="preserve"><value>동적인 경우에만 재생성</value></data>
   <data name="Generated_AutoCreateFolder" xml:space="preserve"><value>누락된 항공사 폴더 자동 생성</value></data>
+  <data name="Generated_Tooltip_ReplaceAirlineOnly" xml:space="preserve"><value>항공사 폴더에 .txt 템플릿이 있을 때만 기존 항공사 .ogg를 덮어씁니다. ‘항상’은 Default txt 사용을 허용합니다.</value></data>
+  <data name="Generated_Tooltip_OnlyDynamic" xml:space="preserve"><value>{ ... }와 같은 동적 플레이스홀더가 있을 때만 재생성합니다.</value></data>
+  <data name="Generated_Tooltip_ReplaceAlways" xml:space="preserve"><value>활성화 시, 항공사 txt가 없을 때 Default 템플릿으로 덮어쓰기를 허용합니다.</value></data>
+  <data name="Generated_Tooltip_AutoCreateFolder" xml:space="preserve"><value>활성화 시, 항공사 폴더가 없으면 생성하고 생성된 .ogg를 그곳에 저장합니다.</value></data>
+  <data name="Generated_ConfirmOverwrite_Title" xml:space="preserve"><value>기존 .ogg 재생성 사용</value></data>
+  <data name="Generated_ConfirmOverwrite_Message" xml:space="preserve"><value>활성화하면, 선택한 항공사의 기존 .ogg 파일을 안내 방송 재생 시 재생성하여 교체할 수 있습니다. 계속할까요?</value></data>
   <data name="Generated_HelpSetup" xml:space="preserve"><value>도움말 &amp; 설정(먼저 읽기)</value></data>
   <data name="Generated_AirlineLabel" xml:space="preserve"><value>항공사:</value></data>
   <data name="Generated_InsertVoice" xml:space="preserve"><value>음성 삽입</value></data>
   <data name="Generated_TestVoice" xml:space="preserve"><value>음성 테스트</value></data>
+  <data name="Audio_AssumeQuickViewsAsCabin_Tooltip" xml:space="preserve"><value>활성화되어 있고 카메라가 Cockpit(2)이며 Substate Quickview(3)인 경우, 볼륨을 객실로 처리합니다.</value></data>
   <data name="Generated_VoiceLabel" xml:space="preserve"><value>음성:</value></data>
   <data name="Generated_AzureApiKey" xml:space="preserve"><value>Azure API 키:</value></data>
   <data name="Generated_AzureRegion" xml:space="preserve"><value>Azure 지역:</value></data>
@@ -289,6 +320,8 @@ GitHub를 열어 최신 버전을 다운로드하세요.</value></data>
   <data name="Tweaks_UseBoardingMusicFallback" xml:space="preserve"><value>AfterLandingMusic 없으면 BoardingMusic 사용</value></data>
   <data name="Tweaks_SkipFirstBoardingWelcome" xml:space="preserve"><value>첫 번째 BoardingWelcome 건너뛰기</value></data>
   <data name="Tweaks_DepartureDelayThreshold" xml:space="preserve"><value>출발 지연 임계값(분):</value></data>
+  <data name="Tweaks_EnablePmdgSdk" xml:space="preserve"><value>PMDG SDK 데이터 사용 (MSFS24 777X)</value></data>
+  <data name="Tweaks_PmdgHowToLink" xml:space="preserve"><value>PMDG SDK 데이터 사용 방법</value></data>
 
   <data name="Audio_AssumeQuickViewsAsCabin" xml:space="preserve"><value>콕핏 퀵뷰를 객실로 간주</value></data>
   <data name="Audio_CabinLabel" xml:space="preserve"><value>객실(추정):</value></data>
@@ -403,6 +436,7 @@ GitHub를 열어 최신 버전을 다운로드하세요.</value></data>
   <data name="Msg_UseNewDefaultPackAsLocationConfirm_Format" xml:space="preserve"><value>새로 설치한 Default 팩을 사운드 파일 위치로 사용할까요?
 
 {0}</value></data>
+  <data name="Wait_BoardingRepeat" xml:space="preserve"><value>탑승 반복 간격</value></data>
+  <data name="Wait_DepartureDelayed" xml:space="preserve"><value>출발 지연 임계값</value></data>
+  <data name="PlayNext_CruiseElapsedFormat" xml:space="preserve"><value>순항 {0}%</value></data>
 </root>
-
-

@@ -103,6 +103,11 @@
   <data name="Tweaks_UseBoardingMusicFallback" xml:space="preserve"><value>BoardingMusic verwenden, wenn AfterLandingMusic fehlt</value></data>
   <data name="Tweaks_SkipFirstBoardingWelcome" xml:space="preserve"><value>Erste BoardingWelcome überspringen</value></data>
   <data name="Tweaks_DepartureDelayThreshold" xml:space="preserve"><value>Verspätungsschwelle beim Abflug (Min.):</value></data>
+  <data name="Tweaks_EnablePmdgSdk" xml:space="preserve"><value>PMDG SDK-Daten aktivieren (MSFS24 777X)</value></data>
+  <data name="Tweaks_PmdgHowToLink" xml:space="preserve"><value>Wie PMDG SDK-Daten aktivieren</value></data>
+  <data name="Tweaks_PmdgSdk_Tooltip" xml:space="preserve"><value>PMDG-Clientdaten für die 777 in MSFS 2024 verwenden. Erfordert EnableDataBroadcast=1 in 777_Options.ini.</value></data>
+  <data name="Tweaks_IgnoreIncompatibleLights" xml:space="preserve"><value>Inkompatible Flugzeuglichter ignorieren</value></data>
+  <data name="Tweaks_IgnoreIncompatibleLights_Tooltip" xml:space="preserve"><value>Ignoriert Logo-, Beacon-, Landescheinwerfer- und Strobe‑SimVars, damit „Nächste abspielen“ manuell genutzt werden kann, wenn manche Flugzeuge falsche Lichtzustände melden.</value></data>
 
   <!-- Integrations tab -->
   <data name="Integrations_SimBriefGroup" xml:space="preserve"><value>SimBrief-Integration</value></data>
@@ -132,6 +137,7 @@
   <data name="Integrations_SimBrief_EnterUsername" xml:space="preserve"><value>Bitte einen SimBrief-Benutzernamen eingeben</value></data>
   <data name="Integrations_SimBrief_UsernameChanged" xml:space="preserve"><value>Benutzername geändert – „Letzten Plan abrufen“ klicken zum Aktualisieren</value></data>
   <data name="Common_Fetching" xml:space="preserve"><value>Wird abgerufen…</value></data>
+  <data name="Audio_AssumeQuickViewsAsCabin_Tooltip" xml:space="preserve"><value>Wenn aktiviert und die Kamera Cockpit (2) mit Unterzustand Quickview (3) ist, als Kabine für die Lautstärke behandeln.</value></data>
   <data name="Integrations_AircraftError" xml:space="preserve"><value>Flugzeug: Fehler</value></data>
   <data name="Integrations_AirlineError" xml:space="preserve"><value>Fluglinie: Fehler</value></data>
   <data name="Integrations_OriginError" xml:space="preserve"><value>Abflug: Fehler</value></data>
@@ -145,9 +151,16 @@
   <data name="Generated_GenerateAll" xml:space="preserve"><value>Alle erzeugen</value></data>
   <data name="Generated_SaveTxt" xml:space="preserve"><value>TXT speichern</value></data>
   <data name="Generated_RevertTxt" xml:space="preserve"><value>TXT zurücksetzen</value></data>
-  <data name="Generated_ReplaceExistingOgg" xml:space="preserve"><value>Vorhandene .ogg ersetzen</value></data>
+  <data name="Generated_ReplaceExistingOgg" xml:space="preserve"><value>.ogg ersetzen (wenn Airline‑TXT)</value></data>
+  <data name="Generated_ReplaceExistingOggAlways" xml:space="preserve"><value>.ogg immer ersetzen</value></data>
   <data name="Generated_OnlyDynamic" xml:space="preserve"><value>Nur bei dynamisch neu erzeugen</value></data>
   <data name="Generated_AutoCreateFolder" xml:space="preserve"><value>Fehlenden Airline‑Ordner auto. erstellen</value></data>
+  <data name="Generated_Tooltip_ReplaceAirlineOnly" xml:space="preserve"><value>Vorhandene Airline‑.ogg nur überschreiben, wenn eine Airline‑Ordner‑.txt‑Vorlage existiert. „Immer“ erlaubt die Verwendung der Default‑txt.</value></data>
+  <data name="Generated_Tooltip_OnlyDynamic" xml:space="preserve"><value>Nur neu erzeugen, wenn die Vorlage dynamische Platzhalter wie { ... } enthält.</value></data>
+  <data name="Generated_Tooltip_ReplaceAlways" xml:space="preserve"><value>Wenn aktiviert, Überschreiben mit Default‑Vorlage erlauben, wenn Airline‑txt fehlt.</value></data>
+  <data name="Generated_Tooltip_AutoCreateFolder" xml:space="preserve"><value>Wenn aktiviert, fehlenden Airline‑Ordner erstellen und erzeugte .ogg dort speichern.</value></data>
+  <data name="Generated_ConfirmOverwrite_Title" xml:space="preserve"><value>Erneutes Erzeugen vorhandener .ogg aktivieren</value></data>
+  <data name="Generated_ConfirmOverwrite_Message" xml:space="preserve"><value>Wenn aktiviert, kann die App beim Abspielen vorhandene .ogg‑Dateien der ausgewählten Airline neu erzeugen und ersetzen. Fortfahren?</value></data>
   <data name="Generated_HelpSetup" xml:space="preserve"><value>Hilfe &amp; Einrichtung (zuerst lesen)</value></data>
   <data name="Generated_AirlineLabel" xml:space="preserve"><value>Airline:</value></data>
   <data name="Generated_InsertVoice" xml:space="preserve"><value>Stimme einfügen</value></data>
@@ -347,5 +360,35 @@ Ein kurzer Download beginnt.</value></data>
   <data name="Title_SaveTemplate" xml:space="preserve"><value>Vorlage speichern</value></data>
   <data name="Title_StartupError" xml:space="preserve"><value>Startfehler</value></data>
   <data name="Title_StartWithMsfs" xml:space="preserve"><value>Mit MSFS starten</value></data>
+
+  <!-- Tray: Next announcement feature (missing in de) -->
+  <data name="Tray_WaitingForPrefix" xml:space="preserve"><value>Warten auf:</value></data>
+  <data name="Tray_NextAnnouncementPrefix" xml:space="preserve"><value>Nächste Ansage:</value></data>
+  <data name="Tray_WaitingFor" xml:space="preserve"><value>Warten auf: {0}</value></data>
+  <data name="Tray_NextAnnouncement" xml:space="preserve"><value>Nächste Ansage: {0}</value></data>
+  <data name="Tray_PlayNext" xml:space="preserve"><value>Nächste abspielen</value></data>
+
+  <!-- Waiting phrases for Play Next (missing in de) -->
+  <data name="Wait_BoardingStart_GSX" xml:space="preserve"><value>Logo‑Licht EIN oder GSX‑Boarding</value></data>
+  <data name="Wait_BoardingStart_LogoOnly" xml:space="preserve"><value>Logo‑Licht EIN</value></data>
+  <data name="Wait_BoardingComplete" xml:space="preserve"><value>Beacon EIN oder GSX‑Boarding abgeschlossen</value></data>
+  <data name="Wait_ArmDoors" xml:space="preserve"><value>Triebwerke laufen oder Bodengeschwindigkeit &gt; 1 kt</value></data>
+  <data name="Wait_PreSafetyBriefing" xml:space="preserve"><value>ArmDoors gespielt und Triebwerke laufen</value></data>
+  <data name="Wait_SafetyBriefing" xml:space="preserve"><value>PreSafetyBriefing gespielt</value></data>
+  <data name="Wait_CabinDimTakeoff" xml:space="preserve"><value>SafetyBriefing gespielt und Nacht</value></data>
+  <data name="Wait_CrewSeatsTakeoff" xml:space="preserve"><value>Landescheinwerfer EIN und Triebwerke laufen</value></data>
+  <data name="Wait_CallCabinSecureTakeoff" xml:space="preserve"><value>CrewSeatsTakeoff gespielt und Am Boden</value></data>
+  <data name="Wait_AfterTakeoff" xml:space="preserve"><value>In der Luft und AGL‑Höhe &gt; {0} ft (2 Min nach Start)</value></data>
+  <data name="Wait_DescentSeatbelts" xml:space="preserve"><value>AfterTakeoff gespielt und &lt; {0} ft &amp; Sinkflug oder Landescheinwerfer EIN</value></data>
+  <data name="Wait_CrewSeatsLanding" xml:space="preserve"><value>Unter {0} ft und Sinkflug und Landescheinwerfer EIN</value></data>
+  <data name="Wait_CallCabinSecureLanding" xml:space="preserve"><value>CrewSeatsLanding gespielt und &lt; {0} ft</value></data>
+  <data name="Wait_AfterLanding" xml:space="preserve"><value>Am Boden und GS &lt; 25 kt</value></data>
+  <data name="Wait_DisarmDoors" xml:space="preserve"><value>Triebwerke AUS und Parkbremse AN</value></data>
+  <data name="Wait_DisembarkStarted" xml:space="preserve"><value>Beacon AUS oder GSX‑Deboarding aktiv</value></data>
+
+  <!-- Play Next polish (new) -->
+  <data name="Wait_BoardingRepeat" xml:space="preserve"><value>Wiederholintervall Boarding</value></data>
+  <data name="Wait_DepartureDelayed" xml:space="preserve"><value>Verspätungsschwelle beim Abflug</value></data>
+  <data name="PlayNext_CruiseElapsedFormat" xml:space="preserve"><value>Reiseflug {0}%</value></data>
 </root>
 
