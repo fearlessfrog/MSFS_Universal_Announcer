@@ -22,6 +22,7 @@ You do not need the Fenix A320 for this to work (although you should have it, it
 - GSX Pro integration: Uses the Boarding, Deboarding and Refueling states automatically.
 - Sound volume based on camera.
 - Basic Seat Belt support (WIP). If your add-on doesn't give out data for Selt Belt switches (most don't) you can use the MSFS control binding for 'AnnunciatorOn' (and same key/control for 'Annunciator Off' to trigger it.
+- Native MSFS Toolbar support. Put the 'universalannouncer-toolbar' folder from the zip in your MSFS 2020 or MSFS 2024 Community folder and you're all set.
 
 This app follows the announcements detailed here:
 

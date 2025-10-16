@@ -171,7 +171,7 @@
   <data name="Audio_Percent" xml:space="preserve"><value>%</value></data>
   <data name="Audio_DeviceLabel" xml:space="preserve"><value>オーディオデバイス:</value></data>
   <data name="Audio_PresetLabel" xml:space="preserve"><value>プリセット:</value></data>
-  <data name="Audio_VolumeLabel" xml:space="preserve"><value>音量 (0-100):</value></data>
+  <data name="Audio_VolumeLabel" xml:space="preserve"><value>音量:</value></data>
   <data name="Audio_PaAudioMix" xml:space="preserve"><value>PA オーディオミックス (客室スピーカーのノイズを再現)</value></data>
   <data name="Audio_UseCabinIfDoorOpen" xml:space="preserve"><value>ドア開放時は客室音量を使用 (GSX が必要)</value></data>
   <data name="Audio_AssumeQuickViewsAsCabin" xml:space="preserve"><value>コックピットのクイックビューを客室として扱う</value></data>

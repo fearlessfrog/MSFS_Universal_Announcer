@@ -407,7 +407,7 @@ Para abrir la configuración o controlar la aplicación:
   <data name="Audio_Percent" xml:space="preserve"><value>%</value></data>
   <data name="Audio_PresetLabel" xml:space="preserve"><value>Preajuste:</value></data>
   <data name="Audio_UseCabinIfDoorOpen" xml:space="preserve"><value>Usar volumen de cabina si la puerta está abierta (requiere GSX)</value></data>
-  <data name="Audio_VolumeLabel" xml:space="preserve"><value>Volumen (0-100):</value></data>
+  <data name="Audio_VolumeLabel" xml:space="preserve"><value>Volumen:</value></data>
   <data name="Audio_ForegroundOnly" xml:space="preserve"><value>Reproducir solo cuando MSFS o esta app tenga el foco</value></data>
   <data name="Audio_ForegroundOnly_Tooltip" xml:space="preserve"><value>Cuando está activado, los anuncios solo se escuchan cuando Microsoft Flight Simulator o esta ventana de configuración tiene el foco. El audio continúa en silencio en segundo plano.</value></data>
   <!-- Tweaks: PMDG tooltip + ignore incompatible lights -->

@@ -85,7 +85,7 @@
 
   <!-- Audio tab -->
   <data name="Audio_DeviceLabel" xml:space="preserve"><value>音频设备：</value></data>
-  <data name="Audio_VolumeLabel" xml:space="preserve"><value>音量 (0-100)：</value></data>
+  <data name="Audio_VolumeLabel" xml:space="preserve"><value>音量：</value></data>
   <data name="Audio_Percent" xml:space="preserve"><value>%</value></data>
   <data name="Audio_PresetLabel" xml:space="preserve"><value>预设：</value></data>
   <data name="Audio_PaAudioMix" xml:space="preserve"><value>PA 音频混合（模拟客舱扬声器）</value></data>

@@ -57,7 +57,7 @@
 
   <!-- Audio tab -->
   <data name="Audio_DeviceLabel" xml:space="preserve"><value>Audio-Gerät:</value></data>
-  <data name="Audio_VolumeLabel" xml:space="preserve"><value>Lautstärke (0-100):</value></data>
+  <data name="Audio_VolumeLabel" xml:space="preserve"><value>Lautstärke:</value></data>
   <data name="Audio_Percent" xml:space="preserve"><value>%</value></data>
   <data name="Audio_PresetLabel" xml:space="preserve"><value>Voreinstellung:</value></data>
   <data name="Audio_PaAudioMix" xml:space="preserve"><value>PA Audio-Mix (simuliert Kabinenlautsprecher)</value></data>

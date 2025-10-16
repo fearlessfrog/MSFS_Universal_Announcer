@@ -124,7 +124,7 @@
 
   <!-- Audio tab -->
   <data name="Audio_DeviceLabel" xml:space="preserve"><value>Audio Device:</value></data>
-  <data name="Audio_VolumeLabel" xml:space="preserve"><value>Volume (0-100):</value></data>
+  <data name="Audio_VolumeLabel" xml:space="preserve"><value>Volume:</value></data>
   <data name="Audio_Percent" xml:space="preserve"><value>%</value></data>
   <data name="Audio_PresetLabel" xml:space="preserve"><value>Preset:</value></data>
   <data name="Audio_PaAudioMix" xml:space="preserve"><value>PA Audio Mix (simulates cabin speaker noise)</value></data>
@@ -176,6 +176,9 @@
   <data name="Tweaks_PmdgSdk_Tooltip" xml:space="preserve"><value>Use PMDG client data for the 777 on MSFS 2024. Requires adding EnableDataBroadcast=1 to 777_Options.ini.</value></data>
   <data name="Tweaks_IgnoreIncompatibleLights" xml:space="preserve"><value>Ignore incompatible aircraft lights</value></data>
   <data name="Tweaks_IgnoreIncompatibleLights_Tooltip" xml:space="preserve"><value>Ignores Logo, Beacon, Landing and Strobe SimVars so you can use manual Play Next when some aircraft report incorrect light states.</value></data>
+
+  <!-- Tweaks: MSFS Toolbar -->
+  <data name="Tweaks_EnableMsfsToolbar" xml:space="preserve"><value>Enable MSFS Toolbar link (experimental)</value></data>
 
   <!-- Integrations tab -->
   <data name="Integrations_SimBriefGroup" xml:space="preserve"><value>SimBrief Integration</value></data>

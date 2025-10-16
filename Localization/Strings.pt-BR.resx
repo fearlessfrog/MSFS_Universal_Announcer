@@ -67,7 +67,7 @@
   <data name="App_Title" xml:space="preserve"><value>Universal Announcer</value></data>
   <data name="Common_Fetching" xml:space="preserve"><value>Buscando…</value></data>
   <data name="Audio_DeviceLabel" xml:space="preserve"><value>Dispositivo de áudio:</value></data>
-  <data name="Audio_VolumeLabel" xml:space="preserve"><value>Volume (0-100):</value></data>
+  <data name="Audio_VolumeLabel" xml:space="preserve"><value>Volume:</value></data>
   <data name="Audio_Percent" xml:space="preserve"><value>%</value></data>
   <data name="Audio_PresetLabel" xml:space="preserve"><value>Predefinição:</value></data>
   <data name="Audio_PaAudioMix" xml:space="preserve"><value>Mix de PA (simula alto-falante da cabine)</value></data>

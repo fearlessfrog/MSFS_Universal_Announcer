@@ -361,7 +361,7 @@ Pour ouvrir les paramètres ou contrôler l’application :
   <data name="Audio_Percent" xml:space="preserve"><value>%</value></data>
   <data name="Audio_PresetLabel" xml:space="preserve"><value>Préréglage :</value></data>
   <data name="Audio_UseCabinIfDoorOpen" xml:space="preserve"><value>Utiliser le volume cabine si la porte est ouverte (nécessite GSX)</value></data>
-  <data name="Audio_VolumeLabel" xml:space="preserve"><value>Volume (0‑100) :</value></data>
+  <data name="Audio_VolumeLabel" xml:space="preserve"><value>Volume :</value></data>
   <data name="Audio_ForegroundOnly" xml:space="preserve"><value>Lire uniquement quand MSFS ou cette appli a le focus</value></data>
   <data name="Audio_ForegroundOnly_Tooltip" xml:space="preserve"><value>Lorsqu’active, les annonces ne sont audibles que lorsque Microsoft Flight Simulator ou cette fenêtre de paramètres a le focus. L’audio continue en silence en arrière‑plan.</value></data>
   <data name="Btn_Preflight" xml:space="preserve"><value>Pré‑vol</value></data>
