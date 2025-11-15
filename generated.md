@@ -38,8 +38,10 @@ To use this feature, you'll need to set up an Azure Text-to-Speech API key. I've
 
 **Important**: You'll need **both** your API Key and your Azure Region/Location for the app to work properly. Make sure to note both values when setting up your Azure Speech service.
 
+Supports voice selection and adjusting rate/pitch per announcement, see section below.
+
 ### Getting Started with Edge TTS
-Use Microsoft's online TTS via the Edge provider (no API key required). Supports voice selection and adjusting rate/volume/pitch. For capabilities and examples, see the `edge-tts` project: [https://github.com/rany2/edge-tts](https://github.com/rany2/edge-tts).
+Use Microsoft's online TTS via the Edge provider (no API key required). Supports voice selection and adjusting rate/pitch per announcement. For full capabilities and technical examples, see the `edge-tts` project: [https://github.com/rany2/edge-tts](https://github.com/rany2/edge-tts). Some users report connectivity issues with this but it's free and worth a try. You don't need Edge or any browser, it's more the name of the underlying web API.
 
 ### Getting Started with ElevenLabs TTS
 You can sign up for a free key and try out these voices. A paid plan allows you to clone your voice and do all sorts of weird and wonderful things. There are free voices to use as well but limited compared to Azure.
@@ -179,7 +181,7 @@ You can specify a different voice for each generated announcement. Use the **Ins
 
 If no override is present, the global voice selection is used (the one you last set).
 
-- NEW: TTS Rate and Pitch Adjust. For the Azure and Edge TTS generators allow for speed rate and pitch changes within the generated voice, adjusting the generated output as required. ElevenLabs does not support the standard SSML, so can't do this as yet, and Windows TTS is super basic, so just those two for now. You can provide these hints as follows until the docs are updated:
+**TTS Rate and Pitch Adjust**. For the Azure and Edge TTS generators allow for speed rate and pitch changes within the generated voice, adjusting the generated output as required. ElevenLabs does not support the standard SSML, so can't do this as yet, and Windows TTS is super basic, so just those two for now. Example use in the app:
 
 ```text
 ##Voice: Edge/en-US-LunaNeural
