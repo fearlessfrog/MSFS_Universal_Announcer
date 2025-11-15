@@ -5,7 +5,7 @@
 
 ## TL;DR Summary
 
-🎯 **Use Windows (local), Azure, or ElevenLabs Text To Speech (TTS) to generate fully compatible sound files on the fly using your dynamic flight info**
+🎯 **Use Windows (local), Azure, Edge, or ElevenLabs Text To Speech (TTS) to generate fully compatible sound files on the fly using your dynamic flight info**
 
 ## Important Note
 
@@ -24,11 +24,11 @@ The Generated TTS feature is pretty interesting because:
 
 ## Overview
 
-The Generated TTS feature automatically synthesizes missing airline announcements using Windows (local), Azure, or ElevenLabs Text-to-Speech, providing a seamless fallback before default audio is used. This ensures your passengers always hear appropriate announcements, even when custom audio files are missing.
+The Generated TTS feature automatically synthesizes missing airline announcements using Windows (local), Azure, Edge, or ElevenLabs Text-to-Speech, providing a seamless fallback before default audio is used. This ensures your passengers always hear appropriate announcements, even when custom audio files are missing.
 
 ## Setting up a TTS Provider
 
-You can use Windows (local), Azure, or ElevenLabs. Windows voices are free and offline; Azure has a generous free tier; ElevenLabs has a limited free plan and paid options for cloned/custom voices. Here's how to set them up:
+You can use Windows (local), Azure, Edge, or ElevenLabs. Windows voices are free and offline; Azure has a generous free tier; Edge uses Microsoft's online TTS with no API key required; ElevenLabs has a limited free plan and paid options for cloned/custom voices. Here's how to set them up:
 
 ### Getting Started with Azure TTS
 To use this feature, you'll need to set up an Azure Text-to-Speech API key. I've found two excellent step-by-step guides that walk you through the entire process:
@@ -37,6 +37,9 @@ To use this feature, you'll need to set up an Azure Text-to-Speech API key. I've
 - **[VitalPBX Blog](https://vitalpbx.com/blog/how-to-create-microsoft-azure-tts-api-key/)** - Detailed walkthrough with screenshots and specific steps
 
 **Important**: You'll need **both** your API Key and your Azure Region/Location for the app to work properly. Make sure to note both values when setting up your Azure Speech service.
+
+### Getting Started with Edge TTS
+Use Microsoft's online TTS via the Edge provider (no API key required). Supports voice selection and adjusting rate/volume/pitch. For capabilities and examples, see the `edge-tts` project: [https://github.com/rany2/edge-tts](https://github.com/rany2/edge-tts).
 
 ### Getting Started with ElevenLabs TTS
 You can sign up for a free key and try out these voices. A paid plan allows you to clone your voice and do all sorts of weird and wonderful things. There are free voices to use as well but limited compared to Azure.
@@ -145,7 +148,7 @@ Access the Generated TTS settings in **Settings → Generated**:
 - **Azure Region**: Select your preferred Azure service region e.g.'westus' or 'westeurope' as you set up in Azure earlier.
 - **Model**: Select your preferred ElevenLabs model, fast/turbo is fine usually and less credits.
 - **API Key**: Enter your Azure or Elevenlabs Text-to-Speech API key
-- **Voice**: Choose from available Azure or ElevenLabs TTS voices. Pick an accent appropriate for the airline or region.
+- **Voice**: Choose from available Azure, Edge, or ElevenLabs TTS voices. Pick an accent appropriate for the airline or region.
  - **Windows Voices**: Choose from local Windows SAPI v5 and WinRT/Core voices.
  - **Airline Folder Auto Creation**: When enabled, the app will create the target airline folder automatically during generation/playback based on SimBrief or your MSFS callsign/airline selection.
  - **Automatic Generated Mode**: Optionally overwrite existing `.ogg` files automatically; optionally only when text is dynamic.

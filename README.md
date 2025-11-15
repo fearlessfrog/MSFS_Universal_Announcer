@@ -11,7 +11,7 @@ You do not need the Fenix A320 for this to work (although you should have it, it
 ## ✈️ Features
 - Automatic Flight State Detection: Monitors aircraft lights, engines, altitude, and ground status
 - Airline-Specific Announcements: Supports airline folders (UAL, ACA, BAW, DAL, etc.)
-- Generated Announcements: Create dynamic, multi‑language cabin announcements using Windows (offline), Azure, or ElevenLabs TTS; fully customizable and flight‑aware. [Learn more](https://fearlessfrog.github.io/MSFS_Universal_Announcer/generated.html)
+- Generated Announcements: Create dynamic, multi‑language cabin announcements using Windows (offline), Azure, Edge, or ElevenLabs TTS; fully customizable and flight‑aware. [Learn more](https://fearlessfrog.github.io/MSFS_Universal_Announcer/generated.html)
 - Cruise Announcements: Trigger announcements during cruise by elapsed flight time (e.g., 25%, 50%, 70%). Enable in the Announcements tab.
 - Per‑Announcement Voices: Choose different voices per announcement (e.g., pilot vs attendant) in templates.
 - Default Sound Pack: One‑click setup downloads a public‑domain starter pack (or use your Fenix files).
@@ -39,7 +39,7 @@ You can obtain compatible sound files from:
 3. Cabin Announcements Discord: join the [Cabin Announcements for Fenix](https://discord.com/invite/P8ZYJgH3ZF) Discord server for community-created sound files
 4. Make You Own: Get your tray tables in an upright position and get recording, it's just plain sound files (see [here](https://support.fenixsim.com/hc/en-us/articles/12374580682383-Cabin-Announcements-Guide) for specs)
 5. Use a Text to Speech service within the app and generate your own on the fly or pregenerated! Allows for in-flight context to be used in what it says. More details [here](https://fearlessfrog.github.io/MSFS_Universal_Announcer/generated.html).
-   - Supports Windows (local offline), Azure, and ElevenLabs voice providers.
+   - Supports Windows (local offline), Azure, Edge, and ElevenLabs voice providers.
 
 If you don't own the Fenix then it is worth considering taking one of the Cabin Announcement packs from Discord and dropping them in a folder Announcements\Default, so they can be used with or without any airline code as a fallback.
 
@@ -104,7 +104,7 @@ Remember to do it when setting a Livery!
 
 ### Generated Announcements (optional)
 
-- Providers: Use Windows (local SAPI v5 and WinRT/Core), Azure, or ElevenLabs voices.
+- Providers: Use Windows (local SAPI v5 and WinRT/Core), Azure, Edge, or ElevenLabs voices.
 - Per‑announcement voice overrides: Insert a voice hint on the first line of a template to use different voices per announcement/role.
 - Automatic Generated Mode: Optionally overwrite existing .ogg files automatically; optionally limit overwrites to templates with dynamic placeholders.
 - Airline Folder Auto Creation: Let the app create the airline folder automatically based on SimBrief or your MSFS callsign.
