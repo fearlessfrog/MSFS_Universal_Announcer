@@ -174,7 +174,19 @@ The template editor displays all available built-in announcement templates. Sele
 ### Per‑Announcement Voice Overrides
 You can specify a different voice for each generated announcement. Use the **Insert Voice** button in the template editor to add a voice hint on the first line of the template. Overrides can be set per Default or per‑Airline template so, for example, a pilot and an attendant can use different voices and in different accents.
 
-Over time, more first‑line hints will be added for voice SSML, e.g. speed, and emphasis. If no override is present, the global voice selection is used (the one you last set).
+If no override is present, the global voice selection is used (the one you last set).
+
+- NEW: TTS Rate and Pitch Adjust. For the Azure and Edge TTS generators allow for speed rate and pitch changes within the generated voice, adjusting the generated output as required. ElevenLabs does not support the standard SSML, so can't do this as yet, and Windows TTS is super basic, so just those two for now. You can provide these hints as follows until the docs are updated:
+
+```text
+##Voice: Edge/en-US-LunaNeural
+##rate:-50%
+##pitch:-50Hz
+
+Welcome aboard this flight.
+```
+
+So this would pick a voice from Edge called 'en-US-LunaNeural', play at half speed (e.g. minus 50%) and be of a lower pitch than the default voice (e.g. minus 50Hz). There isn't much validation on values, so you can go full 'chipmunk on sugar' if you really want. The Rate is in positive and negative (100% is the default) and Pitch is via hertz negative or positive (0Hz is no change).
 
 ## 'Replace existing .ogg' Automatic Generated Mode
 
