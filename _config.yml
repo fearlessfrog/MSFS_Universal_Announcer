@@ -1,3 +1,5 @@
+url: "https://fearlessfrog.github.io"
+baseurl: "/MSFS_Universal_Announcer"
 plugins:
   - jekyll-relative-links
 relative_links:
