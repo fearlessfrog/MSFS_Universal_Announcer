@@ -12,8 +12,32 @@
   <data name="Status_CurrentlyPlaying" xml:space="preserve"><value>当前播放：{0}</value></data>
   <data name="Status_MSFS" xml:space="preserve"><value>MSFS：{0}</value></data>
   <data name="None" xml:space="preserve"><value>无</value></data>
+  <!-- Missing keys added -->
+  <data name="Tray_CheckForUpdates" xml:space="preserve"><value>检查更新…</value></data>
+  <data name="Tweaks_EnableMsfsToolbar" xml:space="preserve"><value>启用 MSFS 工具栏链接（实验性）</value></data>
+  <data name="Update_UpToDate" xml:space="preserve"><value>已是最新版本。</value></data>
+  <!-- Mute feature (new) -->
+  <data name="Btn_Mute" xml:space="preserve"><value>静音</value></data>
+  <data name="Btn_Unmute" xml:space="preserve"><value>取消静音</value></data>
+  <data name="Btn_BindMute" xml:space="preserve"><value>绑定静音</value></data>
+  <data name="BindMute_Title" xml:space="preserve"><value>绑定静音</value></data>
+  <data name="BindMute_Prompt" xml:space="preserve"><value>请按下组合键或设备按钮...</value></data>
+  <data name="BindMute_Clear" xml:space="preserve"><value>清除</value></data>
+  <data name="Bind_Device_ButtonLabel" xml:space="preserve"><value>按钮 {0}</value></data>
+  <data name="Bind_Device_POVLabel" xml:space="preserve"><value>POV {0}</value></data>
+  <data name="Bind_XInput_Prefix" xml:space="preserve"><value>XInput：{0}</value></data>
+  <data name="Key_Ctrl" xml:space="preserve"><value>Ctrl</value></data>
+  <data name="Key_Shift" xml:space="preserve"><value>Shift</value></data>
+  <data name="Key_Alt" xml:space="preserve"><value>Alt</value></data>
+  <data name="Key_Win" xml:space="preserve"><value>Win</value></data>
   <data name="Status_Disconnected" xml:space="preserve"><value>未连接</value></data>
   <data name="Status_Connected" xml:space="preserve"><value>已连接</value></data>
+
+  <!-- Status Tab - Overrides UI -->
+  <data name="Status_OverridesLabel" xml:space="preserve"><value>覆盖：</value></data>
+  <data name="Status_OverrideAircraftPlaceholder" xml:space="preserve"><value>机型 ICAO（例如：B738）</value></data>
+  <data name="Status_OverrideAirlinePlaceholder" xml:space="preserve"><value>航司 ICAO（例如：KLM）</value></data>
+  <data name="Status_OverrideReset" xml:space="preserve"><value>重置</value></data>
 
   <data name="Settings_Title" xml:space="preserve"><value>Universal Announcer 设置</value></data>
   <data name="Settings_DefaultLanguage" xml:space="preserve"><value>默认语言：</value></data>
@@ -86,6 +110,7 @@
   <!-- Audio tab -->
   <data name="Audio_DeviceLabel" xml:space="preserve"><value>音频设备：</value></data>
   <data name="Audio_VolumeLabel" xml:space="preserve"><value>音量：</value></data>
+  <data name="Audio_MusicVolumeLabel" xml:space="preserve"><value>音乐音量：</value></data>
   <data name="Audio_Percent" xml:space="preserve"><value>%</value></data>
   <data name="Audio_PresetLabel" xml:space="preserve"><value>预设：</value></data>
   <data name="Audio_PaAudioMix" xml:space="preserve"><value>PA 音频混合（模拟客舱扬声器）</value></data>
@@ -131,6 +156,7 @@
   <data name="Tweaks_UseBoardingMusicFallback" xml:space="preserve"><value>缺少落地后音乐时使用登机音乐</value></data>
   <data name="Tweaks_SkipFirstBoardingWelcome" xml:space="preserve"><value>跳过首次登机欢迎</value></data>
   <data name="Tweaks_DepartureDelayThreshold" xml:space="preserve"><value>起飞延误阈值（分钟）：</value></data>
+  <data name="Tweaks_AfterLandingDelay" xml:space="preserve"><value>落地后延迟（分钟）：</value></data>
   <data name="Tweaks_EnablePmdgSdk" xml:space="preserve"><value>启用 PMDG SDK 数据（MSFS24 777X）</value></data>
   <data name="Tweaks_PmdgHowToLink" xml:space="preserve"><value>如何启用 PMDG SDK 数据</value></data>
 
@@ -384,5 +410,12 @@
   <data name="Wait_BoardingRepeat" xml:space="preserve"><value>登机重复间隔</value></data>
   <data name="Wait_DepartureDelayed" xml:space="preserve"><value>起飞延误阈值</value></data>
   <data name="PlayNext_CruiseElapsedFormat" xml:space="preserve"><value>巡航 {0}%</value></data>
+
+  <!-- Update prompt (fallback English) -->
+  <data name="Update_PromptTitle" xml:space="preserve"><value>Universal Announcer Update</value></data>
+  <data name="Update_PromptMessage_Format" xml:space="preserve"><value>New version available.
+Current: {0}  New: {1}
+
+Update now?</value></data>
 </root>
 

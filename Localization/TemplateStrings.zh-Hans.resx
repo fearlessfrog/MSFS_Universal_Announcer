@@ -14,7 +14,7 @@
   </resheader>
 
   <data name="Template_AfterLanding" xml:space="preserve">
-    <value>各位旅客，客舱乘务员将很快离开座位执行与安全相关的工作。请您继续保持就座，直到系好安全带指示灯熄灭。现在可以使用用于信息、通话或上网的便携式电子设备。请确认随身物品已随身携带，包括检查座椅背袋、座位下方以及头顶行李架。打开行李架时请注意安全，物品在飞行中可能会移动。到达指定的吸烟区前请不要吸烟。谨代表机长和全体机组，感谢各位今天与我们同行。我们的地面团队将协助您顺利完成行程。</value>
+    <value>各位旅客，欢迎{IF DESTINATION_CITY}来到 {DESTINATION_CITY}{END}。{IF SCHED_ARR_LOCAL_24H}当地时间为 {SCHED_ARR_LOCAL_24H}。{END} 客舱乘务员将很快离开座位执行与安全相关的工作。请您继续保持就座，直到系好安全带指示灯熄灭。现在可以使用用于信息、通话或上网的便携式电子设备。请确认随身物品已随身携带，包括检查座椅背袋、座位下方以及头顶行李架。打开行李架时请注意安全，物品在飞行中可能会移动。到达指定的吸烟区前请不要吸烟。谨代表机长和全体机组，感谢各位今天与我们同行。我们的地面团队将协助您顺利完成行程。</value>
   </data>
 
   <data name="Template_ArmDoors" xml:space="preserve">
@@ -22,7 +22,7 @@
   </data>
 
   <data name="Template_AfterTakeoff" xml:space="preserve">
-    <value>各位旅客，在系好安全带指示灯亮起时请系好安全带。我们建议您在就座时始终系好安全带。洗手间位于客舱两端。请注意，任何时候都禁止吸烟，包括电子烟。稍后我们将开始机上服务，为您提供今日的餐饮选择，详情请参阅机上手册。您也可以选购热饮、酒水及小食，我们接受主要的信用卡与借记卡。如需任何帮助，请随时告知，我们即将开始客舱服务。</value>
+    <value>各位旅客，在系好安全带指示灯亮起时请系好安全带。我们建议您在就座时始终系好安全带。洗手间位于客舱两端。请注意，任何时候都禁止吸烟，包括电子烟。稍后我们将开始机上服务。{IF FLIGHT_TIME}本次飞行时间约为 {FLIGHT_TIME}。{END} {IF DESTINATION_TEMPERATURE}气温约 {DESTINATION_TEMPERATURE}。{END} 详情请参阅机上手册。您也可以选购热饮、酒水及小食，我们接受主要的信用卡与借记卡。如需任何帮助，请随时告知，我们即将开始客舱服务。</value>
   </data>
 
   <data name="Template_BoardingComplete" xml:space="preserve">
@@ -30,7 +30,7 @@
   </data>
 
   <data name="Template_BoardingWelcome" xml:space="preserve">
-    <value>各位旅客，欢迎登机。请将较大的随身行李轮子朝内放入头顶行李架，将小件物品放在前方座位下方，包括笔记本电脑、手提包、免税品及衣物等。如您坐在紧急出口或前排隔板座位，所有物品均须放入头顶行李架。请在妥善安置行李后尽快就座。为确保准时出发，请保持通道畅通，以便其他旅客迅速入座。您现在可以系好安全带，准备起飞。本航班全程禁烟，感谢您的配合。</value>
+    <value>各位旅客，欢迎登机。{IF AIRLINE_NAME}本次航班为 {AIRLINE_NAME}{END}{IF FLIGHT_NUMBER_DIGITS} {FLIGHT_NUMBER_DIGITS} 次{END}{IF DESTINATION_CITY}，前往 {DESTINATION_CITY}{END}。请将较大的随身行李轮子朝内放入头顶行李架，将小件物品放在前方座位下方，包括笔记本电脑、手提包、免税品及衣物等。如您坐在紧急出口或前排隔板座位，所有物品均须放入头顶行李架。请在妥善安置行李后尽快就座。为确保准时出发，请保持通道畅通，以便其他旅客迅速入座。您现在可以系好安全带，准备起飞。本航班全程禁烟，感谢您的配合。</value>
   </data>
 
   <data name="Template_BoardingWelcomePilot" xml:space="preserve">
@@ -58,15 +58,15 @@
   </data>
 
   <data name="Template_CruiseElapsed50Percent" xml:space="preserve">
-    <value>各位旅客，这里是驾驶舱。我们已爬升至巡航高度 {xml_number&lt;general&gt;&lt;initial_altitude&gt;} 英尺，当前乘坐机型为 {AIRCRAFT_NAME}，前方天气情况良好。目前我们已飞行至前往 {DESTINATION_CITY} 航线的大约一半，距离 {ORIGIN_CITY} 约 {xml_number&lt;general&gt;&lt;route_distance&gt;} 英里。目的地 {DESTINATION_CITY} 天气为 {DESTINATION_WEATHER}，气温 {DESTINATION_TEMPERATURE}。接近目的地时我们会继续向您通报。现在请放松心情，享受机上服务。谨代表全体机组，感谢您选择 {AIRLINE_NAME}。</value>
+    <value>各位旅客，这里是驾驶舱。我们已爬升至巡航高度 {IF CRUISE_ALTITUDE_FT}{CRUISE_ALTITUDE_FT}{END} 英尺，当前乘坐机型为 {AIRCRAFT_NAME}，前方天气情况良好。目前我们已飞行至前往 {DESTINATION_CITY} 航线的大约一半，距离 {ORIGIN_CITY} 约 {IF ROUTE_DISTANCE_NM}{ROUTE_DISTANCE_NM}{END} 英里。{IF DESTINATION_TEMPERATURE}{DESTINATION_CITY} 当前气温 {DESTINATION_TEMPERATURE}。{END} 接近目的地时我们会继续向您通报。现在请放松心情，享受机上服务。谨代表全体机组，感谢您选择 {AIRLINE_NAME}。</value>
   </data>
 
   <data name="Template_DepartureDelayed" xml:space="preserve">
-    <value>各位旅客，这里是驾驶舱通知。很抱歉，我们的出发有所延误。我们会及时向您通报最新情况，并尽快出发。感谢您的耐心等待。</value>
+    <value>各位旅客，这里是驾驶舱通知。{IF DEP_STATUS}{DEP_STATUS}{END}{IF DEP_LATE}（目前晚点 {DEP_LATE}）{END}。{IF SCHED_DEP_LOCAL_24H}计划起飞时间 {SCHED_DEP_LOCAL_24H}。{END} 我们会及时向您通报最新情况，并尽快出发。感谢您的耐心等待。</value>
   </data>
 
   <data name="Template_DescentSeatbelts" xml:space="preserve">
-    <value>各位旅客，我们即将着陆。请将手提行李妥善安置，笔记本电脑须收入其中。请收起小桌板，放下扶手并打开遮光板。请就座并系好安全带，准备着陆。若有不需要的报纸杂志或垃圾，请交给乘务员。洗手间现在停止使用。谢谢。</value>
+    <value>各位旅客，我们即将{IF DESTINATION_CITY}抵达 {DESTINATION_CITY}{END}。{IF DESTINATION_TEMPERATURE}气温约 {DESTINATION_TEMPERATURE}{END}。请将手提行李妥善安置，笔记本电脑须收入其中。请收起小桌板，放下扶手并打开遮光板。请就座并系好安全带，准备着陆。若有不需要的报纸杂志或垃圾，请交给乘务员。洗手间现在停止使用。谢谢。</value>
   </data>
 
   <data name="Template_DisarmDoors" xml:space="preserve">

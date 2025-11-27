@@ -90,6 +90,12 @@
   <data name="Btn_Restart" xml:space="preserve"><value>再起動</value></data>
   <data name="Btn_Seatbelt" xml:space="preserve"><value>シートベルト</value></data>
 
+  <!-- Status Tab - Overrides UI -->
+  <data name="Status_OverridesLabel" xml:space="preserve"><value>上書き:</value></data>
+  <data name="Status_OverrideAircraftPlaceholder" xml:space="preserve"><value>機体 ICAO（例: B738）</value></data>
+  <data name="Status_OverrideAirlinePlaceholder" xml:space="preserve"><value>航空会社 ICAO（例: KLM）</value></data>
+  <data name="Status_OverrideReset" xml:space="preserve"><value>リセット</value></data>
+
   <data name="Cbx_StartWithMsfs" xml:space="preserve"><value>MSFS と一緒に起動</value></data>
   <data name="Cbx_AlwaysShowWindow" xml:space="preserve"><value>アプリ起動時にこのウィンドウを表示</value></data>
   <data name="Status_WaitingFor" xml:space="preserve"><value>待機条件: {0}</value></data>
@@ -172,6 +178,7 @@
   <data name="Audio_DeviceLabel" xml:space="preserve"><value>オーディオデバイス:</value></data>
   <data name="Audio_PresetLabel" xml:space="preserve"><value>プリセット:</value></data>
   <data name="Audio_VolumeLabel" xml:space="preserve"><value>音量:</value></data>
+  <data name="Audio_MusicVolumeLabel" xml:space="preserve"><value>音楽音量:</value></data>
   <data name="Audio_PaAudioMix" xml:space="preserve"><value>PA オーディオミックス (客室スピーカーのノイズを再現)</value></data>
   <data name="Audio_UseCabinIfDoorOpen" xml:space="preserve"><value>ドア開放時は客室音量を使用 (GSX が必要)</value></data>
   <data name="Audio_AssumeQuickViewsAsCabin" xml:space="preserve"><value>コックピットのクイックビューを客室として扱う</value></data>
@@ -376,6 +383,24 @@
 
   <data name="Status_Aircraft" xml:space="preserve"><value>機種: {0}</value></data>
   <data name="Status_AircraftNone" xml:space="preserve"><value>機種または航空会社のデータなし</value></data>
+  <!-- Missing keys added -->
+  <data name="Tray_CheckForUpdates" xml:space="preserve"><value>更新を確認…</value></data>
+  <data name="Tweaks_EnableMsfsToolbar" xml:space="preserve"><value>MSFS ツールバーリンクを有効化（試験的）</value></data>
+  <data name="Update_UpToDate" xml:space="preserve"><value>最新の状態です。</value></data>
+  <!-- Mute feature (new) -->
+  <data name="Btn_Mute" xml:space="preserve"><value>ミュート</value></data>
+  <data name="Btn_Unmute" xml:space="preserve"><value>ミュート解除</value></data>
+  <data name="Btn_BindMute" xml:space="preserve"><value>ミュートを割り当て</value></data>
+  <data name="BindMute_Title" xml:space="preserve"><value>ミュートの割り当て</value></data>
+  <data name="BindMute_Prompt" xml:space="preserve"><value>キーの組み合わせまたはデバイスボタンを押してください...</value></data>
+  <data name="BindMute_Clear" xml:space="preserve"><value>クリア</value></data>
+  <data name="Bind_Device_ButtonLabel" xml:space="preserve"><value>ボタン {0}</value></data>
+  <data name="Bind_Device_POVLabel" xml:space="preserve"><value>POV {0}</value></data>
+  <data name="Bind_XInput_Prefix" xml:space="preserve"><value>XInput: {0}</value></data>
+  <data name="Key_Ctrl" xml:space="preserve"><value>Ctrl</value></data>
+  <data name="Key_Shift" xml:space="preserve"><value>Shift</value></data>
+  <data name="Key_Alt" xml:space="preserve"><value>Alt</value></data>
+  <data name="Key_Win" xml:space="preserve"><value>Win</value></data>
   <data name="Status_Connected" xml:space="preserve"><value>接続済み</value></data>
   <data name="Status_Connection" xml:space="preserve"><value>接続: {0}</value></data>
   <data name="Status_CurrentlyPlaying" xml:space="preserve"><value>再生中: {0}</value></data>
@@ -399,6 +424,7 @@
   <data name="Tweaks_BoardingInterval" xml:space="preserve"><value>Boarding Welcome 繰り返し間隔 (分):</value></data>
   <data name="Tweaks_CrewSeatsLanding" xml:space="preserve"><value>AGL 高度 —「着陸で着席」:</value></data>
   <data name="Tweaks_DepartureDelayThreshold" xml:space="preserve"><value>出発遅延しきい値 (分):</value></data>
+  <data name="Tweaks_AfterLandingDelay" xml:space="preserve"><value>着陸後の遅延 (分):</value></data>
   <data name="Tweaks_EnablePmdgSdk" xml:space="preserve"><value>PMDG SDK データを有効化 (MSFS24 777X)</value></data>
   <data name="Tweaks_PmdgHowToLink" xml:space="preserve"><value>PMDG SDK データの有効化方法</value></data>
   <data name="Tweaks_DescentAltitude" xml:space="preserve"><value>降下検出の AGL 高度 (ft):</value></data>
@@ -436,4 +462,11 @@
   <data name="Wait_BoardingRepeat" xml:space="preserve"><value>搭乗リピート間隔</value></data>
   <data name="Wait_DepartureDelayed" xml:space="preserve"><value>出発遅延しきい値</value></data>
   <data name="PlayNext_CruiseElapsedFormat" xml:space="preserve"><value>巡航 {0}%</value></data>
+
+  <!-- Update prompt (fallback English) -->
+  <data name="Update_PromptTitle" xml:space="preserve"><value>Universal Announcer Update</value></data>
+  <data name="Update_PromptMessage_Format" xml:space="preserve"><value>New version available.
+Current: {0}  New: {1}
+
+Update now?</value></data>
 </root>

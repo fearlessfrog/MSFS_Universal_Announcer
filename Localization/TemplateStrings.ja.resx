@@ -14,7 +14,7 @@
   </resheader>
 
   <data name="Template_AfterLanding" xml:space="preserve">
-    <value>皆さま、まもなく客室乗務員は安全に関わる業務のため席を離れます。シートベルトサインが消えるまで、引き続きお座りのままでお待ちください。メッセージ、通話、インターネット接続のための携帯電子機器は、現在ご使用いただけます。座席ポケット、座席下、頭上の手荷物入れをご確認のうえ、お手回り品のお忘れ物がないようご注意ください。手荷物入れを開ける際は、飛行中に荷物が移動している場合がありますのでご注意ください。指定の喫煙エリアに到着するまで、機内ならびに周辺での喫煙はご遠慮ください。機長ならびに乗務員一同、本日はご搭乗いただき誠にありがとうございました。地上係員が皆さまのご移動を引き続きお手伝いいたします。</value>
+    <value>皆さま、{IF DESTINATION_CITY}{DESTINATION_CITY} にようこそ。{END} {IF SCHED_ARR_LOCAL_24H}現地時間は {SCHED_ARR_LOCAL_24H} です。{END} まもなく客室乗務員は安全に関わる業務のため席を離れます。シートベルトサインが消えるまで、引き続きお座りのままでお待ちください。メッセージ、通話、インターネット接続のための携帯電子機器は、現在ご使用いただけます。座席ポケット、座席下、頭上の手荷物入れをご確認のうえ、お手回り品のお忘れ物がないようご注意ください。手荷物入れを開ける際は、飛行中に荷物が移動している場合がありますのでご注意ください。指定の喫煙エリアに到着するまで、機内ならびに周辺での喫煙はご遠慮ください。機長ならびに乗務員一同、本日はご搭乗いただき誠にありがとうございました。地上係員が皆さまのご移動を引き続きお手伝いいたします。</value>
   </data>
 
   <data name="Template_ArmDoors" xml:space="preserve">
@@ -22,7 +22,7 @@
   </data>
 
   <data name="Template_AfterTakeoff" xml:space="preserve">
-    <value>皆さま、シートベルトサインが点灯している間は、シートベルトを着用ください。着席中は常にシートベルトの着用をおすすめします。化粧室は客室前方および後方にございます。電子タバコを含め、機内は全席禁煙です。間もなく機内サービスを開始いたします。本日のメニューは機内誌をご覧ください。温かいお飲み物、各種ドリンクやスナックも購入いただけます。主要なクレジットカードとデビットカードをご利用いただけます。何かお手伝いが必要な際は、客室を巡回する乗務員までお声がけください。</value>
+    <value>皆さま、シートベルトサインが点灯している間は、シートベルトを着用ください。着席中は常にシートベルトの着用をおすすめします。化粧室は客室前方および後方にございます。電子タバコを含め、機内は全席禁煙です。間もなく機内サービスを開始いたします。{IF FLIGHT_TIME}本日の飛行時間は {FLIGHT_TIME} です。{END} {IF DESTINATION_TEMPERATURE}気温は {DESTINATION_TEMPERATURE} 前後です。{END} 本日のメニューは機内誌をご覧ください。温かいお飲み物、各種ドリンクやスナックも購入いただけます。主要なクレジットカードとデビットカードをご利用いただけます。何かお手伝いが必要な際は、客室を巡回する乗務員までお声がけください。</value>
   </data>
 
   <data name="Template_BoardingComplete" xml:space="preserve">
@@ -30,7 +30,7 @@
   </data>
 
   <data name="Template_BoardingWelcome" xml:space="preserve">
-    <value>皆さま、本日はご搭乗ありがとうございます。大きなお手荷物は車輪を奥に向けて頭上の手荷物入れへ、小さなお手荷物は前の座席下へお入れください。ノートパソコン、ハンドバッグ、免税品、上着などが含まれます。非常口座席や最前列の席にお座りの方は、すべてのお手荷物を頭上の手荷物入れへお入れください。手荷物収納後は、速やかにご着席ください。定刻出発のため、通路はできるだけお開けください。シートベルトは離陸の準備のため、いまのうちにお締めください。機内は全席禁煙です。ご協力をありがとうございます。</value>
+    <value>皆さま、本日はご搭乗ありがとうございます。{IF AIRLINE_NAME}{AIRLINE_NAME}{END}{IF FLIGHT_NUMBER_DIGITS} {FLIGHT_NUMBER_DIGITS} 便{END}{IF DESTINATION_CITY}（{DESTINATION_CITY} 行き）{END}。大きなお手荷物は車輪を奥に向けて頭上の手荷物入れへ、小さなお手荷物は前の座席下へお入れください。ノートパソコン、ハンドバッグ、免税品、上着などが含まれます。非常口座席や最前列の席にお座りの方は、すべてのお手荷物を頭上の手荷物入れへお入れください。手荷物収納後は、速やかにご着席ください。定刻出発のため、通路はできるだけお開けください。シートベルトは離陸の準備のため、いまのうちにお締めください。機内は全席禁煙です。ご協力をありがとうございます。</value>
   </data>
 
   <data name="Template_BoardingWelcomePilot" xml:space="preserve">
@@ -58,15 +58,15 @@
   </data>
 
   <data name="Template_CruiseElapsed50Percent" xml:space="preserve">
-    <value>皆さま、こちらは機長です。ただいま巡航高度 {xml_number&lt;general&gt;&lt;initial_altitude&gt;} フィートに達しました。本機は {AIRCRAFT_NAME} 型機で、前方の気象状況は良好です。現在、{ORIGIN_CITY} から {DESTINATION_CITY} への航路のおよそ半分まで進んでおり、距離にして約 {xml_number&lt;general&gt;&lt;route_distance&gt;} マイルです。目的地 {DESTINATION_CITY} の天候は {DESTINATION_WEATHER}、気温は {DESTINATION_TEMPERATURE} との予報です。到着が近づきましたら、改めてご案内いたします。どうぞごゆっくり機内サービスをお楽しみください。乗務員一同、本日皆さまとご一緒できたことを嬉しく思います。{AIRLINE_NAME} をご利用いただきありがとうございます。</value>
+    <value>皆さま、こちらは機長です。ただいま巡航高度 {IF CRUISE_ALTITUDE_FT}{CRUISE_ALTITUDE_FT}{END} フィートに達しました。本機は {AIRCRAFT_NAME} 型機で、前方の気象状況は良好です。現在、{ORIGIN_CITY} から {DESTINATION_CITY} への航路のおよそ半分まで進んでおり、距離にして約 {IF ROUTE_DISTANCE_NM}{ROUTE_DISTANCE_NM}{END} マイルです。{IF DESTINATION_TEMPERATURE}目的地 {DESTINATION_CITY} の気温は {DESTINATION_TEMPERATURE} の予報です。{END} 到着が近づきましたら、改めてご案内いたします。どうぞごゆっくり機内サービスをお楽しみください。乗務員一同、本日皆さまとご一緒できたことを嬉しく思います。{AIRLINE_NAME} をご利用いただきありがとうございます。</value>
   </data>
 
   <data name="Template_DepartureDelayed" xml:space="preserve">
-    <value>皆さま、コックピットよりご案内します。出発が遅れております。最新の状況は随時お知らせし、できるだけ早く出発できるよう努めます。ご理解のほど、ありがとうございます。</value>
+    <value>皆さま、コックピットよりご案内します。{IF DEP_STATUS}{DEP_STATUS}{END} {IF DEP_LATE}(現在 {DEP_LATE} の遅れ){END}。{IF SCHED_DEP_LOCAL_24H}出発予定時刻は {SCHED_DEP_LOCAL_24H} です。{END} 最新の状況は随時お知らせし、できるだけ早く出発できるよう努めます。ご理解のほど、ありがとうございます。</value>
   </data>
 
   <data name="Template_DescentSeatbelts" xml:space="preserve">
-    <value>皆さま、まもなく着陸いたします。手荷物はノートパソコンを含め、しっかりと収納してください。テーブルはお戻しになり、肘掛けを下げ、窓のシェードを開けてください。着陸に向けて、シートベルトを着用のうえ着席ください。不要な新聞や雑誌、ゴミは客室乗務員にお渡しください。化粧室はただいまよりご利用いただけません。ありがとうございます。</value>
+    <value>皆さま、まもなく {IF DESTINATION_CITY}{DESTINATION_CITY}{END} に到着します。{IF DESTINATION_TEMPERATURE}気温は {DESTINATION_TEMPERATURE} 程度です。{END} 手荷物はノートパソコンを含め、しっかりと収納してください。テーブルはお戻しになり、肘掛けを下げ、窓のシェードを開けてください。着陸に向けて、シートベルトを着用のうえ着席ください。不要な新聞や雑誌、ゴミは客室乗務員にお渡しください。化粧室はただいまよりご利用いただけません。ありがとうございます。</value>
   </data>
 
   <data name="Template_DisarmDoors" xml:space="preserve">

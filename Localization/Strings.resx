@@ -74,6 +74,12 @@
   <data name="Status_Disconnected" xml:space="preserve"><value>Disconnected</value></data>
   <data name="Status_Connected" xml:space="preserve"><value>Connected</value></data>
 
+  <!-- Status Tab - Overrides UI -->
+  <data name="Status_OverridesLabel" xml:space="preserve"><value>Overrides:</value></data>
+  <data name="Status_OverrideAircraftPlaceholder" xml:space="preserve"><value>Aircraft ICAO (e.g. B738)</value></data>
+  <data name="Status_OverrideAirlinePlaceholder" xml:space="preserve"><value>Airline ICAO (e.g. KLM)</value></data>
+  <data name="Status_OverrideReset" xml:space="preserve"><value>Reset</value></data>
+
   <!-- UI text for SettingsForm (for non-designer or runtime-only text) -->
   <data name="Settings_Title" xml:space="preserve">
     <value>Universal Announcer Settings</value>
@@ -113,6 +119,21 @@
   <data name="Cbx_StartWithMsfs" xml:space="preserve"><value>Start with MSFS</value></data>
   <data name="Cbx_AlwaysShowWindow" xml:space="preserve"><value>Show this window when the app starts</value></data>
 
+  <!-- Mute feature -->
+  <data name="Btn_Mute" xml:space="preserve"><value>Mute</value></data>
+  <data name="Btn_Unmute" xml:space="preserve"><value>Unmute</value></data>
+  <data name="Btn_BindMute" xml:space="preserve"><value>Bind Mute</value></data>
+  <data name="BindMute_Title" xml:space="preserve"><value>Bind Mute</value></data>
+  <data name="BindMute_Prompt" xml:space="preserve"><value>Press a key combination or a device button...</value></data>
+  <data name="BindMute_Clear" xml:space="preserve"><value>Clear</value></data>
+  <data name="Bind_Device_ButtonLabel" xml:space="preserve"><value>Button {0}</value></data>
+  <data name="Bind_Device_POVLabel" xml:space="preserve"><value>POV {0}</value></data>
+  <data name="Bind_XInput_Prefix" xml:space="preserve"><value>XInput: {0}</value></data>
+  <data name="Key_Ctrl" xml:space="preserve"><value>Ctrl</value></data>
+  <data name="Key_Shift" xml:space="preserve"><value>Shift</value></data>
+  <data name="Key_Alt" xml:space="preserve"><value>Alt</value></data>
+  <data name="Key_Win" xml:space="preserve"><value>Win</value></data>
+
   <!-- Tabs -->
   <data name="Tab_Audio" xml:space="preserve"><value>Audio</value></data>
   <data name="Tab_SoundFiles" xml:space="preserve"><value>Sound Files</value></data>
@@ -139,6 +160,7 @@
   <data name="Audio_ForegroundOnly" xml:space="preserve"><value>Only play when MSFS or this app is focused</value></data>
   <data name="Audio_ForegroundOnly_Tooltip" xml:space="preserve"><value>When enabled, announcements are only audible when Microsoft Flight Simulator or this Settings window has focus. Audio continues silently in the background.</value></data>
   <data name="Audio_AssumeQuickViewsAsCabin_Tooltip" xml:space="preserve"><value>When enabled and camera is Cockpit (2) with Substate Quickview (3), treat as Cabin for volume.</value></data>
+  <data name="Audio_MusicVolumeLabel" xml:space="preserve"><value>Music Volume:</value></data>
 
   <!-- Sound Files tab -->
   <data name="SoundFiles_LocationGroup" xml:space="preserve"><value>Sound Files Location</value></data>
@@ -171,6 +193,7 @@
   <data name="Tweaks_UseBoardingMusicFallback" xml:space="preserve"><value>Use BoardingMusic when AfterLandingMusic is missing</value></data>
   <data name="Tweaks_SkipFirstBoardingWelcome" xml:space="preserve"><value>Skip First BoardingWelcome</value></data>
   <data name="Tweaks_DepartureDelayThreshold" xml:space="preserve"><value>Departure delay threshold (min):</value></data>
+  <data name="Tweaks_AfterLandingDelay" xml:space="preserve"><value>AfterLanding delay (min):</value></data>
   <data name="Tweaks_EnablePmdgSdk" xml:space="preserve"><value>Enable PMDG SDK Data (MSFS24 777X)</value></data>
   <data name="Tweaks_PmdgHowToLink" xml:space="preserve"><value>How to enable PMDG SDK Data</value></data>
   <data name="Tweaks_PmdgSdk_Tooltip" xml:space="preserve"><value>Use PMDG client data for the 777 on MSFS 2024. Requires adding EnableDataBroadcast=1 to 777_Options.ini.</value></data>
@@ -342,6 +365,7 @@ A short download will begin.</value></data>
   <data name="Tray_PlayingPrefix" xml:space="preserve"><value>Playing:</value></data>
   <data name="Tray_ManualTag" xml:space="preserve"><value>Manual</value></data>
   <data name="Tray_AutoTag" xml:space="preserve"><value>Auto</value></data>
+  <data name="Tray_CheckForUpdates" xml:space="preserve"><value>Check for updates…</value></data>
   <data name="Balloon_UpdateAvailableTitle" xml:space="preserve"><value>Universal Announcer - Update Available</value></data>
   <data name="Balloon_UpdateWarning" xml:space="preserve"><value>WARNING: This version is out of date (current: {0}, latest: {1}).
 Click here to visit GitHub and download the latest version.</value></data>
@@ -361,6 +385,14 @@ Click here to visit GitHub and download the latest version.</value></data>
   <data name="Balloon_SoundStatus_NotConfigured" xml:space="preserve"><value>No announcements folder configured</value></data>
   <data name="Balloon_SoundStatus_NotFound_Format" xml:space="preserve"><value>Announcements folder not found: {0}</value></data>
   <data name="Balloon_SoundStatus_None" xml:space="preserve"><value>No sound files found in announcements folder</value></data>
+
+  <!-- Update prompt -->
+  <data name="Update_PromptTitle" xml:space="preserve"><value>Universal Announcer Update</value></data>
+  <data name="Update_PromptMessage_Format" xml:space="preserve"><value>New version available.
+Current: {0}  New: {1}
+
+Update now?</value></data>
+  <data name="Update_UpToDate" xml:space="preserve"><value>You're up to date.</value></data>
 
   <!-- Error/MessageBox titles and messages -->
   <data name="Error_AlreadyRunningTitle" xml:space="preserve"><value>Already Running</value></data>

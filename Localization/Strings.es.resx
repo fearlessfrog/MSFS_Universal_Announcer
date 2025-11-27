@@ -75,6 +75,11 @@
   <data name="None" xml:space="preserve"><value>Ninguno</value></data>
   <data name="Status_Disconnected" xml:space="preserve"><value>Desconectado</value></data>
   <data name="Status_Connected" xml:space="preserve"><value>Conectado</value></data>
+  <!-- Status Tab - Overrides UI -->
+  <data name="Status_OverridesLabel" xml:space="preserve"><value>Reemplazos:</value></data>
+  <data name="Status_OverrideAircraftPlaceholder" xml:space="preserve"><value>ICAO de avión (p. ej., B738)</value></data>
+  <data name="Status_OverrideAirlinePlaceholder" xml:space="preserve"><value>ICAO de aerolínea (p. ej., KLM)</value></data>
+  <data name="Status_OverrideReset" xml:space="preserve"><value>Restablecer</value></data>
   <data name="Common_Fetching" xml:space="preserve"><value>Obteniendo…</value></data>
 
   <data name="Tab_Status" xml:space="preserve"><value>Estado</value></data>
@@ -91,6 +96,24 @@
 
   <data name="Common_Cancel" xml:space="preserve"><value>Cancelar</value></data>
   <data name="Common_OK" xml:space="preserve"><value>Aceptar</value></data>
+  <!-- Missing keys added -->
+  <data name="Tray_CheckForUpdates" xml:space="preserve"><value>Buscar actualizaciones…</value></data>
+  <data name="Tweaks_EnableMsfsToolbar" xml:space="preserve"><value>Habilitar enlace de la barra de herramientas de MSFS (experimental)</value></data>
+  <data name="Update_UpToDate" xml:space="preserve"><value>Estás al día.</value></data>
+  <!-- Mute feature (new) -->
+  <data name="Btn_Mute" xml:space="preserve"><value>Silenciar</value></data>
+  <data name="Btn_Unmute" xml:space="preserve"><value>Activar sonido</value></data>
+  <data name="Btn_BindMute" xml:space="preserve"><value>Asignar silencio</value></data>
+  <data name="BindMute_Title" xml:space="preserve"><value>Asignar silencio</value></data>
+  <data name="BindMute_Prompt" xml:space="preserve"><value>Pulse una combinación de teclas o un botón del dispositivo...</value></data>
+  <data name="BindMute_Clear" xml:space="preserve"><value>Borrar</value></data>
+  <data name="Bind_Device_ButtonLabel" xml:space="preserve"><value>Botón {0}</value></data>
+  <data name="Bind_Device_POVLabel" xml:space="preserve"><value>POV {0}</value></data>
+  <data name="Bind_XInput_Prefix" xml:space="preserve"><value>XInput: {0}</value></data>
+  <data name="Key_Ctrl" xml:space="preserve"><value>Ctrl</value></data>
+  <data name="Key_Shift" xml:space="preserve"><value>Mayús</value></data>
+  <data name="Key_Alt" xml:space="preserve"><value>Alt</value></data>
+  <data name="Key_Win" xml:space="preserve"><value>Win</value></data>
   <data name="Common_Apply" xml:space="preserve"><value>Aplicar</value></data>
 
   <data name="Btn_Stop" xml:space="preserve"><value>Detener</value></data>
@@ -294,6 +317,7 @@ Haz clic aquí para abrir GitHub y descargar la última versión.</value></data>
   <data name="Tweaks_UseBoardingMusicFallback" xml:space="preserve"><value>Usar BoardingMusic cuando falte AfterLandingMusic</value></data>
   <data name="Tweaks_SkipFirstBoardingWelcome" xml:space="preserve"><value>Omitir el primer BoardingWelcome</value></data>
   <data name="Tweaks_DepartureDelayThreshold" xml:space="preserve"><value>Umbral de retraso de salida (min):</value></data>
+  <data name="Tweaks_AfterLandingDelay" xml:space="preserve"><value>Retraso tras el aterrizaje (min):</value></data>
   <data name="Tweaks_EnablePmdgSdk" xml:space="preserve"><value>Habilitar datos de PMDG SDK (MSFS24 777X)</value></data>
   <data name="Tweaks_PmdgHowToLink" xml:space="preserve"><value>Cómo habilitar los datos de PMDG SDK</value></data>
 
@@ -409,6 +433,7 @@ Para abrir la configuración o controlar la aplicación:
   <data name="Audio_UseCabinIfDoorOpen" xml:space="preserve"><value>Usar volumen de cabina si la puerta está abierta (requiere GSX)</value></data>
   <data name="Audio_VolumeLabel" xml:space="preserve"><value>Volumen:</value></data>
   <data name="Audio_ForegroundOnly" xml:space="preserve"><value>Reproducir solo cuando MSFS o esta app tenga el foco</value></data>
+  <data name="Audio_MusicVolumeLabel" xml:space="preserve"><value>Volumen de música:</value></data>
   <data name="Audio_ForegroundOnly_Tooltip" xml:space="preserve"><value>Cuando está activado, los anuncios solo se escuchan cuando Microsoft Flight Simulator o esta ventana de configuración tiene el foco. El audio continúa en silencio en segundo plano.</value></data>
   <!-- Tweaks: PMDG tooltip + ignore incompatible lights -->
   <data name="Tweaks_PmdgSdk_Tooltip" xml:space="preserve"><value>Usa datos del cliente PMDG para el 777 en MSFS 2024. Requiere añadir EnableDataBroadcast=1 al 777_Options.ini.</value></data>
@@ -435,4 +460,11 @@ Para abrir la configuración o controlar la aplicación:
   <data name="Wait_BoardingRepeat" xml:space="preserve"><value>Intervalo de repetición de embarque</value></data>
   <data name="Wait_DepartureDelayed" xml:space="preserve"><value>Umbral de retraso de salida</value></data>
   <data name="PlayNext_CruiseElapsedFormat" xml:space="preserve"><value>Cruce {0}%</value></data>
+
+  <!-- Update prompt (fallback English) -->
+  <data name="Update_PromptTitle" xml:space="preserve"><value>Universal Announcer Update</value></data>
+  <data name="Update_PromptMessage_Format" xml:space="preserve"><value>New version available.
+Current: {0}  New: {1}
+
+Update now?</value></data>
 </root>

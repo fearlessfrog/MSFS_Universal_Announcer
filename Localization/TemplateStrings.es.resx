@@ -14,7 +14,7 @@
   </resheader>
 
   <data name="Template_AfterLanding" xml:space="preserve">
-    <value>Señoras y señores, la tripulación de cabina abandonará sus asientos en breve para realizar tareas relacionadas con la seguridad. Les rogamos que permanezcan sentados hasta que se apague la señal de abrocharse el cinturón. Ahora pueden utilizar dispositivos electrónicos portátiles para mensajería, llamadas o acceso a Internet. Asegúrense de llevar consigo todas sus pertenencias, comprobando la bolsa del asiento, debajo del asiento y los compartimentos superiores. Tengan cuidado al abrir los compartimentos, ya que los objetos pueden haberse desplazado durante el vuelo. No está permitido fumar hasta llegar a una zona designada. En nombre del comandante y la tripulación, ha sido un placer atenderles hoy. Nuestro personal en tierra les ayudará a completar su viaje.</value>
+    <value>Señoras y señores, bienvenidos {IF DESTINATION_CITY}a {DESTINATION_CITY}{END}. {IF SCHED_ARR_LOCAL_24H}La hora local es {SCHED_ARR_LOCAL_24H}.{END} La tripulación de cabina abandonará sus asientos en breve para realizar tareas relacionadas con la seguridad. Les rogamos que permanezcan sentados hasta que se apague la señal de abrocharse el cinturón. Ahora pueden utilizar dispositivos electrónicos portátiles para mensajería, llamadas o acceso a Internet. Asegúrense de llevar consigo todas sus pertenencias, comprobando la bolsa del asiento, debajo del asiento y los compartimentos superiores. Tengan cuidado al abrir los compartimentos, ya que los objetos pueden haberse desplazado durante el vuelo. No está permitido fumar hasta llegar a una zona designada. En nombre del comandante y la tripulación, ha sido un placer atenderles hoy. Nuestro personal en tierra les ayudará a completar su viaje.</value>
   </data>
 
   <data name="Template_ArmDoors" xml:space="preserve">
@@ -22,7 +22,7 @@
   </data>
 
   <data name="Template_AfterTakeoff" xml:space="preserve">
-    <value>Señoras y señores, por favor mantengan abrochado el cinturón mientras la señal esté encendida. Recomendamos llevarlo abrochado siempre que estén sentados. Los baños se encuentran en ambos extremos de la cabina. Recuerden que está prohibido fumar en todo momento, incluidos los cigarrillos electrónicos. En unos instantes comenzaremos el servicio a bordo con una selección del día. Los detalles están en la revista a bordo. También pueden comprar bebidas calientes, otras bebidas y aperitivos en el bar. Aceptamos las principales tarjetas de crédito y débito. Si necesitan algo más, avísennos cuando pasemos por la cabina.</value>
+    <value>Señoras y señores, por favor mantengan abrochado el cinturón mientras la señal esté encendida. Recomendamos llevarlo abrochado siempre que estén sentados. Los baños se encuentran en ambos extremos de la cabina. Recuerden que está prohibido fumar en todo momento, incluidos los cigarrillos electrónicos. En unos instantes comenzaremos el servicio a bordo con una selección del día. {IF FLIGHT_TIME}Nuestro tiempo de vuelo es {FLIGHT_TIME}.{END} {IF DESTINATION_TEMPERATURE}Temperatura alrededor de {DESTINATION_TEMPERATURE}.{END} Los detalles están en la revista a bordo. También pueden comprar bebidas calientes, otras bebidas y aperitivos en el bar. Aceptamos las principales tarjetas de crédito y débito. Si necesitan algo más, avísennos cuando pasemos por la cabina.</value>
   </data>
 
   <data name="Template_BoardingComplete" xml:space="preserve">
@@ -30,7 +30,7 @@
   </data>
 
   <data name="Template_BoardingWelcome" xml:space="preserve">
-    <value>Señoras y señores, bienvenidos a bordo. Coloquen los bultos grandes en los compartimentos superiores con las ruedas hacia dentro y mantengan los objetos pequeños bajo el asiento delantero. Esto incluye ordenadores portátiles, bolsos, compras duty-free y prendas sueltas. Si están sentados en una fila de salida de emergencia o en una fila delantera con mamparo, todos los objetos deben ir en los compartimentos superiores. Una vez guardado su equipaje de mano, tomen asiento. Para ayudarnos a salir a tiempo, les pedimos que mantengan el pasillo despejado para que el resto de clientes pueda embarcar. Pueden abrocharse el cinturón para el despegue. Este es un vuelo sin humo. Gracias por respetarlo.</value>
+    <value>Señoras y señores, bienvenidos a bordo. {IF AIRLINE_NAME}Este es un vuelo de {AIRLINE_NAME}{END}{IF FLIGHT_NUMBER_DIGITS} número {FLIGHT_NUMBER_DIGITS}{END}{IF DESTINATION_CITY} con destino a {DESTINATION_CITY}{END}. Coloquen los bultos grandes en los compartimentos superiores con las ruedas hacia dentro y mantengan los objetos pequeños bajo el asiento delantero. Esto incluye ordenadores portátiles, bolsos, compras duty-free y prendas sueltas. Si están sentados en una fila de salida de emergencia o en una fila delantera con mamparo, todos los objetos deben ir en los compartimentos superiores. Una vez guardado su equipaje de mano, tomen asiento. Para ayudarnos a salir a tiempo, les pedimos que mantengan el pasillo despejado para que el resto de clientes pueda embarcar. Pueden abrocharse el cinturón para el despegue. Este es un vuelo sin humo. Gracias por respetarlo.</value>
   </data>
 
   <data name="Template_BoardingWelcomePilot" xml:space="preserve">
@@ -58,15 +58,15 @@
   </data>
 
   <data name="Template_CruiseElapsed50Percent" xml:space="preserve">
-    <value>Señoras y señores, les habla el comandante. Hemos alcanzado nuestra altitud de crucero de {xml_number&lt;general&gt;&lt;initial_altitude&gt;} pies en nuestro {AIRCRAFT_NAME} y las condiciones al frente son favorables. En este momento, estamos aproximadamente a la mitad de nuestra ruta hacia {DESTINATION_CITY}, a unos {xml_number&lt;general&gt;&lt;route_distance&gt;} millas de {ORIGIN_CITY}. El tiempo en {DESTINATION_CITY} es {DESTINATION_WEATHER} con {DESTINATION_TEMPERATURE}. Les mantendremos informados al acercarnos al destino. Mientras tanto, relájense y disfruten del servicio a bordo. En nombre de la tripulación, nos alegra tenerles con nosotros hoy. Gracias por elegir {AIRLINE_NAME}.</value>
+    <value>Señoras y señores, les habla el comandante. Hemos alcanzado nuestra altitud de crucero de {IF CRUISE_ALTITUDE_FT}{CRUISE_ALTITUDE_FT}{END} pies en nuestro {AIRCRAFT_NAME} y las condiciones al frente son favorables. En este momento, estamos aproximadamente a la mitad de nuestra ruta hacia {DESTINATION_CITY}, a unos {IF ROUTE_DISTANCE_NM}{ROUTE_DISTANCE_NM}{END} millas de {ORIGIN_CITY}. {IF DESTINATION_TEMPERATURE}La temperatura en {DESTINATION_CITY} es {DESTINATION_TEMPERATURE}.{END} Les mantendremos informados al acercarnos al destino. Mientras tanto, relájense y disfruten del servicio a bordo. En nombre de la tripulación, nos alegra tenerles con nosotros hoy. Gracias por elegir {AIRLINE_NAME}.</value>
   </data>
 
   <data name="Template_DepartureDelayed" xml:space="preserve">
-    <value>Señoras y señores, les informamos desde cabina de mando: lamentablemente nuestra salida se retrasa. Les mantendremos informados e intentaremos partir lo antes posible. Gracias por su paciencia.</value>
+    <value>Señoras y señores, información desde cabina. {IF DEP_STATUS}{DEP_STATUS}{END} {IF DEP_LATE}(actualmente {DEP_LATE} de retraso){END}. {IF SCHED_DEP_LOCAL_24H}La hora prevista de salida es {SCHED_DEP_LOCAL_24H}.{END} Les mantendremos informados e intentaremos partir lo antes posible. Gracias por su paciencia.</value>
   </data>
 
   <data name="Template_DescentSeatbelts" xml:space="preserve">
-    <value>Señoras y señores, aterrizaremos en breve. Asegúrense de que su equipaje de mano está correctamente guardado con el ordenador portátil en su interior. Guarden la mesa, bajen los reposabrazos y abran las persianas. Deben estar sentados con el cinturón abrochado para el aterrizaje. Ayúdennos entregando a la tripulación cualquier basura, periódicos o revistas que no deseen conservar. Los baños ya no están disponibles. Gracias.</value>
+    <value>Señoras y señores, aterrizaremos en breve {IF DESTINATION_CITY}en {DESTINATION_CITY}{END}. {IF DESTINATION_TEMPERATURE}Temperatura aproximada {DESTINATION_TEMPERATURE}.{END} Asegúrense de que su equipaje de mano está correctamente guardado con el ordenador portátil en su interior. Guarden la mesa, bajen los reposabrazos y abran las persianas. Deben estar sentados con el cinturón abrochado para el aterrizaje. Ayúdennos entregando a la tripulación cualquier basura, periódicos o revistas que no deseen conservar. Los baños ya no están disponibles. Gracias.</value>
   </data>
 
   <data name="Template_DisarmDoors" xml:space="preserve">

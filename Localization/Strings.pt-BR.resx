@@ -78,6 +78,7 @@
   <data name="Audio_CabinLabel" xml:space="preserve"><value>Cabine (aprox.):</value></data>
   <data name="Audio_ExternalLabel" xml:space="preserve"><value>Vistas externas:</value></data>
   <data name="Audio_ForegroundOnly" xml:space="preserve"><value>Reproduzir apenas quando o MSFS ou este app estiver em foco</value></data>
+  <data name="Audio_MusicVolumeLabel" xml:space="preserve"><value>Volume da música:</value></data>
   <data name="Audio_ForegroundOnly_Tooltip" xml:space="preserve"><value>Quando ativado, os anúncios só são audíveis quando o Microsoft Flight Simulator ou esta janela de configurações estiver em foco. O áudio continua em silêncio em segundo plano.</value></data>
 
   <data name="Balloon_UpdateAvailableTitle" xml:space="preserve"><value>Universal Announcer - Atualização disponível</value></data>
@@ -110,6 +111,24 @@ Clique para abrir o GitHub e baixar a versão mais recente.</value></data>
 
   <data name="Common_Cancel" xml:space="preserve"><value>Cancelar</value></data>
   <data name="Common_OK" xml:space="preserve"><value>OK</value></data>
+  <!-- Missing keys added -->
+  <data name="Tray_CheckForUpdates" xml:space="preserve"><value>Verificar atualizações…</value></data>
+  <data name="Tweaks_EnableMsfsToolbar" xml:space="preserve"><value>Ativar link da barra de ferramentas do MSFS (experimental)</value></data>
+  <data name="Update_UpToDate" xml:space="preserve"><value>Você está atualizado.</value></data>
+  <!-- Mute feature (new) -->
+  <data name="Btn_Mute" xml:space="preserve"><value>Silenciar</value></data>
+  <data name="Btn_Unmute" xml:space="preserve"><value>Ativar som</value></data>
+  <data name="Btn_BindMute" xml:space="preserve"><value>Vincular Silenciar</value></data>
+  <data name="BindMute_Title" xml:space="preserve"><value>Vincular Silenciar</value></data>
+  <data name="BindMute_Prompt" xml:space="preserve"><value>Pressione uma combinação de teclas ou um botão do dispositivo...</value></data>
+  <data name="BindMute_Clear" xml:space="preserve"><value>Limpar</value></data>
+  <data name="Bind_Device_ButtonLabel" xml:space="preserve"><value>Botão {0}</value></data>
+  <data name="Bind_Device_POVLabel" xml:space="preserve"><value>POV {0}</value></data>
+  <data name="Bind_XInput_Prefix" xml:space="preserve"><value>XInput: {0}</value></data>
+  <data name="Key_Ctrl" xml:space="preserve"><value>Ctrl</value></data>
+  <data name="Key_Shift" xml:space="preserve"><value>Shift</value></data>
+  <data name="Key_Alt" xml:space="preserve"><value>Alt</value></data>
+  <data name="Key_Win" xml:space="preserve"><value>Win</value></data>
   <data name="Common_Apply" xml:space="preserve"><value>Aplicar</value></data>
 
   <data name="Btn_Stop" xml:space="preserve"><value>Parar</value></data>
@@ -211,6 +230,12 @@ Para abrir as configurações ou controlar o aplicativo:
   <data name="None" xml:space="preserve"><value>Nenhum</value></data>
   <data name="Status_Disconnected" xml:space="preserve"><value>Desconectado</value></data>
   <data name="Status_Connected" xml:space="preserve"><value>Conectado</value></data>
+
+  <!-- Status Tab - Overrides UI -->
+  <data name="Status_OverridesLabel" xml:space="preserve"><value>Substituições:</value></data>
+  <data name="Status_OverrideAircraftPlaceholder" xml:space="preserve"><value>ICAO da aeronave (ex.: B738)</value></data>
+  <data name="Status_OverrideAirlinePlaceholder" xml:space="preserve"><value>ICAO da companhia (ex.: KLM)</value></data>
+  <data name="Status_OverrideReset" xml:space="preserve"><value>Redefinir</value></data>
 
   <data name="Btn_Preflight" xml:space="preserve"><value>Pré‑voo</value></data>
   <data name="Btn_Taxi" xml:space="preserve"><value>Táxi</value></data>
@@ -335,6 +360,7 @@ Um breve download será iniciado.</value></data>
   <data name="Tweaks_UseBoardingMusicFallback" xml:space="preserve"><value>Usar BoardingMusic quando faltando AfterLandingMusic</value></data>
   <data name="Tweaks_SkipFirstBoardingWelcome" xml:space="preserve"><value>Pular o primeiro BoardingWelcome</value></data>
   <data name="Tweaks_DepartureDelayThreshold" xml:space="preserve"><value>Limite de atraso na partida (min):</value></data>
+  <data name="Tweaks_AfterLandingDelay" xml:space="preserve"><value>Atraso após o pouso (min):</value></data>
   <data name="Tweaks_EnablePmdgSdk" xml:space="preserve"><value>Habilitar dados do PMDG SDK (MSFS24 777X)</value></data>
   <data name="Tweaks_PmdgHowToLink" xml:space="preserve"><value>Como habilitar os dados do PMDG SDK</value></data>
 
@@ -431,4 +457,11 @@ Log: {1}</value></data>
   <data name="Wait_BoardingRepeat" xml:space="preserve"><value>Intervalo de repetição de embarque</value></data>
   <data name="Wait_DepartureDelayed" xml:space="preserve"><value>Limite de atraso na partida</value></data>
   <data name="PlayNext_CruiseElapsedFormat" xml:space="preserve"><value>Cruzeiro {0}%</value></data>
+
+  <!-- Update prompt (fallback English) -->
+  <data name="Update_PromptTitle" xml:space="preserve"><value>Universal Announcer Update</value></data>
+  <data name="Update_PromptMessage_Format" xml:space="preserve"><value>New version available.
+Current: {0}  New: {1}
+
+Update now?</value></data>
 </root>

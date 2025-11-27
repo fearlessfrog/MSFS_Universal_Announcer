@@ -75,6 +75,11 @@
   <data name="None" xml:space="preserve"><value>Aucun</value></data>
   <data name="Status_Disconnected" xml:space="preserve"><value>Déconnecté</value></data>
   <data name="Status_Connected" xml:space="preserve"><value>Connecté</value></data>
+  <!-- Status Tab - Overrides UI -->
+  <data name="Status_OverridesLabel" xml:space="preserve"><value>Remplacements :</value></data>
+  <data name="Status_OverrideAircraftPlaceholder" xml:space="preserve"><value>ICAO appareil (p. ex. B738)</value></data>
+  <data name="Status_OverrideAirlinePlaceholder" xml:space="preserve"><value>ICAO compagnie (p. ex. KLM)</value></data>
+  <data name="Status_OverrideReset" xml:space="preserve"><value>Réinitialiser</value></data>
 
   <data name="Tab_Status" xml:space="preserve"><value>Statut</value></data>
   <data name="Tab_Audio" xml:space="preserve"><value>Audio</value></data>
@@ -97,6 +102,7 @@
   <data name="Tweaks_UseBoardingMusicFallback" xml:space="preserve"><value>Utiliser BoardingMusic si AfterLandingMusic est manquant</value></data>
   <data name="Tweaks_SkipFirstBoardingWelcome" xml:space="preserve"><value>Ignorer le premier BoardingWelcome</value></data>
   <data name="Tweaks_DepartureDelayThreshold" xml:space="preserve"><value>Seuil de retard au départ (min) :</value></data>
+  <data name="Tweaks_AfterLandingDelay" xml:space="preserve"><value>Délai après atterrissage (min) :</value></data>
   <data name="Tweaks_EnablePmdgSdk" xml:space="preserve"><value>Activer les données PMDG SDK (MSFS24 777X)</value></data>
   <data name="Tweaks_PmdgHowToLink" xml:space="preserve"><value>Comment activer les données PMDG SDK</value></data>
 
@@ -105,6 +111,24 @@
 
   <data name="Common_Cancel" xml:space="preserve"><value>Annuler</value></data>
   <data name="Common_OK" xml:space="preserve"><value>OK</value></data>
+  <!-- Missing keys added -->
+  <data name="Tray_CheckForUpdates" xml:space="preserve"><value>Rechercher des mises à jour…</value></data>
+  <data name="Tweaks_EnableMsfsToolbar" xml:space="preserve"><value>Activer le lien de la barre d’outils MSFS (expérimental)</value></data>
+  <data name="Update_UpToDate" xml:space="preserve"><value>Vous êtes à jour.</value></data>
+  <!-- Mute feature (new) -->
+  <data name="Btn_Mute" xml:space="preserve"><value>Muet</value></data>
+  <data name="Btn_Unmute" xml:space="preserve"><value>Son activé</value></data>
+  <data name="Btn_BindMute" xml:space="preserve"><value>Associer Muet</value></data>
+  <data name="BindMute_Title" xml:space="preserve"><value>Associer Muet</value></data>
+  <data name="BindMute_Prompt" xml:space="preserve"><value>Appuyez sur une combinaison de touches ou un bouton du périphérique...</value></data>
+  <data name="BindMute_Clear" xml:space="preserve"><value>Effacer</value></data>
+  <data name="Bind_Device_ButtonLabel" xml:space="preserve"><value>Bouton {0}</value></data>
+  <data name="Bind_Device_POVLabel" xml:space="preserve"><value>POV {0}</value></data>
+  <data name="Bind_XInput_Prefix" xml:space="preserve"><value>XInput : {0}</value></data>
+  <data name="Key_Ctrl" xml:space="preserve"><value>Ctrl</value></data>
+  <data name="Key_Shift" xml:space="preserve"><value>Maj</value></data>
+  <data name="Key_Alt" xml:space="preserve"><value>Alt</value></data>
+  <data name="Key_Win" xml:space="preserve"><value>Win</value></data>
   <data name="Common_Apply" xml:space="preserve"><value>Appliquer</value></data>
 
   <data name="Btn_Stop" xml:space="preserve"><value>Arrêter</value></data>
@@ -362,6 +386,7 @@ Pour ouvrir les paramètres ou contrôler l’application :
   <data name="Audio_PresetLabel" xml:space="preserve"><value>Préréglage :</value></data>
   <data name="Audio_UseCabinIfDoorOpen" xml:space="preserve"><value>Utiliser le volume cabine si la porte est ouverte (nécessite GSX)</value></data>
   <data name="Audio_VolumeLabel" xml:space="preserve"><value>Volume :</value></data>
+  <data name="Audio_MusicVolumeLabel" xml:space="preserve"><value>Volume musique :</value></data>
   <data name="Audio_ForegroundOnly" xml:space="preserve"><value>Lire uniquement quand MSFS ou cette appli a le focus</value></data>
   <data name="Audio_ForegroundOnly_Tooltip" xml:space="preserve"><value>Lorsqu’active, les annonces ne sont audibles que lorsque Microsoft Flight Simulator ou cette fenêtre de paramètres a le focus. L’audio continue en silence en arrière‑plan.</value></data>
   <data name="Btn_Preflight" xml:space="preserve"><value>Pré‑vol</value></data>
@@ -429,4 +454,11 @@ Pour ouvrir les paramètres ou contrôler l’application :
   <data name="Wait_BoardingRepeat" xml:space="preserve"><value>Intervalle de répétition embarquement</value></data>
   <data name="Wait_DepartureDelayed" xml:space="preserve"><value>Seuil de retard au départ</value></data>
   <data name="PlayNext_CruiseElapsedFormat" xml:space="preserve"><value>Croisière {0}%</value></data>
+
+  <!-- Update prompt (fallback English) -->
+  <data name="Update_PromptTitle" xml:space="preserve"><value>Universal Announcer Update</value></data>
+  <data name="Update_PromptMessage_Format" xml:space="preserve"><value>New version available.
+Current: {0}  New: {1}
+
+Update now?</value></data>
 </root>

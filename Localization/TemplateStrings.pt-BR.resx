@@ -14,7 +14,7 @@
   </resheader>
 
   <data name="Template_AfterLanding" xml:space="preserve">
-    <value>Senhoras e senhores, nossa tripulação de cabine deixará seus assentos em breve para realizar procedimentos de segurança. Pedimos que permaneçam sentados até que o sinal de apertar cintos seja apagado. Agora é permitido o uso de dispositivos eletrônicos portáteis para mensagens, chamadas ou acesso à internet. Certifiquem-se de levar todos os pertences pessoais, verificando o bolso do assento, a área sob o assento e os compartimentos superiores. Ao abrir os compartimentos, tomem cuidado, pois os itens podem ter se deslocado durante o voo. Fumar não é permitido até chegarem a uma área designada para fumantes. Em nome do comandante e de toda a equipe, foi um prazer atendê-los hoje. Nossa equipe em terra ajudará a concluir sua jornada.</value>
+    <value>Senhoras e senhores, bem-vindos {IF DESTINATION_CITY}a {DESTINATION_CITY}{END}. {IF SCHED_ARR_LOCAL_24H}A hora local é {SCHED_ARR_LOCAL_24H}.{END} Nossa tripulação de cabine deixará seus assentos em breve para realizar procedimentos de segurança. Pedimos que permaneçam sentados até que o sinal de apertar cintos seja apagado. Agora é permitido o uso de dispositivos eletrônicos portáteis para mensagens, chamadas ou acesso à internet. Certifiquem-se de levar todos os pertences pessoais, verificando o bolso do assento, a área sob o assento e os compartimentos superiores. Ao abrir os compartimentos, tomem cuidado, pois os itens podem ter se deslocado durante o voo. Fumar não é permitido até chegarem a uma área designada para fumantes. Em nome do comandante e de toda a equipe, foi um prazer atendê-los hoje. Nossa equipe em terra ajudará a concluir sua jornada.</value>
   </data>
 
   <data name="Template_ArmDoors" xml:space="preserve">
@@ -22,7 +22,7 @@
   </data>
 
   <data name="Template_AfterTakeoff" xml:space="preserve">
-    <value>Senhoras e senhores, mantenham os cintos afivelados enquanto o sinal estiver aceso. Recomendamos manter o cinto afivelado sempre que estiverem sentados. Os banheiros estão localizados nas extremidades dianteira e traseira da cabine. Lembramos que é proibido fumar em qualquer momento, incluindo cigarros eletrônicos. Em instantes iniciaremos o serviço de bordo, com opções disponíveis hoje — detalhes no folheto a bordo. Também é possível adquirir bebidas quentes, outras bebidas e lanches no bar. Aceitamos os principais cartões de crédito e débito. Se precisarem de algo, avisem-nos quando passarmos pela cabine.</value>
+    <value>Senhoras e senhores, mantenham os cintos afivelados enquanto o sinal estiver aceso. Recomendamos mantê-los afivelados sempre que estiverem sentados. Os banheiros estão localizados nas extremidades dianteira e traseira da cabine. Lembramos que é proibido fumar em qualquer momento, incluindo cigarros eletrônicos. Em instantes iniciaremos o serviço de bordo, com opções disponíveis hoje. {IF FLIGHT_TIME}Nosso tempo de voo é {FLIGHT_TIME}.{END} {IF DESTINATION_TEMPERATURE}Temperatura em torno de {DESTINATION_TEMPERATURE}.{END} Detalhes no folheto a bordo. Também é possível adquirir bebidas quentes, outras bebidas e lanches no bar. Aceitamos os principais cartões de crédito e débito. Se precisarem de algo, avisem-nos quando passarmos pela cabine.</value>
   </data>
 
   <data name="Template_BoardingComplete" xml:space="preserve">
@@ -30,7 +30,7 @@
   </data>
 
   <data name="Template_BoardingWelcome" xml:space="preserve">
-    <value>Senhoras e senhores, bem-vindos a bordo. Guardem as malas grandes nos compartimentos superiores com as rodas voltadas para dentro e mantenham os itens menores sob o assento à frente. Isso inclui laptops, bolsas, compras duty free e peças de roupa. Se estiverem sentados em uma fileira de saída de emergência ou na primeira fileira com divisória, todos os itens devem ser guardados nos compartimentos superiores. Após guardar a bagagem de mão, tomem seus assentos. Para garantir a pontualidade, pedimos que mantenham o corredor livre para os demais passageiros. Podem afivelar os cintos para a decolagem. Este é um voo não fumante. Agradecemos pela colaboração.</value>
+    <value>Senhoras e senhores, bem-vindos a bordo. {IF AIRLINE_NAME}Este é um voo da {AIRLINE_NAME}{END}{IF FLIGHT_NUMBER_DIGITS} número {FLIGHT_NUMBER_DIGITS}{END}{IF DESTINATION_CITY} com destino a {DESTINATION_CITY}{END}. Guardem as malas grandes nos compartimentos superiores com as rodas voltadas para dentro e mantenham os itens menores sob o assento à frente. Isso inclui laptops, bolsas, compras duty free e peças de roupa. Se estiverem sentados em uma fileira de saída de emergência ou na primeira fileira com divisória, todos os itens devem ser guardados nos compartimentos superiores. Após guardar a bagagem de mão, tomem seus assentos. Para garantir a pontualidade, pedimos que mantenham o corredor livre para os demais passageiros. Podem afivelar os cintos para a decolagem. Este é um voo não fumante. Agradecemos pela colaboração.</value>
   </data>
 
   <data name="Template_BoardingWelcomePilot" xml:space="preserve">
@@ -58,15 +58,15 @@
   </data>
 
   <data name="Template_CruiseElapsed50Percent" xml:space="preserve">
-    <value>Senhoras e senhores, fala o comandante. Atingimos nossa altitude de cruzeiro de {xml_number&lt;general&gt;&lt;initial_altitude&gt;} pés a bordo do {AIRCRAFT_NAME}, com boas condições à frente. Neste momento, estamos aproximadamente na metade do trajeto para {DESTINATION_CITY}, a cerca de {xml_number&lt;general&gt;&lt;route_distance&gt;} milhas de {ORIGIN_CITY}. O tempo em {DESTINATION_CITY} é {DESTINATION_WEATHER} e a temperatura é {DESTINATION_TEMPERATURE}. Manteremos vocês informados quando estivermos nos aproximando. Enquanto isso, relaxem e aproveitem o serviço de bordo. Em nome da tripulação, é um prazer tê-los conosco hoje. Obrigado por escolherem a {AIRLINE_NAME}.</value>
+    <value>Senhoras e senhores, fala o comandante. Atingimos nossa altitude de cruzeiro de {IF CRUISE_ALTITUDE_FT}{CRUISE_ALTITUDE_FT}{END} pés a bordo do {AIRCRAFT_NAME}, com boas condições à frente. Neste momento, estamos aproximadamente na metade do trajeto para {DESTINATION_CITY}, a cerca de {IF ROUTE_DISTANCE_NM}{ROUTE_DISTANCE_NM}{END} milhas de {ORIGIN_CITY}. {IF DESTINATION_TEMPERATURE}Em {DESTINATION_CITY}, a temperatura é {DESTINATION_TEMPERATURE}.{END} Manteremos vocês informados quando estivermos nos aproximando. Enquanto isso, relaxem e aproveitem o serviço de bordo. Em nome da tripulação, é um prazer tê-los conosco hoje. Obrigado por escolherem a {AIRLINE_NAME}.</value>
   </data>
 
   <data name="Template_DepartureDelayed" xml:space="preserve">
-    <value>Senhoras e senhores, informamos do cockpit: nossa partida está atrasada. Manteremos vocês informados e faremos o possível para sair o quanto antes. Agradecemos a paciência.</value>
+    <value>Senhoras e senhores, informação do cockpit. {IF DEP_STATUS}{DEP_STATUS}{END} {IF DEP_LATE}(atraso de {DEP_LATE}){END}. {IF SCHED_DEP_LOCAL_24H}O horário previsto de partida é {SCHED_DEP_LOCAL_24H}.{END} Manteremos vocês informados e faremos o possível para sair o quanto antes. Agradecemos a paciência.</value>
   </data>
 
   <data name="Template_DescentSeatbelts" xml:space="preserve">
-    <value>Senhoras e senhores, estamos nos preparando para o pouso. Guardem adequadamente a bagagem de mão, com o notebook em seu interior. Recolham a mesa, abaixem os apoios de braço e abram as persianas. Permaneçam sentados com o cinto afivelado para o pouso. Ajudem-nos entregando jornais, revistas e lixo que não desejarem manter. Os banheiros não estão mais disponíveis. Obrigado.</value>
+    <value>Senhoras e senhores, em breve pousaremos {IF DESTINATION_CITY}em {DESTINATION_CITY}{END}. {IF DESTINATION_TEMPERATURE}Temperatura próxima de {DESTINATION_TEMPERATURE}.{END} Guardem adequadamente a bagagem de mão, com o notebook em seu interior. Recolham a mesa, abaixem os apoios de braço e abram as persianas. Permaneçam sentados com o cinto afivelado para o pouso. Ajudem-nos entregando jornais, revistas e lixo que não desejarem manter. Os banheiros não estão mais disponíveis. Obrigado.</value>
   </data>
 
   <data name="Template_DisarmDoors" xml:space="preserve">

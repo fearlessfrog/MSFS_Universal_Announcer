@@ -15,6 +15,12 @@
   <data name="Status_Disconnected" xml:space="preserve"><value>Getrennt</value></data>
   <data name="Status_Connected" xml:space="preserve"><value>Verbunden</value></data>
 
+  <!-- Status Tab - Overrides UI -->
+  <data name="Status_OverridesLabel" xml:space="preserve"><value>Überschreibungen:</value></data>
+  <data name="Status_OverrideAircraftPlaceholder" xml:space="preserve"><value>Flugzeug ICAO (z. B. B738)</value></data>
+  <data name="Status_OverrideAirlinePlaceholder" xml:space="preserve"><value>Airline ICAO (z. B. KLM)</value></data>
+  <data name="Status_OverrideReset" xml:space="preserve"><value>Zurücksetzen</value></data>
+
   <data name="Settings_Title" xml:space="preserve"><value>Universal Announcer Einstellungen</value></data>
   <data name="Settings_DefaultLanguage" xml:space="preserve"><value>Standardsprache:</value></data>
   <data name="Settings_DefaultLanguage_System" xml:space="preserve"><value>Systemstandard</value></data>
@@ -71,6 +77,7 @@
   <data name="Audio_AssumeQuickViewsAsCabin" xml:space="preserve"><value>Cockpit-QuickViews als Kabine annehmen</value></data>
   <data name="Audio_ForegroundOnly" xml:space="preserve"><value>Nur abspielen, wenn MSFS oder diese App den Fokus hat</value></data>
   <data name="Audio_ForegroundOnly_Tooltip" xml:space="preserve"><value>Wenn aktiviert, sind Ansagen nur hörbar, wenn Microsoft Flight Simulator oder dieses Einstellungsfenster den Fokus hat. Audio läuft im Hintergrund stumm weiter.</value></data>
+  <data name="Audio_MusicVolumeLabel" xml:space="preserve"><value>Musiklautstärke:</value></data>
 
   <!-- Sound Files tab -->
   <data name="SoundFiles_LocationGroup" xml:space="preserve"><value>Speicherort der Sounddateien</value></data>
@@ -103,6 +110,7 @@
   <data name="Tweaks_UseBoardingMusicFallback" xml:space="preserve"><value>BoardingMusic verwenden, wenn AfterLandingMusic fehlt</value></data>
   <data name="Tweaks_SkipFirstBoardingWelcome" xml:space="preserve"><value>Erste BoardingWelcome überspringen</value></data>
   <data name="Tweaks_DepartureDelayThreshold" xml:space="preserve"><value>Verspätungsschwelle beim Abflug (Min.):</value></data>
+  <data name="Tweaks_AfterLandingDelay" xml:space="preserve"><value>Verzögerung nach der Landung (Min.):</value></data>
   <data name="Tweaks_EnablePmdgSdk" xml:space="preserve"><value>PMDG SDK-Daten aktivieren (MSFS24 777X)</value></data>
   <data name="Tweaks_PmdgHowToLink" xml:space="preserve"><value>Wie PMDG SDK-Daten aktivieren</value></data>
   <data name="Tweaks_PmdgSdk_Tooltip" xml:space="preserve"><value>PMDG-Clientdaten für die 777 in MSFS 2024 verwenden. Erfordert EnableDataBroadcast=1 in 777_Options.ini.</value></data>
@@ -367,6 +375,20 @@ Ein kurzer Download beginnt.</value></data>
   <data name="Tray_WaitingFor" xml:space="preserve"><value>Warten auf: {0}</value></data>
   <data name="Tray_NextAnnouncement" xml:space="preserve"><value>Nächste Ansage: {0}</value></data>
   <data name="Tray_PlayNext" xml:space="preserve"><value>Nächste abspielen</value></data>
+  <!-- Mute feature (new) -->
+  <data name="Btn_Mute" xml:space="preserve"><value>Stumm</value></data>
+  <data name="Btn_Unmute" xml:space="preserve"><value>Stumm aus</value></data>
+  <data name="Btn_BindMute" xml:space="preserve"><value>„Stumm” zuweisen</value></data>
+  <data name="BindMute_Title" xml:space="preserve"><value>„Stumm” zuweisen</value></data>
+  <data name="BindMute_Prompt" xml:space="preserve"><value>Drücken Sie eine Tastenkombination oder eine Gerätetaste...</value></data>
+  <data name="BindMute_Clear" xml:space="preserve"><value>Löschen</value></data>
+  <data name="Bind_Device_ButtonLabel" xml:space="preserve"><value>Taste {0}</value></data>
+  <data name="Bind_Device_POVLabel" xml:space="preserve"><value>POV {0}</value></data>
+  <data name="Bind_XInput_Prefix" xml:space="preserve"><value>XInput: {0}</value></data>
+  <data name="Key_Ctrl" xml:space="preserve"><value>Strg</value></data>
+  <data name="Key_Shift" xml:space="preserve"><value>Umsch</value></data>
+  <data name="Key_Alt" xml:space="preserve"><value>Alt</value></data>
+  <data name="Key_Win" xml:space="preserve"><value>Win</value></data>
 
   <!-- Waiting phrases for Play Next (missing in de) -->
   <data name="Wait_BoardingStart_GSX" xml:space="preserve"><value>Logo‑Licht EIN oder GSX‑Boarding</value></data>
@@ -390,5 +412,16 @@ Ein kurzer Download beginnt.</value></data>
   <data name="Wait_BoardingRepeat" xml:space="preserve"><value>Wiederholintervall Boarding</value></data>
   <data name="Wait_DepartureDelayed" xml:space="preserve"><value>Verspätungsschwelle beim Abflug</value></data>
   <data name="PlayNext_CruiseElapsedFormat" xml:space="preserve"><value>Reiseflug {0}%</value></data>
+
+  <!-- Update prompt (fallback English) -->
+  <data name="Update_PromptTitle" xml:space="preserve"><value>Universal Announcer Update</value></data>
+  <data name="Update_PromptMessage_Format" xml:space="preserve"><value>New version available.
+Current: {0}  New: {1}
+
+Update now?</value></data>
+  <!-- Missing keys added -->
+  <data name="Tray_CheckForUpdates" xml:space="preserve"><value>Nach Updates suchen…</value></data>
+  <data name="Tweaks_EnableMsfsToolbar" xml:space="preserve"><value>MSFS-Toolbar-Link aktivieren (experimentell)</value></data>
+  <data name="Update_UpToDate" xml:space="preserve"><value>Sie sind auf dem neuesten Stand.</value></data>
 </root>
 

@@ -14,7 +14,7 @@
   </resheader>
 
   <data name="Template_AfterLanding" xml:space="preserve">
-    <value>승객 여러분, 객실 승무원은 곧 안전 관련 업무를 위해 좌석을 떠납니다. 좌석벨트 표시등이 꺼질 때까지 계속 착석해 주시기 바랍니다. 이제 메시지, 통화 또는 인터넷 접속을 위한 휴대용 전자기기를 사용하실 수 있습니다. 좌석 포켓, 좌석 아래, 머리 위 수하물함을 확인하시어 개인 소지품을 모두 챙기셨는지 확인해 주십시오. 수하물함을 여실 때는 비행 중 물품이 이동했을 수 있으니 주의하시기 바랍니다. 지정된 흡연 구역에 도착하기 전까지는 흡연이 금지되어 있습니다. 기장과 승무원을 대표하여, 오늘 저희와 함께해 주셔서 감사합니다. 지상 요원이 안전한 이동을 도와드리겠습니다.</value>
+    <value>승객 여러분, {IF DESTINATION_CITY}{DESTINATION_CITY}{END}에 오신 것을 환영합니다. {IF SCHED_ARR_LOCAL_24H}현지 시간은 {SCHED_ARR_LOCAL_24H} 입니다.{END} 객실 승무원은 곧 안전 관련 업무를 위해 좌석을 떠납니다. 좌석벨트 표시등이 꺼질 때까지 계속 착석해 주시기 바랍니다. 이제 메시지, 통화 또는 인터넷 접속을 위한 휴대용 전자기기를 사용하실 수 있습니다. 좌석 포켓, 좌석 아래, 머리 위 수하물함을 확인하시어 개인 소지품을 모두 챙기셨는지 확인해 주십시오. 수하물함을 여실 때는 비행 중 물품이 이동했을 수 있으니 주의하시기 바랍니다. 지정된 흡연 구역에 도착하기 전까지는 흡연이 금지되어 있습니다. 기장과 승무원을 대표하여, 오늘 저희와 함께해 주셔서 감사합니다. 지상 요원이 안전한 이동을 도와드리겠습니다.</value>
   </data>
 
   <data name="Template_ArmDoors" xml:space="preserve">
@@ -22,7 +22,7 @@
   </data>
 
   <data name="Template_AfterTakeoff" xml:space="preserve">
-    <value>승객 여러분, 좌석벨트 표시등이 켜져 있는 동안에는 반드시 벨트를 착용해 주십시오. 착석 중에는 항상 착용하시길 권장드립니다. 화장실은 객실 앞뒤에 있습니다. 전 구간 금연이며 전자담배 역시 금지되어 있습니다. 잠시 후 기내 서비스를 시작하겠습니다. 오늘의 상품은 기내지에서 확인하실 수 있습니다. 따뜻한 음료와 각종 음료 및 스낵도 구매하실 수 있으며, 주요 신용/직불카드를 받습니다. 도움이 필요하시면 곧 객실을 순회하는 승무원에게 말씀해 주십시오.</value>
+    <value>승객 여러분, 좌석벨트 표시등이 켜져 있는 동안에는 반드시 벨트를 착용해 주십시오. 착석 중에는 항상 착용하시길 권장드립니다. 화장실은 객실 앞뒤에 있습니다. 전 구간 금연이며 전자담배 역시 금지되어 있습니다. 잠시 후 기내 서비스를 시작하겠습니다. {IF FLIGHT_TIME}오늘 비행 시간은 {FLIGHT_TIME} 입니다.{END} {IF DESTINATION_TEMPERATURE}기온은 {DESTINATION_TEMPERATURE} 정도입니다.{END} 오늘의 상품은 기내지에서 확인하실 수 있습니다. 따뜻한 음료와 각종 음료 및 스낵도 구매하실 수 있으며, 주요 신용/직불카드를 받습니다. 도움이 필요하시면 곧 객실을 순회하는 승무원에게 말씀해 주십시오.</value>
   </data>
 
   <data name="Template_BoardingComplete" xml:space="preserve">
@@ -30,7 +30,7 @@
   </data>
 
   <data name="Template_BoardingWelcome" xml:space="preserve">
-    <value>승객 여러분, 탑승을 환영합니다. 큰 짐은 바퀴가 안쪽을 향하도록 머리 위 수하물함에 보관해 주시고, 작은 소지품은 앞좌석 아래에 보관해 주십시오. 노트북, 핸드백, 면세품, 의류 등이 포함됩니다. 비상구 좌석이나 전방 벌크헤드 좌석에 앉아 계신 경우 모든 소지품을 수하물함에 보관해 주십시오. 짐을 보관하신 후에는 좌석에 착석해 주시기 바랍니다. 정시 출발을 위해 통로를 비워 남은 승객들이 신속히 탑승할 수 있도록 협조 부탁드립니다. 이제 이륙을 위해 좌석벨트를 착용하실 수 있습니다. 본 항공편은 전 구간 금연입니다. 협조에 감사드립니다.</value>
+    <value>승객 여러분, 탑승을 환영합니다. {IF AIRLINE_NAME}{AIRLINE_NAME}{END}{IF FLIGHT_NUMBER_DIGITS} {FLIGHT_NUMBER_DIGITS}편{END}{IF DESTINATION_CITY} {DESTINATION_CITY}행입니다{END}. 큰 짐은 바퀴가 안쪽을 향하도록 머리 위 수하물함에 보관해 주시고, 작은 소지품은 앞좌석 아래에 보관해 주십시오. 노트북, 핸드백, 면세품, 의류 등이 포함됩니다. 비상구 좌석이나 전방 벌크헤드 좌석에 앉아 계신 경우 모든 소지품을 수하물함에 보관해 주십시오. 짐을 보관하신 후에는 좌석에 착석해 주시기 바랍니다. 정시 출발을 위해 통로를 비워 남은 승객들이 신속히 탑승할 수 있도록 협조 부탁드립니다. 이제 이륙을 위해 좌석벨트를 착용하실 수 있습니다. 본 항공편은 전 구간 금연입니다. 협조에 감사드립니다.</value>
   </data>
 
   <data name="Template_BoardingWelcomePilot" xml:space="preserve">
@@ -58,15 +58,15 @@
   </data>
 
   <data name="Template_CruiseElapsed50Percent" xml:space="preserve">
-    <value>승객 여러분, 기장입니다. 현재 {AIRCRAFT_NAME} 기종으로 {xml_number&lt;general&gt;&lt;initial_altitude&gt;} 피트의 순항 고도에 도달했으며, 항로 전방의 기상 상태는 양호합니다. 지금은 출발지 {ORIGIN_CITY}에서 목적지 {DESTINATION_CITY}로 가는 항로의 절반 지점을 지나고 있으며, 약 {xml_number&lt;general&gt;&lt;route_distance&gt;} 마일 남았습니다. 목적지 {DESTINATION_CITY}의 현재 날씨는 {DESTINATION_WEATHER}, 기온은 {DESTINATION_TEMPERATURE} 입니다. 목적지에 가까워지면 다시 안내드리겠습니다. 그동안 편히 쉬시고 기내 서비스를 즐겨주시기 바랍니다. 승무원 일동을 대표하여 오늘 함께해 주셔서 감사드립니다. {AIRLINE_NAME}을 이용해 주셔서 감사합니다.</value>
+    <value>승객 여러분, 기장입니다. 현재 {AIRCRAFT_NAME} 기종으로 {IF CRUISE_ALTITUDE_FT}{CRUISE_ALTITUDE_FT}{END} 피트의 순항 고도에 도달했으며, 항로 전방의 기상 상태는 양호합니다. 지금은 출발지 {ORIGIN_CITY}에서 목적지 {DESTINATION_CITY}로 가는 항로의 절반 지점을 지나고 있으며, 약 {IF ROUTE_DISTANCE_NM}{ROUTE_DISTANCE_NM}{END} 마일 남았습니다. {IF DESTINATION_TEMPERATURE}목적지 {DESTINATION_CITY}의 기온은 {DESTINATION_TEMPERATURE} 입니다.{END} 목적지에 가까워지면 다시 안내드리겠습니다. 그동안 편히 쉬시고 기내 서비스를 즐겨주시기 바랍니다. 승무원 일동을 대표하여 오늘 함께해 주셔서 감사드립니다. {AIRLINE_NAME}을 이용해 주셔서 감사합니다.</value>
   </data>
 
   <data name="Template_DepartureDelayed" xml:space="preserve">
-    <value>승객 여러분, 조종실에서 안내드립니다. 현재 출발이 지연되고 있습니다. 최신 상황은 계속 안내드리며 최대한 신속히 출발하겠습니다. 기다려 주셔서 감사합니다.</value>
+    <value>승객 여러분, 조종실에서 안내드립니다. {IF DEP_STATUS}{DEP_STATUS}{END} {IF DEP_LATE}(현재 {DEP_LATE} 지연){END}. {IF SCHED_DEP_LOCAL_24H}예정된 출발 시각은 {SCHED_DEP_LOCAL_24H} 입니다.{END} 최신 상황은 계속 안내드리며 최대한 신속히 출발하겠습니다. 기다려 주셔서 감사합니다.</value>
   </data>
 
   <data name="Template_DescentSeatbelts" xml:space="preserve">
-    <value>승객 여러분, 곧 착륙할 예정입니다. 노트북을 포함한 휴대 수하물을 안전하게 보관해 주시고, 테이블을 접고 팔걸이를 내린 뒤 창문 가리개를 열어 주십시오. 착석 후 좌석벨트를 착용하시기 바랍니다. 불필요한 신문과 잡지, 쓰레기는 승무원에게 전달해 주십시오. 지금부터 화장실 이용은 제한됩니다. 감사합니다.</value>
+    <value>승객 여러분, 곧 {IF DESTINATION_CITY}{DESTINATION_CITY}{END}에 착륙할 예정입니다. {IF DESTINATION_TEMPERATURE}기온은 {DESTINATION_TEMPERATURE} 정도입니다.{END} 노트북을 포함한 휴대 수하물을 안전하게 보관해 주시고, 테이블을 접고 팔걸이를 내린 뒤 창문 가리개를 열어 주십시오. 착석 후 좌석벨트를 착용하시기 바랍니다. 불필요한 신문과 잡지, 쓰레기는 승무원에게 전달해 주십시오. 지금부터 화장실 이용은 제한됩니다. 감사합니다.</value>
   </data>
 
   <data name="Template_DisarmDoors" xml:space="preserve">
