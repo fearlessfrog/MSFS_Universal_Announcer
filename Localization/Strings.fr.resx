@@ -432,7 +432,11 @@ Pour ouvrir les paramètres ou contrôler l’application :
   <!-- Tweaks: PMDG tooltip + ignore incompatible lights -->
   <data name="Tweaks_PmdgSdk_Tooltip" xml:space="preserve"><value>Utiliser les données client PMDG pour le 777 sur MSFS 2024. Nécessite d’ajouter EnableDataBroadcast=1 dans 777_Options.ini.</value></data>
   <data name="Tweaks_IgnoreIncompatibleLights" xml:space="preserve"><value>Ignorer les lumières d’appareil incompatibles</value></data>
-  <data name="Tweaks_IgnoreIncompatibleLights_Tooltip" xml:space="preserve"><value>Ignore les SimVars Logo, Beacon, Landing et Strobe afin de pouvoir utiliser « Lire la suivante » manuellement lorsque certains appareils rapportent des états de lumière incorrects.</value></data>
+  <data name="Tweaks_IgnoreIncompatibleLights_Tooltip" xml:space="preserve"><value>Ignore les SimVars Logo, Beacon, Landing et Strobe afin de pouvoir utiliser « Lire la suivante » manuellement lorsque certains appareils rapportent des états de lumière incorrects.</value></data>
+
+  <!-- Tweaks: Landing Cabin Reactions -->
+  <data name="Tweaks_LandingCabinReactions" xml:space="preserve"><value>Réactions de cabine à l'atterrissage</value></data>
+  <data name="Tweaks_LandingCabinReactions_Tooltip" xml:space="preserve"><value>Joue des sons de cabine selon la qualité de l'atterrissage (applaudissements pour les atterrissages en douceur, réactions pour les atterrissages durs)</value></data>
 
   <!-- Waiting phrases for Play Next -->
   <data name="Wait_BoardingStart_GSX" xml:space="preserve"><value>Lumière logo ALLUMÉE ou Embarquement GSX</value></data>

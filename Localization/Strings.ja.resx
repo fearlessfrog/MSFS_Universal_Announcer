@@ -442,6 +442,10 @@
   <data name="Tweaks_IgnoreIncompatibleLights" xml:space="preserve"><value>互換性のない機体ライトを無視</value></data>
   <data name="Tweaks_IgnoreIncompatibleLights_Tooltip" xml:space="preserve"><value>一部の機体が誤ったライト状態を報告する場合でも、手動の「次を再生」を使えるように、ロゴ／ビーコン／着陸灯／ストロボの各 SimVar を無視します。</value></data>
 
+  <!-- Tweaks: Landing Cabin Reactions -->
+  <data name="Tweaks_LandingCabinReactions" xml:space="preserve"><value>着陸時の客室反応</value></data>
+  <data name="Tweaks_LandingCabinReactions_Tooltip" xml:space="preserve"><value>着陸の質に基づいて客室音を再生します（スムーズな着陸では拍手、硬い着陸では反応）</value></data>
+
   <!-- Waiting phrases for Play Next -->
   <data name="Wait_BoardingStart_GSX" xml:space="preserve"><value>ロゴライト ON または GSX 搭乗</value></data>
   <data name="Wait_BoardingStart_LogoOnly" xml:space="preserve"><value>ロゴライト ON</value></data>

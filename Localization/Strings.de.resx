@@ -115,7 +115,11 @@
   <data name="Tweaks_PmdgHowToLink" xml:space="preserve"><value>Wie PMDG SDK-Daten aktivieren</value></data>
   <data name="Tweaks_PmdgSdk_Tooltip" xml:space="preserve"><value>PMDG-Clientdaten für die 777 in MSFS 2024 verwenden. Erfordert EnableDataBroadcast=1 in 777_Options.ini.</value></data>
   <data name="Tweaks_IgnoreIncompatibleLights" xml:space="preserve"><value>Inkompatible Flugzeuglichter ignorieren</value></data>
-  <data name="Tweaks_IgnoreIncompatibleLights_Tooltip" xml:space="preserve"><value>Ignoriert Logo-, Beacon-, Landescheinwerfer- und Strobe‑SimVars, damit „Nächste abspielen“ manuell genutzt werden kann, wenn manche Flugzeuge falsche Lichtzustände melden.</value></data>
+  <data name="Tweaks_IgnoreIncompatibleLights_Tooltip" xml:space="preserve"><value>Ignoriert Logo-, Beacon-, Landescheinwerfer- und Strobe‑SimVars, damit „Nächste abspielen" manuell genutzt werden kann, wenn manche Flugzeuge falsche Lichtzustände melden.</value></data>
+
+  <!-- Tweaks: Landing Cabin Reactions -->
+  <data name="Tweaks_LandingCabinReactions" xml:space="preserve"><value>Landungskabinenreaktionen</value></data>
+  <data name="Tweaks_LandingCabinReactions_Tooltip" xml:space="preserve"><value>Spielt Kabinengeräusche basierend auf der Landungsqualität ab (Applaus für sanfte Landungen, Reaktionen für harte Landungen)</value></data>
 
   <!-- Integrations tab -->
   <data name="Integrations_SimBriefGroup" xml:space="preserve"><value>SimBrief-Integration</value></data>

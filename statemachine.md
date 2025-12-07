@@ -230,3 +230,24 @@ Right-click the system tray icon → **Flight State** submenu
 | **Approach** | `Approach` | All pre-approach announcements (boarding through AfterTakeoff) | CrewSeatsLanding when below CrewSeatsLandingAGL (3,000 ft) with landing lights |
 | **Landing** | `Landing` | All pre-landing announcements (boarding through CallCabinSecureLanding) | AfterLanding when on ground with spoilers retracted |
 | **Done** | `Done` | All announcements | No further announcements (flight complete) |
+
+### Landing Cabin Reactions
+
+The system can automatically play cabin reaction sounds based on landing quality. This feature monitors landing parameters (vertical speed and G-force) and plays appropriate sounds:
+
+- **Great Landings**: Smooth landings (≤200 fpm vertical speed, ≤1.2g) trigger applause sounds
+- **Terrible Landings**: Hard landings (≥700 fpm vertical speed or ≥1.5g) trigger reaction sounds
+
+**Supported Sound Files:**
+- `LandingGreat.ogg` - Played for smooth, well-executed landings
+- `LandingTerrible.ogg` - Played for hard or rough landings
+
+These files support the same tagging system as other announcements:
+- Aircraft-specific: `LandingGreat[A320].ogg`, `LandingTerrible[737].ogg`
+- Numbered variants: `LandingGreat[1].ogg`, `LandingGreat[2].ogg`
+- Location tags: `LandingGreat[KSFO].ogg`, `LandingTerrible[KJFK].ogg`
+- Combined tags: `LandingGreat[A320][1].ogg`
+
+Files are searched in airline-specific folders first, then the Default folder. If no custom file is found, embedded default sounds are used.
+
+**Note**: This feature can be enabled/disabled in Settings → Tweaks tab.

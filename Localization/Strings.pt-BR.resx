@@ -437,6 +437,10 @@ Log: {1}</value></data>
   <data name="Tweaks_IgnoreIncompatibleLights" xml:space="preserve"><value>Ignorar luzes de aeronaves incompatíveis</value></data>
   <data name="Tweaks_IgnoreIncompatibleLights_Tooltip" xml:space="preserve"><value>Ignora os SimVars de Logo, Beacon, Landing e Strobe para permitir "Reproduzir próximo" manual quando algumas aeronaves informam estados de luz incorretos.</value></data>
 
+  <!-- Tweaks: Landing Cabin Reactions -->
+  <data name="Tweaks_LandingCabinReactions" xml:space="preserve"><value>Reações da cabine no pouso</value></data>
+  <data name="Tweaks_LandingCabinReactions_Tooltip" xml:space="preserve"><value>Reproduz sons da cabine com base na qualidade do pouso (aplausos para pousos suaves, reações para pousos duros)</value></data>
+
   <!-- Waiting phrases for Play Next -->
   <data name="Wait_BoardingStart_GSX" xml:space="preserve"><value>Luz de logo LIGADA ou Embarque GSX</value></data>
   <data name="Wait_BoardingStart_LogoOnly" xml:space="preserve"><value>Luz de logo LIGADA</value></data>

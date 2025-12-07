@@ -171,6 +171,10 @@
   <data name="Tweaks_IgnoreIncompatibleLights" xml:space="preserve"><value>호환되지 않는 항공기 조명 무시</value></data>
   <data name="Tweaks_IgnoreIncompatibleLights_Tooltip" xml:space="preserve"><value>일부 항공기가 잘못된 조명 상태를 보고하는 경우에도 수동 "다음 재생"을 사용할 수 있도록 로고/비컨/랜딩/스트로브 SimVar 값을 무시합니다.</value></data>
 
+  <!-- Tweaks: Landing Cabin Reactions -->
+  <data name="Tweaks_LandingCabinReactions" xml:space="preserve"><value>착륙 객실 반응</value></data>
+  <data name="Tweaks_LandingCabinReactions_Tooltip" xml:space="preserve"><value>착륙 품질에 따라 객실 소리를 재생합니다 (부드러운 착륙에는 박수, 거친 착륙에는 반응)</value></data>
+
   <!-- Waiting phrases for Play Next -->
   <data name="Wait_BoardingStart_GSX" xml:space="preserve"><value>로고 라이트 켜짐 또는 GSX 탑승</value></data>
   <data name="Wait_BoardingStart_LogoOnly" xml:space="preserve"><value>로고 라이트 켜짐</value></data>

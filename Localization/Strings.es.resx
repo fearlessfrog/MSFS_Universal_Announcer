@@ -440,6 +440,10 @@ Para abrir la configuración o controlar la aplicación:
   <data name="Tweaks_IgnoreIncompatibleLights" xml:space="preserve"><value>Ignorar luces de aeronaves incompatibles</value></data>
   <data name="Tweaks_IgnoreIncompatibleLights_Tooltip" xml:space="preserve"><value>Ignora los SimVars de Logo, Beacon, Landing y Strobe para poder usar "Reproducir siguiente" manual cuando algunos aviones informan estados de luces incorrectos.</value></data>
 
+  <!-- Tweaks: Landing Cabin Reactions -->
+  <data name="Tweaks_LandingCabinReactions" xml:space="preserve"><value>Reacciones de cabina en aterrizaje</value></data>
+  <data name="Tweaks_LandingCabinReactions_Tooltip" xml:space="preserve"><value>Reproduce sonidos de cabina según la calidad del aterrizaje (aplausos para aterrizajes suaves, reacciones para aterrizajes duros)</value></data>
+
   <!-- Waiting phrases for Play Next -->
   <data name="Wait_BoardingStart_GSX" xml:space="preserve"><value>Luz de logo ENCENDIDA o Embarque GSX</value></data>
   <data name="Wait_BoardingStart_LogoOnly" xml:space="preserve"><value>Luz de logo ENCENDIDA</value></data>

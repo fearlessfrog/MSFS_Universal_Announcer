@@ -78,7 +78,11 @@
   <!-- Tweaks: PMDG tooltip + ignore incompatible lights -->
   <data name="Tweaks_PmdgSdk_Tooltip" xml:space="preserve"><value>在 MSFS 2024 的 777 上使用 PMDG 客户端数据。需要在 777_Options.ini 中添加 EnableDataBroadcast=1。</value></data>
   <data name="Tweaks_IgnoreIncompatibleLights" xml:space="preserve"><value>忽略不兼容的飞机灯光</value></data>
-  <data name="Tweaks_IgnoreIncompatibleLights_Tooltip" xml:space="preserve"><value>忽略 Logo、Beacon、Landing 和 Strobe 的 SimVar，这样当某些飞机上报错误的灯光状态时，你仍可使用手动“播放下一个”。</value></data>
+  <data name="Tweaks_IgnoreIncompatibleLights_Tooltip" xml:space="preserve"><value>忽略 Logo、Beacon、Landing 和 Strobe 的 SimVar，这样当某些飞机上报错误的灯光状态时，你仍可使用手动"播放下一个"。</value></data>
+
+  <!-- Tweaks: Landing Cabin Reactions -->
+  <data name="Tweaks_LandingCabinReactions" xml:space="preserve"><value>着陆客舱反应</value></data>
+  <data name="Tweaks_LandingCabinReactions_Tooltip" xml:space="preserve"><value>根据着陆质量播放客舱声音（平稳着陆时播放掌声，硬着陆时播放反应）</value></data>
 
   <!-- Waiting phrases for Play Next -->
   <data name="Wait_BoardingStart_GSX" xml:space="preserve"><value>Logo 灯 亮 或 GSX 登机</value></data>

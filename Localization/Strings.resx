@@ -200,6 +200,10 @@
   <data name="Tweaks_IgnoreIncompatibleLights" xml:space="preserve"><value>Ignore incompatible aircraft lights</value></data>
   <data name="Tweaks_IgnoreIncompatibleLights_Tooltip" xml:space="preserve"><value>Ignores Logo, Beacon, Landing and Strobe SimVars so you can use manual Play Next when some aircraft report incorrect light states.</value></data>
 
+  <!-- Tweaks: Landing Cabin Reactions -->
+  <data name="Tweaks_LandingCabinReactions" xml:space="preserve"><value>Landing Cabin Reactions</value></data>
+  <data name="Tweaks_LandingCabinReactions_Tooltip" xml:space="preserve"><value>Play cabin sounds based on landing quality (applause for smooth landings, reactions for hard landings)</value></data>
+
   <!-- Tweaks: MSFS Toolbar -->
   <data name="Tweaks_EnableMsfsToolbar" xml:space="preserve"><value>Enable MSFS Toolbar link (experimental)</value></data>
 
