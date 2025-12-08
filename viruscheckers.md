@@ -68,7 +68,7 @@ I get it—trusting software from the internet requires a leap of faith. Here's 
 
 - **The app is discussed openly** in flight sim communities and Discord servers
 - **Updates are frequent and transparent** – you can see the release history on GitHub
-- **I'm a real person** in the flight sim community, not an anonymous entity
+- **There is some history** - the app has been around for a while and has over 30,000 downloads.
 
 But again, do your own due diligence. Check VirusTotal, read the community discussions, and make the choice that feels right for you.
 
