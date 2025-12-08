@@ -190,7 +190,7 @@ Audio device issues: Select your correct audio device in Settings
 
 Boarding but no musac!: Again :) use the Logo On light to trigger the boarding manually.
 
-It is a Virus!!: Sorry about that but False Positives come up enough for me to put some words here on this: https://fearlessfrog.github.io/MSFS_Universal_Announcer/viruscheckers.html
+It is a Virus!!: Sorry about that but False Positives come up enough for me to put some words here on this: [here](https://fearlessfrog.github.io/MSFS_Universal_Announcer/viruscheckers.html)
 
 ## Settings & Log Files
 
