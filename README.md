@@ -36,7 +36,7 @@ You can obtain compatible sound files from:
 
 1. Default Sound Pack: Use the in‑app installer to download and install a public‑domain starter pack automatically (includes boarding music you can replace later)
 2. Fenix A320 Installation: If you own the Fenix A320, the sound files are already installed
-3. Cabin Announcements Discord: join the [Cabin Announcements for Fenix](https://discord.com/invite/P8ZYJgH3ZF) Discord server for community-created sound files
+3. Cabin Announcements Discord: join the [Cabin Announcements for Fenix](https://discord.com/invite/P8ZYJgH3ZF) Discord server for community-created sound files (If you get invalid link try with another browser, Chrome sometimes fails with it)
 4. Make You Own: Get your tray tables in an upright position and get recording, it's just plain sound files (see [here](https://support.fenixsim.com/hc/en-us/articles/12374580682383-Cabin-Announcements-Guide) for specs)
 5. Use a Text to Speech service within the app and generate your own on the fly or pregenerated! Allows for in-flight context to be used in what it says. More details [here](https://fearlessfrog.github.io/MSFS_Universal_Announcer/generated.html).
    - Supports Windows (local offline), Azure, Edge, and ElevenLabs voice providers.
