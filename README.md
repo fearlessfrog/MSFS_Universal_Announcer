@@ -177,12 +177,20 @@ PA Audio Mix: Simulate a PA system sound on generated audio
 FAQ and Common Issues:
 
 I can't find the app and it says it is running!: Check your windows System Tray, it is hiding in there.
+
 Nothing is happening: If not using GSX then turn that feature off (Settings/Integrations) and use the LOGO LIGHT to ON to indicate the passengers are boarding.
+
 No sound playing: Check your sound files path in Settings or use Sounds 'Preview' to check them.
-Wrong airline: Check your last simbrief generated plan or set your MSFS Callsign in the sim to the correct airline code, e.g. 'UAL123' for United (matches folder names).
+
+Wrong airline: Check your last simbrief generated plan or set your MSFS Callsign in the sim to the correct airline code, e.g. 'UAL123' for United (matches folder names). If none of that works, just override them on the Status tab.
+
 No Seat Belt triggered sounds playing: Still working on it, some default aircraft work.
+
 Audio device issues: Select your correct audio device in Settings
+
 Boarding but no musac!: Again :) use the Logo On light to trigger the boarding manually.
+
+It is a Virus!!: Sorry about that but False Positives come up enough for me to put some words here on this: https://fearlessfrog.github.io/MSFS_Universal_Announcer/viruscheckers.html
 
 ## Settings & Log Files
 
