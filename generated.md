@@ -181,6 +181,8 @@ You can specify a different voice for each generated announcement. Use the **Ins
 
 If no override is present, the global voice selection is used (the one you last set).
 
+**Note**: For a more structured approach to assigning different voices to pilots and flight attendants, see the **Roles** section below.
+
 **TTS Rate and Pitch Adjust**. For the Azure and Edge TTS generators allow for speed rate and pitch changes within the generated voice, adjusting the generated output as required. ElevenLabs does not support the standard SSML, so can't do this as yet, and Windows TTS is super basic, so just those two for now. Example use in the app:
 
 ```text
@@ -192,6 +194,59 @@ Welcome aboard this flight.
 ```
 
 So this would pick a voice from Edge called 'en-US-LunaNeural', play at half speed (e.g. minus 50%) and be of a lower pitch than the default voice (e.g. minus 50Hz). There isn't much validation on values, so you can go full 'chipmunk on sugar' if you really want. The Rate is in positive and negative (100% is the default) and Pitch is via hertz negative or positive (0Hz is no change).
+
+## Roles
+
+The Roles feature allows you to assign different voices to Pilot and Flight Attendant announcements, making it easy to maintain consistent voice assignments per airline without manually specifying voices in each template.
+
+### How Roles Work
+
+You can mark generated text templates with a role using the `##Role:` directive at the top of the template:
+
+```text
+##Role: Pilot
+Hello, I am a pilot, I feel compelled to tell that to everyone as part of my training!
+```
+
+Or for Flight Attendant announcements:
+
+```text
+##Role: FA
+Ladies and gentlemen, welcome aboard this flight.
+```
+
+**Default behavior**: If no `##Role:` is specified in a template, it assumes the Flight Attendant (FA) role.
+
+### Role Configuration
+
+Role assignments are saved per airline (or in the `Default` folder as a fallback) in a `roles.json` text file. This file stores voice assignments for each TTS provider and role combination. You can access this via the 'Roles' button on the Generated tab.
+
+**Example roles.json structure:**
+
+```json
+{
+  "Edge": {
+    "Pilot": "en-IE-ConnorNeural",
+    "FA": "en-IE-EmilyNeural"
+  },
+  "Azure": {
+    "Pilot": "en-US-AriaNeural",
+    "FA": "en-US-JennyNeural"
+  }
+}
+```
+
+In this example:
+- Any announcement with `##Role: Pilot` uses the Irish Connor voice (Edge).
+- Any announcement with `##Role: FA` (or no role specified) uses the Irish Emily voice (Edge).
+
+**Tip**: You may need to 'Revert' any previously edited templates or manually add the `##Role: Pilot` or `##Role: FA` text in the template editor and re-save them to use the role system.
+
+### Roles vs. Voice Hints
+
+Roles provide a structured way to assign voices, while voice hints (`##Voice:`) allow per-template overrides. You can use both:
+- Roles are ideal for consistent Pilot/FA voice assignments across multiple templates
+- Voice hints are useful for one-off customizations or when you need a specific voice for a particular announcement
 
 ## 'Replace existing .ogg' Automatic Generated Mode
 

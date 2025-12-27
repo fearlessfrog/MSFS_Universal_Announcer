@@ -1,6 +1,6 @@
 # How Detection of Flight State Works
 
-This is a snapshot of v0.7.0 transitions, so it might evolve. It should answer most questions on 'what fires when'.
+This is a snapshot of v0.9.7 transitions, so it might evolve. It should answer most questions on 'what fires when'.
 
 ## Flight State Transition Table
 
@@ -11,14 +11,16 @@ This is a snapshot of v0.7.0 transitions, so it might evolve. It should answer m
 | BoardingMusic | `BoardingWelcome` played AND `BoardingComplete` not played | Loop continuously until BoardingComplete or next BoardingWelcome |
 | DepartureDelayed | SimBrief scheduled pushback overdue by ≥ configured minutes AND `BoardingWelcome` played AND `BoardingComplete` not played | Interrupts BoardingMusic immediately; plays once per boarding session; respects global spacing; BoardingMusic resumes (from offset if resume is enabled) |
 | BoardingComplete | `IsBeaconOn=True` AND `IsOnGround=True` **OR** `GSX Boarding complete` (when GSX enabled) | Play once when beacon first turned on **OR** GSX boarding completed (whichever happens first) |
-| ArmDoors | `IsOnGround=True` AND (`IsEngineRunning=True` OR `GroundSpeed > 1`) | Play once when engines start or aircraft begins moving |
+| ArmDoors | `IsOnGround=True` AND (`IsEngineRunning=True` OR `GroundSpeed > 1`) **OR** `Auto ArmDoors` tweak enabled AND `BoardingComplete` played | Play once when engines start or aircraft begins moving, or automatically soon after BoardingComplete if Auto ArmDoors tweak is enabled |
 | PreSafetyBriefing | `ArmDoors` played AND `IsEngineRunning=True` | **Wait for ArmDoors to finish playing** |
 | SafetyBriefing | `PreSafetyBriefing` played | **Wait for PreSafetyBriefing to finish playing** |
 | CabinDimTakeoff | `SafetyBriefing` played AND `IsDaylight=False` | **Wait for SafetyBriefing to finish playing + 10 seconds** |
 | CrewSeatsTakeoff | `IsOnGround=True` AND (`IsLandingLightOn=True` OR `IsStrobeLightOn=True`) AND `IsEngineRunning=True` | When landing lights (default) or strobe lights are turned on (takeoff imminent) |
 | CallCabinSecureTakeoff | `CrewSeatsTakeoff` played AND `IsOnGround=True` | **Wait for CrewSeatsTakeoff to finish playing + 5 seconds** |
 | AfterTakeoff | `AltitudeAGL > TakeoffDetectionAltitudeAGL` (3,000 ft) AND `IsOnGround=False` | **Wait 2 minutes after takeoff detected (independent timing), configurable altitude** |
+| TOC | `Settings: TOC enabled` AND `Altitude >= SimBrief initial altitude` AND `IsOnGround=False` AND `VerticalSpeed > 0` | Play once when reaching planned cruise altitude (disabled by default, simplistic - works best with single altitude plans) |
 | FastenSeatbelt | `Climb/Cruise Phase` AND `AfterTakeoff` played AND `Seatbelt Sign OFF→ON transition` (CABIN SEATBELTS ALERT SWITCH or ANNUNCIATOR SWITCH binding) | **2 Minute Cooldown (Repeatable)** |
+| TOD | `Settings: TOD enabled` AND `Altitude <= SimBrief initial altitude` AND `IsOnGround=False` AND `VerticalSpeed < 0` | Play once when descending through planned cruise altitude (disabled by default, simplistic - works best with single altitude plans) |
 | Cruise | `Climb/Cruise/Descent Phases` AND only plays the once per file | Use the file naming convention of 'CruiseElapsedXXPercent' where XX represents the number % through the flight e.g. CruiseElapsed33Percent is 1/3rd through the flight time |
 | DescentSeatbelts | (`AltitudeAGL < DescentDetectionAGL` (10,000 ft) AND `VerticalSpeed < -500`) OR `LandingLightJustTurnedOn=True` | When descending below configurable altitude OR when landing lights just turned on |
 | CrewSeatsLanding | `AltitudeAGL < CrewSeatsLandingAGL` (3,000 ft) AND `VerticalSpeed < -300` AND `IsLandingLightOn=True` | During final approach phase with landing lights on (configurable altitude threshold) |
@@ -26,7 +28,7 @@ This is a snapshot of v0.7.0 transitions, so it might evolve. It should answer m
 | AfterLanding | `IsOnGround=True` AND (`SpoilersDeployed=False` OR `GroundSpeed < 15`) AND (previous phase was descent/approach OR descent announcements played) | After landing and spoilers retracted OR ground speed below 15 knots |
 | AfterLandingMusic | `AfterLanding` completed AND `DisembarkStarted` not yet played. | Loops continuously after AfterLanding completes. May be interrupted by DisarmDoors and then resumes (from offset if resume enabled). Stops when DisembarkStarted plays. |
 | DisarmDoors | `AreEnginesOff=True` AND `IsParkingBrakeOn=True` AND `AfterLanding` played | **Wait for AfterLanding to finish playing** |
-| DisembarkStarted | `DisarmDoors` played AND (`IsBeaconOn=False` OR `IsGSXDeboardingInProgress=True`) | **Wait for DisarmDoors to finish playing** |
+| DisembarkStarted | `DisarmDoors` played AND (`IsBeaconOn=False` OR `IsGSXDeboardingInProgress=True`) | **Wait for DisarmDoors to finish playing**. When GSX Deboarding completes (State 6), automatically resets flight state for next flight |
 
 ## Airline Detection
 
@@ -85,6 +87,17 @@ The system uses the `ATC MODEL` simvar (e.g., "737", "A320") for enhanced aircra
   - Origin-based announcements (up to and including `AfterTakeoff`) use origin ICAO tags
   - All later announcements use destination ICAO tags
 
+### Arrival and Departure Tags ([ARR] and [DEP])
+- You can explicitly specify whether an ICAO code refers to the departure or arrival airport using `[ARR]` or `[DEP]` tags.
+- This allows you to use arrival-specific announcements during departure phases, or vice versa.
+  - Examples:
+    - `BoardingWelcome[CYVR][ARR].ogg` → plays when CYVR is your destination, even though BoardingWelcome normally uses origin tags
+    - `BoardingWelcome[KSEA][ARR].ogg` → plays when KSEA is your destination (e.g., "This is our flight to Seattle, hello")
+    - `AfterLanding[KSEA].ogg` → automatically uses destination context (no tag needed)
+    - `AfterLanding[KSEA][ARR].ogg` → explicitly marks as arrival context (same behavior as above)
+  - When `[ARR]` or `[DEP]` is specified, it overrides the automatic origin/destination detection for that file
+  - Useful when you want announcements that mention the destination airport during boarding, or departure airport during arrival
+
 ### Numbered Variants
 You can create multiple versions of the same announcement:
 - `BoardingWelcome[1].ogg`
@@ -94,13 +107,14 @@ You can create multiple versions of the same announcement:
 The system will randomly select one variant per flight and maintain consistency throughout the flight.
 
 ### Tag Priority and Matching
-- Multiple tags may be combined on the same file, e.g., `SafetyBriefing[A320][Morning][KSFO].ogg`
+- Multiple tags may be combined on the same file, e.g., `SafetyBriefing[A320][Morning][KSFO].ogg` or `BoardingWelcome[CYVR][ARR][1].ogg`
 - Matching priority (highest → lowest):
   1. Situational tags (e.g., `Refueling`) when active – required to match when present
   2. Aircraft-specific tags (exact type match, e.g., `A320`, `B738`, `CRJ900`)
-  3. Location ICAO tags (origin/destination as described above)
-  4. Time-of-day tags (`Morning`, `Afternoon`, `Evening`, `Night`)
-  5. Numbered variants (`[1]`, `[2]`, ...)
+  3. Location ICAO tags with explicit `[ARR]` or `[DEP]` context (overrides automatic origin/destination detection)
+  4. Location ICAO tags (origin/destination as automatically determined by flight phase)
+  5. Time-of-day tags (`Morning`, `Afternoon`, `Evening`, `Night`)
+  6. Numbered variants (`[1]`, `[2]`, ...)
 - If multiple candidates tie, a deterministic selection is made; numbered variants
   maintain consistency per flight.
 
@@ -193,6 +207,7 @@ When GSX integration is **enabled**:
 - **Smart Detection**: Uses `IsGSXAvailable` to determine if GSX data is actually being received
 - **Refueling variants**: When `L:FSDT_GSX_REFUELING_STATE = 4 or 5` (requested or being performed), sound files with [Refueling] tags are preferred over standard variants
 - **Deboarding trigger**: When `L:FSDT_GSX_DEBOARDING_STATE = 4 or 5` (requested or being performed), DisembarkStarted announcement is triggered (supplements beacon light off trigger)
+- **Automatic flight reset**: When `L:FSDT_GSX_DEBOARDING_STATE = 6` (deboarding completed), the flight state automatically resets for the next flight (no manual reset needed)
 - Provides more realistic timing aligned with actual ground service operations
 
 When GSX integration is **disabled**:
