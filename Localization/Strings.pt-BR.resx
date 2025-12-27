@@ -271,6 +271,9 @@ Para abrir as configurações ou controlar o aplicativo:
   <data name="Generated_AirlineLabel" xml:space="preserve"><value>Companhia:</value></data>
   <data name="Generated_InsertVoice" xml:space="preserve"><value>Inserir voz</value></data>
   <data name="Generated_TestVoice" xml:space="preserve"><value>Testar voz</value></data>
+  <data name="Generated_Roles" xml:space="preserve"><value>Funções</value></data>
+  <data name="Roles_Airline" xml:space="preserve"><value>Companhia aérea:</value></data>
+  <data name="Roles_SaveRoles" xml:space="preserve"><value>Salvar funções</value></data>
   <data name="Generated_VoiceLabel" xml:space="preserve"><value>Voz:</value></data>
   <data name="Generated_AzureApiKey" xml:space="preserve"><value>Chave de API do Azure:</value></data>
   <data name="Generated_AzureRegion" xml:space="preserve"><value>Região do Azure:</value></data>
@@ -361,6 +364,7 @@ Um breve download será iniciado.</value></data>
   <data name="Tweaks_SkipFirstBoardingWelcome" xml:space="preserve"><value>Pular o primeiro BoardingWelcome</value></data>
   <data name="Tweaks_DepartureDelayThreshold" xml:space="preserve"><value>Limite de atraso na partida (min):</value></data>
   <data name="Tweaks_AfterLandingDelay" xml:space="preserve"><value>Atraso após o pouso (min):</value></data>
+  <data name="Tweaks_ArmDoorsAfterBoardingComplete" xml:space="preserve"><value>Fechar portas após o embarque completo automaticamente (30 segundos)</value></data>
   <data name="Tweaks_EnablePmdgSdk" xml:space="preserve"><value>Habilitar dados do PMDG SDK (MSFS24 777X)</value></data>
   <data name="Tweaks_PmdgHowToLink" xml:space="preserve"><value>Como habilitar os dados do PMDG SDK</value></data>
 
@@ -462,10 +466,12 @@ Log: {1}</value></data>
   <data name="Wait_DepartureDelayed" xml:space="preserve"><value>Limite de atraso na partida</value></data>
   <data name="PlayNext_CruiseElapsedFormat" xml:space="preserve"><value>Cruzeiro {0}%</value></data>
 
-  <!-- Update prompt (fallback English) -->
-  <data name="Update_PromptTitle" xml:space="preserve"><value>Universal Announcer Update</value></data>
-  <data name="Update_PromptMessage_Format" xml:space="preserve"><value>New version available.
-Current: {0}  New: {1}
-
-Update now?</value></data>
+  <!-- Update prompt -->
+  <data name="Update_PromptTitle" xml:space="preserve"><value>Atualização do Universal Announcer</value></data>
+  <data name="Update_PromptHeading" xml:space="preserve"><value>Uma nova versão está disponível!</value></data>
+  <data name="Update_PromptMessage_Format" xml:space="preserve"><value>Versão atual: {0}
+Nova versão: {1}</value></data>
+  <data name="Update_ButtonUpdate" xml:space="preserve"><value>Atualizar agora</value></data>
+  <data name="Update_ButtonNotNow" xml:space="preserve"><value>Agora não</value></data>
+  <data name="Update_ButtonReleaseNotes" xml:space="preserve"><value>Notas da versão</value></data>
 </root>

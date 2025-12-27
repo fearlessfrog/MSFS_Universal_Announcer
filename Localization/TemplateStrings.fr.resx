@@ -34,7 +34,9 @@
   </data>
 
   <data name="Template_BoardingWelcomePilot" xml:space="preserve">
-    <value>Bonjour depuis le poste de pilotage, ici votre commandant de bord. Bienvenue à bord. Nous terminons l’embarquement et prévoyons un départ prochainement. Je reviendrai vers vous pendant le vol pour vous informer de notre progression. En attendant, installez-vous confortablement et merci d’avoir choisi de voyager avec nous aujourd’hui.</value>
+    <value>##Role: Pilot
+
+Bonjour depuis le poste de pilotage, ici votre commandant de bord. Bienvenue à bord. Nous terminons l'embarquement et prévoyons un départ prochainement. Je reviendrai vers vous pendant le vol pour vous informer de notre progression. En attendant, installez-vous confortablement et merci d'avoir choisi de voyager avec nous aujourd'hui.</value>
   </data>
 
   <data name="Template_CabinDimTakeoff" xml:space="preserve">
@@ -50,11 +52,15 @@
   </data>
 
   <data name="Template_CrewSeatsLanding" xml:space="preserve">
-    <value>Équipage cabine, veuillez vous asseoir pour l’atterrissage. Merci.</value>
+    <value>##Role: Pilot
+
+Équipage cabine, veuillez vous asseoir pour l'atterrissage. Merci.</value>
   </data>
 
   <data name="Template_CrewSeatsTakeoff" xml:space="preserve">
-    <value>Équipage cabine, assis pour le décollage.</value>
+    <value>##Role: Pilot
+
+Équipage cabine, assis pour le décollage.</value>
   </data>
 
   <data name="Template_CruiseElapsed50Percent" xml:space="preserve">
@@ -62,7 +68,9 @@
   </data>
 
   <data name="Template_DepartureDelayed" xml:space="preserve">
-    <value>Mesdames et messieurs, information depuis le poste de pilotage. {IF DEP_STATUS}{DEP_STATUS}{END} {IF DEP_LATE}(actuellement {DEP_LATE} de retard){END}. {IF SCHED_DEP_LOCAL_24H}Heure prévue de départ {SCHED_DEP_LOCAL_24H}.{END} Nous vous tiendrons informés et ferons le nécessaire pour partir dès que possible. Merci de votre patience.</value>
+    <value>##Role: Pilot
+
+Mesdames et messieurs, information depuis le poste de pilotage. {IF DEP_STATUS}{DEP_STATUS}{END} {IF DEP_LATE}(actuellement {DEP_LATE} de retard){END}. {IF SCHED_DEP_LOCAL_24H}Heure prévue de départ {SCHED_DEP_LOCAL_24H}.{END} Nous vous tiendrons informés et ferons le nécessaire pour partir dès que possible. Merci de votre patience.</value>
   </data>
 
   <data name="Template_DescentSeatbelts" xml:space="preserve">
@@ -86,7 +94,19 @@
   </data>
 
   <data name="Template_SafetyBriefing" xml:space="preserve">
-    <value>Mesdames et messieurs, bienvenue à bord. Merci de prêter attention aux signaux lumineux et aux consignes de l’équipage, y compris les procédures de sécurité suivantes. La fiche de sécurité dans la pochette de votre siège contient des informations importantes sur les issues de secours, les masques à oxygène, les gilets de sauvetage et la position de sécurité (brace) à adopter si vous entendez « brace, brace ». Cet appareil comporte huit issues de secours. L’équipage va vous indiquer les sorties les plus proches ; votre issue la plus proche peut se trouver derrière vous. Un balisage lumineux vous guidera vers une sortie. En cas d’urgence, laissez tous vos bagages à bord. Attachez, ajustez et détachez votre ceinture comme indiqué. Elle doit être attachée lorsque le signal est allumé et nous vous recommandons de la garder attachée en permanence lorsque vous êtes assis. En cas de dépressurisation, des masques tomberont au-dessus de vous. Tirez un masque vers vous pour démarrer l’oxygène. Placez-le sur le nez et la bouche, respirez normalement et ajustez-le à l’aide de la sangle. Mettez d’abord votre propre masque avant d’aider les autres. En cas d’amerrissage, prenez un gilet sous votre siège. Sortez-le de sa pochette et passez-le par la tête. Passez les sangles autour de la taille et clipsez-les, puis ajustez en tirant. Ne gonflez pas le gilet à l’intérieur de l’appareil. À l’extérieur, tirez sur la poignée pour le gonfler. S’il ne se gonfle pas suffisamment, utilisez le tube pour le compléter. Un voyant et un sifflet servent à attirer l’attention. L’équipage peut fournir des gilets pour enfants. Votre tablette doit être relevée, les accoudoirs abaissés, les pare-soleil ouverts et votre ceinture attachée. De plus amples informations relatives à votre sécurité se trouvent dans le magazine de bord. Nous vous souhaitons un excellent vol.</value>
+    <value>Mesdames et messieurs, bienvenue à bord. Merci de prêter attention aux signaux lumineux et aux consignes de l'équipage, y compris les procédures de sécurité suivantes. La fiche de sécurité dans la pochette de votre siège contient des informations importantes sur les issues de secours, les masques à oxygène, les gilets de sauvetage et la position de sécurité (brace) à adopter si vous entendez « brace, brace ». Cet appareil comporte huit issues de secours. L'équipage va vous indiquer les sorties les plus proches ; votre issue la plus proche peut se trouver derrière vous. Un balisage lumineux vous guidera vers une sortie. En cas d'urgence, laissez tous vos bagages à bord. Attachez, ajustez et détachez votre ceinture comme indiqué. Elle doit être attachée lorsque le signal est allumé et nous vous recommandons de la garder attachée en permanence lorsque vous êtes assis. En cas de dépressurisation, des masques tomberont au-dessus de vous. Tirez un masque vers vous pour démarrer l'oxygène. Placez-le sur le nez et la bouche, respirez normalement et ajustez-le à l'aide de la sangle. Mettez d'abord votre propre masque avant d'aider les autres. En cas d'amerrissage, prenez un gilet sous votre siège. Sortez-le de sa pochette et passez-le par la tête. Passez les sangles autour de la taille et clipsez-les, puis ajustez en tirant. Ne gonflez pas le gilet à l'intérieur de l'appareil. À l'extérieur, tirez sur la poignée pour le gonfler. S'il ne se gonfle pas suffisamment, utilisez le tube pour le compléter. Un voyant et un sifflet servent à attirer l'attention. L'équipage peut fournir des gilets pour enfants. Votre tablette doit être relevée, les accoudoirs abaissés, les pare-soleil ouverts et votre ceinture attachée. De plus amples informations relatives à votre sécurité se trouvent dans le magazine de bord. Nous vous souhaitons un excellent vol.</value>
+  </data>
+
+  <data name="Template_TopOfClimbPilot" xml:space="preserve">
+    <value>##Role: Pilot
+
+Mesdames et messieurs, ici le commandant de bord depuis le poste de pilotage. Nous avons atteint notre altitude de croisière de {IF CRUISE_ALTITUDE_FT}{CRUISE_ALTITUDE_FT}{END} pieds à bord de notre {IF AIRCRAFT_NAME}{AIRCRAFT_NAME}{END}, et les conditions sont favorables devant nous. {IF DESTINATION_CITY}Nous nous dirigeons vers {DESTINATION_CITY}{END}{IF FLIGHT_TIME}, avec un temps de vol estimé de {FLIGHT_TIME}{END}. Nous vous tiendrons informés de notre progression tout au long du vol. En attendant, détendez-vous et profitez du service à bord. Au nom de l'équipage, nous sommes ravis de vous compter parmi nous aujourd'hui. Merci d'avoir choisi de voyager avec nous.</value>
+  </data>
+
+  <data name="Template_TopOfDescentPilot" xml:space="preserve">
+    <value>##Role: Pilot
+
+Mesdames et messieurs, ici le commandant de bord depuis le poste de pilotage. Nous commençons notre descente vers {IF DESTINATION_CITY}{DESTINATION_CITY}{END}. {IF DESTINATION_WEATHER}Le temps à notre destination est actuellement {DESTINATION_WEATHER}{END}{IF DESTINATION_TEMPERATURE}, avec des températures autour de {DESTINATION_TEMPERATURE}{END}. {IF SCHED_ARR_LOCAL_24H}Notre heure d'arrivée estimée est {SCHED_ARR_LOCAL_24H} heure locale.{END} {IF ARR_STATUS}{ARR_STATUS}{END} Nous sommes ravis de vous compter parmi nous aujourd'hui. Merci d'avoir choisi de voyager avec nous.</value>
   </data>
 
 </root>

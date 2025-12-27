@@ -34,7 +34,9 @@
   </data>
 
   <data name="Template_BoardingWelcomePilot" xml:space="preserve">
-    <value>Saludos desde cabina de mando, les habla el comandante. Bienvenidos a bordo. Estamos finalizando el embarque y esperamos salir en breve. Durante el vuelo les mantendré informados. Mientras tanto, pónganse cómodos y gracias por volar con nosotros hoy.</value>
+    <value>##Role: Pilot
+
+Saludos desde cabina de mando, les habla el comandante. Bienvenidos a bordo. Estamos finalizando el embarque y esperamos salir en breve. Durante el vuelo les mantendré informados. Mientras tanto, pónganse cómodos y gracias por volar con nosotros hoy.</value>
   </data>
 
   <data name="Template_CabinDimTakeoff" xml:space="preserve">
@@ -50,11 +52,15 @@
   </data>
 
   <data name="Template_CrewSeatsLanding" xml:space="preserve">
-    <value>Tripulación de cabina, por favor tomen asiento para el aterrizaje. Gracias.</value>
+    <value>##Role: Pilot
+
+Tripulación de cabina, por favor tomen asiento para el aterrizaje. Gracias.</value>
   </data>
 
   <data name="Template_CrewSeatsTakeoff" xml:space="preserve">
-    <value>Tripulación de cabina, asientos para el despegue.</value>
+    <value>##Role: Pilot
+
+Tripulación de cabina, asientos para el despegue.</value>
   </data>
 
   <data name="Template_CruiseElapsed50Percent" xml:space="preserve">
@@ -62,7 +68,9 @@
   </data>
 
   <data name="Template_DepartureDelayed" xml:space="preserve">
-    <value>Señoras y señores, información desde cabina. {IF DEP_STATUS}{DEP_STATUS}{END} {IF DEP_LATE}(actualmente {DEP_LATE} de retraso){END}. {IF SCHED_DEP_LOCAL_24H}La hora prevista de salida es {SCHED_DEP_LOCAL_24H}.{END} Les mantendremos informados e intentaremos partir lo antes posible. Gracias por su paciencia.</value>
+    <value>##Role: Pilot
+
+Señoras y señores, información desde cabina. {IF DEP_STATUS}{DEP_STATUS}{END} {IF DEP_LATE}(actualmente {DEP_LATE} de retraso){END}. {IF SCHED_DEP_LOCAL_24H}La hora prevista de salida es {SCHED_DEP_LOCAL_24H}.{END} Les mantendremos informados e intentaremos partir lo antes posible. Gracias por su paciencia.</value>
   </data>
 
   <data name="Template_DescentSeatbelts" xml:space="preserve">
@@ -87,6 +95,18 @@
 
   <data name="Template_SafetyBriefing" xml:space="preserve">
     <value>Señoras y señores, bienvenidos a bordo. Por favor, presten atención a las señales iluminadas y a las instrucciones de la tripulación, incluidas las siguientes medidas de seguridad. La tarjeta de seguridad en el bolsillo del asiento contiene información importante sobre las salidas de emergencia, las máscaras de oxígeno, los chalecos salvavidas y la posición de seguridad que deben adoptar si escuchan «brace, brace». Este avión cuenta con ocho salidas de emergencia. La tripulación les mostrará ahora las salidas más cercanas; su salida más cercana puede estar detrás de ustedes. La iluminación de emergencia les guiará hacia una salida. En caso de emergencia, dejen todo el equipaje a bordo. El cinturón se abrocha, ajusta y desabrocha como se muestra. Debe estar abrochado siempre que las señales estén encendidas y recomendamos mantenerlo abrochado en todo momento cuando estén sentados. Si falla el suministro de aire, caerán máscaras desde arriba. Tire de una máscara hacia usted para iniciar el flujo de oxígeno. Colóquela sobre la nariz y la boca y respire con normalidad. Sujétela con la cinta, ajuste tirando de ambos lados y póngase la suya antes de ayudar a otros. En caso de amerizaje, tome un chaleco de debajo de su asiento. Sáquelo de la bolsa y póngaselo por la cabeza. Pase las correas alrededor de la cintura y abróchelas. Ajuste tirando de la cinta. No infle el chaleco dentro del avión. Fuera, inflarlo tirando de la anilla. Si no se infla o necesita más aire, sople por el tubo. Hay una luz y un silbato para llamar la atención. La tripulación puede ayudar con chalecos para niños. Guarden la mesa, bajen los reposabrazos, abran las persianas y abrochen sus cinturones. Más información sobre su seguridad a bordo se encuentra en la revista de a bordo. Les deseamos un buen vuelo.</value>
+  </data>
+
+  <data name="Template_TopOfClimbPilot" xml:space="preserve">
+    <value>##Role: Pilot
+
+Señoras y señores, desde cabina de mando les habla el comandante. Hemos alcanzado nuestra altitud de crucero de {IF CRUISE_ALTITUDE_FT}{CRUISE_ALTITUDE_FT}{END} pies en nuestro {IF AIRCRAFT_NAME}{AIRCRAFT_NAME}{END}, y las condiciones al frente son favorables. {IF DESTINATION_CITY}Nos dirigimos hacia {DESTINATION_CITY}{END}{IF FLIGHT_TIME}, con un tiempo de vuelo estimado de {FLIGHT_TIME}{END}. Les mantendremos informados sobre nuestro progreso durante el vuelo. Mientras tanto, relájense y disfruten del servicio a bordo. En nombre de la tripulación, nos alegra tenerles con nosotros hoy. Gracias por volar con nosotros.</value>
+  </data>
+
+  <data name="Template_TopOfDescentPilot" xml:space="preserve">
+    <value>##Role: Pilot
+
+Señoras y señores, desde cabina de mando les habla el comandante. Estamos comenzando nuestro descenso hacia {IF DESTINATION_CITY}{DESTINATION_CITY}{END}. {IF DESTINATION_WEATHER}El tiempo en nuestro destino es actualmente {DESTINATION_WEATHER}{END}{IF DESTINATION_TEMPERATURE}, con temperaturas alrededor de {DESTINATION_TEMPERATURE}{END}. {IF SCHED_ARR_LOCAL_24H}Nuestra hora estimada de llegada es {SCHED_ARR_LOCAL_24H} hora local.{END} {IF ARR_STATUS}{ARR_STATUS}{END} Nos alegra tenerles con nosotros hoy. Gracias por volar con nosotros.</value>
   </data>
 
 </root>

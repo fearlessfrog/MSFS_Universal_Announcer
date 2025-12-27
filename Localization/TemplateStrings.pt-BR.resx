@@ -34,7 +34,9 @@
   </data>
 
   <data name="Template_BoardingWelcomePilot" xml:space="preserve">
-    <value>Saudações do cockpit, aqui é o comandante. Bem-vindos a bordo. Estamos finalizando o embarque e devemos partir em breve. Durante o voo, voltarei para atualizá-los sobre nosso progresso. Por ora, façam-se confortáveis e obrigado por voarem conosco hoje.</value>
+    <value>##Role: Pilot
+
+Saudações do cockpit, aqui é o comandante. Bem-vindos a bordo. Estamos finalizando o embarque e devemos partir em breve. Durante o voo, voltarei para atualizá-los sobre nosso progresso. Por ora, façam-se confortáveis e obrigado por voarem conosco hoje.</value>
   </data>
 
   <data name="Template_CabinDimTakeoff" xml:space="preserve">
@@ -50,11 +52,15 @@
   </data>
 
   <data name="Template_CrewSeatsLanding" xml:space="preserve">
-    <value>Tripulação de cabine, por favor, sentem-se para o pouso. Obrigado.</value>
+    <value>##Role: Pilot
+
+Tripulação de cabine, por favor, sentem-se para o pouso. Obrigado.</value>
   </data>
 
   <data name="Template_CrewSeatsTakeoff" xml:space="preserve">
-    <value>Tripulação de cabine, assentos para a decolagem.</value>
+    <value>##Role: Pilot
+
+Tripulação de cabine, assentos para a decolagem.</value>
   </data>
 
   <data name="Template_CruiseElapsed50Percent" xml:space="preserve">
@@ -62,7 +68,9 @@
   </data>
 
   <data name="Template_DepartureDelayed" xml:space="preserve">
-    <value>Senhoras e senhores, informação do cockpit. {IF DEP_STATUS}{DEP_STATUS}{END} {IF DEP_LATE}(atraso de {DEP_LATE}){END}. {IF SCHED_DEP_LOCAL_24H}O horário previsto de partida é {SCHED_DEP_LOCAL_24H}.{END} Manteremos vocês informados e faremos o possível para sair o quanto antes. Agradecemos a paciência.</value>
+    <value>##Role: Pilot
+
+Senhoras e senhores, informação do cockpit. {IF DEP_STATUS}{DEP_STATUS}{END} {IF DEP_LATE}(atraso de {DEP_LATE}){END}. {IF SCHED_DEP_LOCAL_24H}O horário previsto de partida é {SCHED_DEP_LOCAL_24H}.{END} Manteremos vocês informados e faremos o possível para sair o quanto antes. Agradecemos a paciência.</value>
   </data>
 
   <data name="Template_DescentSeatbelts" xml:space="preserve">
@@ -86,7 +94,19 @@
   </data>
 
   <data name="Template_SafetyBriefing" xml:space="preserve">
-    <value>Senhoras e senhores, sejam bem-vindos a bordo. Atentem para os avisos luminosos e as instruções da tripulação, incluindo os seguintes procedimentos de segurança. O cartão de segurança no bolso do assento contém informações importantes sobre saídas de emergência, máscaras de oxigênio, coletes salva-vidas e a posição de segurança (brace), que deve ser adotada ao ouvir “brace, brace”. Esta aeronave possui oito saídas de emergência. A tripulação apontará agora as saídas mais próximas — lembrem-se de que a sua saída mais próxima pode estar atrás de você. A iluminação de emergência o guiará até uma saída. Em caso de emergência, deixe toda a bagagem a bordo. O cinto se fecha, ajusta e solta conforme mostrado, devendo permanecer afivelado sempre que o aviso estiver aceso; recomendamos mantê-lo afivelado durante todo o tempo em que estiver sentado. Em caso de despressurização, máscaras cairão do compartimento superior. Puxe a máscara em sua direção para iniciar o fluxo de oxigênio; coloque-a sobre o nariz e a boca e respire normalmente. Ajuste a máscara com a tira, puxando de ambos os lados; coloque a sua máscara primeiro antes de auxiliar outras pessoas. Em caso de pouso na água, retire o colete salva-vidas debaixo do seu assento. Retire-o do saco e passe-o pela cabeça. Prenda a fivela na cintura e ajuste puxando a tira. Não infle o colete dentro da aeronave. Do lado de fora, infle-o puxando a alça; se necessário, assopre pelo tubo. Há uma luz e um apito para sinalização. A tripulação pode auxiliar com coletes infantis. Recolha a mesa, abaixe os apoios de braço, levante as persianas e afivele o cinto. Mais informações de segurança estão na revista de bordo. Tenham um ótimo voo.</value>
+    <value>Senhoras e senhores, sejam bem-vindos a bordo. Atentem para os avisos luminosos e as instruções da tripulação, incluindo os seguintes procedimentos de segurança. O cartão de segurança no bolso do assento contém informações importantes sobre saídas de emergência, máscaras de oxigênio, coletes salva-vidas e a posição de segurança (brace), que deve ser adotada ao ouvir "brace, brace". Esta aeronave possui oito saídas de emergência. A tripulação apontará agora as saídas mais próximas — lembrem-se de que a sua saída mais próxima pode estar atrás de você. A iluminação de emergência o guiará até uma saída. Em caso de emergência, deixe toda a bagagem a bordo. O cinto se fecha, ajusta e solta conforme mostrado, devendo permanecer afivelado sempre que o aviso estiver aceso; recomendamos mantê-lo afivelado durante todo o tempo em que estiver sentado. Em caso de despressurização, máscaras cairão do compartimento superior. Puxe a máscara em sua direção para iniciar o fluxo de oxigênio; coloque-a sobre o nariz e a boca e respire normalmente. Ajuste a máscara com a tira, puxando de ambos os lados; coloque a sua máscara primeiro antes de auxiliar outras pessoas. Em caso de pouso na água, retire o colete salva-vidas debaixo do seu assento. Retire-o do saco e passe-o pela cabeça. Prenda a fivela na cintura e ajuste puxando a tira. Não infle o colete dentro da aeronave. Do lado de fora, infle-o puxando a alça; se necessário, assopre pelo tubo. Há uma luz e um apito para sinalização. A tripulação pode auxiliar com coletes infantis. Recolha a mesa, abaixe os apoios de braço, levante as persianas e afivele o cinto. Mais informações de segurança estão na revista de bordo. Tenham um ótimo voo.</value>
+  </data>
+
+  <data name="Template_TopOfClimbPilot" xml:space="preserve">
+    <value>##Role: Pilot
+
+Senhoras e senhores, fala o comandante. Atingimos nossa altitude de cruzeiro de {IF CRUISE_ALTITUDE_FT}{CRUISE_ALTITUDE_FT}{END} pés a bordo do nosso {IF AIRCRAFT_NAME}{AIRCRAFT_NAME}{END}, e as condições à frente estão boas. {IF DESTINATION_CITY}Estamos a caminho de {DESTINATION_CITY}{END}{IF FLIGHT_TIME}, com um tempo de voo estimado de {FLIGHT_TIME}{END}. Manteremos vocês informados sobre nosso progresso durante o voo. Enquanto isso, relaxem e aproveitem o serviço de bordo. Em nome da tripulação, é um prazer tê-los conosco hoje. Obrigado por voarem conosco.</value>
+  </data>
+
+  <data name="Template_TopOfDescentPilot" xml:space="preserve">
+    <value>##Role: Pilot
+
+Senhoras e senhores, fala o comandante. Estamos iniciando nossa descida para {IF DESTINATION_CITY}{DESTINATION_CITY}{END}. {IF DESTINATION_WEATHER}O tempo em nosso destino está atualmente {DESTINATION_WEATHER}{END}{IF DESTINATION_TEMPERATURE}, com temperaturas em torno de {DESTINATION_TEMPERATURE}{END}. {IF SCHED_ARR_LOCAL_24H}Nossa hora estimada de chegada é {SCHED_ARR_LOCAL_24H} hora local.{END} {IF ARR_STATUS}{ARR_STATUS}{END} É um prazer tê-los conosco hoje. Obrigado por voarem conosco.</value>
   </data>
 
 </root>

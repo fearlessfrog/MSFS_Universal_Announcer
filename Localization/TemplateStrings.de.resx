@@ -28,7 +28,9 @@
     <value>Meine Damen und Herren, willkommen an Bord. {IF AIRLINE_NAME}Dies ist ein Flug von {AIRLINE_NAME}{END}{IF FLIGHT_NUMBER_DIGITS} mit der Flugnummer {FLIGHT_NUMBER_DIGITS}{END}{IF DESTINATION_CITY} nach {DESTINATION_CITY}{END}. Bitte verstauen Sie größere Gepäckstücke in den Gepäckfächern über Ihnen (Rollen zuerst) und kleinere Gegenstände unter dem Vordersitz. Dazu zählen Laptops, Handtaschen, Duty-free-Artikel und lose Kleidungsstücke. Wenn Sie an einem Notausgang oder in einer vorderen Reihe mit Trennwand sitzen, müssen alle Gegenstände in den Gepäckfächern verstaut werden. Nachdem Sie Ihr Handgepäck sicher verstaut haben, nehmen Sie bitte Platz. Um einen pünktlichen Abflug zu unterstützen, halten Sie bitte den Gang frei, damit alle verbleibenden Gäste zügig einsteigen können. Sie können Ihren Sicherheitsgurt nun für den Start schließen. An Bord gilt ein striktes Rauchverbot. Vielen Dank für Ihr Verständnis.</value>
   </data>
   <data name="Template_BoardingWelcomePilot" xml:space="preserve">
-    <value>Guten Tag aus dem Cockpit, hier spricht Ihr Kapitän. Willkommen an Bord. Wir beenden gerade das Boarding und erwarten in Kürze unseren Abflug. Ich melde mich im Verlauf des Fluges mit weiteren Informationen. Machen Sie es sich bis dahin bitte bequem und vielen Dank, dass Sie heute mit uns fliegen.</value>
+    <value>##Role: Pilot
+
+Guten Tag aus dem Cockpit, hier spricht Ihr Kapitän. Willkommen an Bord. Wir beenden gerade das Boarding und erwarten in Kürze unseren Abflug. Ich melde mich im Verlauf des Fluges mit weiteren Informationen. Machen Sie es sich bis dahin bitte bequem und vielen Dank, dass Sie heute mit uns fliegen.</value>
   </data>
   <data name="Template_CabinDimTakeoff" xml:space="preserve">
     <value>Meine Damen und Herren, wir werden in Kürze die Kabinenbeleuchtung dimmen. Sie können die Leselampe mit den Bedienelementen über Ihrem Sitz oder in der Armlehne einschalten.</value>
@@ -40,16 +42,22 @@
     <value>Captain, die Kabine ist für den Start gesichert.</value>
   </data>
   <data name="Template_CrewSeatsLanding" xml:space="preserve">
-    <value>Kabinenbesatzung, bitte jetzt für die Landung hinsetzen. Vielen Dank.</value>
+    <value>##Role: Pilot
+
+Kabinenbesatzung, bitte jetzt für die Landung hinsetzen. Vielen Dank.</value>
   </data>
   <data name="Template_CrewSeatsTakeoff" xml:space="preserve">
-    <value>Kabinenbesatzung, Sitze für den Start einnehmen.</value>
+    <value>##Role: Pilot
+
+Kabinenbesatzung, Sitze für den Start einnehmen.</value>
   </data>
   <data name="Template_CruiseElapsed50Percent" xml:space="preserve">
     <value>Meine Damen und Herren, hier spricht Ihr Kapitän aus dem Cockpit. Wir haben nun unsere Reiseflughöhe von {IF CRUISE_ALTITUDE_FT}{CRUISE_ALTITUDE_FT}{END} Fuß in unserer {AIRCRAFT_NAME} erreicht, und die Wetterlage vor uns ist ruhig. Wir befinden uns derzeit etwa auf halber Strecke nach {DESTINATION_CITY}, das sind ungefähr {IF ROUTE_DISTANCE_NM}{ROUTE_DISTANCE_NM}{END} Meilen von {ORIGIN_CITY}. {IF DESTINATION_TEMPERATURE}Die Temperatur in {DESTINATION_CITY} liegt bei {DESTINATION_TEMPERATURE}.{END} Wir halten Sie auf dem Laufenden, wenn wir uns dem Ziel nähern. Lehnen Sie sich bis dahin zurück und genießen Sie den Service an Bord. Im Namen der Besatzung freuen wir uns, Sie heute an Bord zu haben. Vielen Dank, dass Sie mit {AIRLINE_NAME} fliegen.</value>
   </data>
   <data name="Template_DepartureDelayed" xml:space="preserve">
-    <value>Meine Damen und Herren, eine kurze Information aus dem Cockpit. {IF DEP_STATUS}{DEP_STATUS}{END} {IF DEP_LATE}(derzeit {DEP_LATE} verspätet){END}. {IF SCHED_DEP_LOCAL_24H}Geplante Abflugzeit ist {SCHED_DEP_LOCAL_24H}.{END} Wir halten Sie auf dem Laufenden und sind bemüht, so schnell wie möglich zu starten. Vielen Dank für Ihre Geduld.</value>
+    <value>##Role: Pilot
+
+Meine Damen und Herren, eine kurze Information aus dem Cockpit. {IF DEP_STATUS}{DEP_STATUS}{END} {IF DEP_LATE}(derzeit {DEP_LATE} verspätet){END}. {IF SCHED_DEP_LOCAL_24H}Geplante Abflugzeit ist {SCHED_DEP_LOCAL_24H}.{END} Wir halten Sie auf dem Laufenden und sind bemüht, so schnell wie möglich zu starten. Vielen Dank für Ihre Geduld.</value>
   </data>
   <data name="Template_DescentSeatbelts" xml:space="preserve">
     <value>Meine Damen und Herren, wir landen in Kürze {IF DESTINATION_CITY}in {DESTINATION_CITY}{END}. {IF DESTINATION_TEMPERATURE}Die Temperatur beträgt etwa {DESTINATION_TEMPERATURE}.{END} Bitte verstauen Sie Ihr Handgepäck sicher, inklusive Laptops. Klappen Sie den Tisch ein, senken Sie die Armlehnen und öffnen Sie die Fensterblende. Setzen Sie sich jetzt bitte hin und schließen Sie Ihren Sicherheitsgurt. Helfen Sie uns, indem Sie nicht benötigte Zeitungen und Abfälle an die Crew übergeben. Die Toiletten stehen ab sofort nicht mehr zur Verfügung. Vielen Dank.</value>
@@ -67,7 +75,17 @@
     <value>Meine Damen und Herren, bitte achten Sie auf die Kabinenbesatzung in Ihrer Nähe. Wir demonstrieren gleich die Sicherheitsfunktionen unseres Flugzeugs. Vielen Dank.</value>
   </data>
   <data name="Template_SafetyBriefing" xml:space="preserve">
-    <value>Meine Damen und Herren, willkommen an Bord. Bitte beachten Sie die leuchtenden Hinweisschilder und die Anweisungen der Crew, einschließlich der folgenden Sicherheitsinformationen. Die Sicherheitskarte in Ihrer Sitztasche enthält wichtige Hinweise zu Notausgängen, Sauerstoffmasken, Schwimmwesten und der Brace-Position, die Sie bei der Anweisung „Brace, Brace“ einnehmen müssen. Dieses Flugzeug verfügt über acht Notausgänge. Die Kabinenbesatzung weist Ihnen nun die nächstgelegenen Ausgänge. Bitte beachten Sie, dass sich der nächste geeignete Ausgang auch hinter Ihnen befinden kann. Bodenmarkierungen und Beleuchtung führen Sie im Notfall zu einem Ausgang. Lassen Sie im Notfall sämtliches Gepäck zurück. Ihren Sicherheitsgurt schließen, anpassen und öffnen Sie wie gezeigt. Er muss immer geschlossen sein, wenn das Anschnallzeichen leuchtet; wir empfehlen, ihn während des gesamten Fluges geschlossen zu halten. Sollte die Luftversorgung ausfallen, fallen Masken aus der Decke. Ziehen Sie eine Maske zu sich, um den Sauerstofffluss zu starten. Setzen Sie die Maske über Mund und Nase und atmen Sie normal. Halten Sie die Maske mit dem Band fest, ziehen Sie an beiden Seiten, um sie anzupassen, und setzen Sie zuerst Ihre eigene Maske auf, bevor Sie anderen helfen. Bei einer Wasserlandung nehmen Sie eine Schwimmweste unter Ihrem Sitz hervor. Nehmen Sie sie aus der Hülle und ziehen Sie sie über den Kopf. Führen Sie die Bänder um die Taille und schließen Sie sie. Ziehen Sie am Gurt, um anzupassen. Blasen Sie die Weste nicht im Flugzeug auf. Draußen blasen Sie sie durch Ziehen an der Lasche auf. Falls erforderlich, blasen Sie über das Mundventil nach. Es gibt eine Lampe und eine Pfeife, um Aufmerksamkeit zu erregen. Die Crew hilft Ihnen bei Kinder-Schwimmwesten. Klappen Sie den Tisch ein, senken Sie die Armlehnen, öffnen Sie die Fensterblende und schließen Sie Ihren Sicherheitsgurt. Weitere Informationen zu Ihrer Sicherheit an Bord finden Sie in der Bordzeitung. Wir wünschen Ihnen einen angenehmen Flug.</value>
+    <value>Meine Damen und Herren, willkommen an Bord. Bitte beachten Sie die leuchtenden Hinweisschilder und die Anweisungen der Crew, einschließlich der folgenden Sicherheitsinformationen. Die Sicherheitskarte in Ihrer Sitztasche enthält wichtige Hinweise zu Notausgängen, Sauerstoffmasken, Schwimmwesten und der Brace-Position, die Sie bei der Anweisung „Brace, Brace" einnehmen müssen. Dieses Flugzeug verfügt über acht Notausgänge. Die Kabinenbesatzung weist Ihnen nun die nächstgelegenen Ausgänge. Bitte beachten Sie, dass sich der nächste geeignete Ausgang auch hinter Ihnen befinden kann. Bodenmarkierungen und Beleuchtung führen Sie im Notfall zu einem Ausgang. Lassen Sie im Notfall sämtliches Gepäck zurück. Ihren Sicherheitsgurt schließen, anpassen und öffnen Sie wie gezeigt. Er muss immer geschlossen sein, wenn das Anschnallzeichen leuchtet; wir empfehlen, ihn während des gesamten Fluges geschlossen zu halten. Sollte die Luftversorgung ausfallen, fallen Masken aus der Decke. Ziehen Sie eine Maske zu sich, um den Sauerstofffluss zu starten. Setzen Sie die Maske über Mund und Nase und atmen Sie normal. Halten Sie die Maske mit dem Band fest, ziehen Sie an beiden Seiten, um sie anzupassen, und setzen Sie zuerst Ihre eigene Maske auf, bevor Sie anderen helfen. Bei einer Wasserlandung nehmen Sie eine Schwimmweste unter Ihrem Sitz hervor. Nehmen Sie sie aus der Hülle und ziehen Sie sie über den Kopf. Führen Sie die Bänder um die Taille und schließen Sie sie. Ziehen Sie am Gurt, um anzupassen. Blasen Sie die Weste nicht im Flugzeug auf. Draußen blasen Sie sie durch Ziehen an der Lasche auf. Falls erforderlich, blasen Sie über das Mundventil nach. Es gibt eine Lampe und eine Pfeife, um Aufmerksamkeit zu erregen. Die Crew hilft Ihnen bei Kinder-Schwimmwesten. Klappen Sie den Tisch ein, senken Sie die Armlehnen, öffnen Sie die Fensterblende und schließen Sie Ihren Sicherheitsgurt. Weitere Informationen zu Ihrer Sicherheit an Bord finden Sie in der Bordzeitung. Wir wünschen Ihnen einen angenehmen Flug.</value>
+  </data>
+  <data name="Template_TopOfClimbPilot" xml:space="preserve">
+    <value>##Role: Pilot
+
+Meine Damen und Herren, hier spricht Ihr Kapitän aus dem Cockpit. Wir haben nun unsere Reiseflughöhe von {IF CRUISE_ALTITUDE_FT}{CRUISE_ALTITUDE_FT}{END} Fuß in unserer {IF AIRCRAFT_NAME}{AIRCRAFT_NAME}{END} erreicht, und die Wetterlage vor uns ist ruhig. {IF DESTINATION_CITY}Wir sind auf dem Weg nach {DESTINATION_CITY}{END}{IF FLIGHT_TIME}, mit einer geschätzten Flugzeit von {FLIGHT_TIME}{END}. Wir halten Sie während des Fluges über unseren Fortschritt auf dem Laufenden. Lehnen Sie sich bis dahin zurück, entspannen Sie sich und genießen Sie den Service an Bord. Im Namen der Besatzung freuen wir uns, Sie heute an Bord zu haben. Vielen Dank, dass Sie mit uns fliegen.</value>
+  </data>
+  <data name="Template_TopOfDescentPilot" xml:space="preserve">
+    <value>##Role: Pilot
+
+Meine Damen und Herren, hier spricht Ihr Kapitän aus dem Cockpit. Wir beginnen nun unseren Sinkflug nach {IF DESTINATION_CITY}{DESTINATION_CITY}{END}. {IF DESTINATION_WEATHER}Das Wetter an unserem Zielort ist derzeit {DESTINATION_WEATHER}{END}{IF DESTINATION_TEMPERATURE}, mit Temperaturen um {DESTINATION_TEMPERATURE}{END}. {IF SCHED_ARR_LOCAL_24H}Unsere geschätzte Ankunftszeit ist {SCHED_ARR_LOCAL_24H} Ortszeit.{END} {IF ARR_STATUS}{ARR_STATUS}{END} Wir freuen uns, Sie heute an Bord zu haben. Vielen Dank, dass Sie mit uns fliegen.</value>
   </data>
 </root>
 

@@ -102,7 +102,8 @@
   <data name="Tweaks_UseBoardingMusicFallback" xml:space="preserve"><value>Utiliser BoardingMusic si AfterLandingMusic est manquant</value></data>
   <data name="Tweaks_SkipFirstBoardingWelcome" xml:space="preserve"><value>Ignorer le premier BoardingWelcome</value></data>
   <data name="Tweaks_DepartureDelayThreshold" xml:space="preserve"><value>Seuil de retard au départ (min) :</value></data>
-  <data name="Tweaks_AfterLandingDelay" xml:space="preserve"><value>Délai après atterrissage (min) :</value></data>
+  <data name="Tweaks_AfterLandingDelay" xml:space="preserve"><value>Délai après atterrissage (min) :</value></data>
+  <data name="Tweaks_ArmDoorsAfterBoardingComplete" xml:space="preserve"><value>Fermer les portes après l'embarquement automatiquement (30 secondes)</value></data>
   <data name="Tweaks_EnablePmdgSdk" xml:space="preserve"><value>Activer les données PMDG SDK (MSFS24 777X)</value></data>
   <data name="Tweaks_PmdgHowToLink" xml:space="preserve"><value>Comment activer les données PMDG SDK</value></data>
 
@@ -410,6 +411,9 @@ Pour ouvrir les paramètres ou contrôler l’application :
   <data name="Generated_GenerateAs" xml:space="preserve"><value>Générer sous..</value></data>
   <data name="Generated_HelpSetup" xml:space="preserve"><value>Aide &amp; Configuration (à lire d’abord)</value></data>
   <data name="Generated_InsertVoice" xml:space="preserve"><value>Insérer la voix</value></data>
+  <data name="Generated_Roles" xml:space="preserve"><value>Rôles</value></data>
+  <data name="Roles_Airline" xml:space="preserve"><value>Compagnie aérienne :</value></data>
+  <data name="Roles_SaveRoles" xml:space="preserve"><value>Enregistrer les rôles</value></data>
   <data name="Generated_OnlyDynamic" xml:space="preserve"><value>Régénérer seulement si dynamique</value></data>
   <data name="Generated_ProviderLabel" xml:space="preserve"><value>Fournisseur :</value></data>
   <data name="Generated_ReplaceExistingOgg" xml:space="preserve"><value>Remplacer .ogg (si txt Compagnie)</value></data>
@@ -459,10 +463,12 @@ Pour ouvrir les paramètres ou contrôler l’application :
   <data name="Wait_DepartureDelayed" xml:space="preserve"><value>Seuil de retard au départ</value></data>
   <data name="PlayNext_CruiseElapsedFormat" xml:space="preserve"><value>Croisière {0}%</value></data>
 
-  <!-- Update prompt (fallback English) -->
-  <data name="Update_PromptTitle" xml:space="preserve"><value>Universal Announcer Update</value></data>
-  <data name="Update_PromptMessage_Format" xml:space="preserve"><value>New version available.
-Current: {0}  New: {1}
-
-Update now?</value></data>
+  <!-- Update prompt -->
+  <data name="Update_PromptTitle" xml:space="preserve"><value>Mise à jour Universal Announcer</value></data>
+  <data name="Update_PromptHeading" xml:space="preserve"><value>Une nouvelle version est disponible !</value></data>
+  <data name="Update_PromptMessage_Format" xml:space="preserve"><value>Version actuelle : {0}
+Nouvelle version : {1}</value></data>
+  <data name="Update_ButtonUpdate" xml:space="preserve"><value>Mettre à jour</value></data>
+  <data name="Update_ButtonNotNow" xml:space="preserve"><value>Pas maintenant</value></data>
+  <data name="Update_ButtonReleaseNotes" xml:space="preserve"><value>Notes de version</value></data>
 </root>

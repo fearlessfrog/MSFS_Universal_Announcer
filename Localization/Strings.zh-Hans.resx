@@ -161,6 +161,7 @@
   <data name="Tweaks_SkipFirstBoardingWelcome" xml:space="preserve"><value>跳过首次登机欢迎</value></data>
   <data name="Tweaks_DepartureDelayThreshold" xml:space="preserve"><value>起飞延误阈值（分钟）：</value></data>
   <data name="Tweaks_AfterLandingDelay" xml:space="preserve"><value>落地后延迟（分钟）：</value></data>
+  <data name="Tweaks_ArmDoorsAfterBoardingComplete" xml:space="preserve"><value>登机完成后自动关闭舱门（30秒）</value></data>
   <data name="Tweaks_EnablePmdgSdk" xml:space="preserve"><value>启用 PMDG SDK 数据（MSFS24 777X）</value></data>
   <data name="Tweaks_PmdgHowToLink" xml:space="preserve"><value>如何启用 PMDG SDK 数据</value></data>
 
@@ -219,6 +220,9 @@
   <data name="Generated_AirlineLabel" xml:space="preserve"><value>航司：</value></data>
   <data name="Generated_InsertVoice" xml:space="preserve"><value>插入语音</value></data>
   <data name="Generated_TestVoice" xml:space="preserve"><value>测试语音</value></data>
+  <data name="Generated_Roles" xml:space="preserve"><value>角色</value></data>
+  <data name="Roles_Airline" xml:space="preserve"><value>航空公司:</value></data>
+  <data name="Roles_SaveRoles" xml:space="preserve"><value>保存角色</value></data>
   <data name="Audio_AssumeQuickViewsAsCabin_Tooltip" xml:space="preserve"><value>启用且相机为 Cockpit（2）且子状态为 Quickview（3）时，将其视为客舱音量。</value></data>
   <data name="Generated_VoiceLabel" xml:space="preserve"><value>语音：</value></data>
   <data name="Generated_AzureApiKey" xml:space="preserve"><value>Azure API 密钥：</value></data>
@@ -415,11 +419,13 @@
   <data name="Wait_DepartureDelayed" xml:space="preserve"><value>起飞延误阈值</value></data>
   <data name="PlayNext_CruiseElapsedFormat" xml:space="preserve"><value>巡航 {0}%</value></data>
 
-  <!-- Update prompt (fallback English) -->
-  <data name="Update_PromptTitle" xml:space="preserve"><value>Universal Announcer Update</value></data>
-  <data name="Update_PromptMessage_Format" xml:space="preserve"><value>New version available.
-Current: {0}  New: {1}
-
-Update now?</value></data>
+  <!-- Update prompt -->
+  <data name="Update_PromptTitle" xml:space="preserve"><value>Universal Announcer 更新</value></data>
+  <data name="Update_PromptHeading" xml:space="preserve"><value>有新版本可用！</value></data>
+  <data name="Update_PromptMessage_Format" xml:space="preserve"><value>当前版本: {0}
+新版本: {1}</value></data>
+  <data name="Update_ButtonUpdate" xml:space="preserve"><value>立即更新</value></data>
+  <data name="Update_ButtonNotNow" xml:space="preserve"><value>稍后</value></data>
+  <data name="Update_ButtonReleaseNotes" xml:space="preserve"><value>版本说明</value></data>
 </root>
 

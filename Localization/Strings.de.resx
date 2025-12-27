@@ -111,6 +111,7 @@
   <data name="Tweaks_SkipFirstBoardingWelcome" xml:space="preserve"><value>Erste BoardingWelcome überspringen</value></data>
   <data name="Tweaks_DepartureDelayThreshold" xml:space="preserve"><value>Verspätungsschwelle beim Abflug (Min.):</value></data>
   <data name="Tweaks_AfterLandingDelay" xml:space="preserve"><value>Verzögerung nach der Landung (Min.):</value></data>
+  <data name="Tweaks_ArmDoorsAfterBoardingComplete" xml:space="preserve"><value>Türen nach Abschluss des Boardings automatisch schließen (30 Sekunden)</value></data>
   <data name="Tweaks_EnablePmdgSdk" xml:space="preserve"><value>PMDG SDK-Daten aktivieren (MSFS24 777X)</value></data>
   <data name="Tweaks_PmdgHowToLink" xml:space="preserve"><value>Wie PMDG SDK-Daten aktivieren</value></data>
   <data name="Tweaks_PmdgSdk_Tooltip" xml:space="preserve"><value>PMDG-Clientdaten für die 777 in MSFS 2024 verwenden. Erfordert EnableDataBroadcast=1 in 777_Options.ini.</value></data>
@@ -177,6 +178,9 @@
   <data name="Generated_AirlineLabel" xml:space="preserve"><value>Airline:</value></data>
   <data name="Generated_InsertVoice" xml:space="preserve"><value>Stimme einfügen</value></data>
   <data name="Generated_TestVoice" xml:space="preserve"><value>Stimme testen</value></data>
+  <data name="Generated_Roles" xml:space="preserve"><value>Rollen</value></data>
+  <data name="Roles_Airline" xml:space="preserve"><value>Fluggesellschaft:</value></data>
+  <data name="Roles_SaveRoles" xml:space="preserve"><value>Rollen speichern</value></data>
   <data name="Generated_VoiceLabel" xml:space="preserve"><value>Stimme:</value></data>
   <data name="Generated_AzureApiKey" xml:space="preserve"><value>Azure API-Schlüssel:</value></data>
   <data name="Generated_AzureRegion" xml:space="preserve"><value>Azure-Region:</value></data>
@@ -417,12 +421,14 @@ Ein kurzer Download beginnt.</value></data>
   <data name="Wait_DepartureDelayed" xml:space="preserve"><value>Verspätungsschwelle beim Abflug</value></data>
   <data name="PlayNext_CruiseElapsedFormat" xml:space="preserve"><value>Reiseflug {0}%</value></data>
 
-  <!-- Update prompt (fallback English) -->
+  <!-- Update prompt -->
   <data name="Update_PromptTitle" xml:space="preserve"><value>Universal Announcer Update</value></data>
-  <data name="Update_PromptMessage_Format" xml:space="preserve"><value>New version available.
-Current: {0}  New: {1}
-
-Update now?</value></data>
+  <data name="Update_PromptHeading" xml:space="preserve"><value>Eine neue Version ist verfügbar!</value></data>
+  <data name="Update_PromptMessage_Format" xml:space="preserve"><value>Aktuelle Version: {0}
+Neue Version: {1}</value></data>
+  <data name="Update_ButtonUpdate" xml:space="preserve"><value>Jetzt aktualisieren</value></data>
+  <data name="Update_ButtonNotNow" xml:space="preserve"><value>Nicht jetzt</value></data>
+  <data name="Update_ButtonReleaseNotes" xml:space="preserve"><value>Versionshinweise</value></data>
   <!-- Missing keys added -->
   <data name="Tray_CheckForUpdates" xml:space="preserve"><value>Nach Updates suchen…</value></data>
   <data name="Tweaks_EnableMsfsToolbar" xml:space="preserve"><value>MSFS-Toolbar-Link aktivieren (experimentell)</value></data>

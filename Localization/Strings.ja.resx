@@ -226,6 +226,9 @@
   <data name="Generated_GenerateAs" xml:space="preserve"><value>別名で生成..</value></data>
   <data name="Generated_HelpSetup" xml:space="preserve"><value>ヘルプ &amp; セットアップ (最初に読む)</value></data>
   <data name="Generated_InsertVoice" xml:space="preserve"><value>音声を挿入</value></data>
+  <data name="Generated_Roles" xml:space="preserve"><value>役割</value></data>
+  <data name="Roles_Airline" xml:space="preserve"><value>航空会社:</value></data>
+  <data name="Roles_SaveRoles" xml:space="preserve"><value>役割を保存</value></data>
   <data name="Generated_OnlyDynamic" xml:space="preserve"><value>動的な場合のみ再生成</value></data>
   <data name="Generated_ProviderLabel" xml:space="preserve"><value>プロバイダー:</value></data>
   <data name="Generated_ReplaceExistingOgg" xml:space="preserve"><value>.ogg を置換（航空会社 txt 時）</value></data>
@@ -425,6 +428,7 @@
   <data name="Tweaks_CrewSeatsLanding" xml:space="preserve"><value>AGL 高度 —「着陸で着席」:</value></data>
   <data name="Tweaks_DepartureDelayThreshold" xml:space="preserve"><value>出発遅延しきい値 (分):</value></data>
   <data name="Tweaks_AfterLandingDelay" xml:space="preserve"><value>着陸後の遅延 (分):</value></data>
+  <data name="Tweaks_ArmDoorsAfterBoardingComplete" xml:space="preserve"><value>搭乗完了後に自動的にドアを閉める (30秒)</value></data>
   <data name="Tweaks_EnablePmdgSdk" xml:space="preserve"><value>PMDG SDK データを有効化 (MSFS24 777X)</value></data>
   <data name="Tweaks_PmdgHowToLink" xml:space="preserve"><value>PMDG SDK データの有効化方法</value></data>
   <data name="Tweaks_DescentAltitude" xml:space="preserve"><value>降下検出の AGL 高度 (ft):</value></data>
@@ -467,10 +471,12 @@
   <data name="Wait_DepartureDelayed" xml:space="preserve"><value>出発遅延しきい値</value></data>
   <data name="PlayNext_CruiseElapsedFormat" xml:space="preserve"><value>巡航 {0}%</value></data>
 
-  <!-- Update prompt (fallback English) -->
-  <data name="Update_PromptTitle" xml:space="preserve"><value>Universal Announcer Update</value></data>
-  <data name="Update_PromptMessage_Format" xml:space="preserve"><value>New version available.
-Current: {0}  New: {1}
-
-Update now?</value></data>
+  <!-- Update prompt -->
+  <data name="Update_PromptTitle" xml:space="preserve"><value>Universal Announcer アップデート</value></data>
+  <data name="Update_PromptHeading" xml:space="preserve"><value>新しいバージョンが利用可能です！</value></data>
+  <data name="Update_PromptMessage_Format" xml:space="preserve"><value>現在のバージョン: {0}
+新しいバージョン: {1}</value></data>
+  <data name="Update_ButtonUpdate" xml:space="preserve"><value>今すぐ更新</value></data>
+  <data name="Update_ButtonNotNow" xml:space="preserve"><value>後で</value></data>
+  <data name="Update_ButtonReleaseNotes" xml:space="preserve"><value>リリースノート</value></data>
 </root>

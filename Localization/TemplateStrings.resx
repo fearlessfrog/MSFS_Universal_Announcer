@@ -28,7 +28,9 @@
     <value>Ladies and gentlemen, welcome on board. {IF AIRLINE_NAME}This is a {AIRLINE_NAME}{END}{IF FLIGHT_NUMBER_DIGITS} flight {FLIGHT_NUMBER_DIGITS}{END}{IF DESTINATION_CITY} to {DESTINATION_CITY}{END}. To help us ensure an on-time departure, please keep the aisle clear while boarding. {IF SCHED_DEP_LOCAL_24H}Our scheduled departure is {SCHED_DEP_LOCAL_24H}.{END} {IF FLIGHT_TIME}Flying time today is {FLIGHT_TIME}.{END} Please place your large bags into the overhead lockers, wheels first, and keep your small items under the seat in front of you. If you are seated in an emergency exit row or a front row bulkhead seat, all of your items must be placed into an overhead locker. Once you have safely stowed your cabin bag, please take your seat and fasten your seatbelt. This is a no smoking service. Thank you for observing this policy.</value>
   </data>
   <data name="Template_BoardingWelcomePilot" xml:space="preserve">
-    <value>Hello from the flight deck, this is your captain speaking. Welcome aboard. We're just finishing up boarding and expect to be on our way shortly. I'll be back to update you on our progress during the flight, but in the mean time please make yourselves comfortable, and thanks for flying with us today.</value>
+    <value>##Role: Pilot
+
+Hello from the flight deck, this is your captain speaking. Welcome aboard. We're just finishing up boarding and expect to be on our way shortly. I'll be back to update you on our progress during the flight, but in the mean time please make yourselves comfortable, and thanks for flying with us today.</value>
   </data>
   <data name="Template_CabinDimTakeoff" xml:space="preserve">
     <value>Ladies and gentlemen, we will shortly be dimming the lights. You can turn on a reading light using the controls above your head or in your armrest.</value>
@@ -40,16 +42,22 @@
     <value>Hi Captain, the cabin is now secure for takeoff.</value>
   </data>
   <data name="Template_CrewSeatsLanding" xml:space="preserve">
-    <value>Cabin crew must now be seated for landing. Thank you.</value>
+    <value>##Role: Pilot
+
+Cabin crew must now be seated for landing. Thank you.</value>
   </data>
   <data name="Template_CrewSeatsTakeoff" xml:space="preserve">
-    <value>Cabin crew seats for takeoff.</value>
+    <value>##Role: Pilot
+
+Cabin crew seats for takeoff.</value>
   </data>
   <data name="Template_CruiseElapsed50Percent" xml:space="preserve">
     <value>Ladies and gentlemen, from the flight deck this is your captain speaking. We’ve now reached our cruising altitude of {IF CRUISE_ALTITUDE_FT}{CRUISE_ALTITUDE_FT}{END} feet in our {IF AIRCRAFT_NAME}{AIRCRAFT_NAME}{END}, and things are looking smooth up ahead. At this time, we're about halfway through our route to {IF DESTINATION_CITY}{DESTINATION_CITY}{END}, and that's about {IF ROUTE_DISTANCE_NM}{ROUTE_DISTANCE_NM}{END} miles from {IF ORIGIN_CITY}{ORIGIN_CITY}{END}. The weather at {IF DESTINATION_CITY}{DESTINATION_CITY}{END} is currently {IF DESTINATION_WEATHER}{DESTINATION_WEATHER}{END}{IF DESTINATION_TEMPERATURE} with {DESTINATION_TEMPERATURE}{END}. {IF SCHED_ARR_LOCAL_24H}Estimated arrival local time {SCHED_ARR_LOCAL_24H}.{END} We'll keep you informed as we get closer. In the meantime, sit back, relax, and enjoy the service on board. On behalf of the crew, we’re glad to have you with us today. Thank you for flying with us.</value>
   </data>
   <data name="Template_DepartureDelayed" xml:space="preserve">
-    <value>Ladies and gentlemen, an update from the flight deck. {IF DEP_STATUS}{DEP_STATUS}{END} {IF DEP_LATE}(currently {DEP_LATE} behind schedule){END}. {IF SCHED_DEP_LOCAL_24H}Our scheduled departure time is {SCHED_DEP_LOCAL_24H}.{END} We’ll keep you updated and aim to get underway as soon as possible. Thank you for your patience.</value>
+    <value>##Role: Pilot
+
+Ladies and gentlemen, an update from the flight deck. {IF DEP_STATUS}{DEP_STATUS}{END} {IF DEP_LATE}(currently {DEP_LATE} behind schedule){END}. {IF SCHED_DEP_LOCAL_24H}Our scheduled departure time is {SCHED_DEP_LOCAL_24H}.{END} We'll keep you updated and aim to get underway as soon as possible. Thank you for your patience.</value>
   </data>
   <data name="Template_DescentSeatbelts" xml:space="preserve">
     <value>Ladies and gentlemen, we will shortly be landing {IF DESTINATION_CITY}in {DESTINATION_CITY}{END}. {IF DESTINATION_WEATHER}Current conditions are {DESTINATION_WEATHER}{END}{IF DESTINATION_TEMPERATURE}, around {DESTINATION_TEMPERATURE}{END}. Please ensure your cabin bag is safely stowed with your laptop inside. Your tray table must be stowed, armrests down and window blinds open. You now need to be seated with your seatbelt fastened ready for landing. Please help us by handing in any rubbish, newspapers or magazines that you do not want to keep. The toilets are no longer in service. Thank you.</value>
@@ -68,5 +76,15 @@
   </data>
   <data name="Template_SafetyBriefing" xml:space="preserve">
     <value>Ladies and gentlemen, welcome aboard. Please pay attention to illuminated signs and crew instructions, including the following safety procedures. The safety card found in your seat pocket contains important information about exit locations, oxygen masks, life jackets, and the brace position. There are emergency exits located at the front, over the wings, and at the rear. Please locate your nearest exit; it may be behind you. Emergency lighting will guide you to an exit{IF AIRCRAFT_NAME} on this {AIRCRAFT_NAME}{END}. In an emergency, leave all baggage on board. Your seatbelt fastens, adjusts, and releases as shown. It must be fastened whenever the seatbelt signs are on, and we recommend that you keep it fastened at all times. If the air supply fails, masks will drop from above you. Pull a mask towards you to start the oxygen. Put the mask over your nose and mouth and breathe normally. Hold the mask in place with the strap, pull on each side to adjust, and put on your own mask before helping others. If we land on water, take a life jacket from under your seat. Remove it from the pouch and put it over your head. Pass the tapes around your waist and click together. Pull the strap to adjust. Do not inflate the life jacket inside the aircraft. When outside, inflate it by pulling the toggle. If it fails to inflate or needs topping up, blow into the tube. There is a light and whistle for attracting attention. The cabin crew can assist you with life jackets for children. Your tray table must now be stowed, armrests down, window blinds open, and seatbelt fastened. We hope you have a great flight.</value>
+  </data>
+  <data name="Template_TopOfClimbPilot" xml:space="preserve">
+    <value>##Role: Pilot
+
+Ladies and gentlemen, from the flight deck this is your captain speaking. We've now reached our cruising altitude of {IF CRUISE_ALTITUDE_FT}{CRUISE_ALTITUDE_FT}{END} feet in our {IF AIRCRAFT_NAME}{AIRCRAFT_NAME}{END}, and things are looking good up ahead. {IF DESTINATION_CITY}We're on our way to {DESTINATION_CITY}{END}{IF FLIGHT_TIME}, with an estimated flight time of {FLIGHT_TIME}{END}. We'll keep you updated on our progress throughout the flight. In the meantime, sit back, relax, and enjoy the service on board. On behalf of the crew, we're glad to have you with us today. Thank you for flying with us.</value>
+  </data>
+  <data name="Template_TopOfDescentPilot" xml:space="preserve">
+    <value>##Role: Pilot
+
+Ladies and gentlemen, from the flight deck this is your captain speaking. We're beginning our descent into {IF DESTINATION_CITY}{DESTINATION_CITY}{END}. {IF DESTINATION_WEATHER}The weather at our destination is currently {DESTINATION_WEATHER}{END}{IF DESTINATION_TEMPERATURE}, with temperatures around {DESTINATION_TEMPERATURE}{END}. {IF SCHED_ARR_LOCAL_24H}Our estimated arrival time is {SCHED_ARR_LOCAL_24H} local time.{END} {IF ARR_STATUS}{ARR_STATUS}{END} We're glad to have you with us today. Thank you for flying with us.</value>
   </data>
 </root>
