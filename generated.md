@@ -248,6 +248,27 @@ Roles provide a structured way to assign voices, while voice hints (`##Voice:`) 
 - Roles are ideal for consistent Pilot/FA voice assignments across multiple templates
 - Voice hints are useful for one-off customizations or when you need a specific voice for a particular announcement
 
+## Auto Roles
+
+The Auto Roles feature automatically selects appropriate Pilot and Flight Attendant voices based on the airline's home country, eliminating the need to manually configure roles for each airline.
+
+### How Auto Roles Works
+
+When **'Auto pick Roles based on Airline Country'** is enabled in the Generated tab, the system:
+1. Identifies the current airline (from SimBrief or as overridden in the Status tab)
+2. Determines the airline's home country (local lookup see `Tools\airlines_full.json` in your install folder)
+3. Automatically selects appropriate voices matching that country's language/locale e.g. the voice name.
+4. Picks male and female voices at random, with a bias toward the country's industry average
+
+**Examples:**
+- **BAW (British Airways)**: Automatically selects `en-GB` voices (e.g., British English)
+- **AFR (Air France)**: Automatically selects `fr-FR` voices (e.g., French)
+- **LUF (Lufthansa)**: Automatically selects `de-DE` voices (e.g., German)
+
+This feature works seamlessly with the Roles system - if Auto Roles is enabled, it will automatically populate the role assignments based on the airline's country. You can still manually override these selections if desired.
+
+**Note**: Auto Roles requires the airline to be identified (via SimBrief or manual override) and a matching voice to be available for that country/locale in your selected TTS provider. You enabled this feature in the Generated tab.
+
 ## 'Replace existing .ogg' Automatic Generated Mode
 
 When generating announcements, you can allow the app to automatically overwrite existing `.ogg` files.
