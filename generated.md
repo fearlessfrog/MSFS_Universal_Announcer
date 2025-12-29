@@ -267,7 +267,7 @@ When **'Auto pick Roles based on Airline Country'** is enabled in the Generated 
 
 This feature works seamlessly with the Roles system - if Auto Roles is enabled, it will automatically populate the role assignments based on the airline's country. You can still manually override these selections if desired.
 
-**Note**: Auto Roles requires the airline to be identified (via SimBrief or manual override) and a matching voice to be available for that country/locale in your selected TTS provider. You enabled this feature in the Generated tab.
+**Note**: Auto Roles requires the airline to be identified (via SimBrief or manual override) and a matching voice to be available for that country/locale in your selected TTS provider. You enable this feature in the Generated tab as disabled by default.
 
 ## 'Replace existing .ogg' Automatic Generated Mode
 
