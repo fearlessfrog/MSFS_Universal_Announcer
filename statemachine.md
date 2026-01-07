@@ -56,6 +56,37 @@ The system supports various tagging options using square brackets in filenames:
 
 The system uses the `ATC MODEL` simvar (e.g., "737", "A320") for enhanced aircraft detection. If this simvar is not available, it falls back to parsing the aircraft title from the `TITLE` simvar.
 
+### Aircraft Family Tags
+
+Announcement pack makers often use tags to match the specific aircraft type. To simplify this, the system supports 'aircraft families' that group similar ICAO types. The more specific tag will always 'win' and play first, but families provide a convenient fallback.
+
+| Family Shortcut | ICAO Aircraft Types                                                          |
+| --------------- | ---------------------------------------------------------------------------- |
+| **737**         | B731, B732, B733, B734, B735, B736, B737, B738, B739, B37M, B38M, B39M, B3XM |
+| **747**         | B741, B742, B743, B744, B748, B74S                                           |
+| **757**         | B752, B753                                                                   |
+| **767**         | B762, B763, B764                                                             |
+| **777**         | B772, B773, B77L, B77W, B778, B779                                           |
+| **787**         | B788, B789, B78X                                                             |
+| **320**         | A318, A319, A320, A321, A19N, A20N, A21N                                     |
+| **330**         | A332, A333, A338, A339                                                       |
+| **340**         | A342, A343, A345, A346                                                       |
+| **350**         | A359, A35K                                                                   |
+| **380**         | A388                                                                         |
+| **A220**        | BCS1, BCS3                                                                   |
+| **MD80**        | MD81, MD82, MD83, MD87, MD88                                                 |
+| **DC9**         | DC9, DC91, DC92, DC93, DC94, DC95                                            |
+| **CRJ**         | CRJ1, CRJ2, CRJ7, CRJ9, CRJX                                                 |
+| **ERJ**         | E135, E140, E145                                                             |
+| **EJET**        | E170, E175, E190, E195                                                       |
+| **146**         | B461, B462, B463, ARJ1, ARJ7, ARJ8                                           |
+| **ATR**         | AT42, AT43, AT44, AT45, AT46, AT72, AT73, AT75, AT76                         |
+| **DH8**         | DH8A, DH8B, DH8C, DH8D                                                       |
+| **F100**        | F70, F100                                                                    |
+| **Citation**    | C25A, C25B, C510, C525, C560, C56X, C650, C680, C700, C750                   |
+
+Example: If you are flying the A35K, `BoardingWelcome[350].ogg` will be selected if a specific `[A35K]` file is not found.
+
 ### Time-Based Tags
 - `BoardingWelcome[Morning].ogg` - For morning flights (6 AM - 12 PM)
 - `BoardingWelcome[Afternoon].ogg` - For afternoon flights (12 PM - 6 PM)
@@ -90,13 +121,17 @@ The system uses the `ATC MODEL` simvar (e.g., "737", "A320") for enhanced aircra
 ### Arrival and Departure Tags ([ARR] and [DEP])
 - You can explicitly specify whether an ICAO code refers to the departure or arrival airport using `[ARR]` or `[DEP]` tags.
 - This allows you to use arrival-specific announcements during departure phases, or vice versa.
-  - Examples:
-    - `BoardingWelcome[CYVR][ARR].ogg` → plays when CYVR is your destination, even though BoardingWelcome normally uses origin tags
-    - `BoardingWelcome[KSEA][ARR].ogg` → plays when KSEA is your destination (e.g., "This is our flight to Seattle, hello")
-    - `AfterLanding[KSEA].ogg` → automatically uses destination context (no tag needed)
-    - `AfterLanding[KSEA][ARR].ogg` → explicitly marks as arrival context (same behavior as above)
-  - When `[ARR]` or `[DEP]` is specified, it overrides the automatic origin/destination detection for that file
-  - Useful when you want announcements that mention the destination airport during boarding, or departure airport during arrival
+- **Multiple ICAOs**: You can include multiple ICAO airports in one tag. For example, `BoardingWelcome[ARR][CYVR][CYXX][CYYX].ogg` will match if any of those are your planned arrival airport.
+- **Wildcards**: You can use wildcards for broader matching. Note that you must use four characters total.
+  - `BoardingWelcome[ARR][CY**].ogg` matches most airports in Canada.
+  - `BoardingWelcome[ARR][K***].ogg` matches all USA airports.
+- **Examples**:
+  - `BoardingWelcome[CYVR][ARR].ogg` → plays when CYVR is your destination, even though BoardingWelcome normally uses origin tags.
+  - `BoardingWelcome[KSEA][ARR].ogg` → plays when KSEA is your destination (e.g., "This is our flight to Seattle, hello").
+  - `AfterLanding[KSEA].ogg` → automatically uses destination context (no tag needed).
+  - `AfterLanding[KSEA][ARR].ogg` → explicitly marks as arrival context (same behavior as above).
+- When `[ARR]` or `[DEP]` is specified, it overrides the automatic origin/destination detection for that file.
+- Useful when you want announcements that mention the destination airport during boarding, or departure airport during arrival.
 
 ### Numbered Variants
 You can create multiple versions of the same announcement:
@@ -250,12 +285,19 @@ Right-click the system tray icon → **Flight State** submenu
 
 The system can automatically play cabin reaction sounds based on landing quality. This feature monitors landing parameters (vertical speed and G-force) and plays appropriate sounds:
 
-- **Great Landings**: Smooth landings (≤200 fpm vertical speed, ≤1.2g) trigger applause sounds
-- **Terrible Landings**: Hard landings (≥700 fpm vertical speed or ≥1.5g) trigger reaction sounds
+- **Great Landings**: Smooth, well-executed landings trigger applause sounds.
+- **Terrible Landings**: Hard or rough landings trigger reaction sounds.
+
+**Scoring and Customization:**
+- The thresholds for what constitutes a "great" or "terrible" landing can be adjusted in **Settings → Tweaks**.
+- After landing, your landing "score" (vertical speed in fpm and G-force at touchdown) is displayed in the **Settings → Status** tab ("Waiting for:") and in the MSFS Toolbar UI.
+- Default thresholds (for reference):
+  - **Great**: ≤200 fpm vertical speed AND ≤1.2g.
+  - **Terrible**: ≥700 fpm vertical speed OR ≥1.5g.
 
 **Supported Sound Files:**
-- `LandingGreat.ogg` - Played for smooth, well-executed landings
-- `LandingTerrible.ogg` - Played for hard or rough landings
+- `LandingGreat.ogg`
+- `LandingTerrible.ogg`
 
 These files support the same tagging system as other announcements:
 - Aircraft-specific: `LandingGreat[A320].ogg`, `LandingTerrible[737].ogg`
@@ -265,4 +307,4 @@ These files support the same tagging system as other announcements:
 
 Files are searched in airline-specific folders first, then the Default folder. If no custom file is found, embedded default sounds are used.
 
-**Note**: This feature can be enabled/disabled in Settings → Tweaks tab.
+**Note**: This feature is **disabled by default** and must be enabled in **Settings → Tweaks**.

@@ -1,7 +1,5 @@
 # Future Feature Ideas
 
-- Some sort of Aircraft 'family' hierarchy for files e.g. [737] for [B737] [B738] etc so less tags needed in sound file combos.
-
 - ArmDoors tweak option to play after BoardingComplete automatically rather than trigger
 
 - Be able to set voice Roles, e.g. ##Role: pilot FA groundcrew and set voices to them, have a dialog for that with Edge defaults.

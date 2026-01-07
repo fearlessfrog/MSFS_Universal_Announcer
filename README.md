@@ -15,11 +15,12 @@ You do not need the Fenix A320 for this to work (although you should have it, it
 - Cruise Announcements: Trigger announcements during cruise by elapsed flight time (e.g., 25%, 50%, 70%). Enable in the Announcements tab.
 - Per‑Announcement Voices: Choose different voices per announcement (e.g., pilot vs attendant) in templates.
 - Default Sound Pack: One‑click setup downloads a public‑domain starter pack (or use your Fenix files).
-- Aircraft Type Variants: Plays different announcements for A319, A320, A321, 737, etc.
+- Aircraft Type & Family Variants: Plays different announcements for specific types (A320, 738) or broader families (320, 737).
 - Time-Based Variants: Morning, afternoon, evening, and night announcements
 - System Tray Integration: Minimal interface with volume control and flight state override
 - Navigraph simbrief integration: Uses your last plan's Airline and Aircraft type (ICAO code is used).
 - GSX Pro integration: Uses the Boarding, Deboarding and Refueling states automatically.
+- Landing Quality Detection: Plays cabin reactions (applause/groans) based on vertical speed and G-force at touchdown.
 - Sound volume based on camera.
 - Basic Seat Belt support (WIP). If your add-on doesn't give out data for Selt Belt switches (most don't) you can use the MSFS control binding for 'AnnunciatorOn' (and same key/control for 'Annunciator Off' to trigger it.
 - Native MSFS Toolbar support. Put the 'universalannouncer-toolbar' folder from the zip in your MSFS 2020 or MSFS 2024 Community folder and you're all set.
@@ -50,8 +51,11 @@ Runtime: .NET 8 (included with Windows by default)
 Sound Files: Compatible announcement files (see above)
 
 ## 📦 Installation
-Extract: Unzip the downloaded file to any directory (e.g., D:\FunStuff\Universal Announcer\)
-Run: Double-click UniversalAnnouncer.exe to start the application
+
+1. **Extract**: Unzip the downloaded file to its own folder (e.g., `D:\MSFS\Universal Announcer\`).
+2. **Toolbar**: If this is a new install, place the `universalannouncer-toolbar` folder in your MSFS Community folder. For updates, this folder can usually stay the same version unless otherwise noted.
+3. **Run**: Double-click `UniversalAnnouncer.exe` to start the application.
+
 The application will appear in your system tray and automatically try to locate your sound files.
 
 You can find the current releases [HERE](https://github.com/fearlessfrog/MSFS_Universal_Announcer/releases)
