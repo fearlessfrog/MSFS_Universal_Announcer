@@ -1,6 +1,6 @@
 # How to Enable Debug Mode and Submit an Issue
 
-If you're experiencing an issue with Universal Announcer, enabling debug mode will help us diagnose the problem. This guide walks you through the process.
+If you're experiencing an issue with Universal Announcer, enabling debug mode will help me diagnose the problem. This guide walks you through the process.
 
 ## Step 1: Locate Your Config Folder
 
@@ -48,7 +48,7 @@ Since logging starts immediately when debug mode is enabled, it's best to:
 3. Attach the `debug.log` text file from your `%APPDATA%\UniversalAnnouncer` folder
 4. You can also include your `config.json` file if relevant—it contains no keys or personal information, just your settings
 
-GitHub is the preferred method because it helps us track issues in one place and allows others in the community to help troubleshoot.
+GitHub is the preferred method because it helps me track issues in one place and allows others in the community to help troubleshoot.
 
 ### Alternative Methods
 
