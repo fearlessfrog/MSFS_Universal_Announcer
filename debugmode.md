@@ -55,7 +55,7 @@ GitHub is the preferred method because it helps us track issues in one place and
 If you prefer not to use GitHub, you can:
 
 1. Upload the `debug.log` file (and optionally `config.json`) to a file sharing service
-2. Contact me on Discord in the Cabin Announcements channel or on flightsim.to with a link to the files
+2. Contact me on Discord in the Cabin Announcements server or on a direct message at https://flightsim.to with a link to the files
 
 However, GitHub is recommended for better issue tracking and community support.
 
