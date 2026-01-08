@@ -196,13 +196,15 @@ Boarding but no musac!: Again :) use the Logo On light to trigger the boarding m
 
 It is a Virus!!: Sorry about that but False Positives come up enough for me to put some words here on this: [here](https://fearlessfrog.github.io/MSFS_Universal_Announcer/viruscheckers.html)
 
+Need to report a bug?: If you're experiencing an issue, enable debug mode to help diagnose the problem. See [How to Enable Debug Mode and Submit an Issue](https://fearlessfrog.github.io/MSFS_Universal_Announcer/debugmode.html) for detailed instructions.
+
 ## Settings & Log Files
 
 Settings and logs are saved to: %APPDATA%\UniversalAnnouncer\. 
 
 ## 🤝 Support & Feedback
 
-This is an initial release that I use myself. While there's no formal support, I'm interested in feedback and bug reports.
+This is an initial release that I use myself. While there's no formal support, I'm interested in feedback and bug reports. If you need to report an issue, please enable debug mode first - see [How to Enable Debug Mode and Submit an Issue](https://fearlessfrog.github.io/MSFS_Universal_Announcer/debugmode.html) for instructions.
 
 Thank you to those that bought me a coffee and to keep all this free - I'm now highly caffeinated!
 
