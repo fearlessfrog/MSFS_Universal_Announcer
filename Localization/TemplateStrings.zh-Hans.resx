@@ -22,7 +22,7 @@
   </data>
 
   <data name="Template_AfterTakeoff" xml:space="preserve">
-    <value>各位旅客，在系好安全带指示灯亮起时请系好安全带。我们建议您在就座时始终系好安全带。洗手间位于客舱两端。请注意，任何时候都禁止吸烟，包括电子烟。稍后我们将开始机上服务。{IF FLIGHT_TIME}本次飞行时间约为 {FLIGHT_TIME}。{END} {IF DESTINATION_TEMPERATURE}气温约 {DESTINATION_TEMPERATURE}。{END} 详情请参阅机上手册。您也可以选购热饮、酒水及小食，我们接受主要的信用卡与借记卡。如需任何帮助，请随时告知，我们即将开始客舱服务。</value>
+    <value>各位旅客，在系好安全带指示灯亮起时请系好安全带。我们建议您在就座时始终系好安全带。洗手间位于客舱两端。请注意，任何时候都禁止吸烟，包括电子烟。稍后我们将开始机上服务。详情请参阅机上手册。您也可以选购热饮、酒水及小食，我们接受主要的信用卡与借记卡。如需任何帮助，请随时告知，我们即将开始客舱服务。</value>
   </data>
 
   <data name="Template_BoardingComplete" xml:space="preserve">
@@ -64,7 +64,7 @@
   </data>
 
   <data name="Template_CruiseElapsed50Percent" xml:space="preserve">
-    <value>各位旅客，这里是驾驶舱。我们已爬升至巡航高度 {IF CRUISE_ALTITUDE_FT}{CRUISE_ALTITUDE_FT}{END} 英尺，当前乘坐机型为 {AIRCRAFT_NAME}，前方天气情况良好。目前我们已飞行至前往 {DESTINATION_CITY} 航线的大约一半，距离 {ORIGIN_CITY} 约 {IF ROUTE_DISTANCE_NM}{ROUTE_DISTANCE_NM}{END} 英里。{IF DESTINATION_TEMPERATURE}{DESTINATION_CITY} 当前气温 {DESTINATION_TEMPERATURE}。{END} 接近目的地时我们会继续向您通报。现在请放松心情，享受机上服务。谨代表全体机组，感谢您选择 {AIRLINE_NAME}。</value>
+    <value>我们即将开始机上服务。详情请参阅机上手册。您也可以选购热饮、酒水及小食，我们接受主要的信用卡与借记卡。谢谢。</value>
   </data>
 
   <data name="Template_DepartureDelayed" xml:space="preserve">
@@ -74,7 +74,7 @@
   </data>
 
   <data name="Template_DescentSeatbelts" xml:space="preserve">
-    <value>各位旅客，我们即将{IF DESTINATION_CITY}抵达 {DESTINATION_CITY}{END}。{IF DESTINATION_TEMPERATURE}气温约 {DESTINATION_TEMPERATURE}{END}。请将手提行李妥善安置，笔记本电脑须收入其中。请收起小桌板，放下扶手并打开遮光板。请就座并系好安全带，准备着陆。若有不需要的报纸杂志或垃圾，请交给乘务员。洗手间现在停止使用。谢谢。</value>
+    <value>各位旅客，我们即将{IF DESTINATION_CITY}抵达 {DESTINATION_CITY}{END}。请将手提行李妥善安置，笔记本电脑须收入其中。请收起小桌板，放下扶手并打开遮光板。请就座并系好安全带，准备着陆。若有不需要的报纸杂志或垃圾，请交给乘务员。洗手间现在停止使用。谢谢。</value>
   </data>
 
   <data name="Template_DisarmDoors" xml:space="preserve">
@@ -94,7 +94,7 @@
   </data>
 
   <data name="Template_SafetyBriefing" xml:space="preserve">
-    <value>各位旅客，欢迎登机。请留意客舱内的提示标志及机组人员的指示，并了解以下安全事项。座椅背袋中的安全须知卡包含关于紧急出口、氧气面罩、救生衣以及紧急防护姿势（听到"准备、准备"口令时请立即采取）的重要信息。本机共有八个紧急出口。客舱乘务员现在将为您指示距离您最近的出口，请注意最近可用出口可能在您的身后。紧急情况下，地面或舱内照明将引导您前往出口。遇到紧急情况，请将所有行李留在机上。安全带的系紧、调整及解开方式如图示，安全带指示灯亮起时必须系好，我们建议全程系好。若客舱压力异常，氧气面罩将从上方脱落。拉下面罩以开始供氧，将其罩在口鼻处并正常呼吸，用头带固定并左右拉紧调节，请先为自己佩戴再协助他人。如需水上迫降，请取出座椅下的救生衣，从袋中取出后套在头上，将带子绕过腰部扣好并拉紧。请勿在机舱内给救生衣充气。到达舱外后，拉动充气把手充气；如未完全充气或需要补气，可通过吹气管充气。救生衣配有指示灯与口哨以便引起注意。机组人员可为儿童提供救生衣协助。现在请收起小桌板，放下扶手，打开遮光板并系好安全带。更多安全信息可参见机上杂志。祝您旅途愉快。</value>
+    <value>各位旅客，欢迎登机。请留意客舱内的提示标志及机组人员的指示，并了解以下安全事项。座椅背袋中的安全须知卡包含关于紧急出口、氧气面罩、救生衣以及紧急防护姿势的重要信息。紧急出口位于前方、机翼上方和后方。请确认距离您最近的出口；最近可用出口可能在您的身后。紧急情况下，地面或舱内照明将引导您前往出口。遇到紧急情况，请将所有行李留在机上。安全带的系紧、调整及解开方式如图示，安全带指示灯亮起时必须系好，我们建议全程系好。若客舱压力异常，氧气面罩将从上方脱落。拉下面罩以开始供氧，将其罩在口鼻处并正常呼吸，用头带固定并左右拉紧调节，请先为自己佩戴再协助他人。现在请收起小桌板，放下扶手，打开遮光板并系好安全带。感谢您今日选择与我们同行。</value>
   </data>
 
   <data name="Template_TopOfClimbPilot" xml:space="preserve">

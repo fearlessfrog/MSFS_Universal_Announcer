@@ -83,6 +83,14 @@
   <!-- Tweaks: Landing Cabin Reactions -->
   <data name="Tweaks_LandingCabinReactions" xml:space="preserve"><value>着陆客舱反应</value></data>
   <data name="Tweaks_LandingCabinReactions_Tooltip" xml:space="preserve"><value>根据着陆质量播放客舱声音（平稳着陆时播放掌声，硬着陆时播放反应）</value></data>
+  <data name="Tweaks_LandingGreatVS" xml:space="preserve"><value>优秀着陆垂直速度阈值 (fpm)</value></data>
+  <data name="Tweaks_LandingGreatVS_Tooltip" xml:space="preserve"><value>如果垂直速度低于此值（且 G 力也低于其阈值），则着陆被评为“优秀”。</value></data>
+  <data name="Tweaks_LandingGreatG" xml:space="preserve"><value>优秀着陆 G 力阈值 (g)</value></data>
+  <data name="Tweaks_LandingGreatG_Tooltip" xml:space="preserve"><value>如果峰值 G 力低于此值（且垂直速度也低于其阈值），则着陆被评为“优秀”。</value></data>
+  <data name="Tweaks_LandingTerribleVS" xml:space="preserve"><value>糟糕着陆垂直速度阈值 (fpm)</value></data>
+  <data name="Tweaks_LandingTerribleVS_Tooltip" xml:space="preserve"><value>如果垂直速度超过此值，则着陆被评为“糟糕”。</value></data>
+  <data name="Tweaks_LandingTerribleG" xml:space="preserve"><value>糟糕着陆 G 力阈值 (g)</value></data>
+  <data name="Tweaks_LandingTerribleG_Tooltip" xml:space="preserve"><value>如果峰值 G 力超过此值，则着陆被评为“糟糕”。</value></data>
 
   <!-- Waiting phrases for Play Next -->
   <data name="Wait_BoardingStart_GSX" xml:space="preserve"><value>Logo 灯 亮 或 GSX 登机</value></data>
@@ -95,6 +103,8 @@
   <data name="Wait_CrewSeatsTakeoff" xml:space="preserve"><value>着陆灯 亮 且 发动机运转</value></data>
   <data name="Wait_CallCabinSecureTakeoff" xml:space="preserve"><value>已播放 CrewSeatsTakeoff 且 在地面</value></data>
   <data name="Wait_AfterTakeoff" xml:space="preserve"><value>离地 且 AGL 高度 &gt; {0} 英尺（起飞后 2 分钟）</value></data>
+  <data name="Wait_TopOfClimbPilot" xml:space="preserve"><value>达到巡航高度（±1000英尺）</value></data>
+  <data name="Wait_TopOfDescentPilot" xml:space="preserve"><value>巡航时间超过 50% 并开始下降</value></data>
   <data name="Wait_DescentSeatbelts" xml:space="preserve"><value>已播放 AfterTakeoff 且 &lt; {0} 英尺 且 下降中 或 着陆灯 亮</value></data>
   <data name="Wait_CrewSeatsLanding" xml:space="preserve"><value>低于 {0} 英尺 且 下降中 且 着陆灯 亮</value></data>
   <data name="Wait_CallCabinSecureLanding" xml:space="preserve"><value>已播放 CrewSeatsLanding 且 &lt; {0} 英尺</value></data>
@@ -210,6 +220,8 @@
   <data name="Generated_ReplaceExistingOggAlways" xml:space="preserve"><value>始终替换 .ogg</value></data>
   <data name="Generated_OnlyDynamic" xml:space="preserve"><value>仅在动态时重新生成</value></data>
   <data name="Generated_AutoCreateFolder" xml:space="preserve"><value>自动创建缺少的航司文件夹</value></data>
+  <data name="Generated_PickRolesByCountry" xml:space="preserve"><value>根据航空公司国家自动选择角色</value></data>
+  <data name="Generated_Tooltip_PickRolesByCountry" xml:space="preserve"><value>启用后，如果航空公司 roles.json 缺失，将根据航空公司国家/地区自动选择语音，并采用行业适当的性别分布。</value></data>
   <data name="Generated_Tooltip_ReplaceAirlineOnly" xml:space="preserve"><value>仅在航司文件夹存在 .txt 模板时才覆盖现有航司 .ogg。“始终”允许使用 Default 目录下的 txt。</value></data>
   <data name="Generated_Tooltip_OnlyDynamic" xml:space="preserve"><value>仅当模板包含 { ... } 等动态占位符时才重新生成。</value></data>
   <data name="Generated_Tooltip_ReplaceAlways" xml:space="preserve"><value>启用后，当缺少航司 txt 时，允许使用 Default 模板进行覆盖。</value></data>
@@ -221,8 +233,20 @@
   <data name="Generated_InsertVoice" xml:space="preserve"><value>插入语音</value></data>
   <data name="Generated_TestVoice" xml:space="preserve"><value>测试语音</value></data>
   <data name="Generated_Roles" xml:space="preserve"><value>角色</value></data>
+  <data name="Roles_Title" xml:space="preserve"><value>配置角色语音</value></data>
+  <data name="Roles_Provider" xml:space="preserve"><value>提供商:</value></data>
+  <data name="Roles_PilotVoice" xml:space="preserve"><value>飞行员语音:</value></data>
+  <data name="Roles_FlightAttendantVoice" xml:space="preserve"><value>乘务员语音:</value></data>
   <data name="Roles_Airline" xml:space="preserve"><value>航空公司:</value></data>
   <data name="Roles_SaveRoles" xml:space="preserve"><value>保存角色</value></data>
+  <data name="Roles_Default" xml:space="preserve"><value>(默认)</value></data>
+  <data name="Roles_None" xml:space="preserve"><value>(无)</value></data>
+  <data name="Roles_Loading" xml:space="preserve"><value>加载中...</value></data>
+  <data name="Roles_SavedMessage" xml:space="preserve"><value>已保存 {0} 的角色。</value></data>
+  <data name="Roles_SavedTitle" xml:space="preserve"><value>已保存</value></data>
+  <data name="Roles_SaveError" xml:space="preserve"><value>保存角色失败: {0}</value></data>
+  <data name="Roles_SaveVoicesError" xml:space="preserve"><value>保存角色语音失败: {0}</value></data>
+  <data name="Common_Error" xml:space="preserve"><value>错误</value></data>
   <data name="Audio_AssumeQuickViewsAsCabin_Tooltip" xml:space="preserve"><value>启用且相机为 Cockpit（2）且子状态为 Quickview（3）时，将其视为客舱音量。</value></data>
   <data name="Generated_VoiceLabel" xml:space="preserve"><value>语音：</value></data>
   <data name="Generated_AzureApiKey" xml:space="preserve"><value>Azure API 密钥：</value></data>
@@ -246,6 +270,23 @@
   <data name="About_WhatTriggers" xml:space="preserve"><value>触发条件与时机</value></data>
   <data name="About_SuggestionBug" xml:space="preserve"><value>提交建议或报告问题</value></data>
   <data name="About_DebugMode" xml:space="preserve"><value>调试模式已启用</value></data>
+
+  <!-- Advanced Camera Volume dialog -->
+  <data name="CameraVolume_Title" xml:space="preserve"><value>高级相机音量</value></data>
+  <data name="CameraVolume_AircraftFormat" xml:space="preserve"><value>机型：{0}  （型号：{1}）</value></data>
+  <data name="CameraVolume_AircraftGlobalFormat" xml:space="preserve"><value>机型：{0}  （全局默认值 - 无活动机型）</value></data>
+  <data name="CameraVolume_Column_View" xml:space="preserve"><value>视图</value></data>
+  <data name="CameraVolume_Column_TreatAs" xml:space="preserve"><value>视为</value></data>
+  <data name="CameraVolume_Column_Mute" xml:space="preserve"><value>静音广播</value></data>
+  <data name="CameraVolume_Category_Auto" xml:space="preserve"><value>自动</value></data>
+  <data name="CameraVolume_Category_Cockpit" xml:space="preserve"><value>座舱</value></data>
+  <data name="CameraVolume_Category_Cabin" xml:space="preserve"><value>客舱</value></data>
+  <data name="CameraVolume_Category_External" xml:space="preserve"><value>外部</value></data>
+  <data name="CameraVolume_ViewFamily_CockpitQuickview" xml:space="preserve"><value>座舱快速视图 {0}</value></data>
+  <data name="CameraVolume_ViewFamily_ShowcaseFixed" xml:space="preserve"><value>展示固定视图 {0}</value></data>
+  <data name="CameraVolume_ViewFamily_ExternalQuickview" xml:space="preserve"><value>外部快速视图 {0}</value></data>
+  <data name="CameraVolume_ViewFamily_Drone" xml:space="preserve"><value>无人机（自由相机）</value></data>
+  <data name="CameraVolume_SaveError" xml:space="preserve"><value>保存相机视图规则失败：{0}</value></data>
 
   <!-- Common buttons -->
   <data name="Common_Cancel" xml:space="preserve"><value>取消</value></data>

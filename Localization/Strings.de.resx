@@ -121,6 +121,14 @@
   <!-- Tweaks: Landing Cabin Reactions -->
   <data name="Tweaks_LandingCabinReactions" xml:space="preserve"><value>Landungskabinenreaktionen</value></data>
   <data name="Tweaks_LandingCabinReactions_Tooltip" xml:space="preserve"><value>Spielt Kabinengeräusche basierend auf der Landungsqualität ab (Applaus für sanfte Landungen, Reaktionen für harte Landungen)</value></data>
+  <data name="Tweaks_LandingGreatVS" xml:space="preserve"><value>Grenzwert für gute Landung VS (fpm)</value></data>
+  <data name="Tweaks_LandingGreatVS_Tooltip" xml:space="preserve"><value>Landungen werden als 'Großartig' bewertet, wenn die Vertikalgeschwindigkeit UNTER diesem Wert liegt (und die G-Kraft ebenfalls unter ihrem Grenzwert liegt).</value></data>
+  <data name="Tweaks_LandingGreatG" xml:space="preserve"><value>Grenzwert für gute Landung G-Kraft (g)</value></data>
+  <data name="Tweaks_LandingGreatG_Tooltip" xml:space="preserve"><value>Landungen werden als 'Großartig' bewertet, wenn die Spitzen-G-Kraft UNTER diesem Wert liegt (und die VS ebenfalls unter ihrem Grenzwert liegt).</value></data>
+  <data name="Tweaks_LandingTerribleVS" xml:space="preserve"><value>Grenzwert für schlechte Landung VS (fpm)</value></data>
+  <data name="Tweaks_LandingTerribleVS_Tooltip" xml:space="preserve"><value>Landungen werden als 'Schrecklich' bewertet, wenn die Vertikalgeschwindigkeit diesen Wert ÜBERSCHREITET.</value></data>
+  <data name="Tweaks_LandingTerribleG" xml:space="preserve"><value>Grenzwert für schlechte Landung G-Kraft (g)</value></data>
+  <data name="Tweaks_LandingTerribleG_Tooltip" xml:space="preserve"><value>Landungen werden als 'Schrecklich' bewertet, wenn die Spitzen-G-Kraft diesen Wert ÜBERSCHREITET.</value></data>
 
   <!-- Integrations tab -->
   <data name="Integrations_SimBriefGroup" xml:space="preserve"><value>SimBrief-Integration</value></data>
@@ -168,6 +176,8 @@
   <data name="Generated_ReplaceExistingOggAlways" xml:space="preserve"><value>.ogg immer ersetzen</value></data>
   <data name="Generated_OnlyDynamic" xml:space="preserve"><value>Nur bei dynamisch neu erzeugen</value></data>
   <data name="Generated_AutoCreateFolder" xml:space="preserve"><value>Fehlenden Airline‑Ordner auto. erstellen</value></data>
+  <data name="Generated_PickRolesByCountry" xml:space="preserve"><value>Rollen automatisch nach Airline-Land auswählen</value></data>
+  <data name="Generated_Tooltip_PickRolesByCountry" xml:space="preserve"><value>Wenn aktiviert und airline roles.json fehlt, werden automatisch Stimmen basierend auf dem Länder-Locale der Airline mit branchenüblicher Geschlechterverteilung ausgewählt.</value></data>
   <data name="Generated_Tooltip_ReplaceAirlineOnly" xml:space="preserve"><value>Vorhandene Airline‑.ogg nur überschreiben, wenn eine Airline‑Ordner‑.txt‑Vorlage existiert. „Immer“ erlaubt die Verwendung der Default‑txt.</value></data>
   <data name="Generated_Tooltip_OnlyDynamic" xml:space="preserve"><value>Nur neu erzeugen, wenn die Vorlage dynamische Platzhalter wie { ... } enthält.</value></data>
   <data name="Generated_Tooltip_ReplaceAlways" xml:space="preserve"><value>Wenn aktiviert, Überschreiben mit Default‑Vorlage erlauben, wenn Airline‑txt fehlt.</value></data>
@@ -179,8 +189,20 @@
   <data name="Generated_InsertVoice" xml:space="preserve"><value>Stimme einfügen</value></data>
   <data name="Generated_TestVoice" xml:space="preserve"><value>Stimme testen</value></data>
   <data name="Generated_Roles" xml:space="preserve"><value>Rollen</value></data>
+  <data name="Roles_Title" xml:space="preserve"><value>Rollenstimmen konfigurieren</value></data>
+  <data name="Roles_Provider" xml:space="preserve"><value>Anbieter:</value></data>
+  <data name="Roles_PilotVoice" xml:space="preserve"><value>Pilotstimme:</value></data>
+  <data name="Roles_FlightAttendantVoice" xml:space="preserve"><value>Flugbegleiterstimme:</value></data>
   <data name="Roles_Airline" xml:space="preserve"><value>Fluggesellschaft:</value></data>
   <data name="Roles_SaveRoles" xml:space="preserve"><value>Rollen speichern</value></data>
+  <data name="Roles_Default" xml:space="preserve"><value>(Standard)</value></data>
+  <data name="Roles_None" xml:space="preserve"><value>(keine)</value></data>
+  <data name="Roles_Loading" xml:space="preserve"><value>Lädt...</value></data>
+  <data name="Roles_SavedMessage" xml:space="preserve"><value>Rollen für {0} gespeichert.</value></data>
+  <data name="Roles_SavedTitle" xml:space="preserve"><value>Gespeichert</value></data>
+  <data name="Roles_SaveError" xml:space="preserve"><value>Fehler beim Speichern der Rollen: {0}</value></data>
+  <data name="Roles_SaveVoicesError" xml:space="preserve"><value>Fehler beim Speichern der Rollenstimmen: {0}</value></data>
+  <data name="Common_Error" xml:space="preserve"><value>Fehler</value></data>
   <data name="Generated_VoiceLabel" xml:space="preserve"><value>Stimme:</value></data>
   <data name="Generated_AzureApiKey" xml:space="preserve"><value>Azure API-Schlüssel:</value></data>
   <data name="Generated_AzureRegion" xml:space="preserve"><value>Azure-Region:</value></data>
@@ -355,6 +377,23 @@ Ein kurzer Download beginnt.</value></data>
   <data name="Msg_OpenLogError_Format" xml:space="preserve"><value>Fehler beim Öffnen der Logdatei: {0}</value></data>
   <data name="Msg_RevertedAirline_Format" xml:space="preserve"><value>{0}-Override für {1}.txt zurückgesetzt</value></data>
   <data name="Msg_RevertedDefault_Format" xml:space="preserve"><value>Default-Override für {0}.txt zurückgesetzt</value></data>
+
+  <!-- Advanced Camera Volume dialog -->
+  <data name="CameraVolume_Title" xml:space="preserve"><value>Erweiterte Kamera-Lautstärke</value></data>
+  <data name="CameraVolume_AircraftFormat" xml:space="preserve"><value>Flugzeug: {0}  (Muster: {1})</value></data>
+  <data name="CameraVolume_AircraftGlobalFormat" xml:space="preserve"><value>Flugzeug: {0}  (Globale Standardwerte – kein aktives Flugzeug)</value></data>
+  <data name="CameraVolume_Column_View" xml:space="preserve"><value>Ansicht</value></data>
+  <data name="CameraVolume_Column_TreatAs" xml:space="preserve"><value>Behandeln als</value></data>
+  <data name="CameraVolume_Column_Mute" xml:space="preserve"><value>Ansagen stummschalten</value></data>
+  <data name="CameraVolume_Category_Auto" xml:space="preserve"><value>Auto</value></data>
+  <data name="CameraVolume_Category_Cockpit" xml:space="preserve"><value>Cockpit</value></data>
+  <data name="CameraVolume_Category_Cabin" xml:space="preserve"><value>Kabine</value></data>
+  <data name="CameraVolume_Category_External" xml:space="preserve"><value>Extern</value></data>
+  <data name="CameraVolume_ViewFamily_CockpitQuickview" xml:space="preserve"><value>Cockpit-Schnellansicht {0}</value></data>
+  <data name="CameraVolume_ViewFamily_ShowcaseFixed" xml:space="preserve"><value>Showcase Fix {0}</value></data>
+  <data name="CameraVolume_ViewFamily_ExternalQuickview" xml:space="preserve"><value>Externe Schnellansicht {0}</value></data>
+  <data name="CameraVolume_ViewFamily_Drone" xml:space="preserve"><value>Drone (freie Kamera)</value></data>
+  <data name="CameraVolume_SaveError" xml:space="preserve"><value>Speichern der Kameraansichts-Regeln fehlgeschlagen: {0}</value></data>
   <data name="Msg_RevertFailed_Format" xml:space="preserve"><value>Zurücksetzen fehlgeschlagen: {0}</value></data>
   <data name="Msg_SavedTo_Format" xml:space="preserve"><value>Gespeichert in {0}: {1}.txt</value></data>
   <data name="Msg_SaveFailed_Format" xml:space="preserve"><value>Speichern fehlgeschlagen: {0}</value></data>
@@ -409,6 +448,8 @@ Ein kurzer Download beginnt.</value></data>
   <data name="Wait_CrewSeatsTakeoff" xml:space="preserve"><value>Landescheinwerfer EIN und Triebwerke laufen</value></data>
   <data name="Wait_CallCabinSecureTakeoff" xml:space="preserve"><value>CrewSeatsTakeoff gespielt und Am Boden</value></data>
   <data name="Wait_AfterTakeoff" xml:space="preserve"><value>In der Luft und AGL‑Höhe &gt; {0} ft (2 Min nach Start)</value></data>
+  <data name="Wait_TopOfClimbPilot" xml:space="preserve"><value>Reiseflughöhe erreichen (±1000ft)</value></data>
+  <data name="Wait_TopOfDescentPilot" xml:space="preserve"><value>&gt;50% Reiseflug verstrichen und Abstieg beginnen</value></data>
   <data name="Wait_DescentSeatbelts" xml:space="preserve"><value>AfterTakeoff gespielt und &lt; {0} ft &amp; Sinkflug oder Landescheinwerfer EIN</value></data>
   <data name="Wait_CrewSeatsLanding" xml:space="preserve"><value>Unter {0} ft und Sinkflug und Landescheinwerfer EIN</value></data>
   <data name="Wait_CallCabinSecureLanding" xml:space="preserve"><value>CrewSeatsLanding gespielt und &lt; {0} ft</value></data>

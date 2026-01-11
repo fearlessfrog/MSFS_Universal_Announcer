@@ -174,6 +174,14 @@
   <!-- Tweaks: Landing Cabin Reactions -->
   <data name="Tweaks_LandingCabinReactions" xml:space="preserve"><value>착륙 객실 반응</value></data>
   <data name="Tweaks_LandingCabinReactions_Tooltip" xml:space="preserve"><value>착륙 품질에 따라 객실 소리를 재생합니다 (부드러운 착륙에는 박수, 거친 착륙에는 반응)</value></data>
+  <data name="Tweaks_LandingGreatVS" xml:space="preserve"><value>훌륭한 착륙 수직 속도 임계값 (fpm)</value></data>
+  <data name="Tweaks_LandingGreatVS_Tooltip" xml:space="preserve"><value>수직 속도가 이 값 미만이고 G-포스도 해당 임계값 미만인 경우 착륙이 '훌륭함'으로 평가됩니다.</value></data>
+  <data name="Tweaks_LandingGreatG" xml:space="preserve"><value>훌륭한 착륙 G-포스 임계값 (g)</value></data>
+  <data name="Tweaks_LandingGreatG_Tooltip" xml:space="preserve"><value>최대 G-포스가 이 값 미만이고 수직 속도도 해당 임계값 미만인 경우 착륙이 '훌륭함'으로 평가됩니다.</value></data>
+  <data name="Tweaks_LandingTerribleVS" xml:space="preserve"><value>끔찍한 착륙 수직 속도 임계값 (fpm)</value></data>
+  <data name="Tweaks_LandingTerribleVS_Tooltip" xml:space="preserve"><value>수직 속도가 이 값을 초과하면 착륙이 '끔찍함'으로 평가됩니다.</value></data>
+  <data name="Tweaks_LandingTerribleG" xml:space="preserve"><value>끔찍한 착륙 G-포스 임계값 (g)</value></data>
+  <data name="Tweaks_LandingTerribleG_Tooltip" xml:space="preserve"><value>최대 G-포스가 이 값을 초과하면 착륙이 '끔찍함'으로 평가됩니다.</value></data>
 
   <!-- Waiting phrases for Play Next -->
   <data name="Wait_BoardingStart_GSX" xml:space="preserve"><value>로고 라이트 켜짐 또는 GSX 탑승</value></data>
@@ -186,6 +194,8 @@
   <data name="Wait_CrewSeatsTakeoff" xml:space="preserve"><value>랜딩 라이트 켜짐 그리고 엔진 가동 중</value></data>
   <data name="Wait_CallCabinSecureTakeoff" xml:space="preserve"><value>CrewSeatsTakeoff 재생됨 그리고 지상</value></data>
   <data name="Wait_AfterTakeoff" xml:space="preserve"><value>비행 중 그리고 AGL 고도 &gt; {0} ft (이륙 2분 후)</value></data>
+  <data name="Wait_TopOfClimbPilot" xml:space="preserve"><value>순항 고도 도달 (±1000ft)</value></data>
+  <data name="Wait_TopOfDescentPilot" xml:space="preserve"><value>순항 시간 50% 이상 경과 및 강하 시작</value></data>
   <data name="Wait_DescentSeatbelts" xml:space="preserve"><value>AfterTakeoff 재생됨 그리고 &lt; {0} ft &amp; 하강 중 또는 랜딩 라이트 켜짐</value></data>
   <data name="Wait_CrewSeatsLanding" xml:space="preserve"><value>{0} ft 미만 그리고 하강 중 그리고 랜딩 라이트 켜짐</value></data>
   <data name="Wait_CallCabinSecureLanding" xml:space="preserve"><value>CrewSeatsLanding 재생됨 그리고 &lt; {0} ft</value></data>
@@ -233,6 +243,8 @@ GitHub를 열어 최신 버전을 다운로드하세요.</value></data>
   <data name="Generated_ReplaceExistingOggAlways" xml:space="preserve"><value>.ogg 항상 교체</value></data>
   <data name="Generated_OnlyDynamic" xml:space="preserve"><value>동적인 경우에만 재생성</value></data>
   <data name="Generated_AutoCreateFolder" xml:space="preserve"><value>누락된 항공사 폴더 자동 생성</value></data>
+  <data name="Generated_PickRolesByCountry" xml:space="preserve"><value>항공사 국가에 따라 역할 자동 선택</value></data>
+  <data name="Generated_Tooltip_PickRolesByCountry" xml:space="preserve"><value>활성화되고 항공사 roles.json이 누락된 경우, 항공사 국가 로케일을 기반으로 업계에 적합한 성별 분포로 음성을 자동 선택합니다.</value></data>
   <data name="Generated_Tooltip_ReplaceAirlineOnly" xml:space="preserve"><value>항공사 폴더에 .txt 템플릿이 있을 때만 기존 항공사 .ogg를 덮어씁니다. ‘항상’은 Default txt 사용을 허용합니다.</value></data>
   <data name="Generated_Tooltip_OnlyDynamic" xml:space="preserve"><value>{ ... }와 같은 동적 플레이스홀더가 있을 때만 재생성합니다.</value></data>
   <data name="Generated_Tooltip_ReplaceAlways" xml:space="preserve"><value>활성화 시, 항공사 txt가 없을 때 Default 템플릿으로 덮어쓰기를 허용합니다.</value></data>
@@ -244,8 +256,20 @@ GitHub를 열어 최신 버전을 다운로드하세요.</value></data>
   <data name="Generated_InsertVoice" xml:space="preserve"><value>음성 삽입</value></data>
   <data name="Generated_TestVoice" xml:space="preserve"><value>음성 테스트</value></data>
   <data name="Generated_Roles" xml:space="preserve"><value>역할</value></data>
+  <data name="Roles_Title" xml:space="preserve"><value>역할 음성 구성</value></data>
+  <data name="Roles_Provider" xml:space="preserve"><value>공급자:</value></data>
+  <data name="Roles_PilotVoice" xml:space="preserve"><value>조종사 음성:</value></data>
+  <data name="Roles_FlightAttendantVoice" xml:space="preserve"><value>승무원 음성:</value></data>
   <data name="Roles_Airline" xml:space="preserve"><value>항공사:</value></data>
   <data name="Roles_SaveRoles" xml:space="preserve"><value>역할 저장</value></data>
+  <data name="Roles_Default" xml:space="preserve"><value>(기본값)</value></data>
+  <data name="Roles_None" xml:space="preserve"><value>(없음)</value></data>
+  <data name="Roles_Loading" xml:space="preserve"><value>로드 중...</value></data>
+  <data name="Roles_SavedMessage" xml:space="preserve"><value>{0}에 대한 역할이 저장되었습니다.</value></data>
+  <data name="Roles_SavedTitle" xml:space="preserve"><value>저장됨</value></data>
+  <data name="Roles_SaveError" xml:space="preserve"><value>역할 저장 실패: {0}</value></data>
+  <data name="Roles_SaveVoicesError" xml:space="preserve"><value>역할 음성 저장 실패: {0}</value></data>
+  <data name="Common_Error" xml:space="preserve"><value>오류</value></data>
   <data name="Audio_AssumeQuickViewsAsCabin_Tooltip" xml:space="preserve"><value>활성화되어 있고 카메라가 Cockpit(2)이며 Substate Quickview(3)인 경우, 볼륨을 객실로 처리합니다.</value></data>
   <data name="Generated_VoiceLabel" xml:space="preserve"><value>음성:</value></data>
   <data name="Generated_AzureApiKey" xml:space="preserve"><value>Azure API 키:</value></data>
@@ -351,6 +375,23 @@ GitHub를 열어 최신 버전을 다운로드하세요.</value></data>
   <data name="Tweaks_UseBoardingMusicFallback" xml:space="preserve"><value>AfterLandingMusic 없으면 BoardingMusic 사용</value></data>
   <data name="Tweaks_SkipFirstBoardingWelcome" xml:space="preserve"><value>첫 번째 BoardingWelcome 건너뛰기</value></data>
   <data name="Tweaks_DepartureDelayThreshold" xml:space="preserve"><value>출발 지연 임계값(분):</value></data>
+
+  <!-- Advanced Camera Volume dialog -->
+  <data name="CameraVolume_Title" xml:space="preserve"><value>고급 카메라 음량</value></data>
+  <data name="CameraVolume_AircraftFormat" xml:space="preserve"><value>기체: {0}  (모델: {1})</value></data>
+  <data name="CameraVolume_AircraftGlobalFormat" xml:space="preserve"><value>기체: {0}  (전역 기본값 - 활성 기체 없음)</value></data>
+  <data name="CameraVolume_Column_View" xml:space="preserve"><value>뷰</value></data>
+  <data name="CameraVolume_Column_TreatAs" xml:space="preserve"><value>다음으로 취급</value></data>
+  <data name="CameraVolume_Column_Mute" xml:space="preserve"><value>방송 음소거</value></data>
+  <data name="CameraVolume_Category_Auto" xml:space="preserve"><value>자동</value></data>
+  <data name="CameraVolume_Category_Cockpit" xml:space="preserve"><value>조종석</value></data>
+  <data name="CameraVolume_Category_Cabin" xml:space="preserve"><value>객실</value></data>
+  <data name="CameraVolume_Category_External" xml:space="preserve"><value>외부</value></data>
+  <data name="CameraVolume_ViewFamily_CockpitQuickview" xml:space="preserve"><value>조종석 퀵뷰 {0}</value></data>
+  <data name="CameraVolume_ViewFamily_ShowcaseFixed" xml:space="preserve"><value>쇼케이스 고정 뷰 {0}</value></data>
+  <data name="CameraVolume_ViewFamily_ExternalQuickview" xml:space="preserve"><value>외부 퀵뷰 {0}</value></data>
+  <data name="CameraVolume_ViewFamily_Drone" xml:space="preserve"><value>드론 (프리 카메라)</value></data>
+  <data name="CameraVolume_SaveError" xml:space="preserve"><value>카메라 뷰 규칙을 저장하지 못했습니다: {0}</value></data>
   <data name="Tweaks_AfterLandingDelay" xml:space="preserve"><value>착륙 후 지연(분):</value></data>
   <data name="Tweaks_ArmDoorsAfterBoardingComplete" xml:space="preserve"><value>탑승 완료 후 자동으로 문 닫기 (30초)</value></data>
   <data name="Tweaks_EnablePmdgSdk" xml:space="preserve"><value>PMDG SDK 데이터 사용 (MSFS24 777X)</value></data>

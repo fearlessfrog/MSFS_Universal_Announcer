@@ -377,6 +377,23 @@ Pour ouvrir les paramètres ou contrôler l’application :
   <data name="Audio_AssumeQuickViewsAsCabin" xml:space="preserve"><value>Considérer les QuickViews cockpit comme cabine</value></data>
   <data name="Audio_CabinLabel" xml:space="preserve"><value>Cabine (approx.) :</value></data>
   <data name="Audio_CameraDesc" xml:space="preserve"><value>Pas de moyen simple pour détecter la cabine — estimation. Peut aussi être des QuickViews cockpit.</value></data>
+
+  <!-- Advanced Camera Volume dialog -->
+  <data name="CameraVolume_Title" xml:space="preserve"><value>Volume avancé par caméra</value></data>
+  <data name="CameraVolume_AircraftFormat" xml:space="preserve"><value>Appareil : {0}  (Modèle : {1})</value></data>
+  <data name="CameraVolume_AircraftGlobalFormat" xml:space="preserve"><value>Appareil : {0}  (Valeurs globales par défaut – aucun appareil actif)</value></data>
+  <data name="CameraVolume_Column_View" xml:space="preserve"><value>Vue</value></data>
+  <data name="CameraVolume_Column_TreatAs" xml:space="preserve"><value>Traiter comme</value></data>
+  <data name="CameraVolume_Column_Mute" xml:space="preserve"><value>Couper les annonces</value></data>
+  <data name="CameraVolume_Category_Auto" xml:space="preserve"><value>Auto</value></data>
+  <data name="CameraVolume_Category_Cockpit" xml:space="preserve"><value>Cockpit</value></data>
+  <data name="CameraVolume_Category_Cabin" xml:space="preserve"><value>Cabine</value></data>
+  <data name="CameraVolume_Category_External" xml:space="preserve"><value>Externe</value></data>
+  <data name="CameraVolume_ViewFamily_CockpitQuickview" xml:space="preserve"><value>Vue rapide cockpit {0}</value></data>
+  <data name="CameraVolume_ViewFamily_ShowcaseFixed" xml:space="preserve"><value>Showcase fixe {0}</value></data>
+  <data name="CameraVolume_ViewFamily_ExternalQuickview" xml:space="preserve"><value>Vue rapide externe {0}</value></data>
+  <data name="CameraVolume_ViewFamily_Drone" xml:space="preserve"><value>Drone (caméra libre)</value></data>
+  <data name="CameraVolume_SaveError" xml:space="preserve"><value>Échec de l’enregistrement des règles de vue caméra : {0}</value></data>
   <data name="Audio_CameraGroup" xml:space="preserve"><value>Multiplicateurs de volume selon l’état de la caméra (sur le volume maître)</value></data>
   <data name="Audio_CameraStateEnabled" xml:space="preserve"><value>Activer le volume basé sur la caméra</value></data>
   <data name="Audio_CockpitLabel" xml:space="preserve"><value>Cockpit (vue principale) :</value></data>
@@ -402,6 +419,8 @@ Pour ouvrir les paramètres ou contrôler l’application :
   <data name="Btn_CloseApp" xml:space="preserve"><value>Fermer l’appli</value></data>
   <data name="Generated_AirlineLabel" xml:space="preserve"><value>Compagnie :</value></data>
   <data name="Generated_AutoCreateFolder" xml:space="preserve"><value>Créer auto. dossier compagnie manquant</value></data>
+  <data name="Generated_PickRolesByCountry" xml:space="preserve"><value>Sélectionner automatiquement les rôles selon le pays de la compagnie</value></data>
+  <data name="Generated_Tooltip_PickRolesByCountry" xml:space="preserve"><value>Lorsqu'il est activé et que roles.json de la compagnie est manquant, sélectionne automatiquement les voix en fonction de la locale du pays de la compagnie avec une distribution de genre appropriée à l'industrie.</value></data>
   <data name="Generated_AzureApiKey" xml:space="preserve"><value>Clé API Azure :</value></data>
   <data name="Generated_AzureRegion" xml:space="preserve"><value>Région Azure :</value></data>
   <data name="Generated_ElevenModelLabel" xml:space="preserve"><value>Modèle Eleven :</value></data>
@@ -412,8 +431,20 @@ Pour ouvrir les paramètres ou contrôler l’application :
   <data name="Generated_HelpSetup" xml:space="preserve"><value>Aide &amp; Configuration (à lire d’abord)</value></data>
   <data name="Generated_InsertVoice" xml:space="preserve"><value>Insérer la voix</value></data>
   <data name="Generated_Roles" xml:space="preserve"><value>Rôles</value></data>
+  <data name="Roles_Title" xml:space="preserve"><value>Configurer les voix des rôles</value></data>
+  <data name="Roles_Provider" xml:space="preserve"><value>Fournisseur :</value></data>
+  <data name="Roles_PilotVoice" xml:space="preserve"><value>Voix du pilote :</value></data>
+  <data name="Roles_FlightAttendantVoice" xml:space="preserve"><value>Voix de l'hôtesse de l'air :</value></data>
   <data name="Roles_Airline" xml:space="preserve"><value>Compagnie aérienne :</value></data>
   <data name="Roles_SaveRoles" xml:space="preserve"><value>Enregistrer les rôles</value></data>
+  <data name="Roles_Default" xml:space="preserve"><value>(Par défaut)</value></data>
+  <data name="Roles_None" xml:space="preserve"><value>(aucun)</value></data>
+  <data name="Roles_Loading" xml:space="preserve"><value>Chargement...</value></data>
+  <data name="Roles_SavedMessage" xml:space="preserve"><value>Rôles enregistrés pour {0}.</value></data>
+  <data name="Roles_SavedTitle" xml:space="preserve"><value>Enregistré</value></data>
+  <data name="Roles_SaveError" xml:space="preserve"><value>Échec de l'enregistrement des rôles : {0}</value></data>
+  <data name="Roles_SaveVoicesError" xml:space="preserve"><value>Échec de l'enregistrement des voix des rôles : {0}</value></data>
+  <data name="Common_Error" xml:space="preserve"><value>Erreur</value></data>
   <data name="Generated_OnlyDynamic" xml:space="preserve"><value>Régénérer seulement si dynamique</value></data>
   <data name="Generated_ProviderLabel" xml:space="preserve"><value>Fournisseur :</value></data>
   <data name="Generated_ReplaceExistingOgg" xml:space="preserve"><value>Remplacer .ogg (si txt Compagnie)</value></data>
@@ -441,6 +472,14 @@ Pour ouvrir les paramètres ou contrôler l’application :
   <!-- Tweaks: Landing Cabin Reactions -->
   <data name="Tweaks_LandingCabinReactions" xml:space="preserve"><value>Réactions de cabine à l'atterrissage</value></data>
   <data name="Tweaks_LandingCabinReactions_Tooltip" xml:space="preserve"><value>Joue des sons de cabine selon la qualité de l'atterrissage (applaudissements pour les atterrissages en douceur, réactions pour les atterrissages durs)</value></data>
+  <data name="Tweaks_LandingGreatVS" xml:space="preserve"><value>Seuil de VS pour un excellent atterrissage (fpm)</value></data>
+  <data name="Tweaks_LandingGreatVS_Tooltip" xml:space="preserve"><value>Les atterrissages sont classés comme « Excellents » si la vitesse verticale est INFÉRIEURE à cette valeur (et si la force G est également inférieure à son seuil).</value></data>
+  <data name="Tweaks_LandingGreatG" xml:space="preserve"><value>Seuil de force G pour un excellent atterrissage (g)</value></data>
+  <data name="Tweaks_LandingGreatG_Tooltip" xml:space="preserve"><value>Les atterrissages sont classés comme « Excellents » si la force G maximale est INFÉRIEURE à cette valeur (et si la VS est également inférieure à son seuil).</value></data>
+  <data name="Tweaks_LandingTerribleVS" xml:space="preserve"><value>Seuil de VS pour un mauvais atterrissage (fpm)</value></data>
+  <data name="Tweaks_LandingTerribleVS_Tooltip" xml:space="preserve"><value>Les atterrissages sont classés comme « Terribles » si la vitesse verticale DÉPASSE cette valeur.</value></data>
+  <data name="Tweaks_LandingTerribleG" xml:space="preserve"><value>Seuil de force G pour un mauvais atterrissage (g)</value></data>
+  <data name="Tweaks_LandingTerribleG_Tooltip" xml:space="preserve"><value>Les atterrissages sont classés comme « Terribles » si la force G maximale DÉPASSE cette valeur.</value></data>
 
   <!-- Waiting phrases for Play Next -->
   <data name="Wait_BoardingStart_GSX" xml:space="preserve"><value>Lumière logo ALLUMÉE ou Embarquement GSX</value></data>
@@ -452,8 +491,10 @@ Pour ouvrir les paramètres ou contrôler l’application :
   <data name="Wait_CabinDimTakeoff" xml:space="preserve"><value>SafetyBriefing joué et Nuit</value></data>
   <data name="Wait_CrewSeatsTakeoff" xml:space="preserve"><value>Phares d’atterrissage ALLUMÉS et Moteurs en marche</value></data>
   <data name="Wait_CallCabinSecureTakeoff" xml:space="preserve"><value>CrewSeatsTakeoff joué et Au sol</value></data>
-  <data name="Wait_AfterTakeoff" xml:space="preserve"><value>En l’air et Altitude AGL &gt; {0} ft (2 min après décollage)</value></data>
-  <data name="Wait_DescentSeatbelts" xml:space="preserve"><value>AfterTakeoff joué et &lt; {0} ft &amp; En descente ou Phares d’atterrissage ALLUMÉS</value></data>
+  <data name="Wait_AfterTakeoff" xml:space="preserve"><value>En l'air et Altitude AGL &gt; {0} ft (2 min après décollage)</value></data>
+  <data name="Wait_TopOfClimbPilot" xml:space="preserve"><value>Atteindre l'altitude de croisière (±1000ft)</value></data>
+  <data name="Wait_TopOfDescentPilot" xml:space="preserve"><value>&gt;50% de croisière écoulé et commencer la descente</value></data>
+  <data name="Wait_DescentSeatbelts" xml:space="preserve"><value>AfterTakeoff joué et &lt; {0} ft &amp; En descente ou Phares d'atterrissage ALLUMÉS</value></data>
   <data name="Wait_CrewSeatsLanding" xml:space="preserve"><value>En dessous de {0} ft et En descente et Phares d’atterrissage ALLUMÉS</value></data>
   <data name="Wait_CallCabinSecureLanding" xml:space="preserve"><value>CrewSeatsLanding joué et &lt; {0} ft</value></data>
   <data name="Wait_AfterLanding" xml:space="preserve"><value>Au sol et GS &lt; 25 kt</value></data>

@@ -22,7 +22,7 @@
   </data>
 
   <data name="Template_AfterTakeoff" xml:space="preserve">
-    <value>Senhoras e senhores, mantenham os cintos afivelados enquanto o sinal estiver aceso. Recomendamos mantê-los afivelados sempre que estiverem sentados. Os banheiros estão localizados nas extremidades dianteira e traseira da cabine. Lembramos que é proibido fumar em qualquer momento, incluindo cigarros eletrônicos. Em instantes iniciaremos o serviço de bordo, com opções disponíveis hoje. {IF FLIGHT_TIME}Nosso tempo de voo é {FLIGHT_TIME}.{END} {IF DESTINATION_TEMPERATURE}Temperatura em torno de {DESTINATION_TEMPERATURE}.{END} Detalhes no folheto a bordo. Também é possível adquirir bebidas quentes, outras bebidas e lanches no bar. Aceitamos os principais cartões de crédito e débito. Se precisarem de algo, avisem-nos quando passarmos pela cabine.</value>
+    <value>Senhoras e senhores, mantenham os cintos afivelados enquanto o sinal estiver aceso. Recomendamos mantê-los afivelados sempre que estiverem sentados. Os banheiros estão localizados nas extremidades dianteira e traseira da cabine. Lembramos que é proibido fumar em qualquer momento, incluindo cigarros eletrônicos. Em instantes iniciaremos o serviço de bordo, com opções disponíveis hoje. Detalhes no folheto a bordo. Também é possível adquirir bebidas quentes, outras bebidas e lanches no bar. Aceitamos os principais cartões de crédito e débito. Se precisarem de algo, avisem-nos quando passarmos pela cabine.</value>
   </data>
 
   <data name="Template_BoardingComplete" xml:space="preserve">
@@ -64,7 +64,7 @@ Tripulação de cabine, assentos para a decolagem.</value>
   </data>
 
   <data name="Template_CruiseElapsed50Percent" xml:space="preserve">
-    <value>Senhoras e senhores, fala o comandante. Atingimos nossa altitude de cruzeiro de {IF CRUISE_ALTITUDE_FT}{CRUISE_ALTITUDE_FT}{END} pés a bordo do {AIRCRAFT_NAME}, com boas condições à frente. Neste momento, estamos aproximadamente na metade do trajeto para {DESTINATION_CITY}, a cerca de {IF ROUTE_DISTANCE_NM}{ROUTE_DISTANCE_NM}{END} milhas de {ORIGIN_CITY}. {IF DESTINATION_TEMPERATURE}Em {DESTINATION_CITY}, a temperatura é {DESTINATION_TEMPERATURE}.{END} Manteremos vocês informados quando estivermos nos aproximando. Enquanto isso, relaxem e aproveitem o serviço de bordo. Em nome da tripulação, é um prazer tê-los conosco hoje. Obrigado por escolherem a {AIRLINE_NAME}.</value>
+    <value>Em breve iniciaremos o serviço de bordo. Detalhes completos no folheto a bordo. Também é possível adquirir bebidas quentes, outras bebidas e lanches no bar. Aceitamos os principais cartões de crédito e débito. Obrigado.</value>
   </data>
 
   <data name="Template_DepartureDelayed" xml:space="preserve">
@@ -74,7 +74,7 @@ Senhoras e senhores, informação do cockpit. {IF DEP_STATUS}{DEP_STATUS}{END} {
   </data>
 
   <data name="Template_DescentSeatbelts" xml:space="preserve">
-    <value>Senhoras e senhores, em breve pousaremos {IF DESTINATION_CITY}em {DESTINATION_CITY}{END}. {IF DESTINATION_TEMPERATURE}Temperatura próxima de {DESTINATION_TEMPERATURE}.{END} Guardem adequadamente a bagagem de mão, com o notebook em seu interior. Recolham a mesa, abaixem os apoios de braço e abram as persianas. Permaneçam sentados com o cinto afivelado para o pouso. Ajudem-nos entregando jornais, revistas e lixo que não desejarem manter. Os banheiros não estão mais disponíveis. Obrigado.</value>
+    <value>Senhoras e senhores, em breve pousaremos {IF DESTINATION_CITY}em {DESTINATION_CITY}{END}. Guardem adequadamente a bagagem de mão, com o notebook em seu interior. Recolham a mesa, abaixem os apoios de braço e abram as persianas. Permaneçam sentados com o cinto afivelado para o pouso. Ajudem-nos entregando jornais, revistas e lixo que não desejarem manter. Os banheiros não estão mais disponíveis. Obrigado.</value>
   </data>
 
   <data name="Template_DisarmDoors" xml:space="preserve">
@@ -94,7 +94,7 @@ Senhoras e senhores, informação do cockpit. {IF DEP_STATUS}{DEP_STATUS}{END} {
   </data>
 
   <data name="Template_SafetyBriefing" xml:space="preserve">
-    <value>Senhoras e senhores, sejam bem-vindos a bordo. Atentem para os avisos luminosos e as instruções da tripulação, incluindo os seguintes procedimentos de segurança. O cartão de segurança no bolso do assento contém informações importantes sobre saídas de emergência, máscaras de oxigênio, coletes salva-vidas e a posição de segurança (brace), que deve ser adotada ao ouvir "brace, brace". Esta aeronave possui oito saídas de emergência. A tripulação apontará agora as saídas mais próximas — lembrem-se de que a sua saída mais próxima pode estar atrás de você. A iluminação de emergência o guiará até uma saída. Em caso de emergência, deixe toda a bagagem a bordo. O cinto se fecha, ajusta e solta conforme mostrado, devendo permanecer afivelado sempre que o aviso estiver aceso; recomendamos mantê-lo afivelado durante todo o tempo em que estiver sentado. Em caso de despressurização, máscaras cairão do compartimento superior. Puxe a máscara em sua direção para iniciar o fluxo de oxigênio; coloque-a sobre o nariz e a boca e respire normalmente. Ajuste a máscara com a tira, puxando de ambos os lados; coloque a sua máscara primeiro antes de auxiliar outras pessoas. Em caso de pouso na água, retire o colete salva-vidas debaixo do seu assento. Retire-o do saco e passe-o pela cabeça. Prenda a fivela na cintura e ajuste puxando a tira. Não infle o colete dentro da aeronave. Do lado de fora, infle-o puxando a alça; se necessário, assopre pelo tubo. Há uma luz e um apito para sinalização. A tripulação pode auxiliar com coletes infantis. Recolha a mesa, abaixe os apoios de braço, levante as persianas e afivele o cinto. Mais informações de segurança estão na revista de bordo. Tenham um ótimo voo.</value>
+    <value>Senhoras e senhores, sejam bem-vindos a bordo. Atentem para os avisos luminosos e as instruções da tripulação, incluindo os seguintes procedimentos de segurança. O cartão de segurança no bolso do assento contém informações importantes sobre saídas de emergência, máscaras de oxigênio, coletes salva-vidas e a posição de segurança. Há saídas de emergência na frente, sobre as asas e na parte traseira. Por favor, localizem sua saída mais próxima; ela pode estar atrás de vocês. A iluminação de emergência os guiará até uma saída. Em caso de emergência, deixe toda a bagagem a bordo. O cinto se fecha, ajusta e solta conforme mostrado, devendo permanecer afivelado sempre que o aviso estiver aceso; recomendamos mantê-lo afivelado durante todo o tempo em que estiver sentado. Em caso de despressurização, máscaras cairão do compartimento superior. Puxe a máscara em sua direção para iniciar o fluxo de oxigênio; coloque-a sobre o nariz e a boca e respire normalmente. Ajuste a máscara com a tira, puxando de ambos os lados; coloque a sua máscara primeiro antes de auxiliar outras pessoas. Recolha a mesa, abaixe os apoios de braço, levante as persianas e afivele o cinto. Obrigado por voarem conosco hoje.</value>
   </data>
 
   <data name="Template_TopOfClimbPilot" xml:space="preserve">

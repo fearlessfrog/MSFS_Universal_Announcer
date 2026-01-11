@@ -217,6 +217,8 @@
 
   <data name="Generated_AirlineLabel" xml:space="preserve"><value>航空会社:</value></data>
   <data name="Generated_AutoCreateFolder" xml:space="preserve"><value>不足しているエアライン フォルダーを自動作成</value></data>
+  <data name="Generated_PickRolesByCountry" xml:space="preserve"><value>航空会社の国に基づいて役割を自動選択</value></data>
+  <data name="Generated_Tooltip_PickRolesByCountry" xml:space="preserve"><value>有効にすると、航空会社のroles.jsonが不足している場合、航空会社の国のロケールに基づいて、業界に適した性別分布で音声を自動選択します。</value></data>
   <data name="Generated_AzureApiKey" xml:space="preserve"><value>Azure API キー:</value></data>
   <data name="Generated_AzureRegion" xml:space="preserve"><value>Azure リージョン:</value></data>
   <data name="Generated_ElevenModelLabel" xml:space="preserve"><value>Eleven モデル:</value></data>
@@ -227,8 +229,20 @@
   <data name="Generated_HelpSetup" xml:space="preserve"><value>ヘルプ &amp; セットアップ (最初に読む)</value></data>
   <data name="Generated_InsertVoice" xml:space="preserve"><value>音声を挿入</value></data>
   <data name="Generated_Roles" xml:space="preserve"><value>役割</value></data>
+  <data name="Roles_Title" xml:space="preserve"><value>役割の音声を設定</value></data>
+  <data name="Roles_Provider" xml:space="preserve"><value>プロバイダー:</value></data>
+  <data name="Roles_PilotVoice" xml:space="preserve"><value>パイロットの音声:</value></data>
+  <data name="Roles_FlightAttendantVoice" xml:space="preserve"><value>客室乗務員の音声:</value></data>
   <data name="Roles_Airline" xml:space="preserve"><value>航空会社:</value></data>
   <data name="Roles_SaveRoles" xml:space="preserve"><value>役割を保存</value></data>
+  <data name="Roles_Default" xml:space="preserve"><value>(デフォルト)</value></data>
+  <data name="Roles_None" xml:space="preserve"><value>(なし)</value></data>
+  <data name="Roles_Loading" xml:space="preserve"><value>読み込み中...</value></data>
+  <data name="Roles_SavedMessage" xml:space="preserve"><value>{0} の役割を保存しました。</value></data>
+  <data name="Roles_SavedTitle" xml:space="preserve"><value>保存済み</value></data>
+  <data name="Roles_SaveError" xml:space="preserve"><value>役割の保存に失敗しました: {0}</value></data>
+  <data name="Roles_SaveVoicesError" xml:space="preserve"><value>役割の音声の保存に失敗しました: {0}</value></data>
+  <data name="Common_Error" xml:space="preserve"><value>エラー</value></data>
   <data name="Generated_OnlyDynamic" xml:space="preserve"><value>動的な場合のみ再生成</value></data>
   <data name="Generated_ProviderLabel" xml:space="preserve"><value>プロバイダー:</value></data>
   <data name="Generated_ReplaceExistingOgg" xml:space="preserve"><value>.ogg を置換（航空会社 txt 時）</value></data>
@@ -363,6 +377,23 @@
   <data name="Error_UIThreadFormat" xml:space="preserve"><value>未処理の UI スレッド例外: {0}
 
 ログ: {1}</value></data>
+
+  <!-- Advanced Camera Volume dialog -->
+  <data name="CameraVolume_Title" xml:space="preserve"><value>詳細カメラ音量</value></data>
+  <data name="CameraVolume_AircraftFormat" xml:space="preserve"><value>機体: {0}  (モデル: {1})</value></data>
+  <data name="CameraVolume_AircraftGlobalFormat" xml:space="preserve"><value>機体: {0}  (グローバル既定値 - アクティブな機体なし)</value></data>
+  <data name="CameraVolume_Column_View" xml:space="preserve"><value>ビュー</value></data>
+  <data name="CameraVolume_Column_TreatAs" xml:space="preserve"><value>として扱う</value></data>
+  <data name="CameraVolume_Column_Mute" xml:space="preserve"><value>アナウンスをミュート</value></data>
+  <data name="CameraVolume_Category_Auto" xml:space="preserve"><value>自動</value></data>
+  <data name="CameraVolume_Category_Cockpit" xml:space="preserve"><value>コックピット</value></data>
+  <data name="CameraVolume_Category_Cabin" xml:space="preserve"><value>客室</value></data>
+  <data name="CameraVolume_Category_External" xml:space="preserve"><value>外部</value></data>
+  <data name="CameraVolume_ViewFamily_CockpitQuickview" xml:space="preserve"><value>コックピットクイックビュー {0}</value></data>
+  <data name="CameraVolume_ViewFamily_ShowcaseFixed" xml:space="preserve"><value>ショーケース固定ビュー {0}</value></data>
+  <data name="CameraVolume_ViewFamily_ExternalQuickview" xml:space="preserve"><value>外部クイックビュー {0}</value></data>
+  <data name="CameraVolume_ViewFamily_Drone" xml:space="preserve"><value>ドローン (フリーカメラ)</value></data>
+  <data name="CameraVolume_SaveError" xml:space="preserve"><value>カメラビュー ルールの保存に失敗しました: {0}</value></data>
   <data name="Error_UIThreadTitle" xml:space="preserve"><value>UI エラー</value></data>
 
   <data name="Integrations_AircraftError" xml:space="preserve"><value>機種の取得エラー</value></data>
@@ -449,6 +480,14 @@
   <!-- Tweaks: Landing Cabin Reactions -->
   <data name="Tweaks_LandingCabinReactions" xml:space="preserve"><value>着陸時の客室反応</value></data>
   <data name="Tweaks_LandingCabinReactions_Tooltip" xml:space="preserve"><value>着陸の質に基づいて客室音を再生します（スムーズな着陸では拍手、硬い着陸では反応）</value></data>
+  <data name="Tweaks_LandingGreatVS" xml:space="preserve"><value>素晴らしい着陸の垂直速度閾値 (fpm)</value></data>
+  <data name="Tweaks_LandingGreatVS_Tooltip" xml:space="preserve"><value>垂直速度がこの値未満（かつGフォースも閾値未満）の場合、着陸は「素晴らしい」と評価されます。</value></data>
+  <data name="Tweaks_LandingGreatG" xml:space="preserve"><value>素晴らしい着陸のGフォース閾値 (g)</value></data>
+  <data name="Tweaks_LandingGreatG_Tooltip" xml:space="preserve"><value>最大Gフォースがこの値未満（かつ垂直速度も閾値未満）の場合、着陸は「素晴らしい」と評価されます。</value></data>
+  <data name="Tweaks_LandingTerribleVS" xml:space="preserve"><value>ひどい着陸の垂直速度閾値 (fpm)</value></data>
+  <data name="Tweaks_LandingTerribleVS_Tooltip" xml:space="preserve"><value>垂直速度がこの値を超えると、着陸は「ひどい」と評価されます。</value></data>
+  <data name="Tweaks_LandingTerribleG" xml:space="preserve"><value>ひどい着陸のGフォース閾値 (g)</value></data>
+  <data name="Tweaks_LandingTerribleG_Tooltip" xml:space="preserve"><value>最大Gフォースがこの値を超えると、着陸は「ひどい」と評価されます。</value></data>
 
   <!-- Waiting phrases for Play Next -->
   <data name="Wait_BoardingStart_GSX" xml:space="preserve"><value>ロゴライト ON または GSX 搭乗</value></data>
@@ -461,6 +500,8 @@
   <data name="Wait_CrewSeatsTakeoff" xml:space="preserve"><value>着陸灯 ON かつ エンジン稼働中</value></data>
   <data name="Wait_CallCabinSecureTakeoff" xml:space="preserve"><value>CrewSeatsTakeoff 再生済み かつ 地上</value></data>
   <data name="Wait_AfterTakeoff" xml:space="preserve"><value>空中 かつ AGL 高度 &gt; {0} ft（離陸 2 分後）</value></data>
+  <data name="Wait_TopOfClimbPilot" xml:space="preserve"><value>巡航高度に到達（±1000ft）</value></data>
+  <data name="Wait_TopOfDescentPilot" xml:space="preserve"><value>巡航時間 50% 以上経過 かつ 降下開始</value></data>
   <data name="Wait_DescentSeatbelts" xml:space="preserve"><value>AfterTakeoff 再生済み かつ &lt; {0} ft &amp; 降下中 または 着陸灯 ON</value></data>
   <data name="Wait_CrewSeatsLanding" xml:space="preserve"><value>{0} ft 未満 かつ 降下中 かつ 着陸灯 ON</value></data>
   <data name="Wait_CallCabinSecureLanding" xml:space="preserve"><value>CrewSeatsLanding 再生済み かつ &lt; {0} ft</value></data>

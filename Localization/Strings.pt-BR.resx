@@ -261,6 +261,8 @@ Para abrir as configurações ou controlar o aplicativo:
   <data name="Generated_ReplaceExistingOggAlways" xml:space="preserve"><value>Sempre substituir .ogg</value></data>
   <data name="Generated_OnlyDynamic" xml:space="preserve"><value>Regenerar apenas se dinâmico</value></data>
   <data name="Generated_AutoCreateFolder" xml:space="preserve"><value>Criar auto. a pasta da companhia faltante</value></data>
+  <data name="Generated_PickRolesByCountry" xml:space="preserve"><value>Selecionar funções automaticamente com base no país da companhia aérea</value></data>
+  <data name="Generated_Tooltip_PickRolesByCountry" xml:space="preserve"><value>Quando habilitado e roles.json da companhia aérea estiver ausente, seleciona automaticamente vozes com base na localidade do país da companhia aérea com distribuição de gênero apropriada para a indústria.</value></data>
   <data name="Generated_Tooltip_ReplaceAirlineOnly" xml:space="preserve"><value>Substituir .ogg da companhia apenas quando existir um modelo .txt na pasta da companhia. “Sempre” permite usar o txt Default.</value></data>
   <data name="Generated_Tooltip_OnlyDynamic" xml:space="preserve"><value>Regenerar apenas se o modelo contiver placeholders dinâmicos como { ... }.</value></data>
   <data name="Generated_Tooltip_ReplaceAlways" xml:space="preserve"><value>Se ativado, permite substituir usando o modelo Default quando faltar o txt da companhia.</value></data>
@@ -272,8 +274,20 @@ Para abrir as configurações ou controlar o aplicativo:
   <data name="Generated_InsertVoice" xml:space="preserve"><value>Inserir voz</value></data>
   <data name="Generated_TestVoice" xml:space="preserve"><value>Testar voz</value></data>
   <data name="Generated_Roles" xml:space="preserve"><value>Funções</value></data>
+  <data name="Roles_Title" xml:space="preserve"><value>Configurar Vozes de Funções</value></data>
+  <data name="Roles_Provider" xml:space="preserve"><value>Provedor:</value></data>
+  <data name="Roles_PilotVoice" xml:space="preserve"><value>Voz do Piloto:</value></data>
+  <data name="Roles_FlightAttendantVoice" xml:space="preserve"><value>Voz do Comissário:</value></data>
   <data name="Roles_Airline" xml:space="preserve"><value>Companhia aérea:</value></data>
   <data name="Roles_SaveRoles" xml:space="preserve"><value>Salvar funções</value></data>
+  <data name="Roles_Default" xml:space="preserve"><value>(Padrão)</value></data>
+  <data name="Roles_None" xml:space="preserve"><value>(nenhum)</value></data>
+  <data name="Roles_Loading" xml:space="preserve"><value>Carregando...</value></data>
+  <data name="Roles_SavedMessage" xml:space="preserve"><value>Funções salvas para {0}.</value></data>
+  <data name="Roles_SavedTitle" xml:space="preserve"><value>Salvo</value></data>
+  <data name="Roles_SaveError" xml:space="preserve"><value>Falha ao salvar funções: {0}</value></data>
+  <data name="Roles_SaveVoicesError" xml:space="preserve"><value>Falha ao salvar vozes de funções: {0}</value></data>
+  <data name="Common_Error" xml:space="preserve"><value>Erro</value></data>
   <data name="Generated_VoiceLabel" xml:space="preserve"><value>Voz:</value></data>
   <data name="Generated_AzureApiKey" xml:space="preserve"><value>Chave de API do Azure:</value></data>
   <data name="Generated_AzureRegion" xml:space="preserve"><value>Região do Azure:</value></data>
@@ -350,6 +364,23 @@ Um breve download será iniciado.</value></data>
   <data name="About_WhatTriggers" xml:space="preserve"><value>O que aciona o quê e quando</value></data>
   <data name="About_SuggestionBug" xml:space="preserve"><value>Fazer uma sugestão ou relatar um erro</value></data>
   <data name="About_DebugMode" xml:space="preserve"><value>Modo de depuração ativo</value></data>
+
+  <!-- Advanced Camera Volume dialog -->
+  <data name="CameraVolume_Title" xml:space="preserve"><value>Volume avançado por câmera</value></data>
+  <data name="CameraVolume_AircraftFormat" xml:space="preserve"><value>Aeronave: {0}  (Modelo: {1})</value></data>
+  <data name="CameraVolume_AircraftGlobalFormat" xml:space="preserve"><value>Aeronave: {0}  (Padrões globais - nenhuma aeronave ativa)</value></data>
+  <data name="CameraVolume_Column_View" xml:space="preserve"><value>Visão</value></data>
+  <data name="CameraVolume_Column_TreatAs" xml:space="preserve"><value>Tratar como</value></data>
+  <data name="CameraVolume_Column_Mute" xml:space="preserve"><value>Silenciar anúncios</value></data>
+  <data name="CameraVolume_Category_Auto" xml:space="preserve"><value>Auto</value></data>
+  <data name="CameraVolume_Category_Cockpit" xml:space="preserve"><value>Cabine de comando</value></data>
+  <data name="CameraVolume_Category_Cabin" xml:space="preserve"><value>Cabine</value></data>
+  <data name="CameraVolume_Category_External" xml:space="preserve"><value>Externa</value></data>
+  <data name="CameraVolume_ViewFamily_CockpitQuickview" xml:space="preserve"><value>Vista rápida cockpit {0}</value></data>
+  <data name="CameraVolume_ViewFamily_ShowcaseFixed" xml:space="preserve"><value>Showcase fixa {0}</value></data>
+  <data name="CameraVolume_ViewFamily_ExternalQuickview" xml:space="preserve"><value>Vista rápida externa {0}</value></data>
+  <data name="CameraVolume_ViewFamily_Drone" xml:space="preserve"><value>Drone (câmera livre)</value></data>
+  <data name="CameraVolume_SaveError" xml:space="preserve"><value>Falha ao salvar regras de visão de câmera: {0}</value></data>
 
   <data name="Tweaks_BoardingInterval" xml:space="preserve"><value>Intervalo de repetição de Boarding Welcome (min):</value></data>
   <data name="Tweaks_Minutes" xml:space="preserve"><value>minutos</value></data>
@@ -444,6 +475,14 @@ Log: {1}</value></data>
   <!-- Tweaks: Landing Cabin Reactions -->
   <data name="Tweaks_LandingCabinReactions" xml:space="preserve"><value>Reações da cabine no pouso</value></data>
   <data name="Tweaks_LandingCabinReactions_Tooltip" xml:space="preserve"><value>Reproduz sons da cabine com base na qualidade do pouso (aplausos para pousos suaves, reações para pousos duros)</value></data>
+  <data name="Tweaks_LandingGreatVS" xml:space="preserve"><value>Limiar de VS para um ótimo pouso (fpm)</value></data>
+  <data name="Tweaks_LandingGreatVS_Tooltip" xml:space="preserve"><value>Os pousos são classificados como 'Ótimos' se a velocidade vertical estiver ABAIXO deste valor (e a força G também estiver abaixo do seu limiar).</value></data>
+  <data name="Tweaks_LandingGreatG" xml:space="preserve"><value>Limiar de força G para um ótimo pouso (g)</value></data>
+  <data name="Tweaks_LandingGreatG_Tooltip" xml:space="preserve"><value>Os pousos são classificados como 'Ótimos' se o pico da força G estiver ABAIXO deste valor (e a VS também estiver abaixo do seu limiar).</value></data>
+  <data name="Tweaks_LandingTerribleVS" xml:space="preserve"><value>Limiar de VS para um pouso terrível (fpm)</value></data>
+  <data name="Tweaks_LandingTerribleVS_Tooltip" xml:space="preserve"><value>Os pousos são classificados como 'Terríveis' se a velocidade vertical EXCEDER este valor.</value></data>
+  <data name="Tweaks_LandingTerribleG" xml:space="preserve"><value>Limiar de força G para um pouso terrível (g)</value></data>
+  <data name="Tweaks_LandingTerribleG_Tooltip" xml:space="preserve"><value>Os pousos são classificados como 'Terríveis' se o pico da força G EXCEDER este valor.</value></data>
 
   <!-- Waiting phrases for Play Next -->
   <data name="Wait_BoardingStart_GSX" xml:space="preserve"><value>Luz de logo LIGADA ou Embarque GSX</value></data>
@@ -456,6 +495,8 @@ Log: {1}</value></data>
   <data name="Wait_CrewSeatsTakeoff" xml:space="preserve"><value>Luzes de pouso LIGADAS e Motores ligados</value></data>
   <data name="Wait_CallCabinSecureTakeoff" xml:space="preserve"><value>CrewSeatsTakeoff reproduzido e No solo</value></data>
   <data name="Wait_AfterTakeoff" xml:space="preserve"><value>Em voo e Altitude AGL &gt; {0} ft (2 min após a decolagem)</value></data>
+  <data name="Wait_TopOfClimbPilot" xml:space="preserve"><value>Alcançar altitude de cruzeiro (±1000ft)</value></data>
+  <data name="Wait_TopOfDescentPilot" xml:space="preserve"><value>&gt;50% de cruzeiro decorrido e iniciar descida</value></data>
   <data name="Wait_DescentSeatbelts" xml:space="preserve"><value>AfterTakeoff reproduzido e &lt; {0} ft &amp; Descendo ou Luzes de pouso LIGADAS</value></data>
   <data name="Wait_CrewSeatsLanding" xml:space="preserve"><value>Abaixo de {0} ft e Descendo e Luzes de pouso LIGADAS</value></data>
   <data name="Wait_CallCabinSecureLanding" xml:space="preserve"><value>CrewSeatsLanding reproduzido e &lt; {0} ft</value></data>

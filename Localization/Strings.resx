@@ -150,13 +150,13 @@
   <data name="Audio_PresetLabel" xml:space="preserve"><value>Preset:</value></data>
   <data name="Audio_PaAudioMix" xml:space="preserve"><value>PA Audio Mix (simulates cabin speaker noise)</value></data>
   <data name="Audio_CameraStateEnabled" xml:space="preserve"><value>Enable Camera Based Volume</value></data>
-  <data name="Audio_UseCabinIfDoorOpen" xml:space="preserve"><value>Use Cabin volume if door open (needs GSX, no door support = open door).</value></data>
+  <data name="Audio_UseCabinIfDoorOpen" xml:space="preserve"><value>Use Showcase/Cabin volume if door open (needs GSX, no door support = open door).</value></data>
   <data name="Audio_CameraGroup" xml:space="preserve"><value>Camera State Volume Multipliers of Master Volume</value></data>
   <data name="Audio_CockpitLabel" xml:space="preserve"><value>Cockpit (main view):</value></data>
-  <data name="Audio_CabinLabel" xml:space="preserve"><value>Cabin (maybe):</value></data>
+  <data name="Audio_CabinLabel" xml:space="preserve"><value>Showcase / Drone:</value></data>
   <data name="Audio_ExternalLabel" xml:space="preserve"><value>External Views:</value></data>
-  <data name="Audio_CameraDesc" xml:space="preserve"><value>No easy way to tell if Cabin so best guess. Could also be cockpit quick views. Work in progress.</value></data>
-  <data name="Audio_AssumeQuickViewsAsCabin" xml:space="preserve"><value>Assume Cockpit QuickViews as Cabin</value></data>
+  <data name="Audio_CameraDesc" xml:space="preserve"><value>Adjust volume for cockpit, showcase/drone and external views. Use Advanced… to fine-tune specific Quickviews or fixed cameras per aircraft.</value></data>
+  <data name="Audio_AssumeQuickViewsAsCabin" xml:space="preserve"><value>Assume Cockpit QuickViews as Showcase/Cabin</value></data>
   <data name="Audio_ForegroundOnly" xml:space="preserve"><value>Only play when MSFS or this app is focused</value></data>
   <data name="Audio_ForegroundOnly_Tooltip" xml:space="preserve"><value>When enabled, announcements are only audible when Microsoft Flight Simulator or this Settings window has focus. Audio continues silently in the background.</value></data>
   <data name="Audio_AssumeQuickViewsAsCabin_Tooltip" xml:space="preserve"><value>When enabled and camera is Cockpit (2) with Substate Quickview (3), treat as Cabin for volume.</value></data>
@@ -204,6 +204,14 @@
   <!-- Tweaks: Landing Cabin Reactions -->
   <data name="Tweaks_LandingCabinReactions" xml:space="preserve"><value>Landing Cabin Reactions</value></data>
   <data name="Tweaks_LandingCabinReactions_Tooltip" xml:space="preserve"><value>Play cabin sounds based on landing quality (applause for smooth landings, reactions for hard landings)</value></data>
+  <data name="Tweaks_LandingGreatVS" xml:space="preserve"><value>Great Landing VS Threshold (fpm)</value></data>
+  <data name="Tweaks_LandingGreatVS_Tooltip" xml:space="preserve"><value>Landings are rated 'Great' if vertical speed is UNDER this value (and G-force is also under its threshold).</value></data>
+  <data name="Tweaks_LandingGreatG" xml:space="preserve"><value>Great Landing G-Force Threshold (g)</value></data>
+  <data name="Tweaks_LandingGreatG_Tooltip" xml:space="preserve"><value>Landings are rated 'Great' if peak G-force is UNDER this value (and VS is also under its threshold).</value></data>
+  <data name="Tweaks_LandingTerribleVS" xml:space="preserve"><value>Terrible Landing VS Threshold (fpm)</value></data>
+  <data name="Tweaks_LandingTerribleVS_Tooltip" xml:space="preserve"><value>Landings are rated 'Terrible' if vertical speed EXCEEDS this value.</value></data>
+  <data name="Tweaks_LandingTerribleG" xml:space="preserve"><value>Terrible Landing G-Force Threshold (g)</value></data>
+  <data name="Tweaks_LandingTerribleG_Tooltip" xml:space="preserve"><value>Landings are rated 'Terrible' if peak G-force EXCEEDS this value.</value></data>
 
   <!-- Tweaks: MSFS Toolbar -->
   <data name="Tweaks_EnableMsfsToolbar" xml:space="preserve"><value>Enable MSFS Toolbar link (experimental)</value></data>
@@ -253,6 +261,8 @@
   <data name="Generated_ReplaceExistingOggAlways" xml:space="preserve"><value>Replace existing .ogg Always</value></data>
   <data name="Generated_OnlyDynamic" xml:space="preserve"><value>Regenerate only if dynamic</value></data>
   <data name="Generated_AutoCreateFolder" xml:space="preserve"><value>Auto create missing airline folder</value></data>
+  <data name="Generated_PickRolesByCountry" xml:space="preserve"><value>Auto pick Roles based on Airline Country</value></data>
+  <data name="Generated_Tooltip_PickRolesByCountry" xml:space="preserve"><value>When enabled and airline roles.json is missing, automatically select voices based on the airline's country locale with industry-appropriate gender distribution.</value></data>
   <data name="Generated_Tooltip_ReplaceAirlineOnly" xml:space="preserve"><value>Overwrite existing airline .ogg only when an Airline folder .txt template exists. Use 'Always' to allow using Default txt.</value></data>
   <data name="Generated_Tooltip_OnlyDynamic" xml:space="preserve"><value>Only regenerate if the template contains dynamic placeholders like { ... }.</value></data>
   <data name="Generated_Tooltip_ReplaceAlways" xml:space="preserve"><value>If enabled, allows overwrite using Default template when airline txt is missing.</value></data>
@@ -264,8 +274,20 @@
   <data name="Generated_InsertVoice" xml:space="preserve"><value>Insert Voice</value></data>
   <data name="Generated_TestVoice" xml:space="preserve"><value>Test Voice</value></data>
   <data name="Generated_Roles" xml:space="preserve"><value>Roles</value></data>
+  <data name="Roles_Title" xml:space="preserve"><value>Configure Role Voices</value></data>
+  <data name="Roles_Provider" xml:space="preserve"><value>Provider:</value></data>
+  <data name="Roles_PilotVoice" xml:space="preserve"><value>Pilot Voice:</value></data>
+  <data name="Roles_FlightAttendantVoice" xml:space="preserve"><value>Flight Attendant Voice:</value></data>
   <data name="Roles_Airline" xml:space="preserve"><value>Airline:</value></data>
   <data name="Roles_SaveRoles" xml:space="preserve"><value>Save Roles</value></data>
+  <data name="Roles_Default" xml:space="preserve"><value>(Default)</value></data>
+  <data name="Roles_None" xml:space="preserve"><value>(none)</value></data>
+  <data name="Roles_Loading" xml:space="preserve"><value>Loading...</value></data>
+  <data name="Roles_SavedMessage" xml:space="preserve"><value>Roles saved for {0}.</value></data>
+  <data name="Roles_SavedTitle" xml:space="preserve"><value>Saved</value></data>
+  <data name="Roles_SaveError" xml:space="preserve"><value>Failed to save roles: {0}</value></data>
+  <data name="Roles_SaveVoicesError" xml:space="preserve"><value>Failed to save role voices: {0}</value></data>
+  <data name="Common_Error" xml:space="preserve"><value>Error</value></data>
   <data name="Generated_VoiceLabel" xml:space="preserve"><value>Voice:</value></data>
   <data name="Generated_AzureApiKey" xml:space="preserve"><value>Azure API Key:</value></data>
   <data name="Generated_AzureRegion" xml:space="preserve"><value>Azure Region:</value></data>
@@ -306,6 +328,23 @@
   <data name="Title_LogFile" xml:space="preserve"><value>Log File</value></data>
   <data name="Title_LogFileLocation" xml:space="preserve"><value>Log File Location</value></data>
   <data name="Title_StartWithMsfs" xml:space="preserve"><value>Start with MSFS</value></data>
+
+  <!-- Advanced Camera Volume dialog -->
+  <data name="CameraVolume_Title" xml:space="preserve"><value>Advanced Camera Volume</value></data>
+  <data name="CameraVolume_AircraftFormat" xml:space="preserve"><value>Aircraft: {0}  (Model: {1})</value></data>
+  <data name="CameraVolume_AircraftGlobalFormat" xml:space="preserve"><value>Aircraft: {0}  (Global defaults - no active aircraft)</value></data>
+  <data name="CameraVolume_Column_View" xml:space="preserve"><value>View</value></data>
+  <data name="CameraVolume_Column_TreatAs" xml:space="preserve"><value>Treat as</value></data>
+  <data name="CameraVolume_Column_Mute" xml:space="preserve"><value>Mute announcements</value></data>
+  <data name="CameraVolume_Category_Auto" xml:space="preserve"><value>Auto</value></data>
+  <data name="CameraVolume_Category_Cockpit" xml:space="preserve"><value>Cockpit</value></data>
+  <data name="CameraVolume_Category_Cabin" xml:space="preserve"><value>Cabin</value></data>
+  <data name="CameraVolume_Category_External" xml:space="preserve"><value>External</value></data>
+  <data name="CameraVolume_ViewFamily_CockpitQuickview" xml:space="preserve"><value>Cockpit Quickview {0}</value></data>
+  <data name="CameraVolume_ViewFamily_ShowcaseFixed" xml:space="preserve"><value>Showcase Fixed {0}</value></data>
+  <data name="CameraVolume_ViewFamily_ExternalQuickview" xml:space="preserve"><value>External Quickview {0}</value></data>
+  <data name="CameraVolume_ViewFamily_Drone" xml:space="preserve"><value>Drone (free camera)</value></data>
+  <data name="CameraVolume_SaveError" xml:space="preserve"><value>Failed to save camera view rules: {0}</value></data>
   <!-- Common Messages -->
   <data name="Msg_SoundFilesConfigFirst" xml:space="preserve"><value>Please configure your Sound Files folder first (Sound Files tab)</value></data>
   <data name="Msg_SaveFailed_Format" xml:space="preserve"><value>Failed to save: {0}</value></data>
@@ -491,6 +530,8 @@ To access settings or control the application:
   <data name="Wait_CrewSeatsTakeoff" xml:space="preserve"><value>Landing lights ON and Engines running</value></data>
   <data name="Wait_CallCabinSecureTakeoff" xml:space="preserve"><value>CrewSeatsTakeoff played and On ground</value></data>
   <data name="Wait_AfterTakeoff" xml:space="preserve"><value>Airborne and Altitude AGL &gt; {0} ft (2 min after takeoff)</value></data>
+  <data name="Wait_TopOfClimbPilot" xml:space="preserve"><value>Reach cruise altitude (±1000ft)</value></data>
+  <data name="Wait_TopOfDescentPilot" xml:space="preserve"><value>&gt;50% cruise elapsed and begin descent</value></data>
   <data name="Wait_DescentSeatbelts" xml:space="preserve"><value>AfterTakeoff played and &lt; {0} ft &amp; Descending or Landing lights ON</value></data>
   <data name="Wait_CrewSeatsLanding" xml:space="preserve"><value>Below {0} ft and Descending and Landing lights ON</value></data>
   <data name="Wait_CallCabinSecureLanding" xml:space="preserve"><value>CrewSeatsLanding played and &lt; {0} ft</value></data>
