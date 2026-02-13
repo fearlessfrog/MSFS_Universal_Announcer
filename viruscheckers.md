@@ -2,7 +2,7 @@
 
 ## First, a Friendly Note
 
-Hey there! If you've landed on this page, chances are your antivirus software has flagged Universal Announcer as suspicious. Take a breath—you're not alone, and there's a good explanation for what's happening.
+Hey there! If you've landed on this page, chances are your antivirus software has flagged Universal Announcer as suspicious. I wrote this page to help explain what is happening rather than reply each time the same way.
 
 ## Why Does This Happen?
 
