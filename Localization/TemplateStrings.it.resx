@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="Template_AfterLanding" xml:space="preserve">
+    <value>Signore e signori, benvenuti a {IF DESTINATION_CITY}a {DESTINATION_CITY}{END}. {IF SCHED_ARR_LOCAL_24H}Sono le {SCHED_ARR_LOCAL_24H} locali.{END} L'equipaggio di bordo lascerà a breve i propri posti per svolgere tutti i compiti relativi alla sicurezza. Tuttavia, vi preghiamo di rimanere seduti fino a quando il segnale di allacciare le cinture di sicurezza non si sarà spento. È ora possibile utilizzare dispositivi elettronici portatili per messaggi, chiamate o accesso a Internet. Assicuratevi di portare con voi tutti i vostri effetti personali, controllando nella tasca del sedile, sotto il sedile e nelle cappelliere. Fate attenzione quando aprite le cappelliere poiché gli oggetti potrebbero essersi spostati durante il volo. È vietato fumare fino a quando non si raggiunge l'area fumatori designata. A nome del comandante e dell'equipaggio, è stato un piacere prenderci cura di voi oggi. Il nostro personale di terra vi assisterà per completare il vostro viaggio.</value>
+  </data>
+  <data name="Template_ArmDoors" xml:space="preserve">
+    <value>Personale di bordo, armare le porte e controllare.</value>
+  </data>
+  <data name="Template_AfterTakeoff" xml:space="preserve">
+    <value>Signore e signori, vi preghiamo di tenere le cinture di sicurezza allacciate finché il segnale delle cinture è acceso. Vi raccomandiamo di tenere le cinture di sicurezza allacciate ogni volta che siete seduti. I servizi igienici si trovano a entrambe le estremità della cabina. Ricordate che è vietato fumare in qualsiasi momento. Questo include le sigarette elettroniche. Tra pochi istanti inizieremo il nostro servizio a bordo, offrendovi la possibilità di scegliere tra la nostra selezione di prodotti freschi disponibili oggi. Ulteriori dettagli sono disponibili nel vostro opuscolo di bordo. Potete anche acquistare una selezione di bevande calde, oltre a bibite e snack al bar. Accettiamo tutte le principali carte di credito e di debito. Se possiamo esservi d'aiuto in altro modo, non esitate a chiedere al personale di bordo.</value>
+  </data>
+  <data name="Template_BoardingComplete" xml:space="preserve">
+    <value>Personale di bordo, l'imbarco è terminato. Il personale di terra ancora presente è pregato di lasciare l'aereo.</value>
+  </data>
+  <data name="Template_BoardingWelcome" xml:space="preserve">
+    <value>Signore e signori, benvenuti a bordo. {IF AIRLINE_NAME}Questo volo è operato da {AIRLINE_NAME}{END}{IF FLIGHT_NUMBER_DIGITS} da {FLIGHT_NUMBER_DIGITS}{END}{IF DESTINATION_CITY} a {DESTINATION_CITY}{END}. Per aiutarci a garantire una partenza puntuale, vi preghiamo di tenere libero il corridoio durante l'imbarco. {IF SCHED_DEP_LOCAL_24H}La nostra partenza è prevista per le {SCHED_DEP_LOCAL_24H}.{END} {IF FLIGHT_TIME}La durata del volo è di {FLIGHT_TIME}.{END} Vi preghiamo di riporre i bagagli a mano nelle cappelliere e di tenere gli oggetti di piccole dimensioni sotto il sedile di fronte a voi. Se siete seduti in una fila con l'uscita di emergenza di fianco oppure in un posto in prima fila vicino alla paratia, siete pregati di riporre tutti i vostri oggetti nelle cappelliere. Una volta riposto in sicurezza il bagaglio a mano, vi preghiamo di accomodarvi e allacciare la cintura di sicurezza. È vietato fumare a bordo. Grazie per l'attenzione.</value>
+  </data>
+  <data name="Template_BoardingWelcomePilot" xml:space="preserve">
+    <value>##Ruolo: Pilota
+
+Signore e Signori benvenuti a bordo, è il Comandante che parla. Stiamo terminando l'imbarco e prevediamo di decollare a breve. Tornerò per aggiornarvi sull'andamento del volo, ma nel frattempo vi prego di accomodarvi. Grazie per aver scelto di volare con noi oggi.</value>
+  </data>
+  <data name="Template_CabinDimTakeoff" xml:space="preserve">
+    <value>Signore e signori, a breve abbasseremo le luci in cabina. Potete accendere la luce sopra la vostra testa utilizzando i comandi lì vicino oppure nel bracciolo.</value>
+  </data>
+  <data name="Template_CallCabinSecureLanding" xml:space="preserve">
+    <value>Comandante, la cabina è pronta per l'atterraggio.</value>
+  </data>
+  <data name="Template_CallCabinSecureTakeoff" xml:space="preserve">
+    <value>Comandante, la cabina è pronta per il decollo.</value>
+  </data>
+  <data name="Template_CrewSeatsLanding" xml:space="preserve">
+    <value>##Ruolo: Pilota
+
+Personale di bordo pronti per l'atterraggio. Grazie.</value>
+  </data>
+  <data name="Template_CrewSeatsTakeoff" xml:space="preserve">
+    <value>##Ruolo: Pilota
+
+Personale di bordo pronti per il decollo.</value>
+  </data>
+  <data name="Template_CruiseElapsed50Percent" xml:space="preserve">
+    <value>A breve inizieremo il nostro servizio a bordo. Troverete tutti i dettagli nella brochure. Potrete inoltre acquistare una selezione di bevande calde, bibite e snack al bar. Accettiamo tutte le principali carte di credito e di debito. Grazie.</value>
+  </data>
+  <data name="Template_DepartureDelayed" xml:space="preserve">
+    <value>##Ruolo: Pilota
+
+Signore e signori, un aggiornamento dalla cabina. {IF DEP_STATUS}{DEP_STATUS}{END} {IF DEP_LATE}(attualmente {DEP_LATE} in ritardo rispetto all'orario previsto){END}. {IF SCHED_DEP_LOCAL_24H}L'orario di partenza previsto è {SCHED_DEP_LOCAL_24H}.{END} Vi terremo aggiornati e cercheremo di decollare il prima possibile. Grazie per la vostra pazienza.</value>
+  </data>
+  <data name="Template_DescentSeatbelts" xml:space="preserve">
+    <value>Signore e signori, a breve atterreremo a {IF DESTINATION_CITY}in {DESTINATION_CITY}{END}. Assicuratevi che il vostro bagaglio a mano sia riposto in modo sicuro nella cappelliera. Il tavolino deve essere ripiegato, i braccioli abbassati e le tendine del finestrino aperte. Cortesemente allacciate le cinture di sicurezza, tra poco saremo pronti per l'atterraggio. Vi preghiamo di aiutarci consegnandoci eventuali rifiuti, giornali o riviste che non desiderate conservare. I servizi igienici non sono più in funzione. Grazie.</value>
+  </data>
+  <data name="Template_DisarmDoors" xml:space="preserve">
+    <value>Personale di bordo disarmare le porte.</value>
+  </data>
+  <data name="Template_DisembarkStarted" xml:space="preserve">
+    <value>Signore e signori, durante lo sbarco, vi preghiamo di prestare attenzione e di tenervi ai corrimano mentre scendete le scale. Prestate attenzione ai vostri bambini e, per la vostra sicurezza, non camminate sotto l'ala.</value>
+  </data>
+  <data name="Template_FastenSeatbelt" xml:space="preserve">
+    <value>Signore e signori, il segnale di allacciare le cinture di sicurezza si è acceso. Vi preghiamo di tornare ai vostri posti e di allacciare le cinture.</value>
+  </data>
+  <data name="Template_PreSafetyBriefing" xml:space="preserve">
+    <value>Signore e signori, vi preghiamo di osservare attentamente il personale di bordo più vicino, tra poco vi illustreremo le procedure di sicurezza del nostro aereo. Grazie.</value>
+  </data>
+  <data name="Template_SafetyBriefing" xml:space="preserve">
+    <value>Signore e signori, benvenuti a bordo. Vi preghiamo di prestare attenzione alla segnaletica luminosa e alle istruzioni dell'equipaggio, comprese le seguenti procedure di sicurezza. La scheda di sicurezza che trovate nella tasca del vostro sedile contiene informazioni importanti sulle uscite di emergenza, sulle maschere d'ossigeno, sui giubbotti di salvataggio e sulla posizione di sicurezza. Le uscite di emergenza si trovano nella parte anteriore, sopra le ali e nella parte posteriore. Individuate l'uscita più vicina; potrebbe essere dietro di voi. L'illuminazione di emergenza vi guiderà verso l'uscita. In caso di emergenza, lasciate tutti i bagagli a bordo. La cintura di sicurezza si allaccia, si regola e si sgancia come mostrato dal personale di bordo. Deve essere allacciata ogni volta che si accende il segnale delle cinture di sicurezza e vi raccomandiamo di tenerla allacciata in ogni momento. In caso di interruzione dell'erogazione dell'aria, le maschere d'ossigeno cadranno dall'alto. Tirate la maschera verso di voi per attivare l'ossigeno. Posizionate la maschera su naso e bocca e respirate normalmente. Tenete la maschera in posizione con l'apposito elastico, tirate i lati per regolarla e indossate la vostra maschera prima di aiutare gli altri. Il tavolino deve ora essere riposto, i braccioli abbassati, le tendine dei finestrini aperte e la cintura di sicurezza allacciata. Grazie per volare con noi.</value>
+  </data>
+  <data name="Template_TopOfClimbPilot" xml:space="preserve">
+    <value>##Ruolo: Pilota
+
+Signore e signori, è il Comandante che parla. Abbiamo raggiunto la quota di crociera di {IF CRUISE_ALTITUDE_FT}{CRUISE_ALTITUDE_FT}{END} piedi e tutto procede per il meglio. {IF DESTINATION_CITY}Siamo in rotta verso {DESTINATION_CITY}{END}{IF FLIGHT_TIME}, con un tempo di volo totale stimato di {FLIGHT_TIME}{END}. Vi terremo aggiornati sui nostri progressi durante tutto il volo. Nel frattempo, accomodatevi, rilassatevi e godetevi il servizio a bordo. A nome dell'equipaggio, siamo lieti di avervi con noi oggi. Grazie.</value>
+  </data>
+  <data name="Template_TopOfDescentPilot" xml:space="preserve">
+    <value>##Ruolo: Pilota
+
+Signore e signori, è il Comandante che parla. Stiamo iniziando la discesa verso {IF DESTINATION_CITY}{DESTINATION_CITY}{END}. {IF DESTINATION_WEATHER}Le condizioni meteorologiche a destinazione sono attualmente {DESTINATION_WEATHER}{END}{IF DESTINATION_TEMPERATURE}, con temperature intorno a {DESTINATION_TEMPERATURE}{END}. {IF SCHED_ARR_LOCAL_24H}L'orario di arrivo previsto è {SCHED_ARR_LOCAL_24H} ora locale.{END} {IF ARR_STATUS}{ARR_STATUS}{END}Siamo lieti di avervi avuto con noi oggi, quindi da parte di tutto l'equipaggio, grazie per aver volato con noi.</value>
+  </data>
+</root>

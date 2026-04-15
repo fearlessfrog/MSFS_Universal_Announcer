@@ -88,6 +88,7 @@ Current Languages:
 - German (de) — `Strings.de.resx`
 - French (fr) — `Strings.fr.resx`
 - Spanish (es) — `Strings.es.resx`
+- Italian (it) — `Strings.it.resx`
 - Portuguese (Brazil) (pt-BR) — `Strings.pt-BR.resx`
 - Japanese (ja) — `Strings.ja.resx`
 - Chinese (Simplified) (zh-Hans) — `Strings.zh-Hans.resx`

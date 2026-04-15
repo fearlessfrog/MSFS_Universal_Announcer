@@ -24,6 +24,7 @@ User Interface language files:
   - `Strings.de.resx` → German
   - `Strings.fr.resx` → French
   - `Strings.es.resx` → Spanish
+  - `Strings.it.resx` → Italian
   - `Strings.pt-BR.resx` → Portuguese (Brazil)
   - `Strings.ja.resx` → Japanese
   - `Strings.zh-Hans.resx` → Chinese (Simplified)
@@ -34,6 +35,7 @@ Generated TTS Templates language files:
   - `TemplateStrings.de.resx` → German
   - `TemplateStrings.fr.resx` → French
   - `TemplateStrings.es.resx` → Spanish
+  - `TemplateStrings.it.resx` → Italian
   - `TemplateStrings.pt-BR.resx` → Portuguese (Brazil)
   - `TemplateStrings.ja.resx` → Japanese
   - `TemplateStrings.zh-Hans.resx` → Chinese (Simplified)
