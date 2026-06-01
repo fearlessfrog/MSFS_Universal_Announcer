@@ -132,10 +132,17 @@
   <data name="Audio_UseCabinIfDoorOpen" xml:space="preserve"><value>舱门打开时使用客舱音量（需要 GSX）</value></data>
   <data name="Audio_CameraGroup" xml:space="preserve"><value>视角音量（总音量倍数）</value></data>
   <data name="Audio_CockpitLabel" xml:space="preserve"><value>座舱（主视角）：</value></data>
-  <data name="Audio_CabinLabel" xml:space="preserve"><value>客舱（可能）：</value></data>
+  <data name="Audio_CabinLabel" xml:space="preserve"><value>Showcase（客舱）：</value></data>
   <data name="Audio_ExternalLabel" xml:space="preserve"><value>外部视角：</value></data>
   <data name="Audio_CameraDesc" xml:space="preserve"><value>无法可靠识别客舱，仅作近似判断；也可能是座舱快速视角。</value></data>
   <data name="Audio_AssumeQuickViewsAsCabin" xml:space="preserve"><value>将座舱快速视角视为客舱</value></data>
+  <data name="Audio_CabinNoiseWhenIdle" xml:space="preserve"><value>空闲时播放客舱噪音（无播报时）</value></data>
+  <data name="Audio_CabinNoiseWhenIdle_Tooltip" xml:space="preserve"><value>启用后，在活跃飞行中且当前没有播报播放时，可循环播放 CabinNoise 音轨。</value></data>
+  <data name="Audio_AddonCameraVolumeLabel" xml:space="preserve"><value>插件相机音量（MSFS 2024）：</value></data>
+  <data name="Audio_AddonCamera_Cockpit" xml:space="preserve"><value>驾驶舱</value></data>
+  <data name="Audio_AddonCamera_Cabin" xml:space="preserve"><value>客舱 / 展示</value></data>
+  <data name="Audio_AddonCamera_External" xml:space="preserve"><value>外部</value></data>
+  <data name="Audio_AddonCameraVolume_Tooltip" xml:space="preserve"><value>当其他插件使用 MSFS 2024 相机 API 且视角检测不可靠时，播报将使用此音量类别（与上方相同的倍率）。</value></data>
   <data name="Audio_ForegroundOnly" xml:space="preserve"><value>仅在 MSFS 或本应用获得焦点时播放</value></data>
   <data name="Audio_ForegroundOnly_Tooltip" xml:space="preserve"><value>启用后，仅当 Microsoft Flight Simulator 或此设置窗口获得焦点时才可听到广播。后台播放将静音继续。</value></data>
 

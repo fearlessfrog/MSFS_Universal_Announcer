@@ -71,10 +71,17 @@
   <data name="Audio_UseCabinIfDoorOpen" xml:space="preserve"><value>Kabinenlautstärke bei offener Tür verwenden (benötigt GSX)</value></data>
   <data name="Audio_CameraGroup" xml:space="preserve"><value>Kamerazustand-Lautstärke (Multiplikator der Gesamtlautstärke)</value></data>
   <data name="Audio_CockpitLabel" xml:space="preserve"><value>Cockpit (Hauptansicht):</value></data>
-  <data name="Audio_CabinLabel" xml:space="preserve"><value>Kabine (evtl.):</value></data>
+  <data name="Audio_CabinLabel" xml:space="preserve"><value>Showcase (Kabine):</value></data>
   <data name="Audio_ExternalLabel" xml:space="preserve"><value>Außenansicht:</value></data>
   <data name="Audio_CameraDesc" xml:space="preserve"><value>Keine einfache Erkennung der Kabine — Näherung. Kann auch Cockpit-QuickViews sein.</value></data>
   <data name="Audio_AssumeQuickViewsAsCabin" xml:space="preserve"><value>Cockpit-QuickViews als Kabine annehmen</value></data>
+  <data name="Audio_CabinNoiseWhenIdle" xml:space="preserve"><value>Kabinenrauschen im Leerlauf abspielen (keine Ansage aktiv)</value></data>
+  <data name="Audio_CabinNoiseWhenIdle_Tooltip" xml:space="preserve"><value>Wenn aktiviert, kann während aktiver Flugsessions eine Schleife von CabinNoise abgespielt werden, solange keine Ansage läuft.</value></data>
+  <data name="Audio_AddonCameraVolumeLabel" xml:space="preserve"><value>Add-on-Kamera-Lautstärke (MSFS 2024):</value></data>
+  <data name="Audio_AddonCamera_Cockpit" xml:space="preserve"><value>Cockpit</value></data>
+  <data name="Audio_AddonCamera_Cabin" xml:space="preserve"><value>Kabine / Showcase</value></data>
+  <data name="Audio_AddonCamera_External" xml:space="preserve"><value>Außenansicht</value></data>
+  <data name="Audio_AddonCameraVolume_Tooltip" xml:space="preserve"><value>Wenn ein anderes Add-on die MSFS-2024-Kamera-API nutzt und die Erkennung der Ansicht unzuverlässig ist, verwenden Ansagen diese Lautstärkekategorie (gleiche Multiplikatoren wie oben).</value></data>
   <data name="Audio_ForegroundOnly" xml:space="preserve"><value>Nur abspielen, wenn MSFS oder diese App den Fokus hat</value></data>
   <data name="Audio_ForegroundOnly_Tooltip" xml:space="preserve"><value>Wenn aktiviert, sind Ansagen nur hörbar, wenn Microsoft Flight Simulator oder dieses Einstellungsfenster den Fokus hat. Audio läuft im Hintergrund stumm weiter.</value></data>
   <data name="Audio_MusicVolumeLabel" xml:space="preserve"><value>Musiklautstärke:</value></data>

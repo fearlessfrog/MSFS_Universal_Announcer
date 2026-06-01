@@ -398,7 +398,14 @@ GitHub를 열어 최신 버전을 다운로드하세요.</value></data>
   <data name="Tweaks_PmdgHowToLink" xml:space="preserve"><value>PMDG SDK 데이터 사용 방법</value></data>
 
   <data name="Audio_AssumeQuickViewsAsCabin" xml:space="preserve"><value>콕핏 퀵뷰를 객실로 간주</value></data>
-  <data name="Audio_CabinLabel" xml:space="preserve"><value>객실(추정):</value></data>
+  <data name="Audio_CabinNoiseWhenIdle" xml:space="preserve"><value>유휴 시 객실 소음 재생(안내 방송 없음)</value></data>
+  <data name="Audio_CabinNoiseWhenIdle_Tooltip" xml:space="preserve"><value>활성화하면 활성 비행 중 안내 방송이 재생되지 않을 때 CabinNoise 트랙을 반복 재생할 수 있습니다.</value></data>
+  <data name="Audio_AddonCameraVolumeLabel" xml:space="preserve"><value>애드온 카메라 음량(MSFS 2024):</value></data>
+  <data name="Audio_AddonCamera_Cockpit" xml:space="preserve"><value>조종실</value></data>
+  <data name="Audio_AddonCamera_Cabin" xml:space="preserve"><value>객실 / 쇼케이스</value></data>
+  <data name="Audio_AddonCamera_External" xml:space="preserve"><value>외부</value></data>
+  <data name="Audio_AddonCameraVolume_Tooltip" xml:space="preserve"><value>다른 애드온이 MSFS 2024 카메라 API를 사용하고 뷰 감지가 불안정할 때, 안내는 이 음량 범주를 사용합니다(위의 배율과 동일).</value></data>
+  <data name="Audio_CabinLabel" xml:space="preserve"><value>쇼케이스(객실):</value></data>
   <data name="Audio_CameraDesc" xml:space="preserve"><value>객실 여부를 쉽게 알 수 없어 추정합니다. 콕핏 퀵뷰일 수도 있습니다.</value></data>
   <data name="Audio_CameraGroup" xml:space="preserve"><value>카메라 상태별 볼륨 배수(마스터 위에 적용)</value></data>
   <data name="Audio_CameraStateEnabled" xml:space="preserve"><value>카메라 기반 볼륨 사용</value></data>

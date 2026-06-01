@@ -375,7 +375,14 @@ Pour ouvrir les paramètres ou contrôler l’application :
   <data name="Announcements_Enabled" xml:space="preserve"><value>Annonces activées :</value></data>
   <data name="Announcements_UseDefaultIfMissing" xml:space="preserve"><value>Utiliser le dossier Default si les fichiers spécifiques à la compagnie manquent</value></data>
   <data name="Audio_AssumeQuickViewsAsCabin" xml:space="preserve"><value>Considérer les QuickViews cockpit comme cabine</value></data>
-  <data name="Audio_CabinLabel" xml:space="preserve"><value>Cabine (approx.) :</value></data>
+  <data name="Audio_CabinNoiseWhenIdle" xml:space="preserve"><value>Jouer le bruit de cabine à l'arrêt (aucune annonce en cours)</value></data>
+  <data name="Audio_CabinNoiseWhenIdle_Tooltip" xml:space="preserve"><value>Lorsqu'elle est activée, une piste CabinNoise en boucle peut être lue pendant les sessions de vol actives lorsqu'aucune annonce n'est en cours de lecture.</value></data>
+  <data name="Audio_AddonCameraVolumeLabel" xml:space="preserve"><value>Volume caméra add-on (MSFS 2024) :</value></data>
+  <data name="Audio_AddonCamera_Cockpit" xml:space="preserve"><value>Cockpit</value></data>
+  <data name="Audio_AddonCamera_Cabin" xml:space="preserve"><value>Cabine / Showcase</value></data>
+  <data name="Audio_AddonCamera_External" xml:space="preserve"><value>Extérieur</value></data>
+  <data name="Audio_AddonCameraVolume_Tooltip" xml:space="preserve"><value>Lorsqu'un autre add-on utilise l'API Caméra MSFS 2024 et que la détection de vue est peu fiable, les annonces utilisent cette catégorie de volume (mêmes multiplicateurs qu'au-dessus).</value></data>
+  <data name="Audio_CabinLabel" xml:space="preserve"><value>Showcase (cabine) :</value></data>
   <data name="Audio_CameraDesc" xml:space="preserve"><value>Pas de moyen simple pour détecter la cabine — estimation. Peut aussi être des QuickViews cockpit.</value></data>
 
   <!-- Advanced Camera Volume dialog -->

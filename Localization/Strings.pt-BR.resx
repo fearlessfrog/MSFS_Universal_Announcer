@@ -75,7 +75,7 @@
   <data name="Audio_UseCabinIfDoorOpen" xml:space="preserve"><value>Usar volume da cabine se a porta estiver aberta (requer GSX)</value></data>
   <data name="Audio_CameraGroup" xml:space="preserve"><value>Multiplicadores de volume por estado de câmera (sobre o volume mestre)</value></data>
   <data name="Audio_CockpitLabel" xml:space="preserve"><value>Cabine de comando (vista principal):</value></data>
-  <data name="Audio_CabinLabel" xml:space="preserve"><value>Cabine (aprox.):</value></data>
+  <data name="Audio_CabinLabel" xml:space="preserve"><value>Showcase (cabine):</value></data>
   <data name="Audio_ExternalLabel" xml:space="preserve"><value>Vistas externas:</value></data>
   <data name="Audio_ForegroundOnly" xml:space="preserve"><value>Reproduzir apenas quando o MSFS ou este app estiver em foco</value></data>
   <data name="Audio_MusicVolumeLabel" xml:space="preserve"><value>Volume da música:</value></data>
@@ -418,6 +418,13 @@ Um breve download será iniciado.</value></data>
   <data name="Tray_Volume" xml:space="preserve"><value>Volume</value></data>
 
   <data name="Audio_AssumeQuickViewsAsCabin" xml:space="preserve"><value>Tratar QuickViews do cockpit como cabine</value></data>
+  <data name="Audio_CabinNoiseWhenIdle" xml:space="preserve"><value>Reproduzir ruído de cabine em inatividade (sem anúncio)</value></data>
+  <data name="Audio_CabinNoiseWhenIdle_Tooltip" xml:space="preserve"><value>Quando ativado, uma faixa CabinNoise em loop pode ser reproduzida durante voos ativos quando nenhum anúncio estiver em reprodução.</value></data>
+  <data name="Audio_AddonCameraVolumeLabel" xml:space="preserve"><value>Volume da câmera de add-on (MSFS 2024):</value></data>
+  <data name="Audio_AddonCamera_Cockpit" xml:space="preserve"><value>Cockpit</value></data>
+  <data name="Audio_AddonCamera_Cabin" xml:space="preserve"><value>Cabine / Showcase</value></data>
+  <data name="Audio_AddonCamera_External" xml:space="preserve"><value>Externo</value></data>
+  <data name="Audio_AddonCameraVolume_Tooltip" xml:space="preserve"><value>Quando outro add-on usa a API de câmera do MSFS 2024 e a detecção de vista não é confiável, os anúncios usam esta categoria de volume (mesmos multiplicadores acima).</value></data>
   <data name="Audio_CameraDesc" xml:space="preserve"><value>Não é simples saber se é cabine; é uma estimativa. Pode ser QuickViews do cockpit.</value></data>
 
   <data name="Error_AlreadyRunningMessage" xml:space="preserve"><value>Outra instância já está em execução.</value></data>

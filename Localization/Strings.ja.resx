@@ -182,8 +182,15 @@
   <data name="Audio_PaAudioMix" xml:space="preserve"><value>PA オーディオミックス (客室スピーカーのノイズを再現)</value></data>
   <data name="Audio_UseCabinIfDoorOpen" xml:space="preserve"><value>ドア開放時は客室音量を使用 (GSX が必要)</value></data>
   <data name="Audio_AssumeQuickViewsAsCabin" xml:space="preserve"><value>コックピットのクイックビューを客室として扱う</value></data>
+  <data name="Audio_CabinNoiseWhenIdle" xml:space="preserve"><value>アイドル時に客室ノイズを再生（アナウンス再生中は除く）</value></data>
+  <data name="Audio_CabinNoiseWhenIdle_Tooltip" xml:space="preserve"><value>有効にすると、アナウンス再生中でないアクティブなフライト中に CabinNoise トラックをループ再生できます。</value></data>
+  <data name="Audio_AddonCameraVolumeLabel" xml:space="preserve"><value>アドオンカメラ音量（MSFS 2024）:</value></data>
+  <data name="Audio_AddonCamera_Cockpit" xml:space="preserve"><value>コックピット</value></data>
+  <data name="Audio_AddonCamera_Cabin" xml:space="preserve"><value>客室 / ショーケース</value></data>
+  <data name="Audio_AddonCamera_External" xml:space="preserve"><value>外部</value></data>
+  <data name="Audio_AddonCameraVolume_Tooltip" xml:space="preserve"><value>他のアドオンが MSFS 2024 カメラ API を使用し、ビュー検出が信頼できない場合、アナウンスはこの音量カテゴリを使用します（上記と同じ倍率）。</value></data>
   <data name="Audio_CockpitLabel" xml:space="preserve"><value>コックピット (メインビュー):</value></data>
-  <data name="Audio_CabinLabel" xml:space="preserve"><value>客室 (推定):</value></data>
+  <data name="Audio_CabinLabel" xml:space="preserve"><value>ショーケース (客室):</value></data>
   <data name="Audio_ExternalLabel" xml:space="preserve"><value>外部ビュー:</value></data>
   <data name="Audio_ForegroundOnly" xml:space="preserve"><value>MSFS またはこのアプリがフォーカス中のみ再生</value></data>
   <data name="Audio_ForegroundOnly_Tooltip" xml:space="preserve"><value>有効にすると、Microsoft Flight Simulator またはこの設定ウィンドウにフォーカスがあるときだけアナウンスが聞こえます。バックグラウンドでは無音のまま再生は続行されます。</value></data>
