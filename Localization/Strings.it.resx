@@ -104,13 +104,13 @@
   </data>
   <!-- Status Tab - Overrides UI -->
   <data name="Status_OverridesLabel" xml:space="preserve">
-    <value>Sovrascrizioni:</value>
+    <value>Sovrascrivi:</value>
   </data>
   <data name="Status_OverrideAircraftPlaceholder" xml:space="preserve">
-    <value>ICAO aereo (p. ej., B738)</value>
+    <value>ICAO Aereo (es. B738)</value>
   </data>
   <data name="Status_OverrideAirlinePlaceholder" xml:space="preserve">
-    <value>ICAO compagnie aerea (p. ej., KLM)</value>
+    <value>ICAO Compagnie aerea (es. KLM)</value>
   </data>
   <data name="Status_OverrideReset" xml:space="preserve">
     <value>Reset</value>
@@ -137,7 +137,7 @@
     <value>Integrazioni</value>
   </data>
   <data name="Tab_Generated" xml:space="preserve">
-    <value>Generado</value>
+    <value>Personalizzazione Audio</value>
   </data>
   <data name="Tab_HelpAbout" xml:space="preserve">
     <value>Aiuto &amp; Informazioni</value>
@@ -253,10 +253,10 @@
     <value>Chiudi App</value>
   </data>
   <data name="Cbx_StartWithMsfs" xml:space="preserve">
-    <value>Avvia con MSFS</value>
+    <value>Avvia APP con MSFS</value>
   </data>
   <data name="Cbx_AlwaysShowWindow" xml:space="preserve">
-    <value>Mostra questa finestra all'avvio dell'app</value>
+    <value>Mostra questa finestra all'avvio dell'App</value>
   </data>
   <data name="Status_WaitingFor" xml:space="preserve">
     <value>In attesa di: {0}</value>
@@ -265,7 +265,7 @@
     <value>Prossimo annuncio: {0}</value>
   </data>
   <data name="Btn_PlayNext" xml:space="preserve">
-    <value>Riproduci prossimo</value>
+    <value>Riproduci prossimo annuncio</value>
   </data>
   <data name="Tray_WaitingForPrefix" xml:space="preserve">
     <value>In attesa di:</value>
@@ -280,7 +280,7 @@
     <value>Prossimo annuncio: {0}</value>
   </data>
   <data name="Tray_PlayNext" xml:space="preserve">
-    <value>Riproduci prossimo</value>
+    <value>Riproduci prossimo annuncio</value>
   </data>
   <data name="SoundFiles_LocationGroup" xml:space="preserve">
     <value>Directory files audio</value>
@@ -415,7 +415,7 @@ Log: {1}</value>
     <value>Nome utente modificato: fai clic su "Recupera l'ultimo piano di volo generato" per aggiornarlo</value>
   </data>
   <data name="Integrations_SimBriefDescription" xml:space="preserve">
-    <value>Inserisci il tuo nome utente di SimBrief (il nome, non i numeri) per recuperare automaticamente i codici ICAO dell'aereo dal tuo ultimo piano di volo. Questo codice viene utilizzato per gli annunci specifici dell'aereo. Se il campo è vuoto o non disponibile, il sistema utilizzerà i dati dell'aereo di MSFS.</value>
+    <value>Inserisci il nome utente di SimBrief (il nome, non i numeri) per recuperare automaticamente il codice ICAO dell'aereo dal tuo ultimo piano di volo. Il codice viene utilizzato per eseguire gli annunci specifici della Compagnia Aerea. Se il campo è vuoto o non disponibile, il sistema utilizzerà i dati dell'aereo di MSFS.</value>
   </data>
   <!-- Mensajes comunes -->
   <data name="Msg_CantReachGitHub_Format" xml:space="preserve">
@@ -630,7 +630,7 @@ Inizierà un breve download.</value>
     <value>Test della luce</value>
   </data>
   <data name="Tray_Exit" xml:space="preserve">
-    <value>Uscita</value>
+    <value>Chiudi App</value>
   </data>
   <data name="Tray_CurrentStateAutoDetecting" xml:space="preserve">
     <value>Rilevamento automatico...</value>
@@ -700,7 +700,7 @@ Clicca qui per visitare GitHub e scaricare la versione più recente.</value>
     <value>Avviso all'equipaggio di sedersi per l'atterraggio AGL (ft):</value>
   </data>
   <data name="Tweaks_UseBoardingMusicFallback" xml:space="preserve">
-    <value>Usa l'audio del "BoardingMusic" quando è mancante il file "AfterLandingMusic"</value>
+    <value>Esegui il file "BoardingMusic" quando non è presente l'audio "AfterLandingMusic"</value>
   </data>
   <data name="Tweaks_SkipFirstBoardingWelcome" xml:space="preserve">
     <value>Salta il primo "BoardingWelcome"</value>
@@ -743,13 +743,13 @@ Clicca qui per visitare GitHub e scaricare la versione più recente.</value>
     <value>Sostituire il file .ogg esistente (se Airline txt)</value>
   </data>
   <data name="Generated_ReplaceExistingOggAlways" xml:space="preserve">
-    <value>Reemplazar .ogg siempre</value>
+    <value>Ripeti file .ogg esistenti Sempre</value>
   </data>
   <data name="Generated_OnlyDynamic" xml:space="preserve">
     <value>Rigenera solo se dinamico</value>
   </data>
   <data name="Generated_AutoCreateFolder" xml:space="preserve">
-    <value>Creazione automatica della cartella mancante della Compagnia aerea</value>
+    <value>Crea automatica la cartella della Compagnia aerea</value>
   </data>
   <data name="Generated_PickRolesByCountry" xml:space="preserve">
     <value>Selezione automatica dei ruoli in base al Paese della Compagnia aerea</value>
@@ -921,7 +921,7 @@ Clicca qui per visitare GitHub e scaricare la versione più recente.</value>
     <value>Status: Disattivato</value>
   </data>
   <data name="Integrations_GsxDescription" xml:space="preserve">
-    <value>Quando abilitata, gli annunci verranno attivati ​​dallo stato di imbarco di GSX. Sono supportati anche il rifornimento e lo sbarco. Se non si dispone di GSX, disabilitare questa opzione e utilizzare la "Logo Lights".</value>
+    <value>Quando abilitata, gli annunci verranno attivati ​​dallo stato di imbarco di GSX. Sono supportati anche il rifornimento e lo sbarco. Se non si dispone di GSX, disabilitare questa opzione e utilizzare le "Logo Lights".</value>
   </data>
   <data name="Integrations_GsxStatusEnabledDetail" xml:space="preserve">
     <value>Status: Abilitato - lo stato di imbarco di GSX sovrascriverà l'attivazione delle "Logo Lights"</value>
@@ -1028,7 +1028,7 @@ Per accedere alle impostazioni o controllare l'applicazione:
   </data>
   <!-- Advanced Camera Volume dialog -->
   <data name="CameraVolume_Title" xml:space="preserve">
-    <value>Volume della telecamera avanzata</value>
+    <value>Volume telecamera avanzata</value>
   </data>
   <data name="CameraVolume_AircraftFormat" xml:space="preserve">
     <value>Aereo: {0}  (Modello: {1})</value>
@@ -1112,10 +1112,10 @@ Per accedere alle impostazioni o controllare l'applicazione:
     <value>Volume:</value>
   </data>
   <data name="Audio_ForegroundOnly" xml:space="preserve">
-    <value>Riproduci solo quando MSFS o questa app sono in primo piano</value>
+    <value>Riproduci solo quando MSFS o questa App sono in primo piano</value>
   </data>
   <data name="Audio_MusicVolumeLabel" xml:space="preserve">
-    <value>Volume della musica:</value>
+    <value>Volume musica:</value>
   </data>
   <data name="Audio_ForegroundOnly_Tooltip" xml:space="preserve">
     <value>Quando attivata, gli annunci sono udibili solo quando MSFS o questa finestra sono in primo piano. L'audio continua a essere riprodotto silenziosamente in background.</value>
@@ -1132,7 +1132,7 @@ Per accedere alle impostazioni o controllare l'applicazione:
   </data>
   <!-- Tweaks: Landing Cabin Reactions -->
   <data name="Tweaks_LandingCabinReactions" xml:space="preserve">
-    <value>Reacciones de cabina en aterrizaje</value>
+    <value>Reazioni dai passeggeri per l'atterraggio</value>
   </data>
   <data name="Tweaks_LandingCabinReactions_Tooltip" xml:space="preserve">
     <value>Riproduci suoni della cabina in base alla qualità dell'atterraggio (applausi per atterraggi morbidi, reazioni per atterraggi bruschi)</value>
