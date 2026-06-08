@@ -307,4 +307,16 @@ These files support the same tagging system as other announcements:
 
 Files are searched in airline-specific folders first, then the Default folder. If no custom file is found, embedded default sounds are used.
 
+Default sounds are included in the app and does not need to be a separate files. Sample landing reaction files are available here:
+
+- [DefaultSounds/LandingGreat.ogg](https://github.com/fearlessfrog/MSFS_Universal_Announcer/blob/main/DefaultSounds/LandingGreat.ogg)
+- [DefaultSounds/LandingTerrible.ogg](https://github.com/fearlessfrog/MSFS_Universal_Announcer/blob/main/DefaultSounds/LandingTerrible.ogg)
+
 **Note**: This feature is **disabled by default** and must be enabled in **Settings → Tweaks**.
+
+### Cabin Noise
+
+When **Play cabin noise when idle** is enabled in **Settings → Audio**, the app can loop `CabinNoise.ogg` during active flight sessions whenever no announcement is currently playing. It loops after boarding is complete and until deplane to simulate people in the cabin making ambient noise.
+
+A default sound is included in the app and does not need to be a separate file. You can place your own `CabinNoise.ogg` in your airline folder or `Default` folder. A sample file is available here:
+[DefaultSounds/CabinNoise.ogg](https://github.com/fearlessfrog/MSFS_Universal_Announcer/blob/main/DefaultSounds/CabinNoise.ogg)
