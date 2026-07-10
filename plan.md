@@ -16,7 +16,9 @@
 
 - Check AfterLandingMusic is tied to music volume, as possible bug
   
-- MSFS Toolbar have manual 'Seatbelts' trigger button
+- MSFS Toolbar have manual 'Seatbelts' trigger button, plus any new Turbulence and new calls for manual roleplaying.
+  
+- Show the last landing stats in the app and toolbar for longer, so they don't disappear as the announcements continue. Plus investigate issue with cabindim etc.
 
 - iFly and CSS pack 'Export pack' feature, that converts and renames current selected airline files to alternative names/formats (wav, mp3 etc).
 
