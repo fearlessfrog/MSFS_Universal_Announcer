@@ -43,7 +43,7 @@ Since logging starts immediately when debug mode is enabled, it's best to:
 
 ### Preferred Method: GitHub Issues
 
-1. Go to [https://github.com/fearlessfrog/UniversalAnnouncer/issues](https://github.com/fearlessfrog/UniversalAnnouncer/issues)
+1. Go to [https://github.com/fearlessfrog/MSFS_UniversalAnnouncer/issues](https://github.com/fearlessfrog/MSFS_UniversalAnnouncer/issues)
 2. Create a new issue describing the problem
 3. Attach the `debug.log` text file from your `%APPDATA%\UniversalAnnouncer` folder
 4. You can also include your `config.json` file if relevant—it contains no keys or personal information, just your settings
