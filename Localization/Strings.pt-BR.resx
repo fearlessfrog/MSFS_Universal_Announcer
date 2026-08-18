@@ -226,6 +226,7 @@ Para abrir as configurações ou controlar o aplicativo:
   <data name="Status_Aircraft" xml:space="preserve"><value>Aeronave: {0}</value></data>
   <data name="Status_AircraftNone" xml:space="preserve"><value>Sem dados de aeronave ou companhia</value></data>
   <data name="Status_CurrentlyPlaying" xml:space="preserve"><value>Reproduzindo: {0}</value></data>
+  <data name="Status_LastLanding" xml:space="preserve"><value>Último pouso: {0}</value></data>
   <data name="Status_MSFS" xml:space="preserve"><value>MSFS: {0}</value></data>
   <data name="None" xml:space="preserve"><value>Nenhum</value></data>
   <data name="Status_Disconnected" xml:space="preserve"><value>Desconectado</value></data>
@@ -419,12 +420,7 @@ Um breve download será iniciado.</value></data>
 
   <data name="Audio_AssumeQuickViewsAsCabin" xml:space="preserve"><value>Tratar QuickViews do cockpit como cabine</value></data>
   <data name="Audio_CabinNoiseWhenIdle" xml:space="preserve"><value>Reproduzir ruído de cabine em inatividade (sem anúncio)</value></data>
-  <data name="Audio_CabinNoiseWhenIdle_Tooltip" xml:space="preserve"><value>Quando ativado, uma faixa CabinNoise em loop pode ser reproduzida durante voos ativos quando nenhum anúncio estiver em reprodução.</value></data>
-  <data name="Audio_AddonCameraVolumeLabel" xml:space="preserve"><value>Volume da câmera de add-on (MSFS 2024):</value></data>
-  <data name="Audio_AddonCamera_Cockpit" xml:space="preserve"><value>Cockpit</value></data>
-  <data name="Audio_AddonCamera_Cabin" xml:space="preserve"><value>Cabine / Showcase</value></data>
-  <data name="Audio_AddonCamera_External" xml:space="preserve"><value>Externo</value></data>
-  <data name="Audio_AddonCameraVolume_Tooltip" xml:space="preserve"><value>Quando outro add-on usa a API de câmera do MSFS 2024 e a detecção de vista não é confiável, os anúncios usam esta categoria de volume (mesmos multiplicadores acima).</value></data>
+  <data name="Audio_CabinNoiseWhenIdle_Tooltip" xml:space="preserve"><value>Quando ativado, uma faixa CabinNoise em loop pode ser reproduzida durante voos ativos após o embarque ser concluído e antes do desembarque começar, quando nenhum anúncio estiver em reprodução.</value></data>
   <data name="Audio_CameraDesc" xml:space="preserve"><value>Não é simples saber se é cabine; é uma estimativa. Pode ser QuickViews do cockpit.</value></data>
 
   <data name="Error_AlreadyRunningMessage" xml:space="preserve"><value>Outra instância já está em execução.</value></data>

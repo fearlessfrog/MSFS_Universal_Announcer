@@ -90,6 +90,9 @@
   <data name="Status_CurrentlyPlaying" xml:space="preserve">
     <value>In riproduzione: {0}</value>
   </data>
+  <data name="Status_LastLanding" xml:space="preserve">
+    <value>Ultimo atterraggio: {0}</value>
+  </data>
   <data name="Status_MSFS" xml:space="preserve">
     <value>MSFS: {0}</value>
   </data>
@@ -1076,12 +1079,7 @@ Per accedere alle impostazioni o controllare l'applicazione:
     <value>Utilizza la QuickView della cabina di pilotaggio come Showcase/Cabina</value>
   </data>
   <data name="Audio_CabinNoiseWhenIdle" xml:space="preserve"><value>Riproduci rumore cabina inattivo (nessun annuncio in corso)</value></data>
-  <data name="Audio_CabinNoiseWhenIdle_Tooltip" xml:space="preserve"><value>Se abilitato, durante i voli attivi può essere riprodotta in loop una traccia CabinNoise quando non è in riproduzione alcun annuncio.</value></data>
-  <data name="Audio_AddonCameraVolumeLabel" xml:space="preserve"><value>Volume telecamera add-on (MSFS 2024):</value></data>
-  <data name="Audio_AddonCamera_Cockpit" xml:space="preserve"><value>Cockpit</value></data>
-  <data name="Audio_AddonCamera_Cabin" xml:space="preserve"><value>Cabina / Showcase</value></data>
-  <data name="Audio_AddonCamera_External" xml:space="preserve"><value>Esterno</value></data>
-  <data name="Audio_AddonCameraVolume_Tooltip" xml:space="preserve"><value>Quando un altro add-on usa l'API fotocamera MSFS 2024 e il rilevamento della vista non è affidabile, gli annunci usano questa categoria di volume (stessi moltiplicatori di sopra).</value></data>
+  <data name="Audio_CabinNoiseWhenIdle_Tooltip" xml:space="preserve"><value>Se abilitato, durante i voli attivi può essere riprodotta in loop una traccia CabinNoise dopo il completamento dell'imbarco e prima dell'inizio dello sbarco, quando non è in riproduzione alcun annuncio.</value></data>
   <data name="Audio_CabinLabel" xml:space="preserve">
     <value>Drone:</value>
   </data>

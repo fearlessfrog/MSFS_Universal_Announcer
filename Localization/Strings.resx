@@ -65,6 +65,9 @@
   <data name="Status_CurrentlyPlaying" xml:space="preserve">
     <value>Currently Playing: {0}</value>
   </data>
+  <data name="Status_LastLanding" xml:space="preserve">
+    <value>Last landing: {0}</value>
+  </data>
   <data name="Status_MSFS" xml:space="preserve">
     <value>MSFS: {0}</value>
   </data>
@@ -160,13 +163,8 @@
   <data name="Audio_ForegroundOnly" xml:space="preserve"><value>Only play when MSFS or this app is focused</value></data>
   <data name="Audio_ForegroundOnly_Tooltip" xml:space="preserve"><value>When enabled, announcements are only audible when Microsoft Flight Simulator or this Settings window has focus. Audio continues silently in the background.</value></data>
   <data name="Audio_CabinNoiseWhenIdle" xml:space="preserve"><value>Play cabin noise when idle (no announcement playing)</value></data>
-  <data name="Audio_CabinNoiseWhenIdle_Tooltip" xml:space="preserve"><value>When enabled, a looping CabinNoise track can play during active flight sessions whenever no announcement is currently playing.</value></data>
+  <data name="Audio_CabinNoiseWhenIdle_Tooltip" xml:space="preserve"><value>When enabled, a looping CabinNoise track can play during active flight sessions after boarding is complete and before deboarding starts, whenever no announcement is currently playing.</value></data>
   <data name="Audio_AssumeQuickViewsAsCabin_Tooltip" xml:space="preserve"><value>When enabled and camera is Cockpit (2) with Substate Quickview (3), treat as Cabin for volume.</value></data>
-  <data name="Audio_AddonCameraVolumeLabel" xml:space="preserve"><value>Add-on camera volume (MSFS 2024):</value></data>
-  <data name="Audio_AddonCamera_Cockpit" xml:space="preserve"><value>Cockpit</value></data>
-  <data name="Audio_AddonCamera_Cabin" xml:space="preserve"><value>Cabin / Showcase</value></data>
-  <data name="Audio_AddonCamera_External" xml:space="preserve"><value>External</value></data>
-  <data name="Audio_AddonCameraVolume_Tooltip" xml:space="preserve"><value>When another add-on uses the MSFS 2024 Camera API and view detection is unreliable, announcements use this volume category (same multipliers as above).</value></data>
   <data name="Audio_MusicVolumeLabel" xml:space="preserve"><value>Music Volume:</value></data>
 
   <!-- Sound Files tab -->
