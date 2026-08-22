@@ -14,12 +14,8 @@
 
 - New AfterSafetyBriefing (iFly calls this 'BeforeTakeoffSafetyCheck') announcement step?
 
-- Check AfterLandingMusic is tied to music volume, as possible bug
-  
-- MSFS Toolbar have manual 'Seatbelts' trigger button, plus any new Turbulence and new calls for manual roleplaying.
-  
-- Show the last landing stats in the app and toolbar for longer, so they don't disappear as the announcements continue. Plus investigate issue with cabindim etc.
-
 - iFly and CSS pack 'Export pack' feature, that converts and renames current selected airline files to alternative names/formats (wav, mp3 etc).
 
+- Some sort of basic X-Plane 11 and 12 support using a cpl bridge for signals. Main issue is would be windows only that could upset some XP heads.
+  
 Feel free to create a blank issue if you want to comment on any of these in terms of importance.
