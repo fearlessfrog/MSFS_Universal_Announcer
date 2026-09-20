@@ -1,0 +1,69 @@
+{
+  "title": "Universal Announcer User Manual",
+  "appVersion": "0.9.9.7",
+  "revision": "2026-09-20.4",
+  "status": "",
+  "sourceCommit": "5b55c0b1bebf5a45d4ecfc9d1026025c570fe8f7",
+  "screenshots": [
+    {
+      "id": "tray",
+      "file": "01-tray.png",
+      "caption": "Right-click the tray icon to find Settings and flight controls. This example is disconnected.",
+      "printWidthMm": 51
+    },
+    {
+      "id": "sounds",
+      "file": "02-sound-files.png",
+      "caption": "This example calls the sound root UA. Select a file to enable Preview.",
+      "printWidthMm": 132
+    },
+    {
+      "id": "simbrief",
+      "file": "03-simbrief.png",
+      "caption": "The retrieved plan is BAW, A20N, from EGLL to EHAM. Check your own flight details.",
+      "printWidthMm": 135
+    },
+    {
+      "id": "toolbar",
+      "file": "04-toolbar.png",
+      "caption": "Connected at the gate, waiting for the logo light or GSX boarding.",
+      "printWidthMm": 142
+    },
+    {
+      "id": "audio",
+      "file": "05-camera-volumes.png",
+      "caption": "80% main volume, with Cockpit 25%, Cabin 100% and External 0%.",
+      "printWidthMm": 142
+    },
+    {
+      "id": "advanced",
+      "file": "06-camera-rules.png",
+      "caption": "Example B738 rules: Quickview 2 uses Cabin; Quickviews 3 and 4 are muted.",
+      "printWidthMm": 165
+    },
+    {
+      "id": "generated",
+      "file": "07-generated.png",
+      "caption": "Example with replacement and automatic role selection enabled. These are optional settings.",
+      "printWidthMm": 134
+    },
+    {
+      "id": "roles",
+      "file": "08-roles.png",
+      "caption": "BAW uses Ryan for Pilot and Sonia for Flight Attendant on the Edge provider.",
+      "printWidthMm": 120
+    },
+    {
+      "id": "chaseplane",
+      "file": "09-chaseplane.png",
+      "caption": "General Functionality: Enable 3rd party plugins is ON.",
+      "printWidthMm": 164
+    },
+    {
+      "id": "discord",
+      "file": "10-discord-channels.png",
+      "caption": "Either pack category is suitable. Fenix ownership is not required.",
+      "printWidthMm": 68
+    }
+  ]
+}

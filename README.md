@@ -1,5 +1,14 @@
 # Universal Announcer
 
+## User manual
+
+The new user manual brings together the latest information on installation, setup, flight steps and advanced features. Start here for current instructions.
+
+- [Read the HTML manual](https://fearlessfrog.github.io/MSFS_Universal_Announcer/manual/)
+- [Download the PDF manual](https://fearlessfrog.github.io/MSFS_Universal_Announcer/manual/UniversalAnnouncer-User-Manual.pdf)
+
+The older guides and the information below are kept for reference. Where they differ, follow the user manual.
+
 ![Universal Announcer Logo](images/logo.jpg)
 
 Plays Fenix A320 compatible Cabin Announcements on any aircraft in Microsoft Flight Simulator.

@@ -1,0 +1,345 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="description" content="Installation, flight steps, sound packs, camera volumes and generated announcements for Universal Announcer."><title>Universal Announcer User Manual</title><link rel="stylesheet" href="assets/manual.css"></head>
+<body><a class="skip" href="#getting-started">Skip to getting started</a><header class="screen-bar"><a href="#cover">Universal Announcer</a><nav aria-label="Manual actions"><a href="#contents-title">Contents</a><a href="UniversalAnnouncer-User-Manual.pdf" download>Download PDF</a></nav></header><main>
+<section class="sheet cover" id="cover" aria-label="User manual"><div class="eyebrow">USER MANUAL</div><h1>Universal Announcer</h1>
+<p>Cabin announcements for Microsoft Flight Simulator</p>
+<p>Start with a sound pack, check your flight details, then let the app follow the flight. This manual covers installation, a typical airline flight, and the settings you are most likely to use.</p>
+<p class="edition">App 0.9.9.7 | Revision 2026-09-20.4</p>
+
+<h2 id="contents-title">Contents</h2>
+
+<nav class="contents" aria-label="Contents"><a href="#getting-started"><span>1. Install and open the app</span><span class="page-number">2</span></a><a href="#sound-packs"><span>2. Get sound packs</span><span class="page-number">3</span></a><a href="#sound-files"><span>3. Set up and preview sounds</span><span class="page-number">4</span></a><a href="#simbrief"><span>4. Load your flight details</span><span class="page-number">5</span></a><a href="#departure"><span>5. Boarding to takeoff</span><span class="page-number">6</span></a><a href="#arrival"><span>6. Climb to the next flight</span><span class="page-number">7</span></a><a href="#controls"><span>7. Everyday controls</span><span class="page-number">8</span></a><a href="#toolbar"><span>8. Use the MSFS toolbar</span><span class="page-number">9</span></a><a href="#tags"><span>9. Choose the right recordings</span><span class="page-number">10</span></a><a href="#camera-volumes"><span>10. Set camera volumes</span><span class="page-number">11</span></a><a href="#camera-rules"><span>11. Set rules for individual views</span><span class="page-number">12</span></a><a href="#chaseplane"><span>12. Use ChasePlane</span><span class="page-number">13</span></a><a href="#generated"><span>13. Generate your first announcement</span><span class="page-number">14</span></a><a href="#templates"><span>14. Edit templates</span><span class="page-number">15</span></a><a href="#voices"><span>15. Choose voices and roles</span><span class="page-number">16</span></a><a href="#generation-modes"><span>16. Generation modes and other providers</span><span class="page-number">17</span></a><a href="#faq"><span>17. Common questions</span><span class="page-number">18</span></a><a href="#support"><span>18. Troubleshooting and support</span><span class="page-number">19</span></a><a href="#quick-reference"><span>19. Before your next flight</span><span class="page-number">20</span></a></nav>
+
+<p class="small">Written for Windows users of MSFS 2020 and MSFS 2024. Button names follow the English interface. Optional aircraft and service integrations can behave differently between versions.</p>
+
+<a class="back" href="#contents-title">Back to contents</a></section>
+<section class="sheet " id="getting-started" aria-label="1. Install and open the app"><div class="eyebrow">1. Install and open the app</div><h2>Install and open the app</h2>
+<p>Universal Announcer runs beside the simulator. It reads flight information and plays cabin audio through your chosen Windows audio device. It works with default and add-on aircraft; Fenix ownership is not required. The announcement sequence is intended mainly for airliners.</p>
+<h3>Install</h3>
+<ol>
+<li>Download the application ZIP from the <a href="https://github.com/fearlessfrog/MSFS_Universal_Announcer/releases">GitHub releases page</a> or the <a href="https://flightsim.to/addon/94886/universal-announcer">flightsim.to listing</a>.</li>
+<li>Extract the <strong>whole ZIP</strong> into a folder you can write to, such as <code>D:\MSFS\UniversalAnnouncer</code>. Do not run the executable from inside the ZIP or move it away from its accompanying files.</li>
+<li>Run <code>UniversalAnnouncer.exe</code>. The app is for 64-bit Windows 10 or 11. The normal self-contained release includes its .NET runtime; .NET 8 is not part of Windows by default.</li>
+<li>Find its icon in the Windows system tray beside the clock. If it is hidden, open the tray&#39;s overflow area. Right-click the icon and choose <strong>Settings...</strong>.</li>
+</ol>
+<p>The main application stays outside the Community folder. Only the optional toolbar package goes into Community; see <a href="#toolbar">MSFS toolbar</a>.</p>
+<h3>First launch</h3>
+<figure class="screenshot screenshot--tray" style="--print-image-width:51mm"><img src="assets/01-tray.png" alt="Right-click the tray icon to find Settings and flight controls. This example is disconnected."><figcaption>Right-click the tray icon to find Settings and flight controls. This example is disconnected. <a class="screen-only" href="assets/01-tray.png" target="_blank" rel="noopener">View full size</a></figcaption></figure>
+
+<p>Use the setup dialog to install the default sound pack or select your existing Fenix files. You can run it again from <strong>Sound Files &gt; Run setup...</strong>. Then choose an audio device on the <strong>Audio</strong> tab and play a preview on <strong>Sound Files</strong>.</p>
+<p>Load a flight and check <strong>Status</strong> for a simulator connection. For the first test, start parked at a gate with the engines and beacon off. Leave camera-based volume disabled until a sound preview works.</p>
+<blockquote>
+<p>Closing the Settings window does not necessarily exit the app. Use <strong>Close App</strong> or the tray menu&#39;s <strong>Exit</strong> when you want to shut it down. If a second launch says the app is already running, check the tray first.</p>
+</blockquote>
+<a class="back" href="#contents-title">Back to contents</a></section>
+<section class="sheet " id="sound-packs" aria-label="2. Get sound packs"><div class="eyebrow">2. Get sound packs</div><h2>Get sound packs</h2>
+<h3>Default pack or existing Fenix files</h3>
+<p>The default pack is the quickest way to check the app without collecting airline packs first. Open <strong>Sound Files &gt; Run setup...</strong> and use the download option.</p>
+<p>If you already own Fenix, the setup dialog can use your installed announcement collection. Keep a backup before changing files you also use with another aircraft. Fenix ownership is not required to use Universal Announcer.</p>
+<h3>Community packs on Discord</h3>
+<p>Announcement Hangar is an independent third-party Discord server. It is not owned, operated or affiliated with Universal Announcer. Its community packs are supplied by their authors, not by Universal Announcer.</p>
+<figure class="screenshot screenshot--discord" style="--print-image-width:68mm"><img src="assets/10-discord-channels.png" alt="Either pack category is suitable. Fenix ownership is not required."><figcaption>Either pack category is suitable. Fenix ownership is not required. <a class="screen-only" href="assets/10-discord-channels.png" target="_blank" rel="noopener">View full size</a></figcaption></figure>
+
+<p>Join <a href="https://discord.com/invite/P8ZYJgH3ZF">Announcement Hangar on Discord</a> and follow the server&#39;s joining instructions. <strong>Packs from both announcement categories work with Universal Announcer:</strong></p>
+<ul>
+<li><strong>FENIX ANNOUNCEMENT PACKS</strong></li>
+<li><strong>UNIVERSAL ANNOUNCEMENT PACKS</strong></li>
+</ul>
+<p>Fenix-format packs are compatible, so you do not need to own Fenix or limit your search to the Universal Announcement Packs category.</p>
+<p>Open the pack channel in either category, find the airline you want, and download its pack. Extract the ZIP and follow any instructions supplied by its author. The screenshot shows the two categories to look for.</p>
+<h3>Before installing a pack</h3>
+<p>Read the author&#39;s notes for supported aircraft and included announcements. A missing call does not mean the whole pack is unusable; packs contain different selections.</p>
+<p>Keep original filenames and <code>.ogg</code> extensions unless you are deliberately changing their tags. Avoid leaving an extra wrapper folder after extraction, such as <code>BAW\BAW\...</code>. Use the folder layout on the <a href="#sound-files">next page</a>.</p>
+<a class="back" href="#contents-title">Back to contents</a></section>
+<section class="sheet " id="sound-files" aria-label="3. Set up and preview sounds"><div class="eyebrow">3. Set up and preview sounds</div><h2>Set up and preview sounds</h2>
+<p>On <strong>Sound Files</strong>, use <strong>Change Folder...</strong> to select the parent containing <code>Default</code> and the airline folders. The parent can have any name; the example below calls it <code>UA</code>.</p>
+<figure class="screenshot screenshot--sounds" style="--print-image-width:132mm"><img src="assets/02-sound-files.png" alt="This example calls the sound root UA. Select a file to enable Preview."><figcaption>This example calls the sound root UA. Select a file to enable Preview. <a class="screen-only" href="assets/02-sound-files.png" target="_blank" rel="noopener">View full size</a></figcaption></figure>
+
+<pre><code class="language-text">Announcements/             &lt;- select this parent
+    Default/BoardingWelcome.ogg
+    BAW/BoardingWelcome.ogg
+    UAL/BoardingWelcome.ogg
+</code></pre>
+<p>Airline folders go beside Default, not inside it. <code>BAW</code> and <code>UAL</code> are three-letter ICAO airline codes.</p>
+<p>Click <strong>Refresh</strong>, choose an airline and <strong>select a file</strong>, then click <strong>Preview</strong>. No file is selected in the screenshot, so Preview is disabled. Test Default too. On <strong>Announcements</strong>, enable <strong>Use Default folder announcements if airline-specific files are missing</strong> if you want that fallback.</p>
+<a class="back" href="#contents-title">Back to contents</a></section>
+<section class="sheet " id="simbrief" aria-label="4. Load your flight details"><div class="eyebrow">4. Load your flight details</div><h2>Load your flight details</h2>
+<p>SimBrief is optional. It supplies the airline, aircraft, route and planned duration, including values used in generated announcements.</p>
+<ol>
+<li>Create and <strong>generate</strong> your plan in SimBrief. Check its airline, callsign, aircraft and airports.</li>
+<li>Open <strong>Settings &gt; Integrations</strong>. Enter your <strong>SimBrief Username</strong>, using the name rather than the numeric pilot ID. No SimBrief password is entered here.</li>
+<li>Click <strong>Fetch Latest Plan</strong>. Check the returned aircraft, airline, origin and destination. Successfully fetching yesterday&#39;s plan still gives you the wrong flight.</li>
+</ol>
+<figure class="screenshot screenshot--simbrief" style="--print-image-width:135mm"><img src="assets/03-simbrief.png" alt="The retrieved plan is BAW, A20N, from EGLL to EHAM. Check your own flight details."><figcaption>The retrieved plan is BAW, A20N, from EGLL to EHAM. Check your own flight details. <a class="screen-only" href="assets/03-simbrief.png" target="_blank" rel="noopener">View full size</a></figcaption></figure>
+
+<p><strong>Refresh plan before Boarding Welcome plays</strong> performs another fetch at boarding. Fetch manually first while learning the setup.</p>
+<p>The detected airline selects its sound folder: <code>BAW</code> uses <code>Announcements\BAW</code>. Check the returned code if a codeshare or callsign gives an unexpected result.</p>
+<p>Without SimBrief, use simulator aircraft data or the Status overrides described under <a href="#controls">Everyday controls</a>. For the full preflight checklist, see <a href="#quick-reference">Before your next flight</a>.</p>
+<a class="back" href="#contents-title">Back to contents</a></section>
+<section class="sheet " id="departure" aria-label="5. Boarding to takeoff"><div class="eyebrow">5. Boarding to takeoff</div><h2>Boarding to takeoff</h2>
+<p>The app follows aircraft signals, not a fixed soundtrack. Each announcement also needs an enabled announcement type and a usable sound file or generated replacement. Give one announcement time to finish before expecting the next.</p>
+<h3>1. Start boarding</h3>
+<p><strong>With GSX:</strong> enable <strong>Integrations &gt; Enable GSX Integration</strong>, then start boarding through GSX. The welcome begins when GSX reports boarding in progress, with the aircraft on the ground and beacon off. Simply requesting the service is not the same as boarding having started.</p>
+<p><strong>Without GSX:</strong> clear <strong>Enable GSX Integration</strong>. With the aircraft on the ground and beacon off, turn the <strong>logo light on</strong> to start boarding. The app has a fallback when GSX is unavailable, but explicitly disabling it makes the intended workflow clear.</p>
+<p>Boarding music follows the welcome and normally loops between announcements. The welcome repeats at the interval set in <strong>Tweaks</strong>. Optional pilot welcomes and <strong>Skip First BoardingWelcome</strong> change what you hear, so leave those alone for your first test.</p>
+<h3>2. Finish boarding and push back</h3>
+<p>Turning on the beacon, or GSX reporting boarding complete, ends the boarding phase. The app plays Boarding Complete. As the aircraft moves or the engines start, it can play Arm Doors.</p>
+<p>The pre-safety announcement waits for the engines to be running and Arm Doors to finish. The safety briefing follows it. At night, a cabin-dimming announcement may follow. The optional <strong>Arm Doors after Boarding Complete Automatically</strong> setting removes the need to wait for movement or engine start for Arm Doors itself.</p>
+<h3>3. Taxi and take off</h3>
+<p>With the engines running, the selected takeoff light signal triggers Crew Seats for Takeoff. By default this is the landing lights; <strong>Tweaks</strong> can use strobes instead. Cabin Secure follows after the preceding call finishes.</p>
+<blockquote>
+<p>If the sequence stops, read <strong>Waiting for</strong> and <strong>Next Announcement</strong> in the tray menu or toolbar. If an aircraft does not report the expected signal, use <strong>Play Next</strong> once when that call makes sense. It interrupts current audio and bypasses the normal wait; it is not a harmless preview.</p>
+</blockquote>
+<a class="back" href="#contents-title">Back to contents</a></section>
+<section class="sheet " id="arrival" aria-label="6. Climb to the next flight"><div class="eyebrow">6. Climb to the next flight</div><h2>Climb to the next flight</h2>
+<h3>Climb and cruise</h3>
+<p>After Takeoff waits until the aircraft is airborne above the takeoff detection height, normally 3,000 ft above ground, and the post-takeoff delay has elapsed. It is not an immediate wheels-up call.</p>
+<p>Optional pilot calls and cruise announcements must be enabled on <strong>Announcements</strong> and have suitable audio or templates. Files such as <code>CruiseElapsed50Percent.ogg</code> are scheduled against elapsed flight time and the planned duration. They are not triggered by being halfway along the route on a map. SimBrief supplies the planned flight time.</p>
+<p>Seatbelt announcements depend on signals exported by the aircraft. Many aircraft use their own switches, so automatic detection is not universal. Use the app&#39;s <strong>Seatbelt</strong> button or the toolbar&#39;s <strong>Seatbelt</strong> button when needed.</p>
+<h3>Descent and landing</h3>
+<p>During the arrival sequence, descending below the configured height or switching on landing lights can trigger the descent seatbelt call. The usual descent height is 10,000 ft above ground. Crew Seats for Landing normally uses 3,000 ft above ground, descent, and landing lights. These are detection settings, not instructions for operating your aircraft.</p>
+<p>After landing, slow below <strong>15 knots</strong>. The current code also requires the arrival sequence to have been recognized before After Landing plays. An optional <strong>AfterLanding delay (min)</strong> can postpone it further. Retracting spoilers alone is not the current trigger.</p>
+<p>Landing music can follow. Once parked with engines off and the parking brake set, Disarm Doors can play. With that complete, beacon off or GSX deboarding starts the disembarkation call.</p>
+<h3>A second leg</h3>
+<p>Generate the next SimBrief plan and fetch it. Check the route and airline again before boarding. GSX deboarding completion can reset the sequence automatically. For a deliberate fresh start, choose <strong>Restart</strong> in the app or <strong>Restart</strong> in the toolbar once the aircraft is back in a suitable parked state.</p>
+<p>Restart stops current audio and clears the sequence&#39;s played-announcement tracking. It does not reset all Settings. If boarding conditions are already active, announcements may begin again.</p>
+<a class="back" href="#contents-title">Back to contents</a></section>
+<section class="sheet " id="controls" aria-label="7. Everyday controls"><div class="eyebrow">7. Everyday controls</div><h2>Everyday controls</h2>
+<p>You can leave the app in the tray for most of a flight. Open <strong>Settings...</strong> when you need the full controls.</p>
+<h3>Stop, mute, skip or restart?</h3>
+<ul>
+<li><strong>Stop / Resume:</strong> suspend and re-enable automatic announcements. Resume is not a promise to replay an interrupted recording from the same word.</li>
+<li><strong>Mute / Unmute:</strong> silence the audio while the flight continues. A mute binding is available through <strong>Bind Mute</strong> for a keyboard or controller button.</li>
+<li><strong>Play Next:</strong> force the next announcement using the last simulator data. It can interrupt the current recording and stop boarding music. Use it to recover a missed trigger.</li>
+<li><strong>Restart:</strong> stop current audio and reset the flight sequence to automatic detection.</li>
+<li><strong>Manual flight phases:</strong> skip the sequence ahead to a chosen phase. Earlier announcements are marked as dealt with; these buttons are not a playlist. Use <strong>Auto</strong> to return to detection. Use Restart for a fresh boarding sequence.</li>
+</ul>
+<h3>Sound and timing</h3>
+<p>On <strong>Audio</strong>, select <strong>Audio Device</strong> and set the main <strong>Volume</strong>. <strong>Music Volume</strong> controls music and the optional cabin-noise track. On <strong>Announcements</strong>, enable the announcement types you want to hear. A checked type still needs a matching file or generated audio.</p>
+<p><strong>Tweaks</strong> holds repeat intervals and detection heights. <strong>Enable Music Resume (Boarding and AfterLanding) when interrupted</strong> resumes music from its previous position; otherwise it starts again.</p>
+<p><strong>Play cabin noise when idle (no announcement playing)</strong> adds background sound while passengers are aboard. Replace it with <code>CabinNoise.ogg</code> in an airline or Default folder. Camera volumes still apply.</p>
+<h3>Without SimBrief</h3>
+<p>The app can extract an airline code from the simulator&#39;s tail number, such as <code>BAW123</code>. Set it in aircraft customization before loading. Alternatively, enter airline and aircraft ICAO overrides on <strong>Status</strong>. The <strong>Reset</strong> beside those fields clears the overrides; it does not restart the sequence. Without plan data, use recordings or templates that do not need route and duration values.</p>
+<h3>Startup and focus</h3>
+<p>Enable <strong>Start with MSFS</strong> on Status if you want the simulator to launch the app. <strong>Show this window when the app starts</strong> makes Settings easier to find.</p>
+<p>If <strong>Only play when MSFS or this app is focused</strong> is enabled, audio becomes silent while another application has focus. Playback continues silently, so switching back does not replay the part you missed.</p>
+<a class="back" href="#contents-title">Back to contents</a></section>
+<section class="sheet " id="toolbar" aria-label="8. Use the MSFS toolbar"><div class="eyebrow">8. Use the MSFS toolbar</div><h2>Use the MSFS toolbar</h2>
+<p>The toolbar controls the app from inside MSFS. The desktop application must still be running.</p>
+<ol>
+<li>Close the simulator. Copy <code>universalannouncer-toolbar</code> from the release ZIP into its active Community folder. MSFS 2020 and 2024 can use different folders.</li>
+<li>Keep the whole package together, without an extra nested folder of the same name.</li>
+<li>Restart MSFS, load a flight and open Universal Announcer from the in-game toolbar. Enable its icon in toolbar settings if needed.</li>
+<li>Check <strong>Tweaks &gt; Enable MSFS Toolbar link (experimental)</strong> in the desktop app.</li>
+</ol>
+<figure class="screenshot screenshot--toolbar" style="--print-image-width:142mm"><img src="assets/04-toolbar.png" alt="Connected at the gate, waiting for the logo light or GSX boarding."><figcaption>Connected at the gate, waiting for the logo light or GSX boarding. <a class="screen-only" href="assets/04-toolbar.png" target="_blank" rel="noopener">View full size</a></figcaption></figure>
+
+<p>The panel shows the connection, current state, aircraft and route, playback, <strong>Waiting for</strong> and <strong>Next Announcement</strong>.</p>
+<p><strong>Play Next</strong> forces the next call. <strong>Seatbelt</strong> plays a seatbelt call. <strong>Settings...</strong> opens the desktop window. <strong>Restart</strong> resets the announcement sequence, not the simulator flight. Some older panel versions label it <strong>Reset Flight</strong>. The slider changes main volume; camera multipliers still apply.</p>
+<p>If the icon is missing, check Community installation and restart MSFS. If the panel opens but is disconnected, check that the desktop app is running and the toolbar link is enabled. The connection stays on this PC; no router port forwarding is needed.</p>
+<a class="back" href="#contents-title">Back to contents</a></section>
+<section class="sheet " id="tags" aria-label="9. Choose the right recordings"><div class="eyebrow">9. Choose the right recordings</div><h2>Choose the right recordings</h2>
+<p>Start with plain filenames. Add tags when you need a different recording for a particular aircraft, time or destination. Keep an untagged fallback if a pack should work on other flights too.</p>
+<h3>Aircraft and variants</h3>
+<ul>
+<li><code>SafetyBriefing[A20N].ogg</code> matches that specific aircraft type.</li>
+<li><code>SafetyBriefing[320].ogg</code> covers the Airbus A320 family, including A20N and A21N. <code>[A320]</code> is an exact type, not the whole family.</li>
+<li><code>BoardingWelcome[Morning].ogg</code> is a time-of-day variant.</li>
+<li><code>BoardingWelcome[1].ogg</code> and <code>BoardingWelcome[2].ogg</code> provide numbered alternatives. Variant selection is kept consistent during a flight.</li>
+</ul>
+<p>Tags go before the final extension. For example, use <code>AfterTakeoff[A359][2].ogg</code>, not <code>AfterTakeoff.ogg[A359][2].ogg</code>.</p>
+<h3>Airports and languages</h3>
+<p>Ordinary airport tags use the departure context for early announcements through After Takeoff, and the arrival context later. Explicit <code>[ARR]</code> and <code>[DEP]</code> tags choose the context themselves.</p>
+<pre><code class="language-text">AfterLanding[EGLL].ogg
+BoardingWelcome[ARR][EGLL].ogg
+BoardingWelcome[ARR][ED**].ogg
+</code></pre>
+<p>The first is an arrival at Heathrow. The second mentions Heathrow during boarding. The third targets German destination codes beginning with <code>ED</code>. Airport patterns use four characters in total. This can help select a language by destination without splitting one airline into unrelated folders.</p>
+<h3>Fallback and intentional silence</h3>
+<p>An airline recording normally takes priority. If none matches, enabled generated fallback can fill the gap before the app looks in Default. Default fallback must be enabled on <strong>Announcements</strong>. See <a href="#generation-modes">generation modes</a> before allowing existing recordings to be replaced.</p>
+<p>The <code>[mute]</code> filename tag deliberately skips a matching announcement while counting it as handled. Use it only when you want that behavior; lowering the volume is a different action.</p>
+<p>For a full list of families and tags, see the existing <a href="https://fearlessfrog.github.io/MSFS_Universal_Announcer/statemachine.html#sound-files-and-tagging">sound-file reference</a>. Its older trigger examples may differ from the current application.</p>
+<a class="back" href="#contents-title">Back to contents</a></section>
+<section class="sheet " id="camera-volumes" aria-label="10. Set camera volumes"><div class="eyebrow">10. Set camera volumes</div><h2>Set camera volumes</h2>
+<p>Open <strong>Audio</strong> and enable <strong>Enable Camera Based Volume</strong>. The three controls are multipliers of the main volume, not three independent main-volume settings.</p>
+<div class="diagram" role="img" aria-label="At 80 percent main volume: cockpit multiplier 25 percent gives 20 percent output; cabin 100 percent gives 80 percent; external zero gives silence."><div><strong>Cockpit</strong>25% multiplier<span>80% main → 20% output</span></div><div><strong>Cabin</strong>100% multiplier<span>80% main → 80% output</span></div><div><strong>External</strong>0% multiplier<span>Silent outside</span></div></div>
+
+<p>This is a useful starting point. Set <strong>Cockpit (main view)</strong> to 25%, <strong>Showcase (Cabin)</strong> to 100%, and <strong>External Views</strong> to 0%. Adjust to taste after listening through your usual device.</p>
+<figure class="screenshot screenshot--audio" style="--print-image-width:142mm"><img src="assets/05-camera-volumes.png" alt="80% main volume, with Cockpit 25%, Cabin 100% and External 0%."><figcaption>80% main volume, with Cockpit 25%, Cabin 100% and External 0%. <a class="screen-only" href="assets/05-camera-volumes.png" target="_blank" rel="noopener">View full size</a></figcaption></figure>
+
+<p>Test the three levels in a native cockpit, passenger and exterior view. If you cannot hear anything, check the main volume and mute controls before changing the multipliers.</p>
+<p>Use <strong>Advanced...</strong> for individual quickviews; see the <a href="#camera-rules">next page</a>. The PA and cabin-noise options are separate choices, not requirements for camera volume.</p>
+<a class="back" href="#contents-title">Back to contents</a></section>
+<section class="sheet " id="camera-rules" aria-label="11. Set rules for individual views"><div class="eyebrow">11. Set rules for individual views</div><h2>Set rules for individual views</h2>
+<ol>
+<li>Load the aircraft whose views you want to configure.</li>
+<li>Open <strong>Audio &gt; Advanced...</strong> and check the aircraft named at the top.</li>
+<li>Find the relevant Cockpit Quickview, Showcase Fixed, External Quickview or Drone row.</li>
+<li>Set <strong>Treat as</strong> to <strong>Cabin</strong>, <strong>Cockpit</strong>, or <strong>External</strong>. Use <strong>Auto</strong> for normal classification. <strong>Mute</strong> silences that particular view.</li>
+<li>Click <strong>OK</strong>, switch to the view in the simulator, and listen again.</li>
+</ol>
+<p>Rules are saved for the detected aircraft model; without an active aircraft the dialog edits global defaults. <strong>Assume Cockpit QuickViews as Showcase/Cabin</strong> is a broader shortcut when all cockpit quickviews should use the cabin level.</p>
+<figure class="screenshot screenshot--advanced" style="--print-image-width:165mm"><img src="assets/06-camera-rules.png" alt="Example B738 rules: Quickview 2 uses Cabin; Quickviews 3 and 4 are muted."><figcaption>Example B738 rules: Quickview 2 uses Cabin; Quickviews 3 and 4 are muted. <a class="screen-only" href="assets/06-camera-rules.png" target="_blank" rel="noopener">View full size</a></figcaption></figure>
+
+<p>The app usually identifies the camera type and saved view, not your exact position inside the aircraft. A passenger quickview can therefore need an explicit Cabin rule. In this example, Quickview 2 uses Cabin, Quickviews 3 and 4 are muted, and Quickview 6 uses External. Choose rules for your own saved views rather than copying every row.</p>
+<p>The optional <strong>Use Showcase/Cabin volume if door open</strong> setting needs GSX. Unsupported door data can be treated as an open door. Leave it off while establishing your basic camera levels, particularly if the main cockpit sounds unexpectedly loud.</p>
+<a class="back" href="#contents-title">Back to contents</a></section>
+<section class="sheet " id="chaseplane" aria-label="12. Use ChasePlane"><div class="eyebrow">12. Use ChasePlane</div><h2>Use ChasePlane</h2>
+<p>ChasePlane can select cockpit, passenger and exterior views without reporting them in the same way as the simulator&#39;s own cameras. Universal Announcer 0.9.9.7 includes specific handling for its view identity and presets.</p>
+<h3>Set it up</h3>
+<ol>
+<li>Run ChasePlane and load the aircraft you want to use.</li>
+<li>In ChasePlane preferences, open <strong>General Functionality</strong> and set <strong>Enable 3rd party plugins</strong> to <strong>ON</strong>.</li>
+<li>Run Universal Announcer and enable <strong>Audio &gt; Enable Camera Based Volume</strong>.</li>
+<li>Set clearly different levels for the test: Cockpit 25%, Showcase/Cabin 100%, External 0%.</li>
+<li>During audible playback, select a saved pilot view, a saved passenger view, and an external view. Allow the view to settle before judging the volume change.</li>
+</ol>
+<figure class="screenshot screenshot--chaseplane" style="--print-image-width:164mm"><img src="assets/09-chaseplane.png" alt="General Functionality: Enable 3rd party plugins is ON."><figcaption>General Functionality: Enable 3rd party plugins is ON. <a class="screen-only" href="assets/09-chaseplane.png" target="_blank" rel="noopener">View full size</a></figcaption></figure>
+
+<h3>How it chooses the volume</h3>
+<p>A recognized ChasePlane preset uses the app&#39;s Cockpit, Cabin or External category. When that identification is active, it takes priority over the ordinary MSFS quickview rules. Editing an MSFS Quickview row is therefore not a general way to reclassify a ChasePlane preset.</p>
+<p>The three volume categories still apply. No server address or configuration-file edits are needed.</p>
+<h3>If pilot and passenger views sound the same</h3>
+<p>First confirm that their category volumes differ and the master volume is audible. Check the third-party setting in ChasePlane, then test saved presets rather than a free camera position between them. If necessary, restart the two applications after changing integration settings.</p>
+<p>Try a native MSFS camera as a comparison. If native camera volumes work but ChasePlane views do not, collect a short debug log while switching between the failing presets. Include the simulator version, ChasePlane version, aircraft and preset names in the report.</p>
+<blockquote>
+<p>For an unrecognized view, include its name and your ChasePlane version in the report.</p>
+</blockquote>
+<a class="back" href="#contents-title">Back to contents</a></section>
+<section class="sheet " id="generated" aria-label="13. Generate your first announcement"><div class="eyebrow">13. Generate your first announcement</div><h2>Generate your first announcement</h2>
+<p>Generated announcements turn text into <code>.ogg</code> recordings. <strong>You do not have to use English:</strong> choose translated <a href="#templates">templates</a> and a suitable <a href="#voices">voice</a>. Start in a test airline folder or back up your pack.</p>
+<ol>
+<li>Configure the sound root, create the target airline folder if needed, and fetch your SimBrief plan.</li>
+<li>Open <strong>Generated</strong>. Select <strong>Airline</strong>, <strong>Provider: Edge</strong>, and <code>BoardingWelcome</code>. Choose a voice (use <strong>Roles</strong> if indicated).</li>
+<li>Check the text, including any <code>##Voice:</code> or <code>##Role:</code> override. Click <strong>Test Voice</strong> to hear it with available flight data.</li>
+<li>Edit the wording, click <strong>Save txt</strong>, then <strong>Generate</strong>. Open <strong>Sound Files</strong>, refresh, select the new file and <strong>Preview</strong> it.</li>
+</ol>
+<figure class="screenshot screenshot--generated" style="--print-image-width:134mm"><img src="assets/07-generated.png" alt="Example with replacement and automatic role selection enabled. These are optional settings."><figcaption>Example with replacement and automatic role selection enabled. These are optional settings. <a class="screen-only" href="assets/07-generated.png" target="_blank" rel="noopener">View full size</a></figcaption></figure>
+
+<p><strong>The screenshot shows replacement options enabled.</strong> Leave both off to preserve recordings during automatic playback. Read <a href="#generation-modes">generation modes</a> before enabling them.</p>
+<p>Edge needs internet access but no personal API key. Saved recordings play offline. For automatic creation, enable <strong>Enable Generated TTS fallback</strong>. Manual generation requires an airline folder; <strong>Default cannot be the output target</strong>.</p>
+<a class="back" href="#contents-title">Back to contents</a></section>
+<section class="sheet " id="templates" aria-label="14. Edit templates"><div class="eyebrow">14. Edit templates</div><h2>Edit templates</h2>
+<p>Templates are <code>.txt</code> files named for a call, such as <code>BoardingWelcome.txt</code>. The editor loads airline text first, then Default text, then a built-in template.</p>
+<h3>Start in your language</h3>
+<p>Built-in templates cover <strong>English, French, Spanish, German, Italian, Brazilian Portuguese, Japanese, Korean and Simplified Chinese</strong>. Choose <strong>Help &amp; About &gt; Default language</strong>, restart the app, then open <strong>Generated</strong> and select a template. This also changes the interface language.</p>
+<p>Saved airline or Default <code>.txt</code> files still take priority. Back them up before using <strong>Revert txt</strong> to expose the built-in translation. Alternatively, write or paste your own translated text into the editor; you can do this while keeping the interface in English.</p>
+<h3>Flight numbers in French and Spanish</h3>
+<p>Keep placeholder names unchanged in translated text. For example:</p>
+<pre><code class="language-text">Bienvenue à bord du vol {FLIGHT_NUMBER_DIGITS}
+à destination de {DESTINATION_CITY}.
+Bienvenidos al vuelo {FLIGHT_NUMBER_DIGITS}
+con destino a {DESTINATION_CITY}.
+</code></pre>
+<p>Use either language, or both with a multilingual voice. <code>{FLIGHT_NUMBER_DIGITS}</code> turns <code>AFR123</code> into <code>123</code>. The voice reads the number in the surrounding text&#39;s language, rather than receiving English number words. Use <strong>Test Voice</strong> to check pronunciation and number grouping.</p>
+<h3>Save, generate and revert</h3>
+<p><strong>Save txt</strong> saves text in the selected Airline folder, including Default. <strong>Generate</strong> creates audio; saving text alone does not change a recording. Automatic replacement depends on the <a href="#generation-modes">generation settings</a>.</p>
+<p><strong>Revert txt</strong> deletes the selected airline override if present; otherwise it can delete the Default override. It does not restore an overwritten recording.</p>
+<h3>Useful placeholders</h3>
+<ul>
+<li><code>{AIRLINE_NAME}</code> and <code>{AIRCRAFT_NAME}</code> supply names; <code>{AIRLINE_CODE}</code> and <code>{AIRCRAFT_CODE}</code> supply codes.</li>
+<li><code>{ORIGIN_CITY}</code> and <code>{DESTINATION_CITY}</code> supply city names; <code>{ORIGIN_CODE}</code> and <code>{DESTINATION_CODE}</code> supply airport codes.</li>
+<li><code>{CRUISE_ALTITUDE_FT}</code> supplies the planned cruise altitude.</li>
+</ul>
+<p><strong>Some placeholders already contain English words</strong>, including <code>{FLIGHT_TIME}</code> and <code>{LOCAL_TIME}</code>. For a non-English call, replace those phrases with wording in your language or omit them. A multilingual voice does not translate text. Missing flight data can leave values empty; saved audio keeps the values from generation time.</p>
+<a class="back" href="#contents-title">Back to contents</a></section>
+<section class="sheet " id="voices" aria-label="15. Choose voices and roles"><div class="eyebrow">15. Choose voices and roles</div><h2>Choose voices and roles</h2>
+<p>For French, Spanish and bilingual calls, try <strong>Ava Multilingual</strong> (<code>en-US-AvaMultilingualNeural</code>, the app&#39;s default) or <strong>Emma Multilingual</strong> (<code>en-US-EmmaMultilingualNeural</code>, shown on Generated). Look for <strong>MultilingualNeural</strong> in the voice name: the <code>en-US</code> prefix does not limit these voices to English. Supply text in the language you want spoken and listen with <strong>Test Voice</strong>.</p>
+<p>For English, try <strong>Sonia</strong> and <strong>Ryan</strong> for British English, or <strong>Aria</strong> and <strong>Jenny</strong> for US English. The example below pairs Ryan with the pilot and Sonia with the cabin crew. Choose from your current provider&#39;s voice list and test airport names and flight numbers.</p>
+<h3>Assign a pilot and flight attendant</h3>
+<p>Open <strong>Generated &gt; Roles</strong>, choose the provider and airline, select <strong>Pilot Voice</strong> and <strong>Flight Attendant Voice</strong>, then <strong>Save Roles</strong>. Choose <strong>(Default)</strong> for voices shared by airlines without their own assignment. The settings are stored in <code>roles.json</code> in the corresponding sound folder.</p>
+<figure class="screenshot screenshot--roles" style="--print-image-width:120mm"><img src="assets/08-roles.png" alt="BAW uses Ryan for Pilot and Sonia for Flight Attendant on the Edge provider."><figcaption>BAW uses Ryan for Pilot and Sonia for Flight Attendant on the Edge provider. <a class="screen-only" href="assets/08-roles.png" target="_blank" rel="noopener">View full size</a></figcaption></figure>
+
+<p>Templates beginning with <code>##Role: Pilot</code> or <code>##Role: FA</code> use those assignments. An explicit <code>##Voice:</code> takes priority over a role. Airline role settings take priority over Default role settings; the selected main voice is the fallback. Templates without a role use the flight-attendant role when one is available.</p>
+<p><strong>Auto pick Roles based on Airline Country</strong> chooses voices when no airline roles file exists. Leave it off for predictable manual assignments. Voice selection does not translate your text.</p>
+<h3>Override one announcement</h3>
+<p>Use <strong>Insert Voice</strong> to insert the selected voice, or enter:</p>
+<pre><code class="language-text">##Voice: Edge/en-GB-SoniaNeural
+##rate:-10%
+##pitch:0Hz
+Welcome aboard. Please keep the aisle clear.
+</code></pre>
+<p>Rate adjusts speed: <code>-10%</code> is slower, <code>+10%</code> faster, and <code>+0%</code> unchanged. Pitch adjusts Hz; <code>0Hz</code> is unchanged. These directives work with Edge and Azure. Test small changes before generating a pack.</p>
+<a class="back" href="#contents-title">Back to contents</a></section>
+<section class="sheet " id="generation-modes" aria-label="16. Generation modes and other providers"><div class="eyebrow">16. Generation modes and other providers</div><h2>Choose how generation is used</h2>
+<h3>Keep recordings and fill gaps</h3>
+<p>Enable <strong>Enable Generated TTS fallback</strong>, but leave both <strong>Replace existing .ogg</strong> options off. Matching airline recordings are kept. If one is missing, generation can supply it before Default fallback is considered. The target airline folder must exist, or <strong>Auto create missing airline folder</strong> must be enabled.</p>
+<h3>Refresh flight-specific recordings</h3>
+<p><strong>Replace existing .ogg if Airline txt</strong> permits regeneration when the airline has its own template. <strong>Replace existing .ogg Always</strong> broadens replacement to allow Default text too. <strong>Regenerate only if dynamic</strong> limits regeneration to templates containing dynamic placeholders.</p>
+<p>The app also uses per-flight guards and filename matching, so this is not continuous live speech. For a predictable result, fetch the correct plan, generate once before departure, and preview it. Keep a separate copy of recordings you cannot easily replace.</p>
+<h3>Generate before flying</h3>
+<p><strong>Generate As..</strong> lets you choose a filename, including supported tags. Manual generation writes audio to the selected airline folder. You can save text and role defaults under Default, but cannot select Default as a manual audio-generation target.</p>
+<p>Use <strong>Generate</strong> for one item or <strong>Generate All</strong> for the set after checking the selected airline and voice. This is useful when you prefer recordings to be ready before boarding rather than waiting for an online service during playback. Keep replacement disabled during the flight if you intend to use those prepared files unchanged.</p>
+<h3>Other providers</h3>
+<p><strong>Windows</strong> uses voices installed locally and can work offline. Available voices depend on your Windows installation. It is a useful fallback when an online service is unavailable.</p>
+<p><strong>Azure</strong> needs an Azure Speech resource, its API key and matching region. <strong>ElevenLabs</strong> needs its API key and a supported voice/model. Enter these in Generated when that provider is selected. Check each provider&#39;s current account limits and pricing before generating large batches; no free allowance is promised here.</p>
+<p>For less studio-like audio, enable <strong>Audio &gt; PA Audio Mix (simulates cabin speaker noise)</strong> and select a preset. This affects generated audio. Regenerate and preview a sample to judge the result. Do not expect a new setting to rewrite previously saved files automatically.</p>
+<p>Long templates take longer to generate. Keep each call focused, and use recordings for music rather than trying to make the voice service produce it.</p>
+<a class="back" href="#contents-title">Back to contents</a></section>
+<section class="sheet " id="faq" aria-label="17. Common questions"><div class="eyebrow">17. Common questions</div><h2>Common questions</h2>
+<h3>Can I use packs from the Fenix channel on Discord?</h3>
+<p>Yes. Packs from both the <strong>Fenix</strong> and <strong>Universal Announcer</strong> pack channels work with Universal Announcer. Fenix-format packs are compatible even if you do not own the Fenix aircraft. Install them using the folder layout in <a href="#sound-files">Set up and preview sounds</a>. You do not need a separate Universal Announcer edition of the pack.</p>
+<h3>Nothing happens when I turn on the logo light</h3>
+<p>Check the simulator connection, beacon off, ground state and enabled Boarding Welcome. Without GSX, disable its integration. With GSX, start actual boarding. Preview the relevant file to separate a sound problem from a trigger problem. Check <strong>Waiting for</strong> before pressing Play Next.</p>
+<h3>I can preview a file, but cannot hear it in flight</h3>
+<p>Check Stop/Resume, Mute, the selected audio device and camera multipliers. Temporarily disable camera volume and the foreground-only option. An exterior multiplier of zero or a muted quickview can explain silence even when the main volume is high.</p>
+<h3>It chooses the wrong airline, aircraft or language</h3>
+<p>Fetch the correct SimBrief plan and read the returned values. Check Status overrides and the exact folder code. <code>A20N</code> does not match an exact <code>[A320]</code> tag; use <code>[A20N]</code> or the family <code>[320]</code>. Use arrival/departure tags to select regional recordings. Changing the UI language does not translate recorded audio.</p>
+<h3>The aircraft&#39;s seatbelt switch does nothing</h3>
+<p>Some add-ons do not expose a usable standard switch signal. Try the app or toolbar seatbelt button. A simulator <strong>Annunciator On/Off</strong> binding is another supported signal path, but verify it with your aircraft rather than assuming its panel switch is connected.</p>
+<h3>It skips ahead or gets stuck after pushback</h3>
+<p>Some aircraft report unusual light or engine states. The maintainer reported missing engine-combustion signals on the Synaptic A220 for MSFS 2024 in September 2026; Play Next after engine start was the workaround. Recheck current aircraft releases. For unreliable lights, investigate <strong>Ignore incompatible aircraft lights</strong> and manual Play Next. MSFS 2024 PMDG 777 users should consult the linked PMDG setup guide on Tweaks.</p>
+<h3>My edited words or new voice are not being used</h3>
+<p>Check the selected airline, Save txt destination, explicit <code>##Voice:</code> lines, role assignments and existing <code>.ogg</code> files. Text changes alone do not replace audio. Generate and preview the exact file you expect to hear before changing automatic overwrite settings.</p>
+<a class="back" href="#contents-title">Back to contents</a></section>
+<section class="sheet " id="support" aria-label="18. Troubleshooting and support"><div class="eyebrow">18. Troubleshooting and support</div><h2>Troubleshooting and support</h2>
+<h3>Edge generation fails or its voice list is empty</h3>
+<p>Check internet access and try a short Test Voice. Try another currently listed voice and check for an app update. A service-side change can affect every voice. Use existing recordings or Windows voices while diagnosing it; reinstalling sound packs is unlikely to repair a voice-service problem.</p>
+<h3>The Discord invitation does not open</h3>
+<p>Try the invitation in another browser or the Discord app. Complete the server&#39;s normal joining steps. If the invitation has expired, use the current link on the project&#39;s help page or ask the pack community for an updated invitation. Do not assume that an inaccessible channel means your sound files are installed incorrectly.</p>
+<h3>Updating and preserving your setup</h3>
+<p>Use the app&#39;s <strong>Check for updates...</strong>, or download a new release and follow its notes. Exit the running app before replacing files manually. Keep your sound packs, custom <code>.txt</code> templates and <code>roles.json</code> files backed up. Only update the Community toolbar package when the release instructions require it.</p>
+<p>Settings and logs live in <code>%APPDATA%\UniversalAnnouncer</code>. Paste that into File Explorer&#39;s address bar. Your sound root can be somewhere else; check <strong>Sound Files &gt; Current Location</strong> before backing it up.</p>
+<h3>Make a useful bug report</h3>
+<ol>
+<li>Open <strong>Help &amp; About</strong> and click the logo <strong>three times quickly</strong>. Confirm the debug-mode message.</li>
+<li>Reproduce the problem once, noting the flight phase and the action you took. Restart the app first if the problem happens during startup.</li>
+<li>Open <code>%APPDATA%\UniversalAnnouncer\debug.log</code>, or use the tray&#39;s <strong>View Debug Log</strong>.</li>
+<li>Report the app version, simulator version, aircraft, relevant GSX/ChasePlane versions, expected result and actual result. Include the relevant log and a screenshot if useful.</li>
+<li>Toggle debug mode off with three quick logo clicks when finished.</li>
+</ol>
+<p>Check logs and configuration for personal paths, usernames and credentials before sharing. Use <a href="https://github.com/fearlessfrog/MSFS_Universal_Announcer/issues">GitHub Issues</a> so the report can be tracked.</p>
+<p>If Windows security flags a download, verify its source and consult the project&#39;s <a href="https://fearlessfrog.github.io/MSFS_Universal_Announcer/viruscheckers.html">security-software notes</a>. Do not disable protection just to make a warning disappear.</p>
+<a class="back" href="#contents-title">Back to contents</a></section>
+<section class="sheet " id="quick-reference" aria-label="19. Before your next flight"><div class="eyebrow">19. Before your next flight</div><h2>Before your next flight</h2>
+<h3>At the gate</h3>
+<ol>
+<li>Start the app and confirm the simulator connection.</li>
+<li>Generate and fetch the correct SimBrief plan, or check your manual airline/aircraft selection.</li>
+<li>Confirm the sound root and preview a relevant file if you changed packs.</li>
+<li>Check the audio device, main volume, mute and camera levels.</li>
+<li>Choose GSX boarding or the logo-light workflow.</li>
+<li>If using generated audio, check the airline, template and voice. Generate before boarding if you want to avoid online delays.</li>
+<li>Start boarding with the beacon off. Let the sequence follow the flight.</li>
+</ol>
+<h3>When something stops</h3>
+<p>Read <strong>Waiting for</strong> and <strong>Next Announcement</strong> first. Check the required signal and the selected file. Use <strong>Play Next</strong> once to recover a missed trigger. Use <strong>Restart</strong> only when you want a new sequence.</p>
+<h3>Names worth keeping handy</h3>
+<pre><code class="language-text">Announcements\Default\BoardingWelcome.ogg
+Announcements\BAW\SafetyBriefing[320].ogg
+Announcements\BAW\AfterLanding[EGLL].ogg
+Announcements\BAW\BoardingWelcome.txt
+Announcements\BAW\roles.json
+</code></pre>
+<p>In templates, <code>##Role: Pilot</code> and <code>##Role: FA</code> select crew roles. <code>##Voice: Edge/en-GB-SoniaNeural</code> overrides the role for that template. <code>{DESTINATION_CITY}</code> and <code>{FLIGHT_TIME}</code> are examples of values supplied at generation time.</p>
+<h3>Further help</h3>
+<ul>
+<li><a href="https://fearlessfrog.github.io/MSFS_Universal_Announcer/">Project help and current download links</a></li>
+<li><a href="https://fearlessfrog.github.io/MSFS_Universal_Announcer/generated.html">Generated-announcement reference</a></li>
+<li><a href="https://fearlessfrog.github.io/MSFS_Universal_Announcer/statemachine.html">File tags and flight-state reference</a></li>
+<li><a href="https://discord.com/invite/P8ZYJgH3ZF">Announcement Hangar Discord</a></li>
+<li><a href="https://github.com/fearlessfrog/MSFS_Universal_Announcer/issues">Bug reports</a></li>
+</ul>
+<p>Older reference pages describe earlier versions in places. This manual&#39;s app version is printed on the contents page; check release notes when a newer version changes a control or trigger.</p>
+<a class="back" href="#contents-title">Back to contents</a></section>
+</main><footer class="screen-footer">Universal Announcer 0.9.9.7 | 2026-09-20.4</footer></body></html>

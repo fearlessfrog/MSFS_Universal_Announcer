@@ -1,0 +1,9 @@
+{
+  "name": "universal-announcer-manual",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": { "build": "node build.mjs", "check": "node build.mjs --check-only" },
+  "engines": { "node": ">=22" },
+  "dependencies": { "marked": "17.0.5", "playwright": "1.62.1" }
+}

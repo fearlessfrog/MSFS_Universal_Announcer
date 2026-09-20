@@ -1,0 +1,94 @@
+{
+  "appVersion": "0.9.9.7",
+  "revision": "2026-09-20.4",
+  "browser": "151.0.7922.34",
+  "missingScreenshots": [],
+  "sections": 20,
+  "sourceCommit": "5b55c0b1bebf5a45d4ecfc9d1026025c570fe8f7",
+  "checks": [
+    "Offline HTML, anchors, images and width 390px: pass",
+    "Offline HTML, anchors, images and width 1280px: pass"
+  ],
+  "printSectionHeightsMm": [
+    {
+      "id": "cover",
+      "mm": 246.71982421874998
+    },
+    {
+      "id": "getting-started",
+      "mm": 223.42822265625
+    },
+    {
+      "id": "sound-packs",
+      "mm": 211.51783854166663
+    },
+    {
+      "id": "sound-files",
+      "mm": 235.8347005208333
+    },
+    {
+      "id": "simbrief",
+      "mm": 252.59853515625
+    },
+    {
+      "id": "departure",
+      "mm": 205.77141927083332
+    },
+    {
+      "id": "arrival",
+      "mm": 196.00664062500002
+    },
+    {
+      "id": "controls",
+      "mm": 228.39742838541665
+    },
+    {
+      "id": "toolbar",
+      "mm": 248.91090494791663
+    },
+    {
+      "id": "tags",
+      "mm": 225.45807291666665
+    },
+    {
+      "id": "camera-volumes",
+      "mm": 255.83554687499998
+    },
+    {
+      "id": "camera-rules",
+      "mm": 233.7883138020833
+    },
+    {
+      "id": "chaseplane",
+      "mm": 256.4473958333333
+    },
+    {
+      "id": "generated",
+      "mm": 255.69498697916666
+    },
+    {
+      "id": "templates",
+      "mm": 256.3564453125
+    },
+    {
+      "id": "voices",
+      "mm": 259.9696614583333
+    },
+    {
+      "id": "generation-modes",
+      "mm": 223.34140624999998
+    },
+    {
+      "id": "faq",
+      "mm": 229.20771484374998
+    },
+    {
+      "id": "support",
+      "mm": 208.55367838541665
+    },
+    {
+      "id": "quick-reference",
+      "mm": 232.61835937499998
+    }
+  ]
+}
