@@ -4,7 +4,7 @@
 <section class="sheet cover" id="cover" aria-label="User manual"><div class="eyebrow">USER MANUAL</div><h1>Universal Announcer</h1>
 <p>Cabin announcements for Microsoft Flight Simulator</p>
 <p>Start with a sound pack, check your flight details, then let the app follow the flight. This manual covers installation, a typical airline flight, and the settings you are most likely to use.</p>
-<p class="edition">App 0.9.9.7 | Revision 2026-09-20.4</p>
+<p class="edition">App 0.9.9.7 | Revision 2026-09-20.6</p>
 
 <h2 id="contents-title">Contents</h2>
 
@@ -262,6 +262,11 @@ Welcome aboard. Please keep the aisle clear.
 <p>Rate adjusts speed: <code>-10%</code> is slower, <code>+10%</code> faster, and <code>+0%</code> unchanged. Pitch adjusts Hz; <code>0Hz</code> is unchanged. These directives work with Edge and Azure. Test small changes before generating a pack.</p>
 <a class="back" href="#contents-title">Back to contents</a></section>
 <section class="sheet " id="generation-modes" aria-label="16. Generation modes and other providers"><div class="eyebrow">16. Generation modes and other providers</div><h2>Choose how generation is used</h2>
+<div class="diagram generation-flow" aria-label="Generate once and reuse, or refresh for each flight">
+<div><strong>Generate once</strong><span>Text + voice → saved .ogg</span><span>Reuse on later flights, offline.</span><span>No need to generate again.</span></div>
+<div><strong>Generate for each flight</strong><span>Template + flight data → new .ogg</span><span>Includes this flight's details.</span><span>Refresh for the next flight.</span></div>
+</div>
+
 <h3>Keep recordings and fill gaps</h3>
 <p>Enable <strong>Enable Generated TTS fallback</strong>, but leave both <strong>Replace existing .ogg</strong> options off. Matching airline recordings are kept. If one is missing, generation can supply it before Default fallback is considered. The target airline folder must exist, or <strong>Auto create missing airline folder</strong> must be enabled.</p>
 <h3>Refresh flight-specific recordings</h3>
@@ -278,17 +283,20 @@ Welcome aboard. Please keep the aisle clear.
 <a class="back" href="#contents-title">Back to contents</a></section>
 <section class="sheet " id="faq" aria-label="17. Common questions"><div class="eyebrow">17. Common questions</div><h2>Common questions</h2>
 <h3>Can I use packs from the Fenix channel on Discord?</h3>
-<p>Yes. Packs from both the <strong>Fenix</strong> and <strong>Universal Announcer</strong> pack channels work with Universal Announcer. Fenix-format packs are compatible even if you do not own the Fenix aircraft. Install them using the folder layout in <a href="#sound-files">Set up and preview sounds</a>. You do not need a separate Universal Announcer edition of the pack.</p>
+<p>Yes. Packs from both the <strong>Fenix</strong> and <strong>Universal Announcer</strong> channels work, without owning Fenix or finding a separate edition of the pack. Use the folder layout in <a href="#sound-files">Set up and preview sounds</a>.</p>
 <h3>Nothing happens when I turn on the logo light</h3>
 <p>Check the simulator connection, beacon off, ground state and enabled Boarding Welcome. Without GSX, disable its integration. With GSX, start actual boarding. Preview the relevant file to separate a sound problem from a trigger problem. Check <strong>Waiting for</strong> before pressing Play Next.</p>
 <h3>I can preview a file, but cannot hear it in flight</h3>
 <p>Check Stop/Resume, Mute, the selected audio device and camera multipliers. Temporarily disable camera volume and the foreground-only option. An exterior multiplier of zero or a muted quickview can explain silence even when the main volume is high.</p>
+<p>Check the filename too. <code>1-BoardingWelcome.ogg</code> can preview but will not be found in flight: remove <code>1-</code> to get <code>BoardingWelcome.ogg</code>. <code>BoardingWelcome.mp3</code> is not recognised for automatic announcements. Convert the audio to OGG; renaming the extension does not convert it.</p>
+<h3>I can hear double announcements</h3>
+<p>The Fenix may be playing its own announcements alongside Universal Announcer. Disable them in the Fenix EFB or using the cockpit radio panel&#39;s PA knob. Alternatively, select <strong>Stop</strong> in Universal Announcer to use only the Fenix&#39;s built-in announcements.</p>
 <h3>It chooses the wrong airline, aircraft or language</h3>
 <p>Fetch the correct SimBrief plan and read the returned values. Check Status overrides and the exact folder code. <code>A20N</code> does not match an exact <code>[A320]</code> tag; use <code>[A20N]</code> or the family <code>[320]</code>. Use arrival/departure tags to select regional recordings. Changing the UI language does not translate recorded audio.</p>
 <h3>The aircraft&#39;s seatbelt switch does nothing</h3>
 <p>Some add-ons do not expose a usable standard switch signal. Try the app or toolbar seatbelt button. A simulator <strong>Annunciator On/Off</strong> binding is another supported signal path, but verify it with your aircraft rather than assuming its panel switch is connected.</p>
 <h3>It skips ahead or gets stuck after pushback</h3>
-<p>Some aircraft report unusual light or engine states. The maintainer reported missing engine-combustion signals on the Synaptic A220 for MSFS 2024 in September 2026; Play Next after engine start was the workaround. Recheck current aircraft releases. For unreliable lights, investigate <strong>Ignore incompatible aircraft lights</strong> and manual Play Next. MSFS 2024 PMDG 777 users should consult the linked PMDG setup guide on Tweaks.</p>
+<p>Some aircraft, such as the Synaptic A220, do not report reliable engine signals to MSFS apps. If this stalls the announcement sequence, use <strong>Play Next</strong> when the next call is appropriate.</p>
 <h3>My edited words or new voice are not being used</h3>
 <p>Check the selected airline, Save txt destination, explicit <code>##Voice:</code> lines, role assignments and existing <code>.ogg</code> files. Text changes alone do not replace audio. Generate and preview the exact file you expect to hear before changing automatic overwrite settings.</p>
 <a class="back" href="#contents-title">Back to contents</a></section>
@@ -342,4 +350,4 @@ Announcements\BAW\roles.json
 </ul>
 <p>Older reference pages describe earlier versions in places. This manual&#39;s app version is printed on the contents page; check release notes when a newer version changes a control or trigger.</p>
 <a class="back" href="#contents-title">Back to contents</a></section>
-</main><footer class="screen-footer">Universal Announcer 0.9.9.7 | 2026-09-20.4</footer></body></html>
+</main><footer class="screen-footer">Universal Announcer 0.9.9.7 | 2026-09-20.6</footer></body></html>

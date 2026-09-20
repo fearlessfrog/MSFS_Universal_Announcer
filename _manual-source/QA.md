@@ -1,6 +1,6 @@
 # Illustrated review-build checks
 
-Revision 2026-09-20.4, application 0.9.9.7.
+Revision 2026-09-20.6, application 0.9.9.7.
 
 ## Passed
 
@@ -29,3 +29,13 @@ All screenshot requests are complete. The existing documentation and application
 ## Revision .4
 
 Expanded the language guidance with the nine bundled template languages, the Default language control and saved-template precedence. Added French/Spanish flight-number examples and Ava/Emma Multilingual voice guidance. Explained the English wording in FLIGHT_TIME and LOCAL_TIME. Added the maintainer-confirmed statement that Announcement Hangar is an independent, unaffiliated third-party server and its packs come from their authors. Rebuilt both formats; all 20 PDF pages and the HTML checks pass. No new synthesis/listening test was performed.
+
+## Revision .5
+
+Added concrete filename troubleshooting: remove an unexpected 1- prefix, and convert MP3 recordings to OGG rather than only renaming the extension. Source matching in SoundFileManager uses announcement-name prefixes and .ogg files. Simplified the Synaptic A220 workaround to appropriate use of Play Next and removed the outdated PMDG note at the maintainer's request. Rebuilt both formats, checked the revised cover and FAQ page, and repeated the PDF structure and HTML checks. The document remains 20 pages with ten screenshots.
+
+Added the maintainer-supplied Fenix double-announcement FAQ. Tightened neighbouring wording to preserve the 20-page layout and visually rechecked the final FAQ page.
+
+## Revision .6
+
+Added a two-column diagram above Choose how generation is used. The existing section text is unchanged. It distinguishes saved .ogg files reused offline from recordings refreshed with each flight's details. The diagram uses searchable HTML text and CSS, with no external runtime or image dependency; its columns stack on narrow screens. Visually checked the PDF cover and page 17 and desktop/mobile diagrams. PDF remains 20 pages with ten screenshots and 43 links; offline and HTTP checks pass.

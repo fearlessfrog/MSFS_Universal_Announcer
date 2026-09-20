@@ -1,6 +1,6 @@
 {
   "appVersion": "0.9.9.7",
-  "revision": "2026-09-20.4",
+  "revision": "2026-09-20.6",
   "browser": "151.0.7922.34",
   "missingScreenshots": [],
   "sections": 20,
@@ -76,11 +76,11 @@
     },
     {
       "id": "generation-modes",
-      "mm": 223.34140624999998
+      "mm": 256.88561197916664
     },
     {
       "id": "faq",
-      "mm": 229.20771484374998
+      "mm": 255.04179687499996
     },
     {
       "id": "support",

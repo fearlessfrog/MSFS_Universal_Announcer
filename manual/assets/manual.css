@@ -35,6 +35,7 @@ p code,li code { background:#eef3f4; padding:1px 4px; }
 .diagram > div { flex:1; background:#edf5f5; border-top:3px solid var(--accent); padding:13px; font-size:13px; }
 .diagram strong { display:block; font-size:18px; margin-bottom:6px; }
 .diagram span { display:block; color:var(--muted); }
+@media screen and (max-width:650px) { .generation-flow { flex-direction:column; } }
 .screenshot { margin:18px 0; text-align:center; break-inside:avoid; }
 .screenshot img { max-width:100%; height:auto; object-fit:contain; border:1px solid var(--line); }
 figcaption { font-size:11px; color:var(--muted); margin-top:5px; }

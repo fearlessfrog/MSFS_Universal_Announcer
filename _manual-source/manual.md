@@ -383,6 +383,11 @@ Rate adjusts speed: `-10%` is slower, `+10%` faster, and `+0%` unchanged. Pitch 
 <!-- page: generation-modes | 16. Generation modes and other providers -->
 ## Choose how generation is used
 
+<div class="diagram generation-flow" aria-label="Generate once and reuse, or refresh for each flight">
+<div><strong>Generate once</strong><span>Text + voice → saved .ogg</span><span>Reuse on later flights, offline.</span><span>No need to generate again.</span></div>
+<div><strong>Generate for each flight</strong><span>Template + flight data → new .ogg</span><span>Includes this flight's details.</span><span>Refresh for the next flight.</span></div>
+</div>
+
 ### Keep recordings and fill gaps
 
 Enable **Enable Generated TTS fallback**, but leave both **Replace existing .ogg** options off. Matching airline recordings are kept. If one is missing, generation can supply it before Default fallback is considered. The target airline folder must exist, or **Auto create missing airline folder** must be enabled.
@@ -414,7 +419,7 @@ Long templates take longer to generate. Keep each call focused, and use recordin
 
 ### Can I use packs from the Fenix channel on Discord?
 
-Yes. Packs from both the **Fenix** and **Universal Announcer** pack channels work with Universal Announcer. Fenix-format packs are compatible even if you do not own the Fenix aircraft. Install them using the folder layout in [Set up and preview sounds](#sound-files). You do not need a separate Universal Announcer edition of the pack.
+Yes. Packs from both the **Fenix** and **Universal Announcer** channels work, without owning Fenix or finding a separate edition of the pack. Use the folder layout in [Set up and preview sounds](#sound-files).
 
 ### Nothing happens when I turn on the logo light
 
@@ -423,6 +428,12 @@ Check the simulator connection, beacon off, ground state and enabled Boarding We
 ### I can preview a file, but cannot hear it in flight
 
 Check Stop/Resume, Mute, the selected audio device and camera multipliers. Temporarily disable camera volume and the foreground-only option. An exterior multiplier of zero or a muted quickview can explain silence even when the main volume is high.
+
+Check the filename too. `1-BoardingWelcome.ogg` can preview but will not be found in flight: remove `1-` to get `BoardingWelcome.ogg`. `BoardingWelcome.mp3` is not recognised for automatic announcements. Convert the audio to OGG; renaming the extension does not convert it.
+
+### I can hear double announcements
+
+The Fenix may be playing its own announcements alongside Universal Announcer. Disable them in the Fenix EFB or using the cockpit radio panel's PA knob. Alternatively, select **Stop** in Universal Announcer to use only the Fenix's built-in announcements.
 
 ### It chooses the wrong airline, aircraft or language
 
@@ -434,7 +445,7 @@ Some add-ons do not expose a usable standard switch signal. Try the app or toolb
 
 ### It skips ahead or gets stuck after pushback
 
-Some aircraft report unusual light or engine states. The maintainer reported missing engine-combustion signals on the Synaptic A220 for MSFS 2024 in September 2026; Play Next after engine start was the workaround. Recheck current aircraft releases. For unreliable lights, investigate **Ignore incompatible aircraft lights** and manual Play Next. MSFS 2024 PMDG 777 users should consult the linked PMDG setup guide on Tweaks.
+Some aircraft, such as the Synaptic A220, do not report reliable engine signals to MSFS apps. If this stalls the announcement sequence, use **Play Next** when the next call is appropriate.
 
 ### My edited words or new voice are not being used
 
