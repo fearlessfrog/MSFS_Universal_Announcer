@@ -4,11 +4,11 @@
 <section class="sheet cover" id="cover" aria-label="User manual"><div class="eyebrow">USER MANUAL</div><h1>Universal Announcer</h1>
 <p>Cabin announcements for Microsoft Flight Simulator</p>
 <p>Start with a sound pack, check your flight details, then let the app follow the flight. This manual covers installation, a typical airline flight, and the settings you are most likely to use.</p>
-<p class="edition">App 0.9.9.7 | Revision 2026-09-20.6</p>
+<p class="edition">App 0.9.9.7 | Revision 2026-09-20.7</p>
 
 <h2 id="contents-title">Contents</h2>
 
-<nav class="contents" aria-label="Contents"><a href="#getting-started"><span>1. Install and open the app</span><span class="page-number">2</span></a><a href="#sound-packs"><span>2. Get sound packs</span><span class="page-number">3</span></a><a href="#sound-files"><span>3. Set up and preview sounds</span><span class="page-number">4</span></a><a href="#simbrief"><span>4. Load your flight details</span><span class="page-number">5</span></a><a href="#departure"><span>5. Boarding to takeoff</span><span class="page-number">6</span></a><a href="#arrival"><span>6. Climb to the next flight</span><span class="page-number">7</span></a><a href="#controls"><span>7. Everyday controls</span><span class="page-number">8</span></a><a href="#toolbar"><span>8. Use the MSFS toolbar</span><span class="page-number">9</span></a><a href="#tags"><span>9. Choose the right recordings</span><span class="page-number">10</span></a><a href="#camera-volumes"><span>10. Set camera volumes</span><span class="page-number">11</span></a><a href="#camera-rules"><span>11. Set rules for individual views</span><span class="page-number">12</span></a><a href="#chaseplane"><span>12. Use ChasePlane</span><span class="page-number">13</span></a><a href="#generated"><span>13. Generate your first announcement</span><span class="page-number">14</span></a><a href="#templates"><span>14. Edit templates</span><span class="page-number">15</span></a><a href="#voices"><span>15. Choose voices and roles</span><span class="page-number">16</span></a><a href="#generation-modes"><span>16. Generation modes and other providers</span><span class="page-number">17</span></a><a href="#faq"><span>17. Common questions</span><span class="page-number">18</span></a><a href="#support"><span>18. Troubleshooting and support</span><span class="page-number">19</span></a><a href="#quick-reference"><span>19. Before your next flight</span><span class="page-number">20</span></a></nav>
+<nav class="contents" aria-label="Contents"><a href="#getting-started"><span>1. Install and open the app</span><span class="page-number">2</span></a><a href="#sound-packs"><span>2. Get sound packs</span><span class="page-number">3</span></a><a href="#sound-files"><span>3. Set up and preview sounds</span><span class="page-number">4</span></a><a href="#simbrief"><span>4. Load your flight details</span><span class="page-number">5</span></a><a href="#departure"><span>5. Boarding to takeoff</span><span class="page-number">6</span></a><a href="#arrival"><span>6. Climb to the next flight</span><span class="page-number">7</span></a><a href="#controls"><span>7. Everyday controls</span><span class="page-number">8</span></a><a href="#toolbar"><span>8. Use the MSFS toolbar</span><span class="page-number">9</span></a><a href="#tags"><span>9. Choose the right recordings</span><span class="page-number">10</span></a><a href="#camera-volumes"><span>10. Set camera volumes</span><span class="page-number">11</span></a><a href="#camera-rules"><span>11. Set rules for individual views</span><span class="page-number">12</span></a><a href="#chaseplane"><span>12. Use ChasePlane</span><span class="page-number">13</span></a><a href="#generated"><span>13. Generate your first announcement</span><span class="page-number">14</span></a><a href="#templates"><span>14. Edit templates</span><span class="page-number">15</span></a><a href="#voices"><span>15. Choose voices and roles</span><span class="page-number">16</span></a><a href="#generation-modes"><span>16. Generation modes and other providers</span><span class="page-number">17</span></a><a href="#faq"><span>17. Common questions</span><span class="page-number">18</span></a><a href="#support"><span>18. Troubleshooting and support</span><span class="page-number">19</span></a><a href="#quick-reference"><span>19. Before your next flight</span><span class="page-number">20</span></a><a href="#flight-steps"><span>A1. Flight steps: departure</span><span class="page-number">21</span></a><a href="#flight-steps-arrival"><span>A2. Flight steps: arrival</span><span class="page-number">22</span></a><a href="#dynamic-tags"><span>B1. Dynamic tags: flight and route</span><span class="page-number">23</span></a><a href="#dynamic-times"><span>B2. Dynamic tags: time and weather</span><span class="page-number">24</span></a><a href="#template-syntax"><span>B3. Template syntax reference</span><span class="page-number">25</span></a><a href="#file-tags"><span>C1. All filename tags</span><span class="page-number">26</span></a><a href="#file-selection"><span>C2. File selection and cruise names</span><span class="page-number">27</span></a><a href="#aircraft-families"><span>D1. Aircraft families: Boeing and Airbus</span><span class="page-number">28</span></a><a href="#aircraft-families-other"><span>D2. Aircraft families: other aircraft</span><span class="page-number">29</span></a></nav>
 
 <p class="small">Written for Windows users of MSFS 2020 and MSFS 2024. Button names follow the English interface. Optional aircraft and service integrations can behave differently between versions.</p>
 
@@ -77,7 +77,7 @@
 <p>Without SimBrief, use simulator aircraft data or the Status overrides described under <a href="#controls">Everyday controls</a>. For the full preflight checklist, see <a href="#quick-reference">Before your next flight</a>.</p>
 <a class="back" href="#contents-title">Back to contents</a></section>
 <section class="sheet " id="departure" aria-label="5. Boarding to takeoff"><div class="eyebrow">5. Boarding to takeoff</div><h2>Boarding to takeoff</h2>
-<p>The app follows aircraft signals, not a fixed soundtrack. Each announcement also needs an enabled announcement type and a usable sound file or generated replacement. Give one announcement time to finish before expecting the next.</p>
+<p>The app follows aircraft signals. Each call needs an enabled announcement type and a usable sound file or generated replacement. Let each call finish; see <a href="#flight-steps">Flight steps</a> for the complete trigger tables.</p>
 <h3>1. Start boarding</h3>
 <p><strong>With GSX:</strong> enable <strong>Integrations &gt; Enable GSX Integration</strong>, then start boarding through GSX. The welcome begins when GSX reports boarding in progress, with the aircraft on the ground and beacon off. Simply requesting the service is not the same as boarding having started.</p>
 <p><strong>Without GSX:</strong> clear <strong>Enable GSX Integration</strong>. With the aircraft on the ground and beacon off, turn the <strong>logo light on</strong> to start boarding. The app has a fallback when GSX is unavailable, but explicitly disabling it makes the intended workflow clear.</p>
@@ -147,18 +147,18 @@
 <li><code>BoardingWelcome[Morning].ogg</code> is a time-of-day variant.</li>
 <li><code>BoardingWelcome[1].ogg</code> and <code>BoardingWelcome[2].ogg</code> provide numbered alternatives. Variant selection is kept consistent during a flight.</li>
 </ul>
-<p>Tags go before the final extension. For example, use <code>AfterTakeoff[A359][2].ogg</code>, not <code>AfterTakeoff.ogg[A359][2].ogg</code>.</p>
+<p>Put tags between the announcement name and <code>.ogg</code>, for example <code>AfterTakeoff[A359][2].ogg</code>.</p>
 <h3>Airports and languages</h3>
 <p>Ordinary airport tags use the departure context for early announcements through After Takeoff, and the arrival context later. Explicit <code>[ARR]</code> and <code>[DEP]</code> tags choose the context themselves.</p>
 <pre><code class="language-text">AfterLanding[EGLL].ogg
 BoardingWelcome[ARR][EGLL].ogg
-BoardingWelcome[ARR][ED**].ogg
+BoardingWelcome[ARR][ED##].ogg
 </code></pre>
-<p>The first is an arrival at Heathrow. The second mentions Heathrow during boarding. The third targets German destination codes beginning with <code>ED</code>. Airport patterns use four characters in total. This can help select a language by destination without splitting one airline into unrelated folders.</p>
+<p>The first is an arrival at Heathrow. The second mentions Heathrow during boarding. The third targets German destination codes beginning with <code>ED</code>. Use <code>#</code> wildcards with ARR or DEP to select recordings by region. See <a href="#file-tags">All filename tags</a> for the rules.</p>
 <h3>Fallback and intentional silence</h3>
 <p>An airline recording normally takes priority. If none matches, enabled generated fallback can fill the gap before the app looks in Default. Default fallback must be enabled on <strong>Announcements</strong>. See <a href="#generation-modes">generation modes</a> before allowing existing recordings to be replaced.</p>
 <p>The <code>[mute]</code> filename tag deliberately skips a matching announcement while counting it as handled. Use it only when you want that behavior; lowering the volume is a different action.</p>
-<p>For a full list of families and tags, see the existing <a href="https://fearlessfrog.github.io/MSFS_Universal_Announcer/statemachine.html#sound-files-and-tagging">sound-file reference</a>. Its older trigger examples may differ from the current application.</p>
+<p>For the complete list, see <a href="#file-tags">All filename tags</a>, <a href="#file-selection">matching rules</a> and <a href="#aircraft-families">aircraft families</a>.</p>
 <a class="back" href="#contents-title">Back to contents</a></section>
 <section class="sheet " id="camera-volumes" aria-label="10. Set camera volumes"><div class="eyebrow">10. Set camera volumes</div><h2>Set camera volumes</h2>
 <p>Open <strong>Audio</strong> and enable <strong>Enable Camera Based Volume</strong>. The three controls are multipliers of the main volume, not three independent main-volume settings.</p>
@@ -241,7 +241,7 @@ con destino a {DESTINATION_CITY}.
 <li><code>{ORIGIN_CITY}</code> and <code>{DESTINATION_CITY}</code> supply city names; <code>{ORIGIN_CODE}</code> and <code>{DESTINATION_CODE}</code> supply airport codes.</li>
 <li><code>{CRUISE_ALTITUDE_FT}</code> supplies the planned cruise altitude.</li>
 </ul>
-<p><strong>Some placeholders already contain English words</strong>, including <code>{FLIGHT_TIME}</code> and <code>{LOCAL_TIME}</code>. For a non-English call, replace those phrases with wording in your language or omit them. A multilingual voice does not translate text. Missing flight data can leave values empty; saved audio keeps the values from generation time.</p>
+<p><strong>Some placeholders already contain English words</strong>, including <code>{FLIGHT_TIME}</code> and <code>{LOCAL_TIME}</code>. For a non-English call, replace those phrases with wording in your language or omit them. A multilingual voice does not translate text. See the full <a href="#dynamic-tags">dynamic-tag reference</a> for values and <a href="#template-syntax">template syntax</a> for conditions.</p>
 <a class="back" href="#contents-title">Back to contents</a></section>
 <section class="sheet " id="voices" aria-label="15. Choose voices and roles"><div class="eyebrow">15. Choose voices and roles</div><h2>Choose voices and roles</h2>
 <p>For French, Spanish and bilingual calls, try <strong>Ava Multilingual</strong> (<code>en-US-AvaMultilingualNeural</code>, the app&#39;s default) or <strong>Emma Multilingual</strong> (<code>en-US-EmmaMultilingualNeural</code>, shown on Generated). Look for <strong>MultilingualNeural</strong> in the voice name: the <code>en-US</code> prefix does not limit these voices to English. Supply text in the language you want spoken and listen with <strong>Test Voice</strong>.</p>
@@ -344,10 +344,628 @@ Announcements\BAW\roles.json
 <ul>
 <li><a href="https://fearlessfrog.github.io/MSFS_Universal_Announcer/">Project help and current download links</a></li>
 <li><a href="https://fearlessfrog.github.io/MSFS_Universal_Announcer/generated.html">Generated-announcement reference</a></li>
-<li><a href="https://fearlessfrog.github.io/MSFS_Universal_Announcer/statemachine.html">File tags and flight-state reference</a></li>
+<li><a href="#flight-steps">Flight steps</a>, <a href="#dynamic-tags">dynamic tags</a>, <a href="#file-tags">filename tags</a> and <a href="#aircraft-families">aircraft families</a></li>
 <li><a href="https://discord.com/invite/P8ZYJgH3ZF">Announcement Hangar Discord</a></li>
 <li><a href="https://github.com/fearlessfrog/MSFS_Universal_Announcer/issues">Bug reports</a></li>
 </ul>
 <p>Older reference pages describe earlier versions in places. This manual&#39;s app version is printed on the contents page; check release notes when a newer version changes a control or trigger.</p>
 <a class="back" href="#contents-title">Back to contents</a></section>
-</main><footer class="screen-footer">Universal Announcer 0.9.9.7 | 2026-09-20.6</footer></body></html>
+<section class="sheet " id="flight-steps" aria-label="A1. Flight steps: departure"><div class="eyebrow">A1. Flight steps: departure</div><h2>Flight steps: departure</h2>
+<p>This reference describes automatic sequencing in app 0.9.9.7. Add <code>.ogg</code> to the names below. Calls must be enabled on <strong>Announcements</strong> and have a matching recording or generated replacement. AGL means height above ground; MSL means altitude above sea level. Timing is subject to audio finishing and announcement spacing.</p>
+<table>
+<thead>
+<tr>
+<th>File name</th>
+<th>Trigger and timing</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>BoardingWelcome</code></td>
+<td>On ground, beacon off, boarding not complete. Starts with GSX boarding state 5, or the logo light in the non-GSX workflow. Repeats at the configured interval, normally 5 minutes. Skip First BoardingWelcome suppresses the initial call.</td>
+</tr>
+<tr>
+<td><code>BoardingWelcomePilot</code></td>
+<td>Optional pilot welcome during active boarding. Normally replaces the first repeat after the initial cabin welcome; plays once per boarding session. If disabled, the cabin welcome is used.</td>
+</tr>
+<tr>
+<td><code>BoardingMusic</code></td>
+<td>Loops between welcome calls until Boarding Complete. Can start during boarding even when the first welcome is skipped.</td>
+</tr>
+<tr>
+<td><code>DepartureDelayed</code></td>
+<td>During boarding, after a welcome and before Boarding Complete, when the SimBrief scheduled departure is overdue by the configured threshold (normally 10 minutes). Once per boarding session.</td>
+</tr>
+<tr>
+<td><code>BoardingComplete</code></td>
+<td>On ground when the beacon changes to on, or available GSX boarding reports state 6. Stops boarding music.</td>
+</tr>
+<tr>
+<td><code>ArmDoors</code></td>
+<td>On ground with engines running or groundspeed above 1 knot. Waits for Boarding Complete to finish if it has played. The automatic Arm Doors tweak instead schedules it 30 seconds after Boarding Complete finishes.</td>
+</tr>
+<tr>
+<td><code>PreSafetyBriefing</code></td>
+<td>Arm Doors has finished, audio is idle and engines are running.</td>
+</tr>
+<tr>
+<td><code>SafetyBriefing</code></td>
+<td>Pre-Safety Briefing has finished and audio is idle.</td>
+</tr>
+<tr>
+<td><code>CabinDimTakeoff</code></td>
+<td>At least 10 seconds after Safety Briefing finishes, while dark and before After Takeoff. Uses a SimBrief-based darkness calculation where available, otherwise simulator local-time daylight detection.</td>
+</tr>
+<tr>
+<td><code>CrewSeatsTakeoff</code></td>
+<td>On ground, engines running, Safety Briefing handled and the selected light on: landing lights by default, or strobes via Tweaks.</td>
+</tr>
+<tr>
+<td><code>CallCabinSecureTakeoff</code></td>
+<td>Still on ground, audio idle, at least 5 seconds after Crew Seats Takeoff finishes.</td>
+</tr>
+<tr>
+<td><code>AfterTakeoff</code></td>
+<td>Airborne above the configured takeoff height (normally 3,000 ft AGL), at least 2 minutes after the detected ground-to-air transition.</td>
+</tr>
+</tbody></table>
+<p>With GSX enabled but unavailable, the app can fall back to the logo light. For a deliberate non-GSX workflow, disable GSX integration. GSX requesting boarding (state 4) is not the same as active boarding (state 5).</p>
+<p>For the arrival sequence, continue to <a href="#flight-steps-arrival">Flight steps: arrival</a>. <strong>Play Next</strong> bypasses normal waiting conditions; it is not a preview button.</p>
+<a class="back" href="#contents-title">Back to contents</a></section>
+<section class="sheet " id="flight-steps-arrival" aria-label="A2. Flight steps: arrival"><div class="eyebrow">A2. Flight steps: arrival</div><h2>Flight steps: arrival</h2>
+<p>Normal calls play once per flight unless noted. Optional pilot and cruise calls need enabling. Thresholds below are the current defaults; check <strong>Tweaks</strong> for your configuration.</p>
+<table>
+<thead>
+<tr>
+<th>File name</th>
+<th>Trigger and timing</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>TopOfClimbPilot</code></td>
+<td>After Takeoff handled, in Climb/Cruise, within 1,000 ft of SimBrief cruise altitude MSL. Starts a 20-second wait; must be in that band when it fires.</td>
+</tr>
+<tr>
+<td><code>CruiseElapsedXXPercent</code></td>
+<td>A milestone in elapsed simulator air time against SimBrief planned duration, after After Takeoff. Checked about once a minute in Cruise/Descent/Approach. See <a href="#file-selection">cruise timing</a> for guards and short-flight adjustments.</td>
+</tr>
+<tr>
+<td><code>FastenSeatbelt</code></td>
+<td>In Climb/Cruise after After Takeoff, when a recognised seatbelt signal changes from off to on. Repeatable with a 2-minute cooldown. The manual Seatbelt control is a separate way to request a call.</td>
+</tr>
+<tr>
+<td><code>TopOfDescentPilot</code></td>
+<td>At least 25% of planned air time elapsed, tracked for 30 seconds within 1,000 ft of cruise altitude, then at least 500 ft below cruise and descending faster than 500 ft/min. Leaving the cruise band resets the band timer.</td>
+</tr>
+<tr>
+<td><code>DescentSeatbelts</code></td>
+<td>Airborne, After Takeoff handled, in Descent/Approach/Landing. Either below the descent height (10,000 ft AGL) while descending faster than 500 ft/min for 10 seconds, or landing lights change to on.</td>
+</tr>
+<tr>
+<td><code>CrewSeatsLanding</code></td>
+<td>In Descent/Approach/Landing, below the landing-call height (3,000 ft AGL), descending faster than 300 ft/min, landing lights on. Waits while Descent Seatbelts is playing.</td>
+</tr>
+<tr>
+<td><code>CallCabinSecureLanding</code></td>
+<td>Audio idle, at least 10 seconds after Crew Seats Landing finishes, below its height setting plus 2,000 ft (normally 5,000 ft AGL).</td>
+</tr>
+<tr>
+<td><code>AfterLanding</code></td>
+<td>On ground below 15 knots, with the arrival recognised and Crew Seats Landing or Cabin Secure Landing handled. Optional AfterLanding delay applies. Spoiler position is not the current trigger.</td>
+</tr>
+<tr>
+<td><code>AfterLandingMusic</code></td>
+<td>Loops after After Landing finishes until disembarkation. Disarm Doors can interrupt it.</td>
+</tr>
+<tr>
+<td><code>DisarmDoors</code></td>
+<td>After Landing has finished, engines off, parking brake set.</td>
+</tr>
+<tr>
+<td><code>DisembarkStarted</code></td>
+<td>Disarm Doors has finished and either beacon is off or enabled GSX deboarding is requested/active (state 4/5). Stops arrival music. GSX deboarding completion (state 6) can reset the sequence.</td>
+</tr>
+</tbody></table>
+<h3>Additional sound files</h3>
+<p><code>LandingGreat.ogg</code> and <code>LandingTerrible.ogg</code> are optional touchdown reactions controlled by <strong>Tweaks</strong>. Current default thresholds are at most 200 ft/min and 1.2g for a great landing, or at least 800 ft/min or 1.6g for a terrible landing. Built-in reaction sounds are available if a custom file is absent.</p>
+<p><code>CabinNoise.ogg</code> supplies optional idle cabin ambience after boarding and before disembarkation. It uses the music volume and camera multipliers. It is not another flight-sequence step.</p>
+<a class="back" href="#contents-title">Back to contents</a></section>
+<section class="sheet " id="dynamic-tags" aria-label="B1. Dynamic tags: flight and route"><div class="eyebrow">B1. Dynamic tags: flight and route</div><h2>Dynamic tags: flight and route</h2>
+<p>Dynamic tags are <strong>placeholders inside template text</strong>, written in braces. They are different from <a href="#file-tags">filename tags</a>, which use square brackets to select recordings. Use these names exactly, in uppercase. Values are inserted when audio is generated; an existing recording does not update itself.</p>
+<table>
+<thead>
+<tr>
+<th>Placeholder</th>
+<th>Value supplied</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>{AIRLINE_CODE}</code></td>
+<td>Airline ICAO code, using the session override when set.</td>
+</tr>
+<tr>
+<td><code>{AIRLINE_NAME}</code></td>
+<td>Airline name from the app&#39;s lookup data.</td>
+</tr>
+<tr>
+<td><code>{AIRCRAFT_CODE}</code></td>
+<td>Resolved aircraft code, using the session override when set.</td>
+</tr>
+<tr>
+<td><code>{AIRCRAFT_NAME}</code></td>
+<td>Aircraft name from lookup data.</td>
+</tr>
+<tr>
+<td><code>{CALLSIGN}</code></td>
+<td>SimBrief callsign, with simulator callsign as fallback.</td>
+</tr>
+<tr>
+<td><code>{FLIGHT_NUMBER_DIGITS}</code></td>
+<td>Digits from the callsign: <code>AFR123</code> becomes <code>123</code>. The voice reads them in the language of the surrounding text.</td>
+</tr>
+<tr>
+<td><code>{FLIGHT_CODE}</code></td>
+<td>SimBrief/simulator airline code plus the flight-number digits, when both are available.</td>
+</tr>
+<tr>
+<td><code>{ORIGIN_CODE}</code></td>
+<td>SimBrief departure airport ICAO code.</td>
+</tr>
+<tr>
+<td><code>{ORIGIN_NAME}</code></td>
+<td>Departure airport name from lookup data.</td>
+</tr>
+<tr>
+<td><code>{ORIGIN_CITY}</code></td>
+<td>Departure airport city/municipality.</td>
+</tr>
+<tr>
+<td><code>{ORIGIN_FULLNAME}</code></td>
+<td>Departure airport name and city, combined where available.</td>
+</tr>
+<tr>
+<td><code>{DESTINATION_CODE}</code></td>
+<td>SimBrief destination airport ICAO code.</td>
+</tr>
+<tr>
+<td><code>{DESTINATION_NAME}</code></td>
+<td>Destination airport name from lookup data.</td>
+</tr>
+<tr>
+<td><code>{DESTINATION_CITY}</code></td>
+<td>Destination city/municipality.</td>
+</tr>
+<tr>
+<td><code>{DESTINATION_FULLNAME}</code></td>
+<td>Destination airport name and city, combined where available.</td>
+</tr>
+<tr>
+<td><code>{CRUISE_ALTITUDE_FT}</code></td>
+<td>SimBrief initial cruise altitude in feet, with comma grouping, such as <code>35,000</code>.</td>
+</tr>
+<tr>
+<td><code>{ROUTE_DISTANCE_NM}</code></td>
+<td>SimBrief route distance rounded to whole nautical miles, with comma grouping.</td>
+</tr>
+<tr>
+<td><code>{TIME_OF_DAY}</code></td>
+<td>Simulator local-time category: <code>Night</code>, <code>Morning</code>, <code>Afternoon</code> or <code>Evening</code>. These words are English.</td>
+</tr>
+</tbody></table>
+<p>Names and cities come from the lookup files shipped in <code>Tools</code>; they are not automatically translated. Missing data usually produces an empty value. A misspelled or unsupported placeholder can remain as literal text, so preview your output.</p>
+<p>For language-sensitive flight numbers, keep <code>{FLIGHT_NUMBER_DIGITS}</code> as digits rather than writing English number words. For digit-by-digit pronunciation, see <code>xml_digits</code> in <a href="#template-syntax">template syntax</a>.</p>
+<a class="back" href="#contents-title">Back to contents</a></section>
+<section class="sheet " id="dynamic-times" aria-label="B2. Dynamic tags: time and weather"><div class="eyebrow">B2. Dynamic tags: time and weather</div><h2>Dynamic tags: time and weather</h2>
+<p>These values are resolved at generation time. SimBrief supplies the plan and destination weather; it is not a live weather feed. English wording below remains English even with a multilingual voice.</p>
+<table>
+<thead>
+<tr>
+<th>Placeholder</th>
+<th>Value supplied</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>{FLIGHT_TIME}</code></td>
+<td>Planned SimBrief duration as English words, such as “one hour and ten minutes”.</td>
+</tr>
+<tr>
+<td><code>{FLIGHT_TIME_HHMM}</code></td>
+<td>The same duration as <code>HH:MM</code>.</td>
+</tr>
+<tr>
+<td><code>{LOCAL_TIME}</code></td>
+<td>Simulator local time spoken in English, including “a m” or “p m”.</td>
+</tr>
+<tr>
+<td><code>{LOCAL_TIME_24H}</code></td>
+<td>Simulator local time as <code>HH:MM</code>.</td>
+</tr>
+<tr>
+<td><code>{SCHED_DEP_LOCAL_24H}</code></td>
+<td>Scheduled departure converted using the origin timezone in the plan.</td>
+</tr>
+<tr>
+<td><code>{SCHED_DEP_UTC_24H}</code></td>
+<td>Scheduled departure in UTC, <code>HH:MM</code>.</td>
+</tr>
+<tr>
+<td><code>{SCHED_ARR_LOCAL_24H}</code></td>
+<td>Scheduled arrival converted using the destination timezone in the plan.</td>
+</tr>
+<tr>
+<td><code>{SCHED_ARR_UTC_24H}</code></td>
+<td>Scheduled arrival in UTC, <code>HH:MM</code>. Arrival can fall back to departure plus block time, then estimated arrival.</td>
+</tr>
+<tr>
+<td><code>{DEP_STATUS}</code></td>
+<td>English departure-status sentence: on time, late or early.</td>
+</tr>
+<tr>
+<td><code>{ARR_STATUS}</code></td>
+<td>English arrival-status sentence: on time, late or early.</td>
+</tr>
+<tr>
+<td><code>{DEP_LATE}</code>, <code>{DEP_EARLY}</code></td>
+<td>English duration late/early for departure; empty when not applicable.</td>
+</tr>
+<tr>
+<td><code>{ARR_LATE}</code>, <code>{ARR_EARLY}</code></td>
+<td>English duration late/early for arrival; empty when not applicable.</td>
+</tr>
+<tr>
+<td><code>{DEP_LATE_MINUTES}</code>, <code>{DEP_EARLY_MINUTES}</code></td>
+<td>Departure difference in whole minutes, digits only; empty when not applicable.</td>
+</tr>
+<tr>
+<td><code>{ARR_LATE_MINUTES}</code>, <code>{ARR_EARLY_MINUTES}</code></td>
+<td>Arrival difference in whole minutes, digits only; empty when not applicable.</td>
+</tr>
+<tr>
+<td><code>{DESTINATION_TEMPERATURE}</code></td>
+<td>Destination METAR temperature in Celsius, spoken in English.</td>
+</tr>
+<tr>
+<td><code>{DESTINATION_TEMPERATURE_F}</code></td>
+<td>Converted Fahrenheit temperature, spoken in English.</td>
+</tr>
+<tr>
+<td><code>{DESTINATION_TEMPERATURE_C_NUM}</code></td>
+<td>Numeric Celsius value with <code>°C</code>, such as <code>18 °C</code>.</td>
+</tr>
+<tr>
+<td><code>{DESTINATION_WEATHER}</code></td>
+<td>A short English summary derived from the destination METAR.</td>
+</tr>
+</tbody></table>
+<p><strong>Delay values compare the plan with the computer&#39;s current UTC time</strong>, not the simulator clock. Status sentences treat a difference of up to 5 minutes as on time; the numeric early/late values can still be non-empty within that window. This differs from the configurable threshold for the Departure Delayed announcement.</p>
+<p>For another language, use numeric minute values with your own wording, for example: <code>Nous avons {DEP_LATE_MINUTES} minutes de retard.</code> Wrap optional phrases in an IF condition as shown on the next page.</p>
+<a class="back" href="#contents-title">Back to contents</a></section>
+<section class="sheet " id="template-syntax" aria-label="B3. Template syntax reference"><div class="eyebrow">B3. Template syntax reference</div><h2>Template syntax reference</h2>
+<h3>Optional text</h3>
+<p>Use a single-line condition to omit a phrase when a value is missing. A condition is true when the value is non-empty and is not exactly <code>0</code>.</p>
+<pre><code class="language-text">{IF DESTINATION_CITY}Welcome to {DESTINATION_CITY}.{END}
+{IF DEP_LATE_MINUTES}Nous avons {DEP_LATE_MINUTES} minutes de retard.{END}
+</code></pre>
+<p>The current parser ends a condition at <code>{END}</code>, the next newline or the end of the text, whichever comes first. Keep each condition on one line. Nested conditions and multi-line blocks are not reliable in this version, despite examples in older guides. There is no ELSE or comparison expression.</p>
+<h3>Direct SimBrief XML values</h3>
+<table>
+<thead>
+<tr>
+<th>Syntax and example</th>
+<th>Result</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>{xml&lt;api_params&gt;&lt;cpt&gt;}</code></td>
+<td>Raw text from the matching element, such as the captain&#39;s name.</td>
+</tr>
+<tr>
+<td><code>{xml_digits&lt;general&gt;&lt;flight_number&gt;}</code></td>
+<td>Keeps digits and separates them with spaces: <code>123</code> becomes <code>1 2 3</code>.</td>
+</tr>
+<tr>
+<td><code>{xml_number&lt;general&gt;&lt;route_distance&gt;}</code></td>
+<td>Parses a number, rounds to an integer and adds comma grouping. It does not convert it to English number words.</td>
+</tr>
+</tbody></table>
+<p>Each <code>&lt;name&gt;</code> follows a child element from the preceding one in the plan. Missing XML or a missing path produces empty text. Inspect your own SimBrief plan to choose a valid path. These XML lookups run before ordinary placeholders and IF conditions.</p>
+<h3>Voice directives</h3>
+<p>Put directives on separate lines before the spoken text. They select how the text is generated and are not read aloud.</p>
+<table>
+<thead>
+<tr>
+<th>Directive</th>
+<th>Purpose</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>##Role: Pilot</code></td>
+<td>Use the pilot voice assigned in Roles.</td>
+</tr>
+<tr>
+<td><code>##Role: FA</code></td>
+<td>Use the flight-attendant voice. <code>Flight Attendant</code> and <code>Cabin Crew</code> are also recognised role names.</td>
+</tr>
+<tr>
+<td><code>##Voice: Edge/en-GB-SoniaNeural</code></td>
+<td>Use this provider/voice for the template, overriding the role. Use Insert Voice to insert a current selection.</td>
+</tr>
+<tr>
+<td><code>##rate:-10%</code></td>
+<td>Adjust speaking speed for Edge/Azure. <code>+0%</code> is unchanged.</td>
+</tr>
+<tr>
+<td><code>##pitch:0Hz</code></td>
+<td>Adjust pitch for Edge/Azure. <code>0Hz</code> is unchanged.</td>
+</tr>
+</tbody></table>
+<p>Airline role assignments take priority over Default role assignments, with the main selected voice as fallback. A template without a role uses the flight-attendant role when available. See <a href="#voices">voice setup</a> and <a href="#generation-modes">generation modes</a> before replacing recordings.</p>
+<a class="back" href="#contents-title">Back to contents</a></section>
+<section class="sheet " id="file-tags" aria-label="C1. All filename tags"><div class="eyebrow">C1. All filename tags</div><h2>All filename tags</h2>
+<p>Use <code>AnnouncementName[tag][tag].ogg</code>, with tags immediately before the extension. For example, <code>SafetyBriefing[A20N][Morning].ogg</code>. Use the exact announcement names in <a href="#flight-steps">Flight steps</a>. An extra prefix, suffix or <code>.mp3</code> extension prevents normal matching. Templates use <code>.txt</code>; generated recordings use <code>.ogg</code>.</p>
+<table>
+<thead>
+<tr>
+<th>Tag</th>
+<th>Match and example</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Exact aircraft code</td>
+<td><code>[A20N]</code>, <code>[B738]</code>, or the actual resolved aircraft code. <code>[A320]</code> means that exact type, not the Airbus family.</td>
+</tr>
+<tr>
+<td>Aircraft family helper</td>
+<td><code>[320]</code>, <code>[737]</code>, <code>[A220]</code>, <code>[Citation]</code>, etc. See the <a href="#aircraft-families">complete family tables</a>.</td>
+</tr>
+<tr>
+<td><code>[Morning]</code></td>
+<td>Simulator local time 06:00 to before 12:00.</td>
+</tr>
+<tr>
+<td><code>[Afternoon]</code></td>
+<td>12:00 to before 18:00.</td>
+</tr>
+<tr>
+<td><code>[Evening]</code></td>
+<td>18:00 to before midnight.</td>
+</tr>
+<tr>
+<td><code>[Night]</code></td>
+<td>Midnight to before 06:00.</td>
+</tr>
+<tr>
+<td><code>[Refueling]</code></td>
+<td>GSX refueling requested or active (state 4/5). It does not mean merely parked with engines off.</td>
+</tr>
+<tr>
+<td>Airport ICAO code</td>
+<td><code>[EGLL]</code> matches the phase&#39;s airport context. Most departure calls use origin; other calls use destination. See the exact list on the next page.</td>
+</tr>
+<tr>
+<td><code>[ARR]</code></td>
+<td>Use SimBrief destination. Must accompany a matching airport code or pattern, e.g. <code>[ARR][EGLL]</code>.</td>
+</tr>
+<tr>
+<td><code>[DEP]</code></td>
+<td>Use SimBrief origin. Must accompany a matching airport code or pattern, e.g. <code>[DEP][EGLL]</code>. Do not combine ARR and DEP.</td>
+</tr>
+<tr>
+<td>Airport wildcard <code>#</code></td>
+<td>With ARR or DEP, e.g. <code>[ARR][ED##]</code>. <code>#</code> matches zero or more characters. The airport-pattern tag must contain 3 or 4 characters in total. <code>*</code> is not supported.</td>
+</tr>
+<tr>
+<td>Numbered variant</td>
+<td><code>[1]</code>, <code>[2]</code>, etc. Selects among matching versions and tries to preserve the chosen number across the flight. This is separate from the flight&#39;s callsign.</td>
+</tr>
+<tr>
+<td><code>[mute]</code></td>
+<td>Selects a recording but intentionally skips its playback and counts the call as handled. A matching airline mute file also blocks generated fallback.</td>
+</tr>
+</tbody></table>
+<p>There is no special language tag such as <code>[French]</code>. Select a recording through aircraft, time, airport or numbered variants, or put translated text into a generated template. Tag values are compared without case sensitivity; keep the announcement name&#39;s spelling and capitalisation as listed.</p>
+<pre><code class="language-text">BoardingWelcome[ARR][ED##].ogg
+AfterLanding[EGLL][mute].ogg
+SafetyBriefing[320][Morning][1].ogg
+</code></pre>
+<a class="back" href="#contents-title">Back to contents</a></section>
+<section class="sheet " id="file-selection" aria-label="C2. File selection and cruise names"><div class="eyebrow">C2. File selection and cruise names</div><h2>File selection and cruise names</h2>
+<h3>How matching files are chosen</h3>
+<p>Scores add together for matching tags; they are not a fixed priority ladder. A tag that does not match normally excludes the file. An untagged file scores zero and is a useful fallback. Folder priority still applies: matching airline files are considered before Default fallback.</p>
+<table>
+<thead>
+<tr>
+<th>Matching condition</th>
+<th align="right">Score added</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Refueling active</td>
+<td align="right">200</td>
+</tr>
+<tr>
+<td>Exact aircraft</td>
+<td align="right">100</td>
+</tr>
+<tr>
+<td>Exact airport with ARR or DEP</td>
+<td align="right">100</td>
+</tr>
+<tr>
+<td>Wildcard airport with ARR or DEP</td>
+<td align="right">95</td>
+</tr>
+<tr>
+<td>Aircraft family</td>
+<td align="right">80</td>
+</tr>
+<tr>
+<td>Airport without ARR or DEP</td>
+<td align="right">75</td>
+</tr>
+<tr>
+<td>Time of day</td>
+<td align="right">50</td>
+</tr>
+<tr>
+<td>Numbered variant</td>
+<td align="right">10</td>
+</tr>
+<tr>
+<td>Mute</td>
+<td align="right">0</td>
+</tr>
+</tbody></table>
+<p>Thus <code>[320][Morning]</code> scores 130 on a matching morning flight and can beat a file with only <code>[A20N]</code> at 100. Among equal top scores, non-muted files are preferred. Numbered alternatives try to reuse the flight&#39;s established number if available; other ties are random. Numbered cabin-noise tracks instead rotate.</p>
+<p>With ARR/DEP, separate airport tags are alternatives: <code>[ARR][EGLL][EGKK]</code> matches either destination. Without ARR/DEP, multiple airport tags are not an OR list. Avoid combining ARR/DEP with a 3- or 4-letter family helper such as <code>[CRJ]</code>: the parser can treat that helper as another airport alternative.</p>
+<h3>Airport context without ARR or DEP</h3>
+<p>Origin is used for <code>BoardingWelcome</code>, <code>BoardingWelcomePilot</code>, <code>BoardingMusic</code>, <code>BoardingComplete</code>, <code>ArmDoors</code>, <code>PreSafetyBriefing</code>, <code>SafetyBriefing</code>, <code>CabinDimTakeoff</code>, <code>CrewSeatsTakeoff</code>, <code>CallCabinSecureTakeoff</code> and <code>AfterTakeoff</code>. Other announcement types use destination, including <code>DepartureDelayed</code>. Cabin noise uses origin context. Airport matching requires SimBrief route data.</p>
+<h3>Cruise filenames and timing</h3>
+<p>Use <code>CruiseElapsed1Percent.ogg</code> through <code>CruiseElapsed100Percent.ogg</code>, or corresponding <code>.txt</code> templates. <code>Cruise.ogg</code> is an alias at 50%. Enable <strong>CruiseElapsed</strong>. This measures elapsed simulator air time against planned duration, not map distance.</p>
+<p>For plans of 45-59, 30-44, 20-29 and under 20 minutes, milestones are shifted earlier by 12, 14, 18 and 22 percentage points respectively; plans of 60 minutes or more have no shift. Milestones of 40% or above are suppressed below 10,000 ft AGL or when descending faster than 500 ft/min. When several thresholds are crossed together, the highest available eligible call wins; every intermediate file is not guaranteed to play.</p>
+<a class="back" href="#contents-title">Back to contents</a></section>
+<section class="sheet " id="aircraft-families" aria-label="D1. Aircraft families: Boeing and Airbus"><div class="eyebrow">D1. Aircraft families: Boeing and Airbus</div><h2>Aircraft families: Boeing and Airbus</h2>
+<p>These are the exact family mappings in the current code. Use a helper in square brackets, for example <code>SafetyBriefing[320].ogg</code>. The table lists codes that receive the family-match score. Check the aircraft code on <strong>Status</strong> or in the retrieved SimBrief plan.</p>
+<table>
+<thead>
+<tr>
+<th>Family tag</th>
+<th>Aircraft codes matched</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>[737]</code></td>
+<td>B731, B732, B733, B734, B735, B736, B737, B738, B739, B37M, B38M, B39M, B3XM</td>
+</tr>
+<tr>
+<td><code>[747]</code></td>
+<td>B741, B742, B743, B744, B748, B74S</td>
+</tr>
+<tr>
+<td><code>[757]</code></td>
+<td>B752, B753</td>
+</tr>
+<tr>
+<td><code>[767]</code></td>
+<td>B762, B763, B764</td>
+</tr>
+<tr>
+<td><code>[777]</code></td>
+<td>B772, B773, B77L, B77W, B778, B779</td>
+</tr>
+<tr>
+<td><code>[787]</code></td>
+<td>B788, B789, B78X</td>
+</tr>
+<tr>
+<td><code>[320]</code></td>
+<td>A318, A319, A320, A321, A19N, A20N, A21N</td>
+</tr>
+<tr>
+<td><code>[330]</code></td>
+<td>A332, A333, A338, A339</td>
+</tr>
+<tr>
+<td><code>[340]</code></td>
+<td>A342, A343, A345, A346</td>
+</tr>
+<tr>
+<td><code>[350]</code></td>
+<td>A359, A35K</td>
+</tr>
+<tr>
+<td><code>[380]</code></td>
+<td>A388</td>
+</tr>
+<tr>
+<td><code>[A220]</code></td>
+<td>BCS1, BCS3</td>
+</tr>
+</tbody></table>
+<h3>Exact type or family?</h3>
+<p><code>[A20N]</code> is an exact type match worth 100 points. <code>[320]</code> is the family match worth 80. <code>[A320]</code> matches only A320, not A20N. Other matching tags add points, so use the <a href="#file-selection">selection table</a> when several files qualify.</p>
+<p>Likewise, use <code>[BCS1]</code> or <code>[BCS3]</code> for a particular A220 type, or <code>[A220]</code> for both. A helper does not fix a missing or unexpected aircraft code. Check the detected code before renaming a whole pack.</p>
+<p><strong>Numeric helpers also count as numbered variants.</strong> If <code>[320]</code> does not match the detected family, the current parser can still accept it as variant number 320, worth 10 points. The same applies to other numeric helpers. Use exact non-numeric codes such as <code>[A20N]</code> when a file must be restricted to that aircraft.</p>
+<p>Keep one untagged recording when a call should also work on aircraft outside the listed family. Families are a convenience for file selection; they do not restrict which aircraft can use Universal Announcer.</p>
+<a class="back" href="#contents-title">Back to contents</a></section>
+<section class="sheet " id="aircraft-families-other" aria-label="D2. Aircraft families: other aircraft"><div class="eyebrow">D2. Aircraft families: other aircraft</div><h2>Aircraft families: other aircraft</h2>
+<p>The remaining helpers are below, including single-type mappings. Use the spelling shown; comparisons are case-insensitive. These mappings describe the app&#39;s current lookup, not every member of each real aircraft family.</p>
+<table>
+<thead>
+<tr>
+<th>Family tag</th>
+<th>Aircraft codes matched</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>[MD80]</code></td>
+<td>MD81, MD82, MD83, MD87, MD88</td>
+</tr>
+<tr>
+<td><code>[MD90]</code></td>
+<td>MD90</td>
+</tr>
+<tr>
+<td><code>[MD11]</code></td>
+<td>MD11</td>
+</tr>
+<tr>
+<td><code>[DC9]</code></td>
+<td>DC9, DC91, DC92, DC93, DC94, DC95</td>
+</tr>
+<tr>
+<td><code>[DC10]</code></td>
+<td>DC10</td>
+</tr>
+<tr>
+<td><code>[CRJ]</code></td>
+<td>CRJ1, CRJ2, CRJ7, CRJ9, CRJX</td>
+</tr>
+<tr>
+<td><code>[ERJ]</code></td>
+<td>E135, E140, E145</td>
+</tr>
+<tr>
+<td><code>[EJET]</code></td>
+<td>E170, E175, E190, E195</td>
+</tr>
+<tr>
+<td><code>[146]</code></td>
+<td>B461, B462, B463, ARJ7, ARJ8, ARJ1</td>
+</tr>
+<tr>
+<td><code>[ATR]</code></td>
+<td>AT42, AT43, AT44, AT45, AT46, AT72, AT73, AT75, AT76</td>
+</tr>
+<tr>
+<td><code>[DH8]</code></td>
+<td>DH8A, DH8B, DH8C, DH8D</td>
+</tr>
+<tr>
+<td><code>[F28]</code></td>
+<td>F28</td>
+</tr>
+<tr>
+<td><code>[F50]</code></td>
+<td>F50</td>
+</tr>
+<tr>
+<td><code>[F100]</code></td>
+<td>F70, F100</td>
+</tr>
+<tr>
+<td><code>[SF34]</code></td>
+<td>SF34</td>
+</tr>
+<tr>
+<td><code>[SB20]</code></td>
+<td>SB20</td>
+</tr>
+<tr>
+<td><code>[Citation]</code></td>
+<td>C25A, C25B, C510, C525, C560, C56X, C650, C680, C700, C750</td>
+</tr>
+</tbody></table>
+<p>Examples: <code>BoardingWelcome[EJET].ogg</code> covers the four listed E-Jets; <code>SafetyBriefing[Citation].ogg</code> covers the listed Citation codes. Unlisted types do not automatically inherit a helper based on their manufacturer or name.</p>
+<p>For basic folder setup see <a href="#sound-files">Set up and preview sounds</a>. For the supported tag forms and combinations see <a href="#file-tags">All filename tags</a>.</p>
+<a class="back" href="#contents-title">Back to contents</a></section>
+</main><footer class="screen-footer">Universal Announcer 0.9.9.7 | 2026-09-20.7</footer></body></html>

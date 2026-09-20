@@ -1,5 +1,11 @@
 # Generated Announcements
 
+## Current manual and reference
+
+For current instructions, see [Generated announcements](https://fearlessfrog.github.io/MSFS_Universal_Announcer/manual/#generated) and [Choose how generation is used](https://fearlessfrog.github.io/MSFS_Universal_Announcer/manual/#generation-modes) in the user manual. The [Dynamic tags](https://fearlessfrog.github.io/MSFS_Universal_Announcer/manual/#dynamic-tags) and [Template syntax](https://fearlessfrog.github.io/MSFS_Universal_Announcer/manual/#template-syntax) reference sections list the supported placeholders and syntax.
+
+This older page is kept for reference. Where it differs, follow the manual for the application version shown on its contents page.
+
 
 > 💡 **Pro tip**: If you're new to the app, consider getting familiar with the basic features first.
 

@@ -1,9 +1,9 @@
 {
   "appVersion": "0.9.9.7",
-  "revision": "2026-09-20.6",
+  "revision": "2026-09-20.7",
   "browser": "151.0.7922.34",
   "missingScreenshots": [],
-  "sections": 20,
+  "sections": 29,
   "sourceCommit": "5b55c0b1bebf5a45d4ecfc9d1026025c570fe8f7",
   "checks": [
     "Offline HTML, anchors, images and width 390px: pass",
@@ -12,7 +12,7 @@
   "printSectionHeightsMm": [
     {
       "id": "cover",
-      "mm": 246.71982421874998
+      "mm": 206.72226562499998
     },
     {
       "id": "getting-started",
@@ -32,7 +32,7 @@
     },
     {
       "id": "departure",
-      "mm": 205.77141927083332
+      "mm": 200.57897135416667
     },
     {
       "id": "arrival",
@@ -48,7 +48,7 @@
     },
     {
       "id": "tags",
-      "mm": 225.45807291666665
+      "mm": 214.84166666666667
     },
     {
       "id": "camera-volumes",
@@ -68,7 +68,7 @@
     },
     {
       "id": "templates",
-      "mm": 256.3564453125
+      "mm": 251.16399739583332
     },
     {
       "id": "voices",
@@ -89,6 +89,42 @@
     {
       "id": "quick-reference",
       "mm": 232.61835937499998
+    },
+    {
+      "id": "flight-steps",
+      "mm": 253.49977213541663
+    },
+    {
+      "id": "flight-steps-arrival",
+      "mm": 253.06569010416663
+    },
+    {
+      "id": "dynamic-tags",
+      "mm": 251.06891276041665
+    },
+    {
+      "id": "dynamic-times",
+      "mm": 252.6398763020833
+    },
+    {
+      "id": "template-syntax",
+      "mm": 253.49563802083333
+    },
+    {
+      "id": "file-tags",
+      "mm": 242.25498046874998
+    },
+    {
+      "id": "file-selection",
+      "mm": 254.69039713541665
+    },
+    {
+      "id": "aircraft-families",
+      "mm": 223.42408854166663
+    },
+    {
+      "id": "aircraft-families-other",
+      "mm": 221.94820963541665
     }
   ]
 }

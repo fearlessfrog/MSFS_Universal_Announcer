@@ -1,6 +1,6 @@
 # Maintaining the manual
 
-This directory is the sole authoring source for the new manual. Existing documentation files and site configuration are not changed. GitHub Pages ignores this underscore-prefixed authoring directory; `../manual/` contains ready-to-serve static files with no Jekyll front matter or Liquid syntax.
+This directory is the sole authoring source for the new manual. The manual build does not edit existing documentation or site configuration. The maintainer has separately authorised introductory links in the older guides. GitHub Pages ignores this underscore-prefixed authoring directory; `../manual/` contains ready-to-serve static files with no Jekyll front matter or Liquid syntax.
 
 ## Build on Windows
 
@@ -25,9 +25,10 @@ For a Codex bundled runtime, set MANUAL_NODE_MODULES to its Node package directo
 - Put screenshots in `screenshots/` using the filenames in `SCREENSHOTS.md`. Do not put blank placeholders or invented UI into the manual.
 - Run the build. It fails on duplicate section IDs, broken anchors, missing included images, horizontal overflow or a section taller than the printable page. Do not shrink the whole document merely to fit one long section; shorten or split that section.
 - If page count changes, contents numbers are generated from page sections. Verify actual PDF page count matches before delivery.
-- All ten supplied screenshots are included in the 20-page illustrated edition. Keep original image bytes unchanged. Adjust each screenshot's `printWidthMm` in metadata when reflowing; HTML provides a full-size image link. Do not force a large window into a tiny fixed-height box.
+- All ten supplied screenshots are included in the 29-page illustrated edition, including nine reference pages. Keep original image bytes unchanged. Adjust each screenshot's `printWidthMm` in metadata when reflowing; HTML provides a full-size image link. Do not force a large window into a tiny fixed-height box.
 - Inspect every PDF page visually. Confirm readable screenshots, footer spacing and no cropped text. Check a narrow browser window and open the HTML without internet access.
-- Confirm all changes remain under `_manual-source/` and `manual/`. Do not change existing guides or `_config.yml`.
+- Keep manual build changes under `_manual-source/` and `manual/`. The introductory notices in generated.md, statemachine.md and howtofiles.md link to the current manual; preserve their existing URLs and reference content. Do not change `_config.yml`.
+- When updating the reference appendices, compare flight triggers with AnnouncementStateMachine.cs, placeholders with PlaceholderResolver.cs and SoundFileManager.cs, and tag rules/family mappings with SoundFileManager.cs. Recheck the counts and exceptions recorded in SOURCES.md; older guide text can be out of date.
 
 ## Deliver and publish
 

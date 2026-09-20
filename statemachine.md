@@ -1,5 +1,11 @@
 # How Detection of Flight State Works
 
+## Current manual and reference
+
+The user manual has current [Flight steps](https://fearlessfrog.github.io/MSFS_Universal_Announcer/manual/#flight-steps), [All filename tags](https://fearlessfrog.github.io/MSFS_Universal_Announcer/manual/#file-tags) and [Aircraft family helpers](https://fearlessfrog.github.io/MSFS_Universal_Announcer/manual/#aircraft-families) tables, checked against the application source.
+
+The older version snapshot below is kept for reference. Where it differs, follow the manual for the application version shown on its contents page.
+
 This is a snapshot of v0.9.7 transitions, so it might evolve. It should answer most questions on 'what fires when'.
 
 ## Flight State Transition Table

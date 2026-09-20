@@ -105,7 +105,7 @@ Without SimBrief, use simulator aircraft data or the Status overrides described 
 <!-- page: departure | 5. Boarding to takeoff -->
 ## Boarding to takeoff
 
-The app follows aircraft signals, not a fixed soundtrack. Each announcement also needs an enabled announcement type and a usable sound file or generated replacement. Give one announcement time to finish before expecting the next.
+The app follows aircraft signals. Each call needs an enabled announcement type and a usable sound file or generated replacement. Let each call finish; see [Flight steps](#flight-steps) for the complete trigger tables.
 
 ### 1. Start boarding
 
@@ -213,7 +213,7 @@ Start with plain filenames. Add tags when you need a different recording for a p
 - `BoardingWelcome[Morning].ogg` is a time-of-day variant.
 - `BoardingWelcome[1].ogg` and `BoardingWelcome[2].ogg` provide numbered alternatives. Variant selection is kept consistent during a flight.
 
-Tags go before the final extension. For example, use `AfterTakeoff[A359][2].ogg`, not `AfterTakeoff.ogg[A359][2].ogg`.
+Put tags between the announcement name and `.ogg`, for example `AfterTakeoff[A359][2].ogg`.
 
 ### Airports and languages
 
@@ -222,10 +222,10 @@ Ordinary airport tags use the departure context for early announcements through 
 ```text
 AfterLanding[EGLL].ogg
 BoardingWelcome[ARR][EGLL].ogg
-BoardingWelcome[ARR][ED**].ogg
+BoardingWelcome[ARR][ED##].ogg
 ```
 
-The first is an arrival at Heathrow. The second mentions Heathrow during boarding. The third targets German destination codes beginning with `ED`. Airport patterns use four characters in total. This can help select a language by destination without splitting one airline into unrelated folders.
+The first is an arrival at Heathrow. The second mentions Heathrow during boarding. The third targets German destination codes beginning with `ED`. Use `#` wildcards with ARR or DEP to select recordings by region. See [All filename tags](#file-tags) for the rules.
 
 ### Fallback and intentional silence
 
@@ -233,7 +233,7 @@ An airline recording normally takes priority. If none matches, enabled generated
 
 The `[mute]` filename tag deliberately skips a matching announcement while counting it as handled. Use it only when you want that behavior; lowering the volume is a different action.
 
-For a full list of families and tags, see the existing [sound-file reference](https://fearlessfrog.github.io/MSFS_Universal_Announcer/statemachine.html#sound-files-and-tagging). Its older trigger examples may differ from the current application.
+For the complete list, see [All filename tags](#file-tags), [matching rules](#file-selection) and [aircraft families](#aircraft-families).
 
 <!-- page: camera-volumes | 10. Set camera volumes -->
 ## Set camera volumes
@@ -348,7 +348,7 @@ Use either language, or both with a multilingual voice. `{FLIGHT_NUMBER_DIGITS}`
 - `{ORIGIN_CITY}` and `{DESTINATION_CITY}` supply city names; `{ORIGIN_CODE}` and `{DESTINATION_CODE}` supply airport codes.
 - `{CRUISE_ALTITUDE_FT}` supplies the planned cruise altitude.
 
-**Some placeholders already contain English words**, including `{FLIGHT_TIME}` and `{LOCAL_TIME}`. For a non-English call, replace those phrases with wording in your language or omit them. A multilingual voice does not translate text. Missing flight data can leave values empty; saved audio keeps the values from generation time.
+**Some placeholders already contain English words**, including `{FLIGHT_TIME}` and `{LOCAL_TIME}`. For a non-English call, replace those phrases with wording in your language or omit them. A multilingual voice does not translate text. See the full [dynamic-tag reference](#dynamic-tags) for values and [template syntax](#template-syntax) for conditions.
 
 <!-- page: voices | 15. Choose voices and roles -->
 ## Choose voices and roles
@@ -513,8 +513,276 @@ In templates, `##Role: Pilot` and `##Role: FA` select crew roles. `##Voice: Edge
 
 - [Project help and current download links](https://fearlessfrog.github.io/MSFS_Universal_Announcer/)
 - [Generated-announcement reference](https://fearlessfrog.github.io/MSFS_Universal_Announcer/generated.html)
-- [File tags and flight-state reference](https://fearlessfrog.github.io/MSFS_Universal_Announcer/statemachine.html)
+- [Flight steps](#flight-steps), [dynamic tags](#dynamic-tags), [filename tags](#file-tags) and [aircraft families](#aircraft-families)
 - [Announcement Hangar Discord](https://discord.com/invite/P8ZYJgH3ZF)
 - [Bug reports](https://github.com/fearlessfrog/MSFS_Universal_Announcer/issues)
 
 Older reference pages describe earlier versions in places. This manual's app version is printed on the contents page; check release notes when a newer version changes a control or trigger.
+
+<!-- page: flight-steps | A1. Flight steps: departure -->
+## Flight steps: departure
+
+This reference describes automatic sequencing in app 0.9.9.7. Add `.ogg` to the names below. Calls must be enabled on **Announcements** and have a matching recording or generated replacement. AGL means height above ground; MSL means altitude above sea level. Timing is subject to audio finishing and announcement spacing.
+
+| File name | Trigger and timing |
+| --- | --- |
+| `BoardingWelcome` | On ground, beacon off, boarding not complete. Starts with GSX boarding state 5, or the logo light in the non-GSX workflow. Repeats at the configured interval, normally 5 minutes. Skip First BoardingWelcome suppresses the initial call. |
+| `BoardingWelcomePilot` | Optional pilot welcome during active boarding. Normally replaces the first repeat after the initial cabin welcome; plays once per boarding session. If disabled, the cabin welcome is used. |
+| `BoardingMusic` | Loops between welcome calls until Boarding Complete. Can start during boarding even when the first welcome is skipped. |
+| `DepartureDelayed` | During boarding, after a welcome and before Boarding Complete, when the SimBrief scheduled departure is overdue by the configured threshold (normally 10 minutes). Once per boarding session. |
+| `BoardingComplete` | On ground when the beacon changes to on, or available GSX boarding reports state 6. Stops boarding music. |
+| `ArmDoors` | On ground with engines running or groundspeed above 1 knot. Waits for Boarding Complete to finish if it has played. The automatic Arm Doors tweak instead schedules it 30 seconds after Boarding Complete finishes. |
+| `PreSafetyBriefing` | Arm Doors has finished, audio is idle and engines are running. |
+| `SafetyBriefing` | Pre-Safety Briefing has finished and audio is idle. |
+| `CabinDimTakeoff` | At least 10 seconds after Safety Briefing finishes, while dark and before After Takeoff. Uses a SimBrief-based darkness calculation where available, otherwise simulator local-time daylight detection. |
+| `CrewSeatsTakeoff` | On ground, engines running, Safety Briefing handled and the selected light on: landing lights by default, or strobes via Tweaks. |
+| `CallCabinSecureTakeoff` | Still on ground, audio idle, at least 5 seconds after Crew Seats Takeoff finishes. |
+| `AfterTakeoff` | Airborne above the configured takeoff height (normally 3,000 ft AGL), at least 2 minutes after the detected ground-to-air transition. |
+
+With GSX enabled but unavailable, the app can fall back to the logo light. For a deliberate non-GSX workflow, disable GSX integration. GSX requesting boarding (state 4) is not the same as active boarding (state 5).
+
+For the arrival sequence, continue to [Flight steps: arrival](#flight-steps-arrival). **Play Next** bypasses normal waiting conditions; it is not a preview button.
+
+<!-- page: flight-steps-arrival | A2. Flight steps: arrival -->
+## Flight steps: arrival
+
+Normal calls play once per flight unless noted. Optional pilot and cruise calls need enabling. Thresholds below are the current defaults; check **Tweaks** for your configuration.
+
+| File name | Trigger and timing |
+| --- | --- |
+| `TopOfClimbPilot` | After Takeoff handled, in Climb/Cruise, within 1,000 ft of SimBrief cruise altitude MSL. Starts a 20-second wait; must be in that band when it fires. |
+| `CruiseElapsedXXPercent` | A milestone in elapsed simulator air time against SimBrief planned duration, after After Takeoff. Checked about once a minute in Cruise/Descent/Approach. See [cruise timing](#file-selection) for guards and short-flight adjustments. |
+| `FastenSeatbelt` | In Climb/Cruise after After Takeoff, when a recognised seatbelt signal changes from off to on. Repeatable with a 2-minute cooldown. The manual Seatbelt control is a separate way to request a call. |
+| `TopOfDescentPilot` | At least 25% of planned air time elapsed, tracked for 30 seconds within 1,000 ft of cruise altitude, then at least 500 ft below cruise and descending faster than 500 ft/min. Leaving the cruise band resets the band timer. |
+| `DescentSeatbelts` | Airborne, After Takeoff handled, in Descent/Approach/Landing. Either below the descent height (10,000 ft AGL) while descending faster than 500 ft/min for 10 seconds, or landing lights change to on. |
+| `CrewSeatsLanding` | In Descent/Approach/Landing, below the landing-call height (3,000 ft AGL), descending faster than 300 ft/min, landing lights on. Waits while Descent Seatbelts is playing. |
+| `CallCabinSecureLanding` | Audio idle, at least 10 seconds after Crew Seats Landing finishes, below its height setting plus 2,000 ft (normally 5,000 ft AGL). |
+| `AfterLanding` | On ground below 15 knots, with the arrival recognised and Crew Seats Landing or Cabin Secure Landing handled. Optional AfterLanding delay applies. Spoiler position is not the current trigger. |
+| `AfterLandingMusic` | Loops after After Landing finishes until disembarkation. Disarm Doors can interrupt it. |
+| `DisarmDoors` | After Landing has finished, engines off, parking brake set. |
+| `DisembarkStarted` | Disarm Doors has finished and either beacon is off or enabled GSX deboarding is requested/active (state 4/5). Stops arrival music. GSX deboarding completion (state 6) can reset the sequence. |
+
+### Additional sound files
+
+`LandingGreat.ogg` and `LandingTerrible.ogg` are optional touchdown reactions controlled by **Tweaks**. Current default thresholds are at most 200 ft/min and 1.2g for a great landing, or at least 800 ft/min or 1.6g for a terrible landing. Built-in reaction sounds are available if a custom file is absent.
+
+`CabinNoise.ogg` supplies optional idle cabin ambience after boarding and before disembarkation. It uses the music volume and camera multipliers. It is not another flight-sequence step.
+
+<!-- page: dynamic-tags | B1. Dynamic tags: flight and route -->
+## Dynamic tags: flight and route
+
+Dynamic tags are **placeholders inside template text**, written in braces. They are different from [filename tags](#file-tags), which use square brackets to select recordings. Use these names exactly, in uppercase. Values are inserted when audio is generated; an existing recording does not update itself.
+
+| Placeholder | Value supplied |
+| --- | --- |
+| `{AIRLINE_CODE}` | Airline ICAO code, using the session override when set. |
+| `{AIRLINE_NAME}` | Airline name from the app's lookup data. |
+| `{AIRCRAFT_CODE}` | Resolved aircraft code, using the session override when set. |
+| `{AIRCRAFT_NAME}` | Aircraft name from lookup data. |
+| `{CALLSIGN}` | SimBrief callsign, with simulator callsign as fallback. |
+| `{FLIGHT_NUMBER_DIGITS}` | Digits from the callsign: `AFR123` becomes `123`. The voice reads them in the language of the surrounding text. |
+| `{FLIGHT_CODE}` | SimBrief/simulator airline code plus the flight-number digits, when both are available. |
+| `{ORIGIN_CODE}` | SimBrief departure airport ICAO code. |
+| `{ORIGIN_NAME}` | Departure airport name from lookup data. |
+| `{ORIGIN_CITY}` | Departure airport city/municipality. |
+| `{ORIGIN_FULLNAME}` | Departure airport name and city, combined where available. |
+| `{DESTINATION_CODE}` | SimBrief destination airport ICAO code. |
+| `{DESTINATION_NAME}` | Destination airport name from lookup data. |
+| `{DESTINATION_CITY}` | Destination city/municipality. |
+| `{DESTINATION_FULLNAME}` | Destination airport name and city, combined where available. |
+| `{CRUISE_ALTITUDE_FT}` | SimBrief initial cruise altitude in feet, with comma grouping, such as `35,000`. |
+| `{ROUTE_DISTANCE_NM}` | SimBrief route distance rounded to whole nautical miles, with comma grouping. |
+| `{TIME_OF_DAY}` | Simulator local-time category: `Night`, `Morning`, `Afternoon` or `Evening`. These words are English. |
+
+Names and cities come from the lookup files shipped in `Tools`; they are not automatically translated. Missing data usually produces an empty value. A misspelled or unsupported placeholder can remain as literal text, so preview your output.
+
+For language-sensitive flight numbers, keep `{FLIGHT_NUMBER_DIGITS}` as digits rather than writing English number words. For digit-by-digit pronunciation, see `xml_digits` in [template syntax](#template-syntax).
+
+<!-- page: dynamic-times | B2. Dynamic tags: time and weather -->
+## Dynamic tags: time and weather
+
+These values are resolved at generation time. SimBrief supplies the plan and destination weather; it is not a live weather feed. English wording below remains English even with a multilingual voice.
+
+| Placeholder | Value supplied |
+| --- | --- |
+| `{FLIGHT_TIME}` | Planned SimBrief duration as English words, such as “one hour and ten minutes”. |
+| `{FLIGHT_TIME_HHMM}` | The same duration as `HH:MM`. |
+| `{LOCAL_TIME}` | Simulator local time spoken in English, including “a m” or “p m”. |
+| `{LOCAL_TIME_24H}` | Simulator local time as `HH:MM`. |
+| `{SCHED_DEP_LOCAL_24H}` | Scheduled departure converted using the origin timezone in the plan. |
+| `{SCHED_DEP_UTC_24H}` | Scheduled departure in UTC, `HH:MM`. |
+| `{SCHED_ARR_LOCAL_24H}` | Scheduled arrival converted using the destination timezone in the plan. |
+| `{SCHED_ARR_UTC_24H}` | Scheduled arrival in UTC, `HH:MM`. Arrival can fall back to departure plus block time, then estimated arrival. |
+| `{DEP_STATUS}` | English departure-status sentence: on time, late or early. |
+| `{ARR_STATUS}` | English arrival-status sentence: on time, late or early. |
+| `{DEP_LATE}`, `{DEP_EARLY}` | English duration late/early for departure; empty when not applicable. |
+| `{ARR_LATE}`, `{ARR_EARLY}` | English duration late/early for arrival; empty when not applicable. |
+| `{DEP_LATE_MINUTES}`, `{DEP_EARLY_MINUTES}` | Departure difference in whole minutes, digits only; empty when not applicable. |
+| `{ARR_LATE_MINUTES}`, `{ARR_EARLY_MINUTES}` | Arrival difference in whole minutes, digits only; empty when not applicable. |
+| `{DESTINATION_TEMPERATURE}` | Destination METAR temperature in Celsius, spoken in English. |
+| `{DESTINATION_TEMPERATURE_F}` | Converted Fahrenheit temperature, spoken in English. |
+| `{DESTINATION_TEMPERATURE_C_NUM}` | Numeric Celsius value with `°C`, such as `18 °C`. |
+| `{DESTINATION_WEATHER}` | A short English summary derived from the destination METAR. |
+
+**Delay values compare the plan with the computer's current UTC time**, not the simulator clock. Status sentences treat a difference of up to 5 minutes as on time; the numeric early/late values can still be non-empty within that window. This differs from the configurable threshold for the Departure Delayed announcement.
+
+For another language, use numeric minute values with your own wording, for example: `Nous avons {DEP_LATE_MINUTES} minutes de retard.` Wrap optional phrases in an IF condition as shown on the next page.
+
+<!-- page: template-syntax | B3. Template syntax reference -->
+## Template syntax reference
+
+### Optional text
+
+Use a single-line condition to omit a phrase when a value is missing. A condition is true when the value is non-empty and is not exactly `0`.
+
+```text
+{IF DESTINATION_CITY}Welcome to {DESTINATION_CITY}.{END}
+{IF DEP_LATE_MINUTES}Nous avons {DEP_LATE_MINUTES} minutes de retard.{END}
+```
+
+The current parser ends a condition at `{END}`, the next newline or the end of the text, whichever comes first. Keep each condition on one line. Nested conditions and multi-line blocks are not reliable in this version, despite examples in older guides. There is no ELSE or comparison expression.
+
+### Direct SimBrief XML values
+
+| Syntax and example | Result |
+| --- | --- |
+| `{xml<api_params><cpt>}` | Raw text from the matching element, such as the captain's name. |
+| `{xml_digits<general><flight_number>}` | Keeps digits and separates them with spaces: `123` becomes `1 2 3`. |
+| `{xml_number<general><route_distance>}` | Parses a number, rounds to an integer and adds comma grouping. It does not convert it to English number words. |
+
+Each `<name>` follows a child element from the preceding one in the plan. Missing XML or a missing path produces empty text. Inspect your own SimBrief plan to choose a valid path. These XML lookups run before ordinary placeholders and IF conditions.
+
+### Voice directives
+
+Put directives on separate lines before the spoken text. They select how the text is generated and are not read aloud.
+
+| Directive | Purpose |
+| --- | --- |
+| `##Role: Pilot` | Use the pilot voice assigned in Roles. |
+| `##Role: FA` | Use the flight-attendant voice. `Flight Attendant` and `Cabin Crew` are also recognised role names. |
+| `##Voice: Edge/en-GB-SoniaNeural` | Use this provider/voice for the template, overriding the role. Use Insert Voice to insert a current selection. |
+| `##rate:-10%` | Adjust speaking speed for Edge/Azure. `+0%` is unchanged. |
+| `##pitch:0Hz` | Adjust pitch for Edge/Azure. `0Hz` is unchanged. |
+
+Airline role assignments take priority over Default role assignments, with the main selected voice as fallback. A template without a role uses the flight-attendant role when available. See [voice setup](#voices) and [generation modes](#generation-modes) before replacing recordings.
+
+<!-- page: file-tags | C1. All filename tags -->
+## All filename tags
+
+Use `AnnouncementName[tag][tag].ogg`, with tags immediately before the extension. For example, `SafetyBriefing[A20N][Morning].ogg`. Use the exact announcement names in [Flight steps](#flight-steps). An extra prefix, suffix or `.mp3` extension prevents normal matching. Templates use `.txt`; generated recordings use `.ogg`.
+
+| Tag | Match and example |
+| --- | --- |
+| Exact aircraft code | `[A20N]`, `[B738]`, or the actual resolved aircraft code. `[A320]` means that exact type, not the Airbus family. |
+| Aircraft family helper | `[320]`, `[737]`, `[A220]`, `[Citation]`, etc. See the [complete family tables](#aircraft-families). |
+| `[Morning]` | Simulator local time 06:00 to before 12:00. |
+| `[Afternoon]` | 12:00 to before 18:00. |
+| `[Evening]` | 18:00 to before midnight. |
+| `[Night]` | Midnight to before 06:00. |
+| `[Refueling]` | GSX refueling requested or active (state 4/5). It does not mean merely parked with engines off. |
+| Airport ICAO code | `[EGLL]` matches the phase's airport context. Most departure calls use origin; other calls use destination. See the exact list on the next page. |
+| `[ARR]` | Use SimBrief destination. Must accompany a matching airport code or pattern, e.g. `[ARR][EGLL]`. |
+| `[DEP]` | Use SimBrief origin. Must accompany a matching airport code or pattern, e.g. `[DEP][EGLL]`. Do not combine ARR and DEP. |
+| Airport wildcard `#` | With ARR or DEP, e.g. `[ARR][ED##]`. `#` matches zero or more characters. The airport-pattern tag must contain 3 or 4 characters in total. `*` is not supported. |
+| Numbered variant | `[1]`, `[2]`, etc. Selects among matching versions and tries to preserve the chosen number across the flight. This is separate from the flight's callsign. |
+| `[mute]` | Selects a recording but intentionally skips its playback and counts the call as handled. A matching airline mute file also blocks generated fallback. |
+
+There is no special language tag such as `[French]`. Select a recording through aircraft, time, airport or numbered variants, or put translated text into a generated template. Tag values are compared without case sensitivity; keep the announcement name's spelling and capitalisation as listed.
+
+```text
+BoardingWelcome[ARR][ED##].ogg
+AfterLanding[EGLL][mute].ogg
+SafetyBriefing[320][Morning][1].ogg
+```
+
+<!-- page: file-selection | C2. File selection and cruise names -->
+## File selection and cruise names
+
+### How matching files are chosen
+
+Scores add together for matching tags; they are not a fixed priority ladder. A tag that does not match normally excludes the file. An untagged file scores zero and is a useful fallback. Folder priority still applies: matching airline files are considered before Default fallback.
+
+| Matching condition | Score added |
+| --- | ---: |
+| Refueling active | 200 |
+| Exact aircraft | 100 |
+| Exact airport with ARR or DEP | 100 |
+| Wildcard airport with ARR or DEP | 95 |
+| Aircraft family | 80 |
+| Airport without ARR or DEP | 75 |
+| Time of day | 50 |
+| Numbered variant | 10 |
+| Mute | 0 |
+
+Thus `[320][Morning]` scores 130 on a matching morning flight and can beat a file with only `[A20N]` at 100. Among equal top scores, non-muted files are preferred. Numbered alternatives try to reuse the flight's established number if available; other ties are random. Numbered cabin-noise tracks instead rotate.
+
+With ARR/DEP, separate airport tags are alternatives: `[ARR][EGLL][EGKK]` matches either destination. Without ARR/DEP, multiple airport tags are not an OR list. Avoid combining ARR/DEP with a 3- or 4-letter family helper such as `[CRJ]`: the parser can treat that helper as another airport alternative.
+
+### Airport context without ARR or DEP
+
+Origin is used for `BoardingWelcome`, `BoardingWelcomePilot`, `BoardingMusic`, `BoardingComplete`, `ArmDoors`, `PreSafetyBriefing`, `SafetyBriefing`, `CabinDimTakeoff`, `CrewSeatsTakeoff`, `CallCabinSecureTakeoff` and `AfterTakeoff`. Other announcement types use destination, including `DepartureDelayed`. Cabin noise uses origin context. Airport matching requires SimBrief route data.
+
+### Cruise filenames and timing
+
+Use `CruiseElapsed1Percent.ogg` through `CruiseElapsed100Percent.ogg`, or corresponding `.txt` templates. `Cruise.ogg` is an alias at 50%. Enable **CruiseElapsed**. This measures elapsed simulator air time against planned duration, not map distance.
+
+For plans of 45-59, 30-44, 20-29 and under 20 minutes, milestones are shifted earlier by 12, 14, 18 and 22 percentage points respectively; plans of 60 minutes or more have no shift. Milestones of 40% or above are suppressed below 10,000 ft AGL or when descending faster than 500 ft/min. When several thresholds are crossed together, the highest available eligible call wins; every intermediate file is not guaranteed to play.
+
+<!-- page: aircraft-families | D1. Aircraft families: Boeing and Airbus -->
+## Aircraft families: Boeing and Airbus
+
+These are the exact family mappings in the current code. Use a helper in square brackets, for example `SafetyBriefing[320].ogg`. The table lists codes that receive the family-match score. Check the aircraft code on **Status** or in the retrieved SimBrief plan.
+
+| Family tag | Aircraft codes matched |
+| --- | --- |
+| `[737]` | B731, B732, B733, B734, B735, B736, B737, B738, B739, B37M, B38M, B39M, B3XM |
+| `[747]` | B741, B742, B743, B744, B748, B74S |
+| `[757]` | B752, B753 |
+| `[767]` | B762, B763, B764 |
+| `[777]` | B772, B773, B77L, B77W, B778, B779 |
+| `[787]` | B788, B789, B78X |
+| `[320]` | A318, A319, A320, A321, A19N, A20N, A21N |
+| `[330]` | A332, A333, A338, A339 |
+| `[340]` | A342, A343, A345, A346 |
+| `[350]` | A359, A35K |
+| `[380]` | A388 |
+| `[A220]` | BCS1, BCS3 |
+
+### Exact type or family?
+
+`[A20N]` is an exact type match worth 100 points. `[320]` is the family match worth 80. `[A320]` matches only A320, not A20N. Other matching tags add points, so use the [selection table](#file-selection) when several files qualify.
+
+Likewise, use `[BCS1]` or `[BCS3]` for a particular A220 type, or `[A220]` for both. A helper does not fix a missing or unexpected aircraft code. Check the detected code before renaming a whole pack.
+
+**Numeric helpers also count as numbered variants.** If `[320]` does not match the detected family, the current parser can still accept it as variant number 320, worth 10 points. The same applies to other numeric helpers. Use exact non-numeric codes such as `[A20N]` when a file must be restricted to that aircraft.
+
+Keep one untagged recording when a call should also work on aircraft outside the listed family. Families are a convenience for file selection; they do not restrict which aircraft can use Universal Announcer.
+
+<!-- page: aircraft-families-other | D2. Aircraft families: other aircraft -->
+## Aircraft families: other aircraft
+
+The remaining helpers are below, including single-type mappings. Use the spelling shown; comparisons are case-insensitive. These mappings describe the app's current lookup, not every member of each real aircraft family.
+
+| Family tag | Aircraft codes matched |
+| --- | --- |
+| `[MD80]` | MD81, MD82, MD83, MD87, MD88 |
+| `[MD90]` | MD90 |
+| `[MD11]` | MD11 |
+| `[DC9]` | DC9, DC91, DC92, DC93, DC94, DC95 |
+| `[DC10]` | DC10 |
+| `[CRJ]` | CRJ1, CRJ2, CRJ7, CRJ9, CRJX |
+| `[ERJ]` | E135, E140, E145 |
+| `[EJET]` | E170, E175, E190, E195 |
+| `[146]` | B461, B462, B463, ARJ7, ARJ8, ARJ1 |
+| `[ATR]` | AT42, AT43, AT44, AT45, AT46, AT72, AT73, AT75, AT76 |
+| `[DH8]` | DH8A, DH8B, DH8C, DH8D |
+| `[F28]` | F28 |
+| `[F50]` | F50 |
+| `[F100]` | F70, F100 |
+| `[SF34]` | SF34 |
+| `[SB20]` | SB20 |
+| `[Citation]` | C25A, C25B, C510, C525, C560, C56X, C650, C680, C700, C750 |
+
+Examples: `BoardingWelcome[EJET].ogg` covers the four listed E-Jets; `SafetyBriefing[Citation].ogg` covers the listed Citation codes. Unlisted types do not automatically inherit a helper based on their manufacturer or name.
+
+For basic folder setup see [Set up and preview sounds](#sound-files). For the supported tag forms and combinations see [All filename tags](#file-tags).

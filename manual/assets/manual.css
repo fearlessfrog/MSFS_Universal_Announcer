@@ -26,7 +26,8 @@ pre { margin:16px 0; padding:16px; background:#f0f4f5; border:1px solid var(--li
 code { font: .88em/1.45 Consolas,"Courier New",monospace; overflow-wrap:anywhere; }
 p code,li code { background:#eef3f4; padding:1px 4px; }
 .edition { color:var(--muted); font-size:13px; margin:18px 0 25px; }
-.contents { display:grid; grid-template-columns:1fr; gap:0; }
+.contents { columns:2; column-gap:26px; }
+.contents a { break-inside:avoid; }
 .contents a { display:flex; justify-content:space-between; gap:12px; padding:5px 0; border-bottom:1px solid var(--line); text-decoration:none; font-size:14px; }
 .page-number { color:var(--muted); }
 .back { display:block; margin-top:28px; font-size:12px; }
@@ -40,6 +41,13 @@ p code,li code { background:#eef3f4; padding:1px 4px; }
 .screenshot img { max-width:100%; height:auto; object-fit:contain; border:1px solid var(--line); }
 figcaption { font-size:11px; color:var(--muted); margin-top:5px; }
 .small { font-size:13px; color:var(--muted); }
+table { width:100%; border-collapse:collapse; table-layout:fixed; font-size:14px; margin:16px 0; }
+th,td { padding:8px 10px; text-align:left; vertical-align:top; border-bottom:1px solid var(--line); overflow-wrap:anywhere; }
+th { background:#edf5f5; font-weight:650; }
+th:first-child,td:first-child { width:36%; }
+tr { break-inside:avoid; }
+thead { display:table-header-group; }
+@media screen and (max-width:650px) { .contents { columns:1; } table { font-size:13px; } th,td { padding:7px 5px; } }
 @media(max-width:650px) { main { margin:15px 10px; } .sheet { padding:25px 22px; } h1 { font-size:34px; } h2 { font-size:26px; } .screen-bar { padding:12px 16px; flex-wrap:wrap; } .diagram { flex-wrap:wrap; } .diagram > div { min-width:110px; } }
 @page { size:A4; margin:17mm 19mm 18mm; }
 @media print {
@@ -68,6 +76,9 @@ figcaption { font-size:11px; color:var(--muted); margin-top:5px; }
   .screenshot img { width:var(--print-image-width,165mm); height:auto; max-height:none; max-width:100%; }
   figcaption { font-size:8pt; }
   .small { font-size:9pt; }
+  table { font-size:9pt; line-height:1.35; margin:3mm 0; }
+  th,td { padding:1.5mm 2.5mm; }
+  .contents { column-gap:7mm; }
 }
 
 .screenshot--tray, .screenshot--discord { float:right; width:220px; margin:0 0 15px 24px; }

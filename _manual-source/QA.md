@@ -1,14 +1,14 @@
-# Illustrated review-build checks
+# Manual verification
 
-Revision 2026-09-20.6, application 0.9.9.7.
+Revision 2026-09-20.7, application 0.9.9.7.
 
 ## Passed
 
 - Built matching HTML and PDF from the same Markdown with Marked 17.0.5 and Playwright 1.62.1 / Chromium 151.0.7922.34.
-- PDF: 20 A4 pages, searchable text, tagged structure, outline/bookmarks and 43 link annotations. Text extraction found content and the correct footer on every page, with no em dashes or broken separator characters.
+- PDF: 29 A4 pages, searchable text, tagged structure, outline/bookmarks and 73 link annotations. Text extraction found content and the correct footer on every page, with no em dashes or broken separator characters.
 - All ten supplied screenshots are embedded. Original source and output asset image hashes match exactly.
 - Every page of the final PDF was rendered with Poppler and visually inspected. No clipped text, broken code blocks, overlaps or footer collisions were found. Sound setup and camera rules have separate pages to make room for the images.
-- Printed contents page numbers match the 20 sections. Every section fits the printable height.
+- Printed contents page numbers match the 29 sections. Every section fits the printable height.
 - HTML: all internal links resolve, all ten images load, and no horizontal overflow occurs at 390px and 1280px. Each image has a full-size link.
 - Offline browser check blocks remote requests. The manual uses local images and styles with no remote fonts or scripts.
 - HTTP check under `/MSFS_Universal_Announcer/manual/`: stylesheet and screenshots load, contents navigation works, full-size images open, and the PDF download returns a valid PDF. Browser errors are absent.
@@ -24,7 +24,7 @@ Revision 2026-09-20.6, application 0.9.9.7.
 - Confirm the public Discord invitation/onboarding and the release ZIP's toolbar version.
 The cover status was removed at the maintainer's request. This is a presentation change, not a claim that the live checks above were performed.
 
-All screenshot requests are complete. The existing documentation and application files remain unchanged. No simulator flight was started or user settings changed to produce this manual. Public pages have not been published and release packaging has not been changed.
+All screenshot requests are complete. The application files remain unchanged. The older generated, flight-state and sound-file guides now have introductory links to the current manual, as requested; their existing content and URLs are preserved. No simulator flight was started or user settings changed to produce this manual. Public pages have not been published and release packaging has not been changed.
 
 ## Revision .4
 
@@ -39,3 +39,9 @@ Added the maintainer-supplied Fenix double-announcement FAQ. Tightened neighbour
 ## Revision .6
 
 Added a two-column diagram above Choose how generation is used. The existing section text is unchanged. It distinguishes saved .ogg files reused offline from recordings refreshed with each flight's details. The diagram uses searchable HTML text and CSS, with no external runtime or image dependency; its columns stack on narrow screens. Visually checked the PDF cover and page 17 and desktop/mobile diagrams. PDF remains 20 pages with ten screenshots and 43 links; offline and HTTP checks pass.
+
+## Revision .7
+
+Added nine reference pages covering all 23 announcement types, auxiliary sounds, all 40 named placeholders, template syntax, supported filename tags, selection scores and all 29 aircraft-family helpers (114 mapped aircraft codes). The reference tables were checked against the current source; family rows and placeholder coverage were also checked programmatically. Earlier chapters link to the new stable anchors. Simplified the filename placement example.
+
+The PDF has 29 pages and 73 link annotations, with ten unchanged screenshots. Rendered and inspected every PDF page, including the final numeric-family note. Checked all page headings and footers, revision, searchable text, bookmarks and tagged structure. The contents uses two columns to accommodate the appendices. Offline and local HTTP checks passed, including reference navigation, images, PDF download and desktop/mobile layouts. Added notices to generated.md, statemachine.md and howtofiles.md without rewriting their older content. No publishing or release-package changes were made.
