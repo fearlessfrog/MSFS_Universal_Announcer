@@ -1,6 +1,6 @@
 # Screenshot inventory
 
-All ten requested screenshots were supplied and incorporated on 20 September 2026. No further captures are required for this edition. Images show English UI and are used without alteration.
+All eleven supplied screenshots were supplied and incorporated on 20 September 2026. No further captures are required for this edition. Images show English UI and are used without alteration.
 
 ## Included captures
 
@@ -14,6 +14,8 @@ All ten requested screenshots were supplied and incorporated on 20 September 202
 8. `08-roles.png`, page 16: Ryan for Pilot and Sonia for Flight Attendant on BAW/Edge.
 9. `09-chaseplane.png`, page 13: General Functionality > Enable 3rd party plugins set to ON.
 10. `10-discord-channels.png`, page 3: Announcement Hangar and both compatible pack categories, FENIX ANNOUNCEMENT PACKS and UNIVERSAL ANNOUNCEMENT PACKS. The FAQ repeats the compatibility point.
+
+11. `11-tweaks.png`, page 30: the supplied Tweaks tab. Saved unchanged from the clipboard attachment. The caption and text distinguish the example values (15 minutes and 1.11g) from code defaults (10 minutes and 1.20g).
 
 ## Remaining live checks
 

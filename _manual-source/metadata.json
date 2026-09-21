@@ -1,7 +1,7 @@
 {
   "title": "Universal Announcer User Manual",
   "appVersion": "0.9.9.7",
-  "revision": "2026-09-20.7",
+  "revision": "2026-09-20.8",
   "status": "",
   "sourceCommit": "5b55c0b1bebf5a45d4ecfc9d1026025c570fe8f7",
   "screenshots": [
@@ -64,6 +64,12 @@
       "file": "10-discord-channels.png",
       "caption": "Either pack category is suitable. Fenix ownership is not required.",
       "printWidthMm": 68
+    },
+    {
+      "id": "tweaks",
+      "file": "11-tweaks.png",
+      "caption": "Tweaks with example user settings. The tables on the following pages give the code defaults.",
+      "printWidthMm": 136
     }
   ]
 }

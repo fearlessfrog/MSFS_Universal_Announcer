@@ -1,9 +1,9 @@
 {
   "appVersion": "0.9.9.7",
-  "revision": "2026-09-20.7",
+  "revision": "2026-09-20.8",
   "browser": "151.0.7922.34",
   "missingScreenshots": [],
-  "sections": 29,
+  "sections": 32,
   "sourceCommit": "5b55c0b1bebf5a45d4ecfc9d1026025c570fe8f7",
   "checks": [
     "Offline HTML, anchors, images and width 390px: pass",
@@ -12,7 +12,7 @@
   "printSectionHeightsMm": [
     {
       "id": "cover",
-      "mm": 206.72226562499998
+      "mm": 222.72128906249998
     },
     {
       "id": "getting-started",
@@ -125,6 +125,18 @@
     {
       "id": "aircraft-families-other",
       "mm": 221.94820963541665
+    },
+    {
+      "id": "tweaks",
+      "mm": 256.0753255208333
+    },
+    {
+      "id": "tweaks-timing",
+      "mm": 250.43639322916667
+    },
+    {
+      "id": "tweaks-compatibility",
+      "mm": 240.258203125
     }
   ]
 }

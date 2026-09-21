@@ -1,15 +1,15 @@
 # Manual verification
 
-Revision 2026-09-20.7, application 0.9.9.7.
+Revision 2026-09-20.8, application 0.9.9.7.
 
 ## Passed
 
 - Built matching HTML and PDF from the same Markdown with Marked 17.0.5 and Playwright 1.62.1 / Chromium 151.0.7922.34.
-- PDF: 29 A4 pages, searchable text, tagged structure, outline/bookmarks and 73 link annotations. Text extraction found content and the correct footer on every page, with no em dashes or broken separator characters.
-- All ten supplied screenshots are embedded. Original source and output asset image hashes match exactly.
+- PDF: 32 A4 pages, searchable text, tagged structure, outline/bookmarks and 80 link annotations. Text extraction found content and the correct footer on every page, with no em dashes or broken separator characters.
+- All eleven supplied screenshots are embedded. Original source and output asset image hashes match exactly.
 - Every page of the final PDF was rendered with Poppler and visually inspected. No clipped text, broken code blocks, overlaps or footer collisions were found. Sound setup and camera rules have separate pages to make room for the images.
-- Printed contents page numbers match the 29 sections. Every section fits the printable height.
-- HTML: all internal links resolve, all ten images load, and no horizontal overflow occurs at 390px and 1280px. Each image has a full-size link.
+- Printed contents page numbers match the 32 sections. Every section fits the printable height.
+- HTML: all internal links resolve, all eleven images load, and no horizontal overflow occurs at 390px and 1280px. Each image has a full-size link.
 - Offline browser check blocks remote requests. The manual uses local images and styles with no remote fonts or scripts.
 - HTTP check under `/MSFS_Universal_Announcer/manual/`: stylesheet and screenshots load, contents navigation works, full-size images open, and the PDF download returns a valid PDF. Browser errors are absent.
 - Desktop and mobile HTML renderings visually inspected.
@@ -44,4 +44,10 @@ Added a two-column diagram above Choose how generation is used. The existing sec
 
 Added nine reference pages covering all 23 announcement types, auxiliary sounds, all 40 named placeholders, template syntax, supported filename tags, selection scores and all 29 aircraft-family helpers (114 mapped aircraft codes). The reference tables were checked against the current source; family rows and placeholder coverage were also checked programmatically. Earlier chapters link to the new stable anchors. Simplified the filename placement example.
 
-The PDF has 29 pages and 73 link annotations, with ten unchanged screenshots. Rendered and inspected every PDF page, including the final numeric-family note. Checked all page headings and footers, revision, searchable text, bookmarks and tagged structure. The contents uses two columns to accommodate the appendices. Offline and local HTTP checks passed, including reference navigation, images, PDF download and desktop/mobile layouts. Added notices to generated.md, statemachine.md and howtofiles.md without rewriting their older content. No publishing or release-package changes were made.
+The PDF has 29 pages and 80 link annotations, with ten unchanged screenshots. Rendered and inspected every PDF page, including the final numeric-family note. Checked all page headings and footers, revision, searchable text, bookmarks and tagged structure. The contents uses two columns to accommodate the appendices. Offline and local HTTP checks passed, including reference navigation, images, PDF download and desktop/mobile layouts. Added notices to generated.md, statemachine.md and howtofiles.md without rewriting their older content. No publishing or release-package changes were made.
+
+## Revision .8
+
+Added three Tweaks reference pages and the supplied screenshot, bringing the manual to 32 pages and eleven screenshots. Checked all 19 controls against the English UI and source: defaults, numeric ranges where given, trigger dependencies, music restart/resume, immediate-save controls, light overrides, toolbar restart and the AND/OR rules for landing reactions. The PMDG availability note comes from the maintainer, not a new simulator test.
+
+Rendered and visually inspected all 32 PDF pages, with detailed checks of the contents and three new pages. PDF checks passed for every heading/footer, searchable text, revision, bookmarks, tagged structure, eleven images and 80 link annotations. Original screenshot bytes match output assets, including the new attachment. Offline checks passed at 390px and 1280px. Local HTTP checks passed for all new contents anchors, image loading, full-size image links and PDF download; desktop and mobile layouts were inspected. Existing source-coverage checks still pass for the placeholder and aircraft tables. No application code or old guide pages changed in this update.

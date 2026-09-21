@@ -25,10 +25,10 @@ For a Codex bundled runtime, set MANUAL_NODE_MODULES to its Node package directo
 - Put screenshots in `screenshots/` using the filenames in `SCREENSHOTS.md`. Do not put blank placeholders or invented UI into the manual.
 - Run the build. It fails on duplicate section IDs, broken anchors, missing included images, horizontal overflow or a section taller than the printable page. Do not shrink the whole document merely to fit one long section; shorten or split that section.
 - If page count changes, contents numbers are generated from page sections. Verify actual PDF page count matches before delivery.
-- All ten supplied screenshots are included in the 29-page illustrated edition, including nine reference pages. Keep original image bytes unchanged. Adjust each screenshot's `printWidthMm` in metadata when reflowing; HTML provides a full-size image link. Do not force a large window into a tiny fixed-height box.
+- All eleven supplied screenshots are included in the 32-page illustrated edition, including twelve reference pages. Keep original image bytes unchanged. Adjust each screenshot's `printWidthMm` in metadata when reflowing; HTML provides a full-size image link. Do not force a large window into a tiny fixed-height box.
 - Inspect every PDF page visually. Confirm readable screenshots, footer spacing and no cropped text. Check a narrow browser window and open the HTML without internet access.
 - Keep manual build changes under `_manual-source/` and `manual/`. The introductory notices in generated.md, statemachine.md and howtofiles.md link to the current manual; preserve their existing URLs and reference content. Do not change `_config.yml`.
-- When updating the reference appendices, compare flight triggers with AnnouncementStateMachine.cs, placeholders with PlaceholderResolver.cs and SoundFileManager.cs, and tag rules/family mappings with SoundFileManager.cs. Recheck the counts and exceptions recorded in SOURCES.md; older guide text can be out of date.
+- When updating the reference appendices, compare flight triggers with AnnouncementStateMachine.cs, placeholders with PlaceholderResolver.cs and SoundFileManager.cs, and tag rules/family mappings with SoundFileManager.cs. For Tweaks, also check ConfigurationManager.cs, SettingsForm.cs/Designer.cs, SimConnectManager.cs, LandingRatingMonitor.cs and toolbar startup in UniversalAnnouncerApp.cs. Recheck the counts and exceptions recorded in SOURCES.md; older guide text can be out of date.
 
 ## Deliver and publish
 

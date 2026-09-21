@@ -513,7 +513,7 @@ In templates, `##Role: Pilot` and `##Role: FA` select crew roles. `##Voice: Edge
 
 - [Project help and current download links](https://fearlessfrog.github.io/MSFS_Universal_Announcer/)
 - [Generated-announcement reference](https://fearlessfrog.github.io/MSFS_Universal_Announcer/generated.html)
-- [Flight steps](#flight-steps), [dynamic tags](#dynamic-tags), [filename tags](#file-tags) and [aircraft families](#aircraft-families)
+- [Flight steps](#flight-steps), [dynamic tags](#dynamic-tags), [filename tags](#file-tags), [aircraft families](#aircraft-families) and [Tweaks settings](#tweaks)
 - [Announcement Hangar Discord](https://discord.com/invite/P8ZYJgH3ZF)
 - [Bug reports](https://github.com/fearlessfrog/MSFS_Universal_Announcer/issues)
 
@@ -546,7 +546,7 @@ For the arrival sequence, continue to [Flight steps: arrival](#flight-steps-arri
 <!-- page: flight-steps-arrival | A2. Flight steps: arrival -->
 ## Flight steps: arrival
 
-Normal calls play once per flight unless noted. Optional pilot and cruise calls need enabling. Thresholds below are the current defaults; check **Tweaks** for your configuration.
+Normal calls play once per flight unless noted. Optional pilot and cruise calls need enabling. Thresholds below are the current defaults; see the [Tweaks reference](#tweaks) for settings and ranges.
 
 | File name | Trigger and timing |
 | --- | --- |
@@ -786,3 +786,61 @@ The remaining helpers are below, including single-type mappings. Use the spellin
 Examples: `BoardingWelcome[EJET].ogg` covers the four listed E-Jets; `SafetyBriefing[Citation].ogg` covers the listed Citation codes. Unlisted types do not automatically inherit a helper based on their manufacturer or name.
 
 For basic folder setup see [Set up and preview sounds](#sound-files). For the supported tag forms and combinations see [All filename tags](#file-tags).
+
+<!-- page: tweaks | E1. Tweaks: settings overview -->
+## Tweaks: settings overview
+
+Open **Settings > Tweaks** to adjust announcement timing, music behaviour and aircraft compatibility. The next two pages explain every setting shown here. AGL means height above the ground below the aircraft, not altitude above sea level.
+
+<!-- screenshot: tweaks -->
+
+The screenshot shows one user's settings, not the defaults. In particular, its departure delay is **15 minutes** and its great-landing G-force threshold is **1.11g**; the code defaults are **10 minutes** and **1.20g**. The tables give defaults for a new configuration in app 0.9.9.7. Your saved values may differ.
+
+Select **Apply** to save your changes, or **OK** to save and close. Some compatibility and landing-reaction controls save immediately when changed, so **Cancel** does not undo every change on this tab. Change settings before starting the flight.
+
+<!-- page: tweaks-timing | E2. Tweaks: timing and music -->
+## Tweaks: timing and music
+
+These settings adjust the [flight steps](#flight-steps); they do not enable a disabled announcement or supply a missing sound file. Keep the relevant calls enabled on **Announcements**.
+
+| Setting | What it changes |
+| --- | --- |
+| Boarding Welcome Repeat Interval (min) | Default **5**, range **1-60 minutes**. Spaces welcome calls during boarding. The interval is measured from the previous welcome's completion. The optional pilot welcome normally takes the first repeat slot. |
+| Altitude AGL for TakeOff Detection (ft) | Default **3,000**, range **500-10,000 ft**. AfterTakeoff waits until above this height and at least 2 minutes after liftoff. Despite the label, this is the announcement threshold, not the moment the wheels leave the ground. |
+| Descent Detection AGL (ft) | Default **10,000 ft**. The altitude path for DescentSeatbelts needs height below this value and descent faster than 500 ft/min for 10 seconds. Landing lights switching on provide another trigger. Maximum **50,000 ft**; the UI keeps this value at or above Crew Seat Landing AGL. |
+| Crew Seat Landing AGL (ft) | Default **3,000**, range **500-50,000 ft**. CrewSeatsLanding needs height below this value, descent faster than 300 ft/min and landing lights on. The later cabin-secure call uses this height plus 2,000 ft. |
+| Use Landing Lights for CrewSeatsTakeoff (instead of Strobe Lights) | Default **on**. Uses landing lights for the takeoff crew-seating call. Turn it off to use strobes instead. Ground state, running engines and the safety-briefing requirement still apply. |
+| Enable Music Resume (Boarding and AfterLanding) when interrupted | Default **on**. Resumes interrupted music from its saved position after automatic calls. With it off, music restarts instead. A manual Seatbelt interruption still resumes music regardless of this setting. |
+| Use BoardingMusic when AfterLandingMusic is missing | Default **off**. Reuses a matching BoardingMusic file if no AfterLandingMusic is found after the normal airline and enabled Default lookup. It does not replace an available arrival track. |
+| Departure delay threshold (min) | Default **10**, range **1-180 minutes**. Allows DepartureDelayed once during boarding when this late against SimBrief's scheduled departure. It compares the computer's current UTC time with the plan, not the simulator clock. |
+| AfterLanding delay (min) | Default **0** (no extra delay), range **0-30 minutes**. Starts a wait when the normal AfterLanding conditions are first met, including groundspeed below 15 knots. The timer does not start at touchdown. |
+| Skip First BoardingWelcome | Default **off**. Suppresses the immediate welcome when boarding starts. Music can start, and the welcome can play after the repeat interval. It does not disable welcomes for the whole flight. |
+| Arm Doors after Boarding Complete Automatically | Default **off**. Schedules ArmDoors 30 seconds after BoardingComplete finishes, while still on the ground. Engine start or movement can trigger the normal ArmDoors call sooner; the timer does not force a second call. |
+
+For a quieter start to boarding, enable **Skip First BoardingWelcome**. To remove repeated welcome calls entirely, use the announcement controls rather than expecting this checkbox to do it.
+
+<!-- page: tweaks-compatibility | E3. Tweaks: compatibility and landing reactions -->
+## Tweaks: compatibility and landing reactions
+
+### Aircraft and toolbar options
+
+| Setting | What it changes |
+| --- | --- |
+| Enable PMDG SDK Data (MSFS24 777X) | Default **off**. Enables the older PMDG 777X data connection, which supplies beacon, logo, landing and strobe light states. **This is no longer needed for current PMDG aircraft.** It is kept for future PMDG aircraft betas; leave it off unless specific beta guidance asks for it. |
+| Ignore incompatible aircraft lights | Default **off**. Treats reported beacon, logo, landing and strobe lights as off inside Universal Announcer. It does not move the aircraft's switches or bypass the light requirements. Logo-light boarding and light-triggered crew calls may therefore stop working. Use GSX where applicable and **Play Next** when a call is due. Custom light overrides, if configured separately, can still force individual signals on. |
+| Enable MSFS Toolbar link (experimental) | Default **on**. Enables the local connection used by the simulator toolbar panel. Restart Universal Announcer after changing this setting. The Community toolbar package must also be installed; see [MSFS toolbar](#toolbar). |
+
+### Landing Cabin Reactions
+
+Default **off**. Enables a short reaction to a great or terrible landing. An ordinary landing produces no reaction. The app uses the magnitude of vertical speed just before touchdown and the peak G-force around the landing. VS is vertical speed in feet per minute; G-force measures acceleration, with 1g approximately normal gravity.
+
+| Setting | Default and effect |
+| --- | --- |
+| Great Landing VS Threshold (fpm) | **200 fpm**. Touchdown descent rate must be at or below this value. |
+| Great Landing G-Force Threshold (g) | **1.20g**. Peak G-force must also be at or below this value. **Both** great-landing limits must pass. |
+| Terrible Landing VS Threshold (fpm) | **800 fpm**. Reaching or exceeding this rate qualifies as terrible unless the great-landing test already passed. |
+| Terrible Landing G-Force Threshold (g) | **1.60g**. Reaching or exceeding this force also qualifies. **Either** terrible-landing limit is enough. |
+
+Keep the great limits below the terrible limits. At the defaults, **180 fpm / 1.15g** gives a great reaction, **450 fpm / 1.30g** gives none, and **450 fpm / 1.70g** gives a terrible reaction. Enter descent-rate thresholds as positive numbers.
+
+Custom `LandingGreat.ogg` and `LandingTerrible.ogg` recordings can replace the built-in reactions. Camera volume rules still apply. Detection needs running engines, at least 50 knots groundspeed and a recognised in-flight camera view; a 10-second cooldown after a reaction helps avoid repeats from a bounce.
