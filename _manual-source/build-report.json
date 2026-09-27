@@ -1,10 +1,10 @@
 {
-  "appVersion": "0.9.9.7",
-  "revision": "2026-09-20.8",
+  "appVersion": "0.9.9.8",
+  "revision": "2026-09-27.2",
   "browser": "151.0.7922.34",
   "missingScreenshots": [],
-  "sections": 32,
-  "sourceCommit": "5b55c0b1bebf5a45d4ecfc9d1026025c570fe8f7",
+  "sections": 34,
+  "sourceCommit": "6e521c7498eef05658cc0b4d435f512d0ce81fb9",
   "checks": [
     "Offline HTML, anchors, images and width 390px: pass",
     "Offline HTML, anchors, images and width 1280px: pass"
@@ -12,7 +12,7 @@
   "printSectionHeightsMm": [
     {
       "id": "cover",
-      "mm": 222.72128906249998
+      "mm": 230.72080078124998
     },
     {
       "id": "getting-started",
@@ -72,11 +72,19 @@
     },
     {
       "id": "voices",
-      "mm": 259.9696614583333
+      "mm": 253.54111328124998
     },
     {
       "id": "generation-modes",
-      "mm": 256.88561197916664
+      "mm": 259.8828450520833
+    },
+    {
+      "id": "local-tts",
+      "mm": 255.50068359374998
+    },
+    {
+      "id": "compatible-api-voices",
+      "mm": 255.31464843749998
     },
     {
       "id": "faq",
@@ -84,7 +92,7 @@
     },
     {
       "id": "support",
-      "mm": 208.55367838541665
+      "mm": 218.7442708333333
     },
     {
       "id": "quick-reference",

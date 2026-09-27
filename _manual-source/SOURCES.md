@@ -1,6 +1,6 @@
 # Research and verification ledger
 
-Reviewed 20 September 2026. Application baseline: UniversalAnnouncer 0.9.9.7, commit `5b55c0b1bebf5a45d4ecfc9d1026025c570fe8f7` in `D:\code\UniversalAnnouncer`. The source checkout was clean when its baseline was recorded. Source code takes precedence over comments within that code and older Markdown guides.
+Current edition: 27 September 2026, UniversalAnnouncer 0.9.9.8, commit `6e521c7498eef05658cc0b4d435f512d0ce81fb9` in `D:\code\UniversalAnnouncer`. The compatible API update below was checked against committed source; the checkout's uncommitted help-link and label changes were excluded. Earlier research used 0.9.9.7, commit `5b55c0b1bebf5a45d4ecfc9d1026025c570fe8f7`, on 20 September, when that checkout was clean. Source code takes precedence over comments within that code and older Markdown guides.
 
 This is a maintainer document, not part of the user manual.
 
@@ -89,3 +89,23 @@ These additions were verified by source inspection and document/browser checks. 
 - LandingRatingMonitor rates absolute last-airborne vertical speed and tracked peak G-force, with a 500 ms delay after touchdown to capture impact. Great requires both limits; terrible requires either and is checked after great. Other ratings are silent. Guards include a recognised in-flight view, running engines, at least 50 knots and a 10-second cooldown after a reaction. Custom matching reaction files precede embedded audio, and camera volumes apply.
 
 The new screenshot was saved without alteration as screenshots/11-tweaks.png. No credentials are visible. This update does not close the remaining live simulator checks.
+
+## OpenAI-compatible API, revision 2026-09-27.1
+
+- **Baseline:** the named commit adds the provider and sets VersionPrefix to 0.9.9.8. Read committed SettingsForm.cs, Strings.resx and voice-token parsing with `git show`; the provider, factory, RolesDialog and tests are unchanged in the working checkout. No application files were edited. The preceding flight-trigger and Tweaks references retain their explicitly stated 0.9.9.7 research baseline.
+- **Connection and defaults:** Tts/OpenAiCompatibleTtsProvider.cs defines the exact provider name, localhost API base `http://127.0.0.1:8880/v1`, model `tts-1`, voice `Ryan` and 300-second synthesis timeout. The app appends `audio/speech`, sends model/input/voice/response_format=wav and optional Bearer authentication, checks the RIFF/WAVE header, and converts the result through the existing OGG path. Rate and pitch arguments are not included in the request. These defaults are not a guarantee that a server supports a particular model or voice.
+- **UI and discovery:** SettingsForm uses API Base URL, API Key (optional), Model and Voice; model and voice controls are editable. Base URL, key and model changes schedule discovery. The provider tries several voice-list routes and can return an empty list; manual IDs remain usable. It returns the configured model for third-party servers rather than promising a discovered model catalog.
+- **Roles and directives:** RolesDialog permits typed Pilot and Flight Attendant IDs for the compatible provider and retains saved IDs absent from discovery. SoundFileManager.TryParseVoiceToken splits the provider/voice on the first slash, supporting `##Voice: OpenAI-compatible API/Ryan`. Existing explicit-voice, airline/Default-role and main-voice precedence applies. The manual recommends manual assignments for predictable server-specific voices.
+- **Local and hosted use:** both use the same configured provider. Local installation and model startup belong to the server, while hosted authentication, accepted models, voices and usage terms belong to the service. The manual describes the speech/WAV contract without endorsing a particular server or promising chat-API compatibility. Saved recordings are normal local OGG files.
+- **Verification limits:** inspected OpenAiCompatibleTtsProviderTests for URL construction, discovery, caching, authentication, payload, invalid WAV and cancellation behavior, plus SoundFileManagerTtsTests for the timeout path. Tests were read, not executed, for this documentation-only change. No local/hosted synthesis, listening test, model installation, service billing request or simulator flight was performed.
+
+## Local model examples and replacement screenshot, revision 2026-09-27.2
+
+Primary project documentation checked on 27 September 2026:
+
+- [Qwen3-TTS](https://github.com/QwenLM/Qwen3-TTS): official Qwen speech-model repository and local inference instructions. Linked as a model family, not a ready-made compatible API endpoint.
+- [Qwen3 Audio API Python server](https://github.com/second-state/qwen3_audio_api/tree/main/python): documents `/v1/audio/speech`, model/input/voice parameters, WAV output and preset voices through CustomVoice models. Linked as a separate server example, without claiming it has been tested in Universal Announcer.
+- [Kokoro-FastAPI](https://github.com/remsky/Kokoro-FastAPI): maintainer's wrapper for Kokoro-82M; documents an OpenAI-compatible speech endpoint, WAV output and deployment/hardware choices.
+- [Chatterbox](https://github.com/resemble-ai/chatterbox): official model repository and local inference instructions. Listed as another model to explore, with the surrounding requirement for a compatible API server; no specific Chatterbox wrapper or tested compatibility is claimed.
+
+The maintainer supplied a new Roles screenshot showing BAW, Edge, en-GB-RyanNeural and en-US-BrianNeural. Caption and prose follow the image. No new voice-catalog request or listening test was made; the older catalog check does not validate Brian's current availability.

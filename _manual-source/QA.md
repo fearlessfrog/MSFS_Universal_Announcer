@@ -1,14 +1,14 @@
 # Manual verification
 
-Revision 2026-09-20.8, application 0.9.9.7.
+Revision 2026-09-27.2, application 0.9.9.8, source commit `6e521c7498eef05658cc0b4d435f512d0ce81fb9`.
 
 ## Passed
 
 - Built matching HTML and PDF from the same Markdown with Marked 17.0.5 and Playwright 1.62.1 / Chromium 151.0.7922.34.
-- PDF: 32 A4 pages, searchable text, tagged structure, outline/bookmarks and 80 link annotations. Text extraction found content and the correct footer on every page, with no em dashes or broken separator characters.
+- PDF: 34 A4 pages, searchable text, tagged structure, outline/bookmarks and 98 link annotations. Text extraction found every expected heading and the correct version/page footer on every page, with no em dashes or replacement characters.
 - All eleven supplied screenshots are embedded. Original source and output asset image hashes match exactly.
 - Every page of the final PDF was rendered with Poppler and visually inspected. No clipped text, broken code blocks, overlaps or footer collisions were found. Sound setup and camera rules have separate pages to make room for the images.
-- Printed contents page numbers match the 32 sections. Every section fits the printable height.
+- Printed contents page numbers match the 34 sections. Every section fits the printable height.
 - HTML: all internal links resolve, all eleven images load, and no horizontal overflow occurs at 390px and 1280px. Each image has a full-size link.
 - Offline browser check blocks remote requests. The manual uses local images and styles with no remote fonts or scripts.
 - HTTP check under `/MSFS_Universal_Announcer/manual/`: stylesheet and screenshots load, contents navigation works, full-size images open, and the PDF download returns a valid PDF. Browser errors are absent.
@@ -22,6 +22,7 @@ Revision 2026-09-20.8, application 0.9.9.7.
 
 - In-simulator GSX, non-GSX, camera, ChasePlane and toolbar checks, plus a clean-install walkthrough and listening to the proposed voices.
 - Confirm the public Discord invitation/onboarding and the release ZIP's toolbar version.
+- Local or hosted OpenAI-compatible API synthesis, listening, typed voices and role assignments. These instructions were checked against the named source commit; no live server was contacted.
 The cover status was removed at the maintainer's request. This is a presentation change, not a claim that the live checks above were performed.
 
 All screenshot requests are complete. The application files remain unchanged. The older generated, flight-state and sound-file guides now have introductory links to the current manual, as requested; their existing content and URLs are preserved. No simulator flight was started or user settings changed to produce this manual. Public pages have not been published and release packaging has not been changed.
@@ -51,3 +52,19 @@ The PDF has 29 pages and 80 link annotations, with ten unchanged screenshots. Re
 Added three Tweaks reference pages and the supplied screenshot, bringing the manual to 32 pages and eleven screenshots. Checked all 19 controls against the English UI and source: defaults, numeric ranges where given, trigger dependencies, music restart/resume, immediate-save controls, light overrides, toolbar restart and the AND/OR rules for landing reactions. The PMDG availability note comes from the maintainer, not a new simulator test.
 
 Rendered and visually inspected all 32 PDF pages, with detailed checks of the contents and three new pages. PDF checks passed for every heading/footer, searchable text, revision, bookmarks, tagged structure, eleven images and 80 link annotations. Original screenshot bytes match output assets, including the new attachment. Offline checks passed at 390px and 1280px. Local HTTP checks passed for all new contents anchors, image loading, full-size image links and PDF download; desktop and mobile layouts were inspected. Existing source-coverage checks still pass for the placeholder and aircraft tables. No application code or old guide pages changed in this update.
+
+## Revision 2026-09-27.1
+
+Added sections 16a and 16b on connecting an existing local TTS server and using compatible API voices, hosted services and troubleshooting. Covered the four provider settings, server-specific model/voice IDs, typed role voices, explicit provider directives, WAV requirements, ignored rate/pitch and five-minute synthesis timeout. Cross-linked the first-generation guide, provider overview, voice guidance, template reference and support page. Existing Edge examples are labelled. Existing section IDs and chapter numbers remain stable; the new sections are local-tts and compatible-api-voices on pages 18 and 19.
+
+Built with the existing pinned Marked/Playwright versions, Node 24.19.0 and Chromium 151.0.7922.34 on Windows. Dependencies came from the installed runtime; the matching headless browser was downloaded into the ignored .qa directory. No builder or stylesheet changes were needed. Shortened surrounding prose to keep the existing font size and screenshot dimensions.
+
+All 34 PDF pages were rendered with Poppler and visually inspected, with separate full-page checks of both additions. Programmatic checks verified every heading/footer, all printed contents page numbers, revision, bookmarks, tagged structure and 94 link annotations. All eleven screenshot source/output SHA-256 hashes match. Offline build checks passed at 390px and 1280px. Local HTTP checks passed at the published path prefix for both new contents links, all full-size image links and a byte-identical PDF download, with no browser errors. Desktop/mobile layouts were inspected. Source and QA records were updated; no public publishing, application changes, legacy-guide edits or release packaging occurred.
+
+## Revision 2026-09-27.2
+
+Rebuilt with the maintainer's replacement 08-roles.png. It shows BAW/Edge with Ryan as Pilot and Brian as Flight Attendant; updated the caption and accompanying prose. Preserved the supplied image bytes and its 120 mm print width, shortening surrounding wording to accommodate its taller proportions.
+
+Added linked Qwen3-TTS, Kokoro-82M and Chatterbox examples to local TTS setup, distinguishing models from the required API server. Linked Qwen3 Audio API and Kokoro-FastAPI as server examples and pointed readers to server setup/hardware requirements. Verified primary project documentation; no live compatibility or audio test was performed.
+
+The full build and offline checks passed. PDF remains 34 pages with 98 link annotations; every heading/footer, contents page number, revision, bookmark/tagged structure and all screenshot source/output hashes passed verification. Rendered all pages; PNG hashes confirm 31 pages are pixel-identical to the previously inspected edition. Visually inspected the three changed pages (cover, roles, local TTS) and desktop/mobile local TTS layouts. HTTP navigation, full-size images and byte-identical PDF download checks passed without browser errors. No application, legacy-guide or publishing changes.

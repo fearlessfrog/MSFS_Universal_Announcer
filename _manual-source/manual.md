@@ -299,7 +299,7 @@ Try a native MSFS camera as a comparison. If native camera volumes work but Chas
 <!-- page: generated | 13. Generate your first announcement -->
 ## Generate your first announcement
 
-Generated announcements turn text into `.ogg` recordings. **You do not have to use English:** choose translated [templates](#templates) and a suitable [voice](#voices). Start in a test airline folder or back up your pack.
+Generate `.ogg` recordings from text using Edge below, or follow [local TTS setup](#local-tts). Use translated [templates](#templates) and suitable [voices](#voices) for other languages. Start in a test airline folder or back up your pack.
 
 1. Configure the sound root, create the target airline folder if needed, and fetch your SimBrief plan.
 2. Open **Generated**. Select **Airline**, **Provider: Edge**, and `BoardingWelcome`. Choose a voice (use **Roles** if indicated).
@@ -310,7 +310,7 @@ Generated announcements turn text into `.ogg` recordings. **You do not have to u
 
 **The screenshot shows replacement options enabled.** Leave both off to preserve recordings during automatic playback. Read [generation modes](#generation-modes) before enabling them.
 
-Edge needs internet access but no personal API key. Saved recordings play offline. For automatic creation, enable **Enable Generated TTS fallback**. Manual generation requires an airline folder; **Default cannot be the output target**.
+Edge needs internet but no personal API key; saved recordings play offline. **Enable Generated TTS fallback** allows automatic creation. Manual generation needs an airline folder; **Default cannot be the output target**.
 
 <!-- page: templates | 14. Edit templates -->
 ## Edit templates
@@ -353,9 +353,9 @@ Use either language, or both with a multilingual voice. `{FLIGHT_NUMBER_DIGITS}`
 <!-- page: voices | 15. Choose voices and roles -->
 ## Choose voices and roles
 
-For French, Spanish and bilingual calls, try **Ava Multilingual** (`en-US-AvaMultilingualNeural`, the app's default) or **Emma Multilingual** (`en-US-EmmaMultilingualNeural`, shown on Generated). Look for **MultilingualNeural** in the voice name: the `en-US` prefix does not limit these voices to English. Supply text in the language you want spoken and listen with **Test Voice**.
+These are **Edge** examples; see [compatible API voices](#compatible-api-voices) for local models. For French, Spanish or bilingual calls, try **Ava Multilingual** (`en-US-AvaMultilingualNeural`, default) or **Emma Multilingual** (`en-US-EmmaMultilingualNeural`). Their `en-US` prefix does not restrict them to English. Supply your chosen language and use **Test Voice**.
 
-For English, try **Sonia** and **Ryan** for British English, or **Aria** and **Jenny** for US English. The example below pairs Ryan with the pilot and Sonia with the cabin crew. Choose from your current provider's voice list and test airport names and flight numbers.
+For English, try **Sonia/Ryan** (British) or **Aria/Jenny** (US). The screenshot pairs Ryan for Pilot with Brian for Flight Attendant. Test airport names and flight numbers.
 
 ### Assign a pilot and flight attendant
 
@@ -363,13 +363,11 @@ Open **Generated > Roles**, choose the provider and airline, select **Pilot Voic
 
 <!-- screenshot: roles -->
 
-Templates beginning with `##Role: Pilot` or `##Role: FA` use those assignments. An explicit `##Voice:` takes priority over a role. Airline role settings take priority over Default role settings; the selected main voice is the fallback. Templates without a role use the flight-attendant role when one is available.
+`##Role: Pilot` or `##Role: FA` uses these assignments; `##Voice:` overrides them. Airline roles override Default roles, with the main voice as fallback. Without a role, templates use the flight-attendant role when available.
 
 **Auto pick Roles based on Airline Country** chooses voices when no airline roles file exists. Leave it off for predictable manual assignments. Voice selection does not translate your text.
 
-### Override one announcement
-
-Use **Insert Voice** to insert the selected voice, or enter:
+### Override one announcement with Insert Voice
 
 ```text
 ##Voice: Edge/en-GB-SoniaNeural
@@ -378,7 +376,7 @@ Use **Insert Voice** to insert the selected voice, or enter:
 Welcome aboard. Please keep the aisle clear.
 ```
 
-Rate adjusts speed: `-10%` is slower, `+10%` faster, and `+0%` unchanged. Pitch adjusts Hz; `0Hz` is unchanged. These directives work with Edge and Azure. Test small changes before generating a pack.
+For Edge/Azure, rate changes speed (`-10%` slower, `+10%` faster); pitch changes Hz. `+0%` and `0Hz` leave them unchanged. Test small changes first.
 
 <!-- page: generation-modes | 16. Generation modes and other providers -->
 ## Choose how generation is used
@@ -402,17 +400,81 @@ The app also uses per-flight guards and filename matching, so this is not contin
 
 **Generate As..** lets you choose a filename, including supported tags. Manual generation writes audio to the selected airline folder. You can save text and role defaults under Default, but cannot select Default as a manual audio-generation target.
 
-Use **Generate** for one item or **Generate All** for the set after checking the selected airline and voice. This is useful when you prefer recordings to be ready before boarding rather than waiting for an online service during playback. Keep replacement disabled during the flight if you intend to use those prepared files unchanged.
+Use **Generate** for one item or **Generate All** for the set after checking the selected airline and voice. Generate before boarding to avoid waiting for a local model or online service during playback. Keep replacement disabled during the flight to use those prepared files unchanged.
 
 ### Other providers
 
-**Windows** uses voices installed locally and can work offline. Available voices depend on your Windows installation. It is a useful fallback when an online service is unavailable.
+**Windows** uses locally installed voices and can work offline. Voice availability depends on your Windows installation.
 
-**Azure** needs an Azure Speech resource, its API key and matching region. **ElevenLabs** needs its API key and a supported voice/model. Enter these in Generated when that provider is selected. Check each provider's current account limits and pricing before generating large batches; no free allowance is promised here.
+**OpenAI-compatible API** connects to a separately running local TTS model server or a compatible hosted service. See [local TTS setup](#local-tts) and [hosted services](#compatible-api-voices).
+
+**Azure** needs an Azure Speech resource, API key and matching region. **ElevenLabs** needs its API key and a supported voice/model. Enter these on Generated. Check service limits and pricing before large batches.
 
 For less studio-like audio, enable **Audio > PA Audio Mix (simulates cabin speaker noise)** and select a preset. This affects generated audio. Regenerate and preview a sample to judge the result. Do not expect a new setting to rewrite previously saved files automatically.
 
 Long templates take longer to generate. Keep each call focused, and use recordings for music rather than trying to make the voice service produce it.
+
+<!-- page: local-tts | 16a. Connect a local TTS server -->
+## Connect a local TTS server
+
+Choose **OpenAI-compatible API** to use a local TTS model through a separate server. Examples to explore include [Qwen3-TTS](https://github.com/QwenLM/Qwen3-TTS), **Kokoro-82M** and [Chatterbox](https://github.com/resemble-ai/chatterbox). The model needs a compatible API server; examples include [Qwen3 Audio API](https://github.com/second-state/qwen3_audio_api/tree/main/python) for Qwen and [Kokoro-FastAPI](https://github.com/remsky/Kokoro-FastAPI) for Kokoro.
+
+Follow your chosen server's installation guide and check its hardware requirements. Universal Announcer does not install models or start servers. Once set up, generation can work without internet if the server itself works offline.
+
+The server must provide an OpenAI-style **speech** endpoint that accepts text, model and voice and returns **WAV** audio. A chat-only API is not enough. Universal Announcer requests WAV, then converts it to the usual `.ogg` recording.
+
+### Set the connection on Generated
+
+Select **Provider: OpenAI-compatible API**, then enter the values for your server:
+
+- **API Base URL:** the default is `http://127.0.0.1:8880/v1`, for a server on this PC. Change the address, port and path to match your server. Enter the API base only: the app appends `/audio/speech`, giving `http://127.0.0.1:8880/v1/audio/speech` in this example.
+- **API Key (optional):** leave blank if your server requires no authentication. Otherwise enter its key here; the app sends it as a Bearer token. Do not put credentials in the URL.
+- **Model:** type the identifier accepted by your server. The default `tts-1` is only a starting value; it does not install or select a universally available model. The field is editable even if the list contains only that value.
+- **Voice:** choose a discovered voice or type the exact voice ID your server accepts. The default `Ryan` is server-dependent. An empty voice list does not necessarily prevent synthesis; use a known valid ID and test it.
+
+### Generate your first local announcement
+
+1. Start the TTS server and wait until its model is ready. Confirm its API address, model and voice in the server's own instructions.
+2. Configure the connection above. Choose a test **Airline** folder and `BoardingWelcome`; fetch your SimBrief plan if the text uses flight details.
+3. Check any `##Voice:` or `##Role:` lines before testing. An old Edge override can still select Edge. Use [compatible API voices and roles](#compatible-api-voices) to select the intended local voice.
+4. Click **Test Voice** with a short message. When it sounds right, edit the template, click **Save txt**, then **Generate**. Manual audio generation needs an airline folder; Default is not an output target.
+5. Open **Sound Files**, click **Refresh**, select the new `.ogg` and **Preview** it. Keep automatic replacement off to reuse the recording unchanged.
+
+Keep the server running whenever new speech is needed, including automatic generated fallback. Saved `.ogg` files play without it. Slow models can delay a call, so generate before boarding; see [generation modes](#generation-modes).
+
+<!-- page: compatible-api-voices | 16b. Compatible API voices and troubleshooting -->
+## Compatible API voices and troubleshooting
+
+### Voices, roles and templates
+
+Voice discovery depends on the server. **Voice**, **Pilot Voice** and **Flight Attendant Voice** accept typed IDs for this provider. In **Generated > Roles**, select **OpenAI-compatible API**, choose the airline or **(Default)**, enter its voices and click **Save Roles**. Edge voice names are not portable to other servers.
+
+The usual [voice priority](#voices) applies: explicit `##Voice:` overrides a role; airline roles override Default roles; the main voice is the fallback. A template without a role uses the flight-attendant role when available. For predictable local voices, leave **Auto pick Roles based on Airline Country** off and assign roles yourself.
+
+Use **Insert Voice**, or enter this example only if your server supports `Ryan`:
+
+```text
+##Voice: OpenAI-compatible API/Ryan
+Welcome aboard flight {FLIGHT_NUMBER_DIGITS}.
+```
+
+The provider uses the base URL and model configured on Generated. It ignores `##rate:` and `##pitch:`. Language support and pronunciation depend on the server's model and voice; test your own text before generating a pack.
+
+### Use a hosted service
+
+Select the same provider and enter the service's API base URL, usually an HTTPS address ending in `/v1`, plus its required API key, model and voice IDs. Use the path specified by that service, excluding `/audio/speech`. The service must support speech synthesis with WAV output.
+
+Hosted generation needs internet access and sends the resolved announcement text to that service. Check its account limits and charges before a large batch. Saved recordings still play offline. Recheck the model and voice when switching servers; the local defaults may not be accepted.
+
+### If generation fails
+
+- **Cannot connect or endpoint not found:** check that the server is running and ready, and verify the address, port and API base path. Do not enter the full speech endpoint or duplicate `/v1`.
+- **Authentication rejected (401/403):** check the server's required key and access permissions. “Optional” means a key can be omitted only when the server allows it.
+- **Model or voice rejected, or no voices listed:** use exact IDs supported by the active model. Type a valid voice if discovery is unavailable; check Roles and explicit template overrides too.
+- **Invalid WAV response:** the server must return WAV audio for the speech request. A successful web page or a chat response does not establish TTS compatibility.
+- **Slow or timed-out generation:** this provider allows up to **five minutes per synthesis request**. Wait for model loading to finish, test shorter text and inspect the server log. Generate before boarding to avoid in-flight waits.
+
+For an unresolved failure, include the error and server/model details in a [bug report](#support). Remove API keys and private details from anything you share.
 
 <!-- page: faq | 17. Common questions -->
 ## Common questions
@@ -453,6 +515,8 @@ Check the selected airline, Save txt destination, explicit `##Voice:` lines, rol
 
 <!-- page: support | 18. Troubleshooting and support -->
 ## Troubleshooting and support
+
+For local or hosted **OpenAI-compatible API** failures, see [compatible API troubleshooting](#compatible-api-voices).
 
 ### Edge generation fails or its voice list is empty
 
@@ -664,7 +728,7 @@ Put directives on separate lines before the spoken text. They select how the tex
 | `##rate:-10%` | Adjust speaking speed for Edge/Azure. `+0%` is unchanged. |
 | `##pitch:0Hz` | Adjust pitch for Edge/Azure. `0Hz` is unchanged. |
 
-Airline role assignments take priority over Default role assignments, with the main selected voice as fallback. A template without a role uses the flight-attendant role when available. See [voice setup](#voices) and [generation modes](#generation-modes) before replacing recordings.
+Airline roles override Default roles, then fall back to the main voice. Without a role, the flight-attendant role is used when available. [OpenAI-compatible API](#compatible-api-voices) ignores rate and pitch. See [voice setup](#voices) and [generation modes](#generation-modes).
 
 <!-- page: file-tags | C1. All filename tags -->
 ## All filename tags
