@@ -1,10 +1,10 @@
 {
-  "version": "0.9.9.7",
-  "releaseNotesUrl": "https://github.com/fearlessfrog/MSFS_Universal_Announcer/releases/tag/0.9.9.7",
+  "version": "0.9.9.8",
+  "releaseNotesUrl": "https://github.com/fearlessfrog/MSFS_Universal_Announcer/releases/tag/0.9.9.8",
   "assets": {
     "win-x64": {
-      "name": "UniversalAnnouncer-v0-9-9-7.zip",
-      "downloadUrl": "https://github.com/fearlessfrog/MSFS_Universal_Announcer/releases/download/0.9.9.7/UniversalAnnouncer-v0-9-9-7.zip"
+      "name": "UniversalAnnouncer-v0-9-9-8.zip",
+      "downloadUrl": "https://github.com/fearlessfrog/MSFS_Universal_Announcer/releases/download/0.9.9.8/UniversalAnnouncer-v0-9-9-8.zip"
     }
   }
 }
