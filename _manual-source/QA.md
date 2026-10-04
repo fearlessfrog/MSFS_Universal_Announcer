@@ -1,6 +1,6 @@
 # Manual verification
 
-Revision 2026-09-27.2, application 0.9.9.8, source commit `6e521c7498eef05658cc0b4d435f512d0ce81fb9`.
+Current edition: revision **2026-10-04.1**, application **1.0.0.0**. See [current revision checks](#revision-2026-10-041) below. The baseline summary that follows records revision 2026-09-27.2, application 0.9.9.8, source commit `6e521c7498eef05658cc0b4d435f512d0ce81fb9`.
 
 ## Passed
 
@@ -68,3 +68,16 @@ Rebuilt with the maintainer's replacement 08-roles.png. It shows BAW/Edge with R
 Added linked Qwen3-TTS, Kokoro-82M and Chatterbox examples to local TTS setup, distinguishing models from the required API server. Linked Qwen3 Audio API and Kokoro-FastAPI as server examples and pointed readers to server setup/hardware requirements. Verified primary project documentation; no live compatibility or audio test was performed.
 
 The full build and offline checks passed. PDF remains 34 pages with 98 link annotations; every heading/footer, contents page number, revision, bookmark/tagged structure and all screenshot source/output hashes passed verification. Rendered all pages; PNG hashes confirm 31 pages are pixel-identical to the previously inspected edition. Visually inspected the three changed pages (cover, roles, local TTS) and desktop/mobile local TTS layouts. HTTP navigation, full-size images and byte-identical PDF download checks passed without browser errors. No application, legacy-guide or publishing changes.
+
+## Revision 2026-10-04.1
+
+Updated the edition to release 1.0.0.0. Added a route introduction in Choose the right recordings, a C1 filename-tag entry, route scores in C2 and the dedicated C3 Route Tags page with all supplied rules and examples. Corrected the nearby obsolete family-tag fallthrough warnings against the release source. Other sections retain their recorded research baselines; no full application re-audit was performed.
+
+- Full Windows build passed with Node 24.19.0, Marked 17.0.5, Playwright 1.62.1 and Chromium 151.0.7922.34. All 35 sections fit the printable height; existing font sizes and screenshot dimensions were retained.
+- PDF: 35 A4 pages, 105 link annotations, searchable route examples, tagged structure and bookmarks including Route Tags. Verified every heading, version/footer, printed contents page number and revision. Existing section anchors and order are preserved.
+- Rendered all 35 pages with Poppler and visually inspected all nine contact sheets, with a full-page inspection of C3. No clipping, overlaps or footer collisions were found. After excluding changed version/page-count footers, all 29 unaffected page bodies are pixel-identical to the preceding edition.
+- All eleven source and output screenshot SHA-256 hashes match; original asset bytes are unchanged. Updated the screenshot inventory's Tweaks page number to 33.
+- Offline HTML checks passed at 390px and 1280px. Local HTTP checks passed for all 34 contents links, route guidance, all eleven full-size image links and a byte-identical PDF download, without browser errors. Visually inspected the revised main chapter and appendices on mobile and C3 on desktop.
+- Documentation diff checks passed with CRLF treated as the existing line-ending convention. Changes are confined to manual source/maintenance records and generated HTML/PDF/build report; existing unrelated workspace changes are preserved.
+
+No simulator, playback or synthesis tests were performed for this documentation update. Nothing was published or added to release packaging. Verification scripts, screenshots and before/after copies are retained only in the ignored `.qa/route-tags-2026-10-04/` directory.

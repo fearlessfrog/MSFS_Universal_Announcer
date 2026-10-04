@@ -1,6 +1,6 @@
 # Screenshot inventory
 
-The eleven screenshots were originally supplied on 20 September 2026. Revision 2026-09-27.2 incorporates the maintainer's replacement Roles screenshot, preserving its supplied bytes; the other ten images remain unchanged. Images show English UI; Generated and Roles are Edge examples. The compatible API pages use text instructions, with no simulated screenshots.
+The eleven screenshots were originally supplied on 20 September 2026. Revision 2026-09-27.2 incorporates the maintainer's replacement Roles screenshot, preserving its supplied bytes; the other ten images remain unchanged. Images show English UI; Generated and Roles are Edge examples. The compatible API pages use text instructions, with no simulated screenshots. Revision 2026-10-04.1 adds the Route Tags appendix; all eleven image files remain unchanged and the page numbers below refer to that 35-page edition.
 
 ## Included captures
 
@@ -15,7 +15,7 @@ The eleven screenshots were originally supplied on 20 September 2026. Revision 2
 9. `09-chaseplane.png`, page 13: General Functionality > Enable 3rd party plugins set to ON.
 10. `10-discord-channels.png`, page 3: Announcement Hangar and both compatible pack categories, FENIX ANNOUNCEMENT PACKS and UNIVERSAL ANNOUNCEMENT PACKS. The FAQ repeats the compatibility point.
 
-11. `11-tweaks.png`, page 32: the supplied Tweaks tab. Saved unchanged from the clipboard attachment. The caption and text distinguish the example values (15 minutes and 1.11g) from code defaults (10 minutes and 1.20g).
+11. `11-tweaks.png`, page 33: the supplied Tweaks tab. Saved unchanged from the clipboard attachment. The caption and text distinguish the example values (15 minutes and 1.11g) from code defaults (10 minutes and 1.20g).
 
 ## Remaining live checks
 

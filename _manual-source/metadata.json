@@ -1,9 +1,9 @@
 {
   "title": "Universal Announcer User Manual",
-  "appVersion": "0.9.9.8",
-  "revision": "2026-09-27.2",
+  "appVersion": "1.0.0.0",
+  "revision": "2026-10-04.1",
   "status": "",
-  "sourceCommit": "6e521c7498eef05658cc0b4d435f512d0ce81fb9",
+  "sourceCommit": "3217cc79e926975658574cb0d2f9032b2e3ad52a",
   "screenshots": [
     {
       "id": "tray",

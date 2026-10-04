@@ -1,10 +1,10 @@
 {
-  "appVersion": "0.9.9.8",
-  "revision": "2026-09-27.2",
+  "appVersion": "1.0.0.0",
+  "revision": "2026-10-04.1",
   "browser": "151.0.7922.34",
   "missingScreenshots": [],
-  "sections": 34,
-  "sourceCommit": "6e521c7498eef05658cc0b4d435f512d0ce81fb9",
+  "sections": 35,
+  "sourceCommit": "3217cc79e926975658574cb0d2f9032b2e3ad52a",
   "checks": [
     "Offline HTML, anchors, images and width 390px: pass",
     "Offline HTML, anchors, images and width 1280px: pass"
@@ -48,7 +48,7 @@
     },
     {
       "id": "tags",
-      "mm": 214.84166666666667
+      "mm": 242.87096354166667
     },
     {
       "id": "camera-volumes",
@@ -120,11 +120,15 @@
     },
     {
       "id": "file-tags",
-      "mm": 242.25498046874998
+      "mm": 254.3762044270833
     },
     {
       "id": "file-selection",
-      "mm": 254.69039713541665
+      "mm": 256.8070638020833
+    },
+    {
+      "id": "route-tags",
+      "mm": 201.07093098958333
     },
     {
       "id": "aircraft-families",

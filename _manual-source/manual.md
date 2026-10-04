@@ -204,7 +204,7 @@ If the icon is missing, check Community installation and restart MSFS. If the pa
 <!-- page: tags | 9. Choose the right recordings -->
 ## Choose the right recordings
 
-Start with plain filenames. Add tags when you need a different recording for a particular aircraft, time or destination. Keep an untagged fallback if a pack should work on other flights too.
+Start with plain filenames. Add tags when you need a different recording for a particular aircraft, time, airport or route. Keep an untagged fallback if a pack should work on other flights too.
 
 ### Aircraft and variants
 
@@ -226,6 +226,10 @@ BoardingWelcome[ARR][ED##].ogg
 ```
 
 The first is an arrival at Heathrow. The second mentions Heathrow during boarding. The third targets German destination codes beginning with `ED`. Use `#` wildcards with ARR or DEP to select recordings by region. See [All filename tags](#file-tags) for the rules.
+
+### Route tags
+
+`BoardingWelcome[CYVR~KSFO].ogg` requires a SimBrief flight from CYVR to KSFO. Both endpoints must match, regardless of announcement phase. Use `~` between departure and arrival lists; see [Route Tags](#route-tags) for lists, wildcards and combinations.
 
 ### Fallback and intentional silence
 
@@ -745,8 +749,9 @@ Use `AnnouncementName[tag][tag].ogg`, with tags immediately before the extension
 | `[Night]` | Midnight to before 06:00. |
 | `[Refueling]` | GSX refueling requested or active (state 4/5). It does not mean merely parked with engines off. |
 | Airport ICAO code | `[EGLL]` matches the phase's airport context. Most departure calls use origin; other calls use destination. See the exact list on the next page. |
-| `[ARR]` | Use SimBrief destination. Must accompany a matching airport code or pattern, e.g. `[ARR][EGLL]`. |
-| `[DEP]` | Use SimBrief origin. Must accompany a matching airport code or pattern, e.g. `[DEP][EGLL]`. Do not combine ARR and DEP. |
+| Route pair or lists | `[CYVR~KSFO]` matches both SimBrief endpoints in any phase. See [Route Tags](#route-tags). |
+| `[ARR]` | Use SimBrief destination with an airport code or pattern, e.g. `[ARR][EGLL]`. A route tag overrides this. |
+| `[DEP]` | Use SimBrief origin with an airport code or pattern, e.g. `[DEP][EGLL]`. Combine ARR and DEP only with a route tag. |
 | Airport wildcard `#` | With ARR or DEP, e.g. `[ARR][ED##]`. `#` matches zero or more characters. The airport-pattern tag must contain 3 or 4 characters in total. `*` is not supported. |
 | Numbered variant | `[1]`, `[2]`, etc. Selects among matching versions and tries to preserve the chosen number across the flight. This is separate from the flight's callsign. |
 | `[mute]` | Selects a recording but intentionally skips its playback and counts the call as handled. A matching airline mute file also blocks generated fallback. |
@@ -764,11 +769,12 @@ SafetyBriefing[320][Morning][1].ogg
 
 ### How matching files are chosen
 
-Scores add together for matching tags; they are not a fixed priority ladder. A tag that does not match normally excludes the file. An untagged file scores zero and is a useful fallback. Folder priority still applies: matching airline files are considered before Default fallback.
+Matching tag scores add. Nonmatching tags normally exclude files; untagged files score zero. Airline files precede Default. Only the [best route pair](#route-tags) contributes.
 
 | Matching condition | Score added |
 | --- | ---: |
 | Refueling active | 200 |
+| Route pair | 150 exact; 145 mixed; 140 wildcard |
 | Exact aircraft | 100 |
 | Exact airport with ARR or DEP | 100 |
 | Wildcard airport with ARR or DEP | 95 |
@@ -778,9 +784,9 @@ Scores add together for matching tags; they are not a fixed priority ladder. A t
 | Numbered variant | 10 |
 | Mute | 0 |
 
-Thus `[320][Morning]` scores 130 on a matching morning flight and can beat a file with only `[A20N]` at 100. Among equal top scores, non-muted files are preferred. Numbered alternatives try to reuse the flight's established number if available; other ties are random. Numbered cabin-noise tracks instead rotate.
+For example, `[320][Morning]` scores 130, beating `[A20N]` at 100. Equal-score ties prefer non-muted files. Numbered alternatives reuse the flight's chosen number when available; other ties are random. Numbered cabin-noise tracks rotate.
 
-With ARR/DEP, separate airport tags are alternatives: `[ARR][EGLL][EGKK]` matches either destination. Without ARR/DEP, multiple airport tags are not an OR list. Avoid combining ARR/DEP with a 3- or 4-letter family helper such as `[CRJ]`: the parser can treat that helper as another airport alternative.
+ARR/DEP airport tags are alternatives: `[ARR][EGLL][EGKK]` matches either destination. Known aircraft/family tags remain requirements. Without ARR/DEP, bare airports are additional requirements. [Route Tags](#route-tags) explains the override.
 
 ### Airport context without ARR or DEP
 
@@ -791,6 +797,28 @@ Origin is used for `BoardingWelcome`, `BoardingWelcomePilot`, `BoardingMusic`, `
 Use `CruiseElapsed1Percent.ogg` through `CruiseElapsed100Percent.ogg`, or corresponding `.txt` templates. `Cruise.ogg` is an alias at 50%. Enable **CruiseElapsed**. This measures elapsed simulator air time against planned duration, not map distance.
 
 For plans of 45-59, 30-44, 20-29 and under 20 minutes, milestones are shifted earlier by 12, 14, 18 and 22 percentage points respectively; plans of 60 minutes or more have no shift. Milestones of 40% or above are suppressed below 10,000 ft AGL or when descending faster than 500 ft/min. When several thresholds are crossed together, the highest available eligible call wins; every intermediate file is not guaranteed to play.
+
+<!-- page: route-tags | C3. Route Tags -->
+## Route Tags
+
+Use `~` to separate departure and arrival airport lists. Windows filenames cannot contain `:`.
+
+```text
+BoardingWelcome[CYVR~KSFO].ogg
+BoardingWelcome[CYCC,CYV#~KPDX,KSFO,KLAX,PH##].ogg
+```
+
+The first matches a SimBrief flight from CYVR to KSFO. The second matches any listed departure with any listed arrival, including wildcard matches such as CYVR to PHNL.
+
+- **Both endpoints must match** the cached SimBrief route, regardless of announcement phase. Airport patterns contain 3–4 letters, digits, or `#`. Matching ignores case and trims whitespace around list entries.
+- **Each `#` matches exactly one character** in route tags. Existing ARR/DEP wildcard matching is unchanged: its `#` can match zero or more characters.
+- **Multiple route tags are alternatives of complete pairs.** `[CYVR~KSFO][KSEA~KLAX]` matches either route, but does not match CYVR to KLAX or KSEA to KSFO.
+- **Route tags override ARR/DEP markers and their standalone airport alternatives**, even when both markers appear. For example, `[CYVR~KSFO][ARR][KSEA]` matches CYVR to KSFO. Without ARR/DEP markers, bare airport tags remain additional phase-based requirements.
+- **Other tags retain their behavior:** aircraft/family, time, refueling, numbered variants and mute. For example, `BoardingWelcome[CYVR~KSFO][B738][Morning][1].ogg` requires that route, aircraft and time of day, and participates in numbered-variant selection.
+- **Missing flight endpoints or malformed route tags disqualify the file.** Each route tag must contain exactly one `~`, with nonempty comma-separated entries on both sides. A malformed route tag disqualifies the file even if another route tag matches.
+- **Route tags work on announcement `.ogg` files and `.txt` templates, landing reactions and cabin noise.** Existing airline-folder and Default-folder search order is unchanged.
+
+For [selection scoring](#file-selection), each matching endpoint contributes 75 for an exact pattern or 70 for a wildcard pattern. Pair totals are 150 for exact/exact, 145 for exact/wildcard, and 140 for wildcard/wildcard. Use the best match on each side; multiple route tags contribute only the highest complete-pair score, not their sum.
 
 <!-- page: aircraft-families | D1. Aircraft families: Boeing and Airbus -->
 ## Aircraft families: Boeing and Airbus
@@ -818,7 +846,7 @@ These are the exact family mappings in the current code. Use a helper in square 
 
 Likewise, use `[BCS1]` or `[BCS3]` for a particular A220 type, or `[A220]` for both. A helper does not fix a missing or unexpected aircraft code. Check the detected code before renaming a whole pack.
 
-**Numeric helpers also count as numbered variants.** If `[320]` does not match the detected family, the current parser can still accept it as variant number 320, worth 10 points. The same applies to other numeric helpers. Use exact non-numeric codes such as `[A20N]` when a file must be restricted to that aircraft.
+**Family helpers restrict the aircraft.** If `[320]` does not match the detected family, the file is excluded. Known numeric family helpers are not treated as numbered variants. Use `[1]`, `[2]`, etc. for numbered alternatives.
 
 Keep one untagged recording when a call should also work on aircraft outside the listed family. Families are a convenience for file selection; they do not restrict which aircraft can use Universal Announcer.
 
