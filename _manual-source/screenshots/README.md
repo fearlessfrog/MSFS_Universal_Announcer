@@ -1,5 +1,5 @@
 # Screenshot originals
 
-All ten user-supplied PNG captures are included in revision 2026-09-20.3. See `../SCREENSHOTS.md` for their locations in the manual and what each image verifies.
+Revision 2026-11-06.1 includes six retained supplied images, the newly supplied Tweaks screenshot and three new shared-panel captures. See `../SCREENSHOTS.md` for locations, provenance and archived images that are no longer included.
 
-The build copies original bytes into `manual/assets/`; no crops, retouching or simulated UI are used. Layout sizing is controlled by the stylesheet and each image's `printWidthMm` value in `metadata.json`. HTML includes links to open the original images at full size.
+The build copies included images unchanged into `manual/assets/`. New panel images render the app's unchanged packaged HTML/CSS/JS with live, read-only app status; they contain no mocked state or native window frame. Layout sizing is controlled by the stylesheet and `printWidthMm` in `metadata.json`. HTML links open the images at full size. The `fenix-v3-review` images are planning evidence only.

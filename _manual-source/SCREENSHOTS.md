@@ -1,30 +1,38 @@
 # Screenshot inventory
 
-The eleven screenshots were originally supplied on 20 September 2026. Revision 2026-09-27.2 incorporates the maintainer's replacement Roles screenshot, preserving its supplied bytes; the other ten images remain unchanged. Images show English UI; Generated and Roles are Edge examples. The compatible API pages use text instructions, with no simulated screenshots. Revision 2026-10-04.1 adds the Route Tags appendix; all eleven image files remain unchanged and the page numbers below refer to that 35-page edition.
+Revision 2026-11-06.1, application v1.0.2.3: ten included images across the 46-page manual. Six older supplied captures are retained, three captures show the current shared Announcement panel, and the maintainer supplied a complete replacement Tweaks image. Included source and output assets match byte for byte. HTML provides full-size links.
 
 ## Included captures
 
-1. `01-tray.png`, page 2: tray menu. The caption makes clear that the captured app is disconnected.
-2. `02-sound-files.png`, page 4: sound root and Default files. The example root is named UA; the text explains that Preview is disabled until a file is selected.
-3. `03-simbrief.png`, page 5: username and fetched BAW/A20N, EGLL to EHAM plan. The supplied public author handle remains as shown; no password or API key is present.
-4. `04-toolbar.png`, page 9: connected Preflight panel. The instructions use the visible Seatbelt and Restart labels.
-5. `05-camera-volumes.png`, page 11: 80% main volume and Cockpit 25%, Cabin 100%, External 0%. PA mix and cabin noise are identified as separate options.
-6. `06-camera-rules.png`, page 12: B738 example. Quickview 2 is Cabin, Quickviews 3 and 4 are muted, and Quickview 6 is External. Readers are told to configure their own views rather than copy every row.
-7. `07-generated.png`, page 14: Edge, BAW and template editor. Replacement options are enabled in this example, so the text explicitly calls them optional and explains how to preserve recordings.
-8. `08-roles.png`, page 16: Ryan for Pilot and Brian for Flight Attendant on BAW/Edge. Replaced by the maintainer on 27 September; caption and surrounding prose now match.
-9. `09-chaseplane.png`, page 13: General Functionality > Enable 3rd party plugins set to ON.
-10. `10-discord-channels.png`, page 3: Announcement Hangar and both compatible pack categories, FENIX ANNOUNCEMENT PACKS and UNIVERSAL ANNOUNCEMENT PACKS. The FAQ repeats the compatibility point.
+| File | PDF page | Content and provenance |
+| --- | --- | --- |
+| `02-sound-files.png` | 5 | Retained supplied sound-root example. The root is named UA; Preview needs a selected recording. |
+| `03-simbrief.png` | 7 | Retained supplied username and fetched BAW/A20N, EGLL to EHAM plan. No password or API key is shown. |
+| `04-toolbar.png` | 12 | New shared-panel overview, replacing the old toolbar screenshot. Actual packaged UI and live app status; MSFS disconnected. |
+| `12-panel-details.png` | 13 | New shared-panel Flight details capture. The caption distinguishes the shared UI from desktop-only native controls. |
+| `13-recordings.png` | 14 | New shared-panel All recordings capture showing the recording browser. |
+| `05-camera-volumes.png` | 16 | Retained supplied main/category volumes. PA mix and cabin noise are separate options. |
+| `09-chaseplane.png` | 18 | Retained supplied General Functionality > Enable 3rd party plugins setting. |
+| `08-roles.png` | 21 | Maintainer's 27 September replacement: BAW/Edge, Ryan as Pilot and Brian as Flight Attendant. |
+| `10-discord-channels.png` | 4 | Retained supplied Announcement Hangar screenshot showing both compatible pack categories. |
+| `11-tweaks.png` | 42 | Complete 820 x 1303 image supplied by the maintainer on 6 November, saved unchanged from the clipboard and visually matched to the attachment. Caption distinguishes saved example values (7,000/5,000 ft, six minutes, 1.11g and NOAA live) from defaults. |
 
-11. `11-tweaks.png`, page 33: the supplied Tweaks tab. Saved unchanged from the clipboard attachment. The caption and text distinguish the example values (15 minutes and 1.11g) from code defaults (10 minutes and 1.20g).
+## Capture method and archived images
+
+The three shared-panel images render the unchanged packaged `ControlPanel/index.html`, CSS and JavaScript in Chromium, connected to the running application. Only Initialize, GetCapabilities and GetAnnouncements were sent. No flight state, queue, text or native host controls were mocked, no settings were changed and no audio was played. These images have no native Windows title bar or Always on top control; captions explain that distinction. The maintainer confirmed that the app and MSFS toolbar share this announcement UI.
+
+Native Windows capture stopped after Escape during the earlier capture attempt. The supplied Tweaks image resolves that missing illustration; no further screenshot is required for this edition.
+
+Unused originals `01-tray.png`, `06-camera-rules.png` and `07-generated.png` remain archived but are not included in the manual. Their outdated controls are replaced by current text instructions. The `fenix-v3-review/` images are planning evidence only.
 
 ## Remaining live checks
 
 - Walk through a clean installation and preview a recording on the selected audio device.
-- Fly one GSX and one non-GSX sequence, checking the expected calls and manual controls.
-- Switch native camera views and ChasePlane presets to confirm the chosen volume categories.
-- Test the connected toolbar controls in the simulator and confirm the toolbar package in the release ZIP.
-- Generate and listen to sample announcements using the suggested Edge voices.
-- Walk through local and hosted OpenAI-compatible API generation, typed voices and role assignments. These were verified against source, not a live server.
-- Confirm that the public Discord invitation and joining instructions still work for a new member.
+- Fly GSX and non-GSX sequences, including the new calls, queues and turnaround reset.
+- Check smoke/tailhook bindings, connected toolbar behavior and the toolbar package in the release ZIP.
+- Test Find current view, native camera rules and ChasePlane presets with the simulator.
+- Generate and listen to saved and temporary speech, including compatible API providers and role assignments.
+- Check live destination weather and SimBrief fallback in a simulator session.
+- Confirm the Discord invitation and joining instructions for a new member.
 
-Screenshots confirm visible UI, not successful completion of these live tests. Record their results in QA.md. The maintainer requested removal of the public review-copy status in revision .4.
+Screenshots confirm visible UI, not successful completion of these live tests. Record live results in QA.md.

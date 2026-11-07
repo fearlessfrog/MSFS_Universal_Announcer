@@ -1,16 +1,10 @@
 {
   "title": "Universal Announcer User Manual",
-  "appVersion": "1.0.0.0",
-  "revision": "2026-10-04.1",
+  "appVersion": "1.0.2.3",
+  "revision": "2026-11-06.1",
   "status": "",
-  "sourceCommit": "3217cc79e926975658574cb0d2f9032b2e3ad52a",
+  "sourceCommit": "b9e1d147d262b1c6c83b79d51a931972bd34dbab",
   "screenshots": [
-    {
-      "id": "tray",
-      "file": "01-tray.png",
-      "caption": "Right-click the tray icon to find Settings and flight controls. This example is disconnected.",
-      "printWidthMm": 51
-    },
     {
       "id": "sounds",
       "file": "02-sound-files.png",
@@ -26,7 +20,7 @@
     {
       "id": "toolbar",
       "file": "04-toolbar.png",
-      "caption": "Connected at the gate, waiting for the logo light or GSX boarding.",
+      "caption": "The shared Announcement panel, connected to the app with MSFS disconnected. Boarding and both seatbelt tiles are shown.",
       "printWidthMm": 142
     },
     {
@@ -34,18 +28,6 @@
       "file": "05-camera-volumes.png",
       "caption": "80% main volume, with Cockpit 25%, Cabin 100% and External 0%.",
       "printWidthMm": 142
-    },
-    {
-      "id": "advanced",
-      "file": "06-camera-rules.png",
-      "caption": "Example B738 rules: Quickview 2 uses Cabin; Quickviews 3 and 4 are muted.",
-      "printWidthMm": 165
-    },
-    {
-      "id": "generated",
-      "file": "07-generated.png",
-      "caption": "Edge example with replacement and automatic role selection enabled. These are optional settings.",
-      "printWidthMm": 134
     },
     {
       "id": "roles",
@@ -66,10 +48,22 @@
       "printWidthMm": 68
     },
     {
+      "id": "panel-details",
+      "file": "12-panel-details.png",
+      "caption": "Flight details in the shared panel. Native window controls and desktop Always on top are not shown in this capture.",
+      "printWidthMm": 144
+    },
+    {
+      "id": "recordings",
+      "file": "13-recordings.png",
+      "caption": "All recordings filtered by Cabin in an example ACA collection. Select a result to request that exact file.",
+      "printWidthMm": 144
+    },
+    {
       "id": "tweaks",
       "file": "11-tweaks.png",
-      "caption": "Tweaks with example user settings. The tables on the following pages give the code defaults.",
-      "printWidthMm": 136
+      "caption": "Example saved values, not defaults: 7,000/5,000 ft, 6-minute departure delay, 1.11g and NOAA (live). The reference tables give defaults.",
+      "printWidthMm": 132
     }
   ]
 }

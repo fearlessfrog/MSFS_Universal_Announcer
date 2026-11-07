@@ -47,8 +47,9 @@ for (let i = 1; i < sections.length; i += 3) {
   pages.push({ id, chapter, html });
 }
 if (new Set(pages.map(p => p.id)).size !== pages.length) throw Error('Duplicate section IDs');
-const toc = pages.slice(1).map((p, i) => `<a href="#${p.id}"><span>${escape(p.chapter)}</span><span class="page-number">${i + 2}</span></a>`).join('');
-pages[0].html = pages[0].html.replace('<!-- contents -->', `<nav class="contents" aria-label="Contents">${toc}</nav>`);
+if (missing.length) throw Error(`Missing included screenshots: ${missing.join(', ')}`);
+const toc = pages.map((p, i) => ({ ...p, number: i + 1 })).filter(p => p.id !== 'cover' && p.id !== 'contents').map(p => `<a href="#${p.id}"><span>${escape(p.chapter)}</span><span class="page-number">${p.number}</span></a>`).join('');
+for (const page of pages) page.html = page.html.replace('<!-- contents -->', `<nav class="contents" aria-label="Contents">${toc}</nav>`);
 const html = `<!doctype html>
 <html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="description" content="Installation, flight steps, sound packs, camera volumes and generated announcements for Universal Announcer."><title>${escape(metadata.title)}</title><link rel="stylesheet" href="assets/manual.css"></head>
 <body><a class="skip" href="#getting-started">Skip to getting started</a><header class="screen-bar"><a href="#cover">Universal Announcer</a><nav aria-label="Manual actions"><a href="#contents-title">Contents</a><a href="UniversalAnnouncer-User-Manual.pdf" download>Download PDF</a></nav></header><main>

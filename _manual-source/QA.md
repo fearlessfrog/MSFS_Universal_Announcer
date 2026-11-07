@@ -1,6 +1,24 @@
 # Manual verification
 
-Current edition: revision **2026-10-04.1**, application **1.0.0.0**. See [current revision checks](#revision-2026-10-041) below. The baseline summary that follows records revision 2026-09-27.2, application 0.9.9.8, source commit `6e521c7498eef05658cc0b4d435f512d0ce81fb9`.
+## Revision 2026-11-06.1: v1.0.2.3
+
+Current build: **46 pages**, application **1.0.2.3**, source `b9e1d147d262b1c6c83b79d51a931972bd34dbab`. The maintainer requested no beta suffix and a blank cover review status.
+
+- Built matching HTML/PDF with pinned Marked 17.0.5, Playwright 1.62.1, Chromium 151.0.7922.34 and bundled Node 24.22.1.
+- Existing section anchors retained; new contents page and workflow/reference pages added. All 30 announcement types are present.
+- Build checks pass: no missing images, broken anchors or horizontal overflow at 390/1280px; all 46 sections fit the printable height.
+- PDF structural checks: 46 A4 pages, correct heading/footer on each page, correct contents page numbers, tagged structure, bookmarks and 151 link annotations. Ten included image source/output hashes match.
+- All 46 pages rendered with Poppler and visually reviewed, including screenshot readability, table wrapping and footer clearance. Final wording corrections and the new Tweaks pages were rerendered and visually checked.
+- HTTP checks pass under the repository Pages prefix: 44 contents links, new-section navigation, all ten full-size image links, and byte-identical PDF download; no browser errors. Desktop/mobile layouts and the supplied Tweaks image were visually inspected.
+- Shared-panel captures use unchanged packaged UI and live read-only app data. No playback/settings commands were sent. Six older supplied screenshots remain, alongside three shared-panel captures and the new supplied Tweaks image. Obsolete tray, camera-rule and Generated illustrations are not used in the current build.
+
+The maintainer supplied a complete replacement Tweaks image, resolving the native-capture limitation. All ten included image files match their output assets byte for byte. The screenshot inventory and final delivery checks are complete.
+
+Live simulator, GSX/new-call progression, smoke/tailhook bindings, current-view detection, TTS playback and live weather remain unverified. No application source, legacy guides or site configuration was changed; no publish/release action was performed.
+
+The older checks below describe earlier editions.
+
+Previous edition: revision **2026-10-04.1**, application **1.0.0.0**. See [current revision checks](#revision-2026-10-041) below. The baseline summary that follows records revision 2026-09-27.2, application 0.9.9.8, source commit `6e521c7498eef05658cc0b4d435f512d0ce81fb9`.
 
 ## Passed
 

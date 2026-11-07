@@ -1,10 +1,10 @@
 {
-  "appVersion": "1.0.0.0",
-  "revision": "2026-10-04.1",
+  "appVersion": "1.0.2.3",
+  "revision": "2026-11-06.1",
   "browser": "151.0.7922.34",
   "missingScreenshots": [],
-  "sections": 35,
-  "sourceCommit": "3217cc79e926975658574cb0d2f9032b2e3ad52a",
+  "sections": 46,
+  "sourceCommit": "b9e1d147d262b1c6c83b79d51a931972bd34dbab",
   "checks": [
     "Offline HTML, anchors, images and width 390px: pass",
     "Offline HTML, anchors, images and width 1280px: pass"
@@ -12,19 +12,27 @@
   "printSectionHeightsMm": [
     {
       "id": "cover",
-      "mm": 230.72080078124998
+      "mm": 129.09599609375
+    },
+    {
+      "id": "contents",
+      "mm": 215.46178385416667
     },
     {
       "id": "getting-started",
-      "mm": 223.42822265625
+      "mm": 199.16923828125002
     },
     {
       "id": "sound-packs",
-      "mm": 211.51783854166663
+      "mm": 216.47877604166663
     },
     {
       "id": "sound-files",
-      "mm": 235.8347005208333
+      "mm": 251.18053385416667
+    },
+    {
+      "id": "pack-selection",
+      "mm": 173.93873697916663
     },
     {
       "id": "simbrief",
@@ -36,19 +44,31 @@
     },
     {
       "id": "arrival",
-      "mm": 196.00664062500002
+      "mm": 211.583984375
     },
     {
       "id": "controls",
-      "mm": 228.39742838541665
+      "mm": 250.56455078124998
+    },
+    {
+      "id": "simulator-controls",
+      "mm": 196.23815104166667
     },
     {
       "id": "toolbar",
-      "mm": 248.91090494791663
+      "mm": 236.92610677083334
+    },
+    {
+      "id": "panel-details",
+      "mm": 182.2565755208333
+    },
+    {
+      "id": "announcement-recordings",
+      "mm": 187.44902343750002
     },
     {
       "id": "tags",
-      "mm": 242.87096354166667
+      "mm": 253.255859375
     },
     {
       "id": "camera-volumes",
@@ -56,19 +76,19 @@
     },
     {
       "id": "camera-rules",
-      "mm": 233.7883138020833
+      "mm": 127.15709635416665
     },
     {
       "id": "chaseplane",
-      "mm": 256.4473958333333
+      "mm": 251.25494791666665
     },
     {
       "id": "generated",
-      "mm": 255.69498697916666
+      "mm": 117.46673177083333
     },
     {
       "id": "templates",
-      "mm": 251.16399739583332
+      "mm": 256.3564453125
     },
     {
       "id": "voices",
@@ -76,11 +96,15 @@
     },
     {
       "id": "generation-modes",
-      "mm": 259.8828450520833
+      "mm": 250.49840494791667
+    },
+    {
+      "id": "temporary-generation",
+      "mm": 151.13082682291665
     },
     {
       "id": "local-tts",
-      "mm": 255.50068359374998
+      "mm": 258.49791666666664
     },
     {
       "id": "compatible-api-voices",
@@ -92,11 +116,11 @@
     },
     {
       "id": "support",
-      "mm": 218.7442708333333
+      "mm": 247.93525390624998
     },
     {
       "id": "quick-reference",
-      "mm": 232.61835937499998
+      "mm": 249.59303385416663
     },
     {
       "id": "flight-steps",
@@ -104,7 +128,11 @@
     },
     {
       "id": "flight-steps-arrival",
-      "mm": 253.06569010416663
+      "mm": 246.6826171875
+    },
+    {
+      "id": "additional-announcements",
+      "mm": 211.87750651041665
     },
     {
       "id": "dynamic-tags",
@@ -112,7 +140,7 @@
     },
     {
       "id": "dynamic-times",
-      "mm": 252.6398763020833
+      "mm": 257.83232421875
     },
     {
       "id": "template-syntax",
@@ -124,15 +152,23 @@
     },
     {
       "id": "file-selection",
-      "mm": 256.8070638020833
+      "mm": 196.79212239583333
+    },
+    {
+      "id": "cruise-timing",
+      "mm": 110.876953125
     },
     {
       "id": "route-tags",
       "mm": 201.07093098958333
     },
     {
+      "id": "fenix-tags",
+      "mm": 237.04186197916667
+    },
+    {
       "id": "aircraft-families",
-      "mm": 223.42408854166663
+      "mm": 228.848046875
     },
     {
       "id": "aircraft-families-other",
@@ -140,15 +176,23 @@
     },
     {
       "id": "tweaks",
-      "mm": 256.0753255208333
+      "mm": 259.79189453124997
     },
     {
       "id": "tweaks-timing",
-      "mm": 250.43639322916667
+      "mm": 259.9117838541667
     },
     {
       "id": "tweaks-compatibility",
-      "mm": 240.258203125
+      "mm": 244.5411458333333
+    },
+    {
+      "id": "tweaks-selection",
+      "mm": 214.84166666666667
+    },
+    {
+      "id": "tweaks-weather",
+      "mm": 156.319140625
     }
   ]
 }
