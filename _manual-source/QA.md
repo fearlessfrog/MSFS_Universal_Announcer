@@ -1,5 +1,44 @@
 # Manual verification
 
+## Revision 2026-11-22.4: Fenix V3 appendix
+
+- Moved former section 3a to Appendix G on page 55. Removed its cover Start here entry and updated all three incoming references to name the appendix. Preserved `pack-selection`, so existing links still resolve. Searched repository Markdown for obsolete section references; README requires no wording change for this move.
+- Updated screenshot inventory page numbers and rebuilt HTML/PDF. All 55 pages, headings/footers, contents numbers, 180 PDF links, bookmarks/tagged structure, 30 announcement types and twelve matching screenshot assets pass. Image format/resolution checks pass.
+- Rendered all 55 PDF pages, compared page bodies by section ID with the prior reviewed revision, and inspected all eleven changed renders. Other 44 page bodies match. No clipping, table overflow or footer collisions found.
+- HTTP checks pass at 390px and 1280px for all 53 contents links, six README anchors, twelve full-size images and a byte-identical PDF download. No browser errors, missing images or broken anchors. No application changes, commits, pushes or publication.
+
+## Revision 2026-11-22.3: screenshot quality
+
+- Replaced the reduced Generated, Roles and Simulators captures with native-resolution lossless PNG crops. The earlier Generated and Roles files contained JPEG data despite their `.png` names. New capture provenance, crop rectangles and print sizes are in SCREENSHOTS.md.
+- The build now rejects non-PNG screenshot data and images below 120 dpi at the configured print size. All twelve images pass; the three replacements are embedded in the PDF with pixel-for-pixel RGB equality to their source PNGs.
+- Rebuilt both formats. All 55 PDF pages, headings, footers, contents numbers, 180 links, bookmarks/tagged structure, 30 announcement names and twelve source/output asset hashes pass verification. Local HTTP checks pass at 390px/1280px, including 53 contents links, six README anchors, twelve full-size images and the PDF download.
+- Rendered all 55 final pages. Only cover revision and screenshot pages 21, 24 and 52 differ from the previous render; the other 51 pages match byte-for-byte. Inspected the three revised screenshot pages for legibility, captions and page fit.
+- Reproduced image grid seams in Edge's Adobe-powered viewer. Original/embedded toolbar pixels match, and Poppler renders the image without seams. The maintainer independently confirmed Firefox displays it correctly. Encoding/interpolation/background/mask experiments did not establish a fix and remain ignored QA artifacts; no such workaround is in the production build and no viewer settings were changed.
+- No simulator settings, templates or profiles changed; no audio or synthesis requested. Application was left open after user interaction was detected. No commit, push or publication.
+
+## Revision 2026-11-22.2: X-Plane appendix
+
+- Moved former sections 1a-1d to Appendix F (pages 52-55), preserving all section anchors. README and installation guidance now describe automatic simulator detection; manual selection and port changes are appendix reference material.
+- Rebuilt HTML and PDF: 55 A4 pages, correct headings, footers, contents numbers, revision, tagged structure and bookmarks. All 30 announcement types remain present; 180 PDF links and twelve matching screenshot source/output hashes verified.
+- Rendered all 55 PDF pages. Compared page bodies by section ID with the reviewed previous revision; visually inspected all thirteen changed renders, including the cover, contents, installation, appendix and other pages flagged by the comparison. The other 42 page bodies match the reviewed baseline. No clipping or footer collisions found.
+- Local HTTP checks pass at 390px and 1280px: all 53 contents links, six README section links, twelve full-size images and the byte-identical PDF download work, with no browser errors or horizontal overflow. Build checks report no missing images or broken anchors; all sections fit the printable height.
+- Screenshot inventory page numbers and maintenance notes updated. No application changes, new live tests, commits, pushes or publication.
+
+## Revision 2026-11-22.1: v1.0.3.2
+
+Current build: **55 pages**, application **1.0.3.2**, source branch `x-plane`, commit `5164ae8920c495adcd069579c029ff4dbaf005f3`. X-Plane is labeled beta as requested; the cover review-status field stays blank.
+
+- Full HTML/PDF build uses the existing pinned Marked 17.0.5, Playwright 1.62.1, Chromium 151.0.7922.34 and bundled Node 24.22.1. No dependency or builder changes.
+- All existing section anchors retained. Nine sections added for X-Plane, aircraft controls/profiles, template languages, recording refresh and provider guidance. Generated chapter numbering updated without changing anchor URLs.
+- Offline checks pass at 390px and 1280px: no missing images, broken anchors, remote dependencies or horizontal overflow. All 55 sections fit the 260 mm printable-height limit.
+- PDF checks verify 55 A4 pages, each heading/footer, contents page numbers, revision, searchable text, tagged structure, bookmarks, 183 links and all 30 announcement types. Twelve source/output screenshot hashes match.
+- Rendered every PDF page with Poppler and visually inspected every page, including contents, new tutorials, retained screenshots and reference tables. After adding current application screenshots, rendered all 55 final pages. Compared page bodies with the already reviewed render, then inspected all eleven changed/new page bodies; all other page bodies match. PDF footer/page numbering was checked separately on every final page.
+- Local HTTP checks under `/MSFS_Universal_Announcer/manual/` pass for all 53 contents links, six README section links, twelve full-size images and a byte-identical PDF download, without browser errors. Desktop/mobile screenshots of revised sections inspected.
+- Native screenshots were captured from the user-specified v1.0.3.2 Debug build. Simulator was disconnected. No playback mode, simulator selection, voice, template or profile was changed; no audio played. The app was closed after capture.
+- README shortened into a current front page with prominent HTML/PDF links. Existing legacy guides, site configuration, release manifests and application source are unchanged. No commit, push or publication performed.
+
+Live simulator, speech synthesis, aircraft learning and external-service checks remain unperformed. Source tests were read to validate wording; they were not rerun for this documentation-only change. Prior live-check limitations below still apply. Verification scripts, rendered pages and browser captures are local ignored files under `.qa/v1032` and `.qa/`.
+
 ## Revision 2026-11-06.1: v1.0.2.3
 
 Current build: **46 pages**, application **1.0.2.3**, source `b9e1d147d262b1c6c83b79d51a931972bd34dbab`. The maintainer requested no beta suffix and a blank cover review status.

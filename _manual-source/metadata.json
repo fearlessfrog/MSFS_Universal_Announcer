@@ -1,9 +1,9 @@
 {
   "title": "Universal Announcer User Manual",
-  "appVersion": "1.0.2.3",
-  "revision": "2026-11-06.1",
+  "appVersion": "1.0.3.2",
+  "revision": "2026-11-22.4",
   "status": "",
-  "sourceCommit": "b9e1d147d262b1c6c83b79d51a931972bd34dbab",
+  "sourceCommit": "5164ae8920c495adcd069579c029ff4dbaf005f3",
   "screenshots": [
     {
       "id": "sounds",
@@ -31,9 +31,9 @@
     },
     {
       "id": "roles",
-      "file": "08-roles.png",
-      "caption": "BAW uses Ryan for Pilot and Brian for Flight Attendant on the Edge provider.",
-      "printWidthMm": 120
+      "file": "15-roles-current.png",
+      "caption": "Current Roles dialog: both shared Default roles are Automatic / fallback. Assign explicit airline voices or let the fallback rules choose.",
+      "printWidthMm": 92
     },
     {
       "id": "chaseplane",
@@ -64,6 +64,18 @@
       "file": "11-tweaks.png",
       "caption": "Example saved values, not defaults: 7,000/5,000 ft, 6-minute departure delay, 1.11g and NOAA (live). The reference tables give defaults.",
       "printWidthMm": 132
+    },
+    {
+      "id": "generated-current",
+      "file": "14-generated-current.png",
+      "caption": "Generated tab with Temporary TTS selected. Recording refresh and audio-generation controls are disabled. Default is the editing selection, not the flight airline. Saved example settings, not fresh-install defaults.",
+      "printWidthMm": 140
+    },
+    {
+      "id": "simulators",
+      "file": "16-simulators-current.png",
+      "caption": "Simulators section on Integrations, showing Auto, local port 8086 and Aircraft switches. Captured with no simulator connected.",
+      "printWidthMm": 130
     }
   ]
 }

@@ -1,7 +1,7 @@
 <!-- page: cover | User manual -->
 # Universal Announcer
 
-Cabin announcements for Microsoft Flight Simulator
+Cabin announcements for MSFS 2020, MSFS 2024 and X-Plane 12 (beta)
 
 Start with a sound pack, check your flight details, then let the app follow the flight. This manual covers installation, a typical airline flight, and the settings you are most likely to use.
 
@@ -14,7 +14,6 @@ The Announcement panel puts everyday calls within reach on the desktop and in th
 - New installation: [Install and open the app](#getting-started), then [set up sounds](#sound-files).
 - Ready to fly: [Boarding to takeoff](#departure) and [Before your next flight](#quick-reference).
 - Manual calls: [Announcement panel](#toolbar) and [recording browser](#announcement-recordings).
-- Fenix V3 collections: [Recording selection](#pack-selection).
 - Speech without changing your pack: [Temporary generated announcements](#temporary-generation).
 - Detailed settings: [Flight steps](#flight-steps), [filename tags](#file-tags) and [Tweaks](#tweaks).
 
@@ -23,7 +22,7 @@ The Announcement panel puts everyday calls within reach on the desktop and in th
 
 <!-- contents -->
 
-<p class="small">Written for Windows users of MSFS 2020 and MSFS 2024. Button names follow the English interface. Optional aircraft and service integrations can behave differently between versions.</p>
+<p class="small">Written for Windows users of MSFS 2020, MSFS 2024 and X-Plane 12 (beta). Button names follow the English interface. Optional aircraft and service integrations can behave differently between versions.</p>
 
 <!-- page: getting-started | 1. Install and open the app -->
 ## Install and open the app
@@ -37,7 +36,9 @@ Universal Announcer runs beside the simulator. It reads flight information and p
 3. Run `UniversalAnnouncer.exe`. The app is for 64-bit Windows 10 or 11. The normal self-contained release includes its .NET runtime; .NET 8 is not part of Windows by default.
 4. Find its icon in the Windows system tray beside the clock. If it is hidden, open the tray's overflow area. Right-click the icon and choose **Settings...**.
 
-The main application stays outside the Community folder. Only the optional toolbar package goes into Community; see [MSFS toolbar](#toolbar).
+Load a flight in your simulator. The app detects it automatically with the default **Auto** setting; you normally do not need to choose a simulator.
+
+The main application stays outside the MSFS Community folder. Only the optional toolbar package goes into Community; see [MSFS toolbar](#toolbar).
 
 ### First launch
 
@@ -97,32 +98,6 @@ Announcements/             <- select this parent
 
 Click **Refresh**, choose an airline and **select a file**, then click **Preview**. No file is selected in the screenshot, so Preview is disabled. If you have Default files, test those too. On **Announcements**, enable **Use Default folder announcements if airline-specific files are missing** if you want that fallback.
 
-<!-- page: pack-selection | 3a. Fenix V3 and recording selection -->
-## Fenix V3 and recording selection
-
-Both older Fenix-format packs and Fenix V3 collections work with Universal Announcer. You do not need to own Fenix. Select the collection containing its airline folders, for example:
-
-```text
-AirlinePacks/                  <- select this collection
-    OCN/BoardingWelcome.ogg
-    OCN/Departure/SafetyBriefing.ogg
-```
-
-### Let the app choose the rules
-
-Open **Announcements > Advanced… > Recording selection** and leave **Automatic (recommended)** selected for normal use. The dialog shows which rules Automatic uses for this collection.
-
-Newly selected **AirlinePacks** collections use **Fenix V3** rules. Other new collections use **UniversalAnnouncer** rules. Existing collections retain their saved selection behavior when you upgrade.
-
-### When a pack needs an override
-
-Choose a rule set only if the pack needs different matching behavior. The override is saved for this collection; returning to **Automatic** restores its original baseline.
-
-- **UniversalAnnouncer:** weighted tag matching and numbered alternatives that normally stay consistent during a flight.
-- **Fenix V3:** matching conditions ranked by specificity within the selected numbered group. The group persists through restarts and turnarounds; if it has no eligible recording, the app tries group zero, including unnumbered files. Changing the active pack/rules or reconnecting the simulator starts a new selection session. Reopening the panel does not.
-
-Both rule sets support old and new filenames. Neither changes your Default fallback or TTS settings. See [shared names and Fenix tags](#fenix-tags) for aliases and [variant choices](#tweaks-selection) for per-announcement randomization.
-
 <!-- page: simbrief | 4. Load your flight details -->
 ## Load your flight details
 
@@ -136,7 +111,7 @@ SimBrief is optional. It supplies the airline, aircraft, route and planned durat
 
 **Refresh plan before Boarding Welcome plays** performs another fetch at boarding. Fetch manually first while learning the setup.
 
-The detected airline selects its sound folder: `BAW` uses `Announcements\BAW`. Check the returned code if a codeshare or callsign gives an unexpected result.
+The airline selects its folder: `BAW` uses `Announcements\BAW`. A three-letter ICAO code takes priority. With an IATA code such as AF, an ICAO flight callsign such as AFR123 can select AFR instead. Spoken callsigns such as EASY are not airline codes.
 
 Without SimBrief, use simulator aircraft data or the Status overrides described under [Everyday controls](#controls). For the full preflight checklist, see [Before your next flight](#quick-reference).
 
@@ -147,9 +122,11 @@ The app follows aircraft signals. Each call needs an enabled announcement type a
 
 ### 1. Start boarding
 
-**With GSX:** enable **Integrations > Enable GSX Integration**, then start boarding through GSX. The welcome begins when GSX reports boarding in progress, with the aircraft on the ground and beacon off. Simply requesting the service is not the same as boarding having started.
+**With GSX (MSFS only):** enable **Integrations > Enable GSX Integration**, then start boarding through GSX. The welcome begins when GSX reports boarding in progress, with the aircraft on the ground and beacon off. Simply requesting the service is not the same as boarding having started.
 
 **Without GSX:** clear **Enable GSX Integration**. With the aircraft on the ground and beacon off, turn the **logo light on** to start boarding. The app has a fallback when GSX is unavailable, but explicitly disabling it makes the intended workflow clear.
+
+In **X-Plane**, use the mapped logo light, a learned boarding control or Play Next; GSX does not apply. See [X-Plane flight behavior](#xplane-flight).
 
 Boarding music follows the welcome and normally loops between announcements. The welcome repeats at the interval set in **Tweaks**. Optional pilot welcomes and **Skip First BoardingWelcome** change what you hear, so leave those alone for your first test.
 
@@ -188,7 +165,7 @@ Landing music can follow. Once parked with engines off and the parking brake set
 
 Generate the next SimBrief plan and fetch it. Check the route and airline again before boarding. GSX deboarding completion can reset the sequence automatically, after **Deboarding complete** has been dealt with if enabled. Without GSX, request that call manually. For a deliberate fresh start, choose **Restart** in Settings or **Reset flight** in the panel once the aircraft is back in a suitable parked state.
 
-Restart stops current audio and clears the sequence's played-announcement tracking. It does not reset all Settings. If boarding conditions are already active, announcements may begin again.
+Restart stops current audio and clears the sequence's played-announcement tracking. It does not reset all Settings. In MSFS, active boarding conditions may start announcements again. On the ground in X-Plane, Restart waits for the boarding signal; see [X-Plane behavior](#xplane-flight).
 
 <!-- page: controls | 7. Everyday controls -->
 ## Everyday controls
@@ -214,13 +191,13 @@ On **Audio**, select **Audio Device** and set the main **Volume**. **Music Volum
 
 ### Without SimBrief
 
-The app can extract an airline code from the simulator's tail number, such as `BAW123`. Set it in aircraft customization before loading. Alternatively, enter airline and aircraft ICAO overrides on **Status**. The **Reset** beside those fields clears the overrides; it does not restart the sequence. Without plan data, use recordings or templates that do not need route and duration values.
+In MSFS, the app can extract an airline code from the simulator's tail number, such as `BAW123`. Set it in aircraft customization before loading. Alternatively, enter airline and aircraft ICAO overrides on **Status**. The **Reset** beside those fields clears the overrides; it does not restart the sequence. Without plan data, use recordings or templates that do not need route and duration values.
 
 ### Startup and focus
 
-Enable **Start with MSFS** on Status if you want the simulator to launch the app. **Show this window when the app starts** makes Settings easier to find.
+For MSFS, enable **Start with MSFS** on Status if you want the simulator to launch the app. **Show this window when the app starts** makes Settings easier to find.
 
-If **Only play when MSFS or this app is focused** is enabled, audio becomes silent while another application has focus. Playback continues silently, so switching back does not replay the part you missed.
+**Only play when MSFS or this app is focused** follows the active simulator, including X-Plane despite the MSFS label. Other applications silence playback; returning does not replay the missed audio.
 
 <!-- page: simulator-controls | 7a. Keyboard and controller bindings -->
 ## Keyboard and controller bindings
@@ -251,7 +228,7 @@ Send `SMOKE_ON` for Play Next and `SMOKE_OFF` for Stop. For tailhook actions, se
 <!-- page: toolbar | 8. Announcement panel and MSFS toolbar -->
 ## Announcement panel and MSFS toolbar
 
-The desktop panel and MSFS toolbar share the same announcement controls. Keep Universal Announcer running. On desktop, open **Announcement panel** from Status, Announcements or the tray.
+The desktop panel works with either simulator. The MSFS toolbar shares its announcement controls; there is no X-Plane in-simulator panel. Keep Universal Announcer running. On desktop, open **Announcement panel** from Status, Announcements or the tray.
 
 <!-- screenshot: toolbar -->
 
@@ -317,11 +294,11 @@ The first is an arrival at Heathrow. The second mentions Heathrow during boardin
 
 ### Fallback and intentional silence
 
-In saved-generation mode, an airline recording normally takes priority. If none matches, enabled generated fallback can fill the gap before the app looks in Default. Default fallback must be enabled on **Announcements**. See [generation modes](#generation-modes) before allowing existing recordings to be replaced.
+In **Recordings + TTS**, airline recordings are kept unless refresh is authorized. For missing airline audio, airline text precedes an enabled Default recording; Default recordings precede fallback text. Default recording fallback is enabled on **Announcements**, separately from text sources. See [generation modes](#generation-modes).
 
 The `[mute]` filename tag deliberately skips a matching announcement while counting it as handled. Use it only when you want that behavior; lowering the volume is a different action.
 
-For Fenix V3 collections, see [recording selection](#pack-selection). Custom equipment tags can use an optional [last-resort fallback](#tweaks-selection). For the complete list, see [All filename tags](#file-tags), [matching rules](#file-selection) and [aircraft families](#aircraft-families).
+For Fenix V3 collections, see [Appendix G: Fenix V3 and recording selection](#pack-selection). Custom equipment tags can use an optional [last-resort fallback](#tweaks-selection). For the complete list, see [All filename tags](#file-tags), [matching rules](#file-selection) and [aircraft families](#aircraft-families).
 
 <!-- page: camera-volumes | 10. Set camera volumes -->
 ## Set camera volumes
@@ -336,10 +313,12 @@ This is a useful starting point. Set **Cockpit (main view)** to 25%, **Showcase 
 
 Test the three levels in a native cockpit, passenger and exterior view. If you cannot hear anything, check the main volume and mute controls before changing the multipliers.
 
-Use **Advanced...** for individual quickviews; see the [next page](#camera-rules). The PA and cabin-noise options are separate choices, not requirements for camera volume.
+For MSFS, use **Advanced...** for [individual quickviews](#camera-rules). For X-Plane, [set a cabin boundary](#xplane-camera). The PA and cabin-noise options are separate choices, not requirements for camera volume.
 
 <!-- page: camera-rules | 11. Set rules for individual views -->
 ## Set rules for individual views
+
+These quickview rules apply to **MSFS**. X-Plane uses the [camera position and cabin boundary](#xplane-camera).
 
 1. Load your aircraft, open **Audio > Advanced...**, and check the aircraft named at the top.
 2. Switch to the desired view in MSFS, then click **Find current view**. The **Current** column identifies its row.
@@ -352,10 +331,31 @@ Rules apply to the detected aircraft model; without an aircraft the dialog edits
 
 **Assume Cockpit QuickViews as Showcase/Cabin** is a broader shortcut for cockpit quickviews. **Use Showcase/Cabin volume if door open** needs GSX; unsupported door data can be treated as open. Leave it off while establishing your basic levels.
 
+<!-- page: xplane-camera | 11a. Set X-Plane cabin volume -->
+## Set X-Plane cabin volume
+
+Enable **Audio > Enable Camera Based Volume** and choose different cockpit, cabin and external levels. External views use the external level. Internal views use the camera's position relative to a cabin boundary, rather than MSFS quickview rules.
+
+### Calibrate your aircraft
+
+1. Load the aircraft in X-Plane and move the internal camera to the doorway between cockpit and cabin.
+2. Open **Audio > Advanced…** and choose **Set cabin boundary here**.
+3. Move forward into the cockpit, then aft into the cabin, and check the volume. A small 0.2 m transition band prevents rapid switching at the boundary.
+
+Calibration saves immediately per aircraft path and takes priority over estimates. Exterior views cannot set an internal boundary; load the aircraft and use an internal view if calibration is unavailable.
+
+### Before calibration and after reset
+
+For an uncalibrated aircraft, the app estimates the boundary from the pilot reference position and a shared cabin offset. The initial estimate is **1.5 m aft of the pilot**. New calibrations refine that shared offset; an existing saved boundary also teaches it when that aircraft is next loaded.
+
+Cockpit lengths vary, so use **Set cabin boundary here** for an exact boundary. If the pilot reference is unavailable, an uncalibrated internal view uses cockpit volume.
+
+**Reset** removes only this aircraft's calibration and restores the estimate. It does not reset your volume levels or other aircraft calibrations. Moving an aircraft to a different path can require calibrating it again.
+
 <!-- page: chaseplane | 12. Use ChasePlane -->
 ## Use ChasePlane
 
-ChasePlane can select cockpit, passenger and exterior views without reporting them in the same way as the simulator's own cameras. Universal Announcer recognizes its view identity and presets.
+**MSFS only.** ChasePlane can select cockpit, passenger and exterior views without reporting them in the same way as the simulator's own cameras. Universal Announcer recognizes its view identity and presets.
 
 ### Set it up
 
@@ -384,31 +384,61 @@ Try a native MSFS camera as a comparison. If native camera volumes work but Chas
 <!-- page: generated | 13. Generate your first announcement -->
 ## Generate your first announcement
 
-Create saved `.ogg` recordings with Edge below, or use [local TTS](#local-tts). For other languages, choose suitable [templates](#templates) and [voices](#voices). Back up your pack first.
+Use Edge for a first saved recording, or follow [local TTS setup](#local-tts). These steps keep existing recordings. The Generated tab's playback, text-source and refresh settings apply globally; its airline selector chooses where you edit and manually generate. Flight playback uses the detected airline or Status override.
 
-1. Configure the sound root, create the target airline folder if needed, and fetch your SimBrief plan.
-2. Open **Generated**, with **Use temporary generated announcements** off. Select **Airline**, **Provider: Edge**, `BoardingWelcome` and a voice (use **Roles** if indicated).
-3. Check the text, including any `##Voice:` or `##Role:` override. Click **Test Voice** to hear it with available flight data.
-4. Edit the wording, click **Save txt**, then **Generate**. Open **Sound Files**, refresh, select the new file and **Preview** it.
+1. Configure your sound root and fetch the correct SimBrief plan. Open **Generated** and select an actual airline folder, not Default.
+2. Choose **Recordings only (no generation)**, **Airline + Default + built-in templates**, and **Keep existing recordings**. Manual generation remains available with automatic generation off.
+3. Choose **Provider: Edge**, `BoardingWelcome` and a voice. **Test selected voice** auditions that dropdown voice, ignoring role/voice overrides. **Test template (roles)** follows the template's overrides and airline roles. Either active button becomes **Stop Test**.
+4. Edit the text and use **Save airline template**. Check the displayed source, outcome and output path. Use the information icon for full paths and policy details.
+5. Choose **Generate selected now** and review its create/refresh/skip decision. If audio already exists, Keep will skip it; use **Generate as…** with a different filename or choose an appropriate [refresh policy](#generation-refresh).
+6. On **Sound Files**, refresh, select the new file and **Preview** it. Leave Recordings only selected to reuse your prepared audio during flight.
 
-Leave replacement options off to preserve recordings. Use [temporary mode](#temporary-generation) for speech without saving audio into the pack.
+Edge needs internet but no personal API key. Saved audio plays offline. Manual audio output needs an airline folder; enable **Create missing airline folders** under Advanced or create one yourself. Default can hold shared text and roles, but is not a manual audio-generation target.
 
-Edge needs internet but no personal API key; saved recordings play offline. **Enable Generated TTS fallback** allows automatic creation. Manual generation needs an airline folder; **Default cannot be the output target**.
+### New installation or upgrade?
+
+A fresh install starts with **Recordings only**, all three text sources, **Refresh recordings with airline templates each flight**, and **Edge**. Folder creation and automatic country-based roles start enabled. Automatic speech remains off until you change playback mode. The walkthrough above deliberately chooses Keep before generating.
+
+Existing configurations retain their saved choices. Older settings allow all text sources, and the former Always replacement option is retained under Advanced. Check your settings rather than assuming the fresh-install defaults apply.
+
+<!-- page: generated-overview | 13a. Generated tab at a glance -->
+## Generated tab at a glance
+
+<!-- screenshot: generated-current -->
 
 <!-- page: templates | 14. Edit templates -->
 ## Edit templates
 
-Templates are `.txt` files named for a call, such as `BoardingWelcome.txt`. The editor loads airline text first, then Default text, then a built-in template. The [new calls](#additional-announcements) also have templates.
+Templates are `.txt` files named for a call, such as `BoardingWelcome.txt`. Choose **Airline text files only**, **Airline + Default text files**, or **Airline + Default + built-in templates**. Generation searches the permitted sources in that order.
 
-### Start in your language
+### Read the source indicators
 
-Built-in templates cover **English, French, Spanish, German, Italian, Brazilian Portuguese, Japanese, Korean and Simplified Chinese**. Choose **Help & About > Default language**, restart the app, then open **Generated** and select a template. This also changes the interface language.
+The list marks **Airline** in green, **Default** in blue, **Built-in** in neutral styling and **Excluded / Unavailable** in amber. A speaker icon means an exact matching `.ogg` exists in the selected editing folder; it does not mean the current mode will play it.
 
-Saved airline or Default `.txt` files still take priority. Back them up before using **Revert txt** to expose the built-in translation. Alternatively, write or paste your own translated text into the editor; you can do this while keeping the interface in English.
+The editor may show an excluded Default/built-in example. Viewing it does not permit generation from it. With airline-only sources, use **Save airline template** to make that text eligible. In Temporary TTS, the preview distinguishes the editing source from temporary playback. Hover over an item or open its information icon for details.
+
+Disabled announcements have dimmed names and a **Disabled** label. They are skipped during flight and bulk generation, but individual manual generation remains available outside Temporary TTS, as do voice tests. After changing announcement checkboxes, use **Apply** or **OK**. Shared templates remain enabled while any associated type is enabled.
+
+### Edit, save and revert
+
+**Save airline template** writes to the selected airline. Selecting Default changes the button to **Save Default template**. Saving text does not replace existing audio. Save or discard edits before generating; the job uses the prepared text, settings and flight details.
+
+**Revert txt** deletes the selected airline override if present; otherwise it can delete the Default override. Back up text first. It does not recover an overwritten recording.
+
+Built-in templates are never automatically copied into airline text files. Existing `.txt` files, including those created by older versions, still count as airline templates and can authorize [recording refresh](#generation-refresh).
+
+See [template languages and placeholders](#template-language) for translated text and [template syntax](#template-syntax) for conditions and voice directives.
+
+<!-- page: template-language | 14a. Template languages and flight details -->
+## Template languages and flight details
+
+Built-in templates cover **English, French, Spanish, German, Italian, Brazilian Portuguese, Japanese, Korean and Simplified Chinese**. Choose **Help & About > Default language**, restart the app, then select a template. This changes the interface language too.
+
+Saved text takes priority where permitted. Back up airline/Default text before using **Revert txt** to expose a built-in translation. You can also paste your own translated text while keeping the interface in English. Source permissions still apply; an excluded built-in example is not automatically eligible for playback.
 
 ### Flight numbers in French and Spanish
 
-Keep placeholder names unchanged in translated text. For example:
+Keep placeholder names unchanged. For example:
 
 ```text
 Bienvenue à bord du vol {FLIGHT_NUMBER_DIGITS}
@@ -417,106 +447,128 @@ Bienvenidos al vuelo {FLIGHT_NUMBER_DIGITS}
 con destino a {DESTINATION_CITY}.
 ```
 
-Use either language, or both with a multilingual voice. `{FLIGHT_NUMBER_DIGITS}` turns `AFR123` into `123`. The voice reads the number in the surrounding text's language, rather than receiving English number words. Use **Test Voice** to check pronunciation and number grouping.
-
-### Save, generate and revert
-
-**Save txt** saves in the selected Airline folder, including Default. **Generate** creates audio; text edits do not change saved recordings. Temporary mode resolves edits for new requests. See [generation settings](#generation-modes) for automatic replacement.
-
-**Revert txt** deletes the selected airline override if present; otherwise it can delete the Default override. It does not restore an overwritten recording.
+Use either language, or both with a multilingual voice. `{FLIGHT_NUMBER_DIGITS}` turns `AFR123` into `123`, letting the voice read the number in context. Use **Test template (roles)** to check the actual template's voices and pronunciation.
 
 ### Useful placeholders
 
-- `{AIRLINE_NAME}` and `{AIRCRAFT_NAME}` supply names; `{AIRLINE_CODE}` and `{AIRCRAFT_CODE}` supply codes.
-- `{ORIGIN_CITY}` and `{DESTINATION_CITY}` supply city names; `{ORIGIN_CODE}` and `{DESTINATION_CODE}` supply airport codes.
-- `{CRUISE_ALTITUDE_FT}` supplies the planned cruise altitude.
+- `{AIRLINE_NAME}` and `{AIRCRAFT_NAME}` provide names; `{AIRLINE_CODE}` and `{AIRCRAFT_CODE}` provide codes.
+- `{ORIGIN_CITY}` and `{DESTINATION_CITY}` provide city names; `{ORIGIN_CODE}` and `{DESTINATION_CODE}` provide airport codes.
+- `{CRUISE_ALTITUDE_FT}` supplies planned cruise altitude.
 
-**Some placeholders already contain English words**, including `{FLIGHT_TIME}` and `{LOCAL_TIME}`. For a non-English call, replace those phrases with wording in your language or omit them. A multilingual voice does not translate text. See the full [dynamic-tag reference](#dynamic-tags) for values and [template syntax](#template-syntax) for conditions.
+Some placeholders contain English wording, including `{FLIGHT_TIME}` and `{LOCAL_TIME}`. Replace those phrases with your own wording or omit them in non-English calls. Choosing a multilingual voice does not translate the text. See the [dynamic-tag reference](#dynamic-tags) for all supported values.
 
 <!-- page: voices | 15. Choose voices and roles -->
 ## Choose voices and roles
 
-These are **Edge** examples; see [compatible API voices](#compatible-api-voices) for local models. For French, Spanish or bilingual calls, try **Ava Multilingual** (`en-US-AvaMultilingualNeural`, default) or **Emma Multilingual** (`en-US-EmmaMultilingualNeural`). Their `en-US` prefix does not restrict them to English. Supply your chosen language and use **Test Voice**.
-
-For English, try **Sonia/Ryan** (British) or **Aria/Jenny** (US). The screenshot pairs Ryan for Pilot with Brian for Flight Attendant. Test airport names and flight numbers.
+Select a provider and one of its available voices. For bilingual calls, use a suitable multilingual voice and supply text in the intended languages. Voice availability depends on the provider. [Compatible API voices](#compatible-api-voices) use server-specific IDs.
 
 ### Assign a pilot and flight attendant
 
-Open **Generated > Roles**, choose the provider and airline, select **Pilot Voice** and **Flight Attendant Voice**, then **Save Roles**. Choose **(Default)** for voices shared by airlines without their own assignment. The settings are stored in `roles.json` in the corresponding sound folder.
+Open **Generated > Roles**, choose the provider and airline, set **Pilot Voice** and **Flight Attendant Voice**, then **Save Roles**. Choose **(Default)** for shared role assignments. Roles are stored in `roles.json` in the corresponding sound folder.
 
 <!-- screenshot: roles -->
 
-`##Role: Pilot` or `##Role: FA` uses these assignments; `##Voice:` overrides them. Airline roles override Default roles, with the main voice as fallback. Without a role, templates use the flight-attendant role when available.
+`##Voice:` overrides role selection. Otherwise `##Role: Pilot` or `##Role: FA` chooses the role; templates without a role use FA. Voice priority is explicit airline role, automatic country voice if enabled, Default role, then the selected provider's default voice.
 
-**Auto pick Roles based on Airline Country** chooses voices when no airline roles file exists. Leave it off for predictable manual assignments. Voice selection does not translate your text.
+**Automatic / fallback** leaves a role unassigned. **Auto pick roles based on airline country** can fill it even when an empty or partial airline roles file exists. Explicit airline assignments take priority. Test with an actual airline, not Default; automatic choices are cached per airline and provider. Unknown countries or unavailable/slow voice lists use the fallback chain.
 
-### Override one announcement with Insert Voice
+### Compare the two previews
 
-```text
-##Voice: Edge/en-GB-SoniaNeural
-##rate:-10%
-##pitch:0Hz
-Welcome aboard. Please keep the aisle clear.
-```
+**Test selected voice** ignores role and voice overrides to audition the dropdown selection. **Test template (roles)** uses the same role rules as playback. Both expand flight details and retain supported rate/pitch hints, without saving pack audio or changing your selected voice. Use **Stop Test** to stop either preview.
 
-For Edge/Azure, rate changes speed (`-10%` slower, `+10%` faster); pitch changes Hz. `+0%` and `0Hz` leave them unchanged. Test small changes first.
+Use **Insert Voice** for an explicit provider/voice directive. The [syntax reference](#template-syntax) explains voice, role, rate and pitch lines. Assign roles explicitly or disable automatic country selection if you want fixed crew voices.
 
-<!-- page: generation-modes | 16. Generation modes and other providers -->
-## Choose how generation is used
+<!-- page: generation-modes | 16. Choose playback and text sources -->
+## Choose playback and text sources
 
-These workflows save audio into your collection; leave **Use temporary generated announcements** off. For speech without pack changes, use [temporary mode](#temporary-generation).
+On **Generated**, choose how announcements play. Changing modes retains the other settings. Text-source and recording-refresh settings apply to all airlines; the editing airline does not change the airline selected for your flight.
 
-<div class="diagram generation-flow" aria-label="Generate once and reuse, or refresh for each flight">
-<div><strong>Generate once</strong><span>Text + voice → saved .ogg</span><span>Reuse on later flights, offline.</span><span>No need to generate again.</span></div>
-<div><strong>Generate for each flight</strong><span>Template + flight data → new .ogg</span><span>Includes this flight's details.</span><span>Refresh for the next flight.</span></div>
-</div>
+| Playback mode | What happens during flight |
+| --- | --- |
+| **Recordings only (no generation)** | Plays existing recordings, including previously generated audio. No automatic TTS; manual generation remains available. |
+| **Recordings + TTS** | Combines recordings with eligible generated speech saved in the active airline folder. Recording protection and source settings determine what can be created or refreshed. |
+| **Temporary TTS** | Generates spoken calls without changing pack recordings. Saving generated recordings is disabled; music and mute rules remain effective. See [temporary speech](#temporary-generation). |
 
-### Keep recordings and fill gaps
+### Choose where text comes from
 
-Enable **Enable Generated TTS fallback**, but leave both **Replace existing .ogg** options off. Matching airline recordings are kept. If one is missing, generation can supply it before Default fallback is considered. The target airline folder must exist, or **Auto create missing airline folder** must be enabled.
+**Airline text files only** restricts generation to the active airline's templates. **Airline + Default text files** adds shared templates. **Airline + Default + built-in templates** also permits the app's localized templates. Allowed sources are searched in that order.
 
-### Refresh flight-specific recordings
+Default recording fallback and Default text permission are separate settings. Enabling one does not enable the other.
 
-**Replace existing .ogg if Airline txt** permits regeneration when the airline has its own template. **Replace existing .ogg Always** broadens replacement to allow Default text too. **Regenerate only if dynamic** limits regeneration to templates containing dynamic placeholders.
+### Mixed playback: recordings and text
 
-Per-flight guards and filename matching also apply. Fetch the correct plan, generate before departure and preview the result. Back up irreplaceable recordings.
+An eligible airline recording is kept unless refresh is authorized. When airline audio is missing, an airline template takes priority over an enabled Default recording. A Default recording takes priority over fallback Default/built-in text.
 
-### Generate before flying
+Normal alias, tag and numbered-variant matching still applies, including text-only variants alongside generated recordings. Mute rules suppress both playback and generation. Choosing broader text sources does not by itself authorize replacing recordings.
 
-**Generate As..** lets you choose a filename, including supported tags. Manual generation writes audio to the selected airline folder. You can save text and role defaults under Default, but cannot select Default as a manual audio-generation target.
+For saved audio, use [recording protection and refresh](#generation-refresh). For other speech services, see [providers](#generation-providers).
 
-Use **Generate** for one item or **Generate All** for the set. Check airline and voice first. Generate before boarding to avoid service delays; leave replacement off to reuse prepared files.
+<!-- page: generation-refresh | 16a. Keep or refresh recordings -->
+## Keep or refresh recordings
 
-### Other providers
+**Keep existing recordings** allows missing audio to be generated without replacing existing files. It applies to manual generation as well as automatic mixed playback.
 
-**Windows** uses locally installed voices and can work offline. Voice availability depends on your Windows installation.
+**Refresh recordings with airline templates each flight** permits replacement where a matching airline `.txt` exists. This can replace an original recording too: the template authorizes replacement, regardless of who made the audio.
 
-**OpenAI-compatible API** connects to a separately running local TTS model server or a compatible hosted service. See [local TTS setup](#local-tts) and [hosted services](#compatible-api-voices).
+**Only refresh templates containing flight details** restricts replacement to templates containing `{...}` placeholders. Missing audio can still be generated from static text.
 
-**Azure** needs an Azure Speech resource, API key and matching region. **ElevenLabs** needs its API key and a supported voice/model. Enter these on Generated. Check service limits and pricing before large batches.
+Under **Advanced**, **Allow refresh from Default and built-in templates too** extends replacement permission to the permitted fallback sources. The flight-detail filter still applies. A tagged recording needs an exact matching template stem; a generic template does not authorize overwriting it.
 
-**Audio > PA Audio Mix (simulates cabin speaker noise)** adds a cabin-speaker effect to generated audio. Choose a preset, regenerate and preview a sample. Saved files do not change automatically. Keep calls short; use recordings for music.
+Automatic refresh happens at most once per flight for a recording. A flight reset allows another refresh. Manual generation bypasses that guard, but still respects recording protection. Failed or cancelled synthesis does not replace an existing recording; files changed after a job was prepared are skipped.
 
-<!-- page: temporary-generation | 16a. Temporary generated announcements -->
+### Mix original recordings with dynamic calls
+
+Choose **Recordings + TTS**, **Airline text files only**, **Refresh recordings with airline templates each flight**, and enable the flight-detail filter. Keep original `.ogg` files without matching text. Add templates only for dynamic calls, for example `TopOfClimbPilot.txt` and `BoardingWelcomePilot.txt`, with flight placeholders.
+
+Review old airline text files before enabling refresh. Earlier versions could create them automatically; they still authorize refresh. Back up and move unwanted templates out of the sound collection. The upgrade does not remove or change them. Numbering original recordings is no longer necessary to avoid the built-in-template overwrite bug.
+
+### Prepare audio before flying
+
+Use **Generate selected now**, **Generate eligible now**, or **Generate as…**. Review the output paths and create/refresh/skip reasons before continuing. Bulk generation skips disabled types; save or discard editor changes first. Select **Recordings only** afterwards to reuse the prepared audio. Flight details reflect the data available when the job was prepared.
+
+<!-- page: generation-providers | 16b. Speech providers and audio effects -->
+## Speech providers and audio effects
+
+**Edge** needs internet access but no personal API key. Choose a voice from the current list and test it. A service-side change can interrupt generation; existing saved recordings remain usable.
+
+**Windows** uses installed local voices and can work offline. Available languages and voices depend on your Windows installation.
+
+**Azure** needs an Azure Speech resource, API key and matching region. **ElevenLabs** needs its API key and a supported voice/model. Configure these on Generated and check your service limits before a large batch.
+
+**OpenAI-compatible API** connects to a separately running local TTS server or compatible hosted service. Universal Announcer does not install or start models. See [local TTS setup](#local-tts) and [hosted services and voice IDs](#compatible-api-voices).
+
+### Choose a voice for your text
+
+Voice names belong to their provider. An Edge voice name is not a local server voice ID. Use a voice that supports your text's language; a multilingual voice reads multiple languages but does not translate the template.
+
+Compare **Test selected voice** with **Test template (roles)** before generating a batch. The second includes explicit template overrides and automatic or assigned crew roles. Check airport names, flight numbers and pronunciation with your current plan.
+
+### Cabin-speaker effect
+
+**Audio > PA Audio Mix (simulates cabin speaker noise)** applies a cabin-speaker effect to generated audio. Choose a preset, generate a sample and preview it. Existing recordings do not change automatically; their replacement still follows the [refresh policy](#generation-refresh).
+
+Keep announcements concise and use recordings for music. Saved `.ogg` files can play without the speech service; temporary speech needs the provider when new audio is required.
+
+<!-- page: temporary-generation | 16c. Temporary generated announcements -->
 ## Temporary generated announcements
 
-Use this mode when you want spoken calls generated from text without replacing your pack recordings.
+Choose **Temporary TTS** on Generated for spoken calls without replacing pack recordings. On a fresh installation, the built-in templates are immediately available when you switch to this mode.
 
-1. On **Generated**, enable **Enable Generated TTS fallback**, select a provider and configure its voice or [roles](#voices).
-2. Select **Use temporary generated announcements**. Click **+ Details** for the explanation.
-3. Let automatic calls run, use **Play next**, or request a panel tile. Speech uses eligible airline text, then Default text, then localized built-in templates, with your usual voices and placeholders.
+1. Select **Temporary TTS**, a provider and a voice or [crew roles](#voices).
+2. Choose the permitted text sources. Airline text takes priority, followed by Default and built-in templates only when allowed. Viewing an excluded example in the editor does not enable it.
+3. Check the actual flight airline on Status. Use **Test template (roles)** to audition the editing airline, then let automatic calls run, use Play Next or request a panel tile.
 
-Spoken pack recordings are bypassed, but enabled types and explicit mute tags still apply. Music, cabin ambience and landing reactions play normally. **All recordings** remains available for an exact pack file.
+Spoken pack recordings are bypassed; enabled announcement types and explicit mute tags still apply. Music and cabin ambience play normally, as do MSFS landing reactions. **All recordings** still lets you request an exact pack file.
 
-Audio is cached outside the pack for this app session and cleaned up at shutdown. Relevant text/voice changes refresh it; a flight reset starts a fresh cache scope. Queued or playing clips keep their resolved audio. The mode does not create airline folders or save audio/templates into the pack. Explicit **Save txt** and role editing still save your edits.
+Audio is cached outside the pack for this app session and cleaned up at shutdown. Relevant text/voice changes refresh it; a flight reset starts a fresh cache scope. Queued or playing clips keep their resolved audio. This mode does not automatically create airline folders or save audio/templates into the pack. Explicit template and role saves still write your edits.
 
 ### Save recordings or retry a failed call
 
-**Generate**, **Generate As**, **Generate All** and replacement options are unavailable while this mode is active. Turn it off to save recordings again; the saved-generation preferences are retained. Mode changes affect new requests.
+**Generate selected now**, **Generate eligible now** and **Generate as…** are unavailable. Recording-refresh controls remain visible but disabled. Switch to Recordings only or Recordings + TTS to save audio; your other preferences are retained. Mode changes affect new requests.
 
-If generation fails, the call is skipped without recorded-audio fallback. Check the provider and text, then request the tile again to retry. Automatic retries reuse the failure until inputs change or the flight resets. Browsing the panel does not generate speech. Percentage cruise calls need a corresponding template.
+If synthesis fails, the call is skipped without replacing it with pack speech. Check the provider, eligible source and flight details, then make a new manual request. A failed automatic call is not an instruction to reset the entire flight.
 
-<!-- page: local-tts | 16b. Connect a local TTS server -->
+<!-- page: local-tts | 16d. Connect a local TTS server -->
 ## Connect a local TTS server
 
 **OpenAI-compatible API** uses a separate TTS server. Examples include [Qwen3 Audio API](https://github.com/second-state/qwen3_audio_api/tree/main/python) for [Qwen3-TTS](https://github.com/QwenLM/Qwen3-TTS) and [Kokoro-FastAPI](https://github.com/remsky/Kokoro-FastAPI) for Kokoro-82M. Other models, such as [Chatterbox](https://github.com/resemble-ai/chatterbox), also need a compatible speech server.
@@ -536,24 +588,24 @@ Select **Provider: OpenAI-compatible API**, then enter the values for your serve
 
 ### Generate your first local announcement
 
-For these saved-file steps, leave temporary mode off. The same connection also supports [temporary speech](#temporary-generation).
+Choose **Recordings only** and **Keep existing recordings**, or use [temporary speech](#temporary-generation).
 
 1. Start the TTS server and wait until its model is ready. Confirm its API address, model and voice in the server's own instructions.
-2. Configure the connection above. Choose a test **Airline** folder and `BoardingWelcome`; fetch your SimBrief plan if the text uses flight details.
-3. Check any `##Voice:` or `##Role:` lines before testing. An old Edge override can still select Edge. Use [compatible API voices and roles](#compatible-api-voices) to select the intended local voice.
-4. Click **Test Voice** with a short message. When it sounds right, edit the template, click **Save txt**, then **Generate**. Manual audio generation needs an airline folder; Default is not an output target.
-5. Open **Sound Files**, click **Refresh**, select the new `.ogg` and **Preview** it. Keep automatic replacement off to reuse the recording unchanged.
+2. Configure the connection, select an airline and `BoardingWelcome`, and fetch your plan if needed.
+3. Check `##Voice:` and `##Role:` lines: an Edge override still selects Edge. See [API roles](#compatible-api-voices).
+4. Use **Test selected voice** to audition the server voice and **Test template (roles)** to check overrides. Save with **Save airline template**, then **Generate selected now** and review the decision. Default is not an audio output target.
+5. Open **Sound Files**, click **Refresh**, select the new `.ogg` and **Preview** it. Keep **Recordings only** selected to reuse the recording unchanged.
 
 Keep the server running for new speech; saved `.ogg` files play without it. Generate before boarding to avoid model delays.
 
-<!-- page: compatible-api-voices | 16c. Compatible API voices and troubleshooting -->
+<!-- page: compatible-api-voices | 16e. Compatible API voices and troubleshooting -->
 ## Compatible API voices and troubleshooting
 
 ### Voices, roles and templates
 
 Voice discovery depends on the server. **Voice**, **Pilot Voice** and **Flight Attendant Voice** accept typed IDs for this provider. In **Generated > Roles**, select **OpenAI-compatible API**, choose the airline or **(Default)**, enter its voices and click **Save Roles**. Edge voice names are not portable to other servers.
 
-The usual [voice priority](#voices) applies: explicit `##Voice:` overrides a role; airline roles override Default roles; the main voice is the fallback. A template without a role uses the flight-attendant role when available. For predictable local voices, leave **Auto pick Roles based on Airline Country** off and assign roles yourself.
+The usual [voice priority](#voices) applies: explicit `##Voice:`, airline role, automatic country voice if enabled, Default role, then provider default. A template without a role uses the flight-attendant role when available. For predictable local voices, leave **Auto pick Roles based on Airline Country** off and assign roles yourself.
 
 Use **Insert Voice**, or enter this example only if your server supports `Ryan`:
 
@@ -589,7 +641,7 @@ Yes. Packs from both the **Fenix** and **Universal Announcer** channels work, wi
 
 ### Nothing happens when I turn on the logo light
 
-Check the simulator connection, beacon off, ground state and enabled Boarding Welcome. Without GSX, disable its integration. With GSX, start actual boarding. Preview the relevant file to separate a sound problem from a trigger problem. Check **Waiting for** before pressing Play Next.
+Check connection, beacon off, ground state and enabled Boarding Welcome. In MSFS, disable GSX integration unless using it. Preview the file and read **Waiting for**. In X-Plane, check the [boarding mapping](#xplane-flight); use [switch learning](#aircraft-switches) or Play Next when needed.
 
 ### I can preview a file, but cannot hear it in flight
 
@@ -607,7 +659,7 @@ Fetch the correct SimBrief plan and read the returned values. Check Status overr
 
 ### The aircraft's seatbelt switch does nothing
 
-Some add-ons do not expose a usable standard switch signal. Use the panel’s **Seatbelt sign on/off** tiles or the Settings **Seatbelt** button. A simulator **Annunciator On/Off** binding is another supported signal path, but verify it with your aircraft rather than assuming its panel switch is connected.
+Some add-ons do not expose a usable standard switch signal. Use the panel’s **Seatbelt sign on/off** tiles or the Settings **Seatbelt** button. Try [learning the actual sign state](#aircraft-switches), including AUTO. In MSFS, an **Annunciator On/Off** binding is another signal path; verify it with your aircraft.
 
 ### It skips ahead or gets stuck after pushback
 
@@ -615,7 +667,7 @@ Check **Waiting for**, the phase and GSX setting. If an aircraft signal is missi
 
 ### My edited words or new voice are not being used
 
-Check airline, Save txt destination, `##Voice:`, Roles and existing audio. Text edits do not replace saved recordings: generate and preview the file. In temporary mode, make a new request after checking text/voice; queued clips keep their audio.
+Check the editing/flight airline, permitted source, `##Voice:`, Roles and the generation preview. Saving text does not replace audio: choose an eligible refresh policy or a new output filename, then generate and preview. In temporary mode, make a new request after checking text/voice; queued clips keep their audio.
 
 <!-- page: support | 18. Troubleshooting and support -->
 ## Troubleshooting and support
@@ -624,7 +676,7 @@ For local or hosted **OpenAI-compatible API** failures, see [compatible API trou
 
 ### Edge generation fails or its voice list is empty
 
-Check internet access and try a short Test Voice. Try another currently listed voice and check for an app update. A service-side change can affect every voice. Use existing recordings or Windows voices while diagnosing it; reinstalling sound packs is unlikely to repair a voice-service problem.
+Check internet access and try **Test selected voice** with short text. Try another currently listed voice and check for an app update. A service-side change can affect every voice. Use existing recordings or Windows voices while diagnosing it; reinstalling sound packs is unlikely to repair a voice-service problem.
 
 ### The Discord invitation does not open
 
@@ -632,7 +684,7 @@ Try the invitation in another browser or the Discord app. Complete the server's 
 
 ### Updating and preserving your setup
 
-Use the app's **Check for updates...**, or download a new release and follow its notes. Exit the running app before replacing files manually. Keep your sound packs, custom `.txt` templates and `roles.json` files backed up. Keep the accompanying `ControlPanel` folder with the executable. For the shared toolbar UI, install the matching updated Community package supplied with the release; do not retain an older panel package.
+Use the app's **Check for updates...**, or download a new release and follow its notes. Exit the running app before replacing files manually. Back up sound packs, custom `.txt` templates, `roles.json` and [user aircraft profiles](#aircraft-profiles). Review existing templates before enabling recording refresh. Keep the accompanying `ControlPanel` folder with the executable. For the shared toolbar UI, install the matching updated Community package supplied with the release; do not retain an older panel package.
 
 Settings and logs live in `%APPDATA%\UniversalAnnouncer`. Paste that into File Explorer's address bar. Your sound root can be somewhere else; check **Sound Files > Current Location** before backing it up.
 
@@ -659,9 +711,9 @@ If Windows security flags a download, verify its source and consult the project'
 2. Generate and fetch the correct SimBrief plan, or check your manual airline/aircraft selection.
 3. Confirm the collection and preview a file if you changed packs. Leave recording selection at Automatic unless the pack needs an override.
 4. Check the audio device, main volume, mute and camera levels.
-5. Choose GSX boarding or the logo-light workflow; enable the announcement types you want, including optional new calls.
-6. Choose saved or temporary generated speech and check the template/voice. Generate saved audio before boarding to avoid service delays.
-7. Open the Announcement panel if wanted and check any smoke/tailhook bindings.
+5. Choose GSX boarding (MSFS only), the mapped logo switch or a learned boarding control. Enable the announcement types you want.
+6. Choose Recordings only, Recordings + TTS or Temporary TTS. Check text sources, refresh policy and roles. Prepare saved audio before boarding.
+7. Open the desktop Announcement panel if wanted. In MSFS, check any smoke/tailhook bindings.
 8. Start boarding with the beacon off. Let the sequence follow the flight.
 
 ### When something stops
@@ -683,7 +735,7 @@ In templates, `##Role: Pilot` and `##Role: FA` select crew roles. `##Voice: Edge
 ### Further help
 
 - [Project help and current download links](https://fearlessfrog.github.io/MSFS_Universal_Announcer/)
-- [Generated-announcement reference](https://fearlessfrog.github.io/MSFS_Universal_Announcer/generated.html)
+- [Generated playback modes](#generation-modes), [recording refresh](#generation-refresh) and [X-Plane 12 appendix](#xplane-setup)
 - [Flight steps](#flight-steps), [dynamic tags](#dynamic-tags), [filename tags](#file-tags), [aircraft families](#aircraft-families) and [Tweaks settings](#tweaks)
 - [Announcement Hangar Discord](https://discord.com/invite/P8ZYJgH3ZF)
 - [Bug reports](https://github.com/fearlessfrog/MSFS_Universal_Announcer/issues)
@@ -693,7 +745,7 @@ Older reference pages describe earlier versions in places. This manual's app ver
 <!-- page: flight-steps | A1. Flight steps: departure -->
 ## Flight steps: departure
 
-This reference covers v1.0.2.3. The three flight-step pages cover all 30 announcement types, including manual-only calls. Add `.ogg` to the names below. Calls must be enabled on **Announcements** and have a matching recording or generated replacement. AGL means height above ground; MSL means altitude above sea level. Timing is subject to audio finishing and announcement spacing.
+This reference covers v1.0.3.2. GSX and landing ratings are MSFS-only; X-Plane uses the shared sequence with its [boarding and hold rules](#xplane-flight). The three flight-step pages cover all 30 announcement types, including manual-only calls. Add `.ogg` to the names below. Calls must be enabled on **Announcements** and have a matching recording or generated replacement. AGL means height above ground; MSL means altitude above sea level. Timing is subject to audio finishing and announcement spacing.
 
 | File name | Trigger and timing |
 | --- | --- |
@@ -750,7 +802,7 @@ Enable the new automatic types individually on **Announcements** when upgrading.
 | `Decompression` / Emergency descent | **Manual only**, available through All stages. Enabling it does not add an automatic trigger. |
 | `Turbulence` / Turbulence | **Manual only**, in Cruise/Arrival or All stages. There is no automatic turbulence detection. |
 
-All seven have bundled templates in the supported interface languages. Airline text and voice/role choices still take priority. Existing custom files are not overwritten by the new defaults.
+All seven have bundled templates in the supported interface languages. Text-source and voice/role settings still apply. Adding built-in templates does not change existing files; generation follows your [recording-refresh policy](#generation-refresh).
 
 ### CruiseElapsed50Percent is a separate call
 
@@ -854,7 +906,7 @@ Put directives on separate lines before the spoken text. They select how the tex
 | `##rate:-10%` | Adjust speaking speed for Edge/Azure. `+0%` is unchanged. |
 | `##pitch:0Hz` | Adjust pitch for Edge/Azure. `0Hz` is unchanged. |
 
-Airline roles override Default roles, then fall back to the main voice. Without a role, the flight-attendant role is used when available. [OpenAI-compatible API](#compatible-api-voices) ignores rate and pitch. See [voice setup](#voices) and [generation modes](#generation-modes).
+Role priority is explicit airline voice, automatic country voice if enabled, Default role, then provider default. Without a role, FA is used. [OpenAI-compatible API](#compatible-api-voices) ignores rate and pitch. See [voice setup](#voices) and [generation modes](#generation-modes).
 
 <!-- page: file-tags | C1. All filename tags -->
 ## All filename tags
@@ -875,7 +927,7 @@ Use `AnnouncementName[tag][tag].ogg`, such as `SafetyBriefing[A20N][Morning].ogg
 | `[ARR]` | Use SimBrief destination with an airport code or pattern, e.g. `[ARR][EGLL]`. A route tag overrides this. |
 | `[DEP]` | Use SimBrief origin with an airport code or pattern, e.g. `[DEP][EGLL]`. Combine ARR and DEP only with a route tag. |
 | Airport wildcard `#` | With ARR or DEP, e.g. `[ARR][ED##]`. `#` matches zero or more characters. The airport-pattern tag must contain 3 or 4 characters in total. `*` is not supported. |
-| Numbered variant | `[1]`, `[2]`, etc. Groups alternatives for consistent voices. The [selection profile](#pack-selection) and [randomization setting](#tweaks-selection) determine how long the choice is retained. |
+| Numbered variant | `[1]`, `[2]`, etc. Groups alternatives for consistent voices. The [selection profile (Appendix G)](#pack-selection) and [randomization setting](#tweaks-selection) determine how long the choice is retained. |
 | `[mute]` | Selects a recording but intentionally skips its playback and counts the call as handled. A matching airline mute file also blocks generated fallback. |
 
 There is no built-in `[French]` language condition. Use aircraft/time/airport/variant selection or translated templates. Tag comparisons ignore case; retain the listed announcement names. See [Fenix tags](#fenix-tags) for phase, delivery and callsign conditions.
@@ -891,7 +943,7 @@ SafetyBriefing[320][Morning][1].ogg
 
 ### UniversalAnnouncer matching rules
 
-The table below applies to **UniversalAnnouncer** rules, with per-announcement randomization off. Fenix V3 uses [specificity and session variants](#pack-selection). Matching tag scores add. Nonmatching tags normally exclude files; untagged files score zero. Airline files precede Default. Only the [best route pair](#route-tags) contributes.
+The table below applies to **UniversalAnnouncer** rules, with per-announcement randomization off. Fenix V3 uses specificity and session variants; see [Appendix G](#pack-selection). Matching tag scores add. Nonmatching tags normally exclude files; untagged files score zero. Airline files precede Default. Only the [best route pair](#route-tags) contributes.
 
 | Matching condition | Score added |
 | --- | ---: |
@@ -1082,6 +1134,8 @@ For a quieter start to boarding, enable **Skip First BoardingWelcome**. To remov
 
 ### Landing Cabin Reactions
 
+These ratings and reactions apply to **MSFS only**.
+
 Default **off**. Enables a short reaction to a great or terrible landing. An ordinary landing produces no reaction. The app uses the magnitude of vertical speed just before touchdown and the peak G-force around the landing. VS is vertical speed in feet per minute; G-force measures acceleration, with 1g approximately normal gravity.
 
 | Setting | Default and effect |
@@ -1115,7 +1169,7 @@ CabinService[1].txt
 CabinService[2].txt
 ```
 
-Use the same `##Role: FA` or `##Voice:` in each. Temporary mode selects eligible text without changing the pack. For saved audio, use **Generate As** to create matching numbered `.ogg` files; a matching text/audio filename counts as one version. Existing overwrite settings still apply.
+Use the same `##Role: FA` or `##Voice:` in each. Temporary mode selects eligible text without changing the pack. For saved audio, use **Generate as…** to create matching numbered `.ogg` files; a matching text/audio filename counts as one version. Text-source and recording-refresh policies still apply.
 
 Conditions are checked before the draw. `[320]` remains an aircraft family, not a variant. **All recordings** plays the exact file selected. Interrupted music resumes its original track and position; a fresh start can choose another. Changing the collection/rules, restarting the flight/session or changing this setting clears selection history. Already queued/playing clips keep their files.
 
@@ -1143,3 +1197,127 @@ Live weather refreshes in the background every ten minutes. Announcements do not
 The [four weather/temperature placeholders](#dynamic-times) share the selected observation. Missing fields remain empty; use IF blocks for optional phrases. Direct XML placeholders always read the original OFP.
 
 Weather affects text **when speech is generated**. Saved recordings retain their spoken weather until regenerated under your replacement settings. Temporary generated announcements use the updated weather when the next request resolves its text.
+
+<!-- page: xplane-setup | F1. X-Plane 12: connection settings -->
+## X-Plane 12: connection settings
+
+Universal Announcer runs on Windows alongside **X-Plane 12.1.4 or newer**. It reads X-Plane's built-in API v2 on this computer. No X-Plane plugin, Community package or inbound LAN access is needed.
+
+### Automatic connection and advanced settings
+
+Leave simulator selection on **Auto** for normal use: load your flight and the app detects the running simulator. The same sound packs, generated templates and SimBrief workflow work in either simulator.
+
+This appendix covers X-Plane-specific behavior and troubleshooting, plus aircraft switches and profiles (also available in MSFS). These are reference details, not extra installation steps.
+
+Under **Settings > Integrations > Simulators**, select a simulator explicitly only if needed, for example when both are running. Auto keeps the active simulator; at startup it prefers MSFS, but can fall back to a running X-Plane after an unsuccessful 15-second MSFS connection attempt.
+
+The default X-Plane port is **8086**. Change it only if X-Plane was started with a different `--web_server_port`; use the same port in both places.
+
+### If it cannot connect
+
+An **HTTP 403** can mean X-Plane's **Settings > Network** security policy is set to **Disable Incoming Traffic**, which disables the API. Allow the local API through X-Plane's policy; router port forwarding or inbound LAN firewall rules are not required. An initial **404** while loading a flight can be temporary. Check the simulator version, port and loaded flight before changing other settings.
+
+Missing required flight data leaves the app waiting or reporting an error. Optional aircraft signals fall back to common values where possible. Read **Waiting for** and use [aircraft switches](#aircraft-switches) if a particular control is missing.
+
+<!-- screenshot: simulators -->
+
+### Available controls and integrations
+
+Use the desktop Announcement panel, Settings, tray menu, app hotkeys and controller bindings. **There is no X-Plane in-simulator panel in this beta.**
+
+GSX, ChasePlane, MSFS smoke/tailhook bindings and landing ratings/reactions apply only to MSFS. Their saved preferences are retained when switching simulators. See [X-Plane flight behavior](#xplane-flight) and [cabin volume](#xplane-camera).
+
+<!-- page: xplane-flight | F2. X-Plane 12: flight behavior -->
+## Fly with X-Plane
+
+Start parked with beacon and engines off. Turn on the mapped logo light to start boarding, or use a [learned boarding control](#aircraft-switches). **Play Next** can start the announcement sequence when no boarding control is available. The remaining steps follow beacon, lights, engines, movement, altitude and seatbelt signals.
+
+### Aircraft mappings
+
+The app uses common aircraft data without a whitelist. Bundled profiles add known switch mappings for these aircraft:
+
+| Aircraft | What to check |
+| --- | --- |
+| Laminar 737 | The stock logo-light mapping starts boarding. |
+| LevelUp 737NG | Logo switch, parking-brake lever and actual seatbelt sign, including AUTO. |
+| ToLiss A319/A320/A321 | NAV & LOGO position 1 or 2 starts boarding. Strobe ON counts; AUTO does not. Either landing-light switch at ON counts; extended/OFF does not. CEO/NEO variants are covered; A330/A340 use common telemetry. |
+| FlightFactor 777 | Bundled profile reads logo/beacon switches, parking-brake lever, actual seatbelt sign including AUTO, and landing/strobe switches for the identified 777 variants. |
+
+These are implemented mappings, not a guarantee for every aircraft release. The source notes record parked checks for the FlightFactor 777-200ER; its full flight and live ToLiss checks remain pending. Use Play Next if a signal is unavailable. ToLiss automatic door movements do not start boarding.
+
+### Restart, pause and reconnect
+
+On the ground, **Restart** waits for the logo/boarding signal before automatic announcements resume, even with engines or beacon on. Play Next or a manual phase can advance explicitly. In-flight Restart does not require the logo light. A custom boarding control is a one-shot action: releasing it does not reset the flight; use Restart for the next leg.
+
+Pause and replay hold announcements, music, cabin noise, automatic steps and delays. Play requests are unavailable while held; Stop still works and prevents stopped audio from resuming. Loss of telemetry also holds playback until fresh data arrives. Reconnecting to the same flight retains progress; an aircraft change or flight-time reset starts a new session.
+
+<!-- page: aircraft-switches | F3. X-Plane 12: aircraft switches -->
+## Learn aircraft switches
+
+Use this when an aircraft's switch does not produce the signal Universal Announcer expects. The app observes controls; it does not operate the aircraft. Learning follows the active simulator and identified aircraft in **MSFS 2020, MSFS 2024 or X-Plane 12**.
+
+1. Park the aircraft. Open **Settings > Integrations > Simulators > Aircraft switches…**.
+2. Choose **Learn** for Logo Light (start boarding), Beacon, Landing lights, Strobes, Seatbelt signs or Parking brake.
+3. Leave other switches alone. Follow **OFF, ON, OFF, ON, OFF**, holding each position briefly before **Next**. For a momentary boarding button, press and release during each ON step.
+4. Select a suggested source and operate the control again to verify the live indicator. A switch, lamp and animation may appear as different candidates. For seatbelts, verify the actual illuminated sign, including AUTO if fitted. An unobserved third position is unknown, not assumed ON or OFF.
+5. Choose **Use this control**, then **Save** in the profile dialog. **Clear** restores a row's automatic source. **Cancel** discards unsaved learned changes.
+
+The dialog temporarily holds announcements and music. Save/Cancel establish a fresh control baseline, so a control already ON does not invent a boarding-start event. Simulator pause, replay, disconnect and a user Stop remain effective.
+
+### When discovery needs help
+
+**Broader search** expands discovery; **Advanced source** accepts a documented source name but still requires verification. A capture expires after three minutes. Private controls with no observable source cannot be learned. MSFS uses standard SimVars, exposed Input Events and known L:Vars without a new WASM module; live MSFS learning validation remains pending.
+
+Local mappings override bundled/automatic mappings, including a learned OFF value. Missing or invalid stateful inputs fall back where possible. Play Next remains available if a custom boarding control cannot be read.
+
+The boarding mapping is a one-shot action. Releasing it does not reset the flight; use **Restart** with a custom boarding profile. Bundled logo-based defaults retain normal automatic reset. Other mapped controls retain their existing flight-step rules. GSX service rules remain separate.
+
+<!-- page: aircraft-profiles | F4. X-Plane 12: aircraft profiles -->
+## Save and share aircraft profiles
+
+Profiles identify a simulator and aircraft add-on/model, not just an ICAO type. Liveries of the same model share a profile. Check the identified model before learning or importing controls.
+
+### Import and export
+
+In **Aircraft switches…**, use **Export JSON** or **Copy JSON** for a portable profile. The file contains source names, aircraft matching and value interpretation, rather than local installation paths or unrelated app settings.
+
+**Import profile…** validates the JSON file and presents it for review before storing a local copy. Importing while offline does not confirm that the profile works with your installed aircraft. Once connected, check ON/OFF, AUTO where applicable, reconnect behavior and a complete flight. After moving an aircraft folder, export/import a portable profile to reattach it and check the model match.
+
+If sharing a profile, include the simulator and add-on versions you tested. Submit the exported JSON yourself for review if you would like it included in a future release.
+
+### Keep your own profiles separate
+
+| Location | Purpose |
+| --- | --- |
+| `AircraftProfiles/` beside the executable | Bundled defaults, refreshed with application updates. |
+| `%APPDATA%/UniversalAnnouncer/AircraftProfiles/` | Your saved and imported profiles, preserved separately. |
+
+Back up your user profiles with your settings. Advanced users can set `AircraftProfilesDirectory` to a separate user folder; relative paths resolve under the configuration folder. Keep it separate from the installed defaults.
+
+The shipped JSON files are examples for profile authors. Profiles contain declarative mappings, not executable scripts or commands that operate the simulator. Similarly encoded landing-light sources can be combined so either light counts as ON.
+
+<!-- page: pack-selection | G1. Fenix V3 and recording selection -->
+## Fenix V3 and recording selection
+
+Both older Fenix-format packs and Fenix V3 collections work with Universal Announcer. You do not need to own Fenix. Select the collection containing its airline folders, for example:
+
+```text
+AirlinePacks/                  <- select this collection
+    OCN/BoardingWelcome.ogg
+    OCN/Departure/SafetyBriefing.ogg
+```
+
+### Let the app choose the rules
+
+Open **Announcements > Advanced… > Recording selection** and leave **Automatic (recommended)** selected for normal use. The dialog shows which rules Automatic uses for this collection.
+
+Newly selected **AirlinePacks** collections use **Fenix V3** rules. Other new collections use **UniversalAnnouncer** rules. Existing collections retain their saved selection behavior when you upgrade.
+
+### When a pack needs an override
+
+Choose a rule set only if the pack needs different matching behavior. The override is saved for this collection; returning to **Automatic** restores its original baseline.
+
+- **UniversalAnnouncer:** weighted tag matching and numbered alternatives that normally stay consistent during a flight.
+- **Fenix V3:** matching conditions ranked by specificity within the selected numbered group. The group persists through restarts and turnarounds; if it has no eligible recording, the app tries group zero, including unnumbered files. Changing the active pack/rules or reconnecting the simulator starts a new selection session. Reopening the panel does not.
+
+Both rule sets support old and new filenames. Neither changes your Default fallback or TTS settings. See [shared names and Fenix tags](#fenix-tags) for aliases and [variant choices](#tweaks-selection) for per-announcement randomization.

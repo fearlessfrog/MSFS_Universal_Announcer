@@ -32,7 +32,10 @@ for (let i = 1; i < sections.length; i += 3) {
     const input = path.join(here, 'screenshots', shot.file);
     let figure = '';
     try {
-      await fs.access(input);
+      const bytes = await fs.readFile(input);
+      if (!bytes.subarray(0, 8).equals(Buffer.from([137, 80, 78, 71, 13, 10, 26, 10]))) {
+        throw Error(`Screenshot must be a lossless PNG, not a renamed JPEG: ${shot.file}`);
+      }
       await fs.copyFile(input, path.join(out, 'assets', shot.file));
       figure = `<figure class="screenshot screenshot--${shot.id}" style="--print-image-width:${Number(shot.printWidthMm) || 165}mm"><img src="assets/${shot.file}" alt="${escape(shot.caption)}"><figcaption>${escape(shot.caption)} <a class="screen-only" href="assets/${shot.file}" target="_blank" rel="noopener">View full size</a></figcaption></figure>`;
     } catch (error) {
@@ -72,6 +75,14 @@ try {
     return errors;
   });
   if (problems.length || remoteRequests.length) throw Error([...problems, ...remoteRequests].join('\n'));
+  checks.screenshotQuality = await page.locator('.screenshot img').evaluateAll(images => images.map(img => ({
+    file: img.getAttribute('src').split('/').pop(),
+    width: img.naturalWidth,
+    height: img.naturalHeight,
+    printDpi: Math.round(img.naturalWidth * 25.4 / parseFloat(img.parentElement.style.getPropertyValue('--print-image-width'))),
+  })));
+  const lowResolution = checks.screenshotQuality.filter(image => image.printDpi < 120);
+  if (lowResolution.length) throw Error(`Screenshots below 120 dpi at print size: ${JSON.stringify(lowResolution)}`);
   for (const width of [390, 1280]) {
     await page.setViewportSize({ width, height: 900 });
     const overflowing = await page.evaluate(() => document.documentElement.scrollWidth > window.innerWidth + 1);

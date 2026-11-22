@@ -1,5 +1,32 @@
 # Research and verification ledger
 
+## Revision 2026-11-22.4: Fenix V3 appendix
+
+At the maintainer's request, moved former section 3a into Appendix G and removed its cover Start here entry. Updated incoming references to identify the appendix while retaining `pack-selection` for existing links. Compatibility and selection behavior remain unchanged; README has no section-number reference requiring an edit. Source baseline and live-check limitations remain unchanged.
+
+## Revision 2026-11-22.3: screenshot quality
+
+Replaced the three recent native-app images with lossless native-resolution captures from the same Debug executable; provenance and exact crops are in SCREENSHOTS.md. No app behavior or manual instructions changed. Reproduced the image grid lines in Edge; source images and independent Poppler rendering are clean, and the maintainer confirmed Firefox displays the PDF correctly. Experimental PDF encoding changes stayed under ignored `.qa/`; the production PDF export remains unchanged.
+
+## Revision 2026-11-22.2: X-Plane appendix
+
+At the maintainer's request, moved former sections 1a-1d into Appendix F for X-Plane 12, retaining their section anchors. README and installation guidance now treat simulator detection as automatic. Explicit simulator selection and port settings remain technical reference details. Aircraft learning/profile guidance still identifies its MSFS applicability. Source baseline and live-test limitations are unchanged.
+
+## Revision 2026-11-22.1: v1.0.3.2
+
+Current edition uses clean `D:\code\UniversalAnnouncer`, branch `x-plane`, commit `5164ae8920c495adcd069579c029ff4dbaf005f3`; `VersionPrefix` is 1.0.3.2. The user chose a concise README and an explicit X-Plane beta label. No remote fetch, release publication or application modification was performed. The previous edition below remains historical; current notes supersede its old generation and simulator guidance.
+
+- Compared the branch with the previous manual baseline `b9e1d147d262b1c6c83b79d51a931972bd34dbab`. Used `readme.txt` for release context, but not its stale v0.9.9.3 header. Source/UI and current `docs/` take priority over old release descriptions.
+- X-Plane: `docs/XPLANE_BETA.md`, `XPlaneDataProvider.cs`, `UniversalAnnouncerApp.Simulators.cs`, `AnnouncementStateMachine.Simulator.cs` and `XPlaneRestartTests.cs` establish API v2/12.1.4+, local port 8086, Auto selection, restart gating, holds and calibration. `UniversalAnnouncerApp.cs` confirms the foreground option follows X-Plane despite its MSFS label. Existing source notes about pending ToLiss/full-flight checks are retained as limitations, not claimed as tests performed here.
+- Profiles: `docs/AIRCRAFT_PROFILES.md`, `AircraftControls/AircraftControlProfileDialog.cs`, simulator integration and shipped `AircraftProfiles/XPlane12` files. The newer profile architecture supersedes the older X-Plane guide's implication of a dedicated FlightFactor code branch. Manual documents bundled mappings, not implementation branches. Import profile, Export JSON, Copy JSON, learning and immediate calibration labels checked against `Strings.resx` and dialog code.
+- Generated: `docs/GENERATED_ANNOUNCEMENTS.md`, `GeneratedPolicy.cs`, `SettingsForm.GeneratedModes.cs`, `SettingsForm.GenerationJobs.cs`, `SoundFileManager.GenerationPolicy.cs`, `SoundFileManager.RoleVoices.cs`, `ConfigurationManager.cs` and English `Strings.resx`. Checked global policy versus editing airline, new labels, mixed-mode priority, tagged replacement protection, disabled/bulk behavior, prepared-job protection, new defaults and role fallback.
+- Read existing `GeneratedDefaultsTests.cs` and `XPlaneRestartTests.cs` to check documented new/upgrade scenarios and ground/in-flight restart behavior; this was static inspection, not a new application test run. The application repository remained unchanged.
+- Revised all Generated tutorials, local-provider steps, FAQ, variant guidance and the voice-syntax appendix together. Removed obsolete fallback/refresh control names and an incorrect README implication that language filename tags are supported.
+- Retained existing appendix coverage; all 30 announcement enum types remain present. No new placeholder or aircraft-family changes were found in the scoped branch changes requiring table additions.
+- At the user's request, captured the actual v1.0.3.2 Debug executable from `bin/Debug/net8.0-windows` with Windows Computer Use. Added the current Generated tab, replaced the Roles illustration and added a crop of the Simulators section. Nine earlier images retain their bytes. Full native captures and the simulator crop provenance are recorded in SCREENSHOTS.md.
+
+No simulator flights, audio auditions, profile-learning sessions, synthesis requests or external-link availability tests were performed. The app was opened for screenshot capture and may load its normal voice catalog; no voice-test or generation button was pressed. Existing external references were retained; this refresh is based on the supplied local repository, not a new external survey.
+
 ## Revision 2026-11-06.1: v1.0.2.3
 
 Current edition targets **v1.0.2.3**, without a beta label, as requested by the maintainer. Source: clean `D:\code\UniversalAnnouncer`, branch `fenix-v3`, commit `b9e1d147d262b1c6c83b79d51a931972bd34dbab`. Remote HEAD was rechecked on 6 November and matched. This update concerns end-user workflows, not a fixes changelog.

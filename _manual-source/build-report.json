@@ -1,26 +1,100 @@
 {
-  "appVersion": "1.0.2.3",
-  "revision": "2026-11-06.1",
+  "appVersion": "1.0.3.2",
+  "revision": "2026-11-22.4",
   "browser": "151.0.7922.34",
   "missingScreenshots": [],
-  "sections": 46,
-  "sourceCommit": "b9e1d147d262b1c6c83b79d51a931972bd34dbab",
+  "sections": 55,
+  "sourceCommit": "5164ae8920c495adcd069579c029ff4dbaf005f3",
   "checks": [
     "Offline HTML, anchors, images and width 390px: pass",
     "Offline HTML, anchors, images and width 1280px: pass"
   ],
+  "screenshotQuality": [
+    {
+      "file": "10-discord-channels.png",
+      "width": 367,
+      "height": 416,
+      "printDpi": 137
+    },
+    {
+      "file": "02-sound-files.png",
+      "width": 1148,
+      "height": 1102,
+      "printDpi": 221
+    },
+    {
+      "file": "03-simbrief.png",
+      "width": 1148,
+      "height": 1102,
+      "printDpi": 216
+    },
+    {
+      "file": "04-toolbar.png",
+      "width": 1120,
+      "height": 580,
+      "printDpi": 200
+    },
+    {
+      "file": "12-panel-details.png",
+      "width": 1120,
+      "height": 840,
+      "printDpi": 198
+    },
+    {
+      "file": "13-recordings.png",
+      "width": 1120,
+      "height": 840,
+      "printDpi": 198
+    },
+    {
+      "file": "05-camera-volumes.png",
+      "width": 1148,
+      "height": 1102,
+      "printDpi": 205
+    },
+    {
+      "file": "09-chaseplane.png",
+      "width": 1331,
+      "height": 432,
+      "printDpi": 206
+    },
+    {
+      "file": "14-generated-current.png",
+      "width": 750,
+      "height": 1149,
+      "printDpi": 136
+    },
+    {
+      "file": "15-roles-current.png",
+      "width": 494,
+      "height": 226,
+      "printDpi": 136
+    },
+    {
+      "file": "11-tweaks.png",
+      "width": 820,
+      "height": 1303,
+      "printDpi": 158
+    },
+    {
+      "file": "16-simulators-current.png",
+      "width": 762,
+      "height": 235,
+      "printDpi": 149
+    }
+  ],
   "printSectionHeightsMm": [
     {
       "id": "cover",
-      "mm": 129.09599609375
+      "mm": 122.50621744791665
     },
     {
       "id": "contents",
-      "mm": 215.46178385416667
+      "mm": 255.45934244791667
     },
     {
       "id": "getting-started",
-      "mm": 199.16923828125002
+      "mm": 212.55136718749998
     },
     {
       "id": "sound-packs",
@@ -31,20 +105,16 @@
       "mm": 251.18053385416667
     },
     {
-      "id": "pack-selection",
-      "mm": 173.93873697916663
-    },
-    {
       "id": "simbrief",
-      "mm": 252.59853515625
+      "mm": 257.7909830729166
     },
     {
       "id": "departure",
-      "mm": 200.57897135416667
+      "mm": 213.96110026041666
     },
     {
       "id": "arrival",
-      "mm": 211.583984375
+      "mm": 216.77643229166665
     },
     {
       "id": "controls",
@@ -56,7 +126,7 @@
     },
     {
       "id": "toolbar",
-      "mm": 236.92610677083334
+      "mm": 242.1185546875
     },
     {
       "id": "panel-details",
@@ -68,7 +138,7 @@
     },
     {
       "id": "tags",
-      "mm": 253.255859375
+      "mm": 258.44830729166665
     },
     {
       "id": "camera-volumes",
@@ -76,7 +146,11 @@
     },
     {
       "id": "camera-rules",
-      "mm": 127.15709635416665
+      "mm": 135.34677734375
+    },
+    {
+      "id": "xplane-camera",
+      "mm": 149.73763020833334
     },
     {
       "id": "chaseplane",
@@ -84,27 +158,43 @@
     },
     {
       "id": "generated",
-      "mm": 117.46673177083333
+      "mm": 194.0966796875
+    },
+    {
+      "id": "generated-overview",
+      "mm": 255.20302734375
     },
     {
       "id": "templates",
-      "mm": 256.3564453125
+      "mm": 189.47887369791667
+    },
+    {
+      "id": "template-language",
+      "mm": 192.80270182291667
     },
     {
       "id": "voices",
-      "mm": 253.54111328124998
+      "mm": 209.23994140624998
     },
     {
       "id": "generation-modes",
-      "mm": 250.49840494791667
+      "mm": 195.82473958333333
+    },
+    {
+      "id": "generation-refresh",
+      "mm": 194.90283203125
+    },
+    {
+      "id": "generation-providers",
+      "mm": 168.24606119791665
     },
     {
       "id": "temporary-generation",
-      "mm": 151.13082682291665
+      "mm": 161.51572265625
     },
     {
       "id": "local-tts",
-      "mm": 258.49791666666664
+      "mm": 248.1130208333333
     },
     {
       "id": "compatible-api-voices",
@@ -124,7 +214,7 @@
     },
     {
       "id": "flight-steps",
-      "mm": 253.49977213541663
+      "mm": 258.6922200520833
     },
     {
       "id": "flight-steps-arrival",
@@ -132,7 +222,7 @@
     },
     {
       "id": "additional-announcements",
-      "mm": 211.87750651041665
+      "mm": 217.0699544270833
     },
     {
       "id": "dynamic-tags",
@@ -148,7 +238,7 @@
     },
     {
       "id": "file-tags",
-      "mm": 254.3762044270833
+      "mm": 258.6591471354166
     },
     {
       "id": "file-selection",
@@ -184,7 +274,7 @@
     },
     {
       "id": "tweaks-compatibility",
-      "mm": 244.5411458333333
+      "mm": 252.73082682291667
     },
     {
       "id": "tweaks-selection",
@@ -193,6 +283,26 @@
     {
       "id": "tweaks-weather",
       "mm": 156.319140625
+    },
+    {
+      "id": "xplane-setup",
+      "mm": 245.84752604166667
+    },
+    {
+      "id": "xplane-flight",
+      "mm": 201.27763671875002
+    },
+    {
+      "id": "aircraft-switches",
+      "mm": 195.4650716145833
+    },
+    {
+      "id": "aircraft-profiles",
+      "mm": 187.94511718750002
+    },
+    {
+      "id": "pack-selection",
+      "mm": 173.93873697916663
     }
   ]
 }
